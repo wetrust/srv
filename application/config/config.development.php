@@ -63,9 +63,9 @@ return array(
      */
     'DB_TYPE' => 'mysql',
     'DB_HOST' => '127.0.0.1',
-    'DB_NAME' => 'ceosim_v2',
+    'DB_NAME' => 'crecimientofetal',
     'DB_USER' => 'root',
-    'DB_PASS' => '',
+    'DB_PASS' => '/Sha256:1',
     'DB_PORT' => '3306',
     'DB_CHARSET' => 'utf8',
     /**
@@ -118,8 +118,8 @@ return array(
      * ENCRYPTION_KEY, HMAC_SALT: Currently used to encrypt and decrypt publicly visible values, like the user id in
      * the cookie. Change these values for increased security, but don't touch if you have no idea what this means.
      */
-    'ENCRYPTION_KEY' => '6#x0gÊìf^25cL1f$08&',
-    'HMAC_SALT' => '8qk9c^4L6d#15tM8z7n0%',
+    'ENCRYPTION_KEY' => 'U&57 6s4XgQ6)zcTm&zP0+DKCi&3rk*u}|/$_Puu #Kg;hde0vL#>It $%uAGSu:',
+    'HMAC_SALT' => ')hoQFN7I(lFeVF/|B$Xq:-p{rfto2$CW+7@-IDh/vdl4Td 5zgG?u#!IDoY~4#E~',
     /**
      * Configuration for: Email server credentials
      *
