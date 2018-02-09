@@ -153,4 +153,8 @@ return array(
     'EMAIL_VERIFICATION_FROM_NAME' => 'My Project',
     'EMAIL_VERIFICATION_SUBJECT' => 'Account activation for PROJECT XY',
     'EMAIL_VERIFICATION_CONTENT' => 'Please click on this link to activate your account: ',
+    /**
+     * Configuration for: Dicom Data
+     */
+    'DICOM_DIRECTORY' =>  realpath(dirname(__FILE__).'/../../') . '/public/data/',
 );
