@@ -1,0 +1,10 @@
+.bienvenida {
+    background: #2c5889;
+    background: -webkit-linear-gradient(left, #c0a577, #f7e4a9, #8fedaf, #4dc7b2, #3483a4, #2c5889);
+    background: -o-linear-gradient(left,#c0a577, #f7e4a9, #8fedaf, #4dc7b2, #3483a4, #2c5889);
+    background: -moz-linear-gradient(left, #c0a577, #f7e4a9, #8fedaf, #4dc7b2, #3483a4, #2c5889);
+    background: linear-gradient(to right, #c0a577, #f7e4a9, #8fedaf, #4dc7b2, #3483a4, #2c5889);
+    background-image: url(../img/blurred-greenish.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
