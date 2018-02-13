@@ -12,7 +12,7 @@ $.get( serverURL + "dicom/getimages/" + $(this).val())
     });
 $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Imprimir</button>");
     $("#imprimirFotos").on("click", function(){
-        var fotosArreglo = [];
+        var fotosArreglo = "";
         var contadorIMG = 1
         $("input[name='fotosElegidas']").each(function () {
           if(this.checked == true){
@@ -26,7 +26,7 @@ $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Impr
             if (contadorIMG == 3){
               gString = gString + "</div>";
             }
-            fotosArreglo.push(gString);
+            fotosArreglo = gString;
             contadorIMG = contadorIMG +1;
           };
       });
@@ -38,7 +38,7 @@ $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Impr
 	var funcion = '<script>document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});</script>';
 	var membrete = $("#membrete").val().replace(/\r\n|\r|\n/g,"<br />");
 	
-	document = document.replace(":DATOS", fotosArreglo.toString());
+	document = document.replace(":DATOS", fotosArreglo);
 	//document = document.replace(":ESTILO", estilo);
 	//document = document.replace(":FUNCION", funcion);
 	
