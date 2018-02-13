@@ -16,47 +16,81 @@
       </div>
       <div class='container' id="fotosContainer"></div>
       <div class='container'>
-         <p class='text-right' style='margin-right:100px;'>Ecografista Dr(a): <strong>:ECOGRAFISTA</strong> </p>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;'></span> 
          <p style='font-size: 0.8rem;'>Fecha Informe: :DATEINFORME</p>
          <span style='border-top: 2px solid #000;width: 100% !important;display: block;'></span> 
          <p style='font-size: 0.5rem;'>Herramienta informática diseñada por Dr. Rudecindo Lagos S. Médico gineco-obstetra ultrasonografista y Cristopher Castro G. Ingenieria Civil.<br><strong>El software tiene por objetivo favorecer el análisis preliminar de los datos obtenidos en el exámen ecográfico, la interpretación clínica de los mismos, es responsabilidad exclusiva de quien realiza y certifica este documento.</strong></p>
       </div>
       <script>
+
+        var contains = function(needle) {
+            // Per spec, the way to identify NaN is that it is not equal to itself
+            var findNaN = needle !== needle;
+            var indexOf;
+
+            if(!findNaN && typeof Array.prototype.indexOf === 'function') {
+                indexOf = Array.prototype.indexOf;
+            } else {
+                indexOf = function(needle) {
+                    var i = -1, index = -1;
+
+                    for(i = 0; i < this.length; i++) {
+                        var item = this[i];
+
+                        if((findNaN && item !== item) || item === needle) {
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    return index;
+                };
+            }
+
+            return indexOf.call(this, needle) > -1;
+        };
+
         $(document).ready(function(){
             $.get("<?php echo Config::get('URL'); ?>dicom/getimages/<?php echo $this->user_id; ?>").done(function(data) {
                 $("#fotosDicom").html(" ");
                 if (data.DCM = true){
+                    listIMG = JSON.parse("[<?php echo $this->img_id; ?>]")
                     gString = ""
                     contadorIMG = 1;
                     contIMG = 1;
                     totJPG = data.JPGFiles.length;
                     $.each(data.JPGFiles, function(i, item) {
-                        if (contadorIMG == 1){
-                            gString = gString + "<div class='row mb-4'>";
-                        }
-                        
-                        if (totJPG <= 4){
-                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 460px; height: 460px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
-                            if (contadorIMG == 2){
-                                gString = gString + "</div>";
-                                contadorIMG = 0;
-                            }
-                        }
-                        else if (totJPG => 6){
-                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 370px; height: 370px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
-                            if (contadorIMG == 2){
-                                gString = gString + "</div>";
-                                contadorIMG = 0;
-                            }
-                        }
 
-                        if (contIMG == totJPG && contIMG != 2 && contIMG != 6){
-                            gString = gString + "</div>";
-                        }
-                        
-                        contadorIMG = contadorIMG +1;
-                        contIMG = contIMG +1;
+                        needle = i,
+                        index = contains.call(listIMG, needle);
+
+                        if (index == true){
+                            if (contadorIMG == 1){
+                                gString = gString + "<div class='row mb-4'>";
+                            }
+                            
+                            if (totJPG <= 4){
+                                gString = gString + "<div class='col-6'><img alt='200x200' style='width: 460px; height: 460px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                                if (contadorIMG == 2){
+                                    gString = gString + "</div>";
+                                    contadorIMG = 0;
+                                }
+                            }
+                            else if (totJPG => 6){
+                                gString = gString + "<div class='col-6'><img alt='200x200' style='width: 370px; height: 370px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                                if (contadorIMG == 2){
+                                    gString = gString + "</div>";
+                                    contadorIMG = 0;
+                                }
+                            }
+
+                            if (contIMG == totJPG && contIMG != 2 && contIMG != 6){
+                                gString = gString + "</div>";
+                            }
+                            
+                            contadorIMG = contadorIMG +1;
+                            contIMG = contIMG +1;
+                        } 
                     });
 
                     $("#fotosContainer").append(gString);
