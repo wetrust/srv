@@ -9,7 +9,7 @@
       <div class='container'>
          <div style='width:35%;text-align:center;'>:MEMBRETE</div>
       </div>
-      <div class='container my-4'>
+      <div class='container mt-5 pt-5'>
          <h3 class='text-center'>Impresión de Imágenes Gineco-Obstétrica</h3>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;margin-bottom:15px;'></span> 
          <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong>:PACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong>:FEXAMEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> ID Paciente: </strong>:IDPACIENTE</p>
