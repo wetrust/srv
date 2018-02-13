@@ -34,7 +34,7 @@
                         if (contadorIMG == 1){
                             gString = gString + "<div class='row mb-4'>";
                         }
-                        gString = gString + "<div class='col-4'><img alt='200x200' style='width: 270px; height: 270px;' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                        gString = gString + "<div class='col-4'><img alt='200x200' style='width: 300px; height: 300px;' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
                         if (contadorIMG == 3){
                             gString = gString + "</div>";
                             contadorIMG = 1;
