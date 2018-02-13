@@ -10,7 +10,7 @@ class ImagenesController extends Controller
 
     public function view($user_id, $img_id)
     {
-        $this->View->render('imagenes/view', array(
+        $this->View->renderWithoutHeaderAndFooter('imagenes/view', array(
             'user_id' => $user_id,
             'img_id' => $img_id
         ));
