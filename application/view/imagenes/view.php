@@ -38,6 +38,7 @@
                             gString = gString + "</div>";
                             contadorIMG = 1;
                         }
+                        contadorIMG = contadorIMG +1;
                         contIMG = contIMG +1;
                     });
 
