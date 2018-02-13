@@ -39,7 +39,7 @@ $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Impr
 	var membrete = $("#membrete").val().replace(/\r\n|\r|\n/g,"<br />");
 	
 	document = document.replace(":DATOS", fotosArreglo.toString());
-	document = document.replace(":ESTILO", estilo);
+	//document = document.replace(":ESTILO", estilo);
 	//document = document.replace(":FUNCION", funcion);
 	
 	ventimp.document.write(document);
