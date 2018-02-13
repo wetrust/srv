@@ -13,16 +13,26 @@ $.get( serverURL + "dicom/getimages/" + $(this).val())
 $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Imprimir</button>");
     $("#imprimirFotos").on("click", function(){
         var fotosArreglo = [];
+        var contadorIMG = 1
         $("input[name='fotosElegidas']").each(function () {
           if(this.checked == true){
             var img = $(this).parent().parent().parent();
             var divContenedor = $(img).children("img");
-            fotosArreglo.push("<img class='rounded' alt='200x200' style='width: 300px; height: 300px;' src=" + $(divContenedor).attr('src')+ ">");
+            var gString = "";
+            if (contadorIMG == 1){
+              gString = "<div class='row mb-4'>";
+            }
+            gString = gString + "<div class='col-4'><img style='height: 230px;width: 230px;max-width: 230px;max-height: 230px;' src=" + $(divContenedor).attr('src')+ "></div>";
+            if (contadorIMG == 3){
+              gString = gString + "</div>";
+            }
+            fotosArreglo.push(gString);
+            contadorIMG = contadorIMG +1;
           };
       });
 
 	event.preventDefault();
-var document = '<!DOCTYPE html><html lang="es-CL"><head><meta charset="utf-8"><title>Impresión de Gráficos</title><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"><link rel="stylesheet" href="consulta.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">:ESTILO</head><body><div class="container" style="margin-top:50px !important;">:DATOS</div>:FUNCION</body></html>';
+  var document = "<html lang='es'> <head> <meta charset='utf-8'> <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'> <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>:ESTILO</head> <body> <div class='container'> <div style='width:35%;text-align:center;'>Consulta<br>Consulta<br>Consulta</div> </div> <div class='container my-4'> <h3 class='text-center'>Impresión de Imágenes Gineco-Obstera</h3> <span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;margin-bottom:15px;'></span> <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong>:PACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Edad Materna: </strong> :EDADMATERNA años.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong>:FEXAMEN<br><strong> ID Paciente: </strong>:IDPACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Motivo de exámen: </strong> :MOTIVO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Patología Obstétrica: </strong>:PATOLOGIAOBSTETRICA</p> </div> <div class='container'>:DATOS</div> <div class='container'> <p class='text-right' style='margin-right:100px;'>Ecografista Dr(a): <strong>:ECOGRAFISTA</strong> </p> <span style='border-top: 1px solid #000;width: 100% !important;display: block;'></span> <p style='font-size: 0.8rem;'>Fecha Informe: :DATEINFORME</p> <span style='border-top: 2px solid #000;width: 100% !important;display: block;'></span> <p style='font-size: 0.5rem;'>Herramienta informática diseñada por Dr. Rudecindo Lagos S. Médico gineco-obstetra ultrasonografista y Cristopher Castro G. Ingenieria Civil.<br><strong>El software tiene por objetivo favorecer el análisis preliminar de los datos obtenidos en el exámen ecográfico, la interpretación clínica de los mismos, es responsabilidad exclusiva de quien realiza y certifica este documento.</strong></p> </div>:FUNCION</body></html>";
 	var ventimp = window.open(" ","popimpr");
 	var estilo = '<style>@media print{*{margin:0;padding:0;border:0}p,th,td{font-size:11px;line-height:17px;margin-bottom:7px}th,td{margin:0 !important;padding:0 !important}.pie-pagina{font-size:9px}.pie-pagina-dos{font-size:10px}#lineclear{clear:both}h3{font-size:130%;text-align:center}h3::first-letter{font-size:100%}.membrete::first-letter{font-size:14px;}.membrete::first-line{font-size:14px;}.membrete{font-size:10px;}}</style>';
 	var funcion = '<script>document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});</script>';
@@ -34,8 +44,7 @@ var document = '<!DOCTYPE html><html lang="es-CL"><head><meta charset="utf-8"><t
 	
 	ventimp.document.write(document);
 	ventimp.document.close();
-	ventimp.show();
-
+  ventimp.show();
     });
 
 }
