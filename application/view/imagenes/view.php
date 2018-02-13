@@ -10,9 +10,9 @@
          <div style='width:35%;text-align:center;'>:MEMBRETE</div>
       </div>
       <div class='container my-4'>
-         <h3 class='text-center'>Impresión de Imágenes Gineco-Obstera</h3>
+         <h3 class='text-center'>Impresión de Imágenes Gineco-Obstétrica</h3>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;margin-bottom:15px;'></span> 
-         <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong>:PACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Edad Materna: </strong> :EDADMATERNA años.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong>:FEXAMEN<br><strong> ID Paciente: </strong>:IDPACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Motivo de exámen: </strong> :MOTIVO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Patología Obstétrica: </strong>:PATOLOGIAOBSTETRICA</p>
+         <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong>:PACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong>:FEXAMEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> ID Paciente: </strong>:IDPACIENTE</p>
       </div>
       <div class='container' id="fotosContainer"></div>
       <div class='container'>
