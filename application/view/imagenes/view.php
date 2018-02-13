@@ -44,8 +44,8 @@
                             }
                         }
                         else if (totJPG => 6){
-                            gString = gString + "<div class='col-4'><img alt='200x200' style='width: 300px; height: 300px;' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
-                            if (contadorIMG == 3){
+                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 400px; height: 400px;' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                            if (contadorIMG == 2){
                                 gString = gString + "</div>";
                                 contadorIMG = 0;
                             }
