@@ -13,7 +13,7 @@
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;margin-bottom:15px;'></span> 
          <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong>:PACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Edad Materna: </strong> :EDADMATERNA años.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong>:FEXAMEN<br><strong> ID Paciente: </strong>:IDPACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Motivo de exámen: </strong> :MOTIVO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Patología Obstétrica: </strong>:PATOLOGIAOBSTETRICA</p>
       </div>
-      <div class='container' id="fotosContainer">:DATOS</div>
+      <div class='container' id="fotosContainer"></div>
       <div class='container'>
          <p class='text-right' style='margin-right:100px;'>Ecografista Dr(a): <strong>:ECOGRAFISTA</strong> </p>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;'></span> 
@@ -40,6 +40,8 @@
                         }
                         contIMG = contIMG +1;
                     });
+
+                    $("#fotosContainer").append(gString);
                 }
             });
         })

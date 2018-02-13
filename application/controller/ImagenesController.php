@@ -10,10 +10,9 @@ class ImagenesController extends Controller
 
     public function view($user_id, $img_id)
     {
-        echo $user_id . " - " . $img_id;
-        //$this->View->render('imagenes/view'array(
-        //    'user_id' => Request::post('user_id'),
-        //    'img_id' => Request::post('img_id'),
-        //));
+        $this->View->render('imagenes/view'array(
+            'user_id' => $user_id,
+            'img_id' => $img_id
+        ));
     }
 }
