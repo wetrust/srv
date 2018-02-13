@@ -2254,6 +2254,9 @@
         </div>
 <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
 <script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+    var serverURL = "<?php echo Config::get('URL'); ?>";
+</script>
 <script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/botones.js"></script>
@@ -2262,4 +2265,3 @@
 <script src="<?php echo Config::get('URL'); ?>js/static/graficos.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/main.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/fotos.js"></script>
-
