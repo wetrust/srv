@@ -30,15 +30,30 @@
                     gString = ""
                     contadorIMG = 1;
                     contIMG = 1;
+                    totJPG = data.JPGFiles.length;
                     $.each(data.JPGFiles, function(i, item) {
                         if (contadorIMG == 1){
                             gString = gString + "<div class='row mb-4'>";
                         }
                         gString = gString + "<div class='col-4'><img alt='200x200' style='width: 300px; height: 300px;' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
-                        if (contadorIMG == 3){
-                            gString = gString + "</div>";
-                            contadorIMG = 1;
+                        
+                        if (totJPG <= 4){
+                            if (contadorIMG == 2){
+                                gString = gString + "</div>";
+                                contadorIMG = 0;
+                            }
                         }
+                        else if (totJPG => 6){
+                            if (contadorIMG == 3){
+                                gString = gString + "</div>";
+                                contadorIMG = 0;
+                            }
+                        }
+
+                        if (contIMG == totJPG && contIMG != 2 && contIMG != 6){
+                            gString = gString + "</div>";
+                        }
+                        
                         contadorIMG = contadorIMG +1;
                         contIMG = contIMG +1;
                     });
