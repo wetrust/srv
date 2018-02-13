@@ -58,7 +58,7 @@
                     gString = ""
                     contadorIMG = 1;
                     contIMG = 1;
-                    totJPG = data.JPGFiles.length;
+                    totJPG = listIMG.length;
                     $.each(data.JPGFiles, function(i, item) {
 
                         needle = i,
