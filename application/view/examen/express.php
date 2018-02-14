@@ -2279,6 +2279,7 @@
     var serverURL = "<?php echo Config::get('URL'); ?>";
 
     $("#InicioLink").attr("href", "http://servidor.crecimientofetal.cl/examen/express");
+    $("#InicioLink").html("Volver");
 </script>
 <script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
