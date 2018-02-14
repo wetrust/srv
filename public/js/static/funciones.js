@@ -186,7 +186,7 @@ $( "#lcn" ).keypress(function( event ) {
   if ( event.which == 13 ) {
      event.preventDefault();
      $('#lcn').trigger("change");
-     var eg = parseFloat($("input[name='eg']").val());
+     var eg = localStorage.eg;
      $('#furReferida').val($("input[name='fum']").val());
      $('#egReferida').val(eg);
      $('#fppReferida').val($("input[name='fpp']").val());
@@ -206,7 +206,7 @@ $( "#lcn" ).keypress(function( event ) {
 	$('#resultadoAjusteEcoPrimTrim').show();
 	     
 	var LCN = parseInt($('#lcn').val());
-	var eg = parseFloat($("input[name='eg']").val());
+	var eg = localStorage.eg;
 	var oneday = 1000 * 60 * 60 * 24;
 			
 	if (isNaN(LCN) | LCN < 0 | isNaN(eg) | eg < 1) {
