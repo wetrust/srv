@@ -583,12 +583,12 @@
                         <div class="card-body">
                             <h5 class="card-title">Pacientes</h5>
                             <table class="table">
-                                <thead class="thead-inverse">
+                                <thead class="thead-dark">
                                     <tr>
-                                    <th>#</th>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
                                     </tr>
                                 </thead>
                                 <tbody>
