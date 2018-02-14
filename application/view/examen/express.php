@@ -120,9 +120,9 @@
                                         <label class="btn btn-outline-info p-3 active" id="infadicionalNoController" data-value="0">
                                         <input type="radio" value="0" checked=""> NO
                                         </label>
-                                        <label class="btn btn-outline-info p-3" id="infadicionalSiController" data-value="1">
+                                        <a class="btn btn-outline-info p-3" id="infadicionalSiController" href="https://servidor.crecimientofetal.cl/configuracion" data-value="1">
                                         <input type="radio" value="1"> SI
-                                        </label>
+                                        </abs>
                                     </div>
                                 </div>
                             </div>
