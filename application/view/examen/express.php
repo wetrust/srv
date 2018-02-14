@@ -13,7 +13,7 @@
 	</div>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
     <li class="breadcrumb-item active" aria-current="page">Nuevo Exámen</li>
     <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
   </ol>
@@ -37,6 +37,7 @@
                                     <div class="row">
                        <div class="col">
                                     <select id="semanasEcoGen" class="form-control">
+                                    <option value="4">4</option>
 <option value="5">5</option>
                                         <option value="6">6</option>                                        
 <option value="7">7</option>
@@ -617,7 +618,7 @@
             </div>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
     <li class="ml-auto"><a href="#consulta">Volver</a></li>
@@ -646,7 +647,7 @@
             </div>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item active" aria-current="page">Elija tipo de exámen ecográfico</li>
     <li class="ml-auto"><a href="#consulta">Volver</a></li>
@@ -666,6 +667,7 @@
                                     <div class="row">
                        <div class="col">
                                     <select id="semanasTipoEco" class="form-control">
+                                    <option value="4">4</option>
 <option value="5">5</option>
                                         <option value="6">6</option>
                                         <option value="7">7</option>
@@ -805,7 +807,7 @@
             </div>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica</li>
@@ -826,6 +828,7 @@
                      <div class="row">
                        <div class="col">
                                     <select id="semanasEcoPrim" class="form-control">
+                                    <option value="4">4</option>
 <option value="5">5</option>
                                         <option value="6">6</option>
                                         <option value="7">7</option>
@@ -1052,7 +1055,7 @@
             </div>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica 2do 3er trim</li>
@@ -1073,6 +1076,12 @@
                     <div class="row">
                        <div class="col">
                                     <select id="semanasEcoObs" class="form-control">
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
                                         <option value="10">10</option>
                                         <option value="11">11</option>
                                         <option value="12">12</option>
@@ -1607,7 +1616,7 @@
             </div>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ecografía Dopple</li>
@@ -1628,6 +1637,13 @@
                     <div class="row">
                        <div class="col">
                                     <select id="semanasEcoDopp" class="form-control">
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                         <option value="13">13</option>
@@ -2003,7 +2019,7 @@
                 </div>
             </div>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#inicio">Inicio</a>
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a>
                 </li>
                 <li class="breadcrumb-item active">Configuración</li>
                 <li class="ml-auto"><a href="#consulta">Volver</a></li>
