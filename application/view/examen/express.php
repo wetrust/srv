@@ -85,14 +85,14 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-4">
-                                    <label for="id-paciente" class="col-form-label btn-consulta my-3 p-2">Número de Registro<br>( RUT )</label>
+                                    <label for="id-paciente" class="col-form-label bg-info  my-3 p-2">Número de Registro<br>( RUT )</label>
                                 </div>
                                 <div class="col-2">
                                     <input type="text" class="form-control my-3" id="id-paciente">
                                 </div>
                                 <div class="col-2"></div>
                                 <div class="col text-right">
-                                    <a class="btn btn-consulta mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
+                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
                                 </div>
                             </div>
                             <div class="row mb-3">
