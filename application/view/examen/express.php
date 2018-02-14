@@ -7,7 +7,7 @@
                             		<p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
                         	</div>
                         	<div class="media-body mt-4">
-                            		<p class="float-right" name="fechaHora" style="color: #f0df90;">Viernes, 29 de Diciembre 2017</p>
+                            		<p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
                         	</div>
                     	</div>
 	</div>
@@ -84,23 +84,15 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col text-right mr-5">
-                                    <a class="btn btn-info mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
+                                <div class="col-4">
+                                    <label for="id-paciente" class="col-form-label btn-consulta my-3 p-2">Número de Registro<br>( RUT )</label>
                                 </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
+                                <div class="col-2">
+                                    <input type="text" class="form-control my-3" id="id-paciente">
                                 </div>
-                                <div class="col-3">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
-                                        <input type="radio" value="0" checked> NO
-                                        </label>
-                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
-                                        <input type="radio" value="1"> SI
-                                        </label>
-                                    </div>
+                                <div class="col-2"></div>
+                                <div class="col text-right">
+                                    <a class="btn btn-consulta mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -125,12 +117,6 @@
                                     </div>
                                     <div class="col-4">
                                         <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
-                                    </div>
-                                    <div class="col-2">
-                                        <label for="id-paciente" class="col-form-label">Número de Registro</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input type="text" class="form-control gris-claro" id="id-paciente">
                                     </div>
                                 </div>
                                 <div class="row mt-2 mb-2">
@@ -555,6 +541,21 @@
                                         <div class="col-2">
                                             <input type="text" class="form-control" id="imcMaterno" readonly>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
+                                </div>
+                                <div class="col-3">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
+                                        <input type="radio" value="0" checked> NO
+                                        </label>
+                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
+                                        <input type="radio" value="1"> SI
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -2005,7 +2006,7 @@
                 <li class="breadcrumb-item"><a href="#inicio">Inicio</a>
                 </li>
                 <li class="breadcrumb-item active">Configuración</li>
-                <li class="float-right"><a href="#consulta">Volver</a></li>
+                <li class="ml-auto"><a href="#consulta">Volver</a></li>
             </ol>
             <hr>
             <ul class="nav nav-tabs" role="tablist" id="configTab">
