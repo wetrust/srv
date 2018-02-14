@@ -581,20 +581,19 @@
                 <div class="col-md-12" style="display:none;">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Seleccione un paciente</h5>
-                            <form>
-                                <div class="form-group">
-                                    <label for="buscarpacienteid">Buscar por ID</label>
-                                    <input class="form-control" type="text" placeholder="12345678-9" id="buscarpacienteid">
-                                    <small id="idHelp" class="form-text text-muted">Escriba un ID para buscar.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="buscarpacienteapellido">Buscar por apellido</label>
-                                    <input class="form-control" type="text" placeholder="Juanita Pérez" id="buscarpacienteapellido">
-                                    <small id="apellidoHelp" class="form-text text-muted">Escriba un apellido para buscar.</small>
-                                </div>
-                                <a class="btn btn-primary" id="loadPacienteSelect" href="#">Continuar</a>
-                            </form>
+                            <h5 class="card-title">Pacientes</h5>
+                            <table class="table">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                    <th>#</th>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
