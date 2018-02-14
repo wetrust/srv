@@ -578,7 +578,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12" style="display:none;">
+                <div class="col-md-12">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Pacientes</h5>
