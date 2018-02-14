@@ -10,6 +10,9 @@
                   <h4 class="card-title">Opciones de configuración</h4>
                   <ul class="nav flex-column">
                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#pais" data-id="1" name="centroRegional">País</a>
+                     </li>
+                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#dp" data-id="1" name="centroRegional">Región de salud</a>
                      </li>
                      <li class="nav-item">
@@ -51,7 +54,51 @@
          </div>
          <div class="col-12 col-md-9">
             <div class="tab-content">
-               <div class="tab-pane active" id="dp" role="tabpanel">
+            <div class="tab-pane active" id="pais" role="tabpanel">
+                  <h2 class="my-4">Configurar datos predeterminados</h2>
+                  <div class="card">
+                     <div class="card-block">
+                        <ul class="nav justify-content-end mb-2">
+                           <li class="nav-item">
+                              <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                           </li>
+                           <li class="nav-item">
+                              <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                           </li>
+                           <li class="nav-item">
+                              <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                           </li>
+                           <li class="nav-item">
+                              <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                           </li>
+                           <li class="nav-item">
+                              <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                           </li>
+                        </ul>
+                        <table class="table table-hover table-bordered">
+                           <thead>
+                              <tr id="tableHead">
+                                 <th>#</th>
+                                 <th>País</th>
+                              </tr>
+                           </thead>
+                           <tbody id="tableBody">
+                           </tbody>
+                        </table>
+                        <div class="card formulario d-none">
+                           <div class="card-block">
+                              <div class="form-group">
+                                 <h5 id="titleInput">Nuevo País</h5>
+                              </div>
+                              <div class="form-group">
+                                 <input type="text" class="form-control" id="inputPais">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="tab-pane" id="dp" role="tabpanel">
                   <h2 class="my-4">Configurar datos predeterminados</h2>
                   <div class="card">
                      <div class="card-block">
