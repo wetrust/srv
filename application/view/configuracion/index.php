@@ -261,6 +261,8 @@
             $(document).ready(function(){
                   $("body").addClass("h-100");
                   $("html").addClass("h-100");
+                  $("#InicioLink").attr("href", "http://servidor.crecimientofetal.cl/examen/express");
+                  $("#InicioLink").html("Volver");
             });
       </script>
       <script src="<?php echo Config::get('URL'); ?>js/static/configuracion.js"></script>
