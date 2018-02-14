@@ -134,6 +134,12 @@
                                     <div class="col-4">
                                         <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
                                     </div>
+                                    <div class="col-2">
+                                        <label for="apellido-paciente" class="col-form-label">Apellido paciente</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input class="form-control gris-claro" type="text" id="apellido-paciente">
+                                    </div>
                                 </div>
                                 <div class="row mt-2 mb-2">
                                     <div class="col-2">
@@ -626,7 +632,6 @@
         <div>
 <h4>Imágenes Disponibles</h4>
     <div id="fotosDicom" class="row">
-    
     </div>
 </div></div>
         <div class="container" id="tipoExamen" style="display:none;">

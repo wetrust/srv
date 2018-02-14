@@ -257,5 +257,10 @@
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-      <script src="<?php echo Config::get('URL'); ?>js/static/app.js"></script>
+      <script>
+            $(document).ready(function(){
+                  $("body").addClass("h-100");
+                  $("html").addClass("h-100");
+            });
+      </script>
       <script src="<?php echo Config::get('URL'); ?>js/static/configuracion.js"></script>
