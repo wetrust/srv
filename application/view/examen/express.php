@@ -120,9 +120,9 @@
                                         <label class="btn btn-outline-info p-3 active" id="infadicionalNoController" data-value="0">
                                         <input type="radio" value="0" checked=""> NO
                                         </label>
-                                        <a class="btn btn-outline-info p-3" id="infadicionalSiController" href="https://servidor.crecimientofetal.cl/configuracion" data-value="1">
+                                        <label class="btn btn-outline-info p-3" id="infadicionalSiController" data-value="1">
                                         <input type="radio" value="1"> SI
-                                        </abs>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                         <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
                                     </div>
                                     <div class="col-2">
-                                        <label for="apellido-paciente" class="col-form-label">Apellido paciente</label>
+                                        <label for="nombre-paciente" class="col-form-label">Apellido paciente</label>
                                     </div>
                                     <div class="col-4">
                                         <input class="form-control gris-claro" type="text" id="apellido-paciente">

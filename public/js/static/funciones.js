@@ -149,7 +149,8 @@ $('#infadicionalNoController').on('click', function(){
 });
 
 $('#infadicionalSiController').on('click', function(){
-	window.location.href = "http://servidor.crecimientofetal.cl/configuracion";
+	$('#infadicionalView').removeClass('d-none');
+	$('#continuarExamenEcografico').addClass('d-none');
 });
 
 $('#infadicionalClinicoNoController').on('click', function(){
@@ -163,7 +164,7 @@ $('#infadicionalClinicoSiController').on('click', function(){
 });
 
 $('#configSiController').on('click', function(){
-	document.location.hash = "configuracion";
+	window.location.href = "http://servidor.crecimientofetal.cl/configuracion";
 });
 
 $('#configSiController').on('focusout', function(){
