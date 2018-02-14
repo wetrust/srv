@@ -127,6 +127,49 @@
                                 </div>
                             </div>
                             <div class="form-group d-none" id="infadicionalView">
+                            <div class="row my-4">
+                                    <div class="col">
+                                        <div class="card p-0">
+                                          <div class="card-block m-0 p-1">
+                                              <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                                                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                  </button>
+                                                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                    <ul class="navbar-nav mr-auto my-2">
+                                                      <li class="nav-item mr-1" id="cNuevoPacienteButton">
+                                                        <button type="button" class="btn btn-outline-primary" id="NuevoPacienteButton">Nuevo Paciente</button>
+                                                      </li>
+                                                        <li class="nav-item mr-1 d-none" id="cModificarPacienteButton">
+                                                        <button type="button" class="btn btn-outline-info" id="ModificarPacienteButton">Modificar</button>
+                                                      </li>
+                                                      <li class="nav-item mr-1 d-none" id="cGuardarPacienteButton">
+                                                        <button type="button" class="btn btn-outline-danger" id="GuardarPacienteButton">Guardar</button>
+                                                      </li>
+                                                      <li class="nav-item mr-1 d-none" id="cCancelarPacienteButton">
+                                                        <button type="button" class="btn btn-outline-primary" id="CancelarPacienteButton">Cancelar</button>
+                                                      </li>
+                                                      <li class="nav-item mr-1 d-none" id="cNuevoExamenButton">
+                                                        <button type="button" class="btn btn-outline-primary" id="NuevoExamenButton">Nuevo Exámen</button>
+                                                      </li>
+                                                      <li class="nav-item mr-1 d-none" id="cGuardarExamenButton">
+                                                        <button type="button" class="btn btn-outline-danger" id="GuardarExamenButton">Guardar</button>
+                                                      </li>
+                                                      <li class="nav-item mr-1 d-none" id="cCancelarExamenButton">
+                                                        <button type="button" class="btn btn-outline-primary" id="CancelarExamenButton">Cancelar</button>
+                                                      </li>
+                                                    </ul>
+                                                    <form class="form-inline my-2 my-lg-0 mr-2">
+                                                      <input class="form-control mr-sm-2" type="text" id="buscarPacientes" placeholder="N° de registro o apellido">
+                                                      <button class="btn btn-outline-success my-2 my-sm-0" id="buscarPacientesBtn">Buscar</button>
+                                                    </form>
+                                                    <span class="navbar-text text-center" id="numPacientes" style="width: 100px;">0</span>
+                                                  </div>
+                                                </nav>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row mt-2 mb-2">
                                     <div class="col-2">
                                         <label for="nombre-paciente" class="col-form-label">Nombre paciente</label>
