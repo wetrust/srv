@@ -85,25 +85,29 @@ server {
     error_log                 /dev/stderr info;
 
     #extra
-    index index.php index.html;
-    root /code;
+    index index.php;
+    root /code/public;
+
+    location / {
+        try_files $uri /index.php?url=$uri&$args;
+    }
 
     location ~ \.php$ {
-        try_files $uri =404;
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass php:9000;
-        fastcgi_index index.php;
+        try_files $uri  = 401;
         include fastcgi_params;
+        fastcgi_pass healthcore:9000;
+        fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param PATH_INFO $fastcgi_path_info;
     }
+
 }
 
-docker run --name php -v ~/srv:/code -d php:7-fpm
+docker build -t wetrust/healthcore .
+docker run --name HealthCore -d wetrust/healthcore
 
 linea para crear el contenedor nginx
 docker run --name nginx -v ~/nginx/:/etc/nginx/ -v ~/letsencrypt/certs:/etc/letsencrypt -p 80:80 -p 443:443 -d nginx
-docker run --name nginx -v ~/nginx/:/etc/nginx/ -v ~/srv:/code -v ~/dicomdata:/code/public/data/ -v ~/letsencrypt/certs:/etc/letsencrypt -p 80:80 --link php:php -p 443:443 -d nginx
+docker run --name nginx -v ~/nginx/:/etc/nginx/ -v ~/srv:/code -v ~/letsencrypt/certs:/etc/letsencrypt --link HealthCore:healthcore -p 443:443 -d nginx
 
 
 
@@ -114,3 +118,14 @@ docker run -t --rm \
       deliverous/certbot \
       renew \
       --webroot --webroot-path=/data/letsencrypt
+
+
+
+
+
+
+       docker run --name LagosServer --restart always  -v /home/cristophernic/dicomdata/:/var/www/html/public/data/ -p 80:80 -d wetrust/lagos:latest
+//for directory
+       find directorio -type d -exec chmod 0755 {} \;
+//for file
+find directorio ! -type d -exec chmod 0644 {} \;
