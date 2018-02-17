@@ -6,9 +6,9 @@
       <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
       <style>@page { margin: 0; }</style>
    </head>
-   <body>
+   <body class="mt-5 pt-5">
       <div class='container'>
-         <div style='width:35%;text-align:center;'>:MEMBRETE</div>
+         <div style='width:35%;text-align:center;'></div>
       </div>
       <div class='container mt-5 pt-5'>
          <h3 class='text-center'>Impresión de Imágenes Gineco-Obstétrica</h3>
