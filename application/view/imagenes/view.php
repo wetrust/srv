@@ -20,7 +20,7 @@
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;'></span> 
          <p style='font-size: 0.8rem;'>Fecha Informe: :DATEINFORME</p>
          <span style='border-top: 2px solid #000;width: 100% !important;display: block;'></span> 
-         <p style='font-size: 0.5rem;'>Herramienta informática diseñada por Dr. Rudecindo Lagos S. Médico gineco-obstetra ultrasonografista y Cristopher Castro G. Ingenieria Civil.<br><strong>El software tiene por objetivo favorecer el análisis preliminar de los datos obtenidos en el exámen ecográfico, la interpretación clínica de los mismos, es responsabilidad exclusiva de quien realiza y certifica este documento.</strong></p>
+         <p style='font-size: 0.7rem;'>Herramienta informática diseñada por Dr. Rudecindo Lagos S. Médico gineco-obstetra ultrasonografista y Cristopher Castro G. Ingenieria Civil.<br><strong>El software tiene por objetivo favorecer el análisis preliminar de los datos obtenidos en el exámen ecográfico, la interpretación clínica de los mismos, es responsabilidad exclusiva de quien realiza y certifica este documento.</strong></p>
       </div>
       <script>
 
