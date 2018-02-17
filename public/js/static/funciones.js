@@ -164,7 +164,7 @@ $('#infadicionalClinicoSiController').on('click', function(){
 });
 
 $('#configSiController').on('click', function(){
-	document.location.hash = "configuracion";
+	window.location.href = "http://servidor.crecimientofetal.cl/configuracion";
 });
 
 $('#configSiController').on('focusout', function(){

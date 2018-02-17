@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarHome">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item <?php if (View::checkForActiveController($filename, "index")) { echo 'active'; } ?>">
-                        <a class="nav-link" href="<?php echo Config::get('URL'); ?>">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" id="InicioLink" href="<?php echo Config::get('URL'); ?>">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item <?php if (View::checkForActiveController($filename, "profile")) { echo 'active'; } ?>">
                         <a class="nav-link" href="<?php echo Config::get('URL'); ?>profile/index">Médicos</a>
