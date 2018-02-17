@@ -5,7 +5,7 @@ RUN apt update && apt install -y --no-install-recommends libpng-dev libjpeg-dev 
 RUN docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr
 #intalar los modulos necesarios de php
 RUN docker-php-ext-install json pdo pdo_mysql gd
-RUN sudo useradd -r www-data
+RUN useradd -r www-data
 COPY . /code
 RUN chown www-data:www-data /code/public/avatars
 RUN chown www-data:www-data /code/public/data
