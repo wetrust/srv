@@ -62,7 +62,7 @@ return array(
      * DB_CHARSET The charset, necessary for security reasons. Check Database.php class for more info.
      */
     'DB_TYPE' => 'mysql',
-    'DB_HOST' => '127.0.0.1',
+    'DB_HOST' => 'healthdb',
     'DB_NAME' => 'crecimientofetal',
     'DB_USER' => 'root',
     'DB_PASS' => '/Sha256:1',

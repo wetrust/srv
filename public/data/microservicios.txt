@@ -103,7 +103,7 @@ server {
 }
 
 docker build -t wetrust/healthcore .
-docker run --name HealthCore -d wetrust/healthcore
+docker run --name HealthCore -v ~/srv:/code --link HealthDB:healthdb -d wetrust/healthcore
 
 linea para crear el contenedor nginx
 docker run --name nginx -v ~/nginx/:/etc/nginx/ -v ~/letsencrypt/certs:/etc/letsencrypt -p 80:80 -p 443:443 -d nginx
@@ -123,9 +123,17 @@ docker run -t --rm \
 
 
 
+docker build -t wetrust/conquest .
+docker run --name DicomServer --restart always  -v ~/srv/public/data/:/conquest/data/ -p 104:5678 -d wetrust/conquest:latest
 
-       docker run --name LagosServer --restart always  -v /home/cristophernic/dicomdata/:/var/www/html/public/data/ -p 80:80 -d wetrust/lagos:latest
 //for directory
-       find directorio -type d -exec chmod 0755 {} \;
+       find directorio -type d -exec sudo chmod 0755 {} \;
 //for file
-find directorio ! -type d -exec chmod 0644 {} \;
+find directorio ! -type d -exec sudo chmod 0644 {} \;
+
+
+
+
+docker run --name HealthDB -v ~/srvData:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=/Sha256:1 -d mysql:latest
+
+ docker exec -i -t loving_heisenberg bash
