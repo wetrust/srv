@@ -6,41 +6,41 @@
       <div class="row m-0 h-100">
          <div class="col-12 col-md-3 bg-faded h-100 pt-3" style="box-shadow: inset -3px 0px 5px -2px rgba(0,0,0,0.75);">
             <div class="card">
-               <div class="card-block">
+               <div class="card-body">
                   <h4 class="card-title">Opciones de configuración</h4>
                   <ul class="nav flex-column">
                      <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#pais" data-id="1" name="centroRegional">País</a>
+                        <a class="nav-link active" data-toggle="tab" href="#pais">País</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#dp" data-id="1" name="centroRegional">Región de salud</a>
+                        <a class="nav-link" data-toggle="tab" href="#rs">Región de salud</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="2" name="ciudad">Hospital o Centro Clínico (Ciudad)</a>
+                        <a class="nav-link" data-toggle="tab" href="#hospital">Hospital o Centro Clínico (Ciudad)</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="3" name="unidadUltrasonografica">Unidad Ultrasonográfica</a>
+                        <a class="nav-link" data-toggle="tab" href="#uu">Unidad Ultrasonográfica</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#membrete" data-id="3">Membrete</a>
+                        <a class="nav-link" data-toggle="tab" href="#membrete">Membrete</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="4" name="profesionalEcografista">Profesional Ecografista</a>
+                        <a class="nav-link" data-toggle="tab" href="#pe">Profesional Ecografista</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="9" name="profesionalReferente">Profesional Referente</a>
+                        <a class="nav-link" data-toggle="tab" href="#pf">Profesional Referente</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="5" name="lugarControlPrenatal">Lugar Control prenatal</a>
+                        <a class="nav-link" data-toggle="tab" href="#lc">Lugar Control prenatal</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="6" name="patologiaObstetrica">Patología Obstétrica Relevante</a>
+                        <a class="nav-link" data-toggle="tab" href="#por">Patología Obstétrica Relevante</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="7" name="motivoExamen">Motivo exámen ecográfico</a>
+                        <a class="nav-link" data-toggle="tab" href="#mee">Motivo exámen ecográfico</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#dp" data-id="8" name="prevision">Prevision</a>
+                        <a class="nav-link" data-toggle="tab" href="#prevision">Prevision</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#usuario">Usuario registrado</a>
@@ -54,55 +54,428 @@
          </div>
          <div class="col-12 col-md-9">
             <div class="tab-content">
-            <div class="tab-pane active" id="pais" role="tabpanel">
-                  <h2 class="my-4">Configurar datos predeterminados</h2>
-                  <div class="card">
-                     <div class="card-block">
-                        <ul class="nav justify-content-end mb-2">
-                           <li class="nav-item">
-                              <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
-                           </li>
-                           <li class="nav-item">
-                              <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
-                           </li>
-                           <li class="nav-item">
-                              <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
-                           </li>
-                           <li class="nav-item">
-                              <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
-                           </li>
-                           <li class="nav-item">
-                              <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
-                           </li>
-                        </ul>
-                        <table class="table table-hover table-bordered">
-                           <thead>
-                              <tr id="tableHead">
-                                 <th>#</th>
-                                 <th>País</th>
-                              </tr>
-                           </thead>
-                           <tbody id="tableBody">
-                           </tbody>
-                        </table>
-                        <div class="card formulario d-none">
-                           <div class="card-block">
-                              <div class="form-group">
-                                 <h5 id="titleInput">Nuevo País</h5>
+                  <div class="tab-pane active" id="pais" role="tabpanel">
+                        <h2 class="my-4">Configurar País</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr>
+                                                      <th>Nombre</th>
+                                                      <th>Código</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="table.body.pais">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario-pais d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
-                              <div class="form-group">
-                                 <input type="text" class="form-control" id="inputPais">
-                              </div>
-                           </div>
                         </div>
-                     </div>
                   </div>
-               </div>
-               <div class="tab-pane" id="dp" role="tabpanel">
-                  <h2 class="my-4">Configurar datos predeterminados</h2>
+                  <div class="tab-pane" id="rs" role="tabpanel">
+                        <h2 class="my-4">Configurar Región de salud</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>#</th>
+                                                      <th>País</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBody">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="hospital" role="tabpanel">
+                        <h2 class="my-4">Configurar Hospital</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>#</th>
+                                                      <th>País</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBody">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="uu" role="tabpanel">
+                        <h2 class="my-4">Configurar Unidad Ultrasonográfica</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>#</th>
+                                                      <th>País</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBody">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="membrete" role="tabpanel">
+                        <h2 class="my-4">Membrete para informe</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <div class="form-group">
+                                          <h5 id="titleInput">Escriba un membrete personalizado</h5>
+                                    </div>
+                                    <div class="form-group">
+                                          <textarea class="form-control" rows="3" onkeydown="return limitLines(this, event)" id="inputMembrete"></textarea>
+                                          <button class="btn btn-danger" id="saveMebrete"><small><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar Membrete</small></button>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="pe" role="tabpanel">
+                        <h2 class="my-4">Configurar Profesional Ecografista</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>#</th>
+                                                      <th>País</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBody">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="pf" role="tabpanel">
+                        <h2 class="my-4">Configurar Profesional Referente</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>#</th>
+                                                      <th>País</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBody">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="lc" role="tabpanel">
+                        <h2 class="my-4">Configurar Lugar Control prenatal</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>#</th>
+                                                      <th>País</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBody">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="por" role="tabpanel">
+                        <h2 class="my-4">Configurar Patología Obstétrica Relevante</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>#</th>
+                                                      <th>País</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBody">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPais">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="mee" role="tabpanel">
+                        <h2 class="my-4">Configurar Motivo exámen ecográfico</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered">
+                                          <thead class="bg-info">
+                                                <tr>
+                                                      <th>#</th>
+                                                      <th>Nombre</th>
+                                                      <th>Código</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="tableBodyPais">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPaisNombre">
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="inputPaisCodigo">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+               <div class="tab-pane" id="prevision" role="tabpanel">
+                  <h2 class="my-4">Configurar Prevision</h2>
                   <div class="card">
-                     <div class="card-block">
-                        <ul class="nav justify-content-end mb-2">
+                     <div class="card-body">
+                        <ul class="nav mb-2">
                            <li class="nav-item">
                               <button type="button" class="btn btn-outline-primary mr-1" id="nuevoConfig"><i class="fa fa-plus" aria-hidden="true"></i> Nueva región de salud</button>
                            </li>
@@ -120,7 +493,7 @@
                            </li>
                         </ul>
                         <table class="table table-hover table-bordered">
-                           <thead>
+                           <thead class="bg-info">
                               <tr id="tableHead">
                                  <th>#</th>
                                  <th>Centro Regional</th>
@@ -130,7 +503,7 @@
                            </tbody>
                         </table>
                         <div class="card formulario d-none">
-                           <div class="card-block">
+                           <div class="card-body">
                               <div class="form-group">
                                  <h5 id="titleInput">Nuevo Centro Regional</h5>
                               </div>
@@ -142,24 +515,10 @@
                      </div>
                   </div>
                </div>
-               <div class="tab-pane" id="membrete" role="tabpanel">
-                  <h2 class="my-4">Membrete para informe</h2>
-                  <div class="card">
-                     <div class="card-block">
-                        <div class="form-group">
-                           <h5 id="titleInput">Escriba un membrete personalizado</h5>
-                        </div>
-                        <div class="form-group">
-                           <textarea class="form-control" rows="3" onkeydown="return limitLines(this, event)" id="inputMembrete"></textarea>
-                           <button class="btn btn-danger" id="saveMebrete"><small><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar Membrete</small></button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
                <div class="tab-pane" id="usuario" role="tabpanel">
                   <h2 class="my-4">Datos de usuario registrado</h2>
                   <div class="card">
-                     <div class="card-block">
+                     <div class="card-body">
                         <div class="row mt-2 mb-2">
                            <div class="col-2">
                               <label for="nombre-paciente" class="col-form-label">Nombre profesional</label>
@@ -176,7 +535,7 @@
                         </div>
                         <p><strong>Usted se encuentra creditado en los siguientes módulos</strong></p>
                         <table class="table table-bordered">
-                           <thead>
+                           <thead class="bg-info">
                               <tr>
                                  <th>Nombre del módulo</th>
                                  <th>Activado</th>
@@ -297,7 +656,6 @@
                      </div>
                   </div>
                </div>
-               <div class="tab-pane" id="uu" role="tabpanel">c</div>
             </div>
          </div>
       </div>

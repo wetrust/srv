@@ -57,7 +57,7 @@ class CiudadModel
 
         $sql = "INSERT INTO ciudad (ciudad_name) VALUES (:ciudad_name)";
         $query = $database->prepare($sql);
-        $query->execute(array(':ciudad_name' => $ciudad_name);
+        $query->execute(array(':ciudad_name' => $ciudad_name));
 
         if ($query->rowCount() == 1) {
             return true;

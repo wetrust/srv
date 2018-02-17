@@ -11,11 +11,16 @@ $(document).ready(function() {
                 });
                 $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Imprimir</button>");
                 $("#imprimirFotos").on("click", function() {
+                    var fotosArreglo = [];
+                    var contadorIMG = 0;
                     $("input[name='fotosElegidas']").each(function() {
                         if (this.checked == true) {
-                          
+                            fotosArreglo.push(contadorIMG);
                         };
+                        contadorIMG = contadorIMG + 1
                     });
+
+                    window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString());
                 });
             }
         }).fail(function() {
