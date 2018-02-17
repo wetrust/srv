@@ -1,0 +1,116 @@
+
+creara una carpeta para guardar la configuración de nginx
+mkdir nginx
+
+crear un contenedor temporal para copiar la configuracion de nginx a la carpeta recien creada
+docker run --name tmp-nginx-container -d nginx
+docker cp tmp-nginx-container:/etc/nginx/ ~/nginx/
+docker rm -f tmp-nginx-container
+
+crear una configuración temporal para el dominio que se desea certificar
+server {
+    listen      80;
+    listen [::]:80;
+    server_name servidor.crecimientofetal.cl
+
+    location / {
+        rewrite ^ https://$host$request_uri? permanent;
+    }
+
+    location ^~ /.well-known {
+        allow all;
+        root  /data/letsencrypt/;
+    }
+}
+
+
+crear una carpeta donde se guarden los certificados de letsencript
+mkdir letsencrypt
+mkdir -> certs
+mkdir -> data
+
+crear un contenedor temporal de nginx, cargar la configuración de la carpeta externa de nginx al contenedor y exponer las carpetas de letsencript dentro del contenedor 
+docker run --name nginx -v ~/nginx/:/etc/nginx/ -v ~/letsencrypt/certs:/etc/letsencrypt -v ~/letsencrypt/data:/data/letsencrypt -p 80:80 -p 443:443 -d nginx 
+
+crear un contenedor que se encargue de la certificación
+
+docker run -it --rm \
+      -v ~/letsencrypt/certs:/etc/letsencrypt \
+      -v ~/letsencrypt/data:/data/letsencrypt \
+      deliverous/certbot \
+      certonly \
+      --webroot --webroot-path=/data/letsencrypt \
+      -d servidor.crecimientofetal.cl
+
+una vez que se realice la certificación, los certificados van a quedar en la carpeta letsencrypt/certs
+debemos eliminar la imagen de deliverous/certbot y recien ahora crear nuestro contenedor nginx definitivo
+
+
+archivo de configuración que hay que copiar en ./nginx/conf.d/webname.conf
+server {
+    listen      80;
+    listen [::]:80;
+    server_name servidor.crecimientofetal.cl;
+
+    location / {
+        rewrite ^ https://$host$request_uri? permanent;
+    }
+}
+
+server {
+    listen      443           ssl http2;
+    listen [::]:443           ssl http2;
+    server_name               servidor.crecimientofetal.cl;
+
+    ssl                       on;
+
+    add_header                Strict-Transport-Security "max-age=31536000" always;
+
+    ssl_session_cache         shared:SSL:20m;
+    ssl_session_timeout       10m;
+
+    ssl_protocols             TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers               "ECDH+AESGCM:ECDH+AES256:ECDH+AES128:!ADH:!AECDH:!MD5;";
+
+    ssl_stapling              on;
+    ssl_stapling_verify       on;
+    resolver                  8.8.8.8 8.8.4.4;
+
+    ssl_certificate           /etc/letsencrypt/live/servidor.crecimientofetal.cl/fullchain.pem;
+    ssl_certificate_key       /etc/letsencrypt/live/servidor.crecimientofetal.cl/privkey.pem;
+    ssl_trusted_certificate   /etc/letsencrypt/live/servidor.crecimientofetal.cl/chain.pem;
+
+    access_log                /dev/stdout;
+    error_log                 /dev/stderr info;
+
+    #extra
+    index index.php index.html;
+    root /code;
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass php:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+}
+
+docker run --name php -v ~/srv:/code -d php:7-fpm
+
+linea para crear el contenedor nginx
+docker run --name nginx -v ~/nginx/:/etc/nginx/ -v ~/letsencrypt/certs:/etc/letsencrypt -p 80:80 -p 443:443 -d nginx
+docker run --name nginx -v ~/nginx/:/etc/nginx/ -v ~/srv:/code -v ~/dicomdata:/code/public/data/ -v ~/letsencrypt/certs:/etc/letsencrypt -p 80:80 --link php:php -p 443:443 -d nginx
+
+
+
+para renovar el certificado repetir este paso
+docker run -t --rm \
+      -v certs:/etc/letsencrypt \
+      -v certs-data:/data/letsencrypt \
+      deliverous/certbot \
+      renew \
+      --webroot --webroot-path=/data/letsencrypt
