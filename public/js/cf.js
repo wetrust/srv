@@ -45,7 +45,7 @@ $(document).ready(function(){
     $("#eliminarPais").on("click", function(){
         $("#modal\\.generico\\.title").html("Eliminar Pais");
         $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el País seleccionado?</h5>");
-        var btnElement = "<button type='button' class='btn btn-primary' id='modal\\.generico\\.action'>Si</button>";
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
         $("#modal\\.generico\\.fotter").prepend(btnElement);
         $("#modal\\.generico\\.action").on("click", function(){
             var tableChild =  $("#table\\.body\\.pais").children();

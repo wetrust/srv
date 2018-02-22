@@ -667,7 +667,6 @@
                         </div>
                         <div class="modal-body" id="modal.generico.body"></div>
                         <div class="modal-footer" id="modal.generico.fotter">
-                              <button type="button" class="btn btn-primary">Si</button>
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                         </div>
                   </div>
