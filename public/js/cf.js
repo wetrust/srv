@@ -6,6 +6,8 @@ $(document).ready(function(){
         $("#table\\.pais").addClass("d-none");
         $("#form\\.pais").removeClass("d-none");
         $("#input\\.pais").val("");
+        $("#guardarPais").removeClass("d-none");
+        $("#cancelarPais").removeClass("d-none");
     });
     
     $("#editarPais").on("click", function(){
@@ -21,6 +23,8 @@ $(document).ready(function(){
             $("#table\\.pais").removeClass("d-none");
             $("#form\\.pais").addClass("d-none");
             $("#input\\.pais").val("");
+            $("#guardarPais").addClass("d-none");
+            $("#cancelarPais").addClass("d-none");
             loadPais();
         });
     });
@@ -29,6 +33,8 @@ $(document).ready(function(){
         $("#table\\.pais").removeClass("d-none");
         $("#form\\.pais").addClass("d-none");
         $("#input\\.pais").val("");
+        $("#guardarPais").addClass("d-none");
+        $("#cancelarPais").addClass("d-none");
         loadPais();
     });
 
