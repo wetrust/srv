@@ -46,7 +46,7 @@ $(document).ready(function(){
         $("#modal\\.generico\\.title").html("Eliminar Pais");
         $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el País seleccionado?</h5>");
         var btnElement = "<button type='button' class='btn btn-primary' id='modal\\.generico\\.action'>Si</button>";
-        $("#modal\\.generico\\.fotter").preppend(btnElement);
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
         $("#modal\\.generico\\.action").on("click", function(){
             var tableChild =  $("#table\\.body\\.pais").children();
             var pais_id = 0;
@@ -59,7 +59,7 @@ $(document).ready(function(){
             $.get( appUrl + "configuracion/eliminarpais/" + pais_id, function( data ) {
                 $("#table\\.body\\.pais").empty();
                 $.each(data, function (key, des) {
-                    var strTable = "<tr><th scope='row'>" + key +1 +"</th><td>" + des.pais_name +"</td></tr>";
+                    var strTable = "<tr><th scope='row'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.pais_name +"</td></tr>";
                     $("#table\\.body\\.pais").append(strTable);
                 });
             });
@@ -72,7 +72,7 @@ function loadPais(){
     $.get( appUrl + "configuracion/pais", function( data ) {
         $("#table\\.body\\.pais").empty();
         $.each(data, function (key, des) {
-            var strTable = "<tr><th scope='row'>" + key +1 +"</th><td>" + des.pais_name +"</td></tr>";
+            var strTable = "<tr><th scope='row'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.pais_name +"</td></tr>";
             $("#table\\.body\\.pais").append(strTable);
             $("#eliminarPais").removeClass("d-none");
         });
