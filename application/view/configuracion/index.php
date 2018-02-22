@@ -78,8 +78,8 @@
                                     <table class="table table-hover table-bordered" id="table.pais">
                                           <thead class="bg-info">
                                                 <tr>
+                                                      <th>N°</th>
                                                       <th>Nombre</th>
-                                                      <th>Código</th>
                                                 </tr>
                                           </thead>
                                           <tbody id="table.body.pais">

@@ -58,7 +58,7 @@ $(document).ready(function(){
             $.get( appUrl + "configuracion/eliminarpais/" + pais_id, function( data ) {
                 $("#table\\.body\\.pais").empty();
                 $.each(data, function (key, des) {
-                    var strTable = "<tr><th scope='row'>" + des.pais_id +"</th><td>" + des.pais_name +"</td></tr>";
+                    var strTable = "<tr><th scope='row'>" + key +1 +"</th><td>" + des.pais_name +"</td></tr>";
                     $("#table\\.body\\.pais").append(strTable);
                 });
             });
@@ -71,7 +71,7 @@ function loadPais(){
     $.get( appUrl + "configuracion/pais", function( data ) {
         $("#table\\.body\\.pais").empty();
         $.each(data, function (key, des) {
-            var strTable = "<tr><th scope='row'>" + des.pais_id +"</th><td>" + des.pais_name +"</td></tr>";
+            var strTable = "<tr><th scope='row'>" + key +1 +"</th><td>" + des.pais_name +"</td></tr>";
             $("#table\\.body\\.pais").append(strTable);
         });
     });
