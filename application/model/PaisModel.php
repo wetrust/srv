@@ -14,9 +14,9 @@ class PaisModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, pais_id, pais_text FROM pais WHERE user_id = :user_id";
+        $sql = "SELECT pais_id, pais_name FROM pais";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id')));
+        $query->execute();
 
         // fetchAll() is the PDO method that gets all result rows
         return $query->fetchAll();
