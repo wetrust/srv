@@ -71,7 +71,7 @@ function loadPais(){
     $.get( appUrl + "configuracion/pais", function( data ) {
         $("#table\\.body\\.pais").empty();
         $.each(data, function (key, des) {
-            var strTable = "<tr><th scope='row' data-id'" + des.pais_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.pais_name +"</td></tr>";
+            var strTable = "<tr><th scope='row' data-id='" + des.pais_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.pais_name +"</td></tr>";
             $("#table\\.body\\.pais").append(strTable);
             $("#eliminarPais").removeClass("d-none");
         });
