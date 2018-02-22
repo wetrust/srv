@@ -44,18 +44,18 @@ class PaisModel
      * @param string $pais_text pais text that will be created
      * @return bool feedback (was the pais created properly ?)
      */
-    public static function createPais($pais_text)
+    public static function createPais($pais_name)
     {
-        if (!$pais_text || strlen($pais_text) == 0) {
+        if (!$pais_name || strlen($pais_name) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO pais (pais_text) VALUES (:pais_text)";
+        $sql = "INSERT INTO pais (pais_name) VALUES (:pais_name)";
         $query = $database->prepare($sql);
-        $query->execute(array(':pais_text' => $pais_text));
+        $query->execute(array(':pais_name' => $pais_name));
 
         if ($query->rowCount() == 1) {
             return true;
