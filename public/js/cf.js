@@ -63,6 +63,8 @@ $(document).ready(function(){
                     $("#table\\.body\\.pais").append(strTable);
                 });
             });
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
         });
         $("#modal\\.generico\\.container").modal("show");
     });

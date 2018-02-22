@@ -105,7 +105,7 @@ class PaisModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "DELETE FROM pais WHERE pais_id = :pais_idLIMIT 1";
+        $sql = "DELETE FROM pais WHERE pais_id = :pais_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':pais_id' => $pais_id));
 
