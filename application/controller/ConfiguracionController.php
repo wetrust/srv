@@ -62,4 +62,10 @@ public function prevision()
     {
         $this->View->renderJSON(PaisModel::createPais(Request::post('pais_name')));
     }
+    public function eliminarpais($pais_id)
+    {
+        $result = PaisModel::deletePais($pais_id);
+
+        $this->View->renderJSON(PaisModel::getAll());
+    }
 }
