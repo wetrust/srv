@@ -75,7 +75,7 @@
                                                 <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
-                                    <table class="table table-hover table-bordered">
+                                    <table class="table table-hover table-bordered" id="table.pais">
                                           <thead class="bg-info">
                                                 <tr>
                                                       <th>Nombre</th>
@@ -85,16 +85,13 @@
                                           <tbody id="table.body.pais">
                                           </tbody>
                                     </table>
-                                    <div class="card formulario-pais d-none">
+                                    <div class="card d-none" id="form.pais">
                                           <div class="card-body">
                                                 <div class="form-group">
                                                       <h5 id="titleInput">Nuevo País</h5>
                                                 </div>
                                                 <div class="form-group">
-                                                      <input type="text" class="form-control" id="inputPais">
-                                                </div>
-                                                <div class="form-group">
-                                                      <input type="text" class="form-control" id="inputPais">
+                                                      <input type="text" class="form-control" id="input.pais">
                                                 </div>
                                           </div>
                                     </div>
@@ -107,19 +104,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -151,19 +148,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -195,19 +192,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -253,19 +250,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -297,19 +294,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -341,19 +338,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -385,19 +382,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -429,19 +426,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPais"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPais"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
@@ -659,6 +656,23 @@
             </div>
          </div>
       </div>
+      <div class="modal fade" id="modal.generico.container">
+            <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <h5 class="modal-title" id="modal.generico.title">Eliminar</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body" id="modal.generico.body"></div>
+                        <div class="modal-footer" id="modal.generico.fotter">
+                              <button type="button" class="btn btn-primary">Si</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
@@ -666,8 +680,11 @@
             $(document).ready(function(){
                   $("body").addClass("h-100");
                   $("html").addClass("h-100");
-                  $("#InicioLink").attr("href", "http://servidor.crecimientofetal.cl/examen/express");
+                  $("#InicioLink").attr("href", "<?php echo Config::get('URL'); ?>examen/express");
                   $("#InicioLink").html("Volver");
             });
       </script>
-      <script src="<?php echo Config::get('URL'); ?>js/static/configuracion.js"></script>
+      <script src="<?php echo Config::get('URL'); ?>js/cf.js"></script>
+      <script type="text/javascript">
+            var appUrl = '<?php echo Config::get('URL'); ?>';
+      </script>
