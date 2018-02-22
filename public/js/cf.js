@@ -9,6 +9,7 @@ $(document).ready(function(){
         $("#nuevoPais").addClass("d-none");
         $("#guardarPais").removeClass("d-none");
         $("#cancelarPais").removeClass("d-none");
+        $("#eliminarPais").addClass("d-none");
     });
     
     $("#editarPais").on("click", function(){
@@ -50,7 +51,7 @@ $(document).ready(function(){
             var tableChild =  $("#table\\.body\\.pais").children();
             var pais_id = 0;
             $.each(tableChild, function(key,des){
-                if ($(des).hasClass("active") == true){
+                if ($(des).hasClass("table-active") == true){
                     pais_id = $(des).children("th").html();
                 }
             });
@@ -73,6 +74,17 @@ function loadPais(){
         $.each(data, function (key, des) {
             var strTable = "<tr><th scope='row'>" + key +1 +"</th><td>" + des.pais_name +"</td></tr>";
             $("#table\\.body\\.pais").append(strTable);
+            $("#eliminarPais").removeClass("d-none");
+        });
+        $("#table\\.body\\.pais tr").on('click',function(){
+            activateTr(this);
         });
     });
+}
+
+function activateTr(element){
+	$.each( $(element).parent().children(), function( i, val ) {
+		$( val ).removeClass( 'table-active');
+	});
+	$(element).addClass('table-active');
 }
