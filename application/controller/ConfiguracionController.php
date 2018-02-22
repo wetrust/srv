@@ -60,6 +60,6 @@ public function prevision()
     }
     public function savepais()
     {
-        $this->View->renderJSON(PaisModel::createPais());
+        $this->View->renderJSON(PaisModel::createPais(Request::post('pais_name')));
     }
 }

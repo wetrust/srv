@@ -53,9 +53,9 @@ class PaisModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO pais (pais_text, user_id) VALUES (:pais_text, :user_id)";
+        $sql = "INSERT INTO pais (pais_text) VALUES (:pais_text)";
         $query = $database->prepare($sql);
-        $query->execute(array(':pais_text' => $pais_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':pais_text' => $pais_text));
 
         if ($query->rowCount() == 1) {
             return true;
