@@ -53,4 +53,13 @@ public function prevision()
     {
         $this->View->renderJSON(PrevisionModel::getAll());
     }
+
+    public function pais()
+    {
+        $this->View->renderJSON(PaisModel::getAll());
+    }
+    public function savepais()
+    {
+        $this->View->renderJSON(PaisModel::createPais());
+    }
 }
