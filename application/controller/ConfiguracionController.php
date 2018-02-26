@@ -98,4 +98,19 @@ public function prevision()
 
         $this->View->renderJSON(HospitalModel::getAll());
     }
+
+    public function uu()
+    {
+        $this->View->renderJSON(UuModel::getAll());
+    }
+    public function saveuu()
+    {
+        $this->View->renderJSON(UuModel::createUu(Request::post('uu_name')));
+    }
+    public function eliminaruu($uu_id)
+    {
+        $result = UuModel::deleteUu($uu_id);
+
+        $this->View->renderJSON(UuModel::getAll());
+    }
 }

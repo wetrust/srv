@@ -3,6 +3,7 @@ $(document).ready(function(){
     loadPais();
     loadRegion();
     loadHospital();
+    loadUu();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -195,6 +196,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoUu").on("click", function(){
+        $("#table\\.uu").addClass("d-none");
+        $("#form\\.uu").removeClass("d-none");
+        $("#input\\.uu").val("");
+        $("#nuevoUu").addClass("d-none");
+        $("#guardarUu").removeClass("d-none");
+        $("#cancelarUu").removeClass("d-none");
+        $("#eliminarUu").addClass("d-none");
+    });
+    
+    $("#editarUu").on("click", function(){
+
+    });
+
+    $("#guardarUu").on("click", function(){
+        var dataUu = {
+            uu_name: $("#input\\.uu").val()
+        }
+
+        $.post(appUrl + "configuracion/saveuu", dataUu).done(function (data) {
+            $("#table\\.uu").removeClass("d-none");
+            $("#form\\.uu").addClass("d-none");
+            $("#input\\.uu").val("");
+            $("#nuevoUu").removeClass("d-none");
+            $("#guardarUu").addClass("d-none");
+            $("#cancelarUu").addClass("d-none");
+            loadUu();
+        });
+    });
+
+    $("#cancelarUu").on("click", function(){
+        $("#table\\.uu").removeClass("d-none");
+        $("#form\\.uu").addClass("d-none");
+        $("#input\\.uu").val("");
+        $("#nuevoUu").removeClass("d-none");
+        $("#guardarUu").addClass("d-none");
+        $("#cancelarUu").addClass("d-none");
+        loadUu();
+    });
+
+    $("#eliminarUu").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Unidad Ultrasonográfica");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar la Unidad Ultrasonográfica seleccionada?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.uu").children();
+            var uu_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    uu_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminaruu/" + uu_id, function( data ) {
+                loadUu();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -237,6 +302,21 @@ function loadHospital(){
             $("#eliminarRegion").removeClass("d-none");
         });
         $("#table\\.body\\.hospital tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadUu(){
+    $.get( appUrl + "configuracion/uu", function( data ) {
+        $("#table\\.body\\.uu").empty();
+        $("#eliminarUu").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.uu_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.uu_name +"</td></tr>";
+            $("#table\\.body\\.uu").append(strTable);
+            $("#eliminarUu").removeClass("d-none");
+        });
+        $("#table\\.body\\.uu tr").on('click',function(){
             activateTr(this);
         });
     });
