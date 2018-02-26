@@ -113,4 +113,19 @@ public function prevision()
 
         $this->View->renderJSON(UuModel::getAll());
     }
+
+    public function profesional()
+    {
+        $this->View->renderJSON(ProfesionalModel::getAll());
+    }
+    public function saveprofesional()
+    {
+        $this->View->renderJSON(ProfesionalModel::createProfesional(Request::post('profesional_name')));
+    }
+    public function eliminarprofesional($profesional_id)
+    {
+        $result = ProfesionalModel::deleteProfesional($profesional_id);
+
+        $this->View->renderJSON(ProfesionalModel::getAll());
+    }
 }

@@ -260,6 +260,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoProfesional").on("click", function(){
+        $("#table\\.profesional").addClass("d-none");
+        $("#form\\.profesional").removeClass("d-none");
+        $("#input\\.profesional").val("");
+        $("#nuevoProfesional").addClass("d-none");
+        $("#guardarProfesional").removeClass("d-none");
+        $("#cancelarProfesional").removeClass("d-none");
+        $("#eliminarProfesional").addClass("d-none");
+    });
+    
+    $("#editarProfesional").on("click", function(){
+
+    });
+
+    $("#guardarProfesional").on("click", function(){
+        var dataProfesional = {
+            profesional_name: $("#input\\.profesional").val()
+        }
+
+        $.post(appUrl + "configuracion/saveprofesional", dataProfesional).done(function (data) {
+            $("#table\\.profesional").removeClass("d-none");
+            $("#form\\.profesional").addClass("d-none");
+            $("#input\\.profesional").val("");
+            $("#nuevoProfesional").removeClass("d-none");
+            $("#guardarProfesional").addClass("d-none");
+            $("#cancelarProfesional").addClass("d-none");
+            loadProfesional();
+        });
+    });
+
+    $("#cancelarProfesional").on("click", function(){
+        $("#table\\.profesional").removeClass("d-none");
+        $("#form\\.profesional").addClass("d-none");
+        $("#input\\.profesional").val("");
+        $("#nuevoProfesional").removeClass("d-none");
+        $("#guardarProfesional").addClass("d-none");
+        $("#cancelarProfesional").addClass("d-none");
+        loadProfesional();
+    });
+
+    $("#eliminarProfesional").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Profesional Ecografista");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Ecografista seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.profesional").children();
+            var profesional_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    profesional_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarprofesional/" + profesional_id, function( data ) {
+                loadProfesional();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -317,6 +381,21 @@ function loadUu(){
             $("#eliminarUu").removeClass("d-none");
         });
         $("#table\\.body\\.uu tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadProfesional(){
+    $.get( appUrl + "configuracion/profesional", function( data ) {
+        $("#table\\.body\\.profesional").empty();
+        $("#eliminarProfesional").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.profesional_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.profesional_name +"</td></tr>";
+            $("#table\\.body\\.profesional").append(strTable);
+            $("#eliminarProfesional").removeClass("d-none");
+        });
+        $("#table\\.body\\.profesional tr").on('click',function(){
             activateTr(this);
         });
     });

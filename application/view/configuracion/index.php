@@ -220,7 +220,7 @@
                                     <div class="card formulario d-none" id="form.uu">
                                           <div class="card-body">
                                                 <div class="form-group">
-                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                      <h5 id="titleInput">Nombre de Unidad</h5>
                                                 </div>
                                                 <div class="form-group">
                                                       <input type="text" class="form-control" id="input.uu">
@@ -250,38 +250,38 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoProfesional"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo Profesional</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarProfesional"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar Profesional</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarProfesional"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarProfesional"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarProfesional"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
-                                    <table class="table table-hover table-bordered">
+                                    <table class="table table-hover table-bordered" id="table.profesional">
                                           <thead class="bg-info">
                                                 <tr id="tableHead">
-                                                      <th>#</th>
-                                                      <th>País</th>
+                                                      <th>N°</th>
+                                                      <th>Nombre</th>
                                                 </tr>
                                           </thead>
-                                          <tbody id="tableBody">
+                                          <tbody id="table.body.profesional">
                                           </tbody>
                                     </table>
-                                    <div class="card formulario d-none">
+                                    <div class="card formulario d-none" id="form.profesional">
                                           <div class="card-body">
                                                 <div class="form-group">
-                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                      <h5 id="titleInput">Nombre del profesional</h5>
                                                 </div>
                                                 <div class="form-group">
-                                                      <input type="text" class="form-control" id="inputPais">
+                                                      <input type="text" class="form-control" id="input.profesional">
                                                 </div>
                                           </div>
                                     </div>
