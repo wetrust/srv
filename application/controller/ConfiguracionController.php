@@ -83,4 +83,19 @@ public function prevision()
 
         $this->View->renderJSON(RegionModel::getAll());
     }
+
+    public function hospital()
+    {
+        $this->View->renderJSON(HospitalModel::getAll());
+    }
+    public function savehospital()
+    {
+        $this->View->renderJSON(HospitalModel::createHospital(Request::post('hospital_name')));
+    }
+    public function eliminarhospital($hospital_id)
+    {
+        $result = HospitalModel::deleteHospital($hospital_id);
+
+        $this->View->renderJSON(HospitalModel::getAll());
+    }
 }

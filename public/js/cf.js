@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     loadPais();
     loadRegion();
+    loadHospital();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -130,6 +131,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoHospital").on("click", function(){
+        $("#table\\.hospital").addClass("d-none");
+        $("#form\\.hospital").removeClass("d-none");
+        $("#input\\.hospital").val("");
+        $("#nuevoHospital").addClass("d-none");
+        $("#guardarHospital").removeClass("d-none");
+        $("#cancelarHospital").removeClass("d-none");
+        $("#eliminarHospital").addClass("d-none");
+    });
+    
+    $("#editarHospital").on("click", function(){
+
+    });
+
+    $("#guardarHospital").on("click", function(){
+        var dataHospital = {
+            hospital_name: $("#input\\.hospital").val()
+        }
+
+        $.post(appUrl + "configuracion/savehospital", dataHospital).done(function (data) {
+            $("#table\\.hospital").removeClass("d-none");
+            $("#form\\.hospital").addClass("d-none");
+            $("#input\\.hospital").val("");
+            $("#nuevoHospital").removeClass("d-none");
+            $("#guardarHospital").addClass("d-none");
+            $("#cancelarHospital").addClass("d-none");
+            loadHospital();
+        });
+    });
+
+    $("#cancelarHospital").on("click", function(){
+        $("#table\\.hospital").removeClass("d-none");
+        $("#form\\.hospital").addClass("d-none");
+        $("#input\\.hospital").val("");
+        $("#nuevoHospital").removeClass("d-none");
+        $("#guardarHospital").addClass("d-none");
+        $("#cancelarHospital").addClass("d-none");
+        loadHospital();
+    });
+
+    $("#eliminarHospital").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Hospital");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Hospital seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.hospital").children();
+            var hospital_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    hospital_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarhospital/" + hospital_id, function( data ) {
+                loadHospital();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -157,6 +222,21 @@ function loadRegion(){
             $("#eliminarRegion").removeClass("d-none");
         });
         $("#table\\.body\\.region tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadHospital(){
+    $.get( appUrl + "configuracion/hospital", function( data ) {
+        $("#table\\.body\\.hospital").empty();
+        $("#eliminarHospital").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.hospital_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.hospital_name +"</td></tr>";
+            $("#table\\.body\\.hospital").append(strTable);
+            $("#eliminarRegion").removeClass("d-none");
+        });
+        $("#table\\.body\\.hospital tr").on('click',function(){
             activateTr(this);
         });
     });
