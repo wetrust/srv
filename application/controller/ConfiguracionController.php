@@ -68,4 +68,19 @@ public function prevision()
 
         $this->View->renderJSON(PaisModel::getAll());
     }
+
+    public function region()
+    {
+        $this->View->renderJSON(RegionModel::getAll());
+    }
+    public function saveregion()
+    {
+        $this->View->renderJSON(RegionModel::createRegion(Request::post('region_name')));
+    }
+    public function eliminarregion($region_id)
+    {
+        $result = RegionModel::deleteRegion($region_id);
+
+        $this->View->renderJSON(RegionModel::getAll());
+    }
 }
