@@ -4,6 +4,7 @@ $(document).ready(function(){
     loadRegion();
     loadHospital();
     loadUu();
+    loadProfesional();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
