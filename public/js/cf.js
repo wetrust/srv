@@ -6,6 +6,7 @@ $(document).ready(function(){
     loadUu();
     loadProfesional();
     loadProfesionalReferente();
+    loadLugarControl();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -390,6 +391,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoLugarControl").on("click", function(){
+        $("#table\\.lugar").addClass("d-none");
+        $("#form\\.lugar").removeClass("d-none");
+        $("#input\\.lugar").val("");
+        $("#nuevoLugarControl").addClass("d-none");
+        $("#guardarLugarControl").removeClass("d-none");
+        $("#cancelarLugarControl").removeClass("d-none");
+        $("#eliminarLugarControl").addClass("d-none");
+    });
+    
+    $("#editarLugarControl").on("click", function(){
+
+    });
+
+    $("#guardarLugarControl").on("click", function(){
+        var dataLugar = {
+            lcp_name: $("#input\\.lugar").val()
+        }
+
+        $.post(appUrl + "configuracion/savelugarcontrol", dataLugar).done(function (data) {
+            $("#table\\.lugar").removeClass("d-none");
+            $("#form\\.lugar").addClass("d-none");
+            $("#input\\.lugar").val("");
+            $("#nuevoLugarControl").removeClass("d-none");
+            $("#guardarLugarControl").addClass("d-none");
+            $("#cancelarLugarControl").addClass("d-none");
+            loadLugarControl();
+        });
+    });
+
+    $("#cancelarLugarControl").on("click", function(){
+        $("#table\\.lugar").removeClass("d-none");
+        $("#form\\.lugar").addClass("d-none");
+        $("#input\\.lugar").val("");
+        $("#nuevoLugarControl").removeClass("d-none");
+        $("#guardarLugarControl").addClass("d-none");
+        $("#cancelarLugarControl").addClass("d-none");
+        loadLugarControl();
+    });
+
+    $("#eliminarLugarControl").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.lugar").children();
+            var lugar_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    lugar_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarlugarcontrol/" + lugar_id, function( data ) {
+                loadLugarControl();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -477,6 +542,21 @@ function loadProfesionalReferente(){
             $("#eliminarProfesionalReferente").removeClass("d-none");
         });
         $("#table\\.body\\.profesional\\.referente tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadLugarControl(){
+    $.get( appUrl + "configuracion/lugarcontrol", function( data ) {
+        $("#table\\.body\\.lugar").empty();
+        $("#eliminarLugarControl").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.lcp_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.lcp_name +"</td></tr>";
+            $("#table\\.body\\.lugar").append(strTable);
+            $("#eliminarLugarControl").removeClass("d-none");
+        });
+        $("#table\\.body\\.lugar tr").on('click',function(){
             activateTr(this);
         });
     });

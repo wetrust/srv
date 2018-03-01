@@ -143,4 +143,19 @@ public function prevision()
 
         $this->View->renderJSON(ProfesionalReferenteModel::getAll());
     }
+
+    public function lugarcontrol()
+    {
+        $this->View->renderJSON(LugarControlModel::getAll());
+    }
+    public function savelugarcontrol()
+    {
+        $this->View->renderJSON(LugarControlModel::createLugarControl(Request::post('lcp_name')));
+    }
+    public function eliminarlugarcontrol($lcp_id)
+    {
+        $result = LugarControlModel::deleteLugarControl($lcp_id);
+
+        $this->View->renderJSON(LugarControlModel::getAll());
+    }
 }

@@ -41,14 +41,15 @@
                         <a class="nav-link" data-toggle="tab" href="#prevision">Prevision</a>
                      </li>
                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#membrete">Membrete</a>
+                     </li>
+                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#usuario">Usuario registrado</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#uu">Unidad Ultrasonográfica</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#membrete">Membrete</a>
-                     </li>
+                     
                   </ul>
                </div>
             </div>
@@ -339,19 +340,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoLugarControl"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo Lugar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarLugarControl"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar Lugar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarLugarControl"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarLugarControl"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarLugarControl"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered">
