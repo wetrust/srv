@@ -469,14 +469,14 @@ function loadProfesional(){
 
 function loadProfesionalReferente(){
     $.get( appUrl + "configuracion/profesionalreferente", function( data ) {
-        $("#table\\.body\\.profesional.referente").empty();
+        $("#table\\.body\\.profesional\\.referente").empty();
         $("#eliminarProfesionalReferente").addClass("d-none");
         $.each(data, function (key, des) {
             var strTable = "<tr><th scope='row' data-id='" + des.profesional_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.profesional_name +"</td></tr>";
-            $("#table\\.body\\.profesional.referente").append(strTable);
+            $("#table\\.body\\.profesional\\.referente").append(strTable);
             $("#eliminarProfesionalReferente").removeClass("d-none");
         });
-        $("#table\\.body\\.profesional.referente tr").on('click',function(){
+        $("#table\\.body\\.profesional\\.referente tr").on('click',function(){
             activateTr(this);
         });
     });
