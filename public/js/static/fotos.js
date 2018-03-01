@@ -3,6 +3,12 @@ $(document).ready(function() {
     $("#id-paciente").on("change", function() {
         RUTPACIENTE = $(this).val();
 
+        $.get(serverURL + "configuracion/obtenernombre/" + $(this).val()).done(function(data) {
+            var nombre = data.PatientNam.split("^");
+            $("#nombre-paciente").val(nombre[1]);
+            $("#apellido-paciente").val(nombre[1]);
+        });
+
         $.get(serverURL + "dicom/getimages/" + $(this).val()).done(function(data) {
             $("#fotosDicom").html(" ");
             if (data.DCM = true) {
