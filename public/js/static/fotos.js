@@ -6,7 +6,7 @@ $(document).ready(function() {
         $.get(serverURL + "configuracion/obtenernombre/" + $(this).val()).done(function(data) {
             var nombre = data[0].PatientNam.split("^");
             $("#nombre-paciente").val(nombre[1]);
-            $("#apellido-paciente").val(nombre[1]);
+            $("#apellido-paciente").val(nombre[0]);
         });
 
         $.get(serverURL + "dicom/getimages/" + $(this).val()).done(function(data) {
