@@ -21,7 +21,6 @@
                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#uu">Unidad Ultrasonográfica</a>
                      </li>
-                     
                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#pe">Profesional Ecografista</a>
                      </li>
@@ -46,10 +45,6 @@
                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#usuario">Usuario registrado</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#uu">Unidad Ultrasonográfica</a>
-                     </li>
-                     
                   </ul>
                </div>
             </div>
