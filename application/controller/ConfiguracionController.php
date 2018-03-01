@@ -158,4 +158,9 @@ public function prevision()
 
         $this->View->renderJSON(LugarControlModel::getAll());
     }
+
+    public function obtenernombre($rut)
+    {
+        $this->View->renderJSON(NombreModel::getAll($rut));
+    }
 }
