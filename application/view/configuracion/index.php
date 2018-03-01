@@ -358,20 +358,20 @@
                                     <table class="table table-hover table-bordered">
                                           <thead class="bg-info">
                                                 <tr id="tableHead">
-                                                      <th>#</th>
-                                                      <th>País</th>
+                                                      <th>N°</th>
+                                                      <th>Nombre</th>
                                                 </tr>
                                           </thead>
-                                          <tbody id="tableBody">
+                                          <tbody id="table.body.lugar">
                                           </tbody>
                                     </table>
-                                    <div class="card formulario d-none">
+                                    <div class="card formulario d-none" id="form.lugar">
                                           <div class="card-body">
                                                 <div class="form-group">
-                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                      <h5 id="titleInput">Nombre del Lugar de control Prenatal</h5>
                                                 </div>
                                                 <div class="form-group">
-                                                      <input type="text" class="form-control" id="inputPais">
+                                                      <input type="text" class="form-control" id="input.lugar">
                                                 </div>
                                           </div>
                                     </div>
