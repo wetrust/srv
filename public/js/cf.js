@@ -5,6 +5,7 @@ $(document).ready(function(){
     loadHospital();
     loadUu();
     loadProfesional();
+    loadProfesionalReferente();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -325,6 +326,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoProfesionalReferente").on("click", function(){
+        $("#table\\.profesional\\.referente").addClass("d-none");
+        $("#form\\.profesional\\.referente").removeClass("d-none");
+        $("#input\\.profesional\\.referente").val("");
+        $("#nuevoProfesionalReferente").addClass("d-none");
+        $("#guardarProfesionalReferente").removeClass("d-none");
+        $("#cancelarProfesionalReferente").removeClass("d-none");
+        $("#eliminarProfesionalReferente").addClass("d-none");
+    });
+    
+    $("#editarProfesionalReferente").on("click", function(){
+
+    });
+
+    $("#guardarProfesionalReferente").on("click", function(){
+        var dataProfesional = {
+            profesional_name: $("#input\\.profesional\\.referente").val()
+        }
+
+        $.post(appUrl + "configuracion/saveprofesionalreferente", dataProfesional).done(function (data) {
+            $("#table\\.profesional\\.referente").removeClass("d-none");
+            $("#form\\.profesional\\.referente").addClass("d-none");
+            $("#input\\.profesional\\.referente").val("");
+            $("#nuevoProfesionalReferente").removeClass("d-none");
+            $("#guardarProfesionalReferente").addClass("d-none");
+            $("#cancelarProfesionalReferente").addClass("d-none");
+            loadProfesionalReferente();
+        });
+    });
+
+    $("#cancelarProfesionalReferente").on("click", function(){
+        $("#table\\.profesional\\.referente").removeClass("d-none");
+        $("#form\\.profesional\\.referente").addClass("d-none");
+        $("#input\\.profesional\\.referente").val("");
+        $("#nuevoProfesionalReferente").removeClass("d-none");
+        $("#guardarProfesionalReferente").addClass("d-none");
+        $("#cancelarProfesionalReferente").addClass("d-none");
+        loadProfesionalReferente();
+    });
+
+    $("#eliminarProfesionalReferente").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.profesional\\.referente").children();
+            var profesional_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    profesional_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarprofesionalreferente/" + profesional_id, function( data ) {
+                loadProfesionalReferente();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -397,6 +462,21 @@ function loadProfesional(){
             $("#eliminarProfesional").removeClass("d-none");
         });
         $("#table\\.body\\.profesional tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadProfesionalReferente(){
+    $.get( appUrl + "configuracion/profesionalreferente", function( data ) {
+        $("#table\\.body\\.profesional.referente").empty();
+        $("#eliminarProfesionalReferente").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.profesional_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.profesional_name +"</td></tr>";
+            $("#table\\.body\\.profesional.referente").append(strTable);
+            $("#eliminarProfesionalReferente").removeClass("d-none");
+        });
+        $("#table\\.body\\.profesional.referente tr").on('click',function(){
             activateTr(this);
         });
     });

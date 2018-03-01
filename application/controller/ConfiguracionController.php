@@ -128,4 +128,19 @@ public function prevision()
 
         $this->View->renderJSON(ProfesionalModel::getAll());
     }
+
+    public function profesionalreferente()
+    {
+        $this->View->renderJSON(ProfesionalReferenteModel::getAll());
+    }
+    public function saveprofesionalreferente()
+    {
+        $this->View->renderJSON(ProfesionalReferenteModel::createProfesionalReferente(Request::post('profesional_name')));
+    }
+    public function eliminarprofesionalreferente($profesional_id)
+    {
+        $result = ProfesionalReferenteModel::deleteProfesionalReferente($profesional_id);
+
+        $this->View->renderJSON(ProfesionalReferenteModel::getAll());
+    }
 }
