@@ -18,7 +18,7 @@
       <div class='container' id="fotosContainer"></div>
       <div class='container'>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;'></span> 
-         <p style='font-size: 0.8rem;'>Fecha Informe: :DATEINFORME</p>
+         <p style='font-size: 0.8rem;'>Fecha Informe: <span id="fecha.informe"></span></p>
          <span style='border-top: 2px solid #000;width: 100% !important;display: block;'></span> 
          <p style='font-size: 0.7rem;'>Herramienta informática diseñada por Dr. Rudecindo Lagos S. Médico gineco-obstetra ultrasonografista y Cristopher Castro G. Ingenieria Civil.<br><strong>El software tiene por objetivo favorecer el análisis preliminar de los datos obtenidos en el exámen ecográfico, la interpretación clínica de los mismos, es responsabilidad exclusiva de quien realiza y certifica este documento.</strong></p>
       </div>
@@ -52,10 +52,15 @@
 
         $(document).ready(function(){
 
+            //obtener la hora actual
+            var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+            var f = new Date();
+            $("#fecha\\.informe").html(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+
             $.get("<?php echo Config::get('URL'); ?>configuracion/obtenernombre/<?php echo $this->user_id; ?>").done(function(data) {
                 if (data.lengh > 0 ){
                     var nombre = data[0].PatientNam.split("^");
-                    $("#nombre\\.paciente").val(nombre[1] + " " + nombre[0]);
+                    $("#nombre\\.paciente").html(nombre[1] + " " + nombre[0]);
                 }
             });
 
