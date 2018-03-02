@@ -13,7 +13,7 @@
       <div class='container mt-5 pt-5'>
          <h3 class='text-center'>Impresión de Imágenes Gineco-Obstétrica</h3>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;margin-bottom:15px;'></span> 
-         <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong>:PACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong>:FEXAMEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> ID Paciente: </strong>:IDPACIENTE</p>
+         <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong><span id="nombre.paciente"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong><span id="fecha.examen"></span></p>
       </div>
       <div class='container' id="fotosContainer"></div>
       <div class='container'>
@@ -23,7 +23,6 @@
          <p style='font-size: 0.7rem;'>Herramienta informática diseñada por Dr. Rudecindo Lagos S. Médico gineco-obstetra ultrasonografista y Cristopher Castro G. Ingenieria Civil.<br><strong>El software tiene por objetivo favorecer el análisis preliminar de los datos obtenidos en el exámen ecográfico, la interpretación clínica de los mismos, es responsabilidad exclusiva de quien realiza y certifica este documento.</strong></p>
       </div>
       <script>
-
         var contains = function(needle) {
             // Per spec, the way to identify NaN is that it is not equal to itself
             var findNaN = needle !== needle;
@@ -52,6 +51,14 @@
         };
 
         $(document).ready(function(){
+
+            $.get("<?php echo Config::get('URL'); ?>configuracion/obtenernombre/<?php echo $this->user_id; ?>").done(function(data) {
+                if (data.lengh > 0 ){
+                    var nombre = data[0].PatientNam.split("^");
+                    $("#nombre\\.paciente").val(nombre[1] + " " + nombre[0]);
+                }
+            });
+
             $.get("<?php echo Config::get('URL'); ?>dicom/getimages/<?php echo $this->user_id; ?>").done(function(data) {
                 $("#fotosDicom").html(" ");
                 if (data.DCM = true){
