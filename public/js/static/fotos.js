@@ -4,7 +4,7 @@ $(document).ready(function() {
         RUTPACIENTE = $(this).val();
 
         $.get(serverURL + "configuracion/obtenernombre/" + $(this).val()).done(function(data) {
-            if (data.lengh > 0 ){
+            if (data.length > 0 ){
                 var nombre = data[0].PatientNam.split("^");
                 $("#nombre-paciente").val(nombre[1]);
                 $("#apellido-paciente").val(nombre[0]);
