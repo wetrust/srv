@@ -407,7 +407,7 @@
                                     <div class="card formulario d-none" id="form.patologia">
                                           <div class="card-body">
                                                 <div class="form-group">
-                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                      <h5 id="titleInput">Nombre de patología</h5>
                                                 </div>
                                                 <div class="form-group">
                                                       <input type="text" class="form-control" id="input.patologia">
