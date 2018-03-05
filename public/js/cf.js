@@ -487,17 +487,17 @@ $(document).ready(function(){
         });
     });
 
-    $("#cancelarPatologiaObstetrical").on("click", function(){
+    $("#cancelarPatologiaObstetrica").on("click", function(){
         $("#table\\.patologia").removeClass("d-none");
         $("#form\\.patologia").addClass("d-none");
         $("#input\\.patologia").val("");
-        $("#nuevaPatologiaObstetrical").removeClass("d-none");
-        $("#guardarPatologiaObstetrical").addClass("d-none");
-        $("#cancelarPatologiaObstetrical").addClass("d-none");
-        loadPatologiaObstetrical();
+        $("#nuevaPatologiaObstetrica").removeClass("d-none");
+        $("#guardarPatologiaObstetrica").addClass("d-none");
+        $("#cancelarPatologiaObstetrica").addClass("d-none");
+        loadPatologiaObstetrica();
     });
 
-    $("#eliminarPatologiaObstetrical").on("click", function(){
+    $("#eliminarPatologiaObstetrica").on("click", function(){
         $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
         $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
         var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
