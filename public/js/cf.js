@@ -512,7 +512,7 @@ $(document).ready(function(){
             });
 
             $.get( appUrl + "configuracion/eliminarpatologiaobstetrica/" + patologia_id, function( data ) {
-                loadPatologiaObstetrical();
+                loadPatologiaObstetrica();
             });
 
             $("#modal\\.generico\\.action").remove();
