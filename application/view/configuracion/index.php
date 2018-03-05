@@ -379,19 +379,19 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevaPatologia"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevaPatologiaObstetrica"><i class="fa fa-plus" aria-hidden="true"></i> Nueva Patologia</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPatologia"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPatologiaObstetrica"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar Patologia</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPatologia"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPatologiaObstetrica"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPatologia"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPatologiaObstetrica"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPatologia"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPatologiaObstetrica"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
                                     <table class="table table-hover table-bordered" id="table.patologia">

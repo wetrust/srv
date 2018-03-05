@@ -159,6 +159,21 @@ public function prevision()
         $this->View->renderJSON(LugarControlModel::getAll());
     }
 
+    public function patologiaobstetrica()
+    {
+        $this->View->renderJSON(PatologiaObstetrica::getAll());
+    }
+    public function savepatologiaobstetrica()
+    {
+        $this->View->renderJSON(PatologiaObstetrica::createPatologia(Request::post('patologia_name')));
+    }
+    public function eliminarpatologiaobstetrica($patologia_id)
+    {
+        $result = PatologiaObstetrica::deletePatologia($patologia_id);
+
+        $this->View->renderJSON(PatologiaObstetrica::getAll());
+    }
+
     public function obtenernombre($rut)
     {
         $this->View->renderJSON(NombreModel::getAll($rut));

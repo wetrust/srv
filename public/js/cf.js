@@ -7,6 +7,7 @@ $(document).ready(function(){
     loadProfesional();
     loadProfesionalReferente();
     loadLugarControl();
+    loadPatologiaObstetrica();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -455,6 +456,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevaPatologiaObstetrica").on("click", function(){
+        $("#table\\.patologia").addClass("d-none");
+        $("#form\\.patologia").removeClass("d-none");
+        $("#input\\.patologia").val("");
+        $("#nuevaPatologiaObstetrica").addClass("d-none");
+        $("#guardarPatologiaObstetrica").removeClass("d-none");
+        $("#cancelarPatologiaObstetrica").removeClass("d-none");
+        $("#eliminarPatologiaObstetrica").addClass("d-none");
+    });
+    
+    $("#editarPatologiaObstetrica").on("click", function(){
+
+    });
+
+    $("#guardarPatologiaObstetrica").on("click", function(){
+        var dataPatologia = {
+            patologia_name: $("#input\\.patologia").val()
+        }
+
+        $.post(appUrl + "configuracion/savepatologiaobstetrica", dataPatologia).done(function (data) {
+            $("#table\\.patologia").removeClass("d-none");
+            $("#form\\.patologia").addClass("d-none");
+            $("#input\\.patologia").val("");
+            $("#nuevaPatologiaObstetrica").removeClass("d-none");
+            $("#guardarPatologiaObstetrica").addClass("d-none");
+            $("#cancelarPatologiaObstetrica").addClass("d-none");
+            loadPatologiaObstetrica();
+        });
+    });
+
+    $("#cancelarPatologiaObstetrical").on("click", function(){
+        $("#table\\.patologia").removeClass("d-none");
+        $("#form\\.patologia").addClass("d-none");
+        $("#input\\.patologia").val("");
+        $("#nuevaPatologiaObstetrical").removeClass("d-none");
+        $("#guardarPatologiaObstetrical").addClass("d-none");
+        $("#cancelarPatologiaObstetrical").addClass("d-none");
+        loadPatologiaObstetrical();
+    });
+
+    $("#eliminarPatologiaObstetrical").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.patologia").children();
+            var patologia_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    patologia_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarpatologiaobstetrica/" + patologia_id, function( data ) {
+                loadPatologiaObstetrical();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -562,6 +627,21 @@ function loadLugarControl(){
     });
 }
 
+
+function loadPatologiaObstetrica(){
+    $.get( appUrl + "configuracion/patologiaobstetrica", function( data ) {
+        $("#table\\.body\\.patologia").empty();
+        $("#eliminarPatologiaObstetrica").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.patologia_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.patologia_name +"</td></tr>";
+            $("#table\\.body\\.patologia").append(strTable);
+            $("#eliminarPatologiaObstetrica").removeClass("d-none");
+        });
+        $("#table\\.body\\.patologia tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
 function activateTr(element){
 	$.each( $(element).parent().children(), function( i, val ) {
 		$( val ).removeClass( 'table-active');

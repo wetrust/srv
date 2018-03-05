@@ -1,20 +1,20 @@
 <?php
 
 /**
- * NoteModel
+ * PatologiaObstetricaModel
  * This is basically a simple CRUD (Create/Read/Update/Delete) demonstration.
  */
-class PorModel
+class PatologiaObstetricaModel
 {
     /**
-     * Get all notes (notes are just example data that the user has created)
+     * Get all patologia (patologia are just example data that the user has created)
      * @return array an array with several objects (the results)
      */
     public static function getAll()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT por_id, por_name FROM por";
+        $sql = "SELECT patologia_id, patologia_name FROM patologia";
         $query = $database->prepare($sql);
         $query->execute();
 
@@ -23,39 +23,39 @@ class PorModel
     }
 
     /**
-     * Get a single note
-     * @param int $note_id id of the specific note
+     * Get a single patologia
+     * @param int $patologia_id id of the specific patologia
      * @return object a single object (the result)
      */
-    public static function getNote($note_id)
+    public static function getPatologia($patologia_id)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, note_id, note_text FROM notes WHERE user_id = :user_id AND note_id = :note_id LIMIT 1";
+        $sql = "SELECT patologia_id, patologia_name FROM patologia WHERE patologia_id = :patologia_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id'), ':note_id' => $note_id));
+        $query->execute(array(':patologia_id' => $patologia_id));
 
         // fetch() is the PDO method that gets a single result
         return $query->fetch();
     }
 
     /**
-     * Set a note (create a new one)
-     * @param string $note_text note text that will be created
-     * @return bool feedback (was the note created properly ?)
+     * Set a patologia (create a new one)
+     * @param string $patologia_name patologia text that will be created
+     * @return bool feedback (was the patologia created properly ?)
      */
-    public static function createNote($note_text)
+    public static function createPatologia($patologia_name)
     {
-        if (!$note_text || strlen($note_text) == 0) {
+        if (!$patologia_name || strlen($patologia_name) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO notes (note_text, user_id) VALUES (:note_text, :user_id)";
+        $sql = "INSERT INTO patologia (patologia_name) VALUES (:patologia_name)";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':patologia_name' => $patologia_name));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -67,22 +67,22 @@ class PorModel
     }
 
     /**
-     * Update an existing note
-     * @param int $note_id id of the specific note
-     * @param string $note_text new text of the specific note
+     * Update an existing patologia
+     * @param int $patologia_id id of the specific patologia
+     * @param string $patologia_name new text of the specific patologia
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateNote($note_id, $note_text)
+    public static function updatePatologia($patologia_id, $patologia_name)
     {
-        if (!$note_id || !$note_text) {
+        if (!$patologia_id || !$patologia_name) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE notes SET note_text = :note_text WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE patologia SET patologia_name = :patologia_name WHERE patologia_id = :patologia_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_id' => $note_id, ':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':patologia_id' => $patologia_id, ':patologia_name' => $patologia_name));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -93,21 +93,21 @@ class PorModel
     }
 
     /**
-     * Delete a specific note
-     * @param int $note_id id of the note
-     * @return bool feedback (was the note deleted properly ?)
+     * Delete a specific patologia
+     * @param int $patologia_id id of the patologia
+     * @return bool feedback (was the patologia deleted properly ?)
      */
-    public static function deleteNote($note_id)
+    public static function deletePatologia($patologia_id)
     {
-        if (!$note_id) {
+        if (!$patologia_id) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "DELETE FROM notes WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "DELETE FROM patologia WHERE patologia_id = :patologia_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_id' => $note_id, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':patologia_id' => $patologia_id));
 
         if ($query->rowCount() == 1) {
             return true;
