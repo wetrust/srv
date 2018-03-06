@@ -49,10 +49,6 @@ public function pr()
     {
         $this->View->renderJSON(PrModel::getAll());
     }
-public function prevision()
-    {
-        $this->View->renderJSON(PrevisionModel::getAll());
-    }
 
     public function pais()
     {
