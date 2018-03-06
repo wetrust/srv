@@ -58,9 +58,9 @@
             $("#fecha\\.informe").html(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
 
             $.get("<?php echo Config::get('URL'); ?>configuracion/obtenernombre/<?php echo $this->user_id; ?>").done(function(data) {
-                if (data.lengh > 0 ){
+                if (data.length > 0 ){
                     var nombre = data[0].PatientNam.split("^");
-                    $("#nombre\\.paciente").html(nombre[1] + " " + nombre[0]);
+                    $("#nnombre\\.paciente").html(nombre[1] + " " + nombre[0]);
                 }
             });
 
