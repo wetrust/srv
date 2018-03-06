@@ -8,6 +8,8 @@ $(document).ready(function(){
     loadProfesionalReferente();
     loadLugarControl();
     loadPatologiaObstetrica();
+    loadMotivoExamen();
+    loadPrevision();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -520,6 +522,134 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoMotivoExamen").on("click", function(){
+        $("#table\\.motivo").addClass("d-none");
+        $("#form\\.motivo").removeClass("d-none");
+        $("#input\\.motivo").val("");
+        $("#nuevoMotivoExamen").addClass("d-none");
+        $("#guardarMotivoExamen").removeClass("d-none");
+        $("#cancelarMotivoExamen").removeClass("d-none");
+        $("#eliminarMotivoExamen").addClass("d-none");
+    });
+    
+    $("#editarMotivoExamen").on("click", function(){
+
+    });
+
+    $("#guardarMotivoExamen").on("click", function(){
+        var dataMotivo = {
+            motivo_name: $("#input\\.motivo").val()
+        }
+
+        $.post(appUrl + "configuracion/savemotivoexamen", dataMotivo).done(function (data) {
+            $("#table\\.motivo").removeClass("d-none");
+            $("#form\\.motivo").addClass("d-none");
+            $("#input\\.motivo").val("");
+            $("#nuevoMotivoExamen").removeClass("d-none");
+            $("#guardarMotivoExamen").addClass("d-none");
+            $("#cancelarMotivoExamen").addClass("d-none");
+            loadMotivoExamen();
+        });
+    });
+
+    $("#cancelarMotivoExamen").on("click", function(){
+        $("#table\\.motivo").removeClass("d-none");
+        $("#form\\.motivo").addClass("d-none");
+        $("#input\\.motivo").val("");
+        $("#nuevoMotivoExamen").removeClass("d-none");
+        $("#guardarMotivoExamen").addClass("d-none");
+        $("#cancelarMotivoExamen").addClass("d-none");
+        loadMotivoExamen();
+    });
+
+    $("#eliminarMotivoExamen").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.motivo").children();
+            var motivo_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    motivo_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarmotivoexamen/" + motivo_id, function( data ) {
+                loadMotivoExamen();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
+
+    $("#nuevaPrevision").on("click", function(){
+        $("#table\\.prevision").addClass("d-none");
+        $("#form\\.prevision").removeClass("d-none");
+        $("#input\\.prevision").val("");
+        $("#nuevaPrevision").addClass("d-none");
+        $("#guardarPrevision").removeClass("d-none");
+        $("#cancelarPrevision").removeClass("d-none");
+        $("#eliminarPrevision").addClass("d-none");
+    });
+    
+    $("#editarPrevision").on("click", function(){
+
+    });
+
+    $("#guardarPrevision").on("click", function(){
+        var dataPrevision = {
+            prevision_name: $("#input\\.prevision").val()
+        }
+
+        $.post(appUrl + "configuracion/saveprevision", dataPrevision).done(function (data) {
+            $("#table\\.prevision").removeClass("d-none");
+            $("#form\\.prevision").addClass("d-none");
+            $("#input\\.prevision").val("");
+            $("#nuevaPrevision").removeClass("d-none");
+            $("#guardarPrevision").addClass("d-none");
+            $("#cancelarPrevision").addClass("d-none");
+            loadPrevision();
+        });
+    });
+
+    $("#cancelarPrevision").on("click", function(){
+        $("#table\\.prevision").removeClass("d-none");
+        $("#form\\.prevision").addClass("d-none");
+        $("#input\\.prevision").val("");
+        $("#nuevaPrevision").removeClass("d-none");
+        $("#guardarPrevision").addClass("d-none");
+        $("#cancelarPrevision").addClass("d-none");
+        loadPrevision();
+    });
+
+    $("#eliminarPrevision").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.prevision").children();
+            var prevision_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    prevision_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarprevision/" + prevision_id, function( data ) {
+                loadPrevision();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -642,6 +772,37 @@ function loadPatologiaObstetrica(){
         });
     });
 }
+
+function loadMotivoExamen(){
+    $.get( appUrl + "configuracion/motivoexamen", function( data ) {
+        $("#table\\.body\\.motivo").empty();
+        $("#eliminarMotivoExamen").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.motivo_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.motivo_name +"</td></tr>";
+            $("#table\\.body\\.motivo").append(strTable);
+            $("#eliminarMotivoExamen").removeClass("d-none");
+        });
+        $("#table\\.body\\.motivo tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadPrevision(){
+    $.get( appUrl + "configuracion/prevision", function( data ) {
+        $("#table\\.body\\.prevision").empty();
+        $("#eliminarPrevision").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.prevision_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.prevision_name +"</td></tr>";
+            $("#table\\.body\\.prevision").append(strTable);
+            $("#eliminarPrevision").removeClass("d-none");
+        });
+        $("#table\\.body\\.prevision tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
 function activateTr(element){
 	$.each( $(element).parent().children(), function( i, val ) {
 		$( val ).removeClass( 'table-active');

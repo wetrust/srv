@@ -174,6 +174,36 @@ public function prevision()
         $this->View->renderJSON(PatologiaObstetricaModel::getAll());
     }
 
+    public function motivoexamen()
+    {
+        $this->View->renderJSON(MotivoExamenModel::getAll());
+    }
+    public function savemotivoexamen()
+    {
+        $this->View->renderJSON(MotivoExamenModel::createMotivo(Request::post('motivo_name')));
+    }
+    public function eliminarmotivoexamen($motivo_id)
+    {
+        $result = MotivoExamenModel::deleteMotivo($motivo_id);
+
+        $this->View->renderJSON(MotivoExamenModel::getAll());
+    }
+
+    public function prevision()
+    {
+        $this->View->renderJSON(PrevisionModel::getAll());
+    }
+    public function saveprevision()
+    {
+        $this->View->renderJSON(PrevisionModel::createPrevision(Request::post('prevision_name')));
+    }
+    public function eliminarprevision($prevision_id)
+    {
+        $result = PrevisionModel::deletePrevision($prevision_id);
+
+        $this->View->renderJSON(PrevisionModel::getAll());
+    }
+
     public function obtenernombre($rut)
     {
         $this->View->renderJSON(NombreModel::getAll($rut));

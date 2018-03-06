@@ -1,20 +1,20 @@
 <?php
 
 /**
- * NoteModel
+ * MotivoExamenModel
  * This is basically a simple CRUD (Create/Read/Update/Delete) demonstration.
  */
-class MeModel
+class MotivoExamenModel
 {
     /**
-     * Get all notes (notes are just example data that the user has created)
+     * Get all motivo (motivo are just example data that the user has created)
      * @return array an array with several objects (the results)
      */
     public static function getAll()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT me_id, me_name FROM me";
+        $sql = "SELECT motivo_id, motivo_name FROM motivoexamen";
         $query = $database->prepare($sql);
         $query->execute();
 
@@ -23,39 +23,39 @@ class MeModel
     }
 
     /**
-     * Get a single note
-     * @param int $note_id id of the specific note
+     * Get a single motivo
+     * @param int $motivo_id id of the specific motivo
      * @return object a single object (the result)
      */
-    public static function getNote($note_id)
+    public static function getMotivo($motivo_id)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, note_id, note_text FROM notes WHERE user_id = :user_id AND note_id = :note_id LIMIT 1";
+        $sql = "SELECT motivo_id, motivo_name FROM motivoexamen WHERE motivo_id = :motivo_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id'), ':note_id' => $note_id));
+        $query->execute(array(':motivo_id' => $motivo_id));
 
         // fetch() is the PDO method that gets a single result
         return $query->fetch();
     }
 
     /**
-     * Set a note (create a new one)
-     * @param string $note_text note text that will be created
-     * @return bool feedback (was the note created properly ?)
+     * Set a motivo (create a new one)
+     * @param string $motivo_name motivo text that will be created
+     * @return bool feedback (was the motivo created properly ?)
      */
-    public static function createNote($note_text)
+    public static function createMotivo($motivo_name)
     {
-        if (!$note_text || strlen($note_text) == 0) {
+        if (!$motivo_name || strlen($motivo_name) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO notes (note_text, user_id) VALUES (:note_text, :user_id)";
+        $sql = "INSERT INTO motivoexamen (motivo_name) VALUES (:motivo_name)";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':motivo_name' => $motivo_name));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -67,22 +67,22 @@ class MeModel
     }
 
     /**
-     * Update an existing note
-     * @param int $note_id id of the specific note
-     * @param string $note_text new text of the specific note
+     * Update an existing motivo
+     * @param int $motivo_id id of the specific motivo
+     * @param string $motivo_name new text of the specific motivo
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateNote($note_id, $note_text)
+    public static function updateMotivo($motivo_id, $motivo_name)
     {
-        if (!$note_id || !$note_text) {
+        if (!$motivo_id || !$motivo_name) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE notes SET note_text = :note_text WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE motivoexamen SET motivo_name = :motivo_name WHERE motivo_id = :motivo_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_id' => $note_id, ':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':motivo_id' => $motivo_id, ':motivo_name' => $motivo_name));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -93,21 +93,21 @@ class MeModel
     }
 
     /**
-     * Delete a specific note
-     * @param int $note_id id of the note
-     * @return bool feedback (was the note deleted properly ?)
+     * Delete a specific motivo
+     * @param int $motivo_id id of the motivo
+     * @return bool feedback (was the motivo deleted properly ?)
      */
-    public static function deleteNote($note_id)
+    public static function deleteMotivo($motivo_id)
     {
-        if (!$note_id) {
+        if (!$motivo_id) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "DELETE FROM notes WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "DELETE FROM motivoexamen WHERE motivo_id = :motivo_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_id' => $note_id, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':motivo_id' => $motivo_id));
 
         if ($query->rowCount() == 1) {
             return true;
