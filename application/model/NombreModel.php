@@ -71,9 +71,13 @@ class NombreModel
         $query->execute(array(':PatientID' => $rut, ':StudyDate' => $studydate));
         $query->execute();
 
+        $result = new stdClass();
+        $result->exist = false;
         // fetchAll() is the PDO method that gets all result rows
         if ($query->rowCount() == 1) {
-            return true;
+            $result->exist = true;
         }
+
+        return $result;
     }
 }
