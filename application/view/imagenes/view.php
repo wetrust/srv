@@ -66,7 +66,7 @@
 
 
 
-            $.get("<?php echo Config::get('URL'); ?>dicom/getimages/" + <?php echo $this->user_id; ?> + "/" + <?php echo $this->AccessTime; ?>).done(function(data) {
+            $.get("<?php echo Config::get('URL'); ?>dicom/getimages/<?php echo $this->user_id; ?>/<?php echo $this->AccessTime; ?>").done(function(data) {
                 listIMG = JSON.parse("[<?php echo $this->img_id; ?>]")
                 gString = ""
                 contadorIMG = 1;
