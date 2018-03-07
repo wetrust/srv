@@ -33,7 +33,7 @@ class DicomModel
             $query->execute(array(':ImagePat' => $rut, ':AccessTime' => $AccessTime));
             $query->execute();
 
-            if ($query->rowCount() == 1) {
+            if ($query->rowCount() > 0) {
                 $imagenes = $query->fetchAll();
                 $result->exist = true;
 
