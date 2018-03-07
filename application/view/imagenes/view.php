@@ -55,9 +55,10 @@
             //obtener la hora actual
             var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
             var f = new Date();
-            var g = new Date(<?php echo $this->StudyDate; ?>);
+            var g = String(<?php echo $this->StudyDate; ?>);
             $("#fecha\\.informe").html(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
-            $("#fecha\\.examen").html(g.getDate() + " de " + meses[g.getMonth()] + " de " + g.getFullYear());
+            $("#fecha\\.examen").html(g.substr(6,2) + " de " + g.substr(4,2) + " de " + g.substr(0,4));
+            
 
             $.get("<?php echo Config::get('URL'); ?>configuracion/obtenernombre/<?php echo $this->user_id; ?>").done(function(data) {
                 if (data.length > 0 ){
