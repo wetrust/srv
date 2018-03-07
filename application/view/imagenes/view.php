@@ -82,14 +82,14 @@
                         }
                         
                         if (totJPG <= 4){
-                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 480px; height: 361px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 480px; height: 361px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/" + item +"'></div>";
                             if (contadorIMG == 2){
                                 gString = gString + "</div>";
                                 contadorIMG = 0;
                             }
                         }
                         else if (totJPG => 6){
-                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 352px; height: 275px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 352px; height: 275px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/" + item +"'></div>";
                             if (contadorIMG == 2){
                                 gString = gString + "</div>";
                                 contadorIMG = 0;
