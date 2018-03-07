@@ -6,11 +6,11 @@ class DicomModel
      * Get all notes (notes are just example data that the user has created)
      * @return array an array with several objects (the results)
      */
-    public static function getAllImages($rut, $AccessTime)
+    public static function getAllImages($rut, $StudyDate)
     {
             $database = "";
             $result = new stdClass();
-            $AccessTime = intval($AccessTime);
+            $StudyDate = intval($StudyDate);
             try {
                 $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
                 $database = new PDO(
@@ -28,9 +28,9 @@ class DicomModel
                 // No connection, reached limit connections etc. so no point to keep it running
                 exit;
             }
-            $sql = "SELECT ObjectFile FROM DICOMImages where AccessTime = :AccessTime and ImagePat = :ImagePat";
+            $sql = "SELECT ObjectFile FROM DICOMImages where ImageDate = :ImageDate and ImagePat = :ImagePat";
             $query = $database->prepare($sql);
-            $query->execute(array(':ImagePat' => $rut, ':AccessTime' => $AccessTime));
+            $query->execute(array(':ImagePat' => $rut, ':ImageDate' => $StudyDate));
             $query->execute();
 
             if ($query->rowCount() > 0) {

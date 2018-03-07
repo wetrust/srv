@@ -8,12 +8,12 @@ class ImagenesController extends Controller
     }
 
 
-    public function view($user_id, $img_id, $AccessTime)
+    public function view($user_id, $img_id, $StudyDate)
     {
         $this->View->renderWithoutHeaderAndFooter('imagenes/view', array(
             'user_id' => $user_id,
             'img_id' => $img_id,
-            'AccessTime' => $AccessTime
+            'StudyDate' => $StudyDate
         ));
     }
 }

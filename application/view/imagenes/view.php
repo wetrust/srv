@@ -55,7 +55,7 @@
             //obtener la hora actual
             var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
             var f = new Date();
-            var g = new Date(<?php echo $this->AccessTime; ?>*1000);
+            var g = new Date(<?php echo $this->StudyDate; ?>);
             $("#fecha\\.informe").html(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
             $("#fecha\\.examen").html(g.getDate() + " de " + meses[g.getMonth()] + " de " + g.getFullYear());
 
@@ -68,7 +68,7 @@
 
 
 
-            $.get("<?php echo Config::get('URL'); ?>dicom/getimages/<?php echo $this->user_id; ?>/<?php echo $this->AccessTime; ?>").done(function(data) {
+            $.get("<?php echo Config::get('URL'); ?>dicom/getimages/<?php echo $this->user_id; ?>/<?php echo $this->StudyDate; ?>").done(function(data) {
                 listIMG = JSON.parse("[<?php echo $this->img_id; ?>]")
                 gString = ""
                 contadorIMG = 1;
