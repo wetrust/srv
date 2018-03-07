@@ -64,51 +64,48 @@
                 }
             });
 
-            $.get("<?php echo Config::get('URL'); ?>dicom/getimages/<?php echo $this->user_id; ?>").done(function(data) {
-                $("#fotosDicom").html(" ");
-                if (data.DCM = true){
-                    listIMG = JSON.parse("[<?php echo $this->img_id; ?>]")
-                    gString = ""
-                    contadorIMG = 1;
-                    contIMG = 1;
-                    totJPG = listIMG.length;
-                    $.each(data.JPGFiles, function(i, item) {
 
-                        needle = i,
-                        index = contains.call(listIMG, needle);
 
-                        if (index == true){
-                            if (contadorIMG == 1){
-                                gString = gString + "<div class='row mb-4'>";
-                            }
-                            
-                            if (totJPG <= 4){
-                                gString = gString + "<div class='col-6'><img alt='200x200' style='width: 480px; height: 361px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
-                                if (contadorIMG == 2){
-                                    gString = gString + "</div>";
-                                    contadorIMG = 0;
-                                }
-                            }
-                            else if (totJPG => 6){
-                                gString = gString + "<div class='col-6'><img alt='200x200' style='width: 352px; height: 275px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
-                                if (contadorIMG == 2){
-                                    gString = gString + "</div>";
-                                    contadorIMG = 0;
-                                }
-                            }
+            $.get(serverURL + "dicom/getimages/" + <?php echo $this->user_id; ?> + "/" + <?php echo $this->AccessTime; ?>).done(function(data) {
+                listIMG = JSON.parse("[<?php echo $this->img_id; ?>]")
+                gString = ""
+                contadorIMG = 1;
+                contIMG = 1;
+                totJPG = listIMG.length;
+                $.each(data.JPGFiles, function(i, item) {
+                    needle = i,
+                    index = contains.call(listIMG, needle);
 
-                            if (contIMG == totJPG && contIMG != 2 && contIMG != 6){
+                    if (index == true){
+                        if (contadorIMG == 1){
+                            gString = gString + "<div class='row mb-4'>";
+                        }
+                        
+                        if (totJPG <= 4){
+                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 480px; height: 361px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                            if (contadorIMG == 2){
                                 gString = gString + "</div>";
+                                contadorIMG = 0;
                             }
-                            
-                            contadorIMG = contadorIMG +1;
-                            contIMG = contIMG +1;
-                        } 
-                    });
+                        }
+                        else if (totJPG => 6){
+                            gString = gString + "<div class='col-6'><img alt='200x200' style='width: 352px; height: 275px;' class='d-block mx-auto' src='<?php echo Config::get('URL'); ?>data/<?php echo $this->user_id; ?>/" + item +"'></div>";
+                            if (contadorIMG == 2){
+                                gString = gString + "</div>";
+                                contadorIMG = 0;
+                            }
+                        }
 
-                    $("#fotosContainer").append(gString);
-                }
-            });
+                        if (contIMG == totJPG && contIMG != 2 && contIMG != 6){
+                            gString = gString + "</div>";
+                        }
+                        
+                        contadorIMG = contadorIMG +1;
+                        contIMG = contIMG +1;
+                    } 
+                });
+                $("#fotosContainer").append(gString);
+            })
         })
       </script>
    </body>

@@ -1,5 +1,6 @@
 var RUTPACIENTE = "";
 var FechaExm = "";
+var AccesTIME = ""
 $(document).ready(function() {
     $("#id-paciente").on("change", function() {
         RUTPACIENTE = $(this).val();
@@ -15,7 +16,8 @@ $(document).ready(function() {
 
                 $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
                     if (data.exist == true ){
-                        $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + data.AccessTime).done(function(data) {
+                        AccesTIME =  data.AccessTime;
+                        $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + AccesTIME).done(function(data) {
                             $("#fotosDicom").html(" ");
                             if (data.DCM = true) {
                                 $.each(data.JPGFiles, function(i, item) {
@@ -32,7 +34,7 @@ $(document).ready(function() {
                                         contadorIMG = contadorIMG + 1
                                     });
                 
-                                    window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString());
+                                    window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + AccesTIME);
                                 });
                             }
                         }).fail(function() {
