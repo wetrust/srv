@@ -44,7 +44,7 @@ class DicomModel
                 }
                 else{
                     $result->empty = false;
-                    $archivosJPG = array()
+                    $archivosJPG = array();
 
                     foreach($imagenes as $imagen){
                         $strArchivoJPG = Config::get('DICOM_DIRECTORY') . substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg";

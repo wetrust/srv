@@ -76,7 +76,7 @@ class NombreModel
         // fetchAll() is the PDO method that gets all result rows
         if ($query->rowCount() == 1) {
             $result->exist = true;
-            $result->AccessTime = $query->fetch();
+            $result->AccessTime = $query->fetch()->AccessTime;
         }
 
         return $result;
