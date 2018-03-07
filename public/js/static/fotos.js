@@ -15,7 +15,7 @@ $(document).ready(function() {
 
                 $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
                     if (data.exist == true ){
-                        $.get(serverURL + "dicom/getimages/" + $(this).val()).done(function(data) {
+                        $.get(serverURL + "dicom/getimages/" + RUTPACIENTE).done(function(data) {
                             $("#fotosDicom").html(" ");
                             if (data.DCM = true) {
                                 $.each(data.JPGFiles, function(i, item) {

@@ -66,7 +66,7 @@ class NombreModel
             exit;
         }
 
-        $sql = "SELECT * FROM DICOMStudies where PatientID = :PatientID and StudyDate = :StudyDate";
+        $sql = "SELECT AccessTime FROM DICOMStudies where PatientID = :PatientID and StudyDate = :StudyDate LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':PatientID' => $rut, ':StudyDate' => $studydate));
         $query->execute();
@@ -76,6 +76,7 @@ class NombreModel
         // fetchAll() is the PDO method that gets all result rows
         if ($query->rowCount() == 1) {
             $result->exist = true;
+            $result->AccessTime = $query->fetch();
         }
 
         return $result;
