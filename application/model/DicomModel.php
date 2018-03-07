@@ -28,7 +28,7 @@ class DicomModel
                 // No connection, reached limit connections etc. so no point to keep it running
                 exit;
             }
-            $sql = "SELECT ObjectFile FROM DICOMImages where ImagePat = :ImagePat and AccessTime = :AccessTime";
+            $sql = "SELECT ObjectFile FROM DICOMImages where AccessTime = :AccessTime and ImagePat = :ImagePat";
             $query = $database->prepare($sql);
             $query->execute(array(':ImagePat' => $rut, ':AccessTime' => $AccessTime));
             $query->execute();
