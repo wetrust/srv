@@ -72,6 +72,8 @@ class NombreModel
         $query->execute();
 
         // fetchAll() is the PDO method that gets all result rows
-        return $query->fetchAll();
+        if ($query->rowCount() == 1) {
+            return true;
+        }
     }
 }
