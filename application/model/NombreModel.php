@@ -42,4 +42,36 @@ class NombreModel
         // fetchAll() is the PDO method that gets all result rows
         return $query->fetchAll();
     }
+
+    public static function getAllStudies($rut, $studydate)
+    {
+
+        $database = "";
+
+        try {
+            $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
+            $database = new PDO(
+               Config::get('DB_TYPE') . ':host=' . Config::get('DB_HOST') . ';dbname=dicom' .
+                ';port=' . Config::get('DB_PORT') . ';charset=' . Config::get('DB_CHARSET'),
+               Config::get('DB_USER'), Config::get('DB_PASS'), $options
+               );
+        } catch (PDOException $e) {
+
+            // Echo custom message. Echo error code gives you some info.
+            echo 'Database connection can not be estabilished. Please try again later.' . '<br>';
+            echo 'Error code: ' . $e->getCode();
+
+            // Stop application :(
+            // No connection, reached limit connections etc. so no point to keep it running
+            exit;
+        }
+
+        $sql = "SELECT * FROM DICOMStudies where PatientID = :PatientID and StudyDate = :StudyDate";
+        $query = $database->prepare($sql);
+        $query->execute(array(':PatientID' => $rut, ':StudyDate' => $studydate));
+        $query->execute();
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
+    }
 }
