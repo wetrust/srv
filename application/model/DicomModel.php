@@ -10,7 +10,7 @@ class DicomModel
     {
             $database = "";
             $result = new stdClass();
-
+            $AccessTime = intval($AccessTime);
             try {
                 $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
                 $database = new PDO(
