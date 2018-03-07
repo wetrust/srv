@@ -15,11 +15,11 @@ $(document).ready(function() {
 
                 $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
                     if (data.exist == true ){
-                        $.get(serverURL + "dicom/getimages/" + RUTPACIENTE).done(function(data) {
+                        $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + data.AccessTime).done(function(data) {
                             $("#fotosDicom").html(" ");
                             if (data.DCM = true) {
                                 $.each(data.JPGFiles, function(i, item) {
-                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + RUTPACIENTE + "/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
                                 });
                                 $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>");
                                 $("#imprimirFotos").on("click", function() {
