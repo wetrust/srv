@@ -6,63 +6,66 @@ class DicomModel
      * Get all notes (notes are just example data that the user has created)
      * @return array an array with several objects (the results)
      */
-    public static function getAllImages($id_user)
+    public static function getAllImages($rut, $StudyDate)
     {
-
-        $result = new stdClass();
-
-        if (is_dir(Config::get('DICOM_DIRECTORY') . $id_user . "/" )){
-            $result->exist = true;
-
-            $archivos = scandir(Config::get('DICOM_DIRECTORY') . $id_user . "/");
-
-            if ($archivos == false){
-                $result->empty = true;
+            $database = "";
+            $result = new stdClass();
+            $StudyDate = intval($StudyDate);
+            try {
+                $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
+                $database = new PDO(
+                   Config::get('DB_TYPE') . ':host=' . Config::get('DB_HOST') . ';dbname=dicom' .
+                    ';port=' . Config::get('DB_PORT') . ';charset=' . Config::get('DB_CHARSET'),
+                   Config::get('DB_USER'), Config::get('DB_PASS'), $options
+                   );
+            } catch (PDOException $e) {
+    
+                // Echo custom message. Echo error code gives you some info.
+                echo 'Database connection can not be estabilished. Please try again later.' . '<br>';
+                echo 'Error code: ' . $e->getCode();
+    
+                // Stop application :(
+                // No connection, reached limit connections etc. so no point to keep it running
+                exit;
             }
-            else{
-                $result->empty = false;
+            $sql = "SELECT ObjectFile FROM DICOMImages where ImageDate = :ImageDate and ImagePat = :ImagePat";
+            $query = $database->prepare($sql);
+            $query->execute(array(':ImagePat' => $rut, ':ImageDate' => $StudyDate));
+            $query->execute();
 
-                $archivosDCM = array();
+            if ($query->rowCount() > 0) {
+                $imagenes = $query->fetchAll();
+                $result->exist = true;
 
-                foreach ($archivos as $archivo){
-                    if (strlen($archivo) > 3){
-                        if (substr($archivo, strlen($archivo) -4, strlen($archivo)) == ".dcm"){
-                            array_push($archivosDCM, Config::get('DICOM_DIRECTORY') . $id_user . "/" . $archivo);
-                        }
-                    }
+                $archivos = scandir(Config::get('DICOM_DIRECTORY') . $rut . "/");
+
+                if ($archivos == false){
+                    $result->empty = true;
                 }
-
-                if (count($archivosDCM) > 0){
-                    $result->DCM = true;
-
+                else{
+                    $result->empty = false;
                     $archivosJPG = array();
 
-                    foreach($archivosDCM as $archivoDCM){
-                        $strArchivoJPG = substr($archivoDCM, 0, strlen($archivoDCM) -3) . "jpg";
+                    foreach($imagenes as $imagen){
+                        $strArchivoJPG = Config::get('DICOM_DIRECTORY') . substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg";
 
-                        $lRutaBase = strlen(Config::get('DICOM_DIRECTORY') . $id_user . "/");
                         if(file_exists($strArchivoJPG)){
-                            array_push($archivosJPG, substr($strArchivoJPG,$lRutaBase, strlen($strArchivoJPG)));
+                            array_push($archivosJPG, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
                         }
                         else{
-                            $strCommand =  "/usr/bin/dcmj2pnm +fo +oj " . $archivoDCM .  " " . $strArchivoJPG;
+                            $strCommand =  "/usr/bin/dcmj2pnm +fo +oj " . Config::get('DICOM_DIRECTORY') . $imagen->ObjectFile .  " " . $strArchivoJPG;
                             $out = exec($strCommand);
-                            array_push($archivosJPG,  substr($strArchivoJPG,$lRutaBase, strlen($strArchivoJPG)));
+                            array_push($archivosJPG, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
                         }
 
                     }
 
                     $result->JPGFiles = $archivosJPG;
-
-                }
-                else{
-                    $result->DCM = false;
                 }
             }
-        }
-        else{
-            $result->exist = false;
-        }
+            else{
+                $result->exist = false;
+            }
 
         return $result;
     }
