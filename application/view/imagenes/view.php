@@ -10,14 +10,14 @@
       <div class='container'>
          <div style='width:30%;text-align:center;'></div>
       </div>
-      <div class='container mt-5 pt-5'>
+      <div class='container my-5 pt-5 '>
          <h3 class='text-center mt-5'>Impresión de Imágenes Gineco-Obstétrica</h3>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;margin-bottom:15px;'></span>
          <div class="row">
-            <div class="col-4">
+            <div class="col-5">
                 <strong>Paciente Sra. (Srta.): </strong><span id="nombre.paciente"></span>
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <strong>RUT: </strong><span><?php echo $this->user_id; ?></span>
             </div>
             <div class="col-4">
