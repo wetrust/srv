@@ -8,12 +8,12 @@
    </head>
    <body class="mt-5 pt-5">
       <div class='container'>
-         <div style='width:35%;text-align:center;'></div>
+         <div style='width:39%;text-align:center;'></div>
       </div>
       <div class='container mt-5 pt-5'>
          <h3 class='text-center'>Impresión de Imágenes Gineco-Obstétrica</h3>
          <span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;margin-bottom:15px;'></span> 
-         <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong><span id="nombre.paciente"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong><span id="fecha.examen"></span></p>
+         <p style='font-size: 0.8rem;'><strong>Paciente Sra. (Srta.): </strong><span id="nombre.paciente"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RUT: </strong><span><?php echo $this->user_id; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong><span id="fecha.examen"></span></p>
       </div>
       <div class='container' id="fotosContainer"></div>
       <div class='container'>
