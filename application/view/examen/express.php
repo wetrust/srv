@@ -19,6 +19,13 @@
   </ol>
 </nav>
             <div class="row">
+		<div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Cálculo de edad gestacional</h5>
+			</div>
+		    </div>
+		</div>
                 <div class="col-md-12">
                     <div class="card mb-3">
                         <div class="card-body">
