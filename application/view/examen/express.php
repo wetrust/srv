@@ -106,12 +106,12 @@
 				<hr>
 			    <div class="row mb-3">
                                 <div class="col">
-					<p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a exámen ecográfico</p>
+					<p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a datos de exámen.</p>
 				    </div>
 			    </div>
 			    <div class="form-group row">
                                 <div class="col text-right">
-                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
+                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
                                 </div>
                             </div>
 			</div>
