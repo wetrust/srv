@@ -1,3 +1,65 @@
+<div class="container" id="paciente">
+	<div class="bienvenida mb-3 p-2">
+                   	<div class="media">
+                       		<img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        	<div class="media-body mt-4">
+                            		<h4 class="mt-0 mb-1"><em>CrecimientoFetal.cl</em></h4>
+                            		<p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
+                        	</div>
+                        	<div class="media-body mt-4">
+                            		<p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
+                        	</div>
+                    	</div>
+	</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
+    <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
+  </ol>
+</nav>
+            <div class="row">
+		<div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">1.- Identificar Paciente</h5>
+			    <div class="form-group row">
+                                <div class="col-6">
+                                    <label for="id-paciente" class="col-form-label">Número de Registro ( RUT )</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control my-3" id="id-paciente">
+                                </div>
+                            </div>
+			    <div class="row mb-3">
+                                <div class="col">
+					<p>Si la paciente es anónima o no cuenta con la información, presione el botón continuar a exámen ecográfico</p>
+				    </div>
+			    </div>
+			    <div class="row mb-3">
+                                <div class="col-9">
+                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
+                                </div>
+                                <div class="col-3">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
+                                        <input type="radio" value="0" checked> NO
+                                        </label>
+                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
+                                        <input type="radio" value="1"> SI
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+			    <div class="form-group row">
+                                <div class="col text-right">
+                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
+                                </div>
+                            </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+</div>
 <div class="container" id="consulta">
 	<div class="bienvenida mb-3 p-2">
                    	<div class="media">
@@ -19,13 +81,6 @@
   </ol>
 </nav>
             <div class="row">
-		<div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Cálculo de edad gestacional</h5>
-			</div>
-		    </div>
-		</div>
                 <div class="col-md-12">
                     <div class="card mb-3">
                         <div class="card-body">
@@ -92,30 +147,9 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-4">
-                                    <label for="id-paciente" class="col-form-label bg-info  my-3 p-2">Número de Registro<br>( RUT )</label>
-                                </div>
-                                <div class="col-2">
-                                    <input type="text" class="form-control my-3" id="id-paciente">
-                                </div>
                                 <div class="col-2"></div>
                                 <div class="col text-right">
                                     <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
-                                </div>
-                                <div class="col-3">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
-                                        <input type="radio" value="0" checked> NO
-                                        </label>
-                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
-                                        <input type="radio" value="1"> SI
-                                        </label>
-                                    </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
