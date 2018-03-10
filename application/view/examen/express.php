@@ -111,7 +111,7 @@
 			    </div>
 			    <div class="form-group row">
                                 <div class="col text-right">
-                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
+                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
                                 </div>
                             </div>
 			</div>
