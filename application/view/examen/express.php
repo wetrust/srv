@@ -142,7 +142,7 @@
 		</div>
 	    </div>
 </div>
-<div class="container" id="consulta">
+<div class="container" id="consulta" style="display:none;">
 	<div class="bienvenida mb-3 p-2">
                    	<div class="media">
                        		<img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
