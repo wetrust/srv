@@ -289,10 +289,10 @@
                                         <select id="ecografista" class="form-control gris-claro">
                                          </select>
                                     </div>
-                                    <div class="col-2 mt-3">
+                                    <div class="col-2">
                                         <label for="ecografista" class="col-form-label">Embarazo Gemelar</label>
                                     </div>
-                                    <div class="col-4 mt-3">
+                                    <div class="col-4">
                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-outline-info active" id="embarazoNo" data-value="0">
                                             <input type="radio" value="0" checked=""> NO
@@ -304,8 +304,7 @@
                                     </div>
                                 </div>
                                 <div class="row mt-2 mb-2">
-                                    <div class="col-2"></div>
-                                     <div class="col-4">
+                                    <div class="col-12 text-right">
                                         <a class="btn btn-info mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a><br><small>Datos registrados serán guardados automáticamente</small>
                                     </div>
                                 </div>
