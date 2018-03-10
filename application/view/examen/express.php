@@ -31,7 +31,7 @@
                                 </div>
                             </div>
 				<hr>
-				<h5 class="card-title text-muted">Datos opcionales</h5>
+				<h6 class="card-title text-muted">Datos opcionales</h6>
 				<div class="row mt-2 mb-2">
                                     <div class="col-2">
                                         <label for="nombre-paciente" class="col-form-label">Nombre</label>
@@ -166,7 +166,7 @@
                 <div class="col-md-12">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Cálculo de edad gestacional</h5>
+                            <h5 class="card-title text-primary">2.- Cálculo de edad gestacional y datos de exámen</h5>
                             <div class="form-group row">
                                 <div class="col">
                                     <label for="fum2">Fecha de última mestruación</label>
@@ -250,51 +250,6 @@
                                 </div>
                             </div>
                             <div class="form-group d-none" id="infadicionalView">
-                            <div class="row my-4">
-                                    <div class="col">
-                                        <div class="card p-0">
-                                          <div class="card-block m-0 p-1">
-                                              <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-                                                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                                    <span class="navbar-toggler-icon"></span>
-                                                  </button>
-                                                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                                    <ul class="navbar-nav mr-auto my-2">
-                                                      <li class="nav-item mr-1" id="cNuevoPacienteButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="NuevoPacienteButton">Nuevo Paciente</button>
-                                                      </li>
-                                                        <li class="nav-item mr-1 d-none" id="cModificarPacienteButton">
-                                                        <button type="button" class="btn btn-outline-info" id="ModificarPacienteButton">Modificar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cGuardarPacienteButton">
-                                                        <button type="button" class="btn btn-outline-danger" id="GuardarPacienteButton">Guardar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cCancelarPacienteButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="CancelarPacienteButton">Cancelar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cNuevoExamenButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="NuevoExamenButton">Nuevo Exámen</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cGuardarExamenButton">
-                                                        <button type="button" class="btn btn-outline-danger" id="GuardarExamenButton">Guardar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cCancelarExamenButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="CancelarExamenButton">Cancelar</button>
-                                                      </li>
-                                                    </ul>
-                                                    <form class="form-inline my-2 my-lg-0 mr-2">
-                                                      <input class="form-control mr-sm-2" type="text" id="buscarPacientes" placeholder="N° de registro o apellido">
-                                                      <button class="btn btn-outline-success my-2 my-sm-0" id="buscarPacientesBtn">Buscar</button>
-                                                    </form>
-                                                    <span class="navbar-text text-center" id="numPacientes" style="width: 100px;">0</span>
-                                                  </div>
-                                                </nav>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                
                                 <div class="row mt-2 mb-2">
                                     <div class="col-2">
                                         <label for="motivo-examen" class="col-form-label">Lugar de control prenatal</label>
@@ -334,15 +289,6 @@
                                         <select id="ecografista" class="form-control gris-claro">
                                          </select>
                                     </div>
-                                     <div class="col-2">
-                                        <label for="membrete" class="col-form-label">Membrete institucional</label>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <textarea class="form-control" rows="3" id="membrete" style="font-size: 12px;" onkeydown="return limitLines(this, event)"></textarea>
-                                        <button class="btn btn-danger" id="saveMebrete"><small><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar Membrete</small></button>
-                                    </div>
-                                </div>
-                                <div class="row mt-2 mb-2">
                                     <div class="col-2 mt-3">
                                         <label for="ecografista" class="col-form-label">Embarazo Gemelar</label>
                                     </div>
@@ -356,6 +302,8 @@
                                             </label>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row mt-2 mb-2">
                                     <div class="col-2"></div>
                                      <div class="col-4">
                                         <a class="btn btn-info mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a><br><small>Datos registrados serán guardados automáticamente</small>
