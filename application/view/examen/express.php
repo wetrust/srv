@@ -24,7 +24,7 @@
                             <h5 class="card-title text-primary">1.- Identificar Paciente</h5>
 			    <div class="form-group row">
                                 <div class="col-6">
-                                    <label for="id-paciente" class="col-form-label">Número de Registro ( RUT )</label>
+                                    <label for="id-paciente" class="col-form-label mt-3">Número de Registro ( RUT )</label>
                                 </div>
                                 <div class="col-6">
                                     <input type="text" class="form-control my-3" id="id-paciente">
@@ -35,6 +35,19 @@
 					<p>Si la paciente es anónima o no cuenta con la información, presione el botón continuar a exámen ecográfico</p>
 				    </div>
 			    </div>
+			    <div class="form-group row">
+                                <div class="col text-right">
+                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
+                                </div>
+                            </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	<div class="row">
+		<div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
 			    <div class="row mb-3">
                                 <div class="col-9">
                                     <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
@@ -48,11 +61,6 @@
                                         <input type="radio" value="1"> SI
                                         </label>
                                     </div>
-                                </div>
-                            </div>
-			    <div class="form-group row">
-                                <div class="col text-right">
-                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
                                 </div>
                             </div>
 			</div>
