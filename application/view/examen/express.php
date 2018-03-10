@@ -24,21 +24,23 @@
                             <h5 class="card-title text-primary">1.- Identificar a la Paciente</h5>
 			    <div class="form-group row">
                                 <div class="col-6">
-                                    <label for="id-paciente" class="col-form-label mt-3">Número de Registro ( RUT )</label>
+                                    <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
                                 </div>
                                 <div class="col-6">
                                     <input type="text" class="form-control my-3" id="id-paciente">
                                 </div>
                             </div>
+				<hr>
+				<h5 class="card-title text-muted">Datos opcionales</h5>
 				<div class="row mt-2 mb-2">
                                     <div class="col-2">
-                                        <label for="nombre-paciente" class="col-form-label">Nombre paciente</label>
+                                        <label for="nombre-paciente" class="col-form-label">Nombre</label>
                                     </div>
                                     <div class="col-4">
                                         <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
                                     </div>
                                     <div class="col-2">
-                                        <label for="nombre-paciente" class="col-form-label">Apellido paciente</label>
+                                        <label for="nombre-paciente" class="col-form-label">Apellido</label>
                                     </div>
                                     <div class="col-4">
                                         <input class="form-control gris-claro" type="text" id="apellido-paciente">
@@ -101,6 +103,7 @@
                                          </select>
                                     </div>
                                 </div>
+				<hr>
 			    <div class="row mb-3">
                                 <div class="col">
 					<p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a exámen ecográfico</p>
