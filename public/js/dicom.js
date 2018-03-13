@@ -9,7 +9,7 @@ $(document).ready(function(){
             $("#table\\.body\\.pacientes").append(strTable);
         });
         $("#table\\.body\\.pacientes tr").on('click',function(){
-            activateTr(this);
+            activatePaciente(this);
         });
     });
 });
@@ -25,7 +25,7 @@ function dateToStr(datetime){
     return estring;
 }
 
-function activateTr(element){
+function activatePaciente(element){
 	$.each( $(element).parent().children(), function( i, val ) {
 		$( val ).removeClass( 'table-active');
 	});
