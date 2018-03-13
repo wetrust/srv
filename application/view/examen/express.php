@@ -158,13 +158,33 @@
 			    </div>
 			    <div class="form-group row">
                                 <div class="col text-right">
-                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DE EXÁMEN</a>
+                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
                                 </div>
                             </div>
 			</div>
 		    </div>
 		</div>
-	    </div>
+        </div>
+        <div class="row">
+		    <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ultimos Pacientes</h5>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table.body.pacientes">
+                            </tbody>
+                        </table>
+                    </div>
+			    </div>
+		    </div>
+		</div>
 	<div class="row">
 		<div class="col-md-12">
                     <div class="card mb-3">
@@ -2304,6 +2324,7 @@
 <script>
     var serverURL = "<?php echo Config::get('URL'); ?>";
 </script>
+<script src="<?php echo Config::get('URL'); ?>js/dicom.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/botones.js"></script>

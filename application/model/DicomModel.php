@@ -31,7 +31,6 @@ class DicomModel
             $sql = "SELECT ObjectFile FROM DICOMImages where ImageDate = :ImageDate and ImagePat = :ImagePat";
             $query = $database->prepare($sql);
             $query->execute(array(':ImagePat' => $rut, ':ImageDate' => $StudyDate));
-            $query->execute();
 
             if ($query->rowCount() > 0) {
                 $imagenes = $query->fetchAll();
@@ -70,6 +69,33 @@ class DicomModel
         return $result;
     }
 
+    public static function lastpatients()
+    {
+            $database = "";
+
+            try {
+                $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
+                $database = new PDO(
+                   Config::get('DB_TYPE') . ':host=' . Config::get('DB_HOST') . ';dbname=dicom' .
+                    ';port=' . Config::get('DB_PORT') . ';charset=' . Config::get('DB_CHARSET'),
+                   Config::get('DB_USER'), Config::get('DB_PASS'), $options
+                   );
+            } catch (PDOException $e) {
+    
+                // Echo custom message. Echo error code gives you some info.
+                echo 'Database connection can not be estabilished. Please try again later.' . '<br>';
+                echo 'Error code: ' . $e->getCode();
+    
+                // Stop application :(
+                // No connection, reached limit connections etc. so no point to keep it running
+                exit;
+            }
+            $sql = "SELECT PatientID, PatientNam, PatientBir, AccessTime FROM dicom.DICOMPatients ORDER BY AccessTime DESC LIMIT 20";
+            $query = $database->prepare($sql);
+            $query->execute();
+
+            return $query->fetchAll();
+    }
     /**
      * Get a single note
      * @param int $note_id id of the specific note
