@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.get( appUrl + "dicom/getlastpatients", function( data ) {
+    $.get( serverURL + "dicom/getlastpatients", function( data ) {
         $("#table\\.body\\.pacientes").empty();
         $.each(data, function (key, des) {
             var date =  epochToDate(des.AccessTime);
