@@ -29,5 +29,7 @@ function activateTr(element){
 	$.each( $(element).parent().children(), function( i, val ) {
 		$( val ).removeClass( 'table-active');
 	});
-	$(element).addClass('table-active');
+    $(element).addClass('table-active');
+    $("#id-paciente").val($(element).data("id"));
+    $("#id-paciente").trigger("change");
 }
