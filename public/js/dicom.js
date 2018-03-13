@@ -4,7 +4,7 @@ $(document).ready(function(){
         $.each(data, function (key, des) {
             var date =  epochToDate(des.AccessTime);
             date =  dateToStr(date);
-            var nombre = data[0].PatientNam.split("^");
+            var nombre = des.PatientNam.split("^");
             var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td></tr>";
             $("#table\\.body\\.pacientes").append(strTable);
         });
