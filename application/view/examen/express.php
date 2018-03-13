@@ -47,16 +47,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                <div class="col">
+                                <div class="col-2">
                                     <label for="fum2">Fecha de última mestruación</label>
                                 </div>
-                                <div class="col">
+                                <div class="col-4">
                                     <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
                                 </div>
-                                <div class="col">
+                                <div class="col-2">
                                     <label for="dbp" class="col-form-label">Edad Gestacional</label>
                                 </div>
-                                <div class="col">
+                                <div class="col-4">
                                     <div class="row">
                        <div class="col">
                                     <select id="semanasEcoGen" class="form-control">
@@ -158,7 +158,7 @@
 			    </div>
 			    <div class="form-group row">
                                 <div class="col text-right">
-                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
+                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DE EXÁMEN</a>
                                 </div>
                             </div>
 			</div>
@@ -626,25 +626,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Pacientes</h5>
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Apellido</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
