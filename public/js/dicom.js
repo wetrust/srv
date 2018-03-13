@@ -32,4 +32,6 @@ function activatePaciente(element){
     $(element).addClass('table-active');
     $("#id-paciente").val($(element).children("th").data("id"));
     $("#id-paciente").trigger("change");
+    $("#nombre-paciente").val("cargando...");
+    $("#apellido-paciente").val("cargando...");
 }
