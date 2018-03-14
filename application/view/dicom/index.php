@@ -113,11 +113,14 @@ function activatePaciente(element){
     $.get(serverURL + "dicom/study/" + RUTPACIENTE).done(function(data) {
             $("#table\\.body\\.examenes").empty();
             $.each(data, function (key, des) {
-                var ano = des.StudyDate.substring(0, 3);
-                var mes = des.StudyDate.substring(3, 5);
-                var dia = des.StudyDate.substring(5, 7);
+                var ano = des.StudyDate.substring(0, 4);
+                var mes = des.StudyDate.substring(4, 6);
+                var dia = des.StudyDate.substring(6, 8);
 
-                var strTable = "<tr><th scope='row'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + dia + "-"+mes + "-" + ano +"</td><td>" + des.StudyTime + "</td></tr>";
+                var hora = des.StudyTime.substring(0, 2);
+                var minuto = des.StudyTime.substring(2, 4);
+
+                var strTable = "<tr><th scope='row'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + dia + "-"+mes + "-" + ano +"</td><td>" + hora + ":"+minuto + "</td></tr>";
                 $("#table\\.body\\.examenes").append(strTable);
             });
             $("#table\\.body\\.examenes tr").on('click',function(){
