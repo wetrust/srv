@@ -101,6 +101,7 @@
                 activatePaciente(this);
             });
         });
+    });
 });
 
 function epochToDate(epoch){
