@@ -26,4 +26,8 @@ class DicomController extends Controller
     public function getlastpatients(){
         $this->View->renderJSON(DicomModel::lastpatients());
     }
+
+    public function patients($RUT){
+        $this->View->renderJSON(DicomModel::getpatients($RUT));
+    }
 }

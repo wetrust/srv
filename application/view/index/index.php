@@ -27,7 +27,7 @@
   </li>
 <?php if (Session::userIsLoggedIn()) { ?>
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo Config::get('URL'); ?>examen/seleccionar"><i class="fa fa-user-md" aria-hidden="true"></i> <strong>Iniciar exámen ecográfico Registrable en base</strong> <span class="badge badge-secondary">Libre</span></a>
+    <a class="nav-link" href="<?php echo Config::get('URL'); ?>dicom/view"> <strong>Ver imágenes registradas en base</strong></a>
   </li>
 <?php } ?>
 <?php if (Session::userIsLoggedIn() == false) { ?>
