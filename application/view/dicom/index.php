@@ -148,7 +148,7 @@ function activatePaciente(element){
         });
 }
 
-function activateExamenes(){
+function activateExamenes(element){
     $.each( $(element).parent().children(), function( i, val ) {
 		$( val ).removeClass( 'table-active');
 	});
