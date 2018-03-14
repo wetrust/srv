@@ -61,7 +61,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" id="fotosDicom">
+      <div class="modal-body row" id="fotosDicom">
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer">
@@ -162,10 +162,11 @@ function activateExamenes(element){
                         $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
                             $("#fotosDicom").html(" ");
                             if (data.DCM = true) {
+                                var i = 0
                                 $.each(data.JPGFiles, function(i, item) {
-                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                                    i++;
+                                    $("#fotosDicom").append("<div class='col-6' ><img alt='200x200' class='img-fluid' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
                                 });
-                                $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>");
                                 $("#imprimirFotos").off("click");
                                 $("#imprimirFotos").on("click", function() {
                                     var fotosArreglo = [];
@@ -179,7 +180,9 @@ function activateExamenes(element){
                 
                                     window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
+                                if (i > 0){
                                 $("#modaImages").modal("show");
+                                }
                             }
                         }).fail(function() {
                             $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
