@@ -119,7 +119,7 @@ class DicomModel
             }
             $sql = "SELECT PatientID, PatientNam, PatientBir, AccessTime FROM dicom.DICOMPatients WHERE PostalCode LIKE ? ORDER BY AccessTime DESC LIMIT 20";
             $query = $database->prepare($sql);
-            $query->execute(array($RUT + '%'));
+            $query->execute(array($RUT. '%'));
 
             return $query->fetchAll();
     }
