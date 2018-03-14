@@ -23,7 +23,7 @@ class app {
 	this.lastLoginIP();
 	$('[data-toggle="tooltip"]').tooltip();
 	this.resetInputs()
-	this.displayElement("consulta");
+	this.displayElement("paciente");
     }
 
     onHashChange(){

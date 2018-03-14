@@ -1,4 +1,4 @@
-<div class="container" id="consulta">
+<div class="container" id="paciente">
 	<div class="bienvenida mb-3 p-2">
                    	<div class="media">
                        		<img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
@@ -14,26 +14,49 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Nuevo Exámen</li>
     <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
   </ol>
 </nav>
             <div class="row">
-                <div class="col-md-12">
+		<div class="col-md-12">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Cálculo de edad gestacional</h5>
-                            <div class="form-group row">
-                                <div class="col">
+                            <h5 class="card-title text-primary">1.- Identificar a la Paciente</h5>
+			    <div class="form-group row">
+                                <div class="col-6">
+                                    <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control my-3" id="id-paciente">
+                                </div>
+                            </div>
+				<hr>
+				<h6 class="card-title text-muted">Datos opcionales</h6>
+				<div class="row mt-2 mb-2">
+                                    <div class="col-2">
+                                        <label for="nombre-paciente" class="col-form-label">Nombre</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="nombre-paciente" class="col-form-label">Apellido</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input class="form-control gris-claro" type="text" id="apellido-paciente">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                <div class="col-2">
                                     <label for="fum2">Fecha de última mestruación</label>
                                 </div>
-                                <div class="col">
+                                <div class="col-4">
                                     <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
                                 </div>
-                                <div class="col">
+                                <div class="col-2">
                                     <label for="dbp" class="col-form-label">Edad Gestacional</label>
                                 </div>
-                                <div class="col">
+                                <div class="col-4">
                                     <div class="row">
                        <div class="col">
                                     <select id="semanasEcoGen" class="form-control">
@@ -70,121 +93,7 @@
                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <div class="col">
-                                    <label for="dbp" class="col-form-label">Fecha probable de parto</label>
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="fpp" readonly>
-                                </div>
-                                <div class="col">
-                                    <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
-                                </div>
-                                <div class="col">
-                                    <input class="form-control" type="text" id="fee-dos" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-4">
-                                    <label for="id-paciente" class="col-form-label bg-info  my-3 p-2">Número de Registro<br>( RUT )</label>
-                                </div>
-                                <div class="col-2">
-                                    <input type="text" class="form-control my-3" id="id-paciente">
-                                </div>
-                                <div class="col-2"></div>
-                                <div class="col text-right">
-                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
-                                </div>
-                                <div class="col-3">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
-                                        <input type="radio" value="0" checked> NO
-                                        </label>
-                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
-                                        <input type="radio" value="1"> SI
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea Ingresar información  para reporte de informe y / o graficas ?</h5>
-                                </div>
-                                <div class="col-3">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="infadicionalNoController" data-value="0">
-                                        <input type="radio" value="0" checked=""> NO
-                                        </label>
-                                        <label class="btn btn-outline-info p-3" id="infadicionalSiController" data-value="1">
-                                        <input type="radio" value="1"> SI
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group d-none" id="infadicionalView">
-                            <div class="row my-4">
-                                    <div class="col">
-                                        <div class="card p-0">
-                                          <div class="card-block m-0 p-1">
-                                              <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-                                                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                                    <span class="navbar-toggler-icon"></span>
-                                                  </button>
-                                                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                                    <ul class="navbar-nav mr-auto my-2">
-                                                      <li class="nav-item mr-1" id="cNuevoPacienteButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="NuevoPacienteButton">Nuevo Paciente</button>
-                                                      </li>
-                                                        <li class="nav-item mr-1 d-none" id="cModificarPacienteButton">
-                                                        <button type="button" class="btn btn-outline-info" id="ModificarPacienteButton">Modificar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cGuardarPacienteButton">
-                                                        <button type="button" class="btn btn-outline-danger" id="GuardarPacienteButton">Guardar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cCancelarPacienteButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="CancelarPacienteButton">Cancelar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cNuevoExamenButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="NuevoExamenButton">Nuevo Exámen</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cGuardarExamenButton">
-                                                        <button type="button" class="btn btn-outline-danger" id="GuardarExamenButton">Guardar</button>
-                                                      </li>
-                                                      <li class="nav-item mr-1 d-none" id="cCancelarExamenButton">
-                                                        <button type="button" class="btn btn-outline-primary" id="CancelarExamenButton">Cancelar</button>
-                                                      </li>
-                                                    </ul>
-                                                    <form class="form-inline my-2 my-lg-0 mr-2">
-                                                      <input class="form-control mr-sm-2" type="text" id="buscarPacientes" placeholder="N° de registro o apellido">
-                                                      <button class="btn btn-outline-success my-2 my-sm-0" id="buscarPacientesBtn">Buscar</button>
-                                                    </form>
-                                                    <span class="navbar-text text-center" id="numPacientes" style="width: 100px;">0</span>
-                                                  </div>
-                                                </nav>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-2 mb-2">
-                                    <div class="col-2">
-                                        <label for="nombre-paciente" class="col-form-label">Nombre paciente</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
-                                    </div>
-                                    <div class="col-2">
-                                        <label for="nombre-paciente" class="col-form-label">Apellido paciente</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input class="form-control gris-claro" type="text" id="apellido-paciente">
-                                    </div>
-                                </div>
-                                <div class="row mt-2 mb-2">
+				<div class="row mt-2 mb-2">
                                     <div class="col-2">
                                         <label class="col-form-label">Edad materna</label>
                                     </div>
@@ -241,6 +150,127 @@
                                          </select>
                                     </div>
                                 </div>
+				<hr>
+			    <div class="row mb-3">
+                                <div class="col">
+					<p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a datos de exámen.</p>
+				    </div>
+			    </div>
+			    <div class="form-group row">
+                                <div class="col text-right">
+                                    <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
+                                </div>
+                            </div>
+			</div>
+		    </div>
+		</div>
+        </div>
+        <div class="row">
+		    <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ultimos Pacientes</h5>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table.body.pacientes">
+                            </tbody>
+                        </table>
+                    </div>
+			    </div>
+		    </div>
+		</div>
+	<div class="row">
+		<div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+			    <div class="row mb-3">
+                                <div class="col-9">
+                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
+                                </div>
+                                <div class="col-3">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
+                                        <input type="radio" value="0" checked> NO
+                                        </label>
+                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
+                                        <input type="radio" value="1"> SI
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+</div>
+<div class="container" id="consulta" style="display:none;">
+	<div class="bienvenida mb-3 p-2">
+                   	<div class="media">
+                       		<img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        	<div class="media-body mt-4">
+                            		<h4 class="mt-0 mb-1"><em>CrecimientoFetal.cl</em></h4>
+                            		<p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
+                        	</div>
+                        	<div class="media-body mt-4">
+                            		<p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
+                        	</div>
+                    	</div>
+	</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Nuevo Exámen</li>
+    <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
+  </ol>
+</nav>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">2.- Cálculo de edad gestacional y datos de exámen</h5>
+                            
+                            <div class="form-group row">
+                                <div class="col">
+                                    <label for="dbp" class="col-form-label">Fecha probable de parto</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="fpp" readonly>
+                                </div>
+                                <div class="col">
+                                    <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" type="text" id="fee-dos" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2"></div>
+                                <div class="col text-right">
+                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea Ingresar información  para reporte de informe y / o graficas ?</h5>
+                                </div>
+                                <div class="col-3">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-outline-info p-3 active" id="infadicionalNoController" data-value="0">
+                                        <input type="radio" value="0" checked=""> NO
+                                        </label>
+                                        <label class="btn btn-outline-info p-3" id="infadicionalSiController" data-value="1">
+                                        <input type="radio" value="1"> SI
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-none" id="infadicionalView">
                                 <div class="row mt-2 mb-2">
                                     <div class="col-2">
                                         <label for="motivo-examen" class="col-form-label">Lugar de control prenatal</label>
@@ -280,19 +310,10 @@
                                         <select id="ecografista" class="form-control gris-claro">
                                          </select>
                                     </div>
-                                     <div class="col-2">
-                                        <label for="membrete" class="col-form-label">Membrete institucional</label>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <textarea class="form-control" rows="3" id="membrete" style="font-size: 12px;" onkeydown="return limitLines(this, event)"></textarea>
-                                        <button class="btn btn-danger" id="saveMebrete"><small><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar Membrete</small></button>
-                                    </div>
-                                </div>
-                                <div class="row mt-2 mb-2">
-                                    <div class="col-2 mt-3">
+                                    <div class="col-2">
                                         <label for="ecografista" class="col-form-label">Embarazo Gemelar</label>
                                     </div>
-                                    <div class="col-4 mt-3">
+                                    <div class="col-4">
                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-outline-info active" id="embarazoNo" data-value="0">
                                             <input type="radio" value="0" checked=""> NO
@@ -302,8 +323,9 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="col-2"></div>
-                                     <div class="col-4">
+                                </div>
+                                <div class="row mt-2 mb-2">
+                                    <div class="col-12 text-right">
                                         <a class="btn btn-info mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a><br><small>Datos registrados serán guardados automáticamente</small>
                                     </div>
                                 </div>
@@ -624,25 +646,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Pacientes</h5>
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Apellido</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -2321,6 +2324,7 @@
 <script>
     var serverURL = "<?php echo Config::get('URL'); ?>";
 </script>
+<script src="<?php echo Config::get('URL'); ?>js/dicom.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/botones.js"></script>

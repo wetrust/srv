@@ -34,7 +34,7 @@ class NombreModel
         }
 
 
-        $sql = "SELECT PatientNam, PatientID FROM DICOMPatients where PatientID = :PatientID";
+        $sql = "SELECT * FROM DICOMPatients where PatientID = :PatientID";
         $query = $database->prepare($sql);
         $query->execute(array(':PatientID' => $rut));
         $query->execute();
