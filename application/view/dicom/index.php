@@ -153,7 +153,7 @@ function activateExamenes(element){
 		$( val ).removeClass( 'table-active');
 	});
     $(element).addClass('table-active');
-    FechaExm = $(element).children("th").data("id");
+    FechaExm = String($(element).children("th").data("id"));
     RUTPACIENTE = $(element).children("th").data("rut");
     var ano = FechaExm.substring(0, 4);
     var mes = FechaExm.substring(4, 6);
