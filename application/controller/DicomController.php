@@ -26,6 +26,11 @@ class DicomController extends Controller
         $this->View->render('error/404');
     }
 
+    public function view()
+    {
+        $this->View->render('dicom/index');
+    }
+
     public function getimages($rut, $StudyDate){
         $this->View->renderJSON(DicomModel::getAllImages($rut,$StudyDate));
     }
