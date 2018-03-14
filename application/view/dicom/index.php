@@ -51,7 +51,26 @@
 			    </div>
 		    </div>
 		</div>
-</div
+</div>
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Imágenes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="fotosDicom">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="imprimirFotos">Ver Impresion</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
 <script>
     var serverURL = "<?php echo Config::get('URL'); ?>";
@@ -120,12 +139,57 @@ function activatePaciente(element){
                 var hora = des.StudyTime.substring(0, 2);
                 var minuto = des.StudyTime.substring(2, 4);
 
-                var strTable = "<tr><th scope='row'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + dia + "-"+mes + "-" + ano +"</td><td>" + hora + ":"+minuto + "</td></tr>";
+                var strTable = "<tr><th scope='row'  data-id='" + des.StudyDate + "' data-rut='" + RUTPACIENTE + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + dia + "-"+mes + "-" + ano +"</td><td>" + hora + ":"+minuto + "</td></tr>";
                 $("#table\\.body\\.examenes").append(strTable);
             });
             $("#table\\.body\\.examenes tr").on('click',function(){
                 activateExamenes(this);
             });
         });
+}
+
+function activateExamenes(){
+    $.each( $(element).parent().children(), function( i, val ) {
+		$( val ).removeClass( 'table-active');
+	});
+    $(element).addClass('table-active');
+    FechaExm = $(element).children("th").data("id");
+    RUTPACIENTE = $(element).children("th").data("rut");
+    var ano = FechaExm.substring(0, 4);
+    var mes = FechaExm.substring(4, 6);
+    var dia = FechaExm.substring(6, 8);
+
+    $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + dia + mes + ano).done(function(data) {
+                    if (data.exist == true ){
+                        StudyDate =  data.StudyDate;
+                        $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
+                            $("#fotosDicom").html(" ");
+                            if (data.DCM = true) {
+                                $.each(data.JPGFiles, function(i, item) {
+                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                                });
+                                $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>");
+                                $("#imprimirFotos").off("click");
+                                $("#imprimirFotos").on("click", function() {
+                                    var fotosArreglo = [];
+                                    var contadorIMG = 0;
+                                    $("input[name='fotosElegidas']").each(function() {
+                                        if (this.checked == true) {
+                                            fotosArreglo.push(contadorIMG);
+                                        };
+                                        contadorIMG = contadorIMG + 1
+                                    });
+                
+                                    window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+                                });
+                            }
+                        }).fail(function() {
+                            $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+                        });
+                    }
+                    else{
+                        $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+                    }
+                });
 }
 </script>
