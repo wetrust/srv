@@ -117,7 +117,7 @@ class DicomModel
                 // No connection, reached limit connections etc. so no point to keep it running
                 exit;
             }
-            $sql = "SELECT PatientID, PatientNam, PatientBir, AccessTime FROM dicom.DICOMPatients WHERE PostalCode LIKE ? ORDER BY AccessTime DESC LIMIT 20";
+            $sql = "SELECT PatientID, PatientNam, PatientBir, AccessTime FROM dicom.DICOMPatients WHERE PatientID LIKE ? ORDER BY AccessTime DESC LIMIT 20";
             $query = $database->prepare($sql);
             $query->execute(array($RUT. '%'));
 
