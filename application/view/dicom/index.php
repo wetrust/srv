@@ -109,7 +109,7 @@ function activatePaciente(element){
 		$( val ).removeClass( 'table-active');
 	});
     $(element).addClass('table-active');
-    RUTPACIENTE = $(element).children("th").data("id"));
+    RUTPACIENTE = $(element).children("th").data("id");
     $.get(serverURL + "dicom/study/" + RUTPACIENTE).done(function(data) {
             $("#table\\.body\\.examenes").empty();
             $.each(data, function (key, des) {
