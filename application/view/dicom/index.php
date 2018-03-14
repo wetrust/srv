@@ -35,33 +35,22 @@
                             <tbody id="table.body.pacientes">
                             </tbody>
                         </table>
+                        <h5 class="card-title">Exámenes</h5>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table.body.examenes">
+                            </tbody>
+                        </table>
                     </div>
 			    </div>
 		    </div>
 		</div>
-	<div class="row">
-		<div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-			    <div class="row mb-3">
-                                <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
-                                </div>
-                                <div class="col-3">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
-                                        <input type="radio" value="0" checked> NO
-                                        </label>
-                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
-                                        <input type="radio" value="1"> SI
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-			</div>
-		    </div>
-		</div>
-	    </div>
 </div
 <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
 <script>
@@ -120,9 +109,19 @@ function activatePaciente(element){
 		$( val ).removeClass( 'table-active');
 	});
     $(element).addClass('table-active');
-    $("#id-paciente").val($(element).children("th").data("id"));
-    $("#id-paciente").trigger("change");
-    $("#nombre-paciente").val("cargando...");
-    $("#apellido-paciente").val("cargando...");
+    RUTPACIENTE = $(element).children("th").data("id"));
+    $.get(serverURL + "dicom/study/" + RUTPACIENTE).done(function(data) {
+            $("#table\\.body\\.examenes").empty();
+            $.each(data, function (key, des) {
+                var date =  epochToDate(des.AccessTime);
+                date =  dateToStr(date);
+                var nombre = des.PatientNam.split("^");
+                var strTable = "<tr><th scope='row'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.StudyDate +"</td><td>" + des.StudyTime + "</td></tr>";
+                $("#table\\.body\\.examenes").append(strTable);
+            });
+            $("#table\\.body\\.examenes tr").on('click',function(){
+                activateExamenes(this);
+            });
+        });
 }
 </script>
