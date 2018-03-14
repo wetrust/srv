@@ -52,7 +52,7 @@
 		    </div>
 		</div>
 </div>
-<div class="modal" tabindex="-1" role="dialog">
+<div class="modal" tabindex="-1" role="dialog" id="modaImages">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -153,13 +153,10 @@ function activateExamenes(element){
 		$( val ).removeClass( 'table-active');
 	});
     $(element).addClass('table-active');
-    FechaExm = String($(element).children("th").data("id"));
+    FechaExm = $(element).children("th").data("id");
     RUTPACIENTE = $(element).children("th").data("rut");
-    var ano = FechaExm.substring(0, 4);
-    var mes = FechaExm.substring(4, 6);
-    var dia = FechaExm.substring(6, 8);
 
-    $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + dia + mes + ano).done(function(data) {
+    $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm).done(function(data) {
                     if (data.exist == true ){
                         StudyDate =  data.StudyDate;
                         $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
@@ -182,6 +179,7 @@ function activateExamenes(element){
                 
                                     window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
+                                $("#modaImages").modal("show");
                             }
                         }).fail(function() {
                             $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
