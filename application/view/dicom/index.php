@@ -162,9 +162,9 @@ function activateExamenes(element){
                         $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
                             $("#fotosDicom").html(" ");
                             if (data.DCM = true) {
-                                var i = 0
+                                var jK = 0
                                 $.each(data.JPGFiles, function(i, item) {
-                                    i++;
+                                    jK++;
                                     $("#fotosDicom").append("<div class='col-6' ><img alt='200x200' class='img-fluid' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
                                 });
                                 $("#imprimirFotos").off("click");
@@ -180,7 +180,7 @@ function activateExamenes(element){
                 
                                     window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
-                                if (i > 0){
+                                if (jK > 0){
                                 $("#modaImages").modal("show");
                                 }
                             }
