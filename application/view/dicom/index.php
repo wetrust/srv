@@ -71,6 +71,8 @@
     </div>
   </div>
 </div>
+<div class="modal" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
+</div>
 <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
 <script>
     var serverURL = "<?php echo Config::get('URL'); ?>";
@@ -165,7 +167,7 @@ function activateExamenes(element){
                                 var jK = 0
                                 $.each(data.JPGFiles, function(i, item) {
                                     jK++;
-                                    $("#fotosDicom").append("<div class='col-6' ><img alt='200x200' class='img-fluid' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                                    $("#fotosDicom").append("<div class='col-6' ><img alt='200x200' class='img-fluid zoom' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
                                 });
                                 $("#imprimirFotos").off("click");
                                 $("#imprimirFotos").on("click", function() {
@@ -178,7 +180,17 @@ function activateExamenes(element){
                                         contadorIMG = contadorIMG + 1
                                     });
                 
-                                    window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+                                    if (contadorIMG > 0){
+                                        window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+                                    }
+                                    else{
+                                        alert("Debe seleccionar al menos 2 imágenes");
+                                    }
+                                });
+                                $('.zoom').on("click", function(){
+                                    $("#modalZoom").html(" ");
+                                    $("#modalZoom").append($(this).html());
+                                    $("#modalZoom").modal("show");
                                 });
                                 if (jK > 0){
                                 $("#modaImages").modal("show");
