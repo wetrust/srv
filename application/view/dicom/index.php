@@ -71,7 +71,7 @@
     </div>
   </div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
+<div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
 <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
 <script>
@@ -191,6 +191,7 @@ function activateExamenes(element){
                                     var img = this.outerHTML;
                                     $("#modalZoom").html(" ");
                                     $("#modalZoom").append(img);
+                                    $("#modalZoom img").removeClass("zoom");
                                     $("#modalZoom").modal("show");
                                 });
                                 if (jK > 0){
