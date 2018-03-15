@@ -188,7 +188,7 @@ function activateExamenes(element){
                                     }
                                 });
                                 $('.zoom').on("click", function(){
-                                    var img = $(this).html();
+                                    var img = this.outerHTML;
                                     $("#modalZoom").html(" ");
                                     $("#modalZoom").append(img);
                                     $("#modalZoom").modal("show");
