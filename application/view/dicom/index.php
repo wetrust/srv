@@ -188,8 +188,9 @@ function activateExamenes(element){
                                     }
                                 });
                                 $('.zoom').on("click", function(){
+                                    var img = $(this).html();
                                     $("#modalZoom").html(" ");
-                                    $("#modalZoom").append($(this).html());
+                                    $("#modalZoom").append(img);
                                     $("#modalZoom").modal("show");
                                 });
                                 if (jK > 0){
