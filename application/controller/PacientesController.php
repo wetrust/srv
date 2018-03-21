@@ -23,4 +23,8 @@ class PacientesController extends Controller
     {
         $this->View->renderJSON(UserModel::savefur());
     }
+    public function getfur($user_id)
+    {
+        $this->View->renderJSON(UserModel::getfur($user_id));
+    }
 }
