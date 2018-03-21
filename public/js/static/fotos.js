@@ -49,8 +49,4 @@ $(document).ready(function() {
             }
         });
     });
-
-    $("#fee-dos").on("change", function() {
-        $("#id-paciente").trigger("click")
-    });
 });

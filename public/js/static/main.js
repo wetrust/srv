@@ -304,7 +304,7 @@ $( document ).ready(function() {
 			$('#fum-dos').datepicker();
 			$('#fum-dos').datepicker()
 				  .on('changeDate', function(ev){
-				    $(this).trigger("change");
+					$(this).trigger("change");
 				  });
 			$('#fum-tres').datepicker();
 			$('#fum-tres').datepicker()
@@ -330,7 +330,8 @@ $( document ).ready(function() {
 			$('#fee-dos').datepicker();
 			$('#fee-dos').datepicker()
 				  .on('changeDate', function(ev){
-				    $(this).trigger("change");
+					$(this).trigger("change");
+					$("#id-paciente").trigger("click");
 				  });
 			$('#fee-tres').datepicker();
 			$('#fee-tres').datepicker()
