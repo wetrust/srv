@@ -346,14 +346,28 @@ class UserModel
         $rut = strip_tags(Request::post('rut'));
         $fur = strip_tags(Request::post('fur'));
 
-
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        // get real token from database (and all other data)
+        // comprobar si la paciente ya tiene una fur guardada
         $query = $database->prepare("SELECT fur_id, user_id, fur_date FROM fur WHERE user_id = :user_id  LIMIT 1");
         $query->execute(array(':user_id' => $rut));
-        return $query->fetch();
-        // return one row (we only have one result or nothing)
-        
+        if ($query->rowCount() > 0){
+            //update
+            $sql = "UPDATE fur SET fur_date = :fur_date WHERE user_id = :user_id LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':fur_date' => $fur, ':user_id' => $rut));
+            if ($query->rowCount() == 1) {
+                return true;
+            }
+        }
+        else{
+            //createNew
+            $sql = "INSERT INTO fur (user_id, fur_date) VALUES (:user_id, :fur_date)";
+            $query = $database->prepare($sql);
+            $query->execute(array(':user_id' => $rut, ':fur_date' => $fur));
+            if ($query->rowCount() == 1) {
+                return true;
+            }
+        }
     }
 }
