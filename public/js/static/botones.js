@@ -120,7 +120,7 @@ var semanas = Math.trunc(localStorage.eg)
         $( '#diasEcoPrim' ).val(dias);
 	$( '#diasEcoDopp' ).val(dias);
 	$('#semanasEcoDopp').val(semanas);
-
+  $("#id-paciente").trigger("click");
  });
 
 }
