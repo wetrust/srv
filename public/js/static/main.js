@@ -331,7 +331,7 @@ $( document ).ready(function() {
 			$('#fee-dos').datepicker()
 				  .on('changeDate', function(ev){
 					$(this).trigger("change");
-					$("#id-paciente").trigger("click");
+					$("#id-paciente").trigger("change");
 				  });
 			$('#fee-tres').datepicker();
 			$('#fee-tres').datepicker()
