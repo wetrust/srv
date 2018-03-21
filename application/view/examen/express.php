@@ -51,7 +51,14 @@
                                     <label for="fum2">Fecha de última mestruación</label>
                                 </div>
                                 <div class="col-4">
-                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="button" class="btn btn-danger" id="guardarfur"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-2">
                                     <label for="dbp" class="col-form-label">Edad Gestacional</label>
@@ -89,9 +96,6 @@
                                          <option value="5">5</option>
                                         <option value="6">6</option>
                                      </select>
-                        </div>
-                        <div class="col">
-                        <button type="button" class="btn btn-danger"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
                         </div>
                     </div>
                                 </div>

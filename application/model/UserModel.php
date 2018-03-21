@@ -340,4 +340,20 @@ class UserModel
         // return one row (we only have one result or nothing)
         return $query->fetch();
     }
+
+    public static function savefur($user_id, $token)
+    {
+        $rut = strip_tags(Request::post('rut'));
+        $fur = strip_tags(Request::post('fur'));
+
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        // get real token from database (and all other data)
+        $query = $database->prepare("SELECT fur_id, user_id, fur_date FROM fur WHERE user_id = :user_id  LIMIT 1");
+        $query->execute(array(':user_id' => $rut));
+        return $query->fetch();
+        // return one row (we only have one result or nothing)
+        
+    }
 }

@@ -18,4 +18,9 @@ class PacientesController extends Controller
     {
         $this->View->render('pacientes/nuevo');
     }
+
+    public function savefur()
+    {
+        $this->View->renderJSON(UserModel::savefur());
+    }
 }
