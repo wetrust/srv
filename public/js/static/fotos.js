@@ -3,7 +3,7 @@ var FechaExm = "";
 var StudyDate = ""
 $(document).ready(function() {
     $("#id-paciente").on("change", function() {
-        RUTPACIENTE = $(this).val();
+        RUTPACIENTE = $("#id-paciente").val();
         FechaExm = $("#fee-dos").val();
 
         $.get(serverURL + "configuracion/obtenernombre/" + RUTPACIENTE).done(function(data) {
