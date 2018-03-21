@@ -341,7 +341,7 @@ class UserModel
         return $query->fetch();
     }
 
-    public static function savefur($user_id, $token)
+    public static function savefur()
     {
         $rut = strip_tags(Request::post('rut'));
         $fur = strip_tags(Request::post('fur'));
@@ -368,6 +368,20 @@ class UserModel
             if ($query->rowCount() == 1) {
                 return true;
             }
+        }
+    }
+    
+    public static function getfur($user_id)
+    {
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        // comprobar si la paciente ya tiene una fur guardada
+        $query = $database->prepare("SELECT fur_id, user_id, fur_date FROM fur WHERE user_id = :user_id  LIMIT 1");
+        $query->execute(array(':user_id' => $user_id));
+        if ($query->rowCount() > 0){
+            //update
+            return $query->fetch();
         }
     }
 }
