@@ -6,6 +6,18 @@ $(document).ready(function() {
         RUTPACIENTE = $("#id-paciente").val();
         FechaExm = $("#fee-dos").val();
 
+        $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
+            if (data.length > 0 ){
+                $("input[name='fum']").val(data.fur_date);
+            }
+            else{
+                var day = new Date();
+                var day = ("0" + this.day.getDate()).slice(-2);
+	            var month = ("0" + (this.day.getMonth() + 1)).slice(-2);
+                $("input[name='fum']").val((day)+"/"+(month)+"/"+this.day.getFullYear());
+            }
+        });
+        
         $.get(serverURL + "configuracion/obtenernombre/" + RUTPACIENTE).done(function(data) {
             if (data.length > 0 ){
                 var nombre = data[0].PatientNam.split("^");
