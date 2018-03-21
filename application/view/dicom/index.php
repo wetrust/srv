@@ -191,7 +191,10 @@ function activateExamenes(element){
                                     var img = this.outerHTML;
                                     $("#modalZoom").html(" ");
                                     $("#modalZoom").append(img);
-                                    $("#modalZoom img").removeClass("zoom");
+                                    $("#modalZoom img").removeClass("zoom").addClass("explore");
+                                    $('.explore').on("scroll", function(event){
+                                        alert("scroll");
+                                    });
                                     $("#modalZoom").modal("show");
                                 });
                                 if (jK > 0){
