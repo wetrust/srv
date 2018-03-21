@@ -56,7 +56,7 @@
                                             <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
                                         </div>
                                         <div class="col-2">
-                                            <button type="button" class="btn btn-danger" id="guardarfur"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+                                            <button type="button" class="btn btn-danger" id="guardarfur">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
