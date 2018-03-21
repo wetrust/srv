@@ -90,6 +90,9 @@
                                         <option value="6">6</option>
                                      </select>
                         </div>
+                        <div class="col">
+                        <button type="button" class="btn btn-danger"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+                        </div>
                     </div>
                                 </div>
                             </div>
