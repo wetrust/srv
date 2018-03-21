@@ -282,7 +282,7 @@ $( document ).ready(function() {
         //activarTooltips();
         //activarBotones();
 
-	$("guardarfur").on("click", function(){
+	$("#guardarfur").on("click", function(){
 
 		var valores = {
 			rut: $("#id-paciente").val(),
