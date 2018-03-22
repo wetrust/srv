@@ -10,7 +10,7 @@ $('#guardarfur').on("click", function(){
 			fur: $("#fum-dos").val()
 		}
 
-		$.post(appUrl + "pacientes/savefur", valores).done(function (data) {
+		$.post(serverURL + "pacientes/savefur", valores).done(function (data) {
             alert("FUM guardada");
         });
 	});
