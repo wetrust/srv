@@ -23,6 +23,7 @@ $('#guardarfur').on("click", function(){
 	    if (data !== null){
                 if (Object.keys(data).length > 0 ){
                     $("input[name='fum']").val(data.fur_date);
+		    $("#fum-dos").trigger("change");
                 }
 	    }
             else{
