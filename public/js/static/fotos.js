@@ -7,7 +7,7 @@ $(document).ready(function() {
         FechaExm = $("#fee-dos").val();
 
         $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
-	    if (data !== null)
+	    if (data !== null){
                 if (data.length > 0 ){
                     $("input[name='fum']").val(data.fur_date);
                 }
