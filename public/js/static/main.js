@@ -271,18 +271,6 @@ $( '#guardarPatologiaObstetricaConfig').on('click', function() {
 	$("#patologiaObstetricaConfig .formulario").hide();
  });
 
-$('#guardarfur').on("click", function(){
-
-		var valores = {
-			rut: $("#id-paciente").val(),
-			fur: $("#fum-dos").val()
-		}
-
-		$.post(appUrl + "pacientes/savefur", valores).done(function (data) {
-            alert("FUM guardada");
-        });
-	})
-
 
 
 
