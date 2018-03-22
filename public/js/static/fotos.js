@@ -21,7 +21,7 @@ $('#guardarfur').on("click", function(){
 
         $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
 	    if (data !== null){
-                if (data.length > 0 ){
+                if (Object.keys(data).length > 0 ){
                     $("input[name='fum']").val(data.fur_date);
                 }
 	    }
