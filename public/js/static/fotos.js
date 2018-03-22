@@ -2,6 +2,19 @@ var RUTPACIENTE = "";
 var FechaExm = "";
 var StudyDate = ""
 $(document).ready(function() {
+	
+$('#guardarfur').on("click", function(){
+
+		var valores = {
+			rut: $("#id-paciente").val(),
+			fur: $("#fum-dos").val()
+		}
+
+		$.post(appUrl + "pacientes/savefur", valores).done(function (data) {
+            alert("FUM guardada");
+        });
+	});
+	
     $("#id-paciente").on("change", function() {
         RUTPACIENTE = $("#id-paciente").val();
         FechaExm = $("#fee-dos").val();
