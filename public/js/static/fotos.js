@@ -13,10 +13,10 @@ $(document).ready(function() {
                 }
 	    }
             else{
-                var day = new Date();
-                var day = ("0" + this.day.getDate()).slice(-2);
-	            var month = ("0" + (this.day.getMonth() + 1)).slice(-2);
-                $("input[name='fum']").val((day)+"/"+(month)+"/"+this.day.getFullYear());
+                var dateTime = new Date();
+                var day = ("0" + dateTime.getDate()).slice(-2);
+	        var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+                $("input[name='fum']").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
             }
         });
         
