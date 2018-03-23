@@ -101,10 +101,10 @@
                                 </div>
                             </div>
 				<div class="row mt-2 mb-2">
-                                    <div class="col-2">
+                                    <div class="col-2 d-none">
                                         <label class="col-form-label">Edad materna</label>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-4 d-none">
                                         <select name="edad_materna" class="form-control gris-claro">
                                              <option value="10">10 años</option>
                                              <option value="11">11 años</option>
@@ -148,6 +148,12 @@
                                              <option value="49">49 años</option>
                                              <option value="50">50 años</option>
                                          </select>
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="col-form-label">F. Exm. Previo</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control my-3" id="fecha.examen.previo">
                                     </div>
                                     <div class="col-2">
                                         <label for="procedencia" class="col-form-label">Procedencia (Ciudad)</label>

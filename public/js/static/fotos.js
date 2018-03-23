@@ -40,6 +40,13 @@ $('#guardarfur').on("click", function(){
                 $("#nombre-paciente").val(nombre[1]);
                 $("#apellido-paciente").val(nombre[0]);
 
+                var dateTime = epochToDate(data.AccessTime)
+                var day = ("0" + dateTime.getDate()).slice(-2);
+	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+                $("#fecha\\.examen\\.previo").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
+
+
+
                 FechaExm = FechaExm.split("/");
 
                 $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
