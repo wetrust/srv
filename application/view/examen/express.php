@@ -150,7 +150,7 @@
                                          </select>
                                     </div>
                                     <div class="col-2">
-                                        <label class="col-form-label">F. Exm. Previo</label>
+                                        <label class="col-form-label">Fecha Exm. Previo</label>
                                     </div>
                                     <div class="col-4">
                                         <input type="text" class="form-control" id="fecha.examen.previo">
