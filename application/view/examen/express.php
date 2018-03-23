@@ -159,11 +159,9 @@
                                 </div>
 				<hr>
 			    <div class="row mb-3">
-                                <div class="col">
+                                <div class="col-8">
 					<p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a datos de exámen.</p>
 				    </div>
-			    </div>
-			    <div class="form-group row">
                                 <div class="col text-right">
                                     <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
                                 </div>
@@ -173,26 +171,6 @@
 		</div>
         </div>
         <div class="row">
-		    <div class="col-md-12">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Ultimos Pacientes</h5>
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Fecha</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table.body.pacientes">
-                            </tbody>
-                        </table>
-                    </div>
-			    </div>
-		    </div>
-		</div>
-	<div class="row">
 		<div class="col-md-12">
                     <div class="card mb-3">
                         <div class="card-body">
@@ -215,6 +193,26 @@
 		    </div>
 		</div>
 	    </div>
+        <div class="row">
+		    <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ultimos Pacientes</h5>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table.body.pacientes">
+                            </tbody>
+                        </table>
+                    </div>
+			    </div>
+		    </div>
+		</div>
 </div>
 <div class="container" id="consulta" style="display:none;">
 	<div class="bienvenida mb-3 p-2">
