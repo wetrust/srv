@@ -2803,7 +2803,7 @@ $( '#infecoObsSegTrim1' ).on( 'click', function() {
     var comentarios = $("#comentarios-eco-dos-inf-dos").val();
     
     var paciente = $( '#nombre-paciente').val();
-    var idpaciente = $( '#id-paciente').val();
+    var idpaciente = $( '#id-paciente').val() + " " + $( '#apellido-paciente').val();
     var fexamen = $( "input[name='fee']").val();
     
     stringGraficos = stringGraficos.replace(":PACIENTE", paciente);
