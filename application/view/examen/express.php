@@ -153,7 +153,7 @@
                                         <label class="col-form-label">F. Exm. Previo</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="text" class="form-control my-3" id="fecha.examen.previo">
+                                        <input type="text" class="form-control" id="fecha.examen.previo">
                                     </div>
                                     <div class="col-2">
                                         <label for="procedencia" class="col-form-label">Procedencia (Ciudad)</label>
