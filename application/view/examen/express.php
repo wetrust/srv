@@ -174,16 +174,16 @@
 		<div class="col-md-12">
                     <div class="card mb-3">
                         <div class="card-body">
-			    <div class="row mb-3">
+			    <div class="row">
                                 <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
+                                    <h5 class="card-title text-primary text-left mt-2">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
                                 </div>
                                 <div class="col-3">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="configNoController" data-value="0">
+                                        <label class="btn btn-outline-info p-2 active" id="configNoController" data-value="0">
                                         <input type="radio" value="0" checked> NO
                                         </label>
-                                        <label class="btn btn-outline-info p-3" id="configSiController" data-value="1">
+                                        <label class="btn btn-outline-info p-2" id="configSiController" data-value="1">
                                         <input type="radio" value="1"> SI
                                         </label>
                                     </div>
