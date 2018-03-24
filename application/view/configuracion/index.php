@@ -31,7 +31,7 @@
                         <a class="nav-link" data-toggle="tab" href="#lc">Lugar Control prenatal</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#por">Patología Obstétrica Relevante</a>
+                        <a class="nav-link" data-toggle="tab" href="#por">Tipo exámen solicitado</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#mee">Motivo exámen ecográfico</a>
@@ -374,15 +374,15 @@
                         </div>
                   </div>
                   <div class="tab-pane" id="por" role="tabpanel">
-                        <h2 class="my-4">Configurar Patología Obstétrica Relevante</h2>
+                        <h2 class="my-4">Configurar Tipo exámen solicitado</h2>
                         <div class="card">
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevaPatologiaObstetrica"><i class="fa fa-plus" aria-hidden="true"></i> Nueva Patologia</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevaPatologiaObstetrica"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo tipo</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPatologiaObstetrica"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar Patologia</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPatologiaObstetrica"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar tipo</button>
                                           </li>
                                           <li class="nav-item">
                                                 <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPatologiaObstetrica"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
@@ -407,7 +407,7 @@
                                     <div class="card formulario d-none" id="form.patologia">
                                           <div class="card-body">
                                                 <div class="form-group">
-                                                      <h5 id="titleInput">Nombre de patología</h5>
+                                                      <h5 id="titleInput">Tipo de exámen</h5>
                                                 </div>
                                                 <div class="form-group">
                                                       <input type="text" class="form-control" id="input.patologia">

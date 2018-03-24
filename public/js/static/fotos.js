@@ -2,7 +2,14 @@ var RUTPACIENTE = "";
 var FechaExm = "";
 var StudyDate = ""
 $(document).ready(function() {
-	
+    
+    $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
+        $("#tipo\\.examen\\.previo").empty();
+        $.each(data, function (key, des) {
+            $("#tipo\\.examen\\.previo").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');;
+        });
+      });
+
 $('#guardarfur').on("click", function(){
 
 		var valores = {

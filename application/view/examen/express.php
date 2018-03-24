@@ -156,10 +156,10 @@
                                         <input type="text" class="form-control" id="fecha.examen.previo">
                                     </div>
                                     <div class="col-2">
-                                        <label for="procedencia" class="col-form-label">Procedencia (Ciudad)</label>
+                                        <label for="tipo.examen.previo" class="col-form-label">Tipo Exm. Previo</label>
                                     </div>
                                     <div class="col-4">
-                                        <select id="procedencia" class="form-control">
+                                        <select id="tipo.examen.previo" class="form-control">
                                          </select>
                                     </div>
                                 </div>
