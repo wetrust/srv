@@ -237,7 +237,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
     <li class="breadcrumb-item active" aria-current="page">Nuevo Exámen</li>
-    <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
+    <li class="ml-auto"><a href="#paciente">Volver</a></li>
   </ol>
 </nav>
             <div class="row">
