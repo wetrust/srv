@@ -374,7 +374,8 @@ class UserModel
     public static function savexmprev()
     {
         $rut = strip_tags(Request::post('rut'));
-        $exm = strip_tags(Request::post('exm'));
+        $exm = strip_tags(Request::post('exm'));0
+        $exmtxt = strip_tags(Request::post('exmtxt'));
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
@@ -384,18 +385,18 @@ class UserModel
 
         if ($query->rowCount() > 0){
             //update
-            $sql = "UPDATE user_exmprevio SET user_exm = :user_exm WHERE user_id = :user_id LIMIT 1";
+            $sql = "UPDATE user_exmprevio SET user_exm = :user_exm, user_exmtxt = :user_exmtxt WHERE user_id = :user_id LIMIT 1";
             $query = $database->prepare($sql);
-            $query->execute(array(':user_exm' => $exm, ':user_id' => $rut));
+            $query->execute(array(':user_exmtxt' => $exmtxt,':user_exm' => $exm, ':user_id' => $rut));
             if ($query->rowCount() == 1) {
                 return true;
             }
         }
         else{
             //createNew
-            $sql = "INSERT INTO user_exmprevio (user_id, user_exm) VALUES (:user_id, :user_exm)";
+            $sql = "INSERT INTO user_exmprevio (user_id, user_exm,user_exmtxt) VALUES (:user_id, :user_exm, :user_exmtxt)";
             $query = $database->prepare($sql);
-            $query->execute(array(':user_id' => $rut, ':user_exm' => $exm));
+            $query->execute(array(':user_id' => $rut, ':user_exm' => $exm,':user_exmtxt' => $exmtxt));
             if ($query->rowCount() == 1) {
                 return true;
             }
