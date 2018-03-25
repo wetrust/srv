@@ -47,6 +47,7 @@ $('#guardartipoexamen').on("click", function(){
 
 		$.post(serverURL + "pacientes/savexmprev", valores).done(function (data) {
             alert("Guardado");
+            loadTablePatients();
         });
     });
     

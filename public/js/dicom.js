@@ -1,17 +1,5 @@
 $(document).ready(function(){
-    $.get( serverURL + "dicom/getlastpatients", function( data ) {
-        $("#table\\.body\\.pacientes").empty();
-        $.each(data, function (key, des) {
-            var date =  epochToDate(des.AccessTime);
-            date =  dateToStr(date);
-            var nombre = des.PatientNam.split("^");
-            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + des.user_exmtxt + "</td></tr>";
-            $("#table\\.body\\.pacientes").append(strTable);
-        });
-        $("#table\\.body\\.pacientes tr").on('click',function(){
-            activatePaciente(this);
-        });
-    });
+    loadTablePatients();
 });
 
 function epochToDate(epoch){
@@ -34,4 +22,27 @@ function activatePaciente(element){
     $("#id-paciente").trigger("change");
     $("#nombre-paciente").val("cargando...");
     $("#apellido-paciente").val("cargando...");
+}
+
+function loadTablePatients(){
+	$.get( serverURL + "dicom/getlastpatients", function( data ) {
+        $("#table\\.body\\.pacientes").empty();
+        $.each(data, function (key, des) {
+            var date =  epochToDate(des.AccessTime);
+            date =  dateToStr(date);
+            var nombre = des.PatientNam.split("^");
+            if (data !== null){
+                var ecmtxt = des.user_exmtxt;
+            }
+            else{
+                var ecmtxt = "";
+            }
+            
+            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td></tr>";
+            $("#table\\.body\\.pacientes").append(strTable);
+        });
+        $("#table\\.body\\.pacientes tr").on('click',function(){
+            activatePaciente(this);
+        });
+    });
 }
