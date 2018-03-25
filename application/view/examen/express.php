@@ -159,8 +159,15 @@
                                         <label for="tipo.examen.previo" class="col-form-label">Tipo Exm. Previo</label>
                                     </div>
                                     <div class="col-4">
-                                        <select id="tipo.examen.previo" class="form-control">
-                                         </select>
+                                        <div class="row">
+                                            <div class="col">
+                                                <select id="tipo.examen.previo" class="form-control"></select>
+                                            </div>
+                                            <div class="col-4 p-0">
+                                                <button type="button" class="btn btn-danger" id="guardartipoexamen">Guardar</button>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
 				<hr>
