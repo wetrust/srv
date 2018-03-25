@@ -40,7 +40,8 @@ $(document).ready(function() {
 $('#guardartipoexamen').on("click", function(){
 
 		var valores = {
-			rut: $("#id-paciente").val(),
+            rut: $("#id-paciente").val(),
+            exmtxt: $("#tipo\\.examen\\.previo").html(),
 			exm: $("#tipo\\.examen\\.previo").val()
 		}
 
