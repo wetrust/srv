@@ -2538,8 +2538,10 @@ function pctau() {
 			else{
 				pctAUMB = resultado;
 			}
+
 		$("#ipauPctTxt").val(pctAUMB);
-                $("#ipauRngo").val(pct5[eg] + " - " + pct95[eg]);
+		$("#ipauRngo").val(pct5[eg] + " - " + pct95[eg]);
+
 		if ($('#ipacm').val()){
 			var ccp = ($('#ipacm').val() / $('#ipau').val());
 			$('#ccp').val(ccp.toFixed(2));
@@ -2549,6 +2551,7 @@ function pctau() {
 			dos = ccp - xpct5[eg];
 			resultado = parseInt(90 / (uno) * (dos) + 5);
 			ajustarProgreso(resultado, "ccpPct");
+
 			var pctCCP = '';
 			//truncador de Pct, sobre 100 o bajo 1
 			if (resultado > 99){
@@ -2561,7 +2564,7 @@ function pctau() {
 				pctCCP = resultado;
 			}
 			$("#ccpPctTxt").val(pctCCP);
-                        $("#ccpRngo").val(xpct5[eg] + " - " + xpct95[eg]);
+            $("#ccpRngo").val(xpct5[eg] + " - " + xpct95[eg]);
 		}
 	}
 }
@@ -2661,8 +2664,9 @@ function pctacm() {
 			else{
 				pctCCP = resultado;
 			}
+
 			$("#ccpPctTxt").val(pctCCP);
-                        $("#ccpRngo").val(xpct5[eg] + " - " + xpct95[eg]);
+            $("#ccpRngo").val(xpct5[eg] + " - " + xpct95[eg]);
 		}
 	}
 }
@@ -2749,6 +2753,7 @@ function bvm() {
  pct5[16] = 29; pct5[17] = 29; pct5[18] = 28; pct5[19] = 28;
  pct5[20] = 27; pct5[21] = 26; pct5[22] = 24; pct5[23] = 23;
  pct5[24] = 21;
+
  pct95[0] = 59; pct95[1] = 62; pct95[2] = 64; pct95[3] = 66;
  pct95[4] = 67; pct95[5] = 68; pct95[6] = 68; pct95[7] = 68;
  pct95[8] = 68; pct95[9] = 68; pct95[10] = 68; pct95[11] = 69;
