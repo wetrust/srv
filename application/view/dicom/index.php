@@ -191,34 +191,9 @@ function activateExamenes(element){
                                 });
                                 $('.zoom').on("click", function(){
                                     var img = this.outerHTML;
-                                    $("#modalZoom").html(" ").addClass("explore").attr("overflow", "hidden");
+                                    $("#modalZoom").html(" ");
                                     $("#modalZoom").append(img);
-                                    $("#modalZoom img").removeClass("zoom").css("zoom", 1);
-                                    $('.explore').on("scroll", function(event){
-                                        var st = $(this).scrollTop();
-       
-                                        if(Math.abs(lastScrollTop - st) <= delta)
-                                            return;
-                                        
-                                        if (st > lastScrollTop){
-                                            // downscroll code
-                                            console.log('scroll down');
-                                            var zomVal = parseInt($("#modalZoom img").css("zoom"));
-                                            zomVal = zomVal - 0.1;
-                                            if (zomVal < 1){
-                                                zomVal = 1;
-                                            }
-                                            $("#modalZoom img").css("zoom", zomVal);
-                                        } else {
-                                            // upscroll code
-                                            console.log('scroll up');
-                                            var zomVal = parseInt($("#modalZoom img").css("zoom"));
-                                            zomVal = zomVal + 0.1;
-                                            $("#modalZoom img").css("zoom", zomVal);
-                                            
-                                        }
-                                        lastScrollTop = st;
-                                    });
+                                    $("#modalZoom img").removeClass("zoom");
                                     $("#modalZoom").modal("show");
                                 });
                                 if (jK > 0){

@@ -93,8 +93,6 @@ $('#guardartipoexamen').on("click", function(){
 	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
                 $("#fecha\\.examen\\.previo").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
 
-
-
                 FechaExm = FechaExm.split("/");
 
                 $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
@@ -104,7 +102,7 @@ $('#guardartipoexamen').on("click", function(){
                             $("#fotosDicom").html(" ");
                             if (data.DCM = true) {
                                 $.each(data.JPGFiles, function(i, item) {
-                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
                                 });
                                 $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>");
                                 $("#imprimirFotos").on("click", function() {
@@ -118,6 +116,13 @@ $('#guardartipoexamen').on("click", function(){
                                     });
                 
                                     window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+                                });
+                                $('.zoom').on("click", function(){
+                                    var img = this.outerHTML;
+                                    $("#modalZoom").html(" ");
+                                    $("#modalZoom").append(img);
+                                    $("#modalZoom img").removeClass("zoom");
+                                    $("#modalZoom").modal("show");
                                 });
                             }
                         }).fail(function() {

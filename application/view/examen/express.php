@@ -1,3 +1,5 @@
+<div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
+</div>
 <div class="container" id="paciente">
 	<div class="bienvenida mb-3 p-2">
                    	<div class="media">
