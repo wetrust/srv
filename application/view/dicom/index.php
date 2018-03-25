@@ -193,7 +193,7 @@ function activateExamenes(element){
                                     var img = this.outerHTML;
                                     $("#modalZoom").html(" ").addClass("explore").attr("overflow", "hidden");
                                     $("#modalZoom").append(img);
-                                    $("#modalZoom img").removeClass("zoom").attr("zoom", 1);
+                                    $("#modalZoom img").removeClass("zoom").css("zoom", 1);
                                     $('.explore').on("scroll", function(event){
                                         var st = $(this).scrollTop();
        
