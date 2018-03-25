@@ -30,6 +30,13 @@ $(document).ready(function() {
         });
     });
 
+    $.get( serverURL + "configuracion/motivoexamen", function( data ) {
+        $("#motivo\\.examen").empty();
+        $.each(data, function (key, des) {
+            $("#motivo\\.examen").append('<option value="'+ des.motivo_id + '">'+ des.motivo_name  +'</option>');
+        });
+    });
+
 $('#guardarfur').on("click", function(){
 
 		var valores = {

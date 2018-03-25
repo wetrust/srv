@@ -287,14 +287,14 @@
                                         <label for="motivo-examen" class="col-form-label">Lugar de control prenatal</label>
                                     </div>
                                     <div class="col-4">
-                                        <select id="#lugar.control.prenatal" class="form-control">
+                                        <select id="lugar.control.prenatal" class="form-control">
                                          </select>
                                     </div>
                                     <div class="col-2">
-                                        <label for="motivo-examen" class="col-form-label">Motivo del exámen</label>
+                                        <label for="motivo.examen" class="col-form-label">Motivo del exámen</label>
                                     </div>
                                     <div class="col-4">
-                                        <select id="motivo-examen" class="form-control gris-claro">
+                                        <select id="motivo.examen" class="form-control gris-claro">
                                          </select>
                                     </div>
                                 </div>
