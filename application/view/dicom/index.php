@@ -79,6 +79,8 @@
 </script>
 <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
 <script>
+//https://codepen.io/josiahruddell/pen/piFfq
+var lastScrollTop = 0, delta = 5;
     $(document).ready(function(){
     $.get( serverURL + "dicom/getlastpatients", function( data ) {
         $("#table\\.body\\.pacientes").empty();
@@ -189,11 +191,23 @@ function activateExamenes(element){
                                 });
                                 $('.zoom').on("click", function(){
                                     var img = this.outerHTML;
-                                    $("#modalZoom").html(" ").addClass("explore");
+                                    $("#modalZoom").html(" ").addClass("explore").attr("overflow", "hidden");
                                     $("#modalZoom").append(img);
                                     $("#modalZoom img").removeClass("zoom");
                                     $('.explore').on("scroll", function(event){
-                                        alert("scroll");
+                                        var st = $(this).scrollTop();
+       
+                                        if(Math.abs(lastScrollTop - st) <= delta)
+                                            return;
+                                        
+                                        if (st > lastScrollTop){
+                                            // downscroll code
+                                            console.log('scroll down');
+                                        } else {
+                                            // upscroll code
+                                            console.log('scroll up');
+                                        }
+                                        lastScrollTop = st;
                                     });
                                     $("#modalZoom").modal("show");
                                 });
