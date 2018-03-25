@@ -193,7 +193,7 @@ function activateExamenes(element){
                                     var img = this.outerHTML;
                                     $("#modalZoom").html(" ").addClass("explore").attr("overflow", "hidden");
                                     $("#modalZoom").append(img);
-                                    $("#modalZoom img").removeClass("zoom");
+                                    $("#modalZoom img").removeClass("zoom").attr("zoom", 1);
                                     $('.explore').on("scroll", function(event){
                                         var st = $(this).scrollTop();
        
@@ -203,9 +203,19 @@ function activateExamenes(element){
                                         if (st > lastScrollTop){
                                             // downscroll code
                                             console.log('scroll down');
+                                            var zomVal = $("#modalZoom img").attr("zoom");
+                                            zomVal = zomVal - 0.1;
+                                            if (zomVal < 1){
+                                                zomVal = 1;
+                                            }
+                                            $("#modalZoom img").attr("zoom", zomVal);
                                         } else {
                                             // upscroll code
                                             console.log('scroll up');
+                                            var zomVal = $("#modalZoom img").attr("zoom");
+                                            zomVal = zomVal + 0.1;
+                                            $("#modalZoom img").attr("zoom", zomVal);
+                                            
                                         }
                                         lastScrollTop = st;
                                     });
