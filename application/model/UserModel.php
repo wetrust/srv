@@ -395,7 +395,7 @@ class UserModel
             //createNew
             $sql = "INSERT INTO user_exmprevio (user_id, user_exm) VALUES (:user_id, :user_exm)";
             $query = $database->prepare($sql);
-            $query->execute(array(':user_id' => $rut, ':user_exm' => $fur));
+            $query->execute(array(':user_id' => $rut, ':user_exm' => $exm));
             if ($query->rowCount() == 1) {
                 return true;
             }
