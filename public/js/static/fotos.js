@@ -41,7 +41,7 @@ $('#guardartipoexamen').on("click", function(){
 
 		var valores = {
             rut: $("#id-paciente").val(),
-            exmtxt: $("#tipo\\.examen\\.previo").html(),
+            exmtxt: $("#tipo\\.examen\\.previo option:selected").html(),
 			exm: $("#tipo\\.examen\\.previo").val()
 		}
 
