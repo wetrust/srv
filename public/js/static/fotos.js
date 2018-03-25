@@ -121,7 +121,7 @@ $('#guardartipoexamen').on("click", function(){
                                     var img = this.outerHTML;
                                     $("#modalZoom").html(" ");
                                     $("#modalZoom").append(img);
-                                    $("#modalZoom img").removeClass("zoom");
+                                    $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
                                     $("#modalZoom").modal("show");
                                 });
                             }
