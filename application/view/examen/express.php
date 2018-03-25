@@ -217,6 +217,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Fecha</th>
+                                    <th scope="col">Tipo Exm. Previo</th>
                                 </tr>
                             </thead>
                             <tbody id="table.body.pacientes">
