@@ -374,7 +374,7 @@ class UserModel
     public static function savexmprev()
     {
         $rut = strip_tags(Request::post('rut'));
-        $exm = strip_tags(Request::post('exm'));0
+        $exm = strip_tags(Request::post('exm'));
         $exmtxt = strip_tags(Request::post('exmtxt'));
 
         $database = DatabaseFactory::getFactory()->getConnection();
