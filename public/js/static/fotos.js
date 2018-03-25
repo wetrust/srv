@@ -37,7 +37,19 @@ $(document).ready(function() {
         });
     });
 
-$('#guardarfur').on("click", function(){
+$('#guardartipoexamen').on("click", function(){
+
+		var valores = {
+			rut: $("#id-paciente").val(),
+			exm: $("#tipo\\.examen\\.previo").val()
+		}
+
+		$.post(serverURL + "pacientes/savexmprev", valores).done(function (data) {
+            alert("Guardado");
+        });
+    });
+    
+    $('#guardarfur').on("click", function(){
 
 		var valores = {
 			rut: $("#id-paciente").val(),

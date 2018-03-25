@@ -370,6 +370,37 @@ class UserModel
             }
         }
     }
+
+    public static function savexmprev()
+    {
+        $rut = strip_tags(Request::post('rut'));
+        $exm = strip_tags(Request::post('exm'));
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        // comprobar si la paciente ya tiene un motivo de exámen previo guardado
+        $query = $database->prepare("SELECT user_id, user_exm FROM user_exmprevio WHERE user_id = :user_id  LIMIT 1");
+        $query->execute(array(':user_id' => $rut));
+
+        if ($query->rowCount() > 0){
+            //update
+            $sql = "UPDATE user_exmprevio SET user_exm = :user_exm WHERE user_id = :user_id LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':user_exm' => $exm, ':user_id' => $rut));
+            if ($query->rowCount() == 1) {
+                return true;
+            }
+        }
+        else{
+            //createNew
+            $sql = "INSERT INTO user_exmprevio (user_id, user_exm) VALUES (:user_id, :user_exm)";
+            $query = $database->prepare($sql);
+            $query->execute(array(':user_id' => $rut, ':user_exm' => $fur));
+            if ($query->rowCount() == 1) {
+                return true;
+            }
+        }
+    }
     
     public static function getfur($user_id)
     {
