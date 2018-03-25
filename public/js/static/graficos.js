@@ -1928,6 +1928,9 @@ $( '#infDoppler1' ).on( 'click', function() {
     var idpaciente = $( '#id-paciente').val();
     var fexamen = $( "input[name='fee']").val();
 
+    stringGraficos = stringGraficos.replace(":PACIENTE", paciente);
+	stringGraficos = stringGraficos.replace(":IDPACIENTE", idpaciente);
+	stringGraficos = stringGraficos.replace(":FEXAMEN", fexamen);
 
     if(typeof comentarios == 'undefined'){
 	if ($('#auprom').val() > 0){
