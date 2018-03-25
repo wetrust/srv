@@ -203,18 +203,18 @@ function activateExamenes(element){
                                         if (st > lastScrollTop){
                                             // downscroll code
                                             console.log('scroll down');
-                                            var zomVal = $("#modalZoom img").attr("zoom");
+                                            var zomVal = parseInt($("#modalZoom img").css("zoom"));
                                             zomVal = zomVal - 0.1;
                                             if (zomVal < 1){
                                                 zomVal = 1;
                                             }
-                                            $("#modalZoom img").attr("zoom", zomVal);
+                                            $("#modalZoom img").css("zoom", zomVal);
                                         } else {
                                             // upscroll code
                                             console.log('scroll up');
-                                            var zomVal = $("#modalZoom img").attr("zoom");
+                                            var zomVal = parseInt($("#modalZoom img").css("zoom"));
                                             zomVal = zomVal + 0.1;
-                                            $("#modalZoom img").attr("zoom", zomVal);
+                                            $("#modalZoom img").css("zoom", zomVal);
                                             
                                         }
                                         lastScrollTop = st;
