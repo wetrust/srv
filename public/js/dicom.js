@@ -31,7 +31,7 @@ function loadTablePatients(){
             var date =  epochToDate(des.AccessTime);
             date =  dateToStr(date);
             var nombre = des.PatientNam.split("^");
-            if (data !== null){
+            if (des.user_exmtxt !== null){
                 var ecmtxt = des.user_exmtxt;
             }
             else{
