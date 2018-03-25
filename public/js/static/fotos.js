@@ -16,6 +16,20 @@ $(document).ready(function() {
         $("#patologiaObstetricaUno").val($(this).val());
       });
 
+    $.get( serverURL + "configuracion/lugarcontrol", function( data ) {
+        $("#lugar\\.control\\.prenatal").empty();
+        $.each(data, function (key, des) {
+            $("#lugar\\.control\\.prenatal").append('<option value="'+ des.lcp_id + '">'+ des.lcp_name  +'</option>');
+        });
+    });
+
+    $.get( serverURL + "configuracion/profesional", function( data ) {
+        $("#profesional\\.ecografista").empty();
+        $.each(data, function (key, des) {
+            $("#profesional\\.ecografista").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
+        });
+    });
+
 $('#guardarfur').on("click", function(){
 
 		var valores = {
