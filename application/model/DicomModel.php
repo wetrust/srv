@@ -281,6 +281,7 @@ class DicomModel
             //"Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
 
         }
+        echo 'no';
         //return $respuesta->send = false;
     }
 }

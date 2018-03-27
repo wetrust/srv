@@ -19,6 +19,6 @@ class ImagenesController extends Controller
 
     public function send()
     {
-        DicomModel::sendDicomImages();
+        $this->View->renderJSON(DicomModel::sendDicomImages());
     }
 }
