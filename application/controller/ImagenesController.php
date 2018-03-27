@@ -17,12 +17,8 @@ class ImagenesController extends Controller
         ));
     }
 
-    public function send($user_id, $img_id, $StudyDate,$email)
+    public function send()
     {
-        $this->View->renderJSON(, array(
-            'user_id' => $user_id,
-            'img_id' => $img_id,
-            'StudyDate' => $StudyDate
-        ));
+        DicomModel::sendDicomImages();
     }
 }

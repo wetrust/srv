@@ -115,7 +115,17 @@ $('#guardartipoexamen').on("click", function(){
                                         contadorIMG = contadorIMG + 1
                                     });
                 
-                                    window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+                                    var valores = {
+                                        user_id: $("#id-paciente").val(),
+                                        img_id: fotosArreglo.toString(),
+                                        studyDate: StudyDate,
+                                        user_email: $("#fum-dos").val()
+                                    }
+                            
+                                    $.post(serverURL + "pacientes/savefur", valores).done(function (data) {
+                                        alert("FUM guardada");
+                                    });
+                                    //indow.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
                                 $('.zoom').on("click", function(){
                                     var img = this.outerHTML;

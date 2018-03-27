@@ -253,14 +253,35 @@ class DicomModel
         $user_id = Request::post('user_id');
         $img_id = Request::post('img_id');
         $studyDate = Request::post('studyDate');
-        $email = Request::post('email');
+        $user_email = Request::post('user_email');
 
         $respuesta = new stdClass();
+        $mail = new Mail;
 
         if (!$user_id && !$img_id && !$studyDate && !$email){
 
-        }
+            $files = self::getAllImages($user_id, $studyDate);
+            $files = $files['JPGFiles'];
+             = 1;
+            $filesJPG = [];
 
-        return $respuesta->send = false;
+            print_r($filesG);
+            print_r($img_id);
+            foreach($files as $file){
+                if (in_array($contador, $img_id)) {
+                    array_push($filesJPG, $file);
+                }
+                $contador++;
+            }
+
+            print_r($filesJPG);
+            //$body = Config::get('EMAIL_PASSWORD_RESET_CONTENT') . ' ' . Config::get('URL') .
+            //Config::get('EMAIL_PASSWORD_RESET_URL') . '/' . urlencode($user_name) . '/' . urlencode($user_password_reset_hash);
+
+            //return $respuesta->send = $mail->sendMailWithAttachment($user_email, Config::get('EMAIL_PASSWORD_RESET_FROM_EMAIL'), 
+            //"Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
+
+        }
+        //return $respuesta->send = false;
     }
 }
