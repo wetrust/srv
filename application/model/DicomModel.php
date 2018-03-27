@@ -258,7 +258,7 @@ class DicomModel
         $respuesta = new stdClass();
         $mail = new Mail;
 
-        if (!$user_id && !$img_id && !$studyDate && !$email){
+        if (!$user_id && !$img_id && !$studyDate && !$user_email){
 
             $files = self::getAllImages($user_id, $studyDate);
             $files = $files['JPGFiles'];
