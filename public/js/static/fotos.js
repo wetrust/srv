@@ -122,7 +122,7 @@ $('#guardartipoexamen').on("click", function(){
                                         user_email: $("#fum-dos").val()
                                     }
                             
-                                    $.post(serverURL + "pacientes/savefur", valores).done(function (data) {
+                                    $.post(serverURL + "imagenes/send", valores).done(function (data) {
                                         alert("FUM guardada");
                                     });
                                     //indow.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
