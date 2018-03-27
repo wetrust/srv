@@ -276,9 +276,19 @@ class DicomModel
             $body = Config::get('EMAIL_PASSWORD_RESET_CONTENT') . ' ' . Config::get('URL') .
             Config::get('EMAIL_PASSWORD_RESET_URL') . '/hola/';
 
-            return $respuesta->send = $mail->sendMailWithAttachment($user_email, Config::get('EMAIL_PASSWORD_RESET_FROM_EMAIL'), "Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
+            $envio = $mail->sendMailWithAttachment($user_email, Config::get('EMAIL_PASSWORD_RESET_FROM_EMAIL'), "Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
 
+            if ($envio == false){
+                return $mail->error;
+            }
+            else{
+                return $respuesta->send = $envio;
+            }
+             
         }
-        //return $respuesta->send = false;
+        else{
+            return $respuesta->send = false;
+        }
+        
     }
 }
