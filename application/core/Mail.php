@@ -167,7 +167,7 @@ class Mail
 
         //Adjuntar archivos
         foreach($files as $file) {
-            $mail->addAttachment($file);
+            $mail->addAttachment(Config::get('DICOM_DIRECTORY') . $file);
         }
 
         // try to send mail, put result status (true/false into $wasSendingSuccessful)
