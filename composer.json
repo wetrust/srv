@@ -6,7 +6,8 @@
     "homepage": "https://github.com/panique/huge",
     "license": "MIT",
     "require-dev": {
-        "php": ">=5.5.0"
+        "php": ">=5.5.0",
+        "phpmailer/phpmailer": "~5.2"
     },
     "autoload": {
         "psr-4": { "": ["application/core/", "application/model/"] }
