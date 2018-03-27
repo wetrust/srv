@@ -263,6 +263,7 @@ class DicomModel
             $files = self::getAllImages($user_id, $studyDate);
             $files = $files->JPGFiles;
             $filesJPG = [];
+            $contador = 1;
 
             print_r($files);
             print_r($img_id);
