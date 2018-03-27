@@ -246,4 +246,21 @@ class DicomModel
         Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
         return false;
     }
+
+
+    public static function sendDicomImages()
+    {
+        $user_id = Request::post('user_id');
+        $img_id = Request::post('img_id');
+        $studyDate = Request::post('studyDate');
+        $email = Request::post('email');
+
+        $respuesta = new stdClass();
+
+        if (!$user_id && !$img_id && !$studyDate && !$email){
+
+        }
+
+        return $respuesta->send = false;
+    }
 }

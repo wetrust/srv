@@ -109,6 +109,83 @@ class Mail
     }
 
     /**
+     * Try to send a mail by using PHPMailer.
+     * Make sure you have loaded PHPMailer via Composer.
+     * Depending on your EMAIL_USE_SMTP setting this will work via SMTP credentials or via native mail()
+     *
+     * @param $user_email
+     * @param $from_email
+     * @param $from_name
+     * @param $subject
+     * @param $body
+     *
+     * @return bool
+     * @throws Exception
+     * @throws phpmailerException
+     */
+    public function sendMailWithAttachment($user_email, $from_email, $from_name, $subject, $body, $files)
+    {
+        $mail = new PHPMailer;
+        
+        // you should use UTF-8 to avoid encoding issues
+        $mail->CharSet = 'UTF-8';
+
+        // if you want to send mail via PHPMailer using SMTP credentials
+        if (Config::get('EMAIL_USE_SMTP')) {
+
+            // set PHPMailer to use SMTP
+            $mail->IsSMTP();
+
+            // 0 = off, 1 = commands, 2 = commands and data, perfect to see SMTP errors
+            $mail->SMTPDebug = 0;
+
+            // enable SMTP authentication
+            $mail->SMTPAuth = Config::get('EMAIL_SMTP_AUTH');
+
+            // encryption
+            if (Config::get('EMAIL_SMTP_ENCRYPTION')) {
+                $mail->SMTPSecure = Config::get('EMAIL_SMTP_ENCRYPTION');
+            }
+
+            // set SMTP provider's credentials
+            $mail->Host = Config::get('EMAIL_SMTP_HOST');
+            $mail->Username = Config::get('EMAIL_SMTP_USERNAME');
+            $mail->Password = Config::get('EMAIL_SMTP_PASSWORD');
+            $mail->Port = Config::get('EMAIL_SMTP_PORT');
+
+        } else {
+
+            $mail->IsMail();
+        }
+
+        // fill mail with data
+        $mail->From = $from_email;
+        $mail->FromName = $from_name;
+        $mail->AddAddress($user_email);
+        $mail->Subject = $subject;
+        $mail->Body = $body;
+
+        //Adjuntar archivos
+        foreach($files as $key => $value) {
+            $mail->addAttachment($value);
+        }
+
+        // try to send mail, put result status (true/false into $wasSendingSuccessful)
+        // I'm unsure if mail->send really returns true or false every time, tis method in PHPMailer is quite complex
+        $wasSendingSuccessful = $mail->Send();
+
+        if ($wasSendingSuccessful) {
+            return true;
+
+        } else {
+
+            // if not successful, copy errors into Mail's error property
+            $this->error = $mail->ErrorInfo;
+            return false;
+        }
+    }
+
+    /**
      * The main mail sending method, this simply calls a certain mail sending method depending on which mail provider
      * you've selected in the application's config.
      *
