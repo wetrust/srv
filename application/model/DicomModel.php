@@ -263,10 +263,10 @@ class DicomModel
             $files = self::getAllImages($user_id, $studyDate);
             $files = $files->JPGFiles;
             $filesJPG = [];
-            $contador = 1;
+            $contador = 0;
 
             $img_id = json_decode($img_id, true);
-            
+
             print_r($files);
             print_r($img_id);
             foreach($files as $file){
@@ -277,11 +277,11 @@ class DicomModel
             }
 
             print_r($filesJPG);
-            //$body = Config::get('EMAIL_PASSWORD_RESET_CONTENT') . ' ' . Config::get('URL') .
-            //Config::get('EMAIL_PASSWORD_RESET_URL') . '/' . urlencode($user_name) . '/' . urlencode($user_password_reset_hash);
+            $body = Config::get('EMAIL_PASSWORD_RESET_CONTENT') . ' ' . Config::get('URL') .
+            Config::get('EMAIL_PASSWORD_RESET_URL') . '/hola/';
 
-            //return $respuesta->send = $mail->sendMailWithAttachment($user_email, Config::get('EMAIL_PASSWORD_RESET_FROM_EMAIL'), 
-            //"Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
+            return $respuesta->send = $mail->sendMailWithAttachment($user_email, Config::get('EMAIL_PASSWORD_RESET_FROM_EMAIL'), 
+            "Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
 
         }
         //return $respuesta->send = false;

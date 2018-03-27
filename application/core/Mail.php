@@ -166,8 +166,8 @@ class Mail
         $mail->Body = $body;
 
         //Adjuntar archivos
-        foreach($files as $key => $value) {
-            $mail->addAttachment($value);
+        foreach($files as $file) {
+            $mail->addAttachment($file);
         }
 
         // try to send mail, put result status (true/false into $wasSendingSuccessful)
