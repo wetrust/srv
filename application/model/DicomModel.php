@@ -265,6 +265,8 @@ class DicomModel
             $filesJPG = [];
             $contador = 1;
 
+            $img_id = json_decode($img_id, true);
+            
             print_r($files);
             print_r($img_id);
             foreach($files as $file){
