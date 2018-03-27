@@ -261,7 +261,7 @@ class DicomModel
         if ($user_id && $img_id && $studyDate && $user_email){
 
             $files = self::getAllImages($user_id, $studyDate);
-            $files = $files['JPGFiles'];
+            $files = $files->JPGFiles;
             $filesJPG = [];
 
             print_r($files);
