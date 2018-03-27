@@ -117,7 +117,7 @@ $('#guardartipoexamen').on("click", function(){
                 
                                     var valores = {
                                         user_id: $("#id-paciente").val(),
-                                        img_id: fotosArreglo.toString(),
+                                        img_id: JSON.stringify(fotosArreglo.toString()),
                                         studyDate: StudyDate,
                                         user_email: $("#fum-dos").val()
                                     }
