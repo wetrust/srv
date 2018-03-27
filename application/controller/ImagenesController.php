@@ -16,4 +16,13 @@ class ImagenesController extends Controller
             'StudyDate' => $StudyDate
         ));
     }
+
+    public function send($user_id, $img_id, $StudyDate,$email)
+    {
+        $this->View->renderJSON(, array(
+            'user_id' => $user_id,
+            'img_id' => $img_id,
+            'StudyDate' => $StudyDate
+        ));
+    }
 }
