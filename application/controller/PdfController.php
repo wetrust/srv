@@ -16,6 +16,7 @@ class PdfController extends Controller
      */
     public function index()
     {
+        header("Content-Type: application/pdf");
         require Config::get('PATH_VIEW') . 'pdf/index.php';
     }
 }
