@@ -18,7 +18,7 @@ $dompdf->loadHtml($html);
 $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
-return = $dompdf->output();
+return $dompdf->output();
 echo $pdf_gen;
 if(!file_put_contents("/home/cristophernic/srv/public", $pdf_gen)){
 echo 'Not OK!';
