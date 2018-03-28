@@ -18,5 +18,6 @@ $dompdf->loadHtml($html);
 $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
-return $dompdf->output();
+ //$dompdf->output();
+ return Dompdf\Options::$isPhpEnabled
 ?>

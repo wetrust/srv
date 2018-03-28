@@ -38,6 +38,6 @@ class Pdf
         $dompdf->render();
 
         // Output the generated PDF to Browser
-        return $dompdf->stream();
+        echo $dompdf->stream();
     }
 }
