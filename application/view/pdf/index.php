@@ -19,7 +19,7 @@ $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
 $pdf_gen = $dompdf->output();
-
+echo $pdf_gen;
 if(!file_put_contents($full_path, $pdf_gen)){
 echo 'Not OK!';
 }else{
