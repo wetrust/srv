@@ -171,6 +171,12 @@
                                         </div>
                                         
                                     </div>
+                                    <div class="col-2">
+                                        <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control" id="paciente.correo">
+                                    </div>
                                 </div>
 				<hr>
 			    <div class="row mb-3">

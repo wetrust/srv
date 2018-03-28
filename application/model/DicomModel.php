@@ -273,8 +273,7 @@ class DicomModel
                 $contador++;
             }
 
-            $body = Config::get('EMAIL_PASSWORD_RESET_CONTENT') . ' ' . Config::get('URL') .
-            Config::get('EMAIL_PASSWORD_RESET_URL') . '/hola/';
+            $body = "Servicio envio privado de imágenes ecográficas y/o Informes\n\n---- ADVERTENCIA ----\nLa información contenida en este correo electrónico, y en su caso, cualquier fichero anexo al mismo, son de carácter privado y confidencial siendo para uso exclusivode su destinatario.";
 
             $envio = $mail->sendMailWithAttachment($user_email, Config::get('EMAIL_PASSWORD_RESET_FROM_EMAIL'), "Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
 
