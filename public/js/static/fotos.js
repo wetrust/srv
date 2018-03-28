@@ -118,6 +118,12 @@ $('#guardartipoexamen').on("click", function(){
                                     window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
                                 $("#emailFotos").on("click", function() {
+
+                                    if ($("#paciente\\.correo").val() == ""){
+                                        alert("Debe ingresar un correo para el paciente en la página principal");
+                                        return true;
+                                    }
+
                                     var fotosArreglo = [];
                                     var contadorIMG = 0;
                                     $("input[name='fotosElegidas']").each(function() {
