@@ -20,7 +20,7 @@ $dompdf->render();
 
 $pdf_gen = $dompdf->output();
 echo $pdf_gen;
-if(!file_put_contents("~/srv/public/pdf.pdf", $pdf_gen)){
+if(!file_put_contents("/home/cristophernic/srv/public/pdf.pdf", $pdf_gen)){
 echo 'Not OK!';
 }else{
 echo 'OK';
