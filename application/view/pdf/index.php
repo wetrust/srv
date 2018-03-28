@@ -12,11 +12,11 @@
 </html>
 <?php
 $html = ob_get_clean();
-use Dompdf\Dompdf;
-$dompdf = new Dompdf();
-$dompdf->loadHtml($html);
-$dompdf->setPaper('A4', 'portrait');
-$dompdf->render();
+//use Dompdf\Dompdf;
+//$dompdf = new Dompdf();
+//$dompdf->loadHtml($html);
+//$dompdf->setPaper('A4', 'portrait');
+//$dompdf->render();
 
  //$dompdf->output();
  return Dompdf\Options::$isPhpEnabled
