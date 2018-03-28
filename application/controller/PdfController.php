@@ -16,6 +16,6 @@ class PdfController extends Controller
      */
     public function index()
     {
-        $this->View->render('pdf/index');
+        require Config::get('PATH_VIEW') . 'pdf/index.php';
     }
 }
