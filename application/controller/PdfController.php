@@ -35,7 +35,12 @@ class PdfController extends Controller
                 $contador++;
             }
      
-                
+            $StudyDate = (string)$StudyDate;
+            
+            $StudyDate = substr($StudyDate, 7, 8) . "/" . substr($StudyDate, 5, 6) . "/" .substr($StudyDate, 0, 4);
+            
+            
+            
             $this->View->renderWithoutHeaderAndFooter('pdf/index', array(
                 'user_id' => $user_id,
                 'user_name' => $nombre,
