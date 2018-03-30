@@ -43,14 +43,6 @@ $pdf->setJPEGQuality(75);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// Example of Image from data stream ('PHP rules')
-$imgdata = base64_decode('iVBORw0KGgoAAAANSUhEUgAAABwAAAASCAMAAAB/2U7WAAAABlBMVEUAAAD///+l2Z/dAAAASUlEQVR4XqWQUQoAIAxC2/0vXZDrEX4IJTRkb7lobNUStXsB0jIXIAMSsQnWlsV+wULF4Avk9fLq2r8a5HSE35Q3eO2XP1A1wQkZSgETvDtKdQAAAABJRU5ErkJggg==');
-
-// The '@' character is used to indicate that follows an image data stream and not an image file name
-$pdf->Image('@'.$imgdata);
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 // Image example with resizing
 $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
 
@@ -58,49 +50,49 @@ $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2
 
 // test fitbox with all alignment combinations
 
-$horizontal_alignments = array('L', 'C', 'R');
-$vertical_alignments = array('T', 'M', 'B');
+//$horizontal_alignments = array('L', 'C', 'R');
+//$vertical_alignments = array('T', 'M', 'B');
 
-$x = 15;
-$y = 35;
-$w = 30;
-$h = 30;
+//$x = 15;
+//$y = 35;
+//$w = 30;
+//$h = 30;
 // test all combinations of alignments
-for ($i = 0; $i < 3; ++$i) {
-    $fitbox = $horizontal_alignments[$i].' ';
-    $x = 15;
-    for ($j = 0; $j < 3; ++$j) {
-        $fitbox[1] = $vertical_alignments[$j];
-        $pdf->Rect($x, $y, $w, $h, 'F', array(), array(128,255,128));
-        $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", $x, $y, $w, $h, 'JPG', '', '', false, 300, '', false, false, 0, $fitbox, false, false);
-        $x += 32; // new column
-    }
-    $y += 32; // new row
-}
+//for ($i = 0; $i < 3; ++$i) {
+//    $fitbox = $horizontal_alignments[$i].' ';
+//    $x = 15;
+//    for ($j = 0; $j < 3; ++$j) {
+//        $fitbox[1] = $vertical_alignments[$j];
+//        $pdf->Rect($x, $y, $w, $h, 'F', array(), array(128,255,128));
+//        $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", $x, $y, $w, $h, 'JPG', '', '', false, 300, '', false, false, 0, $fitbox, false, false);
+//        $x += 32; // new column
+//    }
+//    $y += 32; // new row
+//}
 
-$x = 115;
-$y = 35;
-$w = 25;
-$h = 50;
-for ($i = 0; $i < 3; ++$i) {
-    $fitbox = $horizontal_alignments[$i].' ';
-    $x = 115;
-    for ($j = 0; $j < 3; ++$j) {
-        $fitbox[1] = $vertical_alignments[$j];
-        $pdf->Rect($x, $y, $w, $h, 'F', array(), array(128,255,255));
-        $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", $x, $y, $w, $h, 'JPG', '', '', false, 300, '', false, false, 0, $fitbox, false, false);
-        $x += 27; // new column
-    }
-    $y += 52; // new row
-}
+//$x = 115;
+//$y = 35;
+//$w = 25;
+//$h = 50;
+//for ($i = 0; $i < 3; ++$i) {
+//    $fitbox = $horizontal_alignments[$i].' ';
+//    $x = 115;
+//    for ($j = 0; $j < 3; ++$j) {
+//        $fitbox[1] = $vertical_alignments[$j];
+//        $pdf->Rect($x, $y, $w, $h, 'F', array(), array(128,255,255));
+//        $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", $x, $y, $w, $h, 'JPG', '', '', false, 300, '', false, false, 0, $fitbox, false, false);
+//        $x += 27; // new column
+//    }
+//    $y += 52; // new row
+//}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // Stretching, position and alignment example
 
-$pdf->SetXY(110, 200);
-$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '', '', 40, 40, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '', '', 40, 40, '', '', '', false, 300, '', false, false, 1, false, false, false);
+//$pdf->SetXY(110, 200);
+//$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '', '', 40, 40, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+//$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '', '', 40, 40, '', '', '', false, 300, '', false, false, 1, false, false, false);
 
 // -------------------------------------------------------------------
 
