@@ -52,8 +52,6 @@ $pdf->Image('@'.$imgdata);
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // Image example with resizing
-Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg";
-
 $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
