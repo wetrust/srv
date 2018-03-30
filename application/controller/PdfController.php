@@ -17,7 +17,11 @@ class PdfController extends Controller
     public function img($user_id = null, $img_id = null, $StudyDate = null)
     {
         if ($user_id != null && $img_id != null && $StudyDate != null){
-            $this->View->renderWithoutHeaderAndFooter('pdf/index');
+            $this->View->renderWithoutHeaderAndFooter('pdf/index', array(
+                'user_id' => $user_id,
+                'img_id' => $img_id,
+                'StudyDate' => $StudyDate
+            ));
         }
         else{
             Redirect::to('examen/express');
