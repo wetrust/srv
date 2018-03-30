@@ -127,7 +127,7 @@ $('#guardartipoexamen').on("click", function(){
                                         };
                                         contadorIMG = contadorIMG + 1
                                     });
-                                    window.open(serverURL + "pdf/img" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+                                    window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
                                 $("#emailFotos").on("click", function() {
 
