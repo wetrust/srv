@@ -33,7 +33,7 @@ $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 // -------------------------------------------------------------------
 
 // add a page
-$pdf->AddPage();
+$pdf->AddPage('P', 'LETTER');
 
 // set JPEG quality
 $pdf->setJPEGQuality(75);
