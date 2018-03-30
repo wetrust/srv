@@ -43,7 +43,7 @@ $pdf->setJPEGQuality(75);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$pdf->SetFont('dejavusans', '', 12);
+$pdf->SetFont('dejavusans', '', 10);
 
 // Set some content to print
 $html = <<<EOD
