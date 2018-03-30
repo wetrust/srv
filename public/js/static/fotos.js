@@ -106,6 +106,7 @@ $('#guardartipoexamen').on("click", function(){
                                 });
                                 $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>");
                                 $("#fotosDicom").append("<button class='btn btn-primary' id='emailFotos'>Enviar fotos por E-Mail</button>");
+				$("#fotosDicom").append("<button class='btn btn-primary' id='pdfFotos'>Ver informe PDF</button>");
                                 $("#imprimirFotos").on("click", function() {
                                     var fotosArreglo = [];
                                     var contadorIMG = 0;
@@ -116,6 +117,17 @@ $('#guardartipoexamen').on("click", function(){
                                         contadorIMG = contadorIMG + 1
                                     });
                                     window.open(serverURL + "imagenes/view/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+                                });
+				$("#pdfFotos").on("click", function() {
+                                    var fotosArreglo = [];
+                                    var contadorIMG = 0;
+                                    $("input[name='fotosElegidas']").each(function() {
+                                        if (this.checked == true) {
+                                            fotosArreglo.push(contadorIMG);
+                                        };
+                                        contadorIMG = contadorIMG + 1
+                                    });
+                                    window.open(serverURL + "pdf/img" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
                                 $("#emailFotos").on("click", function() {
 
