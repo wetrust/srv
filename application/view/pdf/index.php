@@ -48,10 +48,7 @@ $pdf->SetFont('dejavusans', '', 10);
 // Set some content to print
 $html = <<<EOD
 <h1>Impresión de Imágenes Gineco-Obstétrica</h1>
-<i>This is the first example of TCPDF library.</i>
-<p>This text is printed using the <i>writeHTMLCell()</i> method but you can also use: <i>Multicell(), writeHTML(), Write(), Cell() and Text()</i>.</p>
-<p>Please check the source code documentation and other examples for further information.</p>
-<p style="color:#CC0000;">TO IMPROVE AND EXPAND TCPDF I NEED YOUR SUPPORT, PLEASE <a href="http://sourceforge.net/donate/index.php?group_id=128076">MAKE A DONATION!</a></p>
+<p><strong>Paciente Sra. (Srta.):</strong> FABIOLA REYES VENEGAS <strong>RUT:</strong> 17378168-7 <strong>Fecha de Exámen:</strong> 29 de 03 de 2018</p>
 EOD;
 
 // Print text using writeHTMLCell()
