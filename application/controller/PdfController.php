@@ -37,7 +37,7 @@ class PdfController extends Controller
      
             $StudyDate = (string)$StudyDate;
             
-            $StudyDate = substr($StudyDate, 6, 8) . "/" . substr($StudyDate, 4, 5) . "/" .substr($StudyDate, 0, 4);
+            $StudyDate = substr($StudyDate, 6, 8) . "/" . substr($StudyDate, 4, 2) . "/" .substr($StudyDate, 0, 4);
             
             
             
