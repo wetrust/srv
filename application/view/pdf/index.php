@@ -71,10 +71,8 @@ $pdf->setJPEGQuality(75);
 $pdf->SetFont('dejavusans', '', 8);
 
 // Set some content to print
-$html = <<<EOD
-<h1 style="text-align:center">Impresión de Imágenes Gineco-Obstétrica</h1>
-<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong> FABIOLA REYES VENEGAS</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> 17378168-7</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> 29 de 03 de 2018</div></div>
-EOD;
+$html = '<h1 style="text-align:center">Impresión de Imágenes Gineco-Obstétrica</h1>
+<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->img_id .' FABIOLA REYES VENEGAS</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> 17378168-7</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> 29 de 03 de 2018</div></div>';
 
 // Print text using writeHTMLCell()
 $pdf->writeHTMLCell(0, 10, '', '', $html, 0, 1, 0, true, '', true);
