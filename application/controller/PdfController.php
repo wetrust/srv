@@ -17,8 +17,14 @@ class PdfController extends Controller
     public function img($user_id = null, $img_id = null, $StudyDate = null)
     {
         if ($user_id != null && $img_id != null && $StudyDate != null){
+            
+            $nombre = NombreModel::getAll($user_id);
+            $nombre = explode("^", $nombre[0].PatientNam);
+            $nombre = $nombre[1] . " " . $nombre[0];
+                
             $this->View->renderWithoutHeaderAndFooter('pdf/index', array(
                 'user_id' => $user_id,
+                'user_name' => $nombre,
                 'img_id' => $img_id,
                 'StudyDate' => $StudyDate
             ));
