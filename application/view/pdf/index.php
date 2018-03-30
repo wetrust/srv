@@ -72,16 +72,16 @@ $pdf->SetFont('dejavusans', '', 8);
 
 // Set some content to print
 $html = '<h1 style="text-align:center">Impresión de Imágenes Gineco-Obstétrica</h1>
-<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->user_name .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> ' . $this->user_id .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> 29 de 03 de 2018</div></div>';
+<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->user_name .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> ' . $this->user_id .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong>' . $this->StudyDate .'</div></div>';
 
 // Print text using writeHTMLCell()
 $pdf->writeHTMLCell(0, 10, '', '', $html, 0, 1, 0, true, '', true);
 
 // Image example with resizing
-$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
-$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
-$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", PDF_MARGIN_LEFT, '150', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
-$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->images[0], '', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->images[1], '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->images[2], PDF_MARGIN_LEFT, '150', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->images[3], '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
