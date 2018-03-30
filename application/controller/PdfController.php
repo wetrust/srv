@@ -14,10 +14,10 @@ class PdfController extends Controller
      * Handles what happens when user moves to URL/index/index - or - as this is the default controller, also
      * when user moves to /index or enter your application at base level
      */
-    public function index()
+    public function index($user_id, $img_id, $StudyDate)
     {
        // header("Content-Type: application/pdf");
-        require Config::get('PATH_VIEW') . 'pdf/index.php';
-       //$this->View->render('pdf/index');
+       //require Config::get('PATH_VIEW') . 'pdf/index.php';
+       $this->View->renderWithoutHeaderAndFooter('pdf/index');
     }
 }
