@@ -49,7 +49,7 @@ $pdf->SetFont('dejavusans', '', 8);
 $html = <<<EOD
 <h1>Impresión de Imágenes Gineco-Obstétrica</h1>
 <hr>
-<p><span style="text-align:left"><strong>Paciente Sra. (Srta.):</strong> FABIOLA REYES VENEGAS</span><span style="text-align:center"><strong>RUT:</strong> 17378168-7</span><span style="text-align:right"><strong>Fecha de Exámen:</strong> 29 de 03 de 2018</span></p>
+<div><div style="text-align:left"><strong>Paciente Sra. (Srta.):</strong> FABIOLA REYES VENEGAS</div><div style="text-align:center"><strong>RUT:</strong> 17378168-7</div><div style="text-align:right"><strong>Fecha de Exámen:</strong> 29 de 03 de 2018</div></div>
 EOD;
 
 // Print text using writeHTMLCell()
