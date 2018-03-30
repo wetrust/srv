@@ -43,6 +43,20 @@ $pdf->setJPEGQuality(75);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+$pdf->SetFont('dejavusans', '', 12, '', true);
+
+// Set some content to print
+$html = <<<EOD
+<h1>Welcome to <a href="http://www.tcpdf.org" style="text-decoration:none;background-color:#CC0000;color:black;">&nbsp;<span style="color:black;">TC</span><span style="color:white;">PDF</span>&nbsp;</a>!</h1>
+<i>This is the first example of TCPDF library.</i>
+<p>This text is printed using the <i>writeHTMLCell()</i> method but you can also use: <i>Multicell(), writeHTML(), Write(), Cell() and Text()</i>.</p>
+<p>Please check the source code documentation and other examples for further information.</p>
+<p style="color:#CC0000;">TO IMPROVE AND EXPAND TCPDF I NEED YOUR SUPPORT, PLEASE <a href="http://sourceforge.net/donate/index.php?group_id=128076">MAKE A DONATION!</a></p>
+EOD;
+
+// Print text using writeHTMLCell()
+$pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
+
 // Image example with resizing
 $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 $pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
