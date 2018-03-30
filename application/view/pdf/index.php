@@ -44,7 +44,7 @@ $pdf->setJPEGQuality(75);
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // Image example with resizing
-$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", 0, 0, 200, 200, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
+$pdf->Image(Config::get('DICOM_DIRECTORY') . "/17378168-7/1.2.276.0.26.1.1.1.2.2018.122.54258.3440124_0001_000005_15223582490561.jpg", '', '', 190, 190, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
