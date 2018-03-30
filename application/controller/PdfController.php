@@ -21,12 +21,27 @@ class PdfController extends Controller
             $nombre = NombreModel::getAll($user_id);
             $nombre = explode("^", $nombre[0]->PatientNam);
             $nombre = $nombre[1] . " " . $nombre[0];
+            
+            $files = DicomModel::getAllImages($user_id, $StudyDate);
+            $files = $files->JPGFiles;
+            $filesJPG = [];
+            $contador = 0;
+
+            $img_id = json_decode($img_id, true);
+            foreach($files as $file){
+                if (in_array($contador, $img_id)) {
+                    array_push($filesJPG, $file);
+                }
+                $contador++;
+            }
+     
                 
             $this->View->renderWithoutHeaderAndFooter('pdf/index', array(
                 'user_id' => $user_id,
                 'user_name' => $nombre,
                 'img_id' => $img_id,
-                'StudyDate' => $StudyDate
+                'StudyDate' => $StudyDate,
+                'user_images' => $filesJPG
             ));
         }
         else{
