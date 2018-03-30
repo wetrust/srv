@@ -48,6 +48,7 @@ $pdf->SetFont('dejavusans', '', 8);
 // Set some content to print
 $html = <<<EOD
 <h1>Impresión de Imágenes Gineco-Obstétrica</h1>
+<hr>
 <p><strong>Paciente Sra. (Srta.):</strong> FABIOLA REYES VENEGAS <strong>RUT:</strong> 17378168-7 <strong>Fecha de Exámen:</strong> 29 de 03 de 2018</p>
 EOD;
 
