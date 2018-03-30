@@ -16,14 +16,11 @@ class PdfController extends Controller
      */
     public function img($user_id = null, $img_id = null, $StudyDate = null)
     {
-        if ($user_id && $img_id && $StudyDate){
+        if ($user_id != null && $img_id != null && $StudyDate != null){
             $this->View->renderWithoutHeaderAndFooter('pdf/index');
         }
         else{
             Redirect::to('examen/express');
         }
-       // header("Content-Type: application/pdf");
-       //require Config::get('PATH_VIEW') . 'pdf/index.php';
-       
     }
 }
