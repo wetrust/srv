@@ -1439,11 +1439,6 @@
                                         <button type="button" class="btn btn-outline-info" id="graficoBVM">Ver Gráficas</button>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <p><strong>Comentarios adicionales</strong> </p><textarea id="comentarios-eco-dos-generico" rows="3" class="form-control"></textarea>
-                                    </div>
-                                </div>
                                 <div class="form-group row d-none">
                                     <div class="col mb-2">
                                         <label for="tallaFetal" class="col-form-label">Talla Fetal Estimada (> 23 sem)
@@ -1925,11 +1920,6 @@
                         </div>
                         <div class="col mb-2">
                             <button type="button" class="btn btn-outline-info" id="graficopsmACM">Ver Gráficas</button>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <p><strong>Comentarios adicionales</strong> </p><textarea id="comentarios-eco-doppler-generico" rows="3" class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
