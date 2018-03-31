@@ -1944,7 +1944,6 @@ $( '#infDoppler1' ).on( 'click', function() {
 	    comentarios = $("#comentarios-doppler").val().replace(/\r\n|\r|\n/g,"<br />");
     }
 	
-    comentarios = comentarios + $('#comentarios-eco-doppler-generico').val().replace(/\r\n|\r|\n/g,"<br />");
     stringGraficos = stringGraficos.replace(":COMENTARIOS", comentarios);
         
     $('#graficosBody').html(stringGraficos);
@@ -2826,8 +2825,6 @@ $( '#infecoObsSegTrim1' ).on( 'click', function() {
     else{
 	     comentarios = $("#comentarios-eco-dos-inf-dos").val().replace(/\r\n|\r|\n/g,"<br />");
     }
-	
-    comentarios = comentarios + '<br />' +  $('#comentarios-eco-dos-generico').val().replace(/\r\n|\r|\n/g,"<br />");
     stringGraficos = stringGraficos.replace(":COMENTARIOS", comentarios);
         
     $('#graficosBody').html(stringGraficos);
@@ -3094,7 +3091,7 @@ $( '#infecoObsSegTrim2' ).on( 'click', function() {
     stringGraficos = stringGraficos.replace(":FEXAMEN", fexamen);
 
     if(typeof comentarios == 'undefined'){
-        comentarios = "Fum operacional: " + fur + "<br>Fecha probable de parto: " + fpp + "<br>" + $('#comentarios-eco-dos-generico').val().replace(/\r\n|\r|\n/g,"<br />");
+        comentarios = "Fum operacional: " + fur + "<br>Fecha probable de parto: " + fpp + "<br>";
     }
     else{
 	comentarios = $("#comentarios-eco-dos-inf-dos").val().replace(/\r\n|\r|\n/g,"<br />");
