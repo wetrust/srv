@@ -61,7 +61,7 @@ $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 $pdf->AddPage('P', 'LETTER');
 
 // set JPEG quality
-$pdf->setJPEGQuality(75);
+$pdf->setJPEGQuality(90);
 
 // Image method signature:
 // Image($file, $x='', $y='', $w=0, $h=0, $type='', $link='', $align='', $resize=false, $dpi=300, $palign='', $ismask=false, $imgmask=false, $border=0, $fitbox=false, $hidden=false, $fitonpage=false)
