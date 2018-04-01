@@ -175,7 +175,7 @@
                                         <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="text" class="form-control" id="paciente.correo">
+                                        <input type="email" class="form-control" id="paciente.correo">
                                     </div>
                                 </div>
 				<hr>
@@ -709,7 +709,7 @@
                                         <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="text" class="form-control" id="paciente.correo.copia">
+                                        <input type="email" class="form-control" id="paciente.correo.copia">
                                     </div>
 			            <div class="col-2">
                                         <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" name="paciente.correo.lista">elegir de la lista</label></div>
