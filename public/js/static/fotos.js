@@ -119,6 +119,10 @@ $('#guardartipoexamen').on("click", function(){
                                         alert("Debe seleccionar al menos una imágen");
                                         return true;
                                     }
+				    if (contadorIMG == 3 | contadorIMG == 5){
+                                        alert("Solo múltiplos de 2");
+                                        return true;
+                                    }
                                     window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
                                 });
                                 $("#emailFotos").on("click", function() {
