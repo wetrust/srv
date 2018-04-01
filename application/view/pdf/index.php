@@ -79,7 +79,7 @@ $pdf->writeHTMLCell(0, 10, '', '', $html, 0, 1, 0, true, '', true);
 
 // Image example with resizing
 if (count($this->user_images) == 1){
-    $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0], '', '', 180, 180, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+    $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0], '', '', 180, 160, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 }
 else if (count($this->user_images) == 2){
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0], '', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
