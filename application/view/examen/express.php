@@ -704,6 +704,20 @@
 </nav>
         <div>
 <h4>Imágenes Disponibles</h4>
+		<div class="row mt-2 mb-2">
+                                    <div class="col-2">
+                                        <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control" id="paciente.correo.copia">
+                                    </div>
+			            <div class="col-2">
+                                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" name="paciente.correo.lista">elegir de la lista</label></div>
+                                    </div>
+                                    <div class="col-4">
+                                        <select id="paciente.correo.config" class="form-control"><option value="ejemplo@ejemplo.cl">ejemplo@ejemplo.cl</option></select>
+                                    </div>
+                                </div>
     <div id="fotosDicom" class="row">
     </div>
 </div></div>
