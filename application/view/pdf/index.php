@@ -78,11 +78,21 @@ $html = '<h1 style="text-align:center">Impresión de Imágenes Gineco-Obstétric
 $pdf->writeHTMLCell(0, 10, '', '', $html, 0, 1, 0, true, '', true);
 
 // Image example with resizing
+if (count($this->user_images) == 1){
+    $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0], '', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+}
+else if (count($this->user_images) == 2){
+$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0], '', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[1], '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+}
+else if (count($this->user_images) == 4){
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0], '', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[1], '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[2], PDF_MARGIN_LEFT, '150', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[3], '110', '', 86, 86, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
-
+}
+else if (count($this->user_images) == 6){
+}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // test fitbox with all alignment combinations
