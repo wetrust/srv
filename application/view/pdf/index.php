@@ -75,7 +75,7 @@ $html = '<h1 style="text-align:center">Impresión de Imágenes Gineco-Obstétric
 <div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->user_name .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> ' . $this->user_id .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> ' . $this->StudyDate .'</div></div>';
 
 // Print text using writeHTMLCell()
-$pdf->writeHTMLCell('', 10, '', 30, $html, 0, 1, 0, true, '', true);
+$pdf->writeHTMLCell('', 10, '', 35, $html, 0, 1, 0, true, '', true);
 
 // Image example with resizing
 if (count($this->user_images) == 1){
@@ -88,7 +88,7 @@ $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[1], '60', 170, 1
 else if (count($this->user_images) == 4){
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0], '', '', 90, 66, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[1], '110', '', 90, 66, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
-$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[2], PDF_MARGIN_LEFT, '130', 90, 66, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+$pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[2], PDF_MARGIN_LEFT, '135', 90, 66, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[3], '110', '', 90, 66, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
 }
 else if (count($this->user_images) == 6){
