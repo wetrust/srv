@@ -16,7 +16,9 @@ class ExamenController extends Controller
      */
     public function express()
     {
-        $this->View->render('examen/express');
+        $this->View->render('examen/express', array(
+            'dicom' => if (Session::get("user_account_type") != 7){ return false}else{ return true},
+        ));
     }
 
     public function seleccionar()

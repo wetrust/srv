@@ -228,8 +228,10 @@
                                     <th scope="col">Tipo Exm. Previo</th>
                                 </tr>
                             </thead>
+                            <?php if ($this->dicom) { ?>
                             <tbody id="table.body.pacientes">
                             </tbody>
+                            <?php } ?>
                         </table>
                     </div>
 			    </div>
