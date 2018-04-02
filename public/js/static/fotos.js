@@ -115,11 +115,13 @@ $("#paciente\\.correo\\.copia").on("focusout", function(){
 				$("#imprimirFotos").on("click", function() {
                                     var fotosArreglo = [];
                                     var contadorIMG = 0;
+                                    var iIMG = 0;
                                     $("input[name='fotosElegidas']").each(function() {
                                         if (this.checked == true) {
-                                            fotosArreglo.push(contadorIMG);
+                                            fotosArreglo.push(iIMG);
 					    contadorIMG = contadorIMG + 1
                                         }; 
+                                        iIMG = iIMG + 1
                                     });
 				    if (contadorIMG <1){
                                         alert("Debe seleccionar al menos una imágen");
