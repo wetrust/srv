@@ -71,11 +71,11 @@ $pdf->setJPEGQuality(90);
 $pdf->SetFont('dejavusans', '', 8);
 
 // Set some content to print
-$html = '<h1 style="text-align:center">Evaluación ecográfica del crecimiento fetal</h1>
-<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->user_name .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> ' . $this->user_id .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> ' . $this->StudyDate .'</div></div>';
+//$html = '<h1 style="text-align:center">Evaluación ecográfica del crecimiento fetal</h1>
+//<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->user_name .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> ' . $this->user_id .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> ' . $this->StudyDate .'</div></div>';
 
 // Print text using writeHTMLCell()
-$pdf->writeHTMLCell('', 10, '', 40, $html, 0, 1, 0, true, '', true);
+//$pdf->writeHTMLCell('', 10, '', 40, $html, 0, 1, 0, true, '', true);
 
 
 //Close and output PDF document
