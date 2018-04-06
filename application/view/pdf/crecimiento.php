@@ -16,11 +16,8 @@ class MYPDF extends TCPDF {
 
     // Page footer
     public function Footer() {
-        // Position at 15 mm from bottom
         $this->SetY(-15);
-        // Set font
         $this->SetFont('helvetica', 'I', 8);
-        // Page number
         $this->Cell(0, 10, 'Página '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
     }
 }
@@ -76,6 +73,12 @@ $pdf->SetFont('dejavusans', '', 8);
 
 // Print text using writeHTMLCell()
 //$pdf->writeHTMLCell('', 10, '', 40, $html, 0, 1, 0, true, '', true);
+
+$html = '<h1 style="text-align:center">Evaluación ecográfica del crecimiento fetal</h1>
+<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->user_name .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> ' . $this->user_id .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> ' . $this->StudyDate .'</div></div>';
+
+// Print text using writeHTMLCell()
+$pdf->writeHTMLCell('', 10, '', 40, $html, 0, 1, 0, true, '', true);
 
 
 //Close and output PDF document
