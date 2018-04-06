@@ -78,7 +78,7 @@ $html = '<h1 style="text-align:center">Evaluación ecográfica del crecimiento f
 <div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>oo</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> pp</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> uu</div></div>';
 
 // Print text using writeHTMLCell()
-$pdf->writeHTMLCell('', 10, '', 40, $html, 0, 1, 0, true, '', true);
+$pdf->writeHTMLCell('', '', '', 40, $html, 0, 1, 0, true, '', true);
 
 //Close and output PDF document
 $pdf->Output('example_009.pdf', 'I');
