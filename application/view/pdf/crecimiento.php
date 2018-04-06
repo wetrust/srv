@@ -78,7 +78,7 @@ $html = "<h1>Evaluación ecográfica del crecimiento fetal</h1>";
 $pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, 'C', true);
 
 $html = "<p><strong>Paciente Sra. (Srta.): </strong>:PACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Edad Materna: </strong> :EDADMATERNA años.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha de Exámen: </strong>:FEXAMEN</p>";
-$pdf->writeHTMLCell('', '', '10', '', $html, 0, 1, 0, true, '', true);
+$pdf->writeHTMLCell('', '', '', '10', $html, 0, 1, 0, true, '', true);
 
 $html = "<p><strong>ID Paciente: </strong>:IDPACIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Motivo de exámen: </strong> :MOTIVO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Patología Obstétrica: </strong>:PATOLOGIAOBSTETRICA</p>";
 $pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, '', true);
