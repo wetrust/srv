@@ -1203,7 +1203,7 @@ function crearInformeEcoSegTrim1(){
 
 	$.post(serverURL + "pdf/crecimiento", valores).done(function (data) {
 		event.preventDefault();
-		
+		var ventimp = window.open(" ","popimpr");
 		ventimp.document.write(data);
 		ventimp.document.close();
 		ventimp.show();
