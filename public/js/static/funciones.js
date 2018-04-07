@@ -1202,7 +1202,7 @@ function crearInformeEcoSegTrim1(){
 	}
 
 	$.post(serverURL + "pdf/crecimiento", valores).done(function (data) {
-		var url = URL.createObjectURL(result);
+		var url = URL.createObjectURL(data);
         var $a = $('<a />', {
           'href': url,
           'download': 'document.pdf',
