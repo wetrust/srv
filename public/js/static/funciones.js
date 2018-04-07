@@ -1202,12 +1202,11 @@ function crearInformeEcoSegTrim1(){
 	}
 
 	$.post(serverURL + "pdf/crecimiento", valores).done(function (data) {
-		var url = URL.createObjectURL(data);
-        var $a = $('<a />', {
-          'href': url,
-          'download': 'document.pdf',
-          'text': "click"
-        }).hide().appendTo("body")[0].click();
+		event.preventDefault();
+		
+		ventimp.document.write(data);
+		ventimp.document.close();
+		ventimp.show();
 	});
 }
 
