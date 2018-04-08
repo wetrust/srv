@@ -26,7 +26,12 @@
                         <input type="text" class="form-control my-3" id="buscar.paciente.apellido">
                     </div>
                     <div class="col-1 p-0">
-                        <button type="button" class="btn btn-primary" id="buscar.paciente.action">Buscar</button>
+                        <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <p>Ver últimos pacientes</p>
                     </div>
                 </div>
             </div>
