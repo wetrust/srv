@@ -1,6 +1,6 @@
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
-<div class="container" id="paciente">
+<div class="container pt-2" id="paciente">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
@@ -14,9 +14,9 @@
                 <h5 class="card-title text-primary">1.A - Buscar un Paciente</h5>
                 <div class="form-group row">
                     <div class="col-2">
-                        <label for="buscar.paciente.id" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
+                        <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro ( RUT )</strong></label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <input type="text" class="form-control my-3" id="buscar.paciente.id">
                     </div>
                     <div class="col-2">
@@ -24,6 +24,9 @@
                     </div>
                     <div class="col-4">
                         <input type="text" class="form-control my-3" id="buscar.paciente.apellido">
+                    </div>
+                    <div class="col-1 p-0">
+                        <button type="button" class="btn btn-primary" id="buscar.paciente.action">Buscar</button>
                     </div>
                 </div>
             </div>
@@ -34,7 +37,7 @@
 	<div class="col-md-12">
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title text-primary">1.B- O Identificar a la Paciente</h5>
+                <h5 class="card-title text-primary">1.B- O Ingresar Paciente</h5>
 			    <div class="form-group row">
                                 <div class="col-6">
                                     <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
