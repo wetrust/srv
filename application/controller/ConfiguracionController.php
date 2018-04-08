@@ -214,8 +214,14 @@ public function pr()
     {
         $this->View->renderJSON(ConfiguracionEmail::getAllEmails());
     }
+
     public function setemails()
     {
         $this->View->renderJSON(ConfiguracionEmail::setEmail());
+    }
+
+    public function delemail($email_id = null)
+    {
+        $this->View->renderJSON(ConfiguracionEmail::deleteEmail($email_id));
     }
 }

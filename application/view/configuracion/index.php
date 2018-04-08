@@ -683,7 +683,7 @@
                                     <div class="card formulario d-none" id="form.email">
                                           <div class="card-body">
                                                 <div class="form-group">
-                                                      <h5 id="titleInput">Nombre de región</h5>
+                                                      <h5 id="titleInput">Correo electrónico</h5>
                                                 </div>
                                                 <div class="form-group">
                                                       <input type="text" class="form-control" id="input.email">

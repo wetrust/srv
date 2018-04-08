@@ -683,31 +683,31 @@ $(document).ready(function(){
     });
 
     $("#cancelarEmail").on("click", function(){
-        $("#table\\.prevision").removeClass("d-none");
-        $("#form\\.prevision").addClass("d-none");
-        $("#input\\.prevision").val("");
-        $("#nuevaPrevision").removeClass("d-none");
-        $("#guardarPrevision").addClass("d-none");
-        $("#cancelarPrevision").addClass("d-none");
-        loadPrevision();
+        $("#table\\.email").removeClass("d-none");
+        $("#form\\.email").addClass("d-none");
+        $("#input\\.email").val("");
+        $("#nuevoEmail").removeClass("d-none");
+        $("#guardarEmail").addClass("d-none");
+        $("#cancelarEmail").addClass("d-none");
+        loadEmail();
     });
 
     $("#eliminarEmail").on("click", function(){
-        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
-        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+        $("#modal\\.generico\\.title").html("Eliminar Email");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el correo electrónico seleccionado?</h5>");
         var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
         $("#modal\\.generico\\.fotter").prepend(btnElement);
         $("#modal\\.generico\\.action").on("click", function(){
-            var tableChild =  $("#table\\.body\\.prevision").children();
-            var prevision_id = 0;
+            var tableChild =  $("#table\\.body\\.email").children();
+            var email_id = 0;
             $.each(tableChild, function(key,des){
                 if ($(des).hasClass("table-active") == true){
-                    prevision_id = $(des).children("th").data("id");
+                    email_id = $(des).children("th").data("id");
                 }
             });
 
-            $.get( appUrl + "configuracion/eliminarprevision/" + prevision_id, function( data ) {
-                loadPrevision();
+            $.get( appUrl + "configuracion/eliminarprevision/" + email_id, function( data ) {
+                loadEmail();
             });
 
             $("#modal\\.generico\\.action").remove();

@@ -99,17 +99,18 @@ class ConfiguracionEmail
      * @param int $note_id id of the note
      * @return bool feedback (was the note deleted properly ?)
      */
-    public static function deleteNote($note_id)
+    public static function deleteEmail($email_id)
     {
-        if (!$note_id) {
+
+        if (!$email_id) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "DELETE FROM notes WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "DELETE FROM config_email WHERE email_id = :email_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_id' => $note_id, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':email_id' => $email_id, ':user_id' => Session::get('user_id')));
 
         if ($query->rowCount() == 1) {
             return true;
