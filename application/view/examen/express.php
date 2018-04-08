@@ -31,10 +31,10 @@
                 </div>
                 <div class="form-group row mb-0">
                     <div class="col-12">
-                        <p class="mb-0">Ver últimos pacientes</p>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">No</label>
+                            <label class="form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
+                            <input type="checkbox" class="form-check-input ml-2" id="buscar.pacientes.last.view">
+                            <label class="form-check-label ml-4">No</label>
                         </div>
                     </div>
                 </div>
