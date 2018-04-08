@@ -177,6 +177,12 @@
                                     <div class="col-4">
                                         <input type="email" class="form-control" id="paciente.correo">
                                     </div>
+                                    <div class="col-2">
+                                        <label for="configuracion.correo" class="col-form-label">Elegir un correo</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <select id="configuracion.correo" class="form-control"></select>
+                                    </div>
                                 </div>
 				<hr>
 			    <div class="row mb-3">

@@ -23,6 +23,13 @@ $(document).ready(function() {
         });
     });
 
+    $.get( serverURL + "configuracion/getemails", function( data ) {
+        $("#configuracion\\.email").empty();
+        $.each(data, function (key, des) {
+            $("#configuracion\\.email").append('<option value="'+ des.email_id + '">'+ des.email_text  +'</option>');
+        });
+    });
+
     $.get( serverURL + "configuracion/profesional", function( data ) {
         $("#profesional\\.ecografista").empty();
         $.each(data, function (key, des) {
