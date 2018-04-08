@@ -205,6 +205,11 @@ public function pr()
         $this->View->renderJSON(NombreModel::getAll($rut));
     }
 
+    public function obtenerut()
+    {
+        $this->View->renderJSON(NombreModel::getPatient());
+    }
+
     public function obtenerexamenes($rut, $studydate)
     {
         $this->View->renderJSON(NombreModel::getAllStudies($rut, $studydate));

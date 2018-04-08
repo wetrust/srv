@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+    $("#buscar\\.pacientes\\.apellido").on("keyup", function(event){
+        let apellido = {
+            patient_lastname: $(this).val()
+        }
+
+        $.post(appUrl + "configuracion/obtenerut", apellido).done(function (data) {
+            $("#apellidos").empty();
+            $.each(data, function(i, item) {
+                $("#apellidos").append('<option value="'+ des.PatientNam + '"></option>');
+            });
+        });
+    });
+
     $("#buscar\\.pacientes\\.last\\.view").on("change", function(){
         let check = $(this).is(':checked');
 

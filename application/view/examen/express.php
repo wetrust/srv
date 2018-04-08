@@ -23,7 +23,9 @@
                         <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
                     </div>
                     <div class="col-4">
-                        <input type="text" class="form-control my-3" id="buscar.paciente.apellido">
+                        <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
+                        <datalist id="apellidos">
+                        </datalist>
                     </div>
                     <div class="col-1 p-0">
                         <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
