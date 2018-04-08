@@ -31,13 +31,31 @@
                 </div>
                 <div class="form-group row mb-0">
                     <div class="col-12">
-                        <div class="form-check">
+                        <div class="form-check ml-0">
                             <label class="form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
                             <input type="checkbox" class="form-check-input ml-2" id="buscar.pacientes.last.view">
-                            <label class="form-check-label ml-4">No</label>
+                            <label class="form-check-label ml-4" id="buscar.pacientes.last.view.text">No</label>
                         </div>
                     </div>
                 </div>
+                <div class="row d-none" id="buscar.pacientes.last.view.container">
+		            <div class="col-12">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Tipo Exm. Previo</th>
+                                </tr>
+                            </thead>
+                            <?php if ($this->dicom) { ?>
+                            <tbody id="table.body.pacientes">
+                            </tbody>
+                            <?php } ?>
+                        </table>
+                    </div>
+			    </div>
             </div>
         </div>
     </div>
@@ -243,29 +261,6 @@
 		    </div>
 		</div>
 	    </div>
-        <div class="row">
-		    <div class="col-md-12">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Ultimos Pacientes</h5>
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Tipo Exm. Previo</th>
-                                </tr>
-                            </thead>
-                            <?php if ($this->dicom) { ?>
-                            <tbody id="table.body.pacientes">
-                            </tbody>
-                            <?php } ?>
-                        </table>
-                    </div>
-			    </div>
-		    </div>
-		</div>
 </div>
 <div class="container" id="consulta" style="display:none;">
 	<div class="bienvenida mb-3 p-2">
@@ -2395,3 +2390,4 @@
 <script src="<?php echo Config::get('URL'); ?>js/static/graficos.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/main.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/fotos.js"></script>
+<script src="<?php echo Config::get('URL'); ?>js/find.js"></script>
