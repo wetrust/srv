@@ -706,7 +706,7 @@ $(document).ready(function(){
                 }
             });
 
-            $.get( appUrl + "configuracion/eliminarprevision/" + email_id, function( data ) {
+            $.get( appUrl + "configuracion/delemail/" + email_id, function( data ) {
                 loadEmail();
             });
 
