@@ -10,6 +10,7 @@ $(document).ready(function(){
     loadPatologiaObstetrica();
     loadMotivoExamen();
     loadPrevision();
+    loadEmail();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -798,6 +799,21 @@ function loadPrevision(){
             $("#eliminarPrevision").removeClass("d-none");
         });
         $("#table\\.body\\.prevision tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadEmail(){
+    $.get( appUrl + "configuracion/getemails", function( data ) {
+        $("#table\\.body\\.email").empty();
+        $("#eliminarEmail").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.email_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.email_text +"</td></tr>";
+            $("#table\\.body\\.email").append(strTable);
+            $("#eliminarEmail").removeClass("d-none");
+        });
+        $("#table\\.body\\.email tr").on('click',function(){
             activateTr(this);
         });
     });

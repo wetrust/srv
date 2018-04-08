@@ -209,4 +209,13 @@ public function pr()
     {
         $this->View->renderJSON(NombreModel::getAllStudies($rut, $studydate));
     }
+
+    public function getemails()
+    {
+        $this->View->renderJSON(ConfiguracionEmail::getAllEmails());
+    }
+    public function setemails()
+    {
+        $this->View->renderJSON(ConfiguracionEmail::setEmail());
+    }
 }
