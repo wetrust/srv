@@ -651,6 +651,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoEmail").on("click", function(){
+        $("#table\\.email").addClass("d-none");
+        $("#form\\.email").removeClass("d-none");
+        $("#input\\.email").val("");
+        $("#nuevoEmail").addClass("d-none");
+        $("#guardarEmail").removeClass("d-none");
+        $("#cancelarEmail").removeClass("d-none");
+        $("#eliminarEmail").addClass("d-none");
+    });
+    
+    $("#editarEmail").on("click", function(){
+
+    });
+
+    $("#guardarEmail").on("click", function(){
+        var dataEmail = {
+            email_text: $("#input\\.email").val()
+        }
+
+        $.post(appUrl + "configuracion/setemails", dataEmail).done(function (data) {
+            $("#table\\.email").removeClass("d-none");
+            $("#form\\.email").addClass("d-none");
+            $("#input\\.email").val("");
+            $("#nuevoEmail").removeClass("d-none");
+            $("#guardarEmail").addClass("d-none");
+            $("#cancelarEmail").addClass("d-none");
+            loadEmail();
+        });
+    });
+
+    $("#cancelarEmail").on("click", function(){
+        $("#table\\.prevision").removeClass("d-none");
+        $("#form\\.prevision").addClass("d-none");
+        $("#input\\.prevision").val("");
+        $("#nuevaPrevision").removeClass("d-none");
+        $("#guardarPrevision").addClass("d-none");
+        $("#cancelarPrevision").addClass("d-none");
+        loadPrevision();
+    });
+
+    $("#eliminarEmail").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.prevision").children();
+            var prevision_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    prevision_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarprevision/" + prevision_id, function( data ) {
+                loadPrevision();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
