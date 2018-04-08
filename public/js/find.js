@@ -12,8 +12,8 @@ $(document).ready(function(){
         }
     });
 
-    $("#id-paciente").on("change", function() {
-        RUTPACIENTE = $("#id-paciente").val();
+    $("#buscar\\.paciente\\.id, #id-paciente").on("change", function() {
+        RUTPACIENTE = $(this).val();
         FechaExm = $("#fee-dos").val();
         $("#buscar\\.pacientes\\.last\\.view").prop('checked', false).trigger("change");
 
