@@ -1,29 +1,40 @@
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
 <div class="container" id="paciente">
-	<div class="bienvenida mb-3 p-2">
-                   	<div class="media">
-                       		<img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        	<div class="media-body mt-4">
-                            		<h4 class="mt-0 mb-1"><em>CrecimientoFetal.cl</em></h4>
-                            		<p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
-                        	</div>
-                        	<div class="media-body mt-4">
-                            		<p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        	</div>
-                    	</div>
-	</div>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
     <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
   </ol>
 </nav>
-            <div class="row">
-		<div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">1.- Identificar a la Paciente</h5>
+<div class="row">
+	<div class="col-md-12">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-primary">1.A - Buscar un Paciente</h5>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="buscar.paciente.id" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control my-3" id="buscar.paciente.id">
+                    </div>
+                    <div class="col-2">
+                        <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control my-3" id="buscar.paciente.apellido">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-primary">1.B- O Identificar a la Paciente</h5>
 			    <div class="form-group row">
                                 <div class="col-6">
                                     <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
