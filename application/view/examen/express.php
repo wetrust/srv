@@ -29,9 +29,13 @@
                         <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row mb-0">
                     <div class="col-12">
-                        <p>Ver últimos pacientes</p>
+                        <p class="mb-0">Ver últimos pacientes</p>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">No</label>
+                        </div>
                     </div>
                 </div>
             </div>
