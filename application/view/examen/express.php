@@ -31,8 +31,8 @@
                 </div>
                 <div class="form-group row mb-0">
                     <div class="col-12">
-                        <div class="form-check">
-                            <label class="ml-0 form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
+                        <div class="form-check ml-0">
+                            <label class="form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
                             <input type="checkbox" class="form-check-input ml-2" id="buscar.pacientes.last.view">
                             <label class="form-check-label ml-4" id="buscar.pacientes.last.view.text">No</label>
                         </div>
