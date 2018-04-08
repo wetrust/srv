@@ -648,6 +648,7 @@
                         </table>
                      </div>
                   </div>
+               </div>
                   <div class="tab-pane" id="email" role="tabpanel">
                         <h2 class="my-4">Configurar Emails predeterminados</h2>
                         <div class="card">
@@ -692,7 +693,6 @@
                               </div>
                         </div>
                   </div>
-               </div>
             </div>
          </div>
       </div>
