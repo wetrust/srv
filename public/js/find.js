@@ -15,7 +15,7 @@ $(document).ready(function(){
     $("#id-paciente").on("change", function() {
         RUTPACIENTE = $("#id-paciente").val();
         FechaExm = $("#fee-dos").val();
-        $("#buscar\\.pacientes\\.last\\.view").prop('checked', false);
+        $("#buscar\\.pacientes\\.last\\.view").prop('checked', false).trigger("change");
 
         $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
 	    if (data !== null){
