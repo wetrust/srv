@@ -24,8 +24,10 @@ $(document).ready(function(){
         if (apellido.patient_lastname.length > 0){
             $.post(serverURL + "configuracion/obtenerut", apellido).done(function (data) {
                 $("#buscar\\.paciente\\.id").val("");
-                if (data.length > 0 ){ 
-                    $("#buscar\\.paciente\\.id").val(data.PatientID).trigger("change");
+                if (data !== null){
+                    if (Object.keys(data).length > 0 ){ 
+                        $("#buscar\\.paciente\\.id").val(data.PatientID).trigger("change");
+                    }
                 }
             });
         }
