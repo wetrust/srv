@@ -105,7 +105,7 @@ class NombreModel
             exit;
         }
 
-        $sql = "SELECT * FROM DICOMPatients where PatientNam LIKE ? LIMIT 1";
+        $sql = "SELECT * FROM DICOMPatients where PatientNam LIKE ? LIMIT 5";
         $query = $database->prepare($sql);
         $query->execute(array($lastname. '%'));
         $query->execute();
