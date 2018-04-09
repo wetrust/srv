@@ -5,7 +5,7 @@ $(document).ready(function(){
             patient_lastname: $(this).val()
         }
 
-        $.post(appUrl + "configuracion/obtenerut", apellido).done(function (data) {
+        $.post(serverURL + "configuracion/obtenerut", apellido).done(function (data) {
             $("#apellidos").empty();
             $.each(data, function(i, item) {
                 $("#apellidos").append('<option value="'+ des.PatientNam + '"></option>');
