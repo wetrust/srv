@@ -7,9 +7,12 @@ $(document).ready(function(){
 
         $.post(serverURL + "configuracion/obtenerut", apellido).done(function (data) {
             $("#apellidos").empty();
-            $.each(data, function(i, item) {
-                $("#apellidos").append('<option value="'+ item.PatientNam + '"></option>');
-            });
+            if (data.length > 0 ){
+                $.each(data, function(i, item) {
+                    let nombre = item.PatientNam.split("^");
+                    $("#apellidos").append('<option value="'+ nombre[0] + '"></option>');
+                });
+            }
         });
     });
 
