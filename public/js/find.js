@@ -5,7 +5,7 @@ $(document).ready(function(){
             patient_lastname: $(this).val()
         }
 
-        $.post(serverURL + "configuracion/obtenerut", apellido).done(function (data) {
+        $.post(serverURL + "configuracion/obtenerapellidos", apellido).done(function (data) {
             $("#apellidos").empty();
             if (data.length > 0 ){
                 $.each(data, function(i, item) {
@@ -14,6 +14,25 @@ $(document).ready(function(){
                 });
             }
         });
+    });
+
+    $("#buscar\\.paciente\\.action").on("click", function(){
+        let apellido = {
+            patient_lastname: $("#buscar\\.paciente\\.apellido").val()
+        }
+
+        if (apellido.patient_lastname.length > 0){
+            $.post(serverURL + "configuracion/obtenerut", apellido).done(function (data) {
+                $("#buscar\\.paciente\\.id").val("");
+                if (data.length > 0 ){ 
+                    $("#buscar\\.paciente\\.id").val(data[0].PatientID).trigger("change");
+                }
+            });
+        }
+        else{
+            alert("Escriba un apellido")
+        }
+        
     });
 
     $("#buscar\\.pacientes\\.last\\.view").on("change", function(){
