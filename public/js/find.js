@@ -27,6 +27,7 @@ $(document).ready(function(){
                 if (data !== null){
                     if (Object.keys(data).length > 0 ){ 
                         $("#buscar\\.paciente\\.id").val(data.PatientID).trigger("change");
+                        $("#id-paciente").val(data.PatientID);
                     }
                 }
             });
