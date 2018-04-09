@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $("#buscar\\.pacientes\\.apellido").on("keyup", function(event){
+    $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
         let apellido = {
             patient_lastname: $(this).val()
         }
