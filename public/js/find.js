@@ -25,7 +25,7 @@ $(document).ready(function(){
             $.post(serverURL + "configuracion/obtenerut", apellido).done(function (data) {
                 $("#buscar\\.paciente\\.id").val("");
                 if (data.length > 0 ){ 
-                    $("#buscar\\.paciente\\.id").val(data[0].PatientID).trigger("change");
+                    $("#buscar\\.paciente\\.id").val(data.PatientID).trigger("change");
                 }
             });
         }
