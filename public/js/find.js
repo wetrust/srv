@@ -9,7 +9,12 @@ $(document).ready(function(){
             $("#apellidos").empty();
             if (data.length > 0 ){
                 $.each(data, function(i, item) {
-                    let nombre = item.PatientNam.split("^");
+                    if (item.PatientNam !== null){
+                        var nombre = item.PatientNam.split("^");
+                    }
+                    else{
+                        var nombre = ["NN", "NN"];
+                    }
                     $("#apellidos").append('<option value="'+ nombre[0] + '"></option>');
                 });
             }
@@ -73,7 +78,12 @@ $(document).ready(function(){
         
         $.get(serverURL + "configuracion/obtenernombre/" + RUTPACIENTE).done(function(data) {
             if (data.length > 0 ){
-                var nombre = data[0].PatientNam.split("^");
+                if (data[0].PatientNam !== null){
+                    var nombre = data[0].PatientNam.split("^");
+                }
+                else{
+                    var nombre = ["NN", "NN"];
+                }
                 $("#nombre-paciente").val(nombre[1]);
                 $("#apellido-paciente").val(nombre[0]);
 

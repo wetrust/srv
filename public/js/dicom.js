@@ -29,13 +29,13 @@ function loadTablePatients(){
         $.each(data, function (key, des) {
             var date =  epochToDate(des.AccessTime);
             date =  dateToStr(date);
-            if (des.user_exmtxt !== null){
+            if (des.PatientNam !== null){
                 var nombre = des.PatientNam.split("^");
             }
             else{
                 var nombre = ["NN", "NN"];
             }
-            
+
             if (des.user_exmtxt !== null){
                 var ecmtxt = des.user_exmtxt;
             }
