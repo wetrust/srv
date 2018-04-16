@@ -40,6 +40,9 @@
                         <a class="nav-link" data-toggle="tab" href="#prevision">Prevision</a>
                      </li>
                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#email">Email predeterminados</a>
+                     </li>
+                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#membrete">Membrete</a>
                      </li>
                      <li class="nav-item">
@@ -646,6 +649,50 @@
                      </div>
                   </div>
                </div>
+                  <div class="tab-pane" id="email" role="tabpanel">
+                        <h2 class="my-4">Configurar Emails predeterminados</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoEmail"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo Email</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarEmail"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar Email</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarEmail"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarEmail"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarEmail"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered" id="table.email">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>N°</th>
+                                                      <th>Correo</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="table.body.email">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none" id="form.email">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Correo electrónico</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="input.email">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
             </div>
          </div>
       </div>

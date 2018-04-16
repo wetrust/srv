@@ -1,29 +1,72 @@
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
-<div class="container" id="paciente">
-	<div class="bienvenida mb-3 p-2">
-                   	<div class="media">
-                       		<img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        	<div class="media-body mt-4">
-                            		<h4 class="mt-0 mb-1"><em>CrecimientoFetal.cl</em></h4>
-                            		<p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
-                        	</div>
-                        	<div class="media-body mt-4">
-                            		<p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        	</div>
-                    	</div>
-	</div>
+<div class="container pt-2" id="paciente">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
     <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
   </ol>
 </nav>
-            <div class="row">
-		<div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">1.- Identificar a la Paciente</h5>
+<div class="row">
+	<div class="col-md-12">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-primary">1.A - Buscar un Paciente</h5>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro ( RUT )</strong></label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" class="form-control my-3" id="buscar.paciente.id">
+                    </div>
+                    <div class="col-2">
+                        <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
+                        <datalist id="apellidos">
+                        </datalist>
+                    </div>
+                    <div class="col-1 p-0">
+                        <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-12">
+                        <div class="form-check pl-0">
+                            <label class="form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
+                            <input type="checkbox" class="form-check-input ml-2" id="buscar.pacientes.last.view">
+                            <label class="form-check-label ml-4" id="buscar.pacientes.last.view.text">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-none mt-3" id="buscar.pacientes.last.view.container">
+		            <div class="col-12">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Tipo Exm. Previo</th>
+                                </tr>
+                            </thead>
+                            <?php if ($this->dicom) { ?>
+                            <tbody id="table.body.pacientes">
+                            </tbody>
+                            <?php } ?>
+                        </table>
+                    </div>
+			    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-primary">1.B- O Ingresar Paciente</h5>
 			    <div class="form-group row">
                                 <div class="col-6">
                                     <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
@@ -177,6 +220,12 @@
                                     <div class="col-4">
                                         <input type="email" class="form-control" id="paciente.correo">
                                     </div>
+                                    <div class="col-2">
+                                        <label for="configuracion.email" class="col-form-label">Elegir un correo</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <select id="configuracion.email" class="form-control"></select>
+                                    </div>
                                 </div>
 				<hr>
 			    <div class="row mb-3">
@@ -214,29 +263,6 @@
 		    </div>
 		</div>
 	    </div>
-        <div class="row">
-		    <div class="col-md-12">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Ultimos Pacientes</h5>
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Tipo Exm. Previo</th>
-                                </tr>
-                            </thead>
-                            <?php if ($this->dicom) { ?>
-                            <tbody id="table.body.pacientes">
-                            </tbody>
-                            <?php } ?>
-                        </table>
-                    </div>
-			    </div>
-		    </div>
-		</div>
 </div>
 <div class="container" id="consulta" style="display:none;">
 	<div class="bienvenida mb-3 p-2">
@@ -2366,3 +2392,4 @@
 <script src="<?php echo Config::get('URL'); ?>js/static/graficos.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/main.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/static/fotos.js"></script>
+<script src="<?php echo Config::get('URL'); ?>js/find.js"></script>

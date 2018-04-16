@@ -10,6 +10,7 @@ $(document).ready(function(){
     loadPatologiaObstetrica();
     loadMotivoExamen();
     loadPrevision();
+    loadEmail();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -650,6 +651,70 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoEmail").on("click", function(){
+        $("#table\\.email").addClass("d-none");
+        $("#form\\.email").removeClass("d-none");
+        $("#input\\.email").val("");
+        $("#nuevoEmail").addClass("d-none");
+        $("#guardarEmail").removeClass("d-none");
+        $("#cancelarEmail").removeClass("d-none");
+        $("#eliminarEmail").addClass("d-none");
+    });
+    
+    $("#editarEmail").on("click", function(){
+
+    });
+
+    $("#guardarEmail").on("click", function(){
+        var dataEmail = {
+            email_text: $("#input\\.email").val()
+        }
+
+        $.post(appUrl + "configuracion/setemails", dataEmail).done(function (data) {
+            $("#table\\.email").removeClass("d-none");
+            $("#form\\.email").addClass("d-none");
+            $("#input\\.email").val("");
+            $("#nuevoEmail").removeClass("d-none");
+            $("#guardarEmail").addClass("d-none");
+            $("#cancelarEmail").addClass("d-none");
+            loadEmail();
+        });
+    });
+
+    $("#cancelarEmail").on("click", function(){
+        $("#table\\.email").removeClass("d-none");
+        $("#form\\.email").addClass("d-none");
+        $("#input\\.email").val("");
+        $("#nuevoEmail").removeClass("d-none");
+        $("#guardarEmail").addClass("d-none");
+        $("#cancelarEmail").addClass("d-none");
+        loadEmail();
+    });
+
+    $("#eliminarEmail").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Email");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el correo electrónico seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.email").children();
+            var email_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    email_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/delemail/" + email_id, function( data ) {
+                loadEmail();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -798,6 +863,21 @@ function loadPrevision(){
             $("#eliminarPrevision").removeClass("d-none");
         });
         $("#table\\.body\\.prevision tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadEmail(){
+    $.get( appUrl + "configuracion/getemails", function( data ) {
+        $("#table\\.body\\.email").empty();
+        $("#eliminarEmail").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.email_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.email_text +"</td></tr>";
+            $("#table\\.body\\.email").append(strTable);
+            $("#eliminarEmail").removeClass("d-none");
+        });
+        $("#table\\.body\\.email tr").on('click',function(){
             activateTr(this);
         });
     });

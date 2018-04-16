@@ -205,8 +205,33 @@ public function pr()
         $this->View->renderJSON(NombreModel::getAll($rut));
     }
 
+    public function obtenerapellidos()
+    {
+        $this->View->renderJSON(NombreModel::getPatient());
+    }
+
+    public function obtenerut()
+    {
+        $this->View->renderJSON(NombreModel::getRut());
+    }
+
     public function obtenerexamenes($rut, $studydate)
     {
         $this->View->renderJSON(NombreModel::getAllStudies($rut, $studydate));
+    }
+
+    public function getemails()
+    {
+        $this->View->renderJSON(ConfiguracionEmail::getAllEmails());
+    }
+
+    public function setemails()
+    {
+        $this->View->renderJSON(ConfiguracionEmail::setEmail());
+    }
+
+    public function delemail($email_id = null)
+    {
+        $this->View->renderJSON(ConfiguracionEmail::deleteEmail($email_id));
     }
 }

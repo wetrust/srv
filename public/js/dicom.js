@@ -18,8 +18,7 @@ function activatePaciente(element){
 		$( val ).removeClass( 'table-active');
 	});
     $(element).addClass('table-active');
-    $("#id-paciente").val($(element).children("th").data("id"));
-    $("#id-paciente").trigger("change");
+    $("#id-paciente").val($(element).children("th").data("id")).trigger("change");
     $("#nombre-paciente").val("cargando...");
     $("#apellido-paciente").val("cargando...");
 }
