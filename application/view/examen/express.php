@@ -740,7 +740,7 @@
                                         <input type="email" class="form-control" id="paciente.correo.copia">
                                     </div>
 			            <div class="col-2">
-                                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" name="paciente.correo.lista">elegir de la lista</label></div>
+                                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" id="paciente.correo.lista">elegir de la lista</label></div>
                                     </div>
                                     <div class="col-4">
                                         <select id="paciente.correo.config" class="form-control"><option value="ejemplo@ejemplo.cl">ejemplo@ejemplo.cl</option></select>
