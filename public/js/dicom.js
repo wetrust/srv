@@ -1,5 +1,6 @@
 $(document).ready(function(){
     loadTablePatients();
+    loadEmails();
 });
 
 function epochToDate(epoch){
@@ -48,6 +49,17 @@ function loadTablePatients(){
         });
         $("#table\\.body\\.pacientes tr").on('click',function(){
             activatePaciente(this);
+        });
+    });
+}
+
+function loadEmails(){
+    $.get( serverURL + "configuracion/getemails", function( data ) {
+        $("#configuracion\\.email").empty();
+        $.each(data, function (key, des) {
+            let strSelect = "<select value" + des.email_text +">" + des.email_text + "</select>";
+            $("#configuracion\\.email").append(strSelect);
+            $("#paciente\\.correo\\.config").append(strSelect);
         });
     });
 }

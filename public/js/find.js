@@ -91,6 +91,7 @@ $(document).ready(function(){
                 var day = ("0" + dateTime.getDate()).slice(-2);
 	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
                 $("#fecha\\.examen\\.previo").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
+                $("#fee-dos").val((day)+"/"+(month)+"/"+dateTime.getFullYear()).trigger("change");
 
                 FechaExm = FechaExm.split("/");
 

@@ -1,44 +1,44 @@
 <div class="container">
 	<div class="bienvenida mb-3 p-2">
-                   	<div class="media">
-                       		<img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        	<div class="media-body mt-4">
-                            		<h4 class="mt-0 mb-1"><em>CrecimientoFetal.cl</em></h4>
-                            		<p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
-                        	</div>
-                        	<div class="media-body mt-4">
-                            		<p class="float-right" name="fechaHora" style="color: #f0df90;">Viernes, 29 de Diciembre 2017</p>
-                        	</div>
-                    	</div>
+    <div class="media">
+      <img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+      <div class="media-body mt-4">
+        <h4 class="mt-0 mb-1"><em>CrecimientoFetal.cl</em></h4>
+        <p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
+      </div>
+      <div class="media-body mt-4">
+        <p class="float-right" name="fechaHora" style="color: #f0df90;">Viernes, 29 de Diciembre 2017</p>
+      </div>
+    </div>
 	</div>
 	<div class="row">
-                <div class="col">
-                    <p class="mt-0 mb-2 text-center"><small><em>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos,  Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile</em></small></p>
-                </div>
+    <div class="col">
+      <p class="mt-0 mb-2 text-center"><small><em>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos,  Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile</em></small></p>
+    </div>
 	</div>
 	<div class="row">
                 <div class="col-4 hidden-md-down">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Acciones</h4>
-<ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link" href="<?php echo Config::get('URL'); ?>examen/express"><i class="fa fa-user-md" aria-hidden="true"></i> <strong>Iniciar exámen ecográfico EXPRESS</strong> <span class="badge badge-secondary">Libre</span></a>
-  </li>
-<?php if (Session::userIsLoggedIn()) { ?>
-  <li class="nav-item">
-    <a class="nav-link" href="<?php echo Config::get('URL'); ?>dicom/view"> <strong>Ver imágenes registradas en base</strong></a>
-  </li>
-<?php } ?>
-<?php if (Session::userIsLoggedIn() == false) { ?>
-  <li class="nav-item">
-    <a class="nav-link" href="<?php echo Config::get('URL'); ?>register/index"><i class="fa fa-user-plus" aria-hidden="true"></i>  <strong>Solicitud de ingreso al sistema</strong> <span class="badge badge-secondary">Restringido</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<?php echo Config::get('URL'); ?>login/index"><i class="fa fa-sign-in" aria-hidden="true"></i>  <strong>Ingresar a plataforma de datos</strong> <span class="badge badge-secondary">Restringido</span></a>
-  </li>
-<?php } ?>
-</ul>
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link" href="<?php echo Config::get('URL'); ?>examen/express"><i class="fa fa-user-md" aria-hidden="true"></i> <strong>Iniciar exámen ecográfico EXPRESS</strong> <span class="badge badge-secondary">Libre</span></a>
+                              </li>
+                              <?php if (Session::userIsLoggedIn()) { ?>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="<?php echo Config::get('URL'); ?>dicom/view"> <strong>Ver imágenes registradas en base</strong></a>
+                                </li>
+                            <?php } ?>
+                            <?php if (Session::userIsLoggedIn() == false) { ?>
+                              <li class="nav-item">
+                                <a class="nav-link" href="<?php echo Config::get('URL'); ?>register/index"><i class="fa fa-user-plus" aria-hidden="true"></i>  <strong>Solicitud de ingreso al sistema</strong> <span class="badge badge-secondary">Restringido</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="<?php echo Config::get('URL'); ?>login/index"><i class="fa fa-sign-in" aria-hidden="true"></i>  <strong>Ingresar a plataforma de datos</strong> <span class="badge badge-secondary">Restringido</span></a>
+                              </li>
+                            <?php } ?>
+                            </ul>
                         </div>
                     </div>
                 </div>
