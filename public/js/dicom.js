@@ -58,7 +58,7 @@ function loadEmails(){
         $("#configuracion\\.email").empty();
         $("#paciente\\.correo\\.config").empty();
         $.each(data, function (key, des) {
-            let strSelect = "<select value" + des.email_text +">" + des.email_text + "</select>";
+            let strSelect = "<select value='" + des.email_text +"'>" + des.email_text + "</select>";
             $("#configuracion\\.email").append(strSelect);
             $("#paciente\\.correo\\.config").append(strSelect);
         });
