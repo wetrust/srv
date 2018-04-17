@@ -15,7 +15,7 @@ $(document).ready(function(){
                     else{
                         var nombre = ["NN", "NN"];
                     }
-                    $("#apellidos").append('<option value="'+ nombre[0] + '"></option>');
+                    $("#apellidos").append('<option value="'+ nombre[0] + ' ' + nombre[1] + '"></option>');
                 });
             }
         });
