@@ -142,7 +142,7 @@ class NombreModel
             $lastname = $lastname[0] . $lastname[1] . "^" .$lastname[2];
         }
         else if (count($lastname) == 4){
-            $lastname = $lastname[0] . $lastname[1] . "^" .$lastname[2] $lastname[3];
+            $lastname = $lastname[0] . $lastname[1] . "^" .$lastname[2] .$lastname[3];
         }
 
         $sql = "SELECT * FROM DICOMPatients where PatientNam LIKE ? LIMIT 1";
