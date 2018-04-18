@@ -734,7 +734,7 @@
                 <div class="col-8">
                     <div id="fotosDicom" class="row"></div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-xl-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Enviar imágenes por correo</h5>
