@@ -751,6 +751,8 @@
                                 </select>
                             </div>
                             <h5 class="card-title">Otras Opciones</h5>
+                            <button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>
+                            <button class='btn btn-primary' id='emailFotos'>Enviar fotos por E-Mail</button>
                         </div>
                     </div>
                 </div>

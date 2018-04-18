@@ -76,6 +76,67 @@ $(document).ready(function(){
             }
         });
         
+        $("#imprimirFotos").on("click", function() {
+            var fotosArreglo = [];
+            var contadorIMG = 0;
+            var iIMG = 0;
+            $("input[name='fotosElegidas']").each(function() {
+                if (this.checked == true) {
+                    fotosArreglo.push(iIMG);
+                    contadorIMG = contadorIMG + 1
+                }; 
+                iIMG = iIMG + 1
+            });
+
+            if (contadorIMG <1){
+                alert("Debe seleccionar al menos una imágen");
+                return true;
+            }
+            if (contadorIMG == 3 | contadorIMG == 5){
+                alert("Solo múltiplos de 2");
+                return true;
+            }
+            window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+        });
+
+        $("#emailFotos").on("click", function() {
+
+            if ($("#paciente\\.correo").val() == "" && $("#paciente\\.correo\\.lista").is(':checked') == false){
+                alert("Debe ingresar un correo para el paciente en la página principal");
+                return true;
+            }
+
+            var fotosArreglo = [];
+            var contadorIMG = 0;
+            $("input[name='fotosElegidas']").each(function() {
+                if (this.checked == true) {
+                    fotosArreglo.push(contadorIMG);
+                };
+                contadorIMG = contadorIMG + 1
+            });
+
+            var correo = ""
+
+            if ($("#paciente\\.correo\\.lista").is(':checked') == true){
+                correo = $( '#paciente\\.correo\\.config option:selected').text();
+            }
+            else{
+                correo = $("#paciente\\.correo").val()
+            }
+
+            var valores = {
+                user_id: $("#id-paciente").val(),
+                img_id: "[" + fotosArreglo.toString() + "]",
+                studyDate: StudyDate,
+                user_email: correo
+            }
+            alert("Enviando correo, espere un momento");
+            $.post(serverURL + "imagenes/send", valores).done(function (data) {
+                alert("Correo Enviado");
+            });
+        });
+
+
         $.get(serverURL + "configuracion/obtenernombre/" + RUTPACIENTE).done(function(data) {
             if (data.length > 0 ){
                 if (data[0].PatientNam !== null){
@@ -104,67 +165,6 @@ $(document).ready(function(){
                                 $.each(data.JPGFiles, function(i, item) {
                                     $("#fotosDicom").append("<div class='col-3'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosEliminar'>Eliminar</label></div></div>");
                                 });
-                                $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>");
-                                $("#fotosDicom").append("<button class='btn btn-primary' id='emailFotos'>Enviar fotos por E-Mail</button>");
-				$("#imprimirFotos").on("click", function() {
-                                    var fotosArreglo = [];
-                                    var contadorIMG = 0;
-                                    var iIMG = 0;
-                                    $("input[name='fotosElegidas']").each(function() {
-                                        if (this.checked == true) {
-                                            fotosArreglo.push(iIMG);
-					    contadorIMG = contadorIMG + 1
-                                        }; 
-                                        iIMG = iIMG + 1
-                                    });
-				    if (contadorIMG <1){
-                                        alert("Debe seleccionar al menos una imágen");
-                                        return true;
-                                    }
-				    if (contadorIMG == 3 | contadorIMG == 5){
-                                        alert("Solo múltiplos de 2");
-                                        return true;
-                                    }
-                                    window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
-                                });
-                                $("#emailFotos").on("click", function() {
-
-                                    if ($("#paciente\\.correo").val() == "" && $("#paciente\\.correo\\.lista").is(':checked') == false){
-                                        alert("Debe ingresar un correo para el paciente en la página principal");
-                                        return true;
-                                    }
-
-
-
-                                    var fotosArreglo = [];
-                                    var contadorIMG = 0;
-                                    $("input[name='fotosElegidas']").each(function() {
-                                        if (this.checked == true) {
-                                            fotosArreglo.push(contadorIMG);
-                                        };
-                                        contadorIMG = contadorIMG + 1
-                                    });
-                
-                                    var correo = ""
-
-                                    if ($("#paciente\\.correo\\.lista").is(':checked') == true){
-                                        correo = $( '#paciente\\.correo\\.config option:selected').text();
-                                    }
-                                    else{
-                                        correo = $("#paciente\\.correo").val()
-                                    }
-
-                                    var valores = {
-                                        user_id: $("#id-paciente").val(),
-                                        img_id: "[" + fotosArreglo.toString() + "]",
-                                        studyDate: StudyDate,
-                                        user_email: correo
-                                    }
-                                    alert("Enviando correo, espere un momento");
-                                    $.post(serverURL + "imagenes/send", valores).done(function (data) {
-                                        alert("Correo Enviado");
-                                    });
-                                });
                                 $('.zoom').on("click", function(){
                                     var img = this.outerHTML;
                                     $("#modalZoom").html(" ");
@@ -175,13 +175,12 @@ $(document).ready(function(){
                             }
                         }).fail(function() {
                             $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
-                        });
+                        });     
                     }
                     else{
                         $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
                     }
-                });
-
+                });       
             }
         });
     });
