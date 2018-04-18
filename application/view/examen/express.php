@@ -754,6 +754,7 @@
                             <div class="btn-group-vertical">
                                 <button class='btn btn-light' id='imprimirFotos'>Ver Informe / Impresión</button>
                                 <button class='btn btn-light' id='emailFotos'>Enviar fotos por E-Mail</button>
+                                <button class='btn btn-light' id='eliminarFotos'>Elininar fotos</button>
                             </div>
                         </div>
                     </div>
