@@ -735,17 +735,23 @@
                     <div id="fotosDicom" class="row"></div>
                 </div>
                 <div class="col-4">
-                    <div class="form-group">
-                        <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="paciente.correo.copia">
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="paciente.correo.lista">elegir de la lista</label>
-                    </div>
-                    <div class="form-group">
-                        <select id="paciente.correo.config" class="form-control">
-                        </select>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Enviar imágenes por correo</h5>
+                            <div class="form-group">
+                                <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="paciente.correo.copia">
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="paciente.correo.lista">¿Enviar con copia?</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="paciente.correo.config" class="form-control">
+                                </select>
+                            </div>
+                            <h5 class="card-title">Otras Opciones</h5>
+                        </div>
                     </div>
                 </div>
             </div>
