@@ -136,6 +136,22 @@ $(document).ready(function(){
             });
         });
 
+        $("#eliminarFotos").on("click", function() {
+            var contadorIMG = 0;
+            $("input[name='fotosElegidas']").each(function() {
+                if (this.checked == true) {
+                    $(this).parent().parent().parent().addClass("d-none");
+                    contadorIMG = contadorIMG + 1
+                    this.checked = false;
+                }; 
+            });
+
+            if (contadorIMG <1){
+                alert("Debe seleccionar al menos una imágen");
+                return true;
+            }
+        });
+
 
         $.get(serverURL + "configuracion/obtenernombre/" + RUTPACIENTE).done(function(data) {
             if (data.length > 0 ){

@@ -731,10 +731,10 @@
             </nav>
             <h4>Imágenes Disponibles</h4>
             <div class="row">
-                <div class="col-8">
+                <div class="col-6 col-md-7 col-xl-9">
                     <div id="fotosDicom" class="row"></div>
                 </div>
-                <div class="col-12 col-xl-3">
+                <div class="col-6 col-md-5 col-xl-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Enviar imágenes por correo</h5>
