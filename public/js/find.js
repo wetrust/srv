@@ -102,7 +102,7 @@ $(document).ready(function(){
                             $("#fotosDicom").html(" ");
                             if (data.DCM = true) {
                                 $.each(data.JPGFiles, function(i, item) {
-                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                                    $("#fotosDicom").append("<div class='col-3'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosEliminar'>Eliminar</label></div></div>");
                                 });
                                 $("#fotosDicom").append("<button class='btn btn-primary' id='imprimirFotos'>Ver Informe / Impresión</button>");
                                 $("#fotosDicom").append("<button class='btn btn-primary' id='emailFotos'>Enviar fotos por E-Mail</button>");
