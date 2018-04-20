@@ -748,7 +748,7 @@
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" id="paciente.correo.lista">¿Enviar con copia?</label>
+                                <input type="checkbox" class="form-check-input" id="paciente.correo.lista">Enviar con copia a:</label>
                             </div>
                             <div class="form-group">
                                 <select id="paciente.correo.config" class="form-control">
