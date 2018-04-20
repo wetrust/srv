@@ -103,7 +103,7 @@
                                             <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
                                         </div>
                                         <div class="col-4 p-0">
-                                            <button type="button" class="btn btn-danger" id="guardarfur">Guardar</button>
+                                            <button type="button" class="btn btn-info" id="guardarfur">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -197,12 +197,6 @@
                                          </select>
                                     </div>
                                     <div class="col-2">
-                                        <label class="col-form-label">Fecha Exm. Previo</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input type="text" class="form-control" id="fecha.examen.previo">
-                                    </div>
-                                    <div class="col-2">
                                         <label for="tipo.examen.previo" class="col-form-label">Tipo Exm. Previo</label>
                                     </div>
                                     <div class="col-4">
@@ -211,9 +205,15 @@
                                                 <select id="tipo.examen.previo" class="form-control"></select>
                                             </div>
                                             <div class="col-4 p-0">
-                                                <button type="button" class="btn btn-danger" id="guardartipoexamen">Guardar</button>
+                                                <button type="button" class="btn btn-info" id="guardartipoexamen">Guardar</button>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="col-form-label">Fecha Exm. Previo</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control" id="fecha.examen.previo">
                                     </div>
                                 </div>
 				<hr>
