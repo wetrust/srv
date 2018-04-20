@@ -89,6 +89,7 @@ var semanas = Math.trunc(localStorage.eg)
    localStorage.fee = $(this).val();
    localStorage.eg = calcularEG();
    $("input[name='fee']").val(localStorage.fee);
+   $("#fee").html(localStorage.fee);
    $("input[name='eg']").val(localStorage.eg);
 	  
    if (this.id != "fee-dos"){

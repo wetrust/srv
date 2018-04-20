@@ -286,6 +286,7 @@ class app {
 	$('#fNacimiento').val((day)+"/"+(month)+"/"+this.day.getFullYear());
 	$("input[name='fum']").val((day)+"/"+(month)+"/"+this.day.getFullYear());
 	$("input[name='fee']").val((day)+"/"+(month)+"/"+this.day.getFullYear());
+	$("#fee").html((day)+"/"+(month)+"/"+this.day.getFullYear());
 	$('#id-paciente').val((day)+(month)+this.day.getFullYear());
   }
 
@@ -296,6 +297,8 @@ class app {
 	$('#fNacimiento').val((day)+"/"+(month)+"/"+this.day.getFullYear());
 	$("input[name='fum']").val((day)+"/"+(month)+"/"+this.day.getFullYear());
 	$("input[name='fee']").val((day)+"/"+(month)+"/"+this.day.getFullYear()).trigger("change");
+	$("#fee").html((day)+"/"+(month)+"/"+this.day.getFullYear());
+	
 	var e = $.Event("keydown");
         e.which = 13; // # Some key code value
 	$("#lcn").val("").trigger("change").trigger(e);

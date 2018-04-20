@@ -720,17 +720,17 @@
             </nav>
             <h4>Imágenes Disponibles</h4>
             <div class="form-group row">
-                <div class="col">
+                <div class="col-3">
                     <label for="fum2">Nombre</label>
                 </div>
                 <div class="col">
                     <p id="paciente.nombre"></p>
                 </div>
-                <div class="col">
+                <div class="col-3">
                     <label for="fum2">Fecha de exámen</label>
                 </div>
                 <div class="col">
-                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" readonly>
+                    <p id="fee"></div>
                 </div>
             </div>
             <hr>
