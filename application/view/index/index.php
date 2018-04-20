@@ -75,3 +75,4 @@
                 </div>
             </div>
 </div>
+<script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>

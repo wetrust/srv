@@ -68,7 +68,7 @@
             <div class="card-body">
 			    <div class="form-group row">
                     <div class="col-4">
-                    <h5 class="card-title text-primary">1.B- Ingresar Paciente</h5>
+                    <h5 class="card-title text-primary mt-4">1.B- Ingresar Paciente</h5>
                     </div>
                     <div class="col-4">
                         <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
