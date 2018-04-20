@@ -719,17 +719,17 @@
                 </ol>
             </nav>
             <h4>Imágenes Disponibles</h4>
-            <div class="form-group row">
-                <div class="col-3">
-                    <label for="fum2">Nombre</label>
+            <div class="form-group row justify-content-end">
+                <div class="col-1">
+                    <label for="fum2"><strong>Nombre</strong></label>
                 </div>
-                <div class="col">
+                <div class="col-3">
                     <p id="paciente.nombre"></p>
                 </div>
-                <div class="col-3">
-                    <label for="fum2">Fecha de exámen</label>
+                <div class="col-2">
+                    <label for="fum2"><strong>Fecha de exámen</strong></label>
                 </div>
-                <div class="col">
+                <div class="col-1">
                     <p id="fee"></p>
                 </div>
             </div>
