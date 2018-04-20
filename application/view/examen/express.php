@@ -66,15 +66,17 @@
 	<div class="col-md-12">
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title text-primary">1.B- Ingresar Paciente</h5>
 			    <div class="form-group row">
-                                <div class="col-6">
-                                    <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
-                                </div>
-                                <div class="col-6">
-                                    <input type="text" class="form-control my-3" id="id-paciente">
-                                </div>
-                            </div>
+                    <div class="col-4">
+                    <h5 class="card-title text-primary">1.B- Ingresar Paciente</h5>
+                    </div>
+                    <div class="col-4">
+                        <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control my-3" id="id-paciente">
+                    </div>
+                </div>
 				<hr>
 				<h6 class="card-title text-muted">Datos opcionales</h6>
 				<div class="row mt-2 mb-2">
@@ -708,35 +710,6 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
-    <li class="ml-auto"><a href="#consulta">Volver</a></li>
-  </ol>
-</nav>
-        <div>
-<h4>Imágenes Disponibles</h4>
-		<div class="row mt-2 mb-2">
-                                    <div class="col-2">
-                                        <label for="paciente.correo.copia" class="col-form-label">Correo Electrónico</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input type="email" class="form-control" id="paciente.correo.copia">
-                                    </div>
-			            <div class="col-2">
-                                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" id="paciente.correo.lista">elegir de la lista</label></div>
-                                    </div>
-                                    <div class="col-4">
-                                        <select id="paciente.correo.config" class="form-control"><option value="ejemplo@ejemplo.cl">ejemplo@ejemplo.cl</option></select>
-                                    </div>
-                                </div>
-    <div id="fotosDicom" class="row">
-    </div>
-</div></div>
-=======
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
@@ -777,7 +750,6 @@
                 </div>
             </div>
         </div>
->>>>>>> 0cb239df9625c1dbbd6ddae49707c84b720f3015
         <div class="container" id="tipoExamen" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
