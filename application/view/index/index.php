@@ -29,6 +29,9 @@
                                 <li class="nav-item">
                                   <a class="nav-link" href="<?php echo Config::get('URL'); ?>dicom/view"> <strong>Ver imágenes registradas en base</strong></a>
                                 </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#"><strong>Datos Post-Natales</strong></a>
+                                </li>
                             <?php } ?>
                             <?php if (Session::userIsLoggedIn() == false) { ?>
                               <li class="nav-item">
