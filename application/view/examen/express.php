@@ -730,7 +730,7 @@
                     <label for="fum2">Fecha de exámen</label>
                 </div>
                 <div class="col">
-                    <p id="fee"></div>
+                    <p id="fee"></p>
                 </div>
             </div>
             <hr>
