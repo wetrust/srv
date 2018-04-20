@@ -66,7 +66,7 @@
 	<div class="col-md-12">
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title text-primary">1.B- O Ingresar Paciente</h5>
+                <h5 class="card-title text-primary">1.B- Ingresar Paciente</h5>
 			    <div class="form-group row">
                                 <div class="col-6">
                                     <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro ( RUT )</strong></label>
@@ -693,7 +693,7 @@
                 </div>
             </div>
         </div>
-<div class="container" id="imagenesDicom" style="display:none;">
+        <div class="container" id="imagenesDicom" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
                     <div class="media">
@@ -707,8 +707,8 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
+<<<<<<< HEAD
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
@@ -736,6 +736,48 @@
     <div id="fotosDicom" class="row">
     </div>
 </div></div>
+=======
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
+                    <li class="ml-auto"><a href="#consulta">Volver</a></li>
+                </ol>
+            </nav>
+            <h4>Imágenes Disponibles</h4>
+            <div class="row">
+                <div class="col-6 col-md-7 col-xl-9">
+                    <div id="fotosDicom" class="row"></div>
+                </div>
+                <div class="col-6 col-md-5 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Enviar imágenes por correo</h5>
+                            <div class="form-group">
+                                <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="paciente.correo.copia">
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="paciente.correo.lista">¿Enviar con copia?</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="paciente.correo.config" class="form-control">
+                                </select>
+                            </div>
+                            <h5 class="card-title">Otras Opciones</h5>
+                            <div class="btn-group-vertical">
+                                <button class='btn btn-light text-left' id='imprimirFotos'>Ver Informe / Impresión</button>
+                                <button class='btn btn-light text-left' id='emailFotos'>Enviar fotos por E-Mail</button>
+                                <button class='btn btn-light text-left' id='eliminarFotos'>Eliminar fotos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+>>>>>>> 0cb239df9625c1dbbd6ddae49707c84b720f3015
         <div class="container" id="tipoExamen" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
