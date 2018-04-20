@@ -129,7 +129,7 @@ $(document).ready(function(){
                                 });
                                 $("#emailFotos").on("click", function() {
 
-                                    if ($("#paciente\\.correo").val() == "" && $("#paciente\\.correo\\.lista").is(':checked') == false){
+                                    if ($("#paciente\\.correo\\.lista").is(':checked') == false){
                                         alert("Debe ingresar un correo para el paciente en la página principal");
                                         return true;
                                     }

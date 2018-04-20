@@ -57,12 +57,6 @@ $('#guardartipoexamen').on("click", function(){
             loadTablePatients();
         });
     });
-$("#paciente\\.correo").on("change", function(){
-	$("#paciente\\.correo\\.copia").val($(this).val());
-});
-$("#paciente\\.correo\\.copia").on("focusout", function(){
-	$("#paciente\\.correo").val($(this).val());
-});
     
     $('#guardarfur').on("click", function(){
 

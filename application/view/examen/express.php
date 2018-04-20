@@ -212,19 +212,6 @@
                                                 <button type="button" class="btn btn-danger" id="guardartipoexamen">Guardar</button>
                                             </div>
                                         </div>
-                                        
-                                    </div>
-                                    <div class="col-2">
-                                        <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input type="email" class="form-control" id="paciente.correo">
-                                    </div>
-                                    <div class="col-2">
-                                        <label for="configuracion.email" class="col-form-label">Elegir un correo</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <select id="configuracion.email" class="form-control"></select>
                                     </div>
                                 </div>
 				<hr>
@@ -734,7 +721,7 @@
 <h4>Imágenes Disponibles</h4>
 		<div class="row mt-2 mb-2">
                                     <div class="col-2">
-                                        <label for="tipo.examen.previo" class="col-form-label">Correo Electrónico</label>
+                                        <label for="paciente.correo.copia" class="col-form-label">Correo Electrónico</label>
                                     </div>
                                     <div class="col-4">
                                         <input type="email" class="form-control" id="paciente.correo.copia">
