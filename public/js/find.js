@@ -119,12 +119,12 @@ $(document).ready(function(){
 
             if ($("#paciente\\.correo\\.lista").is(':checked') == true){
                 correo = $( '#paciente\\.correo\\.config option:selected').text();
-                if ($("#paciente\\.correo").val() != ""){
-                    correo = correo + ";" + $("#paciente\\.correo").val();
+                if ($("#paciente\\.correo\\.copia").val() !== ""){
+                    correo = correo + ";" + $("#paciente\\.correo\\.copia").val();
                 }
             }
             else{
-                correo = $("#paciente\\.correo").val()
+                correo = $("#paciente\\.correo.\\copia").val()
             }
 
             var valores = {
