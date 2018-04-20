@@ -124,7 +124,7 @@ $(document).ready(function(){
                 }
             }
             else{
-                correo = $("#paciente\\.correo.\\copia").val()
+                correo = $("#paciente\\.correo\\.copia").val()
             }
 
             var valores = {

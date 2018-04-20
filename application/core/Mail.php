@@ -161,7 +161,16 @@ class Mail
         // fill mail with data
         $mail->From = $from_email;
         $mail->FromName = $from_name;
-        $mail->AddAddress($user_email);
+
+        $email = explode(";", $user_email);
+        if (count($email) == 1){
+            $mail->AddAddress($email[0]);
+        }
+        else{
+            $mail->AddAddress($email[0]);
+            $mail->AddAddress($email[1]);
+        }
+        
         $mail->Subject = $subject;
         $mail->Body = $body;
 
