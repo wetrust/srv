@@ -76,3 +76,4 @@
             </div>
 </div>
 <script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>
+<script src="<?php echo Config::get('URL'); ?>js/static/main.js"></script>
