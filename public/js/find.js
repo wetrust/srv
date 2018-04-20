@@ -119,6 +119,9 @@ $(document).ready(function(){
 
             if ($("#paciente\\.correo\\.lista").is(':checked') == true){
                 correo = $( '#paciente\\.correo\\.config option:selected').text();
+                if ($("#paciente\\.correo").val() != ""){
+                    correo = correo + ";" + $("#paciente\\.correo").val();
+                }
             }
             else{
                 correo = $("#paciente\\.correo").val()
