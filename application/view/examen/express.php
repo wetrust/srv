@@ -719,6 +719,20 @@
                 </ol>
             </nav>
             <h4>Imágenes Disponibles</h4>
+            <div class="form-group row">
+                <div class="col">
+                    <label for="fum2">Nombre</label>
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" id="paciente.nombre">
+                </div>
+                <div class="col">
+                    <label for="fum2">Fecha de exámen</label>
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" readonly>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6 col-md-7 col-xl-9">
                     <div id="fotosDicom" class="row"></div>
@@ -828,7 +842,7 @@
                     <input type="text" class="form-control" name="fpp" readonly>
                 </div>
                 <div class="col">
-                    <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
+                    <label for="fee" class="col-form-label">Fecha de exámen</label>
                 </div>
                 <div class="col">
                     <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-tres">

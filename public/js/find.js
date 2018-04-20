@@ -163,6 +163,7 @@ $(document).ready(function(){
                 }
                 $("#nombre-paciente").val(nombre[1]);
                 $("#apellido-paciente").val(nombre[0]);
+                $("#paciente\\.nombre").val(nombre[1] + " " + nombre[0]);
 
                 var dateTime = epochToDate(data[0].AccessTime)
                 var day = ("0" + dateTime.getDate()).slice(-2);
