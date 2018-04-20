@@ -724,7 +724,7 @@
                     <label for="fum2">Nombre</label>
                 </div>
                 <div class="col">
-                    <input class="form-control" type="text" id="paciente.nombre">
+                    <p id="paciente.nombre"></p>
                 </div>
                 <div class="col">
                     <label for="fum2">Fecha de exámen</label>
@@ -733,6 +733,7 @@
                     <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" readonly>
                 </div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-6 col-md-7 col-xl-9">
                     <div id="fotosDicom" class="row"></div>
