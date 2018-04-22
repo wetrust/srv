@@ -2794,7 +2794,13 @@ function pctpfe() {
 			else{
 				pctPFE = pctFinal;
 			}
-	 $('#pfePctRpt').val(pctPFE.toFixed());
+	if (pctPFE > 0){
+		$('#pfePctRpt').val(pctPFE.toFixed());
+	}
+	else{
+		$('#pfePctRpt').val(pctPFE);
+	}
+	 
 	 $('#pfeRango').val(pct10[eg] + ' - ' +pct90[eg]);
  }
 }
