@@ -336,14 +336,13 @@
                                         <label for="patologiaObstetricaUno" class="col-form-label">Patología Obstétrica Relevante</label>
                                     </div>
                                     <div class="col-4">
-                                        <select id="patologiaObstetricaUno" class="form-control gris-claro">
-                                         </select>
+                                        <select id="patologiaObstetricaUno" class="form-control"></select>
                                     </div>
                                     <div class="col-2">
                                         <label for="ecografista" class="col-form-label">Profesional referente</label>
                                     </div>
                                     <div class="col-4">
-                                        <input class="form-control" type="text" id="profReferente" value="">
+                                    <select id="profReferente" class="form-control"></select>
                                     </div>
                                 </div>
                                 <div class="row mt-2 mb-2">
@@ -720,16 +719,12 @@
             </nav>
             <h4>Imágenes Disponibles</h4>
             <div class="form-group row justify-content-end">
-                <div class="col-2">
-                    <label for="fum2"><strong>Nombre</strong></label>
-                </div>
-                <div class="col-4">
+                <div class="col-3 offset-3">
+                    <strong>Nombre:</strong>
                     <p id="paciente.nombre"></p>
                 </div>
-                <div class="col-2">
-                    <label for="fum2"><strong>Fecha de exámen</strong></label>
-                </div>
-                <div class="col-1">
+                <div class="col-3">
+                    <strong>Fecha de exámen:</strong>
                     <p id="fee"></p>
                 </div>
             </div>
