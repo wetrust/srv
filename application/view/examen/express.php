@@ -14,7 +14,7 @@
                 <h5 class="card-title text-primary">1.A - Buscar un Paciente</h5>
                 <div class="form-group row">
                     <div class="col-2">
-                        <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico( RUT / DNI )</strong></label>
+                        <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
                     </div>
                     <div class="col-3">
                         <input type="text" class="form-control my-3" id="buscar.paciente.id">
@@ -71,7 +71,7 @@
                     <h5 class="card-title text-primary mt-4">1.B- Ingresar Paciente</h5>
                     </div>
                     <div class="col-4">
-                        <label for="id-paciente" class="col-form-label mt-3"><strong>Número de Registro Clínico( RUT / DNI )</strong></label>
+                        <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
                     </div>
                     <div class="col-4">
                         <input type="text" class="form-control my-3" id="id-paciente">
@@ -720,10 +720,10 @@
             </nav>
             <h4>Imágenes Disponibles</h4>
             <div class="form-group row justify-content-end">
-                <div class="col-1">
+                <div class="col-2">
                     <label for="fum2"><strong>Nombre</strong></label>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <p id="paciente.nombre"></p>
                 </div>
                 <div class="col-2">
