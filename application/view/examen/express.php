@@ -1269,6 +1269,18 @@
                 </div>
             </div>
             <hr style="border-color:rgba(0, 0, 0, 0.36);">
+            <div class="card">
+                <div class="card-body">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-info">Nuevo</button>
+                        <button type="button" class="btn btn-secondary">Modificar</button>
+                        <button type="button" class="btn btn-secondary">Guardar</button>
+                        <button type="button" class="btn btn-secondary">Cancelar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color:rgba(0, 0, 0, 0.36);">
             <div class="row">
                 <div class="col">
                     <div class="card mb-3">
