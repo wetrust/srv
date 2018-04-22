@@ -1271,12 +1271,13 @@
             <hr style="border-color:rgba(0, 0, 0, 0.36);">
             <div class="card">
                 <div class="card-body">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-info">Nuevo</button>
-                        <button type="button" class="btn btn-secondary">Modificar</button>
-                        <button type="button" class="btn btn-secondary">Guardar</button>
-                        <button type="button" class="btn btn-secondary">Cancelar</button>
-                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary">Modificar</button><button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary">Cancelar</button><button type="button" class="btn btn-danger">Eliminar</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary">&lt;&lt;</button><p class="my-2 mx-2">Recorrer Exámenes</p><button type="button" class="btn btn-secondary">&gt;&gt;</button>
+                        </div>
                     </div>
                 </div>
             </div>
