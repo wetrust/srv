@@ -44,7 +44,7 @@ $(document).ready(function() {
         });
     });
 
-    $.get( appUrl + "configuracion/profesionalreferente", function( data ) {
+    $.get( serverURL + "configuracion/profesionalreferente", function( data ) {
         $("#profReferente").empty();
         $.each(data, function (key, des) {
             $("#profReferente").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
