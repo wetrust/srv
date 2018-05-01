@@ -29,6 +29,6 @@ class ExamenController extends Controller
     
     public function obstetico()
     {
-        $this->View->render('ecografia/obstetrico');
+        $this->View->render('ecografia/index');
     }
 }
