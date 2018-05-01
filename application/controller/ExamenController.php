@@ -26,4 +26,9 @@ class ExamenController extends Controller
     {
         $this->View->render('examen/seleccionar');
     }
+    
+    public function obstetico()
+    {
+        $this->View->render('ecografia/obstetrico');
+    }
 }
