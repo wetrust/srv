@@ -414,6 +414,20 @@ $( '#semanasEcoPrim' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoObs').val(semanas);
 	$('#diasEcoObs').val(dias);
@@ -455,6 +469,20 @@ $( '#diasEcoPrim' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoObs').val(semanas);
 	$('#diasEcoObs').val(dias);
@@ -496,6 +524,20 @@ $( '#semanasEcoGen' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoObs').val(semanas);
 	$('#diasEcoObs').val(dias);
@@ -539,6 +581,20 @@ $( '#diasEcoGen' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoObs').val(semanas);
 	$('#diasEcoObs').val(dias);
@@ -582,6 +638,20 @@ $( '#semanasTipoEco' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$( '#semanasEcoGen' ).val(semanas);
 	$( '#diasEcoGen' ).val(dias);
@@ -625,6 +695,20 @@ $( '#diasTipoEco' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$( '#semanasEcoGen' ).val(semanas);
 	$( '#diasEcoGen' ).val(dias);
@@ -669,6 +753,20 @@ $( '#semanasEcoObs' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoGen').val(semanas);
 	$('#diasEcoGen').val(dias);
@@ -712,6 +810,20 @@ $( '#diasEcoObs' ).on( 'change', function() {
 	semanas = semanas / unasemana;
 	dias = dias / undia;
 	localStorage.eg = semanas + "." + dias;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoGen').val(semanas);
 	$('#diasEcoGen').val(dias);
@@ -754,6 +866,20 @@ $( '#semanasEcoDopp' ).on( 'change', function() {
     	localStorage.fee = $("input[name='fee']").val();
 	semanas = semanas / unasemana;
 	dias = dias / undia;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	localStorage.eg = semanas + "." + dias;
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoObs').val(semanas);
@@ -797,6 +923,20 @@ $( '#diasEcoDopp' ).on( 'change', function() {
     	localStorage.fee = $("input[name='fee']").val();
 	semanas = semanas / unasemana;
 	dias = dias / undia;
+	
+	//borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	
 	localStorage.eg = semanas + "." + dias;
 	$("input[name='eg']").val(localStorage.eg);
 	$('#semanasEcoObs').val(semanas);
