@@ -81,6 +81,19 @@ var semanas = Math.trunc(localStorage.eg)
         $( '#diasEcoPrim' ).val(dias);
 	$( '#diasEcoDopp' ).val(dias);
 	$('#semanasEcoDopp').val(semanas);
+	 
+	 //borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
 
  });
   
@@ -121,6 +134,20 @@ var semanas = Math.trunc(localStorage.eg)
         $( '#diasEcoPrim' ).val(dias);
 	$( '#diasEcoDopp' ).val(dias);
 	$('#semanasEcoDopp').val(semanas);
+	  
+	  //borrar los colores de las tarjetas
+	$("#ecografia\\.uno").removeClass("border-primary");
+	$("#ecografia\\.dos").removeClass("border-primary");
+	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+	if (semanas < 15){
+		$("#ecografia\\.uno").addClass("border-primary");
+	}
+	else{
+		$("#ecografia\\.dos").addClass("border-primary");
+		$("#ecografia\\.doppler").addClass("border-primary");
+	}
+	  
  });
 
 }
