@@ -14,7 +14,7 @@
                 </div>
             </div>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#inicio">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item active">Bienvenida</li>
                 <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
@@ -22,7 +22,7 @@
             </ol>
             <div class="row mt-2">
                 <div class="col-3">
-                    <img src="img/cpeso.png" class="mr-auto ml-auto img-fluid">
+                    <img src="<?php echo Config::get('URL'); ?>img/cpeso.png" class="mr-auto ml-auto img-fluid">
                 </div>
                 <div class="col">
                     <h6 class="alert-heading text-azul">Evaluación del crecimiento intrauterino, ¿Curva local generalizada o general individualizada?</h6>
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#inicio">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
                 <li class="breadcrumb-item active">Recién Nacido</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
@@ -176,7 +176,7 @@
                 </div>
             </div>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#inicio">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
                 <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
                 <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
@@ -1195,6 +1195,44 @@
                     }
                 };
             };
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(window).on('hashchange', function(){
+                    let hash = document.location.hash;
+
+                    if (hash=="#postnatal"){
+			            displayElement("postnatal");
+                    }
+                    else if (hash=="#ajustepeso"){
+                        displayElement("ajustepeso");
+                        verGraficoAjustePeso();
+                    }
+                    else if (hash=="#recienacido"){
+                        displayElement("recienacido");
+                    }
+                    else if (hash=="#pdfviebox"){
+                        displayElement("pdfviebox");
+                    }
+                });
+
+                $("#pdfnacionalview").on("click", function(){
+					$("#pdfview").attr('src', "https://servidor.crecimientofetal.cl/pdf/gnacional.pdf");
+				});
+				
+				$("#pdfregionalview").on("click", function(){
+					$("#pdfview").attr('src', "https://servidor.crecimientofetal.cl/pdf/gregional.pdf");
+				});
+            });
+
+            function displayElement(div_id){
+                $('#postnatal').hide();
+                $('#ajustepeso').hide();
+                $('#pdfviebox').hide();
+                $('#recienacido').hide();
+                $('#'+div_id).show();
+            }
+
         </script>
     </body>
 </html>
