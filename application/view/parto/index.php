@@ -87,7 +87,7 @@
             <div class="row mt-2">
                 <div class="col-5">
                     <div class="card">
-                        <div class="card-block">
+                        <div class="card-body">
                             <h5>Datos de Recién Nacido</h5>
                             <form>
                                 <div class="form-group row">
@@ -139,7 +139,7 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <div class="card-block">
+                        <div class="card-body">
                             <form>
                               <div class="form-group row  mb-0">
                                 <label for="graficoEstandar" class="col-3 mt-2"><strong>Seleccione Curva</strong></label>
@@ -185,7 +185,7 @@
             <div class="row mt-1">
                 <div class="col">
                     <div class="card">
-                        <div class="card-block">
+                        <div class="card-body">
                             <h4>Recién Nacido</h4>
                             <form>
                                 <div class="form-group row">
@@ -254,7 +254,7 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <div class="card-block">
+                        <div class="ccard-body">
                             <div id="graficoAjustado"></div>
                             <div>
                                 <div class="form-group row mb-0">
@@ -271,7 +271,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                        <p class="bg-secondary text-primary text-right">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
+                        <p class="text-primary text-right">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
                 </div>
             </div>
         </div>
