@@ -1,41 +1,8 @@
-        <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded bg-primary">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#"><i class="fa fa-hospital-o" aria-hidden="true"></i> Crecimiento Fetal</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#inicio">Inicio</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container" id="browser">
+        <div class="container" id="postnatal">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
                     <div class="media">
-                        <img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-5">
-                            <h4 class="mt-0 mb-1"><em>CrecimientoFetal.cl</em></h4>
-                            <p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="alert alert-danger" role="alert">
-                        Tu navegador no es compatible con la plataforma
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="postnatal" style="display:none;">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                         <div class="media-body mt-4">
                             <h4 class="mt-0 mb-1"><em>Evaluación postnatal del crecimiento</em></h4>
                             <p><em>Evaluación postnatal básica para profesionales</em></p>
@@ -73,7 +40,7 @@
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
                     <div class="media">
-                        <img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                         <div class="media-body mt-4">
                             <h4 class="mt-0 mb-1"><em>Evaluación postnatal del crecimiento</em></h4>
                             <p><em>Evaluación postnatal básica para profesionales</em></p>
@@ -99,7 +66,7 @@
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
                     <div class="media">
-                        <img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                         <div class="media-body mt-4">
                             <h4 class="mt-0 mb-1"><em>Evaluación postnatal del crecimiento</em></h4>
                             <p><em>Evaluación postnatal básica para profesionales</em></p>
@@ -197,7 +164,7 @@
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
                     <div class="media">
-                        <img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                         <div class="media-body mt-4">
                             <h4 class="mt-0 mb-1"><em>Ajuste al peso Neonatal</em></h4>
                             <p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
