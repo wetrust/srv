@@ -31,4 +31,9 @@ class ExamenController extends Controller
     {
         $this->View->render('ecografia/index');
     }
+
+    public function parto()
+    {
+        $this->View->render('parto/index');
+    }
 }
