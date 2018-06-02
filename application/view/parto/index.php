@@ -108,7 +108,9 @@
                                     <label for="tallaRN" class="col-4">Talla RN (mm.)</label>
                                     <div class="input-group col-8">
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3">
-                                        <div class="input-group-addon p-1">mm</div>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -244,7 +246,7 @@
                             </form>
                             <h6 class="text-left text-primary" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
                             <div class="btn-group" role="group" aria-label="Default button group">
-                                <button type="button" class="btn btn-outline-primary" id="opt1">Neutro</button>
+                                <button type="button" class="btn btn-outline-primary" id="opt1">Cond. Neutra</button>
                                 <button type="button" class="btn btn-outline-primary" id="opt2">Potencial alto</button>
                                 <button type="button" class="btn btn-outline-primary" id="opt3">Potencial bajo</button>
                                 <button type="button" class="btn btn-outline-primary" id="opt4">Cond. extremas</button>
