@@ -281,14 +281,11 @@
                 Highcharts.chart('grafico', {
 
                     title: {
-                        text: 'Relación Peso / EG Nacional',
+                        text: 'M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274',
+                        align: "left",
                         style:{
-                            "font-size": "14px"
+                            "font-size": "12px"
                         }
-                    },
-
-                    subtitle: {
-                        text: 'M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274'
                     },
                     credits: { enabled: false },
                     yAxis: {
@@ -346,13 +343,11 @@
                 if (this.value == 0){
                     Highcharts.chart('grafico', {
                         title: {
-                            text: 'Relación Peso / EG Nacional',
+                            text: 'M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274',
+                            align: "left",
                             style:{
-                                "font-size": "14px"
+                                "font-size": "12px"
                             }
-                        },
-                        subtitle: {
-                            text: 'M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274'
                         },
                         credits: { enabled: false },
                         yAxis: {
@@ -412,13 +407,11 @@
                 else if (this.value == 1){
                     Highcharts.chart('grafico', {
                         title: {
-                            text: 'Relación Peso / EG Regional',
+                            text: 'Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4)',
+                            align: "left",
                             style:{
-                                "font-size": "14px"
+                                "font-size": "12px"
                             }
-                        },
-                        subtitle: {
-                            text: 'Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4)'
                         },
                         credits: { enabled: false },
                         yAxis: {
@@ -482,14 +475,11 @@
                     });
                     Highcharts.chart('grafico', {
                         title: {
-                            text: 'Relación IPN / EG Nacional',
+                            text: 'M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274',
+                            align: "left",
                             style:{
                                 "font-size": "14px"
                             }
-                        },
-
-                        subtitle: {
-                            text: 'M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274'
                         },
                         credits: { enabled: false },
                         yAxis: {
@@ -554,14 +544,11 @@
                     });
                     Highcharts.chart('grafico', {
                         title: {
-                            text: 'Relación IPN / EG Regional',
+                            text: 'Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4)',
+                            align: "left",
                             style:{
-                                "font-size": "14px"
+                                "font-size": "12px"
                             }
-                        },
-
-                        subtitle: {
-                            text: 'Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4)'
                         },
                         credits: { enabled: false },
                         yAxis: {
