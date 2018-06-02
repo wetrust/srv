@@ -94,14 +94,18 @@
                                     <label for="edadGestacional" class="col-4">E. Gestacional</label>
                                     <div class="input-group col-8">
                                         <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp"></select>
-                                        <div class="input-group-addon p-1">semanas</div>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text p-1">semanas</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="pesoRN" class="col-4">Peso RN (gr.)</label>
                                     <div class="input-group col-8">
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" >
-                                        <div class="input-group-addon p-1">gr</div>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text p-1">gr</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -109,7 +113,7 @@
                                     <div class="input-group col-8">
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3">
                                         <div class="input-group-append">
-                                            <div class="input-group-text">mm</div>
+                                            <div class="input-group-text p-1">mm</div>
                                         </div>
                                     </div>
                                 </div>
