@@ -29,7 +29,7 @@
                     <div id="sliderParto" class="carousel slide" data-ride="carousel" data-interval="60000">
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active">
-                                <p class="text-justify text-azul"><small>Tradicionalmente la relación Peso / Edad gestacional ha sido un criterio ampliamente usado en la valoración del crecimiento intrauterino, tanto con fines pronósticos como de ma­nejo clínico, categorizando como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de cre­cimiento determinada. En el ámbito neonatal integrando talla del recién nacido (RN) se obtiene el índice ponderal (IPN = ((peso / talla)^3)*100), clasificando a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br>Respecto a curvas de crecimiento, en una población heterogénea, el mejor parámetro para identificar el PEG. No necesariamente es un estándar local generalizado, sino un estándar general individualizado, que se ajuste a características materno-fetales individuales y por tanto trasciende los límites geográficos. Han sido reportadas como variables biológicas (No patológicas) factores que modulan el peso a término, destacando entre ellos: paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas.<br><br>Para categorizar Peso e IPN según edad gestacional utilizamos en este software el estándar neonatal chileno 2010* y para ponderar el efecto modulador dado por las variables biológicas, se utilizó gráfica regional de La Araucanía 2009 **, dado que en la construcción de esta última se consideró valorar efecto modulador al peso neonatal esperado, ajustado según cinco variables biológicas antes señaladas.<br><br>* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a><br>** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small></p>
+                                <p class="text-justify text-azul">El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br><br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</p>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#postnatal">Volver</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">Volver</a></li>
             </ol>
             <div class="row mt-2">
                 <div class="col">
@@ -89,49 +89,50 @@
                     <div class="card">
                         <div class="card-body">
                             <h5>Datos de Recién Nacido</h5>
-                            <form>
+                            <form style="font-size: 0.8rem;">
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">E. Gestacional</label>
                                     <div class="input-group col-8">
-                                        <select id="edadGestacional" class="form-control" aria-describedby="edadGestacionalHelp"></select>
-                                        <div class="input-group-addon">semanas</div>
+                                        <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp"></select>
+                                        <div class="input-group-addon p-1">semanas</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="pesoRN" class="col-4">Peso RN (gr.)</label>
                                     <div class="input-group col-8">
-                                        <input type="number" class="form-control" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" >
-                                        <div class="input-group-addon">gr</div>
+                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" >
+                                        <div class="input-group-addon p-1">gr</div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="tallaRN" class="col-4">Talla RN (mm.)</label>
                                     <div class="input-group col-8">
-                                        <input type="number" class="form-control" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3">
-                                        <div class="input-group-addon">mm</div>
+                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3">
+                                        <div class="input-group-addon p-1">mm</div>
                                     </div>
                                 </div>
                             </form>
                             <h5>Datos de RN calculado</h5>
-                            <form></form>
+                            <form style="font-size: 0.8rem;">
                                 <div class="form-group row">
                                     <label for="IPNRN" class="col-6">IPN <small>((peso / talla)^3)*100</small></label>
                                     <div class="col-2"></div>
-                                    <input type="number" class="form-control col-3" id="IPNRN" disabled>
+                                    <input type="number" class="form-control col-3" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IPNRN" disabled>
                                 </div>
                                 <div class="form-group row">
                                     <label for="PesoEge" class="col-4">Peso / EG</label>
-                                    <input type="text" class="form-control col-2" id="PesoPct" style="font-size: 0.8rem;" disabled>
+                                    <input type="text" class="form-control col-2" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoPct" style="font-size: 0.8rem;" disabled>
                                     <div class="col-2"></div>
-                                    <input type="text" class="form-control col-3" id="PesoEge" style="font-size: 0.8rem;" disabled>
+                                    <input type="text" class="form-control col-3" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoEge" style="font-size: 0.8rem;" disabled>
                                 </div>
                                 <div class="form-group row">
                                     <label for="IpnEge" class="col-4">IPN / Ege</label>
-                                    <input type="text" class="form-control col-2" id="IpnPct" style="font-size: 0.8rem;" disabled>
+                                    <input type="text" class="form-control col-2" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnPct" style="font-size: 0.8rem;" disabled>
                                     <div class="col-2"></div>
-                                    <input type="text" class="form-control col-3" id="IpnEge" style="font-size: 0.8rem;" disabled>
+                                    <input type="text" class="form-control col-3" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnEge" style="font-size: 0.8rem;" disabled>
                                 </div>
                             </form>
+                            <small class="text-primary">Graficas utilizadas para la categorización del crecimiento y ponderación de variables biológicas</small><br>
                             <small>* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a>
                             <br>** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small>
                         </div>
@@ -141,14 +142,14 @@
                     <div class="card">
                         <div class="card-body">
                             <form>
-                              <div class="form-group row  mb-0">
-                                <label for="graficoEstandar" class="col-3 mt-2"><strong>Seleccione Curva</strong></label>
-                                <select class="form-control col-9" id="graficoEstandar" style="font-size: 0.8rem;">
-                                  <option value="0">Peso/EG (Curva Nacional Alarcon, Pittaluga SOCHIPE)</option>
-                                  <option value="2">IPN/EG  (Curva Nacional Alarcon, Pittaluga SOCHIPE)</option>
+                              <div class="form-group mb-0">
+                                <label for="graficoEstandar"><strong>Seleccione Curva</strong></label>
+                                <select class="form-control" id="graficoEstandar" style="font-size: 0.8rem;">
+                                    <option value="0">Peso / Edad Gestacional (Curva Nacional SOCHIPE)</option>
+                                  <option value="2">IPN / Edad Gestacional (Curva Nacional SOCHIPE)</option>
                                   <option></option>
-                                  <option value="1">Peso/EG (Curva Regional Araucanía R. Lagos y col.)</option>
-                                  <option value="3">IPN/EG  (Curva Regional Araucanía R. Lagos y col.)</option>
+                                  <option value="1">Peso / Edad Gestacional (Curva Regional Araucanía)</option>
+                                  <option value="3">IPN / Edad Gestacional (Curva Regional Araucanía)</option>
                                   <option></option>
                                 </select>
                               </div>
@@ -167,7 +168,7 @@
                         <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                         <div class="media-body mt-4">
                             <h4 class="mt-0 mb-1"><em>Ajuste al peso Neonatal</em></h4>
-                            <p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
+                            <p><em>Evaluación postnatal básica para profesionales</em></p>
                         </div>
                         <div class="media-body mt-4">
                             <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
@@ -209,7 +210,7 @@
                                     <select id="pesom" class="form-control col-3" style="font-size: 0.8rem;height: 2rem;"></select>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="edadGestacional" class="col-4">Valor IMC</label>
+                                    <label for="edadGestacional" class="col-4">IMC <small>((Peso/Talla)^2)</small></label>
                                     <input type="text" class="form-control col-8" style="background-color: #FFF;font-size: 0.8rem;height: 2rem;" id="valorimc" disabled>
                                 </div>
                                 <div class="form-group row">
