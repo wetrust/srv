@@ -58,7 +58,8 @@ $(document).ready(function(){
 
     $("#buscar\\.paciente\\.fechaprevia").on("click", function(){
         let fecha = $('input[name="fecha\\.examen\\.previo"]').val();
-        alert(fecha);
+        
+        $('#fee-tres').value(fecha).datepicker().trigger("change");
     });
 
     $("#buscar\\.paciente\\.id, #id-paciente").on("change", function() {
