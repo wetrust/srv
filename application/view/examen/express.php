@@ -32,16 +32,16 @@
                     </div>
                 </div>
                 <div class="form-group row mb-0">
-                    <div class="col-6">
+                    <div class="col-7">
                     </div>
                     <div class="col-2">
-                        <label for="buscar.paciente.lastvisit" class="col-form-label"><strong>Ultima visita</strong></label>
+                        <label class="col-form-label"><strong>Ultima visita</strong></label>
                     </div>
-                    <div class="col-3">
-                        <input type="text" class="form-control" id="buscar.paciente.lastvisit">
+                    <div class="col-2">
+                        <input type="text" class="form-control" name="fecha.examen.previo" readonly>
                     </div>
                     <div class="col-1 p-0">
-                        <button type="button" class="btn btn-primary" id="buscar">Buscar</button>
+                        <button type="button" class="btn btn-primary" id="buscar">Ver exm.</button>
                     </div>
                 </div>
                 <div class="form-group row mb-0">
@@ -226,7 +226,7 @@
                                         <label class="col-form-label">Fecha Exm. Previo</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="text" class="form-control" id="fecha.examen.previo">
+                                        <input type="text" class="form-control" name="fecha.examen.previo">
                                     </div>
                                 </div>
 				<hr>
