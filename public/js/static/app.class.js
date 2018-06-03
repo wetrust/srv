@@ -17,7 +17,6 @@ class app {
     }
 
     run(){
-    	this.makedb();
 	this.day = new Date();
 	this.lastLoginDate(this.day);
 	this.lastLoginIP();
@@ -225,20 +224,6 @@ class app {
     usarPaciente(idPaciente){
 	loadPaciente(idPaciente, listPaciente);
 	this.displayElement("consulta");
-    }
-	
-    makedb(){
-	this.db = openDatabase('crecimientoFetal', '1.0', 'base de datos para los casos', 2 * 1024 * 1024);
-	this.db.transaction(function (tran) {
-		tran.executeSql('CREATE TABLE IF NOT EXISTS Users (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, user_id, user_name, user_lastname, careReason, sonographer, controlPlace, city, phone, email, birthdate, fum)');
-		tran.executeSql('CREATE TABLE IF NOT EXISTS sonographer (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name)');
-		tran.executeSql('CREATE TABLE IF NOT EXISTS ecoPrimTrim (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, eg, lcn, saco_one, saco_two, saco_three, saco_average)');
-		tran.executeSql('CREATE TABLE IF NOT EXISTS ecoSegTrim (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, eg, dbp, cc,ca,lf,lh,cb, size, pfe, ccca, bvm, ila)');
-		tran.executeSql('CREATE TABLE IF NOT EXISTS ecoDoppler (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, eg, aud, aui, au_average, ipau, ipacm, ccp, dv)');
-		tran.executeSql('CREATE TABLE IF NOT EXISTS careReason (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, reason)');
-		tran.executeSql('CREATE TABLE IF NOT EXISTS controlPlace (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, place)');
-		tran.executeSql('CREATE TABLE IF NOT EXISTS city (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, city)');
-        });
     }
 
     displayElement(div_id){
