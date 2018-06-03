@@ -60,6 +60,33 @@ $(document).ready(function(){
         let fecha = $('input[name="fecha\\.examen\\.previo"]').val();
         
         $('#fee-tres').val(fecha).datepicker().trigger("change");
+        FechaExm = fecha.split("/");
+
+        $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
+            if (data.exist == true ){
+                StudyDate =  data.StudyDate;
+                $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
+                    $("#fotosDicom").html(" ");
+                    if (data.DCM = true) {
+                        $.each(data.JPGFiles, function(i, item) {
+                            $("#fotosDicom").append("<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                        });
+                        $('.zoom').on("click", function(){
+                            var img = this.outerHTML;
+                            $("#modalZoom").html(" ");
+                            $("#modalZoom").append(img);
+                            $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
+                            $("#modalZoom").modal("show");
+                        });
+                    }
+                }).fail(function() {
+                    $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+                });     
+            }
+            else{
+                $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+            }
+        });
     });
 
     $("#buscar\\.paciente\\.id, #id-paciente").on("change", function() {
