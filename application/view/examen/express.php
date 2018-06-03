@@ -31,6 +31,19 @@
                         <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
                     </div>
                 </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                    </div>
+                    <div class="col-2">
+                        <label for="buscar.paciente.lastvisit" class="col-form-label mt-3"><strong>Ultima visita</strong></label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" class="form-control my-3" id="buscar.paciente.lastvisit">
+                    </div>
+                    <div class="col-1 p-0">
+                        <button type="button" class="btn btn-primary my-3" id="buscar">Buscar</button>
+                    </div>
+                </div>
                 <div class="form-group row mb-0">
                     <div class="col-12">
                         <div class="form-check pl-0">
