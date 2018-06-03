@@ -277,7 +277,6 @@ $( document ).ready(function() {
 		}
 		else{
 			aplication.run();
-			loadPacientes(listPacientes);
 			activarBotones();
 			makedbLocalStorage();
 			$('#fum-dos').datepicker();
