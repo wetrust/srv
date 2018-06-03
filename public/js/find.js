@@ -88,10 +88,10 @@ $(document).ready(function(){
             }
         });
         window.location.href = "#tipoExamen";
-        $("#ecografia.uno").removeClass("border-primary");
-        $("#ecografia.dos").removeClass("border-primary");
-        $("#ecografia.doppler").removeClass("border-primary");
-        $("#ecografia.imagenes").addClass("border-primary");
+        $("#ecografia\\.uno").removeClass("border-primary");
+        $("#ecografia\\.dos").removeClass("border-primary");
+        $("#ecografia\\.doppler").removeClass("border-primary");
+        $("#ecografia\\.imagenes").addClass("border-primary");
     });
 
     $("#buscar\\.paciente\\.id, #id-paciente").on("change", function() {
