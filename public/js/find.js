@@ -87,6 +87,7 @@ $(document).ready(function(){
                 $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
             }
         });
+        window.location.href = "#tipoExamen";
     });
 
     $("#buscar\\.paciente\\.id, #id-paciente").on("change", function() {
