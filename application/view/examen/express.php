@@ -883,7 +883,7 @@
                             </div>
                         </div>
                     </div>
- <div class="card mb-3">
+                    <div class="card mb-3" id="ecografia.imagenes">
                         <div class="card-body p-2">
                             <div class="clearfix">
                             <h6 class="card-title float-left">Imágenes de Paciente</h6><a href="#imgDicom" class="card-link float-right">Ver Imágenes</a>

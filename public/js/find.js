@@ -88,6 +88,10 @@ $(document).ready(function(){
             }
         });
         window.location.href = "#tipoExamen";
+        $("#ecografia.uno").removeClass("border-primary");
+        $("#ecografia.dos").removeClass("border-primary");
+        $("#ecografia.doppler").removeClass("border-primary");
+        $("#ecografia.imagenes").addClass("border-primary");
     });
 
     $("#buscar\\.paciente\\.id, #id-paciente").on("change", function() {
@@ -200,6 +204,7 @@ $(document).ready(function(){
                 }
                 $("#nombre-paciente").val(nombre[1]);
                 $("#apellido-paciente").val(nombre[0]);
+                $("#buscar\\.paciente\\.apellido").val(nombre[0]);
                 $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0]);
 
                 var dateTime = epochToDate(data[0].AccessTime)
