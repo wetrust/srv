@@ -41,7 +41,7 @@
                         <input type="text" class="form-control" name="fecha.examen.previo" readonly>
                     </div>
                     <div class="col-1 p-0">
-                        <button type="button" class="btn btn-primary" id="buscar">Ver exm.</button>
+                        <button type="button" class="btn btn-primary" id="buscar.paciente.fechaprevia">Ver exm.</button>
                     </div>
                 </div>
                 <div class="form-group row mb-0">
@@ -226,7 +226,7 @@
                                         <label class="col-form-label">Fecha Exm. Previo</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="text" class="form-control" name="fecha.examen.previo">
+                                        <input type="text" class="form-control" name="fecha.examen.previo" readonly>
                                     </div>
                                 </div>
 				<hr>
