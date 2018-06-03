@@ -12,7 +12,7 @@
         <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title text-primary">1.A - Buscar un Paciente</h5>
-                <div class="form-group row">
+                <div class="form-group row mb-0">
                     <div class="col-2">
                         <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
                     </div>
@@ -31,17 +31,17 @@
                         <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row mb-0">
                     <div class="col-6">
                     </div>
                     <div class="col-2">
-                        <label for="buscar.paciente.lastvisit" class="col-form-label mt-3"><strong>Ultima visita</strong></label>
+                        <label for="buscar.paciente.lastvisit" class="col-form-label"><strong>Ultima visita</strong></label>
                     </div>
                     <div class="col-3">
-                        <input type="text" class="form-control my-3" id="buscar.paciente.lastvisit">
+                        <input type="text" class="form-control" id="buscar.paciente.lastvisit">
                     </div>
                     <div class="col-1 p-0">
-                        <button type="button" class="btn btn-primary my-3" id="buscar">Buscar</button>
+                        <button type="button" class="btn btn-primary" id="buscar">Buscar</button>
                     </div>
                 </div>
                 <div class="form-group row mb-0">
