@@ -193,7 +193,6 @@ $(document).ready(function(){
             }
         });
 
-
         $.get(serverURL + "configuracion/obtenernombre/" + RUTPACIENTE).done(function(data) {
             if (data.length > 0 ){
                 if (data[0].PatientNam !== null){
@@ -206,15 +205,12 @@ $(document).ready(function(){
                 $("#apellido-paciente").val(nombre[0]);
                 $("#buscar\\.paciente\\.apellido").val(nombre[0]);
                 $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0]);
-
                 var dateTime = epochToDate(data[0].AccessTime)
                 var day = ("0" + dateTime.getDate()).slice(-2);
 	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
                 $('input[name="fecha\\.examen\\.previo"]').val((day)+"/"+(month)+"/"+dateTime.getFullYear());
                 $("#fee-dos").val((day)+"/"+(month)+"/"+dateTime.getFullYear()).trigger("change");
-
                 FechaExm = FechaExm.split("/");
-
                 $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
                     if (data.exist == true ){
                         StudyDate =  data.StudyDate;
