@@ -44,4 +44,12 @@ class ExamenController extends Controller
 
         $this->View->renderJSON(EcoModel::getEcos($rut, $tipo));
     }
+
+    public function set()
+    {
+        $rut = Request::post('id');
+        $tipo = Request::post('tipo');
+        $data = Request::post('data');
+        $this->View->renderJSON(EcoModel::setEco($rut, $tipo,$data));
+    }
 }

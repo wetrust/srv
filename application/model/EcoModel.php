@@ -55,4 +55,32 @@ class EcoModel
         $response->status = "fail";
         return $response;
     }
+
+    public static function setEco($rut,$tipo,$data)
+    {
+        if (!$note_text || strlen($rut) == 0) {
+            Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $data = json_decode($data, true);
+        if ($tipo == 1){
+            $sql = "INSERT INTO eco_prim (id_paciente, n_examen,embrion,prom_saco) VALUES (:id_paciente,:n_examen,:embrion,:prom_saco)";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_paciente' => $rut, ':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"]));
+        else if ($tipo == 2){
+            $sql = "INSERT INTO notes (note_text, user_id) VALUES (:note_text, :user_id)";
+            $query = $database->prepare($sql);
+            $query->execute(array(':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+        }
+
+        if ($query->rowCount() == 1) {
+            return self::getEcos($rut, $tipo)
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+        return false;
+    }
 }

@@ -1040,9 +1040,6 @@
                         <div class="btn-group" role="group" aria-label="First group">
                             <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
                         </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-secondary">&lt;&lt;</button><p class="my-2 mx-2">Recorrer Exámenes</p><button type="button" class="btn btn-secondary">&gt;&gt;</button>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -284,6 +284,27 @@ $(document).ready(function(){
         $("#semanasEcoPrim").attr("readonly", false);
         $("#diasEcoPrim").attr("readonly", false);
         $("#modalPreInfEcoPrimTrim").removeClass("d-none");
+
+        let examen = {
+            examen: 1,
+            embrion: $("#lcn").val(),
+            saco: $("#saco").val()
+        }
+        
+        let data = {
+            id: $("#id-paciente").val(),
+            tipo: 1,
+            data: JSON.stringify(examen)
+        }
+
+        $.post(serverURL + "examen/set/", data).done(function(response) {
+            if (data.length > 0 ){
+                $.each(data, function(i,val){
+                    let fila = "<tr><th scope='row'>1</th><td>M</td>";
+                    $("#table\\.ecografia\\.primtrim").html("")
+                });
+            }
+        });
     });
     $("#eco\\.prim\\.cancelar").on("click", function(){
         $("#eco\\.prim\\.nuevo").removeClass("d-none");
