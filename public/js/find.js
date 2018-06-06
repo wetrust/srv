@@ -241,6 +241,70 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("#eco\\.prim\\.nuevo").on("click", function(){
+        $("#eco\\.prim\\.nuevo").addClass("d-none");
+        $("#eco\\.prim\\.modificar").addClass("d-none");
+        $("#eco\\.prim\\.guardar").removeClass("d-none");
+        $("#eco\\.prim\\.cancelar").removeClass("d-none");
+        $("#eco\\.prim\\.eliminar").addClass("d-none");
+        $("#lcn").attr("readonly", false);
+        $("#saco").attr("readonly", false);
+        $("#graficoLcn").addClass("d-none");
+        $("#graficoSaco").addClass("d-none");
+        $("#fum-cuatro").attr("readonly", true);
+        $("#semanasEcoPrim").attr("readonly", true);
+        $("#diasEcoPrim").attr("readonly", true);
+        $("#modalPreInfEcoPrimTrim").addClass("d-none");
+    });
+    $("#eco\\.prim\\.modificar").on("click", function(){
+        $("#eco\\.prim\\.nuevo").addClass("d-none");
+        $("#eco\\.prim\\.modificar").addClass("d-none");
+        $("#eco\\.prim\\.guardar").removeClass("d-none");
+        $("#eco\\.prim\\.cancelar").removeClass("d-none");
+        $("#eco\\.prim\\.eliminar").addClass("d-none");
+        $("#lcn").attr("readonly", false);
+        $("#saco").attr("readonly", false);
+        $("#graficoLcn").addClass("d-none");
+        $("#graficoSaco").addClass("d-none");
+        $("#fum-cuatro").attr("readonly", true);
+        $("#semanasEcoPrim").attr("readonly", true);
+        $("#diasEcoPrim").attr("readonly", true);
+        $("#modalPreInfEcoPrimTrim").addClass("d-none");
+    });
+    $("#eco\\.prim\\.guardar").on("click", function(){
+        $("#eco\\.prim\\.nuevo").removeClass("d-none");
+        $("#eco\\.prim\\.modificar").removeClass("d-none");
+        $("#eco\\.prim\\.guardar").addClass("d-none");
+        $("#eco\\.prim\\.cancelar").addClass("d-none");
+        $("#lcn").attr("readonly", true);
+        $("#saco").attr("readonly", true);
+        $("#graficoLcn").removeClass("d-none");
+        $("#graficoSaco").removeClass("d-none");
+        $("#fum-cuatro").attr("readonly", false);
+        $("#semanasEcoPrim").attr("readonly", false);
+        $("#diasEcoPrim").attr("readonly", false);
+        $("#modalPreInfEcoPrimTrim").removeClass("d-none");
+    });
+    $("#eco\\.prim\\.cancelar").on("click", function(){
+        $("#eco\\.prim\\.nuevo").removeClass("d-none");
+        $("#eco\\.prim\\.modificar").removeClass("d-none");
+        $("#eco\\.prim\\.guardar").addClass("d-none");
+        $("#eco\\.prim\\.cancelar").addClass("d-none");
+        $("#lcn").attr("readonly", true);
+        $("#saco").attr("readonly", true);
+        $("#graficoLcn").removeClass("d-none");
+        $("#graficoSaco").removeClass("d-none");
+        $("#fum-cuatro").attr("readonly", false);
+        $("#semanasEcoPrim").attr("readonly", false);
+        $("#diasEcoPrim").attr("readonly", false);
+        $("#modalPreInfEcoPrimTrim").removeClass("d-none");
+    });
+    $("#eco\\.prim\\.eliminar").on("click", function(){
+        alert("bla");
+    });
+});
+
 function getExmPrimTrim(){
     let data = {
         id: $("#id-paciente").val(),
