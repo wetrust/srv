@@ -299,9 +299,9 @@ $(document).ready(function(){
         }
 
         $.post(serverURL + "examen/set/", data).done(function(response) {
-            if (data.length > 0 ){
+            if (response.length > 0 ){
                 $("#table\\.ecografia\\.primtrim").empty()
-                $.each(data.data, function(i,val){
+                $.each(response.data, function(i,val){
                     let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
                     $("#table\\.ecografia\\.primtrim").append(fila);
                 });
