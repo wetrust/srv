@@ -76,7 +76,7 @@ class EcoModel
         }
 
         if ($query->rowCount() == 1) {
-            return self::getEcos($rut, $tipo)
+            return self::getEcos($rut, $tipo);
         }
 
         // default return
