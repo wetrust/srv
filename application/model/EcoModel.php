@@ -69,7 +69,7 @@ class EcoModel
             $sql = "INSERT INTO eco_prim (id_paciente, n_examen,embrion,prom_saco) VALUES (:id_paciente,:n_examen,:embrion,:prom_saco)";
             $query = $database->prepare($sql);
             $query->execute(array(':id_paciente' => $rut, ':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"]));
-        else if ($tipo == 2){
+        } else if ($tipo == 2){
             $sql = "INSERT INTO notes (note_text, user_id) VALUES (:note_text, :user_id)";
             $query = $database->prepare($sql);
             $query->execute(array(':note_text' => $note_text, ':user_id' => Session::get('user_id')));
