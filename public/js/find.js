@@ -239,6 +239,8 @@ $(document).ready(function(){
                 });       
             }
         });
+
+        getExmPrimTrim();
     });
 });
 
@@ -300,7 +302,7 @@ $(document).ready(function(){
 
         $.post(serverURL + "examen/set/", data).done(function(response) {
             if ( Object.keys(response).length > 0 ){
-                $("#table\\.ecografia\\.primtrim").empty()
+                $("#table\\.ecografia\\.primtrim").empty();
                 $.each(response.data, function(i,val){
                     let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
                     $("#table\\.ecografia\\.primtrim").append(fila);
@@ -333,10 +335,11 @@ function getExmPrimTrim(){
     }
 
     $.post(serverURL + "examen/get/", data).done(function(response) {
-        if (data.length > 0 ){
-            $.each(data, function(i,val){
-                let fila = "<tr><th scope='row'>1</th><td>M</td>";
-                $("#table\\.ecografia\\.primtrim").html("")
+        if (bject.keys(response).length > 0 ){
+            ("#table\\.ecografia\\.primtrim").empty();
+            $.each(response.data, function(i,val){
+                let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
+                $("#table\\.ecografia\\.primtrim").append(fila);
             });
         }
     });
