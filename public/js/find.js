@@ -240,3 +240,19 @@ $(document).ready(function(){
         });
     });
 });
+
+function getExmPrimTrim(){
+    let data = {
+        id: $("#id-paciente").val(),
+        tipo: 1,
+    }
+
+    $.post(serverURL + "examen/get/", data).done(function(response) {
+        if (data.length > 0 ){
+            $.each(data, function(i,val){
+                let fila = "<tr><th scope='row'>1</th><td>M</td>";
+                $("#table\\.ecografia\\.primtrim").html("")
+            });
+        }
+    });
+}

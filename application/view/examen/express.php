@@ -1056,7 +1056,7 @@
                             </div>
                             <div class="col-md-12 col-lg-3 mb-2">
                                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <input type="text" class="form-control" id="lcn">
+                                    <input type="text" class="form-control" id="lcn" readonly>
                                     <div class="input-group-append">
 					<div class="input-group-text">mm</div>
 				    </div>
@@ -1082,7 +1082,7 @@
                             </div>
                             <div class="col-md-12 col-lg-3 mb-2">
                                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <input type="text" class="form-control" id="saco">
+                                    <input type="text" class="form-control" id="saco" readonly>
                                     <div class="input-group-append">
 					<div class="input-group-text">mm</div>
 				    </div>
@@ -1150,8 +1150,8 @@
                                                     <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
                                                     <input type="text" class="form-control" id="egAjustada" readonly="">
                                                     <div class="input-group-append">
-							<div class="input-group-text">semanas</div>
-				    		    </div>
+                                                        <div class="input-group-text">semanas</div>
+                                                    </div>
                                                  </div>
                                             </div>
                                             <div class="form-group">
@@ -1187,35 +1187,23 @@
                         </div>
                     </form>
                     <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">EG</th>
+                            <th scope="col">Medida embrion</th>
+                            <th scope="col">Prom. Saco</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table.ecografia.primtrim">
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div> 
             <div class="card mb-3">

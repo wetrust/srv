@@ -36,4 +36,12 @@ class ExamenController extends Controller
     {
         $this->View->render('parto/index');
     }
+
+    public function get()
+    {
+        $rut = Request::post('id');
+        $tipo = Request::post('tipo');
+
+        $this->View->renderJSON(EcoModel::getEcos($rut, $tipo));
+    }
 }
