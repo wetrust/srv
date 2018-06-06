@@ -336,7 +336,7 @@ function getExmPrimTrim(){
 
     $.post(serverURL + "examen/get/", data).done(function(response) {
         if (Object.keys(response).length > 0 ){
-            ("#table\\.ecografia\\.primtrim").empty();
+            $("#table\\.ecografia\\.primtrim").empty();
             $.each(response.data, function(i,val){
                 let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
                 $("#table\\.ecografia\\.primtrim").append(fila);
