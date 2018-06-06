@@ -58,7 +58,7 @@ class EcoModel
 
     public static function setEco($rut,$tipo,$data)
     {
-        if (!$note_text || strlen($rut) == 0) {
+        if (!$rut || strlen($rut) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
             return false;
         }
