@@ -211,6 +211,7 @@ $(document).ready(function(){
                 $('input[name="fecha\\.examen\\.previo"]').val((day)+"/"+(month)+"/"+dateTime.getFullYear());
                 $("#fee-dos").val((day)+"/"+(month)+"/"+dateTime.getFullYear()).trigger("change");
                 FechaExm = FechaExm.split("/");
+                $("#id-paciente").val(RUTPACIENTE);
                 $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
                     if (data.exist == true ){
                         StudyDate =  data.StudyDate;
@@ -299,9 +300,10 @@ $(document).ready(function(){
 
         $.post(serverURL + "examen/set/", data).done(function(response) {
             if (data.length > 0 ){
-                $.each(data, function(i,val){
-                    let fila = "<tr><th scope='row'>1</th><td>M</td>";
-                    $("#table\\.ecografia\\.primtrim").html("")
+                $("#table\\.ecografia\\.primtrim").empty()
+                $.each(data.data, function(i,val){
+                    let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
+                    $("#table\\.ecografia\\.primtrim").append(fila);
                 });
             }
         });
