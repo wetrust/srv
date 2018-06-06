@@ -274,7 +274,6 @@ $(document).ready(function(){
     });
     $("#eco\\.prim\\.guardar").on("click", function(){
         $("#eco\\.prim\\.nuevo").removeClass("d-none");
-        $("#eco\\.prim\\.modificar").removeClass("d-none");
         $("#eco\\.prim\\.guardar").addClass("d-none");
         $("#eco\\.prim\\.cancelar").addClass("d-none");
         $("#lcn").attr("readonly", true);
@@ -288,7 +287,6 @@ $(document).ready(function(){
     });
     $("#eco\\.prim\\.cancelar").on("click", function(){
         $("#eco\\.prim\\.nuevo").removeClass("d-none");
-        $("#eco\\.prim\\.modificar").removeClass("d-none");
         $("#eco\\.prim\\.guardar").addClass("d-none");
         $("#eco\\.prim\\.cancelar").addClass("d-none");
         $("#lcn").attr("readonly", true);
