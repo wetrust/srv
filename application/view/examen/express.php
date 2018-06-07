@@ -29,8 +29,10 @@
                 </div>
                 <div class="step-two-find">
                     <h6 class="text-center text-secondary">Paso 2</h6>
+                    <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Salir</button>
                     <h1 class="text-center">Busque un paciente</h1>
                     <h3 class="card-title text-primary">Buscar un Paciente</h3>
+                    <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
                     <div class="form-group row mb-0 mx-sm-3">
                         <div class="col-12 col-sm-6">
                             <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
@@ -50,22 +52,10 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
-                        </div>
-                    <div class="form-group row mb-0">
-                        <div class="col-7">
-                        </div>
-                        <div class="col-2">
-                            <label class="col-form-label"><strong>Ultima visita</strong></label>
-                        </div>
-                        <div class="col-2">
-                            <input type="text" class="form-control" name="fecha.examen.previo" readonly>
-                        </div>
-                        <div class="col-1 p-0">
-                            <button type="button" class="btn btn-primary" id="buscar.paciente.fechaprevia">Ver exm.</button>
-                        </div>
+                        <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
                     </div>
-                    <h2 class="card-title text-primary">Ultimos pacientes</h2>
+                    <h2 class="card-title text-primary">Ultimos Pacientes</h2>
+                    <p class="text-secondary">Haga click sobre uno de los pacientes de la lista para cargar sus exámenes</p>
                     <div class="row mt-3" id="buscar.pacientes.last.view.container">
                         <div class="col-12">
                             <table class="table">
