@@ -40,7 +40,6 @@ $(document).ready(function(){
         else{
             alert("Escriba un apellido")
         }
-        
     });
 
     $("#buscar\\.pacientes\\.last\\.view").on("change", function(){
@@ -103,13 +102,13 @@ $(document).ready(function(){
 	    if (data !== null){
                 if (Object.keys(data).length > 0 ){
                     $("input[name='fum']").val(data.fur_date);
-		    $("#fum-dos").trigger("change");
+		            $("#fum-dos").trigger("change");
                 }
 	    }
             else{
                 var dateTime = new Date();
                 var day = ("0" + dateTime.getDate()).slice(-2);
-	        var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
                 $("input[name='fum']").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
             }
         });
@@ -204,7 +203,9 @@ $(document).ready(function(){
                 $("#nombre-paciente").val(nombre[1]);
                 $("#apellido-paciente").val(nombre[0]);
                 $("#buscar\\.paciente\\.apellido").val(nombre[0]);
-                $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0]);
+                $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0] + ", " + RUTPACIENTE);
+                //nombre en eco primer trimestre
+                $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0]);
                 var dateTime = epochToDate(data[0].AccessTime)
                 var day = ("0" + dateTime.getDate()).slice(-2);
 	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
