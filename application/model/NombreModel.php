@@ -136,7 +136,9 @@ class NombreModel
             exit;
         }
 
-        return $lastname = explode(" ", $lastname);
+        $lastname = explode(" ", $lastname);
+
+        return explode(" ", $lastname);
 
         if (count($lastname) == 3){
             $lastname = $lastname[0] . " ". $lastname[1] . "^" .$lastname[2];
