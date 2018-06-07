@@ -1,10 +1,8 @@
 $(document).ready(function(){
-
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
         let apellido = {
             patient_lastname: $(this).val()
         }
-
         $.post(serverURL + "configuracion/obtenerapellidos", apellido).done(function (data) {
             $("#apellidos").empty();
             if (data.length > 0 ){
@@ -22,7 +20,6 @@ $(document).ready(function(){
     });
 
     $("#buscar\\.paciente\\.action").on("click", function(){
-
         let apellido = $("#buscar\\.paciente\\.apellido").val();
         let id = $("#buscar\\.paciente\\.id").val();
 
@@ -30,11 +27,10 @@ $(document).ready(function(){
             let data = {
                 patient_lastname: $("#buscar\\.paciente\\.apellido").val()
             }
-
             $.post(serverURL + "configuracion/obtenerut", data).done(function (data) {
                 $("#buscar\\.paciente\\.id").val("");
                 if (data !== null){
-                    if (Object.keys(data).length > 0 ){ 
+                    if (Object.keys(data).length > 0 ){
                         $("#buscar\\.paciente\\.id").val(data.PatientID);
                         obtenerNombre(data.PatientID);
                     }
@@ -95,12 +91,12 @@ $(document).ready(function(){
         FechaExm = $("#fee-dos").val();
 
         $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
-	    if (data !== null){
+	        if (data !== null){
                 if (Object.keys(data).length > 0 ){
                     $("input[name='fum']").val(data.fur_date);
 		            $("#fum-dos").trigger("change");
                 }
-	    }
+	        }
             else{
                 var dateTime = new Date();
                 var day = ("0" + dateTime.getDate()).slice(-2);
@@ -113,6 +109,7 @@ $(document).ready(function(){
             var fotosArreglo = [];
             var contadorIMG = 0;
             var iIMG = 0;
+
             $("input[name='fotosElegidas']").each(function() {
                 if (this.checked == true) {
                     fotosArreglo.push(iIMG);
@@ -287,19 +284,24 @@ function obtenerNombre(id_paciente){
             else{
                 var nombre = ["NN", "NN"];
             }
+
             $("#nombre-paciente").val(nombre[1]);
             $("#apellido-paciente").val(nombre[0]);
             $("#buscar\\.paciente\\.apellido").val(nombre[0]);
             $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0]);
+            
             //nombre en eco primer trimestre
             $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
+            
             var dateTime = epochToDate(data[0].AccessTime)
             var day = ("0" + dateTime.getDate()).slice(-2);
             var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+            
             $('input[name="fecha\\.examen\\.previo"]').val((day)+"/"+(month)+"/"+dateTime.getFullYear());
             $("#fee-dos").val((day)+"/"+(month)+"/"+dateTime.getFullYear()).trigger("change");
             FechaExm = FechaExm.split("/");
             $("#id-paciente").val(id_paciente);
+            
             $.get(serverURL + "configuracion/obtenerexamenes/" + id_paciente + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
                 if (data.exist == true ){
                     StudyDate =  data.StudyDate;

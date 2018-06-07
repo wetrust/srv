@@ -29,7 +29,7 @@
                 </div>
                 <div class="step-two-find">
                     <h6 class="text-center text-secondary">Paso 2</h6>
-                    <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Salir</button>
+                    <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
                     <h1 class="text-center">Busque un paciente</h1>
                     <h3 class="card-title text-primary">Buscar un Paciente</h3>
                     <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
@@ -75,6 +75,15 @@
                         </div>
                     </div>
                 </div>
+                <div id="step-one">
+                    <h6 class="text-center text-secondary">Paso 3</h6>
+                    <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
+                    <h1 class="text-center">Validar datos de paciente</h1>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-search fa-5x my-2"></i><br>Buscar Paciente</button>
+                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -85,7 +94,7 @@
             <div class="card-body">
 			    <div class="form-group row">
                     <div class="col-3">
-                    <h5 class="card-title text-primary mt-4">1.B- Ingresar Paciente</h5>
+                        <h5 class="card-title text-primary mt-4">1.B- Ingresar Paciente</h5>
                     </div>
                     <div class="col-4">
                         <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
@@ -94,76 +103,48 @@
                         <input type="text" class="form-control my-3" id="id-paciente">
                     </div>
                 </div>
-				<hr>
-				<h6 class="card-title text-muted">Datos opcionales</h6>
 				<div class="row mt-2 mb-2">
-                                    <div class="col-2">
-                                        <label for="nombre-paciente" class="col-form-label">Nombre</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
-                                    </div>
-                                    <div class="col-2">
-                                        <label for="nombre-paciente" class="col-form-label">Apellido</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <input class="form-control gris-claro" type="text" id="apellido-paciente">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                <div class="col-2">
-                                    <label for="fum2">Fecha de última mestruación</label>
-                                </div>
-                                <div class="col-4">
-                                    <div class="row">
-                                        <div class="col">
-                                            <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
-                                        </div>
-                                        <div class="col-4 p-0">
-                                            <button type="button" class="btn btn-info" id="guardarfur">Guardar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <label for="dbp" class="col-form-label">Edad Gestacional</label>
-                                </div>
-                                <div class="col-4">
-                                    <div class="row">
-                       <div class="col">
-                                    <select id="semanasEcoGen" class="form-control">
-                                    <option value="4">4</option>
-<option value="5">5</option>
-                                        <option value="6">6</option>                                        
-<option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                         <option value="14">14</option>
-                                         <option value="15">15</option>
-                                         <option value="16">16</option>
-                                         <option value="17">17</option>
-                                         <option value="18">18</option>
-                                         <option value="19">19</option>
-                                        <option value="20">20</option>
-                                     <option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option></select>
-                        </div>
-                        <div class="col">
-                            <select id="diasEcoGen" class="form-control">
-                                         <option value="0">0</option>
-                                         <option value="1">1</option>
-                                         <option value="2">2</option>
-                                         <option value="3">3</option>
-                                         <option value="4">4</option>
-                                         <option value="5">5</option>
-                                        <option value="6">6</option>
-                                     </select>
+                    <div class="col-2">
+                        <label for="nombre-paciente" class="col-form-label">Nombre</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
+                    </div>
+                    <div class="col-2">
+                        <label for="nombre-paciente" class="col-form-label">Apellido</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control gris-claro" type="text" id="apellido-paciente">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="fum2">Fecha de última mestruación</label>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
+                            </div>
+                            <div class="col-4 p-0">
+                                <button type="button" class="btn btn-info" id="guardarfur">Guardar</button>
+                            </div>
                         </div>
                     </div>
-                                </div>
+                    <div class="col-2">
+                        <label for="dbp" class="col-form-label">Edad Gestacional</label>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control" type="number" disabled>
                             </div>
+                            <div class="col">
+                                <input class="form-control" type="number" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 				<div class="row mt-2 mb-2">
                                     <div class="col-2 d-none">
                                         <label class="col-form-label">Edad materna</label>
