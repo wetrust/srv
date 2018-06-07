@@ -970,14 +970,20 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-9">
-                    <div class="card">
+                    <div class="card mb-3">
                         <div class="card-body">
                             <div class="form-group row">
-                                <div class="col">
+                                <div class="col-6 col-sm-3">
                                     <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
                                 </div>
-                                <div class="col">
+                                <div class="col-6 col-sm-3">
                                     <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro" readonly>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <label for="fee" class="col-form-label">EG al exámen</label>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" id="eco.prim.eg" readonly>
                                 </div>
                             </div>
                             <div class="form-group row d-none" name="embarazo">
@@ -990,41 +996,32 @@
                                         <option value="2">Feto B</option>
                                     </select>
                                 </div>
-                                <div class="col">
-                                </div>
-                                <div class="col">
-                                </div>
                             </div>
-                            <form class="mt-3 mb-3">
-                                <div class="form-group row">
-                                    <div class="col-md-12 col-lg-3 mb-2">
-                                        <h4 class="card-title">Medida del embrión</h4>
+                            <div class="form-group row">
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <label for="lcn">Medida del embrión</label>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="lcn" readonly>
+                                        <div class="input-group-append"><div class="input-group-text">mm</div></div>
                                     </div>
-                                    <div class="col-md-12 col-lg-3 mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="lcn" readonly>
-                                            <div class="input-group-append">
-                                            <div class="input-group-text">mm</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-3 mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <div class="input-group-prepend">
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-prepend">
                                             <div class="input-group-text">E.G. x LCN</div>
-                                            </div>
-                                            <input type="text" class="form-control" id="lcnPct" readonly>
                                         </div>
+                                        <input type="text" class="form-control" id="lcnPct" readonly>
                                     </div>
+                                </div>
                                     <div class="col">
                                         <button type="button" class="btn btn-outline-info" id="graficoLcn"><i class="fas fa-chart-bar"></i></button>
                                     </div>
                                 </div>
-                            </form>
-                            <form class="mt-3 mb-3">
                                 <div class="form-group row">
                                     <div class="col-md-12 col-lg-3 mb-2">
-                                        <h4 class="card-title" style="font-size:1.2rem;">Promedio Saco Gestacional</h4>
+                                        <label for="saco">Promedio Saco Gestacional</label>
                                     </div>
                                     <div class="col-md-12 col-lg-3 mb-2">
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
