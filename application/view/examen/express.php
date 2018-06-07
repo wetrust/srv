@@ -9,247 +9,235 @@
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
 <div class="container pt-2" id="paciente">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
-    <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
-  </ol>
-</nav>
-<div class="row">
-	<div class="col-md-12">
-        <div class="card mb-3">
-            <div class="card-body">
-                <div id="step-one">
-                    <h6 class="text-center text-secondary">Paso 1</h6>
-                    <h1 class="text-center">¿Qué desea hacer?</h1>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-search fa-5x my-2"></i><br>Buscar Paciente</button>
-                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
-                    </div>
-                </div>
-                <div class="step-two-find">
-                    <h6 class="text-center text-secondary">Paso 2</h6>
-                    <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
-                    <h1 class="text-center">Busque un paciente</h1>
-                    <h3 class="card-title text-primary">Buscar un Paciente</h3>
-                    <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
-                    <div class="form-group row mb-0 mx-sm-3">
-                        <div class="col-12 col-sm-6">
-                            <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control my-3" id="buscar.paciente.id">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
+            <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div id="step-one">
+                        <h6 class="text-center text-secondary">Paso 1</h6>
+                        <h1 class="text-center">¿Qué desea hacer?</h1>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-outline-primary"><i class="fas fa-search fa-5x my-2"></i><br>Buscar Paciente</button>
+                            <button type="button" class="btn btn-outline-primary"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
                         </div>
                     </div>
-                    <div class="form-group row mb-0 mx-sm-3">
-                        <div class="col-12 col-sm-6">
-                            <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
-                            <datalist id="apellidos">
-                            </datalist>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
-                    </div>
-                    <h2 class="card-title text-primary">Ultimos Pacientes</h2>
-                    <p class="text-secondary">Haga click sobre uno de los pacientes de la lista para cargar sus exámenes</p>
-                    <div class="row mt-3" id="buscar.pacientes.last.view.container">
-                        <div class="col-12">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Fecha</th>
-                                        <th scope="col">Tipo Exm. Previo</th>
-                                    </tr>
-                                </thead>
-                                <?php if ($this->dicom) { ?>
-                                <tbody id="table.body.pacientes">
-                                </tbody>
-                                <?php } ?>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div id="step-three">
-                    <h6 class="text-center text-secondary">Paso 3</h6>
-                    <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
-                    <h1 class="text-center">Validar datos de paciente</h1>
-                    <p class="text-secondary">Verifique si los datos son correctos y continue con el exámen</p>
-                    <div class="form-group row">
-                        <div class="col-3">
-                            <h5 class="card-title text-primary mt-4">1.B- Ingresar Paciente</h5>
-                        </div>
-                        <div class="col-4">
-                            <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
-                        </div>
-                        <div class="col-4">
-                            <input type="text" class="form-control my-3" id="id-paciente">
-                        </div>
-                    </div>
-				    <div class="row mt-2 mb-2">
-                        <div class="col-2">
-                            <label for="nombre-paciente" class="col-form-label">Nombre</label>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
-                        </div>
-                        <div class="col-2">
-                            <label for="nombre-paciente" class="col-form-label">Apellido</label>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control gris-claro" type="text" id="apellido-paciente">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-2">
-                            <label for="fum2">Fecha de última mestruación</label>
-                        </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="col">
-                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
-                                </div>
-                                <div class="col-4 p-0">
-                                    <button type="button" class="btn btn-info" id="guardarfur">Guardar</button>
-                                </div>
+                    <div class="step-two-find">
+                        <h6 class="text-center text-secondary">Paso 2</h6>
+                        <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
+                        <h1 class="text-center">Busque un paciente</h1>
+                        <h3 class="card-title text-primary">Buscar un Paciente</h3>
+                        <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
+                        <div class="form-group row mb-0 mx-sm-3">
+                            <div class="col-12 col-sm-6">
+                                <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control my-3" id="buscar.paciente.id">
                             </div>
                         </div>
-                        <div class="col-2">
-                            <label for="dbp" class="col-form-label">Edad Gestacional</label>
+                        <div class="form-group row mb-0 mx-sm-3">
+                            <div class="col-12 col-sm-6">
+                                <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
+                                <datalist id="apellidos">
+                                </datalist>
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="col">
-                                    <input class="form-control" type="number" disabled>
-                                </div>
-                                <div class="col">
-                                    <input class="form-control" type="number" disabled>
-                                </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
+                        </div>
+                        <h2 class="card-title text-primary">Ultimos Pacientes</h2>
+                        <p class="text-secondary">Haga click sobre uno de los pacientes de la lista para cargar sus exámenes</p>
+                        <div class="row mt-3" id="buscar.pacientes.last.view.container">
+                            <div class="col-12">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Tipo Exm. Previo</th>
+                                        </tr>
+                                    </thead>
+                                    <?php if ($this->dicom) { ?>
+                                    <tbody id="table.body.pacientes">
+                                    </tbody>
+                                    <?php } ?>
+                                </table>
                             </div>
                         </div>
                     </div>
-				    <div class="row mt-2 mb-2">
-                        <div class="col-2 d-none">
-                            <label class="col-form-label">Edad materna</label>
-                        </div>
-                        <div class="col-4 d-none">
-                            <select name="edad_materna" class="form-control gris-claro">
-                                <option value="10">10 años</option>
-                                <option value="11">11 años</option>
-                                <option value="12">12 años</option>
-                                <option value="13">13 años</option>
-                                <option value="14">14 años</option>
-                                <option value="15">15 años</option>
-                                <option value="16">16 años</option>
-                                <option value="17">17 años</option>
-                                <option value="18">18 años</option>
-                                <option value="19">19 años</option>
-                                <option value="20">20 años</option>
-                                <option value="21">21 años</option>
-                                <option value="22">22 años</option>
-                                <option value="23">23 años</option>
-                                <option value="24">24 años</option>
-                                <option value="25">25 años</option>
-                                <option value="26">26 años</option>
-                                <option value="27">27 años</option>
-                                <option value="28">28 años</option>
-                                <option value="29">29 años</option>
-                                <option value="30">30 años</option>
-                                <option value="31">31 años</option>
-                                <option value="32">32 años</option>
-                                <option value="33">33 años</option>
-                                <option value="34">34 años</option>
-                                <option value="35">35 años</option>
-                                <option value="36">36 años</option>
-                                <option value="37">37 años</option>
-                                <option value="38">38 años</option>
-                                <option value="39">39 años</option>
-                                <option value="40">40 años</option>
-                                <option value="41">41 años</option>
-                                <option value="42">42 años</option>
-                                <option value="43">43 años</option>
-                                <option value="44">44 años</option>
-                                <option value="45">45 años</option>
-                                <option value="46">46 años</option>
-                                <option value="47">47 años</option>
-                                <option value="48">48 años</option>
-                                <option value="49">49 años</option>
-                                <option value="50">50 años</option>
-                            </select>
-                        </div>
-                        <div class="col-2">
-                            <label for="tipo.examen.previo" class="col-form-label">Tipo Exm. Previo</label>
-                        </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="col">
-                                    <select id="tipo.examen.previo" class="form-control"></select>
-                                </div>
-                                <div class="col-4 p-0">
-                                    <button type="button" class="btn btn-info" id="guardartipoexamen">Guardar</button>
-                                </div>
+                    <div id="step-three">
+                        <h6 class="text-center text-secondary">Paso 3</h6>
+                        <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
+                        <h1 class="text-center">Validar datos de paciente</h1>
+                        <p class="text-secondary">Verifique si los datos son correctos y continue con el exámen</p>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <h5 class="card-title text-primary mt-4">1.B- Ingresar Paciente</h5>
+                            </div>
+                            <div class="col-4">
+                                <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control my-3" id="id-paciente">
                             </div>
                         </div>
-                        <div class="col-2">
-                            <label class="col-form-label">Fecha Exm. Previo</label>
+                        <div class="row mt-2 mb-2">
+                            <div class="col-2">
+                                <label for="nombre-paciente" class="col-form-label">Nombre</label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
+                            </div>
+                            <div class="col-2">
+                                <label for="nombre-paciente" class="col-form-label">Apellido</label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control gris-claro" type="text" id="apellido-paciente">
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <input type="text" class="form-control" name="fecha.examen.previo" readonly>
-                        </div>
-                    </div>
-			        <div class="row mb-3">
-                        <div class="col-8">
-					        <p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a datos de exámen.</p>
-				        </div>
-                        <div class="col text-right">
-                            <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
-                        </div>
-                    </div>
-			    </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-	<div class="col-md-12">
-        <div class="card mb-3">
-            <div class="card-body">
-                <h6 class="text-center text-secondary">Paso 3</h6>
-                <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
-                <h1 class="text-center">Revisar</h1>
-                
-			    
-		    </div>
-		</div>
-        </div>
-        <div class="row">
-		<div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-			    <div class="row">
-                                <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
-                                </div>
-                                <div class="col-3">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-2 active" id="configNoController" data-value="0">
-                                        <input type="radio" value="0" checked> NO
-                                        </label>
-                                        <label class="btn btn-outline-info p-2" id="configSiController" data-value="1">
-                                        <input type="radio" value="1"> SI
-                                        </label>
+                        <div class="form-group row">
+                            <div class="col-2">
+                                <label for="fum2">Fecha de última mestruación</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col">
+                                        <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
+                                    </div>
+                                    <div class="col-4 p-0">
+                                        <button type="button" class="btn btn-info" id="guardarfur">Guardar</button>
                                     </div>
                                 </div>
                             </div>
-			</div>
+                            <div class="col-2">
+                                <label for="dbp" class="col-form-label">Edad Gestacional</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col">
+                                        <input class="form-control" type="number" disabled>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" type="number" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2 mb-2">
+                            <div class="col-2 d-none">
+                                <label class="col-form-label">Edad materna</label>
+                            </div>
+                            <div class="col-4 d-none">
+                                <select name="edad_materna" class="form-control gris-claro">
+                                    <option value="10">10 años</option>
+                                    <option value="11">11 años</option>
+                                    <option value="12">12 años</option>
+                                    <option value="13">13 años</option>
+                                    <option value="14">14 años</option>
+                                    <option value="15">15 años</option>
+                                    <option value="16">16 años</option>
+                                    <option value="17">17 años</option>
+                                    <option value="18">18 años</option>
+                                    <option value="19">19 años</option>
+                                    <option value="20">20 años</option>
+                                    <option value="21">21 años</option>
+                                    <option value="22">22 años</option>
+                                    <option value="23">23 años</option>
+                                    <option value="24">24 años</option>
+                                    <option value="25">25 años</option>
+                                    <option value="26">26 años</option>
+                                    <option value="27">27 años</option>
+                                    <option value="28">28 años</option>
+                                    <option value="29">29 años</option>
+                                    <option value="30">30 años</option>
+                                    <option value="31">31 años</option>
+                                    <option value="32">32 años</option>
+                                    <option value="33">33 años</option>
+                                    <option value="34">34 años</option>
+                                    <option value="35">35 años</option>
+                                    <option value="36">36 años</option>
+                                    <option value="37">37 años</option>
+                                    <option value="38">38 años</option>
+                                    <option value="39">39 años</option>
+                                    <option value="40">40 años</option>
+                                    <option value="41">41 años</option>
+                                    <option value="42">42 años</option>
+                                    <option value="43">43 años</option>
+                                    <option value="44">44 años</option>
+                                    <option value="45">45 años</option>
+                                    <option value="46">46 años</option>
+                                    <option value="47">47 años</option>
+                                    <option value="48">48 años</option>
+                                    <option value="49">49 años</option>
+                                    <option value="50">50 años</option>
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <label for="tipo.examen.previo" class="col-form-label">Tipo Exm. Previo</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col">
+                                        <select id="tipo.examen.previo" class="form-control"></select>
+                                    </div>
+                                    <div class="col-4 p-0">
+                                        <button type="button" class="btn btn-info" id="guardartipoexamen">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <label class="col-form-label">Fecha Exm. Previo</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" name="fecha.examen.previo" readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-8">
+                                <p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a datos de exámen.</p>
+                            </div>
+                            <div class="col text-right">
+                                <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+	    <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="card-body">
+			        <div class="row">
+                        <div class="col-9">
+                            <h5 class="card-title text-primary text-left mt-2">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
+                        </div>
+                        <div class="col-3">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-info p-2 active" id="configNoController" data-value="0">
+                                    <input type="radio" value="0" checked> NO
+                                </label>
+                                <label class="btn btn-outline-info p-2" id="configSiController" data-value="1">
+                                    <input type="radio" value="1"> SI
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+			    </div>
 		    </div>
 		</div>
-	    </div>
+	</div>
 </div>
 <div class="container" id="consulta" style="display:none;">
 	<div class="bienvenida mb-3 p-2">
