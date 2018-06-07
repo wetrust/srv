@@ -31,7 +31,7 @@
                     <h6 class="text-center text-secondary">Paso 2</h6>
                     <h1 class="text-center">Busque un paciente</h1>
                     <h3 class="card-title text-primary">Buscar un Paciente</h3>
-                    <div class="form-group row mb-0">
+                    <div class="form-group row mb-0 mx-sm-3">
                         <div class="col-12 col-sm-6">
                             <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
                         </div>
@@ -39,7 +39,7 @@
                             <input type="text" class="form-control my-3" id="buscar.paciente.id">
                         </div>
                     </div>
-                    <div class="form-group row mb-0">
+                    <div class="form-group row mb-0 mx-sm-3">
                         <div class="col-12 col-sm-6">
                             <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
                         </div>
@@ -49,8 +49,8 @@
                             </datalist>
                         </div>
                     </div>
-                    <div class="col-1 p-0">
-                            <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
+                    <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
                         </div>
                     <div class="form-group row mb-0">
                         <div class="col-7">
@@ -975,7 +975,7 @@
                                 <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
                             </div>
                             <h6 class="text-center mx-2">Informes</h6>
-                            <div class="d-flex justify-content-center" role="group" aria-label="First group">
+                            <div class="d-flex justify-content-center">
                                 <button class="btn btn-info" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
                             </div>
                         </div>
