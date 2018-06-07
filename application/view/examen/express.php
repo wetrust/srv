@@ -934,6 +934,11 @@
             </div>
         </div>
         <div class="container" id="ecoObsPrimTrim" style="display:none;">
+            <div class="container">
+                <h1>Ecografía Obstétrica de 1° Trimestre</h1>
+                <h2>Juana Peres Peres, 12345678-9</h2>
+                <h3>FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h3>
+            </div>
             <div class="bienvenida mb-3">
                 <div class="container">
                     <div class="media">
