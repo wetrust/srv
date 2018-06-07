@@ -936,23 +936,23 @@
         <div class="container" id="ecoObsPrimTrim" style="display:none;">
             <div class="row">
                 <div class="col pr-0">
-                    <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                    <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                 </div>
-                <div class="col col-sm-10 pl-0">
+                <div class="col col-sm-10 pl-0 mt-sm-3">
                     <h6 class="text-secondarymt-2">Ecografía Obstétrica de 1° Trimestre</h6>
                     <h4 class="mb-0">Juana Peres Peres, 12345678-9</h4>
                     <h6 class="text-info">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
                 </div>
             </div>
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
-    <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica</li>
-    <li class="ml-auto"><a href="#tipoExamen">Volver</a></li>
-  </ol>
-</nav>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
+                    <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica</li>
+                    <li class="ml-auto"><a href="#tipoExamen">Volver</a></li>
+                </ol>
+            </nav>
             <div class="form-group row">
                 <div class="col">
                     <label for="fum2">Fecha de última mestruación</label>
