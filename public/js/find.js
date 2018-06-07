@@ -31,7 +31,7 @@ $(document).ready(function(){
                 patient_lastname: $("#buscar\\.paciente\\.apellido").val()
             }
 
-            $.post(serverURL + "configuracion/obtenerut", apellido).done(function (data) {
+            $.post(serverURL + "configuracion/obtenerut", data).done(function (data) {
                 $("#buscar\\.paciente\\.id").val("");
                 if (data !== null){
                     if (Object.keys(data).length > 0 ){ 
