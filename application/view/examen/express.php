@@ -938,8 +938,8 @@
                 <div class="col pr-0">
                     <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                 </div>
-                <div class="col col-sm-10 pl-0 mt-sm-3">
-                    <h6 class="text-secondarymt-2">Ecografía Obstétrica de 1° Trimestre</h6>
+                <div class="col col-sm-10 pl-0 mt-sm-4">
+                    <h6 class="text-secondary mt-2">Ecografía Obstétrica de 1° Trimestre</h6>
                     <h4 class="mb-0">Juana Peres Peres, 12345678-9</h4>
                     <h6 class="text-info">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
                 </div>
@@ -953,6 +953,14 @@
                     <li class="ml-auto"><a href="#tipoExamen">Volver</a></li>
                 </ol>
             </nav>
+            <div class="row">
+                <div class="col-12 col-sm-3 order-sm-1">
+                    botones
+                </div>
+                <div class="col-12 col-sm-9">
+                    elementos
+                </div>
+            </div>
             <div class="form-group row">
                 <div class="col">
                     <label for="fum2">Fecha de última mestruación</label>
