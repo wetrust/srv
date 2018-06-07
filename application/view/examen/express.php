@@ -23,31 +23,35 @@
                     <h6 class="text-center text-secondary">Paso 1</h6>
                     <h1 class="text-center">¿Qué desea hacer?</h1>
                     <div class="text-center">
-                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-search fa-5x my-2"></i><br>Buscar un paciente</button>
+                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-search fa-5x my-2"></i><br>Buscar Paciente</button>
                         <button type="button" class="btn btn-outline-primary"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
                     </div>
                 </div>
                 <div class="step-two-find">
-                <h1 class="card-title text-primary">Buscar un Paciente</h1>
+                    <h6 class="text-center text-secondary">Paso 2</h6>
+                    <h1 class="text-center">Busque un paciente</h1>
+                    <h3 class="card-title text-primary">Buscar un Paciente</h3>
                     <div class="form-group row mb-0">
-                        <div class="col-2">
+                        <div class="col-12 col-sm-6">
                             <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
                         </div>
-                        <div class="col-3">
+                        <div class="col-12 col-sm-6">
                             <input type="text" class="form-control my-3" id="buscar.paciente.id">
                         </div>
-                        <div class="col-2">
+                    </div>
+                    <div class="form-group row mb-0">
+                        <div class="col-12 col-sm-6">
                             <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-6">
                             <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
                             <datalist id="apellidos">
                             </datalist>
                         </div>
-                        <div class="col-1 p-0">
+                    </div>
+                    <div class="col-1 p-0">
                             <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
                         </div>
-                    </div>
                     <div class="form-group row mb-0">
                         <div class="col-7">
                         </div>
@@ -62,15 +66,6 @@
                         </div>
                     </div>
                     <h2 class="card-title text-primary">Ultimos pacientes</h2>
-                    <div class="form-group row mb-0">
-                        <div class="col-12">
-                            <div class="form-check pl-0">
-                                <label class="form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
-                                <input type="checkbox" class="form-check-input ml-2" id="buscar.pacientes.last.view">
-                                <label class="form-check-label ml-4" id="buscar.pacientes.last.view.text">No</label>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row mt-3" id="buscar.pacientes.last.view.container">
                         <div class="col-12">
                             <table class="table">

@@ -42,19 +42,6 @@ $(document).ready(function(){
         }
     });
 
-    $("#buscar\\.pacientes\\.last\\.view").on("change", function(){
-        let check = $(this).is(':checked');
-
-        if (check == true){
-            $("#buscar\\.pacientes\\.last\\.view\\.text").html("Si");
-            $("#buscar\\.pacientes\\.last\\.view\\.container").removeClass("d-none");
-        }
-        else{
-            $("#buscar\\.pacientes\\.last\\.view\\.text").html("No");
-            $("#buscar\\.pacientes\\.last\\.view\\.container").addClass("d-none");
-        }
-    });
-
     $("#buscar\\.paciente\\.fechaprevia").on("click", function(){
         let fecha = $('input[name="fecha\\.examen\\.previo"]').val();
         
@@ -96,7 +83,6 @@ $(document).ready(function(){
     $("#buscar\\.paciente\\.id, #id-paciente").on("change", function() {
         RUTPACIENTE = $(this).val();
         FechaExm = $("#fee-dos").val();
-        $("#buscar\\.pacientes\\.last\\.view").prop('checked', false).trigger("change");
 
         $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
 	    if (data !== null){
