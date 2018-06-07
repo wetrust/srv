@@ -955,263 +955,208 @@
             </nav>
             <div class="row">
                 <div class="col-12 col-sm-3 order-sm-1">
-                    <div class="btn-group-vertical" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="btn-group-vertical" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
+                                <button class="btn btn-info mx-auto mr-3 d-block" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía primer trimestre</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-9">
-                    elementos
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col">
-                    <label for="fum2">Fecha de última mestruación</label>
-                </div>
-                <div class="col">
-                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fum" id="fum-cuatro">
-                </div>
-                <div class="col">
-                    <label for="dbp" class="col-form-label">Edad Gestacional</label>
-                </div>
-                <div class="col">
-                     <div class="row">
-                       <div class="col">
-                                    <select id="semanasEcoPrim" class="form-control">
-                                    <option value="4">4</option>
-<option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                         <option value="14">14</option>
-                                         <option value="15">15</option>
-                                         <option value="16">16</option>
-                                         <option value="17">17</option>
-                                         <option value="18">18</option>
-                                         <option value="19">19</option>
-                                        <option value="20">20</option>
-                                     <option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option></select>
-                        </div>
-                        <div class="col">
-                            <select id="diasEcoPrim" class="form-control">
-                                         <option value="0">0</option>
-                                         <option value="1">1</option>
-                                         <option value="2">2</option>
-                                         <option value="3">3</option>
-                                         <option value="4">4</option>
-                                         <option value="5">5</option>
-                                        <option value="6">6</option>
-                                     </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col">
-                    <label for="dbp" class="col-form-label">Fecha probable de parto</label>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" name="fpp" readonly>
-                </div>
-                <div class="col">
-                    <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
-                </div>
-                <div class="col">
-                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro">
-                </div>
-            </div>
-            <div class="form-group row d-none" name="embarazo">
-                <div class="col">
-                    <label for="embarazo" class="col-form-label">Embarazo Gemelar</label>
-                </div>
-                <div class="col">
-                    <select id="embarazoEcoPrimTrim" class="form-control gris-claro">
-                        <option value="1">Feto A</option>
-                        <option value="2">Feto B</option>
-                     </select>
-                </div>
-                <div class="col">
-                </div>
-                <div class="col">
-                </div>
-            </div>
-            <hr style="border-color:rgba(0, 0, 0, 0.36);">
-            <div class="card">
-                <div class="card-body">
-                    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr style="border-color:rgba(0, 0, 0, 0.36);">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <form class="mt-3 mb-3">
-                        <div class="form-group row">
-                            <div class="col-md-12 col-lg-3 mb-2">
-                                <h4 class="card-title">Medida del embrión</h4>
-                            </div>
-                            <div class="col-md-12 col-lg-3 mb-2">
-                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <input type="text" class="form-control" id="lcn" readonly>
-                                    <div class="input-group-append">
-					<div class="input-group-text">mm</div>
-				    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <div class="col">
+                                    <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro">
                                 </div>
                             </div>
-                            <div class="col-md-12 col-lg-3 mb-2">
-                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <div class="input-group-prepend">
-					<div class="input-group-text">E.G. x LCN</div>
-				    </div>
-                                    <input type="text" class="form-control" id="lcnPct" readonly>
+                            <div class="form-group row d-none" name="embarazo">
+                                <div class="col">
+                                    <label for="embarazo" class="col-form-label">Embarazo Gemelar</label>
+                                </div>
+                                <div class="col">
+                                    <select id="embarazoEcoPrimTrim" class="form-control gris-claro">
+                                        <option value="1">Feto A</option>
+                                        <option value="2">Feto B</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                </div>
+                                <div class="col">
                                 </div>
                             </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-info" id="graficoLcn">Ver Gráficas</button>
-                            </div>
-                        </div>
-                    </form>
-                    <form class="mt-3 mb-3">
-                        <div class="form-group row">
-                            <div class="col-md-12 col-lg-3 mb-2">
-                                <h4 class="card-title" style="font-size:1.2rem;">Promedio Saco Gestacional</h4>
-                            </div>
-                            <div class="col-md-12 col-lg-3 mb-2">
-                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <input type="text" class="form-control" id="saco" readonly>
-                                    <div class="input-group-append">
-					<div class="input-group-text">mm</div>
-				    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-lg-3 mb-2">
-                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-				    <div class="input-group-prepend">
-					<div class="input-group-text">E.G. x Saco</div>
-				    </div>
-                                    <input type="text" class="form-control" id="sacoPct" readonly>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-info" id="graficoSaco">Ver Gráficas</button>
-                            </div>
-                        </div>
-                        <div class="form-group row mt-3" id="resultadoAjusteEcoPrimTrim" style="display:none;">
-                            <div class="col-12">
-                                <div class="alert alert-info" role="alert">
-                                    <div class="row mt-3">
-                                        <div class="col">
-                                            <h6 class="text-center">Cálculos por FUM materna referida</h6>
-                                            <div class="form-group">
-                                                <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
-                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                    <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" id="furReferida" readonly="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>
-                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                    <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" id="egReferida" readonly="">
-						    <div class="input-group-append">
-							<div class="input-group-text">semanas</div>
-				    		    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
-                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                    <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" id="fppReferida" readonly="">
-                                                </div>
+                            <form class="mt-3 mb-3">
+                                <div class="form-group row">
+                                    <div class="col-md-12 col-lg-3 mb-2">
+                                        <h4 class="card-title">Medida del embrión</h4>
+                                    </div>
+                                    <div class="col-md-12 col-lg-3 mb-2">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            <input type="text" class="form-control" id="lcn" readonly>
+                                            <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <h6 class="text-center">Cálculos por ajuste ecográfico</h6>
-                                            <div class="form-group">
-                                                <label for="formGroupExampleInput"><strong>FUM</strong> Ajustada</label>
-                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                    <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-12 col-lg-3 mb-2">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            <div class="input-group-prepend">
+                                            <div class="input-group-text">E.G. x LCN</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="lcnPct" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-outline-info" id="graficoLcn">Ver Gráficas</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="mt-3 mb-3">
+                                <div class="form-group row">
+                                    <div class="col-md-12 col-lg-3 mb-2">
+                                        <h4 class="card-title" style="font-size:1.2rem;">Promedio Saco Gestacional</h4>
+                                    </div>
+                                    <div class="col-md-12 col-lg-3 mb-2">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            <input type="text" class="form-control" id="saco" readonly>
+                                            <div class="input-group-append">
+                            <div class="input-group-text">mm</div>
+                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-3 mb-2">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-prepend">
+                            <div class="input-group-text">E.G. x Saco</div>
+                            </div>
+                                            <input type="text" class="form-control" id="sacoPct" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-outline-info" id="graficoSaco">Ver Gráficas</button>
+                                    </div>
+                                </div>
+                                <div class="form-group row mt-3" id="resultadoAjusteEcoPrimTrim" style="display:none;">
+                                    <div class="col-12">
+                                        <div class="alert alert-info" role="alert">
+                                            <div class="row mt-3">
+                                                <div class="col">
+                                                    <h6 class="text-center">Cálculos por FUM materna referida</h6>
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
+                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control" id="furReferida" readonly="">
+                                                        </div>
                                                     </div>
-                                                    <input type="text" class="form-control" id="furAjustada" readonly="">
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>
+                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                            <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control" id="egReferida" readonly="">
+                                    <div class="input-group-append">
+                                    <div class="input-group-text">semanas</div>
+                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
+                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control" id="fppReferida" readonly="">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="formGroupExampleInput2"><strong>EG</strong> ajustada</label>
-                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                    <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                                                    <input type="text" class="form-control" id="egAjustada" readonly="">
-                                                    <div class="input-group-append">
-                                                        <div class="input-group-text">semanas</div>
+                                                <div class="col">
+                                                    <h6 class="text-center">Cálculos por ajuste ecográfico</h6>
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput"><strong>FUM</strong> Ajustada</label>
+                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control" id="furAjustada" readonly="">
+                                                        </div>
                                                     </div>
-                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="formGroupExampleInput2"><strong>FPP</strong> Ajustada</label>
-                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                    <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput2"><strong>EG</strong> ajustada</label>
+                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                            <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                            <input type="text" class="form-control" id="egAjustada" readonly="">
+                                                            <div class="input-group-append">
+                                                                <div class="input-group-text">semanas</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <input type="text" class="form-control" id="fppAjustada" readonly="">
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput2"><strong>FPP</strong> Ajustada</label>
+                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control" id="fppAjustada" readonly="">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-12">
+                                        <div class="alert alert-info" role="alert">
+                                            <p class="mb-0"><span id="diferenciaEcoPrimTrim" class="lead">Diferencia observada entre edad gestacional por FUM referida y edad gestacional por exámen ecografico es de 0 días.</span> Rango de tolerancia para diferencia entre edad esperada por FUM y obtenida por exámen ecográfico, para las semanas 8 a 10 es de ± 3 días.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="alert alert-info" role="alert">
-                                    <p class="mb-0"><span id="diferenciaEcoPrimTrim" class="lead">Diferencia observada entre edad gestacional por FUM referida y edad gestacional por exámen ecografico es de 0 días.</span> Rango de tolerancia para diferencia entre edad esperada por FUM y obtenida por exámen ecográfico, para las semanas 8 a 10 es de ± 3 días.</p>
+                                <div class="form-group row" id="preguntaAjusteEcoPrimTrim" style="display:none;">
+                                    <div class="col">
+                                        <h5 class="alert-heading">¿Necesita realizar ajuste a la edad gestacional?</h5>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-outline-primary p-3 active">
+                                            <input type="radio" name="ajustarEcoPrimTrim" value="0" checked=""> NO</label>
+                                            <label class="btn btn-outline-primary p-3">
+                                            <input type="radio" name="ajustarEcoPrimTrim" value="1"> SI</label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">EG</th>
+                                    <th scope="col">Medida embrion</th>
+                                    <th scope="col">Prom. Saco</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table.ecografia.primtrim">
+                                    <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="form-group row" id="preguntaAjusteEcoPrimTrim" style="display:none;">
-                            <div class="col">
-                                <h5 class="alert-heading">¿Necesita realizar ajuste a la edad gestacional?</h5>
-                            </div>
-                            <div class="col">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-primary p-3 active">
-                                    <input type="radio" name="ajustarEcoPrimTrim" value="0" checked=""> NO</label>
-                                    <label class="btn btn-outline-primary p-3">
-                                    <input type="radio" name="ajustarEcoPrimTrim" value="1"> SI</label>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">EG</th>
-                            <th scope="col">Medida embrion</th>
-                            <th scope="col">Prom. Saco</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table.ecografia.primtrim">
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    
                 </div>
             </div> 
             <div class="card mb-3">
                 <div class="card-body">
-                    <button class="btn btn-info mx-auto mr-3 d-block" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía primer trimestre</button>
+                    
                 </div>
             </div>
         </div>
