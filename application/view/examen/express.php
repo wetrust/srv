@@ -934,16 +934,16 @@
             </div>
         </div>
         <div class="container" id="ecoObsPrimTrim" style="display:none;">
-            <div class="row">
-                <div class="col">
+            <div class="row bienvenida">
+                <div class="col pr-0">
                     <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                 </div>
-                <div class="col col-sm-8">
+                <div class="col col-sm-10 pl-0">
                     <h6 class="text-secondarymt-2">Ecografía Obstétrica de 1° Trimestre</h6>
                     <h4 class="mb-0">Juana Peres Peres, 12345678-9</h4>
                     <h6 class="text-info">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
                 </div>
-            <div class="bienvenida mb-3">
+            <div class=" mb-3">
                 <div class="container">
                     <div class="media">
                         
