@@ -1,3 +1,8 @@
+<script>
+    $(document).ready(function(){
+        $("body").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
+    });
+</script>
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
 <div class="container pt-2" id="paciente">
@@ -959,7 +964,7 @@
                         <div class="card-body">
                             <div class="btn-group-vertical" role="group" aria-label="First group">
                                 <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
-                                <button class="btn btn-info mx-auto mr-3 d-block" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía primer trimestre</button>
+                                <button class="btn btn-info mx-auto mr-3 d-block" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
                             </div>
                         </div>
                     </div>
