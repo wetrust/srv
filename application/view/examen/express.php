@@ -977,7 +977,7 @@
                                     <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
                                 </div>
                                 <div class="col">
-                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro">
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro" readonly>
                                 </div>
                             </div>
                             <div class="form-group row d-none" name="embarazo">
@@ -1017,7 +1017,7 @@
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <button type="button" class="btn btn-outline-info" id="graficoLcn">Ver Gráficas</button>
+                                        <button type="button" class="btn btn-outline-info" id="graficoLcn"><i class="fas fa-chart-bar"></i></button>
                                     </div>
                                 </div>
                             </form>
@@ -1043,7 +1043,7 @@
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <button type="button" class="btn btn-outline-info" id="graficoSaco">Ver Gráficas</button>
+                                        <button type="button" class="btn btn-outline-info" id="graficoSaco"><i class="fas fa-chart-bar"></i></button>
                                     </div>
                                 </div>
                                 <div class="form-group row mt-3" id="resultadoAjusteEcoPrimTrim" style="display:none;">
@@ -1132,7 +1132,14 @@
                                     </div>
                                 </div>
                             </form>
-                            <table class="table">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5>Exámenes</h5>
+                <table class="table">
                                 <thead>
                                     <tr>
                                     <th scope="col">#</th>
@@ -1150,20 +1157,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    
                 </div>
             </div> 
-            <div class="card mb-3">
-                <div class="card-body">
-                    
-                </div>
-            </div>
         </div>
         <div class="container" id="ecoObsSegTrim" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
