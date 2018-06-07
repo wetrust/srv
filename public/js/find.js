@@ -35,9 +35,12 @@ $(document).ready(function(){
                 $("#buscar\\.paciente\\.id").val("");
                 if (data !== null){
                     if (Object.keys(data).length > 0 ){ 
-                        $("#buscar\\.paciente\\.id").val(data.PatientID).trigger("change");
-                        $("#id-paciente").val(data.PatientID);
+                        $("#buscar\\.paciente\\.id").val(data.PatientID);
+                        obtenerNombre(data.PatientID);
                     }
+                }
+                else{
+                    alert("No hay pacientes con el apellido escrito");
                 }
             });
         }
