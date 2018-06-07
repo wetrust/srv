@@ -19,66 +19,77 @@
 	<div class="col-md-12">
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title text-primary">1.A - Buscar un Paciente</h5>
-                <div class="form-group row mb-0">
-                    <div class="col-2">
-                        <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
-                    </div>
-                    <div class="col-3">
-                        <input type="text" class="form-control my-3" id="buscar.paciente.id">
-                    </div>
-                    <div class="col-2">
-                        <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
-                    </div>
-                    <div class="col-4">
-                        <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
-                        <datalist id="apellidos">
-                        </datalist>
-                    </div>
-                    <div class="col-1 p-0">
-                        <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
+                <div id="step-one">
+                    <h6 class="text-center text-secondary">Paso 1</h6>
+                    <h1 class="text-center">¿Qué desea hacer?</h1>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-search fa-5x my-2"></i><br>Buscar un paciente</button>
+                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
                     </div>
                 </div>
-                <div class="form-group row mb-0">
-                    <div class="col-7">
+                <div class="step-two-find">
+                <h1 class="card-title text-primary">Buscar un Paciente</h1>
+                    <div class="form-group row mb-0">
+                        <div class="col-2">
+                            <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control my-3" id="buscar.paciente.id">
+                        </div>
+                        <div class="col-2">
+                            <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
+                            <datalist id="apellidos">
+                            </datalist>
+                        </div>
+                        <div class="col-1 p-0">
+                            <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action">Buscar</button>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <label class="col-form-label"><strong>Ultima visita</strong></label>
+                    <div class="form-group row mb-0">
+                        <div class="col-7">
+                        </div>
+                        <div class="col-2">
+                            <label class="col-form-label"><strong>Ultima visita</strong></label>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" class="form-control" name="fecha.examen.previo" readonly>
+                        </div>
+                        <div class="col-1 p-0">
+                            <button type="button" class="btn btn-primary" id="buscar.paciente.fechaprevia">Ver exm.</button>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <input type="text" class="form-control" name="fecha.examen.previo" readonly>
+                    <h2 class="card-title text-primary">Ultimos pacientes</h2>
+                    <div class="form-group row mb-0">
+                        <div class="col-12">
+                            <div class="form-check pl-0">
+                                <label class="form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
+                                <input type="checkbox" class="form-check-input ml-2" id="buscar.pacientes.last.view">
+                                <label class="form-check-label ml-4" id="buscar.pacientes.last.view.text">No</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-1 p-0">
-                        <button type="button" class="btn btn-primary" id="buscar.paciente.fechaprevia">Ver exm.</button>
-                    </div>
-                </div>
-                <div class="form-group row mb-0">
-                    <div class="col-12">
-                        <div class="form-check pl-0">
-                            <label class="form-check-label" for="buscar.pacientes.last.view">Ver últimos pacientes</label>
-                            <input type="checkbox" class="form-check-input ml-2" id="buscar.pacientes.last.view">
-                            <label class="form-check-label ml-4" id="buscar.pacientes.last.view.text">No</label>
+                    <div class="row mt-3" id="buscar.pacientes.last.view.container">
+                        <div class="col-12">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Tipo Exm. Previo</th>
+                                    </tr>
+                                </thead>
+                                <?php if ($this->dicom) { ?>
+                                <tbody id="table.body.pacientes">
+                                </tbody>
+                                <?php } ?>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="row d-none mt-3" id="buscar.pacientes.last.view.container">
-		            <div class="col-12">
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Tipo Exm. Previo</th>
-                                </tr>
-                            </thead>
-                            <?php if ($this->dicom) { ?>
-                            <tbody id="table.body.pacientes">
-                            </tbody>
-                            <?php } ?>
-                        </table>
-                    </div>
-			    </div>
             </div>
         </div>
     </div>
