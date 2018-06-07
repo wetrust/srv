@@ -203,9 +203,9 @@ $(document).ready(function(){
                 $("#nombre-paciente").val(nombre[1]);
                 $("#apellido-paciente").val(nombre[0]);
                 $("#buscar\\.paciente\\.apellido").val(nombre[0]);
-                $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0] + ", " + RUTPACIENTE);
+                $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0]);
                 //nombre en eco primer trimestre
-                $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0]);
+                $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0] + ", " + RUTPACIENTE);
                 var dateTime = epochToDate(data[0].AccessTime)
                 var day = ("0" + dateTime.getDate()).slice(-2);
 	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
