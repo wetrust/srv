@@ -1,6 +1,7 @@
 <script>
     $(document).ready(function(){
-        $("body").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
+        $("head").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
+        $("head").addClass("h-100");
     });
 </script>
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
