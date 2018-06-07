@@ -964,7 +964,10 @@
                         <div class="card-body">
                             <div class="btn-group-vertical" role="group" aria-label="First group">
                                 <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
-                                <button class="btn btn-info mx-auto mr-3 d-block" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
+                            </div>
+                            <h6>Informes</h6>
+                            <div class="btn-group-vertical" role="group" aria-label="First group">
+                                <button class="btn btn-info" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
                             </div>
                         </div>
                     </div>
@@ -974,7 +977,7 @@
                         <div class="card-body">
                             <div class="form-group row">
                                 <div class="col-6 col-sm-3">
-                                    <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
+                                    <label for="fee" class="col-form-label">Fecha de exámen</label>
                                 </div>
                                 <div class="col-6 col-sm-3">
                                     <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro" readonly>
@@ -1015,69 +1018,65 @@
                                         <input type="text" class="form-control" id="lcnPct" readonly>
                                     </div>
                                 </div>
-                                    <div class="col">
-                                        <button type="button" class="btn btn-outline-info" id="graficoLcn"><i class="fas fa-chart-bar"></i></button>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-info" id="graficoLcn"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <label for="saco">Promedio Saco Gestacional</label>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="saco" readonly>
+                                        <div class="input-group-append"><div class="input-group-text">mm</div></div>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-md-12 col-lg-3 mb-2">
-                                        <label for="saco">Promedio Saco Gestacional</label>
-                                    </div>
-                                    <div class="col-md-12 col-lg-3 mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="saco" readonly>
-                                            <div class="input-group-append">
-                            <div class="input-group-text">mm</div>
-                            </div>
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">E.G. x Saco</div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-3 mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-prepend">
-                            <div class="input-group-text">E.G. x Saco</div>
-                            </div>
-                                            <input type="text" class="form-control" id="sacoPct" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <button type="button" class="btn btn-outline-info" id="graficoSaco"><i class="fas fa-chart-bar"></i></button>
+                                        <input type="text" class="form-control" id="sacoPct" readonly>
                                     </div>
                                 </div>
-                                <div class="form-group row mt-3" id="resultadoAjusteEcoPrimTrim" style="display:none;">
-                                    <div class="col-12">
-                                        <div class="alert alert-info" role="alert">
-                                            <div class="row mt-3">
-                                                <div class="col">
-                                                    <h6 class="text-center">Cálculos por FUM materna referida</h6>
-                                                    <div class="form-group">
-                                                        <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
-                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
-                                                            </div>
-                                                            <input type="text" class="form-control" id="furReferida" readonly="">
-                                                        </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-info" id="graficoSaco"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row mt-3" id="resultadoAjusteEcoPrimTrim" style="display:none;">
+                                <div class="col-12">
+                                    <div class="alert alert-info" role="alert">
+                                        <div class="row mt-3">
+                                            <div class="col">
+                                                <h6 class="text-center">Cálculos por FUM materna referida</h6>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>
-                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                            <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i>
-                                                            </div>
-                                                            <input type="text" class="form-control" id="egReferida" readonly="">
-                                    <div class="input-group-append">
-                                    <div class="input-group-text">semanas</div>
-                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
-                                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
-                                                            </div>
-                                                            <input type="text" class="form-control" id="fppReferida" readonly="">
-                                                        </div>
-                                                    </div>
+                                                    <input type="text" class="form-control" id="furReferida" readonly="">
                                                 </div>
-                                                <div class="col">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>
+                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                    <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                </div>
+                                                <input type="text" class="form-control" id="egReferida" readonly="">
+                                                <div class="input-group-append"><div class="input-group-text">semanas</div></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
+                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                            </div>
+                                            <input type="text" class="form-control" id="fppReferida" readonly="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
                                                     <h6 class="text-center">Cálculos por ajuste ecográfico</h6>
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput"><strong>FUM</strong> Ajustada</label>
@@ -1137,7 +1136,7 @@
                 <div class="card-body">
                     <h5>Exámenes</h5>
                 <table class="table">
-                                <thead>
+                                <thead class="thead-dark">
                                     <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">EG</th>
@@ -1146,12 +1145,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="table.ecografia.primtrim">
-                                    <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    </tr>
                                 </tbody>
                             </table>
                 </div>
