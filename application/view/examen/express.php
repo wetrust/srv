@@ -941,14 +941,14 @@
                 </div>
             </div>
         </div>
-        <div class="container" id="ecoObsPrimTrim" style="display:none;">
+        <div class="container h-100" id="ecoObsPrimTrim" style="display:none;">
             <div class="row">
                 <div class="col pr-0">
                     <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
                 </div>
                 <div class="col col-sm-10 pl-0 mt-sm-4">
                     <h6 class="text-secondary mt-2">Ecografía Obstétrica de 1° Trimestre</h6>
-                    <h4 class="mb-0">Juana Peres Peres, 12345678-9</h4>
+                    <h4 class="mb-0" id="paciente.nombre.eco.prim">Juana Peres Peres, 12345678-9</h4>
                     <h6 class="text-info">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
                 </div>
             </div>
@@ -965,11 +965,11 @@
                 <div class="col-12 col-sm-3 order-sm-1">
                     <div class="card">
                         <div class="card-body">
-                            <div class="btn-group-vertical" role="group" aria-label="First group">
+                            <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                                 <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
                             </div>
-                            <h6>Informes</h6>
-                            <div class="btn-group-vertical" role="group" aria-label="First group">
+                            <h6 class="text-center mx-2">Informes</h6>
+                            <div class="d-flex justify-content-center" role="group" aria-label="First group">
                                 <button class="btn btn-info" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
                             </div>
                         </div>
@@ -983,7 +983,7 @@
                                     <label for="fee" class="col-form-label">Fecha de exámen</label>
                                 </div>
                                 <div class="col-6 col-sm-3">
-                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro" readonly>
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro" disabled>
                                 </div>
                                 <div class="col-6 col-sm-3">
                                     <label for="fee" class="col-form-label">EG al exámen</label>
