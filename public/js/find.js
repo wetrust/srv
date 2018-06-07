@@ -367,3 +367,16 @@ function delExmPrimTrim(){
         }
     });
 }
+
+//a otro js
+$(document).ready(function(){
+    $("#step\\.search").on("click", function(){
+        $("#step-one").addClass("d-none");
+        $("#step-two-find").removeClass("d-none");
+    });
+
+    $("#step\\.new").on("click", function(){
+        $("#step-one").addClass("d-none");
+        $("#step-three").removeClass("d-none");
+    });
+})

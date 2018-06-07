@@ -25,8 +25,8 @@
                         <h6 class="text-center text-secondary">Paso 1</h6>
                         <h1 class="text-center">¿Qué desea hacer?</h1>
                         <div class="text-center">
-                            <button type="button" class="btn btn-outline-primary"><i class="fas fa-search fa-5x my-2"></i><br>Buscar Paciente</button>
-                            <button type="button" class="btn btn-outline-primary"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
+                            <button type="button" class="btn btn-outline-primary" id="step.search"><i class="fas fa-search fa-5x my-2"></i><br>Buscar Paciente</button>
+                            <button type="button" class="btn btn-outline-primary" id="step.new"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
                         </div>
                     </div>
                     <div class="d-none" id="step-two-find">
