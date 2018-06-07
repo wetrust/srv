@@ -27,7 +27,7 @@
                             <button type="button" class="btn btn-outline-primary"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
                         </div>
                     </div>
-                    <div class="step-two-find">
+                    <div class="d-none" id="step-two-find">
                         <h6 class="text-center text-secondary">Paso 2</h6>
                         <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
                         <h1 class="text-center">Busque un paciente</h1>
@@ -75,15 +75,12 @@
                             </div>
                         </div>
                     </div>
-                    <div id="step-three">
+                    <div id="step-three" class="d-none">
                         <h6 class="text-center text-secondary">Paso 3</h6>
                         <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
                         <h1 class="text-center">Validar datos de paciente</h1>
                         <p class="text-secondary">Verifique si los datos son correctos y continue con el exámen</p>
                         <div class="form-group row">
-                            <div class="col-3">
-                                <h5 class="card-title text-primary mt-4">1.B- Ingresar Paciente</h5>
-                            </div>
                             <div class="col-4">
                                 <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
                             </div>
