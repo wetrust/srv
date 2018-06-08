@@ -47,9 +47,9 @@ function activarBotones() {
  $("#input\\.paciente\\.fum").on("change", function(){
     localStorage.fum = $(this).val();
     localStorage.fee = $("#fee-dos").val();
-    localStorage.eg = calcularEG()
-    var semanas = Math.trunc(localStorage.eg)
-    var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10)
+    localStorage.eg = calcularEG();
+    var semanas = Math.trunc(localStorage.eg);
+    var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10);
 
     $("#input\\.paciente\\.eg\\.dias").val(dias);
     $("#input\\.paciente\\.eg\\.semana").val(semanas);
