@@ -48,12 +48,12 @@ $(document).ready(function(){
         }
     });
 
-    $("boton\\.volver\\.step\\.two\\.find").on("click", function(){
+    $("#boton\\.volver\\.step\\.two\\.find").on("click", function(){
         $("#step-one").removeClass("d-none");
         $("#step-two-find").addClass("d-none");
     });
 
-    $("boton\\.volver\\.step\\.three").on("click", function(){
+    $("#boton\\.volver\\.step\\.three").on("click", function(){
         $("#step-one").removeClass("d-none");
         $("#step-three").addClass("d-none");
     });
