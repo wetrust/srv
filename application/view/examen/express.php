@@ -14,7 +14,6 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
-            <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
         </ol>
     </nav>
     <div class="row">
@@ -31,7 +30,7 @@
                     </div>
                     <div class="d-none" id="step-two-find">
                         <h6 class="text-center text-secondary">Paso 2</h6>
-                        <button class="btn btn-outline-danger float-right" id="boton.volver.step.one.find"><i class="fas fa-door-open"></i><br>Volver</button>
+                        <button class="btn btn-outline-danger float-right" id="boton.volver.step.two.find"><i class="fas fa-door-open"></i><br>Volver</button>
                         <h1 class="text-center">Busque un paciente</h1>
                         <h3 class="card-title text-primary">Buscar un Paciente</h3>
                         <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
@@ -79,9 +78,9 @@
                     </div>
                     <div id="step-three" class="d-none">
                         <h6 class="text-center text-secondary">Paso 3</h6>
-                        <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
+                        <button class="btn btn-outline-danger float-right" id="boton.volver.step.three"><i class="fas fa-door-open"></i><br>Volver</button>
                         <h1 class="text-center">Validar datos de paciente</h1>
-                        <p class="text-secondary">Verifique si los datos son correctos y continue con el exámen</p>
+                        <p class="text-secondary text-center">Verifique si los datos son correctos y continue con el exámen</p>
                         <div class="form-group row">
                             <div class="col-4">
                                 <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
