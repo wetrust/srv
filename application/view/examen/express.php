@@ -86,7 +86,7 @@
                                 <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
                             </div>
                             <div class="col-4">
-                                <input type="text" class="form-control my-3" id="id-paciente">
+                                <input type="text" class="form-control my-3" id="id-paciente" disabled>
                             </div>
                         </div>
                         <div class="row mt-2 mb-2">
@@ -206,8 +206,9 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col">
-                                <a class="btn btn-info my-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
+                            <div class="col d-flex justify-content-center">
+                                <button type="button" class="btn btn-info" id="boton.modificar.paciente"><i class="fas fa-edit"></i><br>Modificar y corregir</button>
+                                <a class="btn btn-info ml-sm-2" href="#consulta"><i class="far fa-check-circle"></i><br>Continuar a exámen</a>
                             </div>
                         </div>
                     </div>
