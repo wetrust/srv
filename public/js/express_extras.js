@@ -68,5 +68,5 @@ function displayElement(div_id){
 }
 
 function appClean(){
-    
+    document.location.hash = "";
 }
