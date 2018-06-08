@@ -42,24 +42,7 @@ $(document).ready(function(){
         RUTPACIENTE = $(this).val();
         FechaExm = $("#fee-dos").val();
 
-        $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
-	        if (data !== null){
-                if (Object.keys(data).length > 0 ){
-                    $("#input\\.paciente\\.fum").val(data.fur_date);
-                    $('#input\\.paciente\\.fum').datepicker('setValue', data.fur_date);
-		            $("#input\\.paciente\\.fum").trigger("change");
-                }
-	        }
-            else{
-                var dateTime = new Date();
-                var day = ("0" + dateTime.getDate()).slice(-2);
-                var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
-                
-                $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
-                $('#input\\.paciente\\.fum').datepicker('setValue', data.fur_date);
-		        $("#input\\.paciente\\.fum").trigger("change");
-            }
-        });
+        
         
         $("#imprimirFotos").on("click", function() {
             var fotosArreglo = [];
@@ -231,67 +214,7 @@ $(document).ready(function(){
 
 
 //funciones para buscar
-function obtenerNombre(id_paciente){
-    $.get(serverURL + "configuracion/obtenernombre/" + id_paciente).done(function(data) {
-        if (data.length > 0 ){
-            $("#step-two-find").addClass("d-none");
-            $("#step-three").removeClass("d-none");
-            
-            if (data[0].PatientNam !== null){
-                var nombre = data[0].PatientNam.split("^");
-            }
-            else{
-                var nombre = ["NN", "NN"];
-            }
 
-            $("#nombre-paciente").val(nombre[1]);
-            $("#apellido-paciente").val(nombre[0]);
-            $("#buscar\\.paciente\\.apellido").val(nombre[0]);
-            $("#paciente\\.nombre").html(nombre[1] + " " + nombre[0]);
-            
-            //nombre en eco primer trimestre
-            $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
-            
-            var dateTime = epochToDate(data[0].AccessTime)
-            var day = ("0" + dateTime.getDate()).slice(-2);
-            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
-            
-            $('input[name="fecha\\.examen\\.previo"]').val((day)+"/"+(month)+"/"+dateTime.getFullYear());
-            $("#fee-dos").val((day)+"/"+(month)+"/"+dateTime.getFullYear()).trigger("change");
-            FechaExm = FechaExm.split("/");
-            $("#id-paciente").val(id_paciente);
-            
-            $.get(serverURL + "configuracion/obtenerexamenes/" + id_paciente + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
-                if (data.exist == true ){
-                    StudyDate =  data.StudyDate;
-                    $.get(serverURL + "dicom/getimages/" + id_paciente + "/" + StudyDate).done(function(data) {
-                        $("#fotosDicom").html(" ");
-                        if (data.DCM = true) {
-                            $.each(data.JPGFiles, function(i, item) {
-                                $("#fotosDicom").append("<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
-                            });
-                            $('.zoom').on("click", function(){
-                                var img = this.outerHTML;
-                                $("#modalZoom").html(" ");
-                                $("#modalZoom").append(img);
-                                $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
-                                $("#modalZoom").modal("show");
-                            });
-                        }
-                    }).fail(function() {
-                        $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
-                    });     
-                }
-                else{
-                    $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
-                }
-            });       
-        }
-        else{
-            alert("No hay pacientes con ese ID o Nombre")
-        }
-    });
-}
 function getExmPrimTrim(){
     let data = {
         id: $("#id-paciente").val(),
@@ -370,7 +293,6 @@ $(document).ready(function(){
             $("#tipo\\.examen\\.previo").attr("disabled", true);
             $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
             alert("Guardado");
-            loadTablePatients();
         });
     });
 })
