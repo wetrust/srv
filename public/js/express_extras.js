@@ -52,7 +52,7 @@ function displayElement(div_id){
 		$('#popupGenerico').modal('hide');
 	}
 	$('#tcal').css("visibility", "hidden");
-	$('#paciente').hide();
+	$('#div\\.paciente').hide();
 	$('#configuracion').hide();
 	$('#tamizaje-11').hide();
 	$('#morfologica-22').hide();
