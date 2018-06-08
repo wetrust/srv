@@ -70,7 +70,7 @@ $(document).ready(function(){
     //al cambiar la fum en input pacientes
     $("#input\\.paciente\\.fum").on("change", function(){
         localStorage.fum = $(this).val();
-        localStorage.fee = $("#fee-dos").val();
+        localStorage.fee = $("#input\\.paciente\\.fe").val();
         localStorage.eg = calcularEG();
         var semanas = Math.trunc(localStorage.eg);
         var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10);
