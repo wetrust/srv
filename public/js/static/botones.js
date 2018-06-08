@@ -52,7 +52,7 @@ function activarBotones() {
     var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10);
 
     $("#input\\.paciente\\.eg\\.dias").val(dias);
-    $("#input\\.paciente\\.eg\\.semana").val(semanas);
+    $("#input\\.paciente\\.eg\\.semanas").val(semanas);
  });
  //obsoleta
 // $("input[name='fum']").on('change', function() {
