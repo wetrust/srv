@@ -378,11 +378,6 @@ function delExmPrimTrim(){
 //a otro js
 $(document).ready(function(){
 
-    $("#boton\\.volver\\.step\\.three").on("click", function(){
-        $("#step-one").removeClass("d-none");
-        $("#step-three").addClass("d-none");
-    });
-
     $("#boton\\.modificar\\.paciente").on("click", function(){
         $("#input\\.paciente\\.fum").attr("disabled", false);
         $("#tipo\\.examen\\.previo").attr("disabled", false);

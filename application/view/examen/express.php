@@ -67,10 +67,10 @@
                         </div>
                     </div>
                     <div id="step-three" class="d-none">
-                        <h6 class="text-center text-secondary">Paso 3</h6>
+                        <h6 class="text-center text-secondary" id="titulos.step.three.step">Paso 3</h6>
                         <button class="btn btn-outline-danger float-right" id="boton.volver.step.three"><i class="fas fa-door-open"></i><br>Volver</button>
-                        <h1 class="text-center">Validar datos de paciente</h1>
-                        <p class="text-secondary text-center">Verifique si los datos son correctos y continue con el exámen</p>
+                        <h1 class="text-center" id="titulos.step.three.head">Validar datos de paciente</h1>
+                        <p class="text-secondary text-center" id="titulos.step.three.help">Verifique si los datos son correctos y continue con el exámen</p>
                         <div class="form-group row">
                             <div class="col-4">
                                 <label for="id-paciente" class="col-form-label mt-3">Número de Registro Clínico ( RUT / DNI )</label>
