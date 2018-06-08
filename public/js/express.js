@@ -40,6 +40,9 @@ $(document).ready(function(){
         $("#titulos\\.step\\.three\\.step").html("Paso 2");
         $("#titulos\\.step\\.three\\.head").html("Paciente");
         $("#titulos\\.step\\.three\\.help").html("Si desea trabajar con un paciente anónimo, solo cambie la FUM");
+        //nombres predeterminados
+        $("#nombre-paciente").val("Paciente");
+        $("#apellido-paciente").val("de prueba");
         //establecer id (fecha actual)
         let fecha = new Date();
         let day = ("0" + fecha.getDate()).slice(-2);
@@ -93,6 +96,48 @@ $(document).ready(function(){
         $("#step-three").addClass("d-none");
     });
 
+    $("#boton\\.modificar\\.paciente").on("click", function(){
+        $("#input\\.paciente\\.fum").attr("disabled", false);
+        $("#tipo\\.examen\\.previo").attr("disabled", false);
+        $("#div\\.pacientes\\.fum\\.save").removeClass("d-none");
+        $("#div\\.pacientes\\.tipo\\.examen\\.sav").removeClass("d-none");
+        $("#boton\\.modificar\\.paciente").addClass("d-none");
+    });
+
+    $('#guardarfur').on("click", function(){
+		var valores = {
+			rut: $("#id-paciente").val(),
+			fur: $("#input\\.paciente\\.fum").val()
+		}
+		$.post(serverURL + "pacientes/savefur", valores).done(function (data) {
+            $("#input\\.paciente\\.fum").attr("disabled", true);
+            $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
+            alert("FUM guardada");
+        });
+    });
+    
+    $('#guardartipoexamen').on("click", function(){
+		var valores = {
+            rut: $("#id-paciente").val(),
+            exmtxt: $("#tipo\\.examen\\.previo option:selected").html(),
+			exm: $("#tipo\\.examen\\.previo").val()
+		}
+		$.post(serverURL + "pacientes/savexmprev", valores).done(function (data) {
+            $("#tipo\\.examen\\.previo").attr("disabled", true);
+            $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
+            alert("Guardado");
+        });
+    });
+
+    //pacientes paso 4
+    $("#step\\.four").on("click", function(){
+        $("#input\\.paciente\\.fum").attr("disabled", true);
+        $("#tipo\\.examen\\.previo").attr("disabled", true);
+        $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
+        $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
+        $("#boton\\.modificar\\.paciente").removeClass("d-none");
+        window.location.href = "#consulta";
+    });
 });
 
 //funciones de los inputs
