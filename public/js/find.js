@@ -400,7 +400,7 @@ $(document).ready(function(){
     });
 
     $("#boton\\.modificar\\.paciente").on("click", function(){
-        $("#fum-dos").attr("disabled", false);
+        $("#input\\.paciente\\.fum").attr("disabled", false);
         $("#tipo\\.examen\\.previo").attr("disabled", false);
         $("#div\\.pacientes\\.fum\\.save").removeClass("d-none");
         $("#div\\.pacientes\\.tipo\\.examen\\.sav").removeClass("d-none");
@@ -408,7 +408,7 @@ $(document).ready(function(){
     });
 
     $("#step\\.four").on("click", function(){
-        $("#fum-dos").attr("disabled", true);
+        $("#input\\.paciente\\.fum").attr("disabled", true);
         $("#tipo\\.examen\\.previo").attr("disabled", true);
         $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
         $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
