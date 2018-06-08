@@ -176,7 +176,8 @@ function obtenerNombre(id_paciente){
             }
             $("#nombre-paciente").val(nombre[1]);
             $("#apellido-paciente").val(nombre[0]);
-            //nombre en eco primer trimestre
+            //nombre en Eco
+            $("#paciente\\.nombre\\.eco\\.basico").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#step-two-find").addClass("d-none");
             $("#step-three").removeClass("d-none");

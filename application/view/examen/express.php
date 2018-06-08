@@ -737,19 +737,15 @@
                 </div>
             </div>
         </div>
-        <div class="container" id="tipoExamen" style="display:none;">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-4">
-                            <h4 class="mt-0 mb-1"><em>Elija un tipo de exámen</em></h4>
-                            <p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
-                        </div>
-                        <div class="media-body mt-4">
-                            <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        </div>
-                    </div>
+    <div class="container" id="tipoExamen" style="display:none;">
+        <div class="row">
+                <div class="col pr-0">
+                    <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                </div>
+                <div class="col col-sm-10 pl-0 mt-sm-4">
+                    <h6 class="text-secondary mt-2">Información para el exámen</h6>
+                    <h4 class="mb-0" id="paciente.nombre.eco.basico">Juana Peres Peres, 12345678-9</h4>
+                    <h6 class="text-info">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
                 </div>
             </div>
 <nav aria-label="breadcrumb">

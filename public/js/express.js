@@ -131,6 +131,9 @@ $(document).ready(function(){
 
     //pacientes paso 4
     $("#step\\.four").on("click", function(){
+        $("#id-paciente").attr("disabled", true);
+        $("#nombre-paciente").attr("disabled", true);
+        $("#apellido-paciente").attr("disabled", true);
         $("#input\\.paciente\\.fum").attr("disabled", true);
         $("#tipo\\.examen\\.previo").attr("disabled", true);
         $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
