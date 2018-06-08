@@ -279,11 +279,6 @@ $( document ).ready(function() {
 			aplication.run();
 			activarBotones();
 			makedbLocalStorage();
-			$('#input\\.paciente\\.fum').datepicker();
-			$('#input\\.paciente\\.fum').datepicker()
-				  .on('changeDate', function(ev){
-					$(this).trigger("change");
-				  });
 			$('#fee-dos').datepicker();
 			$('#fee-dos').datepicker()
 				  .on('changeDate', function(ev){

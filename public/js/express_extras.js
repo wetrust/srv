@@ -123,4 +123,8 @@ function appClean(){
 
 function appLoadBasic(){
     loadTablePatients();
+    $('#input\\.paciente\\.fum').datepicker();
+	$('#input\\.paciente\\.fum').datepicker().on('changeDate', function(ev){
+		$(this).trigger("change");
+	});
 }
