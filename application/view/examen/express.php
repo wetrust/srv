@@ -110,7 +110,7 @@
                             <div class="col-4">
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos" disabled>
+                                        <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" id="input.paciente.fum" disabled>
                                     </div>
                                     <div class="col-4 p-0 d-none" id="div.pacientes.fum.save">
                                         <button type="button" class="btn btn-warning" id="guardarfur">Guardar</button>
@@ -123,10 +123,10 @@
                             <div class="col-4">
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-control" type="number" disabled>
+                                        <input class="form-control" type="number" id="input.paciente.eg.semanas" disabled>
                                     </div>
                                     <div class="col">
-                                        <input class="form-control" type="number" disabled>
+                                        <input class="form-control" type="number" id="input.paciente.eg.dias" disabled>
                                     </div>
                                 </div>
                             </div>

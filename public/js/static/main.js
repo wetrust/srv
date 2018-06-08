@@ -279,32 +279,11 @@ $( document ).ready(function() {
 			aplication.run();
 			activarBotones();
 			makedbLocalStorage();
-			$('#fum-dos').datepicker();
-			$('#fum-dos').datepicker()
+			$('#input\\.paciente\\.fum').datepicker();
+			$('#input\\.paciente\\.fum').datepicker()
 				  .on('changeDate', function(ev){
 					$(this).trigger("change");
 				  });
-			$('#fum-tres').datepicker();
-			$('#fum-tres').datepicker()
-				  .on('changeDate', function(ev){
-				    $(this).trigger("change");
-				  });
-			$('#fum-cuatro').datepicker();
-			$('#fum-cuatro').datepicker()
-				  .on('changeDate', function(ev){
-				    $(this).trigger("change");
-				  });
-			$('#fum-cinco').datepicker();
-			$('#fum-cinco').datepicker()
-				  .on('changeDate', function(ev){
-				    $(this).trigger("change");
-				  });
-			$('#fum-seis').datepicker();
-			$('#fum-seis').datepicker()
-				  .on('changeDate', function(ev){
-				    $(this).trigger("change");
-				  });
-			
 			$('#fee-dos').datepicker();
 			$('#fee-dos').datepicker()
 				  .on('changeDate', function(ev){

@@ -44,58 +44,65 @@ function activarBotones() {
      $("input[name='edad_materna']").val(localStorage.edad);
  });
   
- $("input[name='fum']").on('change', function() {
-   localStorage.fum = $(this).val();
-   localStorage.fee = $("input[name='fee']").val();
-   localStorage.eg = calcularEG();
-   $("input[name='fum']").val(localStorage.fum);
-   
-   $("input[name='eg']").val(localStorage.eg);
-   
-   if (this.id != "fum-dos"){
-	   $('#fum-dos').datepicker('setValue', localStorage.fum);
-   }
-   if (this.id != "fum-tres"){
-	   $('#fum-tres').datepicker('setValue', localStorage.fum);
-   }
-   if (this.id != "fum-cuatro"){
-	   $('#fum-cuatro').datepicker('setValue', localStorage.fum);
-   }
-   if (this.id != "fum-cinco"){
-	   $('#fum-cinco').datepicker('setValue', localStorage.fum);
-   }
-   if (this.id != "fum-seis"){
-	   $('#fum-seis').datepicker('setValue', localStorage.fum);
-   }
-var semanas = Math.trunc(localStorage.eg)
-	 var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10)
+ $("#input\\.paciente\\.fum").on("change", function(){
+    localStorage.fum = $(this).val();
+    localStorage.fee = $("#fee-dos").val();
+    localStorage.eg = calcularEG()
+    var semanas = Math.trunc(localStorage.eg)
+    var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10)
 
-	 $('#semanasEcoGen').val(semanas);
-	$('#diasEcoGen').val(dias);
-	 $("input[name='eg']").val(localStorage.eg);
-	$('#semanasEcoObs').val(semanas);
-	$('#diasEcoObs').val(dias);
-	$( '#semanasTipoEco' ).val(semanas);
-	$( '#diasTipoEco' ).val(dias);
-	$('#semanasEcoPrim').val(semanas);
-        $( '#diasEcoPrim' ).val(dias);
-	$( '#diasEcoDopp' ).val(dias);
-	$('#semanasEcoDopp').val(semanas);
-	 
-	 //borrar los colores de las tarjetas
-	$("#ecografia\\.uno").removeClass("border-primary");
-	$("#ecografia\\.dos").removeClass("border-primary");
-	$("#ecografia\\.doppler").removeClass("border-primary");
-	//determinar a quien le pongo el color
-	if (semanas < 15){
-		$("#ecografia\\.uno").addClass("border-primary");
-	}
-	else{
-		$("#ecografia\\.dos").addClass("border-primary");
-		$("#ecografia\\.doppler").addClass("border-primary");
-	}
-
+    $("#input\\.paciente\\.eg\\.dias").val(dias);
+    $("#input\\.paciente\\.eg\\.semana").val(semanas);
  });
+ //obsoleta
+// $("input[name='fum']").on('change', function() {
+//   localStorage.fum = $(this).val();
+//   localStorage.fee = $("input[name='fee']").val();
+//   localStorage.eg = calcularEG();
+//   $("input[name='fum']").val(localStorage.fum); 
+//   $("input[name='eg']").val(localStorage.eg);   
+//   if (this.id != "fum-dos"){
+//	   $('#fum-dos').datepicker('setValue', localStorage.fum);
+//   }
+//   if (this.id != "fum-tres"){
+//	   $('#fum-tres').datepicker('setValue', localStorage.fum);
+//   }
+//   if (this.id != "fum-cuatro"){
+//	   $('#fum-cuatro').datepicker('setValue', localStorage.fum);
+//   }
+//   if (this.id != "fum-cinco"){
+//	   $('#fum-cinco').datepicker('setValue', localStorage.fum);
+//   }
+//   if (this.id != "fum-seis"){
+//	   $('#fum-seis').datepicker('setValue', localStorage.fum);
+//   }
+//var semanas = Math.trunc(localStorage.eg)
+//	 var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10)
+
+//	 $('#semanasEcoGen').val(semanas);
+//  $('#diasEcoGen').val(dias);
+//	 $("input[name='eg']").val(localStorage.eg);
+//	$('#semanasEcoObs').val(semanas);
+//	$('#diasEcoObs').val(dias);
+//	$( '#semanasTipoEco' ).val(semanas);
+//	$( '#diasTipoEco' ).val(dias);
+//	$('#semanasEcoPrim').val(semanas);
+//        $( '#diasEcoPrim' ).val(dias);
+//	$( '#diasEcoDopp' ).val(dias);
+//	$('#semanasEcoDopp').val(semanas); 
+	 //borrar los colores de las tarjetas
+//	$("#ecografia\\.uno").removeClass("border-primary");
+//	$("#ecografia\\.dos").removeClass("border-primary");
+//	$("#ecografia\\.doppler").removeClass("border-primary");
+	//determinar a quien le pongo el color
+//	if (semanas < 15){
+//		$("#ecografia\\.uno").addClass("border-primary");
+//	}
+//	else{
+//		$("#ecografia\\.dos").addClass("border-primary");
+//		$("#ecografia\\.doppler").addClass("border-primary");
+//	}
+// });
   
   $("input[name='fee']").on('change', function() {
    localStorage.fum = $("input[name='fum']").val();

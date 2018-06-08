@@ -50,30 +50,4 @@ $(document).ready(function() {
             $("#profReferente").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
         });
     });
-
-$('#guardartipoexamen').on("click", function(){
-
-		var valores = {
-            rut: $("#id-paciente").val(),
-            exmtxt: $("#tipo\\.examen\\.previo option:selected").html(),
-			exm: $("#tipo\\.examen\\.previo").val()
-		}
-
-		$.post(serverURL + "pacientes/savexmprev", valores).done(function (data) {
-            alert("Guardado");
-            loadTablePatients();
-        });
-    });
-    
-    $('#guardarfur').on("click", function(){
-
-		var valores = {
-			rut: $("#id-paciente").val(),
-			fur: $("#fum-dos").val()
-		}
-
-		$.post(serverURL + "pacientes/savefur", valores).done(function (data) {
-            alert("FUM guardada");
-        });
-	});
 });

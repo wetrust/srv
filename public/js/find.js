@@ -93,15 +93,19 @@ $(document).ready(function(){
         $.get(serverURL + "pacientes/getfur/" + RUTPACIENTE).done(function(data) {
 	        if (data !== null){
                 if (Object.keys(data).length > 0 ){
-                    $("input[name='fum']").val(data.fur_date);
-		            $("#fum-dos").trigger("change");
+                    $("#input\\.paciente\\.fum").val(data.fur_date);
+                    $('#input\\.paciente\\.fum').datepicker('setValue', data.fur_date);
+		            $("#input\\.paciente\\.fum").trigger("change");
                 }
 	        }
             else{
                 var dateTime = new Date();
                 var day = ("0" + dateTime.getDate()).slice(-2);
-	            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
-                $("input[name='fum']").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
+                var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+                
+                $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
+                $('#input\\.paciente\\.fum').datepicker('setValue', data.fur_date);
+		        $("#input\\.paciente\\.fum").trigger("change");
             }
         });
         
@@ -410,5 +414,28 @@ $(document).ready(function(){
         $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
         $("#boton\\.modificar\\.paciente").removeClass("d-none");
         window.location.href = "#consulta";
-    })
+    });
+
+    //funciones para guardar datos del paso 3
+    $('#guardarfur').on("click", function(){
+		var valores = {
+			rut: $("#id-paciente").val(),
+			fur: $("#input\\.paciente\\.fum").val()
+		}
+		$.post(serverURL + "pacientes/savefur", valores).done(function (data) {
+            alert("FUM guardada");
+        });
+    });
+    
+    $('#guardartipoexamen').on("click", function(){
+		var valores = {
+            rut: $("#id-paciente").val(),
+            exmtxt: $("#tipo\\.examen\\.previo option:selected").html(),
+			exm: $("#tipo\\.examen\\.previo").val()
+		}
+		$.post(serverURL + "pacientes/savexmprev", valores).done(function (data) {
+            alert("Guardado");
+            loadTablePatients();
+        });
+    });
 })
