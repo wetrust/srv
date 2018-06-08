@@ -396,16 +396,16 @@ $(document).ready(function(){
     });
 
     $("#boton\\.modificar\\.paciente").on("click", function(){
-        $("#fum-dos").attr("disabled", "false");
-        $("#tipo\\.examen\\.previo").attr("disabled", "false");
+        $("#fum-dos").attr("disabled", false);
+        $("#tipo\\.examen\\.previo").attr("disabled", false);
         $("#div\\.pacientes\\.fum\\.save").removeClass("d-none");
         $("#div\\.pacientes\\.tipo\\.examen\\.sav").removeClass("d-none");
         $("#boton\\.modificar\\.paciente").addClass("d-none");
     });
 
     $("#step\\.four").on("click", function(){
-        $("#fum-dos").attr("disabled", "true");
-        $("#tipo\\.examen\\.previo").attr("disabled", "true");
+        $("#fum-dos").attr("disabled", true);
+        $("#tipo\\.examen\\.previo").attr("disabled", true);
         $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
         $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
         $("#boton\\.modificar\\.paciente").removeClass("d-none");

@@ -208,7 +208,7 @@
                         <div class="row mt-3">
                             <div class="col d-flex justify-content-center">
                                 <button type="button" class="btn btn-warning" id="boton.modificar.paciente"><i class="fas fa-edit"></i><br>Modificar y corregir</button>
-                                <button type="button" class="btn btn-warning ml-sm-2" id="step.four"><i class="far fa-check-circle"></i><br>Continuar a exámen</button>
+                                <button type="button" class="btn btn-info ml-sm-2" id="step.four"><i class="far fa-check-circle"></i><br>Continuar a exámen</button>
                             </div>
                         </div>
                     </div>
