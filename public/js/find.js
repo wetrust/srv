@@ -48,6 +48,11 @@ $(document).ready(function(){
         }
     });
 
+    $("boton.volver.step.one.find").on("click", function(){
+        $("#step-one").removeClass("d-none");
+        $("#step-two-find").addClass("d-none");
+    });
+
     $("#buscar\\.paciente\\.fechaprevia").on("click", function(){
         let fecha = $('input[name="fecha\\.examen\\.previo"]').val();
         
@@ -278,6 +283,9 @@ $(document).ready(function(){
 function obtenerNombre(id_paciente){
     $.get(serverURL + "configuracion/obtenernombre/" + id_paciente).done(function(data) {
         if (data.length > 0 ){
+            $("#step-two-find").addClass("d-none");
+            $("#step-three").removeClass("d-none");
+            
             if (data[0].PatientNam !== null){
                 var nombre = data[0].PatientNam.split("^");
             }
