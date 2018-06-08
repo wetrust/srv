@@ -3,17 +3,6 @@ $(document).ready(function(){
     loadEmails();
 });
 
-function epochToDate(epoch){
-    var date = new Date(epoch*1000);
-    return date;
-}
-
-function dateToStr(datetime){
-    var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-    var estring = datetime.getDate() + "-" + months[datetime.getMonth()] + "-" + datetime.getFullYear() + " " + datetime.getHours() + ":" + datetime.getMinutes();
-    return estring;
-}
-
 
 
 function loadEmails(){
