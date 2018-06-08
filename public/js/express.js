@@ -15,6 +15,19 @@ $(document).ready(function(){
     $(window).on('hashchange', function(){
         onHashChange();
     });
+
+    //pacientes paso 1
+    $("#step\\.search").on("click", function(){
+        $("#step-one").addClass("d-none");
+        $("#step-two-find").removeClass("d-none");
+        $("#buscar\\.paciente\\.id").val("");
+        $("#buscar\\.paciente\\.apellido").val("");
+    });
+
+    $("#step\\.new").on("click", function(){
+        $("#step-one").addClass("d-none");
+        $("#step-three").removeClass("d-none");
+    });
 })
 
 
