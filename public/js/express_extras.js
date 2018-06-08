@@ -1,11 +1,8 @@
 function onHashChange(){
     let hash = document.location.hash;
 
-    if (hash=="#inicio"){
-        displayElement("home");
-    }
-    else if (hash=="#paciente"){
-        displayElement("paciente");
+    if (hash=="#paciente"){
+        displayElement("div\\.paciente");
     }
     else if (hash=="#consulta"){
         displayElement("consulta");
