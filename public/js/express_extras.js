@@ -127,7 +127,10 @@ function calcularEG(){
    
     FUM = new Date (FUM);
     FExamen = new Date (FExamen);
-     
+    
+    console.log((FExamen.getTime() - FUM.getTime()));
+    console.log((FExamen.getTime() - FUM.getTime()) / unasemana);
+
     EdadGestacional = ((FExamen.getTime() - FUM.getTime()) / unasemana).toFixed(1);
     var B = new Date();
     B.setTime(FUM.getTime() + 40 * unasemana);    

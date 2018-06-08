@@ -63,7 +63,7 @@ $(document).ready(function(){
         $("#step-one").removeClass("d-none");
         $("#step-three").addClass("d-none");
     });
-})
+});
 
 //funciones de los inputs
 $(document).ready(function(){
@@ -74,9 +74,8 @@ $(document).ready(function(){
         localStorage.eg = calcularEG();
         var semanas = Math.trunc(localStorage.eg);
         var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10);
-    
+
         $("#input\\.paciente\\.eg\\.dias").val(dias);
         $("#input\\.paciente\\.eg\\.semanas").val(semanas);
-     });
+    });
 });
-
