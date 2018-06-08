@@ -664,26 +664,35 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-9">
-                                    <h5 class="card-title text-primary text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</h5>
-                                </div>
-                                <div class="col-3">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="configConsentimientoNoController" data-value="0">
-                                        <input type="radio" value="0" checked=""> NO
-                                        </label>
-                                        <label class="btn btn-outline-info p-3" id="configConsentimientoSiController" data-value="1">
-                                        <input type="radio" value="1"> SI
-                                        </label>
-                                    </div>
-                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-9">
+                            <h5 class="card-title text-primary text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</h5>
+                        </div>
+                        <div class="col-3">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-info p-3 active" id="configConsentimientoNoController" data-value="0">
+                                    <input type="radio" value="0" checked=""> NO
+                                </label>
+                                <label class="btn btn-outline-info p-3" id="configConsentimientoSiController" data-value="1">
+                                    <input type="radio" value="1"> SI
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
         <div class="container" id="imagenesDicom" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
