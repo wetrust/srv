@@ -66,3 +66,7 @@ function displayElement(div_id){
 	}
 	$('#'+div_id).show();
 }
+
+function appClean(){
+    
+}
