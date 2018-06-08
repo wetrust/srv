@@ -48,16 +48,6 @@ $(document).ready(function(){
         }
     });
 
-    $("#boton\\.volver\\.step\\.two\\.find").on("click", function(){
-        $("#step-one").removeClass("d-none");
-        $("#step-two-find").addClass("d-none");
-    });
-
-    $("#boton\\.volver\\.step\\.three").on("click", function(){
-        $("#step-one").removeClass("d-none");
-        $("#step-three").addClass("d-none");
-    });
-
     $("#buscar\\.paciente\\.fechaprevia").on("click", function(){
         let fecha = $('input[name="fecha\\.examen\\.previo"]').val();
         
@@ -386,10 +376,22 @@ $(document).ready(function(){
     $("#step\\.search").on("click", function(){
         $("#step-one").addClass("d-none");
         $("#step-two-find").removeClass("d-none");
+        $("#buscar\\.paciente\\.id").html("");
+        $("#buscar\\.paciente\\.apellido").html("");
     });
 
     $("#step\\.new").on("click", function(){
         $("#step-one").addClass("d-none");
         $("#step-three").removeClass("d-none");
+    });
+
+    $("#boton\\.volver\\.step\\.two\\.find").on("click", function(){
+        $("#step-one").removeClass("d-none");
+        $("#step-two-find").addClass("d-none");
+    });
+
+    $("#boton\\.volver\\.step\\.three").on("click", function(){
+        $("#step-one").removeClass("d-none");
+        $("#step-three").addClass("d-none");
     });
 })

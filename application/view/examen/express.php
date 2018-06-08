@@ -94,13 +94,13 @@
                                 <label for="nombre-paciente" class="col-form-label">Nombre</label>
                             </div>
                             <div class="col-4">
-                                <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba">
+                                <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba" disabled>
                             </div>
                             <div class="col-2">
                                 <label for="nombre-paciente" class="col-form-label">Apellido</label>
                             </div>
                             <div class="col-4">
-                                <input class="form-control gris-claro" type="text" id="apellido-paciente">
+                                <input class="form-control gris-claro" type="text" id="apellido-paciente" disabled>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -110,9 +110,9 @@
                             <div class="col-4">
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos">
+                                        <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos" disabled>
                                     </div>
-                                    <div class="col-4 p-0">
+                                    <div class="col-4 p-0 d-none">
                                         <button type="button" class="btn btn-info" id="guardarfur">Guardar</button>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@
                                 <label class="col-form-label">Edad materna</label>
                             </div>
                             <div class="col-4 d-none">
-                                <select name="edad_materna" class="form-control gris-claro">
+                                <select name="edad_materna" class="form-control gris-claro" disabled>
                                     <option value="10">10 años</option>
                                     <option value="11">11 años</option>
                                     <option value="12">12 años</option>
@@ -186,9 +186,9 @@
                             <div class="col-4">
                                 <div class="row">
                                     <div class="col">
-                                        <select id="tipo.examen.previo" class="form-control"></select>
+                                        <select id="tipo.examen.previo" class="form-control" disabled></select>
                                     </div>
-                                    <div class="col-4 p-0">
+                                    <div class="col-4 p-0 d-none">
                                         <button type="button" class="btn btn-info" id="guardartipoexamen">Guardar</button>
                                     </div>
                                 </div>
@@ -200,12 +200,14 @@
                                 <input type="text" class="form-control" name="fecha.examen.previo" readonly>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-8">
+                        <div class="row mb-3 d-none">
+                            <div class="col">
                                 <p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a datos de exámen.</p>
                             </div>
-                            <div class="col text-right">
-                                <a class="btn btn-info  mb-3 mt-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <a class="btn btn-info my-3" href="#consulta">CONTINUAR A DATOS DE EXÁMEN</a>
                             </div>
                         </div>
                     </div>
