@@ -112,8 +112,8 @@
                                     <div class="col">
                                         <input class="form-control" type="text" data-date-format="dd/mm/yyyy" data-weekStart="1" onfocus="blur();" name="fum" id="fum-dos" disabled>
                                     </div>
-                                    <div class="col-4 p-0 d-none">
-                                        <button type="button" class="btn btn-info" id="guardarfur">Guardar</button>
+                                    <div class="col-4 p-0 d-none" id="div.pacientes.fum.save">
+                                        <button type="button" class="btn btn-warning" id="guardarfur">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -188,8 +188,8 @@
                                     <div class="col">
                                         <select id="tipo.examen.previo" class="form-control" disabled></select>
                                     </div>
-                                    <div class="col-4 p-0 d-none">
-                                        <button type="button" class="btn btn-info" id="guardartipoexamen">Guardar</button>
+                                    <div class="col-4 p-0 d-none" id="div.pacientes.tipo.examen.sav">
+                                        <button type="button" class="btn btn-warning" id="guardartipoexamen">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -205,10 +205,10 @@
                                 <p>Ingrese RUT de la paciente, si la paciente es anónima o no cuenta con la información, presione el botón continuar a datos de exámen.</p>
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mt-3">
                             <div class="col d-flex justify-content-center">
                                 <button type="button" class="btn btn-warning" id="boton.modificar.paciente"><i class="fas fa-edit"></i><br>Modificar y corregir</button>
-                                <a class="btn btn-primary ml-sm-2" href="#consulta"><i class="far fa-check-circle"></i><br>Continuar a exámen</a>
+                                <button type="button" class="btn btn-warning ml-sm-2" id="step.four"><i class="far fa-check-circle"></i><br>Continuar a exámen</button>
                             </div>
                         </div>
                     </div>

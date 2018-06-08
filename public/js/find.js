@@ -376,8 +376,8 @@ $(document).ready(function(){
     $("#step\\.search").on("click", function(){
         $("#step-one").addClass("d-none");
         $("#step-two-find").removeClass("d-none");
-        $("#buscar\\.paciente\\.id").html("");
-        $("#buscar\\.paciente\\.apellido").html("");
+        $("#buscar\\.paciente\\.id").val("");
+        $("#buscar\\.paciente\\.apellido").val("");
     });
 
     $("#step\\.new").on("click", function(){
@@ -394,4 +394,21 @@ $(document).ready(function(){
         $("#step-one").removeClass("d-none");
         $("#step-three").addClass("d-none");
     });
+
+    $("#boton\\.modificar\\.paciente").on("click", function(){
+        $("#fum-dos").attr("disabled", "false");
+        $("#tipo\\.examen\\.previo").attr("disabled", "false");
+        $("#div\\.pacientes\\.fum\\.save").removeClass("d-none");
+        $("#div\\.pacientes\\.tipo\\.examen\\.sav").removeClass("d-none");
+        $("#boton\\.modificar\\.paciente").addClass("d-none");
+    });
+
+    $("#step\\.four").on("click", function(){
+        $("#fum-dos").attr("disabled", "true");
+        $("#tipo\\.examen\\.previo").attr("disabled", "true");
+        $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
+        $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
+        $("#boton\\.modificar\\.paciente").removeClass("d-none");
+        window.location.href = "#consulta";
+    })
 })
