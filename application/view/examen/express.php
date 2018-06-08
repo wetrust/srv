@@ -254,21 +254,35 @@
                 <div class="card-body">
                     <h6 class="text-center text-secondary">Previo al exámen</h6>
                     <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
-                    <h1 class="text-center">Cálculo de edad gestacional y datos de exámen</h1>
-                            <div class="form-group row">
-                                <div class="col">
-                                    <label for="dbp" class="col-form-label">Fecha probable de parto</label>
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="fpp" readonly>
-                                </div>
-                                <div class="col">
-                                    <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
-                                </div>
-                                <div class="col">
-                                    <input class="form-control" type="text" id="input.paciente.fe" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
-                                </div>
-                            </div>
+                    <h1 class="text-center">Fecha de exámen</h1>
+                    <h3 class="card-title text-primary">Información del embarazo</h3>
+                    <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
+                    <div class="form-group row">
+                        <div class="col">
+                            <label for="dbp" class="col-form-label">FUM</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input.paciente.fum.examen" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="dbp" class="col-form-label">EG</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="dbp" class="col-form-label">FPP</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="fpp" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="text" id="input.paciente.fe" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
+                        </div>
+                    </div>
                             <div class="form-group row">
                                 <div class="col-2"></div>
                                 <div class="col text-right">

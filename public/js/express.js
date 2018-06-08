@@ -155,6 +155,9 @@ $(document).ready(function(){
 
         $("#input\\.paciente\\.eg\\.dias").val(dias);
         $("#input\\.paciente\\.eg\\.semanas").val(semanas);
+
+        //fum para examen
+        $("#input\\.paciente\\.fum\\.examen").val(semanas);
     });
     //input de apellidos de paciente
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
