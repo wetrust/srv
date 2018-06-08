@@ -154,9 +154,22 @@ function appClean(){
 }
 
 function appLoadBasic(){
+    //cargar los ultimos pacientes de la bd
     loadTablePatients();
+    //activar funcionalidad de input fur en paciente
     $('#input\\.paciente\\.fum').datepicker();
 	$('#input\\.paciente\\.fum').datepicker().on('changeDate', function(ev){
 		$(this).trigger("change");
-	});
+    });
+    //establecer la fecha de exámen
+    let fecha = new Date();
+    let day = ("0" + fecha.getDate()).slice(-2);
+	let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+
+    $("#input\\.paciente\\.fe").val((day)+"/"+(month)+"/"+fecha.getFullYear());
+    $('#input\\.paciente\\.fe').datepicker();
+	$('#input\\.paciente\\.fe').datepicker().on('changeDate', function(ev){
+		$(this).trigger("change");
+    });
+    $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
 }

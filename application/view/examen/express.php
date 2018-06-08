@@ -267,7 +267,7 @@
                                     <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
                                 </div>
                                 <div class="col">
-                                    <input class="form-control" type="text" id="fee-dos" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
+                                    <input class="form-control" type="text" id="input.paciente.fe" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
                                 </div>
                             </div>
                             <div class="form-group row">
