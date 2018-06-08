@@ -29,6 +29,12 @@ $(document).ready(function(){
         $("#step-one").addClass("d-none");
         $("#step-three").removeClass("d-none");
     });
+
+    //pacientes paso 2
+    $("#boton\\.volver\\.step\\.two\\.find").on("click", function(){
+        $("#step-one").removeClass("d-none");
+        $("#step-two-find").addClass("d-none");
+    });
 })
 
 
