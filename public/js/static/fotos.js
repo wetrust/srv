@@ -2,15 +2,6 @@ var RUTPACIENTE = "";
 var FechaExm = "";
 var StudyDate = ""
 $(document).ready(function() {
-    
-    $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
-        $("#tipo\\.examen\\.previo").empty();
-        $("#patologiaObstetricaUno").empty();
-        $.each(data, function (key, des) {
-            $("#patologiaObstetricaUno").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
-            $("#tipo\\.examen\\.previo").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
-        });
-      });
 
       $("#tipo\\.examen\\.previo").on("change", function(){
         $("#patologiaObstetricaUno").val($(this).val());

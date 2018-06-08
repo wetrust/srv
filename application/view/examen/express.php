@@ -187,7 +187,7 @@
                                 <label class="col-form-label">Fecha Exm. Previo</label>
                             </div>
                             <div class="col-4">
-                                <input type="text" class="form-control" name="fecha.examen.previo" readonly>
+                                <input type="text" class="form-control" id="fecha.examen.previo" readonly>
                             </div>
                         </div>
                         <div class="row mb-3 d-none">

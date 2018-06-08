@@ -58,11 +58,41 @@ $(document).ready(function(){
         $("#step-two-find").addClass("d-none");
     });
 
+    $("#buscar\\.paciente\\.action").on("click", function(){
+        let apellido = $("#buscar\\.paciente\\.apellido").val();
+        let id = $("#buscar\\.paciente\\.id").val();
+
+        if (apellido.length > 0){
+            let data = {
+                patient_lastname: $("#buscar\\.paciente\\.apellido").val()
+            }
+            $.post(serverURL + "configuracion/obtenerut", data).done(function (data) {
+                $("#buscar\\.paciente\\.id").val("");
+                if (data !== null){
+                    if (Object.keys(data).length > 0 ){
+                        $("#buscar\\.paciente\\.id").val(data.PatientID);
+                        obtenerNombre(data.PatientID);
+                    }
+                }
+                else{
+                    alert("No hay pacientes con el apellido escrito");
+                }
+            });
+        }
+        else if (id.length > 0){
+            obtenerNombre(id);
+        }
+        else{
+            alert("Escriba un ID o el apellido de la paciente");
+        }
+    });
+    
     //pacientes paso 3
     $("#boton\\.volver\\.step\\.three").on("click", function(){
         $("#step-one").removeClass("d-none");
         $("#step-three").addClass("d-none");
     });
+
 });
 
 //funciones de los inputs
@@ -77,5 +107,25 @@ $(document).ready(function(){
 
         $("#input\\.paciente\\.eg\\.dias").val(dias);
         $("#input\\.paciente\\.eg\\.semanas").val(semanas);
+    });
+    //input de apellidos de paciente
+    $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
+        let apellido = {
+            patient_lastname: $(this).val()
+        }
+        $.post(serverURL + "configuracion/obtenerapellidos", apellido).done(function (data) {
+            $("#apellidos").empty();
+            if (data.length > 0 ){
+                $.each(data, function(i, item) {
+                    if (item.PatientNam !== null){
+                        var nombre = item.PatientNam.split("^");
+                    }
+                    else{
+                        var nombre = ["NN", "NN"];
+                    }
+                    $("#apellidos").append('<option value="'+ nombre[0] + ' ' + nombre[1] + '"></option>');
+                });
+            }
+        });
     });
 });
