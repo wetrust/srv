@@ -289,7 +289,15 @@
                                     <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
                                 </div>
                             </div>
-                            <div class="row mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="card-body">
+                <div class="row mb-3">
                                 <div class="col-9">
                                     <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea Ingresar información  para reporte de informe y / o graficas ?</h5>
                                 </div>
@@ -664,12 +672,9 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                        </div>
-                    </div>
                 </div>
             </div>
-    <div class="row">
+        </div>
         <div class="col-md-12">
             <div class="card mb-3">
                 <div class="card-body">
