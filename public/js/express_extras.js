@@ -172,4 +172,13 @@ function appLoadBasic(){
 		$(this).trigger("change");
     });
     $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+
+    $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
+        $("#tipo\\.examen\\.previo").empty();
+        $("#patologiaObstetricaUno").empty();
+        $.each(data, function (key, des) {
+            $("#patologiaObstetricaUno").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
+            $("#tipo\\.examen\\.previo").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
+        });
+    });
 }
