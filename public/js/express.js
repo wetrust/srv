@@ -7,4 +7,7 @@ $(document).ready(function(){
     $("head").addClass("h-100");
     $("body").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
     $("body").addClass("h-100");
+
+    window.onhashchange =  onHashChange();
 });
+

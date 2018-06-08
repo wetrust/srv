@@ -2348,4 +2348,5 @@
 <script>
     var serverURL = "<?php echo Config::get('URL'); ?>";
 </script>
+<script src="<?php echo Config::get('URL'); ?>js/express_extras.js"></script>
 <script src="<?php echo Config::get('URL'); ?>js/express.js"></script>
