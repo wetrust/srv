@@ -187,7 +187,7 @@ function obtenerNombre(id_paciente){
             var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
             $("#fecha\\.examen\\.previo").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
             $("#input\\.paciente\\.fe").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
-            $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+            $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+dateTime.getFullYear());
             //cargar fur si tiene
             obtenerFUM(id_paciente);  
         }
