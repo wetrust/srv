@@ -36,10 +36,20 @@ $(document).ready(function(){
         $("#tipo\\.examen\\.previo").attr("disabled", false);
         //ocultar elementos innecesarios
         $("#boton\\.modificar\\.paciente").addClass("d-none");
-        //cambiar losd textos para que coincida con lo que observa el usuario
+        //cambiar los textos para que coincida con lo que observa el usuario
         $("#titulos\\.step\\.three\\.step").html("Paso 2");
         $("#titulos\\.step\\.three\\.head").html("Paciente");
         $("#titulos\\.step\\.three\\.help").html("Si desea trabajar con un paciente anónimo, solo cambie la FUM");
+        //establecer id (fecha actual)
+        let fecha = new Date();
+        let day = ("0" + fecha.getDate()).slice(-2);
+	    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+
+        $("#id-paciente").val((day)+(month)+fecha.getFullYear());
+        //cambiar fum por la fecha actual
+        $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+fecha.getFullYear());
+        $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+		$("#input\\.paciente\\.fum").trigger("change");
     });
 
     //pacientes paso 2

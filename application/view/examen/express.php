@@ -84,13 +84,13 @@
                                 <label for="nombre-paciente" class="col-form-label">Nombre</label>
                             </div>
                             <div class="col-4">
-                                <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente de Prueba" disabled>
+                                <input class="form-control gris-claro" type="text" id="nombre-paciente" value="Paciente" disabled>
                             </div>
                             <div class="col-2">
                                 <label for="nombre-paciente" class="col-form-label">Apellido</label>
                             </div>
                             <div class="col-4">
-                                <input class="form-control gris-claro" type="text" id="apellido-paciente" disabled>
+                                <input class="form-control gris-claro" type="text" id="apellido-paciente" value="de prueba" disabled>
                             </div>
                         </div>
                         <div class="form-group row">
