@@ -1,13 +1,3 @@
-<script>
-    $(document).ready(function(){
-        $("html").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
-        $("html").addClass("h-100");
-        $("head").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
-        $("head").addClass("h-100");
-        $("body").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
-        $("body").addClass("h-100");
-    });
-</script>
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
 <div class="container pt-2" id="paciente">
@@ -2358,13 +2348,4 @@
 <script>
     var serverURL = "<?php echo Config::get('URL'); ?>";
 </script>
-<script src="<?php echo Config::get('URL'); ?>js/dicom.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/botones.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/configuracion.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/funciones.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/graficos.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/main.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/fotos.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/find.js"></script>
+<script src="<?php echo Config::get('URL'); ?>js/express.js"></script>

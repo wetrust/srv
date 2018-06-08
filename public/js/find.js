@@ -423,6 +423,8 @@ $(document).ready(function(){
 			fur: $("#input\\.paciente\\.fum").val()
 		}
 		$.post(serverURL + "pacientes/savefur", valores).done(function (data) {
+            $("#input\\.paciente\\.fum").attr("disabled", true);
+            $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
             alert("FUM guardada");
         });
     });
@@ -434,6 +436,8 @@ $(document).ready(function(){
 			exm: $("#tipo\\.examen\\.previo").val()
 		}
 		$.post(serverURL + "pacientes/savexmprev", valores).done(function (data) {
+            $("#tipo\\.examen\\.previo").attr("disabled", true);
+            $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
             alert("Guardado");
             loadTablePatients();
         });
