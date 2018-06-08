@@ -128,6 +128,9 @@ function calcularEG(){
     FUM = new Date (FUM);
     FExamen = new Date (FExamen);
     
+    console.log(FExamen.getDate());
+    console.log(FUM.getDate());
+
     console.log((FExamen.getTime() - FUM.getTime()));
     console.log((FExamen.getTime() - FUM.getTime()) / unasemana);
 
