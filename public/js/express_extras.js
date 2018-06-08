@@ -67,6 +67,49 @@ function displayElement(div_id){
 	$('#'+div_id).show();
 }
 
+function loadTablePatients(){
+	$.get( serverURL + "dicom/getlastpatients", function( data ) {
+        $("#table\\.body\\.pacientes").empty();
+        $.each(data, function (key, des) {
+            var date =  epochToDate(des.AccessTime);
+            date =  dateToStr(date);
+            if (des.PatientNam !== null){
+                var nombre = des.PatientNam.split("^");
+            }
+            else{
+                var nombre = ["NN", "NN"];
+            }
+
+            if (des.user_exmtxt !== null){
+                var ecmtxt = des.user_exmtxt;
+            }
+            else{
+                var ecmtxt = "";
+            }
+            
+            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td></tr>";
+            $("#table\\.body\\.pacientes").append(strTable);
+        });
+        $("#table\\.body\\.pacientes tr").on('click',function(){
+            
+            $.each( $(this).parent().children(), function( i, val ) {
+                $( val ).removeClass( 'table-active');
+            });
+            
+            $(this).addClass('table-active');
+
+            let RUT = $(this).children("th").data("id");
+            
+            $("#buscar\\.paciente\\.id").val(RUT);
+            $("#buscar\\.paciente\\.action").trigger("change");
+        });
+    });
+}
+
 function appClean(){
     document.location.hash = "";
+}
+
+function appLoadBasic(){
+    loadTablePatients();
 }
