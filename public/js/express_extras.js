@@ -128,6 +128,9 @@ function calcularEG(){
     FUM = new Date (FUM);
     FExamen = new Date (FExamen);
     
+    FUM = FUM.split(/\//).reverse().join('/'); //convert dd/mm/yyy
+    FExamen = FExamen.split(/\//).reverse().join('/'); //convert dd/mm/yyy
+    
     console.log(FExamen.getDate());
     console.log(FUM.getDate());
 
