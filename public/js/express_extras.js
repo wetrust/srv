@@ -117,6 +117,38 @@ function dateToStr(datetime){
     return estring;
 }
 
+function calcularEG(){
+    var FExamen, FUM, EdadGestacional;
+    var undia = 1000 * 60 * 60 * 24;
+    var unasemana = undia * 7;
+     
+    FUM = localStorage.fum;
+    FExamen = localStorage.fee;
+     
+    FUM = FUM.split(/\//).reverse().join('/'); //convert dd/mm/yyy
+    FExamen = FExamen.split(/\//).reverse().join('/'); //convert dd/mm/yyy
+   
+    FUM = new Date (FUM);
+    FExamen = new Date (FExamen);
+     
+    EdadGestacional = ((FExamen.getTime() - FUM.getTime()) / unasemana).toFixed(1);
+    var B = new Date();
+    B.setTime(FUM.getTime() + 40 * unasemana);    
+    localStorage.fpp = B.getDate()+"/"+(B.getMonth()+1)+"/"+B.getFullYear();
+     
+    if (FExamen.getTime() < FUM.getTime()) {
+        EdadGestacional = "0";
+    }
+    else if (((FExamen.getTime() - FUM.getTime()) / unasemana) > 42) {
+        EdadGestacional = "42";
+    }
+    else {
+        EdadGestacional = Math.floor(EdadGestacional)+"."+Math.round((EdadGestacional - Math.floor(EdadGestacional))*7);
+    }
+    
+    return EdadGestacional;
+}
+
 function appClean(){
     document.location.hash = "";
 }
