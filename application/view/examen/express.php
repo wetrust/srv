@@ -207,8 +207,8 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col d-flex justify-content-center">
-                                <button type="button" class="btn btn-info" id="boton.modificar.paciente"><i class="fas fa-edit"></i><br>Modificar y corregir</button>
-                                <a class="btn btn-info ml-sm-2" href="#consulta"><i class="far fa-check-circle"></i><br>Continuar a exámen</a>
+                                <button type="button" class="btn btn-warning" id="boton.modificar.paciente"><i class="fas fa-edit"></i><br>Modificar y corregir</button>
+                                <a class="btn btn-primary ml-sm-2" href="#consulta"><i class="far fa-check-circle"></i><br>Continuar a exámen</a>
                             </div>
                         </div>
                     </div>
