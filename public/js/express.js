@@ -1,5 +1,6 @@
 //funciones al cargar la página
 $(document).ready(function(){
+    //color de fondo
     $("html").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
     $("html").addClass("h-100");
     $("head").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
