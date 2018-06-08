@@ -125,12 +125,12 @@ function calcularEG(){
     FUM = localStorage.fum;
     FExamen = localStorage.fee;
    
-    FUM = new Date (FUM);
-    FExamen = new Date (FExamen);
-    
     FUM = FUM.split(/\//).reverse().join('/'); //convert dd/mm/yyy
     FExamen = FExamen.split(/\//).reverse().join('/'); //convert dd/mm/yyy
     
+    FUM = new Date (FUM);
+    FExamen = new Date (FExamen);
+
     console.log(FExamen.getDate());
     console.log(FUM.getDate());
 
