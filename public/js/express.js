@@ -173,8 +173,8 @@ $(document).ready(function(){
         $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
 
         //datos para información paciente parte superior
-        $("#paciente\\.nombre\\.eco\\.basico\\.examen").val("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
-        $("#paciente\\.nombre\\.eco\\.elegir\\.examen").val("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+        $("#paciente\\.nombre\\.eco\\.basico\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+        $("#paciente\\.nombre\\.eco\\.elegir\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
     });
     //input de apellidos de paciente
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
