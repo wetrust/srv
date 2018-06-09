@@ -268,7 +268,7 @@ function appLoadBasic(){
     $("#input\\.paciente\\.fe").val((day)+"/"+(month)+"/"+fecha.getFullYear());
     $('#input\\.paciente\\.fe').datepicker();
 	$('#input\\.paciente\\.fe').datepicker().on('changeDate', function(ev){
-		$(this).trigger("change");
+		$("#input\\.paciente\\.fum").trigger("change");
     });
     $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
 
