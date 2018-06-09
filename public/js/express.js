@@ -144,7 +144,7 @@ $(document).ready(function(){
 
     //examen paso 5
     $("#boton\\.volver\\.step\\.four").on("click", function(){
-        window.location.href = "#pacientes";
+        window.location.href = "#paciente";
     });
 
     $("#step\\.five").on("click", function(){
@@ -169,6 +169,8 @@ $(document).ready(function(){
         $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
         //eg para examen
         $("#input\\.paciente\\.eg\\.examen").val(localStorage.eg);
+        //
+        $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
     });
     //input de apellidos de paciente
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
