@@ -245,7 +245,6 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">Nuevo Exámen</li>
-            <li class="ml-auto"><a href="#paciente">Volver</a></li>
         </ol>
     </nav>
     <div class="row">
@@ -253,28 +252,28 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h6 class="text-center text-secondary">Previo al exámen</h6>
-                    <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
+                    <button class="btn btn-outline-danger float-right" id="boton.volver.step.four"><i class="fas fa-door-open"></i><br>Volver</button>
                     <h1 class="text-center">Fecha de exámen</h1>
                     <h3 class="card-title text-primary">Información del embarazo</h3>
                     <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
                     <div class="form-group row">
-                        <div class="col">
-                            <label for="dbp" class="col-form-label">FUM</label>
+                        <div class="col-1">
+                            <label for="input.paciente.fum.examen" class="col-form-label">FUM</label>
                         </div>
                         <div class="col">
                             <input type="text" class="form-control" id="input.paciente.fum.examen" readonly>
                         </div>
-                        <div class="col">
-                            <label for="dbp" class="col-form-label">EG</label>
+                        <div class="col-1">
+                            <label for="input.paciente.eg.examen" class="col-form-label">EG</label>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" readonly>
+                            <input type="text" class="form-control" id="input.paciente.eg.examen" readonly>
+                        </div>
+                        <div class="col-1">
+                            <label for="input.paciente.fpp.examen" class="col-form-label">FPP</label>
                         </div>
                         <div class="col">
-                            <label for="dbp" class="col-form-label">FPP</label>
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" name="fpp" readonly>
+                            <input type="text" class="form-control" id="input.paciente.fpp.examen" readonly>
                         </div>
                         <div class="col">
                             <label for="fee" class="col-form-label">Fecha de exámen (Modificable)</label>
@@ -283,16 +282,14 @@
                             <input class="form-control" type="text" id="input.paciente.fe" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
                         </div>
                     </div>
-                            <div class="form-group row">
-                                <div class="col-2"></div>
-                                <div class="col text-right">
-                                    <a class="btn btn-info  mb-3 mt-3" href="#tipoExamen" id="continuarExamenEcografico">CONTINUAR A EXÁMEN ECOGRÁFICO</a>
-                                </div>
-                            </div>
+                    <div class="row mt-3">
+                        <div class="col d-flex justify-content-center">
+                            <button type="button" class="btn btn-info ml-sm-2" id="step.five"><i class="fas fa-stethoscope"></i><br>Continuar a exámen</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-3">

@@ -141,6 +141,15 @@ $(document).ready(function(){
         $("#boton\\.modificar\\.paciente").removeClass("d-none");
         window.location.href = "#consulta";
     });
+
+    //examen paso 5
+    $("#boton\\.volver\\.step\\.four").on("click", function(){
+        window.location.href = "#pacientes";
+    });
+
+    $("#step\\.five").on("click", function(){
+        window.location.href = "#tipoExamen";
+    });
 });
 
 //funciones de los inputs
@@ -157,7 +166,9 @@ $(document).ready(function(){
         $("#input\\.paciente\\.eg\\.semanas").val(semanas);
 
         //fum para examen
-        $("#input\\.paciente\\.fum\\.examen").val(semanas);
+        $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
+        //eg para examen
+        $("#input\\.paciente\\.eg\\.examen").val(localStorage.eg);
     });
     //input de apellidos de paciente
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
