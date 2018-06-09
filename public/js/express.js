@@ -142,13 +142,18 @@ $(document).ready(function(){
         window.location.href = "#consulta";
     });
 
-    //examen paso 5
+    //Fecha de exámen paso 5
     $("#boton\\.volver\\.step\\.four").on("click", function(){
         window.location.href = "#paciente";
     });
 
     $("#step\\.five").on("click", function(){
         window.location.href = "#tipoExamen";
+    });
+
+    //Tipo de exámen paso 6
+    $("#boton\\.volver\\.step\\.five").on("click", function(){
+        window.location.href = "#consulta";
     });
 });
 
@@ -175,6 +180,7 @@ $(document).ready(function(){
         //datos para información paciente parte superior
         $("#paciente\\.nombre\\.eco\\.basico\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
         $("#paciente\\.nombre\\.eco\\.elegir\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+        $("#paciente\\.nombre\\.eco\\.prim\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
     });
     //input de apellidos de paciente
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
