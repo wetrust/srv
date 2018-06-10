@@ -10,7 +10,7 @@
                   <h4 class="card-title">Opciones de configuración</h4>
                   <ul class="nav flex-column">
                      <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#pais">País</a>
+                        <a class="nav-link active" data-toggle="tab" href="#pais">Nacionalidad</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#region">Región de salud</a>
@@ -55,15 +55,15 @@
          <div class="col-12 col-md-9">
             <div class="tab-content">
                   <div class="tab-pane active" id="pais" role="tabpanel">
-                        <h2 class="my-4">Configurar País</h2>
+                        <h2 class="my-4">Configurar Nacionalidad</h2>
                         <div class="card">
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva País</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPais"><i class="fa fa-plus" aria-hidden="true"></i> Nueva Nacionalidad</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar País</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPais"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar Nacionalidad</button>
                                           </li>
                                           <li class="nav-item">
                                                 <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPais"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
@@ -88,7 +88,7 @@
                                     <div class="card d-none" id="form.pais">
                                           <div class="card-body">
                                                 <div class="form-group">
-                                                      <h5 id="titleInput">Nuevo País</h5>
+                                                      <h5 id="titleInput">Nueva Nacionalidad</h5>
                                                 </div>
                                                 <div class="form-group">
                                                       <input type="text" class="form-control" id="input.pais">

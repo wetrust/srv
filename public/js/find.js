@@ -144,54 +144,7 @@ $(document).ready(function(){
         $("#diasEcoPrim").attr("readonly", true);
         $("#modalPreInfEcoPrimTrim").addClass("d-none");
     });
-    $("#eco\\.prim\\.guardar").on("click", function(){
-        $("#eco\\.prim\\.nuevo").removeClass("d-none");
-        $("#eco\\.prim\\.guardar").addClass("d-none");
-        $("#eco\\.prim\\.cancelar").addClass("d-none");
-        $("#lcn").attr("readonly", true);
-        $("#saco").attr("readonly", true);
-        $("#graficoLcn").removeClass("d-none");
-        $("#graficoSaco").removeClass("d-none");
-        $("#fum-cuatro").attr("readonly", false);
-        $("#semanasEcoPrim").attr("readonly", false);
-        $("#diasEcoPrim").attr("readonly", false);
-        $("#modalPreInfEcoPrimTrim").removeClass("d-none");
-
-        let examen = {
-            examen: 1,
-            embrion: $("#lcn").val(),
-            saco: $("#saco").val()
-        }
-        
-        let data = {
-            id: $("#id-paciente").val(),
-            tipo: 1,
-            data: JSON.stringify(examen)
-        }
-
-        $.post(serverURL + "examen/set/", data).done(function(response) {
-            if ( Object.keys(response).length > 0 ){
-                $("#table\\.ecografia\\.primtrim").empty();
-                $.each(response.data, function(i,val){
-                    let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
-                    $("#table\\.ecografia\\.primtrim").append(fila);
-                });
-            }
-        });
-    });
-    $("#eco\\.prim\\.cancelar").on("click", function(){
-        $("#eco\\.prim\\.nuevo").removeClass("d-none");
-        $("#eco\\.prim\\.guardar").addClass("d-none");
-        $("#eco\\.prim\\.cancelar").addClass("d-none");
-        $("#lcn").attr("readonly", true);
-        $("#saco").attr("readonly", true);
-        $("#graficoLcn").removeClass("d-none");
-        $("#graficoSaco").removeClass("d-none");
-        $("#fum-cuatro").attr("readonly", false);
-        $("#semanasEcoPrim").attr("readonly", false);
-        $("#diasEcoPrim").attr("readonly", false);
-        $("#modalPreInfEcoPrimTrim").removeClass("d-none");
-    });
+    
     $("#eco\\.prim\\.eliminar").on("click", function(){
         alert("bla");
     });

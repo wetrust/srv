@@ -163,14 +163,6 @@ $('#infadicionalClinicoSiController').on('click', function(){
 	$('#infadicionalClinicoView').removeClass('d-none');
 });
 
-$('#configSiController').on('click', function(){
-	window.location.href = "http://servidor.crecimientofetal.cl/configuracion";
-});
-
-$('#configSiController').on('focusout', function(){
-	$('#configNoController').button('toggle');
-});
-
 
 $("#saveMebrete").on("click", function(event){
 	event.preventDefault();
@@ -2449,121 +2441,7 @@ function pctlh() {
 	}
 }
 
-function egsaco() {
 
-var y = [];
-
-    y[5] =4.2;    y[6] =4.3;    y[7] =4.4;    y[8] =4.5;
-    y[9] =4.6;    y[10] =5;    y[11] =5.1;    y[12] =5.2;
-    y[13] =5.3;    y[14] =5.4;    y[15] =5.5;    y[16] =5.6;
-    y[17] =6;    y[18] =6.1;    y[19] =6.2;    y[20] =6.3;
-    y[21] =6.4;    y[22] =6.5;    y[23] =6.6;    y[24] =7;
-    y[25] =7.1;    y[26] =7.2;    y[27] =7.3;    y[28] =7.4;
-    y[29] =7.5;    y[30] =7.6;    y[31] =8;    y[32] =8.1;
-    y[33] =8.2;    y[34] =8.3;    y[35] =8.4;    y[36] =8.5;
-    y[37] =8.6;    y[38] =9;    y[39] =9.1;    y[40] =9.2;
-    y[41] =9.3;    y[42] =9.4;    y[43] =9.5;    y[44] =9.6;
-    y[45] =9.6;    y[46] =10;    y[47] =10.1;    y[48] =10.2;
-    y[49] =10.3;    y[50] =10.4;    y[51] =10.5;    y[52] =11;
-    y[53] =11.1;    y[54] =11.2;    y[55] =11.3;    y[56] =11.4;
-    y[57] =11.5;    y[58] =11.6;    y[59] =12;    y[60] =12.1;
-    y[61] =12.2;
-	
-    var saco = document.getElementById("saco").value;
-    saco = saco.replace(",", ".");
-    var prs = parseInt(saco);
-
-    if (prs < 5) {
-        $("#sacoPct").val("0");
-    }
-    else if (prs > 61) {
-        $("#sacoPct").val("0");
-    }
-    else {
-        var egsaco = y[prs];
-	$("#sacoPct").val(egsaco);
-    }
-};
-
-function eglcn() {
-
-    var LCN = [[],[]];
-
-    LCN[0][0] = 0.09; LCN[0][1] = 0.2; LCN[0][2] = 0.37;
-    LCN[0][3] = 0.57; LCN[0][4] = 0.7; LCN[0][5] = 0.8;
-    LCN[0][6] = 0.9; LCN[0][7] = 1; LCN[0][8] = 1.1;
-    LCN[0][9] = 1.12; LCN[0][10] = 1.13; LCN[0][11] = 1.18;
-    LCN[0][12] = 1.27; LCN[0][13] = 1.38; LCN[0][14] = 1.47;
-    LCN[0][15] = 1.58; LCN[0][16] = 1.65; LCN[0][17] = 1.72;
-    LCN[0][18] = 1.87; LCN[0][19] = 1.96; LCN[0][20] = 2.05;
-    LCN[0][21] = 2.18; LCN[0][22] = 2.25; LCN[0][23] = 2.35;
-    LCN[0][24] = 2.54; LCN[0][25] = 2.62; LCN[0][26] = 2.7;
-    LCN[0][27] = 2.9; LCN[0][28] = 3.08; LCN[0][29] = 3.16;
-    LCN[0][30] = 3.4; LCN[0][31] = 3.51; LCN[0][32] = 3.57;
-    LCN[0][33] = 3.76; LCN[0][34] = 3.85; LCN[0][35] = 4.05;
-    LCN[0][36] = 4.18; LCN[0][37] = 4.46; LCN[0][38] = 4.55;
-    LCN[0][39] = 4.66; LCN[0][40] = 4.88; LCN[0][41] = 5.07;
-    LCN[0][42] = 5.29; LCN[0][43] = 5.46; LCN[0][44] = 5.66;
-    LCN[0][45] = 5.87; LCN[0][46] = 6.01; LCN[0][47] = 6.27;
-    LCN[0][48] = 6.37; LCN[0][49] = 6.65; LCN[0][50] = 6.77;
-    LCN[0][51] = 7.08; LCN[0][52] = 7.19; LCN[0][53] = 7.39;
-    LCN[0][54] = 7.57; LCN[0][55] = 7.68; LCN[0][56] = 7.98;
-    LCN[0][57] = 8.09; LCN[0][58] = 8.35; LCN[0][59] = 8.48;
-    LCN[0][60] = 8.56; LCN[0][61] = 8.76; LCN[0][62] = 8.88;
-    LCN[0][63] = 9.09;
-
-    LCN[1][0] = 0; LCN[1][1] = 5.5; LCN[1][2] = 6;
-    LCN[1][3] = 6.2; LCN[1][4] = 6.4; LCN[1][5] = 6.5;
-    LCN[1][6] = 6.6; LCN[1][7] = 7.1; LCN[1][8] = 7.1;
-    LCN[1][9] = 7.1; LCN[1][10] = 7.2; LCN[1][11] = 7.3;
-    LCN[1][12] = 7.4; LCN[1][13] = 7.5; LCN[1][14] = 7.6;
-    LCN[1][15] = 8; LCN[1][16] = 8.1; LCN[1][17] = 8.2;
-    LCN[1][18] = 8.3; LCN[1][19] = 8.4; LCN[1][20] = 8.5;
-    LCN[1][21] = 8.6; LCN[1][22] = 9; LCN[1][23] = 9.1;
-    LCN[1][24] = 9.2; LCN[1][25] = 9.3; LCN[1][26] = 9.4;
-    LCN[1][27] = 9.5; LCN[1][28] = 10; LCN[1][29] = 10.1;
-    LCN[1][30] = 10.2; LCN[1][31] = 10.3; LCN[1][32] = 10.4;
-    LCN[1][33] = 10.5; LCN[1][34] = 10.6; LCN[1][35] = 11;
-    LCN[1][36] = 11.1; LCN[1][37] = 11.2; LCN[1][38] = 11.3;
-    LCN[1][39] = 11.4; LCN[1][40] = 11.5; LCN[1][41] = 11.6;
-    LCN[1][42] = 12; LCN[1][43] = 12.1; LCN[1][44] = 12.2;
-    LCN[1][45] = 12.3; LCN[1][46] = 12.4; LCN[1][47] = 12.5;
-    LCN[1][48] = 12.6; LCN[1][49] = 13; LCN[1][50] = 13.1;
-    LCN[1][51] = 13.2; LCN[1][52] = 13.3; LCN[1][53] = 13.4;
-    LCN[1][54] = 13.5; LCN[1][55] = 13.6; LCN[1][56] = 14;
-    LCN[1][57] = 14.1; LCN[1][58] = 14.2; LCN[1][59] = 14.3;
-    LCN[1][60] = 14.4; LCN[1][61] = 14.5; LCN[1][62] = 14.6;
-    LCN[1][63] = 15;
-	
-    var lcn = document.getElementById("lcn").value;
-    lcn = lcn.toString();
-    lcn = lcn.replace(",", ".");
-    lcn = parseFloat(lcn);
-
-    if (isNaN(lcn) != true){
-	    if (lcn > 90) {
-		$("#lcnPct").val("0");
-	    }
-	    else if (lcn < 1){
-	    	$("#lcnPct").val("0");
-	    }
-	    else {
-
-		    var ValLCN1 = lcn / 10;
-
-		    for (i = 1; i <= 63; i ++ ) {
-			if (LCN[0][i] >= ValLCN1) {
-			    var eglcn = LCN[1][i];
-			    i = 63;
-			}
-		    }
-		    $("#lcnPct").val(eglcn);
-	    }
-    }
-    else{
-    	$("#lcnPct").val("0");
-    }
-};
 
 function pctdv() {
 
