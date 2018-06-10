@@ -216,7 +216,7 @@ function obtenerFUM(rut){
             var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
             
             $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
-            $('#input\\.paciente\\.fum').datepicker('setValue', data.fur_date);
+            $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+dateTime.getFullYear());
             $("#input\\.paciente\\.fum").trigger("change");
         }
     });

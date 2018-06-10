@@ -130,7 +130,7 @@ $(document).ready(function(){
     });
 
     $('#configSiController').on('click', function(){
-        window.location.href = serverUR + "configuracion";
+        window.location.href = serverURL + "configuracion";
     });
     
     $('#configSiController').on('focusout', function(){
@@ -960,7 +960,7 @@ $(document).ready(function(){
              });
         $('#popupGraficos').modal('show');
     });
-    
+
 });
 
 //funciones de los inputs
