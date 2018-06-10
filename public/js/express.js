@@ -171,10 +171,22 @@ $(document).ready(function(){
         $("#sacoPct").val("");
         $("#graficoLcn").addClass("d-none");
         $("#graficoSaco").addClass("d-none");
-        $("#fum-cuatro").attr("readonly", true);
-        $("#semanasEcoPrim").attr("readonly", true);
-        $("#diasEcoPrim").attr("readonly", true);
         $("#modalPreInfEcoPrimTrim").addClass("d-none");
+    });
+
+    $("#eco\\.prim\\.cancelar").on("click", function(){
+        $("#eco\\.prim\\.nuevo").removeClass("d-none");
+        $("#eco\\.prim\\.guardar").addClass("d-none");
+        $("#eco\\.prim\\.cancelar").addClass("d-none");
+        $("#lcn").attr("readonly", true);
+        $("#lcn").val("");
+        $("#lcnPct").val("");
+        $("#saco").attr("readonly", true);
+        $("#saco").val("");
+        $("#sacoPct").val("");
+        $("#graficoLcn").removeClass("d-none");
+        $("#graficoSaco").removeClass("d-none");
+        $("#modalPreInfEcoPrimTrim").removeClass("d-none");
     });
 });
 
