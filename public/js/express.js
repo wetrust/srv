@@ -174,7 +174,7 @@ $(document).ready(function(){
         $("#modalPreInfEcoPrimTrim").addClass("d-none");
     });
 
-    $("#eco\\.prim\\.cancelar").on("click", function(){
+    $("#boton\\.eco\\.prim\\.cancelar").on("click", function(){
         $("#eco\\.prim\\.nuevo").removeClass("d-none");
         $("#eco\\.prim\\.guardar").addClass("d-none");
         $("#eco\\.prim\\.cancelar").addClass("d-none");
