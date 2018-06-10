@@ -164,7 +164,11 @@ $(document).ready(function(){
         $("#boton\\.eco\\.prim\\.cancelar").removeClass("d-none");
         $("#boton\\.eco\\.prim\\.eliminar").addClass("d-none");
         $("#lcn").attr("readonly", false);
+        $("#lcn").val("");
+        $("#lcnPct").val("");
         $("#saco").attr("readonly", false);
+        $("#saco").val("");
+        $("#sacoPct").val("");
         $("#graficoLcn").addClass("d-none");
         $("#graficoSaco").addClass("d-none");
         $("#fum-cuatro").attr("readonly", true);
@@ -220,5 +224,15 @@ $(document).ready(function(){
                 });
             }
         });
+    });
+
+    $("#lcn").on("keyup", function(){
+        let valor = $(this).val();
+        $("#lcnPct").val(eglcn(valor));
+    });
+
+    $("#saco").on("keyup", function(){
+        let valor = $(this).val();
+        $("#sacoPct").val(egSaco(valor));
     });
 });
