@@ -373,9 +373,10 @@ function appLoadBasic(){
     //cargar los ultimos pacientes de la bd
     loadTablePatients();
     //activar funcionalidad de input fur en paciente
-    $('#input\\.paciente\\.fum').datepicker({autoclose: true});
+    $('#input\\.paciente\\.fum').datepicker();
 	$('#input\\.paciente\\.fum').datepicker().on('changeDate', function(ev){
-		$(this).trigger("change");
+        $(this).trigger("change");
+        $(this).hide();
     });
     //establecer la fecha de exámen
     let fecha = new Date();
@@ -383,9 +384,10 @@ function appLoadBasic(){
 	let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
 
     $("#input\\.paciente\\.fe").val((day)+"/"+(month)+"/"+fecha.getFullYear());
-    $('#input\\.paciente\\.fe').datepicker({autoclose: true});
+    $('#input\\.paciente\\.fe').datepicker();
 	$('#input\\.paciente\\.fe').datepicker().on('changeDate', function(ev){
-		$("#input\\.paciente\\.fum").trigger("change");
+        $("#input\\.paciente\\.fum").trigger("change");
+        $(this).hide();
     });
     $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
     //establecer fecha para examen de primer trimestre
