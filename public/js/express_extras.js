@@ -376,7 +376,7 @@ function appLoadBasic(){
     $('#input\\.paciente\\.fum').datepicker();
 	$('#input\\.paciente\\.fum').datepicker().on('changeDate', function(ev){
         $(this).trigger("change");
-        $(this).hide();
+        $(this).datepicker().hide();
     });
     //establecer la fecha de exámen
     let fecha = new Date();
@@ -387,7 +387,7 @@ function appLoadBasic(){
     $('#input\\.paciente\\.fe').datepicker();
 	$('#input\\.paciente\\.fe').datepicker().on('changeDate', function(ev){
         $("#input\\.paciente\\.fum").trigger("change");
-        $(this).hide();
+        $(this).datepicker().hide();
     });
     $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
     //establecer fecha para examen de primer trimestre
