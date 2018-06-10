@@ -273,13 +273,6 @@ function appLoadBasic(){
     $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
     //establecer fecha para examen de primer trimestre
     $("#input\\.paciente\\.fe\\.ecoprim").val((day)+"/"+(month)+"/"+fecha.getFullYear());
-    $('#input\\.paciente\\.fe\\.ecoprim').datepicker();
-	$('#input\\.paciente\\.fe\\.ecoprim').datepicker().on('changeDate', function(ev){
-        $("#input\\.paciente\\.fe").val($("#input\\.paciente\\.fe\\.ecoprim").val());
-        $('#input\\.paciente\\.fe').datepicker('setValue', $("#input\\.paciente\\.fe\\.ecoprim").val());
-		$("#input\\.paciente\\.fum").trigger("change");
-    });
-    $('#input\\.paciente\\.eg\\.ecoprim').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
 
     $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
         $("#tipo\\.examen\\.previo").empty();
