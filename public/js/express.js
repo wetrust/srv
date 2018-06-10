@@ -155,6 +155,23 @@ $(document).ready(function(){
     $("#boton\\.volver\\.step\\.five").on("click", function(){
         window.location.href = "#consulta";
     });
+
+    //ecografía de primer trimestre
+    $("#boton\\.eco\\.prim\\.nuevo").on("click", function(){
+        $("#boton\\.eco\\.prim\\.nuevo").addClass("d-none");
+        $("#boton\\.eco\\.prim\\.modificar").addClass("d-none");
+        $("#boton\\.eco\\.prim\\.guardar").removeClass("d-none");
+        $("#boton\\.eco\\.prim\\.cancelar").removeClass("d-none");
+        $("#boton\\.eco\\.prim\\.eliminar").addClass("d-none");
+        $("#lcn").attr("readonly", false);
+        $("#saco").attr("readonly", false);
+        $("#graficoLcn").addClass("d-none");
+        $("#graficoSaco").addClass("d-none");
+        $("#fum-cuatro").attr("readonly", true);
+        $("#semanasEcoPrim").attr("readonly", true);
+        $("#diasEcoPrim").attr("readonly", true);
+        $("#modalPreInfEcoPrimTrim").addClass("d-none");
+    });
 });
 
 //funciones de los inputs
@@ -172,9 +189,11 @@ $(document).ready(function(){
 
         //fum para examen
         $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
+        $("#input\\.paciente\\.fe\\.ecoprim").val(localStorage.fee);
         //eg para examen
         $("#input\\.paciente\\.eg\\.examen").val(localStorage.eg);
-        //
+        $("#eco\\.prim\\.eg").val(localStorage.eg);
+        //FPP
         $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
 
         //datos para información paciente parte superior

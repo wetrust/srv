@@ -787,12 +787,10 @@
                     <h6 class="text-center text-secondary">Elegir exámen ecográfico</h6>
                     <button class="btn btn-outline-danger float-right" id="boton.volver.step.five"><i class="fas fa-door-open"></i><br>Volver</button>
                     <h1 class="text-center">Exámen Ecográfico</h1>
-                    <h3 class="card-title text-primary">Tipo de exámen ecográfico</h3>
-                    <p class="text-secondary">Haga click sobre el exámen ecográfico a realizar</p>
                     <div class="row">
                         <div class="col">
-                            <h4 class="text-primary">Evaluación de biometría y Doppler</h4>
-                            <p class="text-primary"><small>Módulos actualmente en funcionamiento, Objetivos: valoración de la biometría fetal más flujometria Doppler materno fetal.</small></p>
+                            <h3 class="card-title text-primary">Evaluación de biometría y Doppler</h3>
+                            <p class="text-secondary">Módulos actualmente en funcionamiento, Objetivos: valoración de la biometría fetal más flujometria Doppler materno fetal.</p>
                             <div class="card mb-3 mt-3" id="ecografia.uno">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
@@ -823,8 +821,8 @@
                             </div>
                         </div>
                         <div class="col">
-                            <h4 class="text-primary">Tamizaje y evaluación morfológica</h4>
-                            <p class="text-primary mb-0"><small>Módulos cuyo desarrollo se realizará posteriormente.</small></p><p class="mb-0">&nbsp;</p>
+                            <h3 class="card-title text-primary">Tamizaje y evaluación morfológica</h3>
+                            <p class="text-secondary">Módulos cuyo desarrollo se realizará posteriormente.</p><p class="mb-0">&nbsp;</p>
                             <div class="card mb-3 mt-3">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
@@ -884,7 +882,7 @@
             <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
             <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
             <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica</li>
-            <li class="ml-auto"><a href="#tipoExamen">Volver</a></li>
+            <li class="ml-auto"><a href="#tipoExamen"><i class="fas fa-door-open"></i> Volver</a></li>
         </ol>
     </nav>
             <div class="row">
@@ -892,9 +890,9 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-info" id="eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="eco.prim.eliminar">Eliminar</button>
+                                <button type="button" class="btn btn-info" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="boton.eco.prim.eliminar">Eliminar</button>
                             </div>
-                            <h6 class="text-center mx-2">Informes</h6>
+                            <h6 class="text-center my-2">Informes</h6>
                             <div class="d-flex justify-content-center">
                                 <button class="btn btn-info" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
                             </div>
@@ -909,7 +907,7 @@
                                     <label for="fee" class="col-form-label">Fecha de exámen</label>
                                 </div>
                                 <div class="col-6 col-sm-3">
-                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee" id="fee-cuatro" disabled>
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" id="input.paciente.fe.ecoprim" disabled>
                                 </div>
                                 <div class="col-6 col-sm-3">
                                     <label for="fee" class="col-form-label">EG al exámen</label>
