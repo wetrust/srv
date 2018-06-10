@@ -890,12 +890,11 @@
                     <div class="card">
                         <div class="card-body">
                             <h6 class="text-center my-2">Acciones</h6>
-                            <hr>
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                                 <button type="button" class="btn btn-info" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="boton.eco.prim.eliminar">Eliminar</button>
                             </div>
-                            <h6 class="text-center my-2">Informes</h6>
                             <hr>
+                            <h6 class="text-center my-2">Informes</h6>
                             <div class="d-flex justify-content-center">
                                 <button class="btn btn-info" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
                             </div>
