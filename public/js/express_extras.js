@@ -91,7 +91,7 @@ function loadTablePatients(){
                 var ecmtxt = "";
             }
             
-            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td><td><i class='fas fa-camera'></i></td></tr>";
+            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td><td><i class='fas fa-camera' name='dcm' data-id='" + des.PatientID +"' data-date='" + des.AccessTime + "'></i></td></tr>";
             $("#table\\.body\\.pacientes").append(strTable);
         });
         $("#table\\.body\\.pacientes tr").on('click',function(){
@@ -107,6 +107,10 @@ function loadTablePatients(){
             $("#buscar\\.paciente\\.id").val(RUT);
             $("#buscar\\.paciente\\.apellido").val("");
             $("#buscar\\.paciente\\.action").trigger("change");
+        });
+
+        $("i[name='dcm']").on("click", function(){
+            alert("click");
         });
     });
 }
