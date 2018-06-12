@@ -1100,7 +1100,7 @@
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica 2do 3er trim</li>
-    <li class="ml-auto"><a href="#tipoExamen" class="text-danger">Volver</a></li>
+    <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
   </ol>
 </nav>
             <div class="form-group row">
@@ -1669,7 +1669,7 @@
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ecografía Dopple</li>
-    <li class="ml-auto"><a href="#tipoExamen" class="text-danger">Volver</a></li>
+    <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
   </ol>
 </nav>
             <div class="form-group row">
