@@ -882,7 +882,7 @@
             <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
             <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
             <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica</li>
-            <li class="ml-auto"><a href="#tipoExamen"><i class="fas fa-door-open"></i> Volver</a></li>
+            <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
         </ol>
     </nav>
             <div class="row">
@@ -1100,7 +1100,7 @@
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica 2do 3er trim</li>
-    <li class="ml-auto"><a href="#tipoExamen">Volver</a></li>
+    <li class="ml-auto"><a href="#tipoExamen" class="text-danger">Volver</a></li>
   </ol>
 </nav>
             <div class="form-group row">
@@ -1669,7 +1669,7 @@
     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
     <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ecografía Dopple</li>
-    <li class="ml-auto"><a href="#tipoExamen">Volver</a></li>
+    <li class="ml-auto"><a href="#tipoExamen" class="text-danger">Volver</a></li>
   </ol>
 </nav>
             <div class="form-group row">
@@ -2043,272 +2043,6 @@
                     </div>
                     <div class="modal-footer" id="graficosFooter">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="configuracion" style="display:none;">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-4">
-                            <h4 class="mt-0 mb-1"><em>Configuración</em></h4>
-                            <p><em>Ultrasonografía obstétrica básica para profesionales</em></p>
-                        </div>
-                        <div class="media-body mt-4">
-                            <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a>
-                </li>
-                <li class="breadcrumb-item active">Configuración</li>
-                <li class="ml-auto"><a href="#consulta">Volver</a></li>
-            </ol>
-            <hr>
-            <ul class="nav nav-tabs" role="tablist" id="configTab">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#ciudadConfig" role="tab">Procedencia (Ciudad)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#LugarConfig" role="tab">Lugar Control prenatal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#motivoConfig" role="tab">Motivo exámen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#ecografistaConfig" role="tab">Profesional Examinador</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#patologiaObstetricaConfig" role="tab">Patología Obstétrica Relevante</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane pt-2" id="patologiaObstetricaConfig" role="tabpanel">
-                    <ul class="nav justify-content-center m-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="nuevoPatologiaObstetricaConfig">Nuevo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="editarPatologiaObstetricaConfig" style="display:none;"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="guardarPatologiaObstetricaConfig" style="display:none;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="cancelarPatologiaObstetricaConfig" style="display:none;"> Cancelar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="eliminarPatologiaObstetricaConfig" style="display:none;"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
-                        </li>
-                    </ul>
-                    <div class="card tabla">
-                        <div class="card-body">
-                            <table class="table table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Patología Obstétrica Relevante</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="PatologiaObstetricaConfigTable">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card formulario" style="display:none;">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <h5>Patología Obstétrica Relevante</h5>
-                            </div>
-                            <div class="form-group">
-                                <label for="TipoInput">Patologia Obstetrica</label>
-                                <input type="text" class="form-control" id="PatologiaObstetricaInput" aria-describedby="lugarInputHelp">
-                                <small id="lugarInputHelp" class="form-text text-muted">Lugar de control prenatal.</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane pt-2" id="LugarConfig" role="tabpanel">
-                    <ul class="nav justify-content-center m-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="nuevoLugarConfig">Nuevo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="editarLugarConfig" style="display:none;"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="guardarLugarConfig" style="display:none;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="cancelarLugarConfig" style="display:none;"> Cancelar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="eliminarLugarConfig" style="display:none;"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
-                        </li>
-                    </ul>
-                    <div class="card tabla">
-                        <div class="card-body">
-                            <table class="table table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Lugar</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="LugarConfigTable">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card formulario" style="display:none;">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <h5>Nuevo Lugar</h5>
-                            </div>
-                            <div class="form-group">
-                                <label for="ciudadInput">lugar</label>
-                                <input type="text" class="form-control" id="LugarInput" aria-describedby="ciudadInputHelp">
-                                <small id="ciudadInputHelp" class="form-text text-muted">ciudad o pueblo.</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane pt-2" id="motivoConfig" role="tabpanel">
-                    <ul class="nav justify-content-center m-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="nuevoMotivoConfig">Nuevo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="editarMotivoConfig" style="display:none;"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="guardarMotivoConfig" style="display:none;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="cancelarMotivoConfig" style="display:none;"> Cancelar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="eliminarMotivoConfig" style="display:none;"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
-                        </li>
-                    </ul>
-                    <div class="card tabla">
-                        <div class="card-body">
-                            <table class="table table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Motivo de exámen</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="MotivoConfigTable">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card formulario" style="display:none;">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <h5>Nuevo motivo de exámen</h5>
-                            </div>
-                            <div class="form-group">
-                                <label for="motivoInput">Motivo de exámen</label>
-                                <input type="text" class="form-control" id="motivoInput" aria-describedby="motivoInputHelp">
-                                <small id="motivoInputHelp" class="form-text text-muted">Motivo de exámen o control ecográfico.</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane active pt-2" id="ciudadConfig" role="tabpanel">
-                    <ul class="nav justify-content-center m-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="nuevoCiudadConfig">Nuevo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="editarCiudadConfig" style="display:none;"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="guardarCiudadConfig" style="display:none;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="cancelarCiudadConfig" style="display:none;"> Cancelar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="eliminarCiudadConfig" style="display:none;"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
-                        </li>
-                    </ul>
-                    <div class="card tabla">
-                        <div class="card-body">
-                            <table class="table table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Procedencia (Ciudad)</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="CiudadConfigTable">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card formulario" style="display:none;">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <h5>Nueva Procedencia (Ciudad)</h5>
-                            </div>
-                            <div class="form-group">
-                                <label for="CiudadInput">Procedencia (Ciudad)</label>
-                                <input type="text" class="form-control" id="CiudadInput">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane pt-2" id="ecografistaConfig" role="tabpanel">
-                    <ul class="nav justify-content-center m-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="nuevoEcografistaConfig">Nuevo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="editarEcografistaConfig" style="display:none;"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="guardarEcografistaConfig" style="display:none;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="cancelarEcografistaConfig" style="display:none;"> Cancelar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="eliminarEcografistaConfig" style="display:none;"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
-                        </li>
-                    </ul>
-                    <div class="card tabla">
-                        <div class="card-body">
-                            <table class="table table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Ecografista</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="EcografistaConfigTable">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card formulario" style="display:none;">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <h5>Nuevo Ecografista</h5>
-                            </div>
-                            <div class="form-group">
-                                <label for="ecografistaInput">Ecografista</label>
-                                <input type="text" class="form-control" id="ecografistaInput" aria-describedby="ecografistaInputHelp">
-                                <small id="ecografistaInputHelp" class="form-text text-muted">Médico ecografista.</small>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
