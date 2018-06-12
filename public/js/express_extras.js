@@ -91,7 +91,7 @@ function loadTablePatients(){
                 var ecmtxt = "";
             }
             
-            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td><td><i class='fas fa-camera' name='dcm' data-id='" + des.PatientID +"' data-date='" + des.AccessTime + "'></i></td></tr>";
+            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td><td><i class='fas fa-camera' name='dcm' data-id='" + des.PatientID +"' data-date='" + epochToDate(des.AccessTime) + "'></i></td></tr>";
             $("#table\\.body\\.pacientes").append(strTable);
         });
         $("#table\\.body\\.pacientes tr").on('click',function(){
@@ -110,7 +110,34 @@ function loadTablePatients(){
         });
 
         $("i[name='dcm']").on("click", function(){
-            alert("click");
+            let RUTPACIENTE = $(this).data("id");
+            let FechaExm = $(this).data("id");
+
+            $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + FechaExm.getMonth() + FechaExm.getDate()).done(function(data) {
+                if (data.exist == true ){
+                    StudyDate =  data.StudyDate;
+                    $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
+                        $("#fotosDicom").html(" ");
+                        if (data.DCM = true) {
+                            $.each(data.JPGFiles, function(i, item) {
+                                $("#fotosDicom").append("<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                            });
+                            $('.zoom').on("click", function(){
+                                var img = this.outerHTML;
+                                $("#modalZoom").html(" ");
+                                $("#modalZoom").append(img);
+                                $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
+                                $("#modalZoom").modal("show");
+                            });
+                        }
+                    }).fail(function() {
+                        $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+                    });     
+                }
+                else{
+                    $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+                }
+            });
         });
     });
 }
@@ -245,6 +272,8 @@ function obtenerexamenes(id_paciente, fecha){
                         $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
                         $("#modalZoom").modal("show");
                     });
+
+                    window.location.href = "#imgDicom";
                 }
             }).fail(function() {
                 $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
