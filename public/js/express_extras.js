@@ -622,7 +622,7 @@ function appLoadBasic(){
     });
 
     //cargar profesional
-    $.get( appUrl + "configuracion/profesional", function( data ) {
+    $.get( serverURL + "configuracion/profesional", function( data ) {
         $("#profesional\\.ecografista").empty();
         $.each(data, function (key, des) {
             $("#profesional\\.ecografista").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
