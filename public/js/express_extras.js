@@ -259,7 +259,7 @@ function obtenerEcoPrimTrim(){
         tipo: 1
     }
 
-   $.post(serverURL + "examen/get", data).done(function (data) {
+   $.post(serverURL + "examen/get", data).done(function (response) {
         if ( Object.keys(response).length > 0 ){
             $("#table\\.ecografia\\.primtrim").empty();
             $.each(response.data, function(i,val){
@@ -506,11 +506,13 @@ function crearInformeEcoPrimTrim(){
 	InformeString = InformeString.replace(":IDPACIENTE", idpaciente);
 	InformeString = InformeString.replace(":MOTIVO", motivo);
 	InformeString = InformeString.replace(":ECOGRAFISTA", ecografista);
-	
-	var day = ("0" + aplication.day.getDate()).slice(-2);
-	var month = ("0" + (aplication.day.getMonth() + 1)).slice(-2);
+    
+    
+    let fecha = new Date();
+    let day = ("0" + fecha.getDate()).slice(-2);
+	let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
 
-	var dateInf = (day)+"/"+(month)+"/"+aplication.day.getFullYear();
+	var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
 	
 	var comentario = $("#comentarios-eco-uno").val();
 	if (typeof comentario !== 'undefined'){
