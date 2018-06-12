@@ -91,7 +91,7 @@ function loadTablePatients(){
                 var ecmtxt = "";
             }
             
-            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td><td><i class='fas fa-camera' name='dcm' data-id='" + des.PatientID +"' data-date='" + epochToDate(des.AccessTime) + "'></i></td></tr>";
+            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td><td><i class='fas fa-camera' name='dcm' data-id='" + des.PatientID +"' data-date='" + des.AccessTime + "'></i></td></tr>";
             $("#table\\.body\\.pacientes").append(strTable);
         });
         $("#table\\.body\\.pacientes tr").on('click',function(){
@@ -111,7 +111,7 @@ function loadTablePatients(){
 
         $("i[name='dcm']").on("click", function(){
             let RUTPACIENTE = $(this).data("id");
-            let FechaExm = $(this).data("id");
+            let FechaExm = epochToDate($(this).data("date"));
 
             $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + FechaExm.getMonth() + FechaExm.getDate()).done(function(data) {
                 if (data.exist == true ){
