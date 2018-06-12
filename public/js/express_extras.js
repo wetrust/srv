@@ -111,7 +111,8 @@ function loadTablePatients(){
 
         $("i[name='dcm']").on("click", function(){
             let RUTPACIENTE = $(this).data("id");
-            let FechaExm = epochToDate($(this).data("date"));
+            let FechaExm = $(this).data("date");
+            FechaExm = epochToDate(FechaExm);
 
             $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + FechaExm.getMonth() + FechaExm.getDate()).done(function(data) {
                 if (data.exist == true ){
