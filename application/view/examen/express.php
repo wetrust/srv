@@ -56,6 +56,7 @@
                                             <th scope="col">Nombre</th>
                                             <th scope="col">Fecha</th>
                                             <th scope="col">Tipo Exm. Previo</th>
+                                            <th scope="col">DCM</th>
                                         </tr>
                                     </thead>
                                     <?php if ($this->dicom) { ?>
