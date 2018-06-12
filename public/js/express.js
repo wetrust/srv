@@ -209,6 +209,7 @@ $(document).ready(function(){
 
         let examen = {
             examen: 1,
+            eg: $("#eco\\.prim\\.eg").val(),
             embrion: $("#lcn").val(),
             saco: $("#saco").val()
         }
