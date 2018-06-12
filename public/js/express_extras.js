@@ -571,6 +571,18 @@ function imprInforme(muestra)
 	ventimp.show();
 }
 
+$('#infadicionalNoController').on('click', function(){
+	if ($('#infadicionalView').hasClass('d-none') == false){
+		$('#infadicionalView').addClass('d-none');
+		$('#continuarExamenEcografico').removeClass('d-none');
+	}
+});
+
+$('#infadicionalSiController').on('click', function(){
+	$('#infadicionalView').removeClass('d-none');
+	$('#continuarExamenEcografico').addClass('d-none');
+});
+
 function appClean(){
     document.location.hash = "";
 }
@@ -606,6 +618,14 @@ function appLoadBasic(){
         $.each(data, function (key, des) {
             $("#patologiaObstetricaUno").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
             $("#tipo\\.examen\\.previo").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
+        });
+    });
+
+    //cargar profesional
+    $.get( appUrl + "configuracion/profesional", function( data ) {
+        $("#profesional\\.ecografista").empty();
+        $.each(data, function (key, des) {
+            $("#profesional\\.ecografista").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
         });
     });
 }

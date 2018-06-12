@@ -363,11 +363,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-2 mb-2">
-                                    <div class="col-12 text-right">
-                                        <a class="btn btn-info mt-3" href="#tipoExamen">CONTINUAR A EXÁMEN ECOGRÁFICO</a><br><small>Datos registrados serán guardados automáticamente</small>
-                                    </div>
-                                </div>
                                 <div class="row my-3">
                                     <div class="col-9">
                                         <h5 class="card-title text-primary text-left mt-2 mb-4">Adicional datos clínicos relevantes</h5>
