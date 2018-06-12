@@ -14,7 +14,7 @@ class PaisModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT pais_id, pais_name FROM pais";
+        $sql = "SELECT pais_id, pais_name FROM pais ORDER BY pais_name";
         $query = $database->prepare($sql);
         $query->execute();
 
