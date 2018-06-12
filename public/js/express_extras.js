@@ -91,7 +91,7 @@ function loadTablePatients(){
                 var ecmtxt = "";
             }
             
-            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td></tr>";
+            var strTable = "<tr><th scope='row' data-id='" + des.PatientID + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + nombre[1] + " "+ nombre[0] +"</td><td>" + date + "</td><td>" + ecmtxt + "</td><td><i class='fas fa-camera'></i></td></tr>";
             $("#table\\.body\\.pacientes").append(strTable);
         });
         $("#table\\.body\\.pacientes tr").on('click',function(){
@@ -194,7 +194,7 @@ function obtenerNombre(id_paciente){
             $("#input\\.paciente\\.fe").val((day)+"/"+(month)+"/"+dateTime.getFullYear());
             $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+dateTime.getFullYear());
             //cargar fur si tiene
-            obtenerFUM(id_paciente);  
+            obtenerFUM(id_paciente); 
         }
         else{
             alert("No hay pacientes con ese ID o Nombre")
