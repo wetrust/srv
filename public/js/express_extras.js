@@ -20,6 +20,7 @@ function onHashChange(){
         //bloquear los input en caso que el usuario haya regresado a la pagina anterior
         //si haber cancelado
         $("#boton\\.eco\\.prim\\.cancelar").trigger("click");
+        obtenerEcoPrimTrim();
         displayElement("ecoObsPrimTrim");
     }
     else if (hash=="#configuracion"){
@@ -251,6 +252,24 @@ function obtenerexamenes(id_paciente, fecha){
     }); 
 };
 
+function obtenerEcoPrimTrim(){
+    //cargar los exámenes que tiene el paciente para mostrar en la grilla
+    let data = {
+        id: $("#id-paciente").val(),
+        tipo: 1
+    }
+
+   $.post(serverURL + "examen/get", data).done(function (data) {
+        if ( Object.keys(response).length > 0 ){
+            $("#table\\.ecografia\\.primtrim").empty();
+            $.each(response.data, function(i,val){
+                let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.eg_examen +"</td><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
+                $("#table\\.ecografia\\.primtrim").append(fila);
+            });
+        }
+    }); 
+}
+
 function eglcn(lcn) {
 
     var LCN = [[],[]];
@@ -393,6 +412,7 @@ function appLoadBasic(){
     //establecer fecha para examen de primer trimestre
     $("#input\\.paciente\\.fe\\.ecoprim").val((day)+"/"+(month)+"/"+fecha.getFullYear());
 
+    //cargar patología obstétrica
     $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
         $("#tipo\\.examen\\.previo").empty();
         $("#patologiaObstetricaUno").empty();

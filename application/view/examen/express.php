@@ -716,7 +716,7 @@
                     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
                     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
-                    <li class="ml-auto"><a href="#consulta">Volver</a></li>
+                    <li class="ml-auto"><a href="#consulta" class="text-center"><i class="fas fa-door-open"></i> Volver</a></li>
                 </ol>
             </nav>
             <h4>Imágenes Disponibles</h4>
