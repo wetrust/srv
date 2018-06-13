@@ -113,7 +113,7 @@ function loadTablePatients(){
             let RUTPACIENTE = $(this).data("id");
             let FechaExm = $(this).data("date");
             FechaExm = epochToDate(FechaExm);
-            let mes = FechaExm.getMonth();
+            let mes = FechaExm.getMonth() + 1;
 
             if (mes < 10){
                 mes = "0" + mes;
