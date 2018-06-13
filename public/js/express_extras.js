@@ -675,4 +675,12 @@ function appLoadBasic(){
             $("#profesional\\.ecografista").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
         });
     });
+
+    //cargar profesional referente
+    $.get( serverURL + "configuracion/profesionalreferente", function( data ) {
+        $("#profReferente").empty();
+        $.each(data, function (key, des) {
+            $("#profReferente").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
+        });
+    });
 }
