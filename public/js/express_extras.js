@@ -651,14 +651,22 @@ function appLoadBasic(){
     $("#input\\.paciente\\.fe\\.ecoprim").val((day)+"/"+(month)+"/"+fecha.getFullYear());
 
     //cargar patología obstétrica
-    $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
-        $("#tipo\\.examen\\.previo").empty();
-        $("#patologiaObstetricaUno").empty();
+    $.get( serverURL + "configuracion/motivoexamen", function( data ) {
+        $("#motivo\\.examen").empty();
         $.each(data, function (key, des) {
-            $("#patologiaObstetricaUno").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
-            $("#tipo\\.examen\\.previo").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
+            $("#motivo\\.examen").append('<option value="'+ des.motivo_id + '">'+ des.motivo_name  +'</option>');
         });
     });
+
+    //cargar patología obstétrica
+    //$.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
+    //    $("#tipo\\.examen\\.previo").empty();
+    //    $("#motivo\\.examen").empty();
+    //    $.each(data, function (key, des) {
+    //        $("#motivo\\.examen").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
+    //        $("#tipo\\.examen\\.previo").append('<option value="'+ des.patologia_id + '">'+ des.patologia_name  +'</option>');
+    //    });
+    //});
 
     //cargar profesional
     $.get( serverURL + "configuracion/profesional", function( data ) {

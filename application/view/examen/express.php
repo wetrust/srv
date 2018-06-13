@@ -314,10 +314,10 @@
                             <div class="form-group d-none" id="infadicionalView">
                                 <div class="row mt-2 mb-2">
                                     <div class="col-2">
-                                        <label for="motivo-examen" class="col-form-label">Lugar de control prenatal</label>
+                                        <label for="ecografista" class="col-form-label">Profesional examinador</label>
                                     </div>
                                     <div class="col-4">
-                                        <select id="lugar.control.prenatal" class="form-control">
+                                        <select id="profesional.ecografista" class="form-control gris-claro">
                                          </select>
                                     </div>
                                     <div class="col-2">
@@ -344,10 +344,10 @@
                                 </div>
                                 <div class="row mt-2 mb-2">
                                     <div class="col-2">
-                                        <label for="ecografista" class="col-form-label">Profesional examinador</label>
+                                        <label for="motivo-examen" class="col-form-label">Lugar de control prenatal</label>
                                     </div>
                                     <div class="col-4">
-                                        <select id="profesional.ecografista" class="form-control gris-claro">
+                                        <select id="lugar.control.prenatal" class="form-control">
                                          </select>
                                     </div>
                                     <div class="col-2">
