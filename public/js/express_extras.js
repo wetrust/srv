@@ -534,8 +534,8 @@ function crearInformeEcoPrimTrim(){
 	
 	var paciente = $( '#nombre-paciente').val() + " " + $( '#apellido-paciente').val();
 	var idpaciente = $( '#id-paciente').val();
-	var motivo = $( '#motivo-examen option:selected').text();
-	var ecografista = $( '#ecografista option:selected').text();
+	var motivo = $( '#motivo\\.examen option:selected').text();
+	var ecografista = $( '#profesional\\.ecografista option:selected').text();
 
 	var fur = $("#input\\.paciente\\.fum\\.examen").val();
 	var fexamen = $("#input\\.paciente\\.fe").val();
@@ -681,6 +681,14 @@ function appLoadBasic(){
         $("#profReferente").empty();
         $.each(data, function (key, des) {
             $("#profReferente").append('<option value="'+ des.profesional_id + '">'+ des.profesional_name  +'</option>');
+        });
+    });
+
+    //cargar profesional referente
+    $.get( serverURL + "configuracion/hospital", function( data ) {
+        $("#lugar\\.control\\.prenatal").empty();
+        $.each(data, function (key, des) {
+            $("#lugar\\.control\\.prenatal").append('<option value="'+ des.hospital_id + '">'+ des.hospital_name  +'</option>');
         });
     });
 }
