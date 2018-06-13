@@ -113,8 +113,13 @@ function loadTablePatients(){
             let RUTPACIENTE = $(this).data("id");
             let FechaExm = $(this).data("date");
             FechaExm = epochToDate(FechaExm);
+            let mes = FechaExm.getMonth();
 
-            $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + FechaExm.getMonth() + FechaExm.getDate()).done(function(data) {
+            if (mes < 10){
+                mes = "0" + mes;
+            }
+
+            $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + mes + FechaExm.getDate()).done(function(data) {
                 if (data.exist == true ){
                     StudyDate =  data.StudyDate;
                     $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
