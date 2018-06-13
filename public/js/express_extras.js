@@ -135,6 +135,8 @@ function loadTablePatients(){
                                 $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
                                 $("#modalZoom").modal("show");
                             });
+
+                            window.location.href = "#imgDicom";
                         }
                     }).fail(function() {
                         $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
@@ -278,8 +280,6 @@ function obtenerexamenes(id_paciente, fecha){
                         $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
                         $("#modalZoom").modal("show");
                     });
-
-                    window.location.href = "#imgDicom";
                 }
             }).fail(function() {
                 $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
