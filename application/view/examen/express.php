@@ -712,16 +712,6 @@
                 </ol>
             </nav>
             <h4>Imágenes Disponibles</h4>
-            <div class="form-group row justify-content-end">
-                <div class="col-3 offset-3">
-                    <strong>Nombre:</strong>
-                    <p id="paciente.nombre"></p>
-                </div>
-                <div class="col-3">
-                    <strong>Fecha de exámen:</strong>
-                    <p id="fee"></p>
-                </div>
-            </div>
             <hr>
             <div class="row">
                 <div class="col-6 col-md-7 col-xl-9">
