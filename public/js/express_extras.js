@@ -106,7 +106,7 @@ function loadTablePatients(){
             
             $("#buscar\\.paciente\\.id").val(RUT);
             $("#buscar\\.paciente\\.apellido").val("");
-            $("#buscar\\.paciente\\.action").trigger("change");
+            $("#buscar\\.paciente\\.action").trigger("click");
         });
 
         $("i[name='dcm']").on("click", function(){
