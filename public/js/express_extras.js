@@ -119,6 +119,9 @@ function loadTablePatients(){
                 mes = "0" + mes;
             }
 
+            $("#buscar\\.paciente\\.id").val(RUTPACIENTE);
+            obtenerNombre(RUTPACIENTE);
+
             $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + mes + FechaExm.getDate()).done(function(data) {
                 if (data.exist == true ){
                     StudyDate =  data.StudyDate;
