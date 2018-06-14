@@ -1062,7 +1062,7 @@ $(document).ready(function(){
         }
 
         var valores = {
-            user_id: $("#id-paciente").val(),
+            user_id: $("#buscar\\.paciente\\.id").val(),
             img_id: "[" + fotosArreglo.toString() + "]",
             studyDate: StudyDate,
             user_email: correo

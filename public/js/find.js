@@ -68,45 +68,7 @@ $(document).ready(function(){
             window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
         });
 
-        $("#emailFotos").on("click", function() {
-
-            if ($("#paciente\\.correo").val() == "" && $("#paciente\\.correo\\.lista").is(':checked') == false){
-                alert("Debe ingresar un correo para el paciente en la página principal");
-                return true;
-            }
-
-            var fotosArreglo = [];
-            var contadorIMG = 0;
-            $("input[name='fotosElegidas']").each(function() {
-                if (this.checked == true) {
-                    fotosArreglo.push(contadorIMG);
-                };
-                contadorIMG = contadorIMG + 1
-            });
-
-            var correo = ""
-
-            if ($("#paciente\\.correo\\.lista").is(':checked') == true){
-                correo = $( '#paciente\\.correo\\.config option:selected').text();
-                if ($("#paciente\\.correo\\.copia").val() !== ""){
-                    correo = correo + ";" + $("#paciente\\.correo\\.copia").val();
-                }
-            }
-            else{
-                correo = $("#paciente\\.correo\\.copia").val()
-            }
-
-            var valores = {
-                user_id: $("#id-paciente").val(),
-                img_id: "[" + fotosArreglo.toString() + "]",
-                studyDate: StudyDate,
-                user_email: correo
-            }
-            alert("Enviando correo, espere un momento");
-            $.post(serverURL + "imagenes/send", valores).done(function (data) {
-                alert("Correo Enviado");
-            });
-        });
+        
 
         $("#eliminarFotos").on("click", function() {
             var contadorIMG = 0;
