@@ -223,6 +223,7 @@ function obtenerNombre(id_paciente){
             $("#paciente\\.nombre\\.eco\\.basico").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#paciente\\.nombre\\.eco\\.elegir").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
+            $("#paciente\\.nombre\\.imagenes").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#step-two-find").addClass("d-none");
             $("#step-three").removeClass("d-none");
             //establecer la fecha del exámen previo como fecha de exámen
