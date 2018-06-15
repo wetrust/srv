@@ -1081,21 +1081,6 @@
                     <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
                 </ol>
             </nav>
-            <div class="form-group row d-none" name="embarazo">
-                <div class="col">
-                    <label for="embarazo" class="col-form-label">Embarazo Gemelar</label>
-                </div>
-                <div class="col">
-                    <select id="embarazoEcoSegTrim" class="form-control gris-claro">
-                        <option value="1">Feto A</option>
-                        <option value="2">Feto B</option>
-                     </select>
-                </div>
-                <div class="col">
-                </div>
-                <div class="col">
-                </div>
-            </div>
             <hr style="border-color:rgba(0, 0, 0, 0.36);">
             <div class="card">
                 <div class="card-body">
