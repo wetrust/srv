@@ -1061,178 +1061,180 @@
                 </div>
             </div> 
         </div>
-        <div class="container" id="ecoObsSegTrim" style="display:none;">
-            <div class="row">
-                <div class="col pr-0">
-                    <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+<div class="container" id="ecoObsSegTrim" style="display:none;">
+    <div class="row">
+        <div class="col pr-0">
+            <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+        </div>
+        <div class="col col-sm-10 pl-0 mt-sm-4">
+            <h6 class="text-secondary mt-2">Ecografía Obstétrica de 2° / 3° trimestre</h6>
+            <h4 class="mb-0" id="paciente.nombre.eco.segundo">Juana Peres Peres, 12345678-9</h4>
+            <h6 class="text-info" id="paciente.nombre.eco.segundo.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
+            <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica 2do 3er trim</li>
+            <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
+        </ol>
+    </nav>
+    <hr style="border-color:rgba(0, 0, 0, 0.36);">
+    <div class="card">
+        <div class="card-body">
+            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary">Modificar</button><button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary">Cancelar</button><button type="button" class="btn btn-danger">Eliminar</button>
                 </div>
-                <div class="col col-sm-10 pl-0 mt-sm-4">
-                    <h6 class="text-secondary mt-2">Ecografía Obstétrica de 2° / 3° trimestre</h6>
-                    <h4 class="mb-0" id="paciente.nombre.eco.segundo">Juana Peres Peres, 12345678-9</h4>
-                    <h6 class="text-info" id="paciente.nombre.eco.segundo.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary">&lt;&lt;</button><p class="my-2 mx-2">Recorrer Exámenes</p><button type="button" class="btn btn-secondary">&gt;&gt;</button>
                 </div>
             </div>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
-                    <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica 2do 3er trim</li>
-                    <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
-                </ol>
-            </nav>
-            <hr style="border-color:rgba(0, 0, 0, 0.36);">
-            <div class="card">
+        </div>
+    </div>
+    <hr style="border-color:rgba(0, 0, 0, 0.36);">
+    <div class="row">
+        <div class="col-12 col-sm-3 order-sm-1">
+        </div>
+        <div class="col-12 col-sm-9">
+            <div class="card mb-3">
                 <div class="card-body">
-                    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary">Modificar</button><button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary">Cancelar</button><button type="button" class="btn btn-danger">Eliminar</button>
+                    <h5 class="card-title">BIOMETRÍA FETAL</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Hadlock FP. y col. Radiology 152: 497 - 501; 1984. *Hill LM. y col. Obstet Gynecol. 1990; 75(6) : 981-5</h6>
+                    <div class="form-group row">
+                        <div class="col mb-2">
+                            <label for="dbp" class="col-form-label">DBP</label>
                         </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-secondary">&lt;&lt;</button><p class="my-2 mx-2">Recorrer Exámenes</p><button type="button" class="btn btn-secondary">&gt;&gt;</button>
+                        <div class="col mb-2">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <input type="text" class="form-control" id="dbp">
+                                <div class="input-group-append">
+						            <div class="input-group-text">mm</div>
+				    	        </div>
+                            </div>
+                        </div>
+                        <div class="col mb-2">
+                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dbpDE">
+                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                </div>
+                                <input type="hidden" id="dbpPct">
+                                <input type="hidden" id="dbpRango">
+                            </div>
+                            <div class="col mb-2">
+                                <button type="button" class="btn btn-outline-info" id="graficoDbp">Ver Gráficas</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <hr style="border-color:rgba(0, 0, 0, 0.36);">
-            <div class="row">
-                <div class="col">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">BIOMETRÍA FETAL</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Hadlock FP. y col. Radiology 152: 497 - 501; 1984. *Hill LM. y col. Obstet Gynecol. 1990; 75(6) : 981-5</h6>
-                            <form class="mt-3 mb-3">
-                                <div class="form-group row">
-                                    <div class="col mb-2">
-                                        <label for="dbp" class="col-form-label">DBP</label>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="dbp">
-                                            <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dbpDE">
-                                            <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        </div>
-                                        <input type="hidden" id="dbpPct">
-                                        <input type="hidden" id="dbpRango">
-                                    </div>
-                                    <div class="col mb-2">
-                                        <button type="button" class="btn btn-outline-info" id="graficoDbp">Ver Gráficas</button>
-                                    </div>
+                    <div class="form-group row">
+                        <div class="col-3 mb-2">
+                            <label for="dof" class="col-form-label">DOF</label>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <input type="text" class="form-control" id="dof">
+                                <div class="input-group-append">
+					            	<div class="input-group-text">mm</div>
+				    	        </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dofPct">
+                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                            </div>
+                            <input type="hidden" id="dofPctRpt">
+                            <input type="hidden" id="dofRango">
+                        </div>
+                        <div class="col-2 mb-2">
+                            <div class="input-group">
+					            <div class="input-group-prepend">
+						            <div class="input-group-text">IC</div>
+				    	        </div>
+                                <input type="text" class="form-control" id="ic" readonly="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col mb-2">
+                            <label for="cc" class="col-form-label">CC</label>
+                        </div>
+                        <div class="col mb-2">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <input type="text" class="form-control" id="cc">
+                                <div class="input-group-append">
+					            	<div class="input-group-text">mm</div>
+				    	        </div>
+                            </div>
+                        </div>
+                        <div class="col mb-2">
+                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="ccPct">
+                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-3 mb-2">
-                                        <label for="dof" class="col-form-label">DOF</label>
-                                    </div>
-                                    <div class="col-3 mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="dof">
-                                            <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 mb-2">
-                                        <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dofPct">
-                                            <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        </div>
-                                        <input type="hidden" id="dofPctRpt">
-                                        <input type="hidden" id="dofRango">
-                                    </div>
-                                    <div class="col-2 mb-2">
-                                        <div class="input-group">
-					    <div class="input-group-prepend">
-						<div class="input-group-text">IC</div>
-				    	    </div>
-                                            <input type="text" class="form-control" id="ic" readonly="">
-                                        </div>
-                                    </div>
+                                <input type="hidden" id="ccPctRpt">
+                                <input type="hidden" id="ccRango">
+                            </div>
+                            <div class="col mb-2">
+                                <button type="button" class="btn btn-outline-info" id="graficoCc">Ver Gráficas</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col mb-2">
+                                <label for="ca" class="col-form-label">CA</label>
+                            </div>
+                            <div class="col mb-2">
+                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                    <input type="text" class="form-control" id="ca">
+                                    <div class="input-group-append">
+						                <div class="input-group-text">mm</div>
+				    	            </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col mb-2">
-                                        <label for="cc" class="col-form-label">CC</label>
+                            </div>
+                            <div class="col mb-2">
+                                <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="caPct">
+                                    <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
                                     </div>
-                                    <div class="col mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="cc">
-                                            <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="ccPct">
-                                            <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        </div>
-                                        <input type="hidden" id="ccPctRpt">
-                                        <input type="hidden" id="ccRango">
-                                    </div>
-                                    <div class="col mb-2">
-                                        <button type="button" class="btn btn-outline-info" id="graficoCc">Ver Gráficas</button>
-                                    </div>
+                                    <input type="hidden" id="caPctRpt">
+                                    <input type="hidden" id="caRango">
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col mb-2">
-                                        <label for="ca" class="col-form-label">CA</label>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="ca">
-                                            <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="caPct">
-                                            <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        </div>
-                                        <input type="hidden" id="caPctRpt">
-                                        <input type="hidden" id="caRango">
-                                    </div>
-                                    <div class="col">
-                                        <button type="button" class="btn btn-outline-info" id="graficoCa">Ver Gráficas</button>
-                                    </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-info" id="graficoCa">Ver Gráficas</button>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col mb-2">
-                                        <label for="lf" class="col-form-label">LF</label>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="lf">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="lf" class="col-form-label">LF</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="lf">
                                             <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
+						                        <div class="input-group-text">mm</div>
+				    	                    </div>
                                         </div>
                                     </div>
                                     <div class="col mb-2">
@@ -1260,8 +1262,8 @@
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <input type="text" class="form-control" id="lh">
                                             <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
+						                        <div class="input-group-text">mm</div>
+				    	                    </div>
                                         </div>
                                     </div>
                                     <div class="col mb-2">
@@ -1289,8 +1291,8 @@
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <input type="text" class="form-control" id="cerebelo">
                                             <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
+						                        <div class="input-group-text">mm</div>
+				    	                    </div>
                                         </div>
                                     </div>
                                     <div class="col mb-2">
@@ -1310,7 +1312,7 @@
                                         <button type="button" class="btn btn-outline-info" id="graficoCerebelo">Ver Gráficas</button>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1320,72 +1322,71 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">CRECIMIENTO INTRAUTERINO  <span class="float-right text-muted" id="cccaController"><small>Opcional CC/CA</small></span></h5>
-                            <form class="mt-3 mb-3">
-                                <div class="form-group row">
-                                    <div class="col mb-2">
-                                        <label for="pfe" class="col-form-label"><strong>Peso Fetal Estimado</strong> (> 15 sem)
-                                        <br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small>
-                                        </label>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="pfe" readonly>
-					    <div class="input-group-append">
-						<div class="input-group-text">kgr</div>
-				    	    </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="pfePct">
-                                            <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        </div>
-                                        <input type="hidden" id="pfePctRpt">
-                                        <input type="hidden" id="pfeRango">
-                                    </div>
-                                    <div class="col mb-2">
-                                        <button type="button" class="btn btn-outline-info" id="graficoPFE">Ver Gráficas</button>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="pfe" class="col-form-label"><strong>Peso Fetal Estimado</strong> (> 15 sem)
+                                    <br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small>
+                                    </label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="pfe" readonly>
+					                    <div class="input-group-append">
+						                    <div class="input-group-text">kgr</div>
+				    	                </div>
                                     </div>
                                 </div>
-                                <div class="form-group row d-none" id="cccaView">
-                                    <div class="col mb-2">
-                                        <label for="ccca" class="col-form-label">Relación Cráneo Abdómen<br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small></label>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="pfePct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
                                     </div>
-                                    <div class="col mb-2">
-                                        <input type="text" class="form-control" id="ccca" readonly>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="cccaPct">
-                                            <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                            <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                            <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        </div>
-                                        <input type="hidden" id="cccaPct">
-                                        <input type="hidden" id="cccaRango">
-                                    </div>
-                                    <div class="col mb-2">
-                                        <button type="button" class="btn btn-outline-info" id="graficoCCCA">Ver Gráficas</button>
-                                    </div>
+                                    <input type="hidden" id="pfePctRpt">
+                                    <input type="hidden" id="pfeRango">
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col mb-2">
-                                        <label for="bvm" class="col-form-label"><strong class="text-primary">BVM</strong></label>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoPFE">Ver Gráficas</button>
+                                </div>
+                            </div>
+                            <div class="form-group row d-none" id="cccaView">
+                                <div class="col mb-2">
+                                    <label for="ccca" class="col-form-label">Relación Cráneo Abdómen<br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small></label>
+                                </div>
+                                <div class="col mb-2">
+                                    <input type="text" class="form-control" id="ccca" readonly>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="cccaPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
                                     </div>
-                                    <div class="col mb-2">
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" id="bvm">
+                                    <input type="hidden" id="cccaPct">
+                                    <input type="hidden" id="cccaRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoCCCA">Ver Gráficas</button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="bvm" class="col-form-label"><strong class="text-primary">BVM</strong></label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="bvm">
                                             <div class="input-group-append">
-						<div class="input-group-text">mm</div>
-				    	    </div>
+						                        <div class="input-group-text">mm</div>
+				    	                    </div>
                                         </div>
                                     </div>
                                     <div class="col mb-2">
@@ -1415,8 +1416,8 @@
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <input type="number" class="form-control" id="tallaFetal" readonly>
                                             <div class="input-group-append">
-						<div class="input-group-text">cm</div>
-				    	    </div>
+						                        <div class="input-group-text">cm</div>
+				    	                    </div>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -1436,7 +1437,7 @@
                                         <button type="button" class="btn btn-outline-info" id="graficoTalla">Ver Gráfica</button>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                             <p class="text-muted d-none" style="float:left">* SOCHIPE: Sociedad Chilena de Pedratría.</p>
                             <p class="text-muted d-none" style="float:right">Artículo de referencia: Rev. Chil. Pediat 2010; 81 (3): 264-274</p>
                         </div>
@@ -1456,8 +1457,8 @@
                                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                         <input type="text" class="form-control bg-secondary text-white text-center" id="egP50" readonly>
                                         <div class="input-group-append">
-						<div class="input-group-text">semanas</div>
-				    	</div>
+						                    <div class="input-group-text">semanas</div>
+				    	                </div>
                                     </div>
                                 </div>
                                 <div class="col"></div>
@@ -1477,10 +1478,10 @@
                                 <div class="col">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-outline-info p-3 active">
-                                        <input type="radio" name="ajustarEcoSegTrim" value="0" checked=""> NO
+                                            <input type="radio" name="ajustarEcoSegTrim" value="0" checked=""> NO
                                         </label>
                                         <label class="btn btn-outline-info p-3">
-                                        <input type="radio" name="ajustarEcoSegTrim" value="1"> SI
+                                            <input type="radio" name="ajustarEcoSegTrim" value="1"> SI
                                         </label>
                                     </div>
                                 </div>
@@ -1530,27 +1531,26 @@
                     <div class="card mb-3" id="adicionalCrecimiento" style="display:none;">
                         <div class="card-body">
                             <h5 class="card-title">Adicional proporcionalidad fetal</h5>
-                            <form class="mt-3 mb-3">
-                                <div class="form-group row">
-                                    <div class="col mb-2">
-                                        <label for="dof-dbp" class="col-form-label">Indice Cefalico (IC)</label>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <input type="text" class="form-control" id="dof-dbp" readonly>
-                                    </div>
-                                    <div class="col mb-2">
-                                        <p> IC &lt; 74% = Dolicocefalia<br>IC &gt; 83 % = Braquicefalia</p>
-                                    </div>
-                                    <div class="col mb-2">
-                                    </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="dof-dbp" class="col-form-label">Indice Cefalico (IC)</label>
                                 </div>
-                            </form>
+                                <div class="col mb-2">
+                                    <input type="text" class="form-control" id="dof-dbp" readonly>
+                                </div>
+                                <div class="col mb-2">
+                                    <p> IC &lt; 74% = Dolicocefalia<br>IC &gt; 83 % = Braquicefalia</p>
+                                </div>
+                                <div class="col mb-2"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container" id="ecoDoppler" style="display:none;">
+    </div>
+</div>
+<div class="container" id="ecoDoppler" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
                     <div class="media">
