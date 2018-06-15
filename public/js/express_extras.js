@@ -46,7 +46,7 @@ function onHashChange(){
         let RUTPACIENTE = $("#id-paciente").val();
         let FechaExm = $("#input\\.paciente\\.fe").val();
         let dia = FechaExm.substring(0,2);
-        let mes = FechaExm.substring(3,5);
+        let mes = Number(FechaExm.substring(3,5)) -1;
         let ano = FechaExm.substring(6,10);
         FechaExm = new Date(ano, mes, dia).getTime() / 1000
         getDCM(RUTPACIENTE, FechaExm);
