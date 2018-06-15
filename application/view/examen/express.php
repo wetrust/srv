@@ -1097,6 +1097,23 @@
     <hr style="border-color:rgba(0, 0, 0, 0.36);">
     <div class="row">
         <div class="col-12 col-sm-3 order-sm-1">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="text-center my-2">Acciones</h6>
+                    <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary d-none">Modificar</button><button type="button" class="btn btn-secondary d-none">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
+                    </div>
+                    <hr>
+                    <h6 class="text-center my-2">Informes</h6>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-info" id="modalPreInfEcoObsSegTrim1">Protocolo informe de crecimiento</button>
+                        <button type="button" class="btn btn-info" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
+                        <button type="button" class="btn btn-info" id="modalPreInfEcoObsSegTrim2">Protocolo informe edad gestacional</button>
+                        <button type="button" class="btn btn-info" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
+                        <button type="button" class="btn btn-info d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-sm-9">
             <div class="card mb-3">
@@ -1480,35 +1497,6 @@
                             <ul>
                                 <li>Para mayor precisión  el software excluye perímetro abdominal, es recomendable adicionar el largo humeral y diámetro de cerebelo.</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="row mb-3">
-                        <div class="col-4 text-left">
-                            <h5 class="alert-heading mb-3">Reporte crecimiento fetal</h5>
-                        </div>
-                        <div class="col">
-                            <div class="d-inline-block"><strong>A -</strong></div>
-                            <button type="button" class="btn btn-outline-info mr-3" id="modalPreInfEcoObsSegTrim1">Protocolo informe de crecimiento</button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-outline-info mr-3" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-4 text-left">
-                            <h5 class="alert-heading mb-3">Reporte edad gestacional</h5>
-                        </div>
-                        <div class="col">
-                            <div class="d-inline-block"><strong>B -</strong></div>
-                            <button type="button" class="btn btn-outline-info" id="modalPreInfEcoObsSegTrim2">Protocolo informe edad gestacional</button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-outline-info mr-3" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
-                            <button type="button" class="btn btn-outline-info d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
                         </div>
                     </div>
                 </div>
