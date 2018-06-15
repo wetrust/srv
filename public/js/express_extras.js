@@ -43,6 +43,12 @@ function onHashChange(){
     }
     else if (hash=="#imgDicom"){
         displayElement("imagenesDicom");
+        let RUTPACIENTE = $("#id-paciente").val();
+        let FechaExm = $("#input\\.paciente\\.fe").val();
+        let dia = FechaExm.substring(0,2);
+        let mes = FechaExm.substring(2,4);
+        let ano = FechaExm.substring(4,8);
+        FechaExm = new Date(ano, mes, dia).getTime() / 1000
         getDCM(RUTPACIENTE, FechaExm);
     }
 }
