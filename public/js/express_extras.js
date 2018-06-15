@@ -43,6 +43,7 @@ function onHashChange(){
     }
     else if (hash=="#imgDicom"){
         displayElement("imagenesDicom");
+        getDCM(RUTPACIENTE, FechaExm);
     }
 }
 
@@ -112,43 +113,13 @@ function loadTablePatients(){
         $("i[name='dcm']").on("click", function(){
             let RUTPACIENTE = $(this).data("id");
             let FechaExm = $(this).data("date");
-            FechaExm = epochToDate(FechaExm);
-            let mes = FechaExm.getMonth() + 1;
 
-            if (mes < 10){
-                mes = "0" + mes;
-            }
+            getDCM(RUTPACIENTE, FechaExm);
 
             $("#buscar\\.paciente\\.id").val(RUTPACIENTE);
             obtenerNombre(RUTPACIENTE);
 
-            $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + mes + FechaExm.getDate()).done(function(data) {
-                if (data.exist == true ){
-                    StudyDate =  data.StudyDate;
-                    $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
-                        $("#fotosDicom").html(" ");
-                        if (data.DCM = true) {
-                            $.each(data.JPGFiles, function(i, item) {
-                                $("#fotosDicom").append("<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
-                            });
-                            $('.zoom').on("click", function(){
-                                var img = this.outerHTML;
-                                $("#modalZoom").html(" ");
-                                $("#modalZoom").append(img);
-                                $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
-                                $("#modalZoom").modal("show");
-                            });
-
-                            window.location.href = "#imgDicom";
-                        }
-                    }).fail(function() {
-                        $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
-                    });     
-                }
-                else{
-                    $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
-                }
-            });
+            window.location.href = "#imgDicom";
         });
     });
 }
@@ -265,35 +236,6 @@ function obtenerFUM(rut){
         }
     });
 }
-
-function obtenerexamenes(id_paciente, fecha){
-    //año mes dia
-    $.get(serverURL + "configuracion/obtenerexamenes/" + id_paciente + "/" + FechaExm[2] + FechaExm[1] + FechaExm[0]).done(function(data) {
-        if (data.exist == true ){
-            StudyDate =  data.StudyDate;
-            $.get(serverURL + "dicom/getimages/" + id_paciente + "/" + StudyDate).done(function(data) {
-                $("#fotosDicom").html(" ");
-                if (data.DCM = true) {
-                    $.each(data.JPGFiles, function(i, item) {
-                        $("#fotosDicom").append("<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
-                    });
-                    $('.zoom').on("click", function(){
-                        var img = this.outerHTML;
-                        $("#modalZoom").html(" ");
-                        $("#modalZoom").append(img);
-                        $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
-                        $("#modalZoom").modal("show");
-                    });
-                }
-            }).fail(function() {
-                $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
-            });     
-        }
-        else{
-            $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
-        }
-    }); 
-};
 
 function obtenerEcoPrimTrim(){
     //cargar los exámenes que tiene el paciente para mostrar en la grilla
@@ -625,6 +567,41 @@ $('#infadicionalSiController').on('click', function(){
 	$('#infadicionalView').removeClass('d-none');
 	$('#continuarExamenEcografico').addClass('d-none');
 });
+
+function getDCM(RUTPACIENTE, FechaExm){
+    FechaExm = epochToDate(FechaExm);
+    let mes = FechaExm.getMonth() + 1;
+
+    if (mes < 10){
+        mes = "0" + mes;
+    }
+
+    $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + mes + FechaExm.getDate()).done(function(data) {
+        if (data.exist == true ){
+            StudyDate =  data.StudyDate;
+            $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
+                $("#fotosDicom").html(" ");
+                if (data.DCM = true) {
+                    $.each(data.JPGFiles, function(i, item) {
+                        $("#fotosDicom").append("<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label></div></div>");
+                    });
+                    $('.zoom').on("click", function(){
+                        var img = this.outerHTML;
+                        $("#modalZoom").html(" ");
+                        $("#modalZoom").append(img);
+                        $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
+                        $("#modalZoom").modal("show");
+                    });
+                }
+            }).fail(function() {
+                $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+            });     
+        }
+        else{
+            $("#fotosDicom").html("<p>No hay imágenes para esta paciente</p>");
+        }
+    });
+}
 
 function appClean(){
     document.location.hash = "";

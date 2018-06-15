@@ -1033,6 +1033,31 @@ $(document).ready(function(){
         $('#popupGenerico').modal('show');
     });
 
+    //foto ecográficas
+    $("#imprimirFotos").on("click", function() {
+        var fotosArreglo = [];
+        var contadorIMG = 0;
+        var iIMG = 0;
+
+        $("input[name='fotosElegidas']").each(function() {
+            if (this.checked == true) {
+                fotosArreglo.push(iIMG);
+                contadorIMG = contadorIMG + 1
+            }; 
+            iIMG = iIMG + 1
+        });
+
+        if (contadorIMG <1){
+            alert("Debe seleccionar al menos una imágen");
+            return true;
+        }
+        if (contadorIMG == 3 | contadorIMG == 5){
+            alert("Solo múltiplos de 2");
+            return true;
+        }
+        window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+    });
+
     $("#emailFotos").on("click", function() {
 
         if ($("#paciente\\.correo").val() == "" && $("#paciente\\.correo\\.lista").is(':checked') == false){
@@ -1072,6 +1097,22 @@ $(document).ready(function(){
         $.post(serverURL + "imagenes/send", valores).done(function (data) {
             alert("Correo Enviado");
         });
+    });
+
+    $("#eliminarFotos").on("click", function() {
+        var contadorIMG = 0;
+        $("input[name='fotosElegidas']").each(function() {
+            if (this.checked == true) {
+                $(this).parent().parent().parent().addClass("d-none");
+                contadorIMG = contadorIMG + 1
+                this.checked = false;
+            }; 
+        });
+
+        if (contadorIMG <1){
+            alert("Debe seleccionar al menos una imágen");
+            return true;
+        }
     });
 });
 

@@ -42,50 +42,6 @@ $(document).ready(function(){
         RUTPACIENTE = $(this).val();
         FechaExm = $("#fee-dos").val();
 
-        
-        
-        $("#imprimirFotos").on("click", function() {
-            var fotosArreglo = [];
-            var contadorIMG = 0;
-            var iIMG = 0;
-
-            $("input[name='fotosElegidas']").each(function() {
-                if (this.checked == true) {
-                    fotosArreglo.push(iIMG);
-                    contadorIMG = contadorIMG + 1
-                }; 
-                iIMG = iIMG + 1
-            });
-
-            if (contadorIMG <1){
-                alert("Debe seleccionar al menos una imágen");
-                return true;
-            }
-            if (contadorIMG == 3 | contadorIMG == 5){
-                alert("Solo múltiplos de 2");
-                return true;
-            }
-            window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
-        });
-
-        
-
-        $("#eliminarFotos").on("click", function() {
-            var contadorIMG = 0;
-            $("input[name='fotosElegidas']").each(function() {
-                if (this.checked == true) {
-                    $(this).parent().parent().parent().addClass("d-none");
-                    contadorIMG = contadorIMG + 1
-                    this.checked = false;
-                }; 
-            });
-
-            if (contadorIMG <1){
-                alert("Debe seleccionar al menos una imágen");
-                return true;
-            }
-        });
-
         getExmPrimTrim();
     });
 });
