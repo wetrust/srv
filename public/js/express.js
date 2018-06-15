@@ -1055,7 +1055,9 @@ $(document).ready(function(){
             alert("Solo múltiplos de 2");
             return true;
         }
-        window.open(serverURL + "pdf/img/" + RUTPACIENTE + "/" + fotosArreglo.toString() + "/" + StudyDate);
+
+        let rut = $("#id-paciente").val();
+        window.open(serverURL + "pdf/img/" + rut + "/" + fotosArreglo.toString() + "/" + StudyDate);
     });
 
     $("#emailFotos").on("click", function() {
