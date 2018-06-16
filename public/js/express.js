@@ -33,6 +33,11 @@ $(document).ready(function(){
         $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
         $("#input\\.paciente\\.fum").trigger("change");
         window.location.href = "#tipoExamen";
+
+        $("#boton\\.volver\\.step\\.five").off("click");
+        $("#boton\\.volver\\.step\\.five").on("click", function(){
+            window.location.href = serverURL + "examen/expres";
+        });
     });
 
     //pacientes paso 1
@@ -179,11 +184,11 @@ $(document).ready(function(){
 
     $("#step\\.five").on("click", function(){
         window.location.href = "#tipoExamen";
-    });
 
-    //Tipo de exámen paso 6
-    $("#boton\\.volver\\.step\\.five").on("click", function(){
-        window.location.href = "#consulta";
+        $("#boton\\.volver\\.step\\.five").off("click");
+        $("#boton\\.volver\\.step\\.five").on("click", function(){
+            window.location.href = "#consulta";
+        });
     });
 
     //ecografía de primer trimestre
