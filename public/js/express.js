@@ -1135,9 +1135,11 @@ $(document).ready(function(){
         $( '#impDoppler1').on("click", function(){
               crearInformeEcoSegTrim1();
         });
+
         $('#infecoObsSegTrim1Clon').on("click", function(){
             $('#infecoObsSegTrim1').trigger("click");
         });
+
         var percentilPeso = $('#pfePctRpt').val();
         percentilPeso = percentilPeso.replace('&lt;','<').replace('&gt;', '>');
         var comentarios = 'Crecimiento (peso) percentil ' + percentilPeso + ', para gráfica de peso fetal Hadlock* \r\n';
@@ -1304,25 +1306,34 @@ $(document).ready(function(){
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) - 1;
     
-                   for (i = 12; i <= edadGest; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
                    var dbp = $("#dbp").val();
                    dbp = dbp.toString();
                    dbp = dbp.replace(",", ".");
                    dbp = parseFloat(dbp);
-                       
-                   data.push({
-                       y: dbp,
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   return data;
+
+                    if (dbp > 1){
+                        for (i = 12; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: dbp,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 12; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                }())
            }]
        });
@@ -1380,25 +1391,33 @@ $(document).ready(function(){
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) - 1;
     
-                   for (i = 12; i <= edadGest; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-    
                    var cc = $("#cc").val();
                    cc = cc.toString();
                    cc = cc.replace(",", ".");
                    cc = parseFloat(cc);
-    
-                   data.push({
-                       y: cc,
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
+
+                    if (cc > 1){
+                        for (i = 12; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: cc,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 12; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
                    return data;
                }())
            }]
@@ -1457,26 +1476,34 @@ $(document).ready(function(){
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) - 1;
     
-                   for (i = 12; i <= edadGest; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-    
                    var ca = $("#ca").val();
                    ca = ca.toString();
                    ca = ca.replace(",", ".");
                    ca = parseFloat(ca);
-    
-                   data.push({
-                       y:ca,
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   return data;
+
+                    if (ca > 1){
+                        for (i = 12; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y:ca,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 12; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                }())
            }]
        });
@@ -1534,23 +1561,30 @@ $(document).ready(function(){
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) - 1;
     
-                   for (i = 12; i <= edadGest; i++) {
-                       data.push({ y: 0, });
-                   }
-                   
                    var lf = $("#lf").val();
                    lf = lf.toString();
                    lf = lf.replace(",", ".");
                    lf = parseFloat(lf);
-                   data.push({
-                       y: lf,
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   return data;
+
+                    if (lf > 0){
+                        for (i = 12; i <= edadGest; i++) {
+                            data.push({ y: 0, });
+                        }
+                        data.push({
+                            y: lf,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 12; i <= 41; i++) {
+                            data.push({ y: 0, });
+                        }
+                    }
+                    return data;
                }())
            }]
        });
@@ -1608,22 +1642,28 @@ $(document).ready(function(){
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) - 1;
     
-                        for (i = 12; i <= edadGest; i++) {
-                            data.push({ y: 0, });
-                        }
-     
                         var lh = $("#lh").val();
                         lh = lh.toString();
                         lh = lh.replace(",", ".");
                         lh = parseFloat(lh);
-                            
-                        data.push({
-                            y: lh,
-                        });
-                        for (i = edadGest + 1; i <= 39; i++) {
+
+                        if (lh > 1){
+                            for (i = 12; i <= edadGest; i++) {
+                                data.push({ y: 0, });
+                            }    
                             data.push({
-                                y: 0,
+                                y: lh,
                             });
+                            for (i = edadGest + 1; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 12; i <= 41; i++) {
+                                data.push({ y: 0, });
+                            }
                         }
                         return data;
                     }())
@@ -1688,24 +1728,32 @@ $(document).ready(function(){
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) - 1;
     
-                        for (i = 15; i <= edadGest; i++) {
+                        var cerebelo = $("#cerebelo").val();
+                        cerebelo = cerebelo.toString();
+                        cerebelo = cerebelo.replace(",", ".");
+                        cerebelo = parseFloat(cerebelo);
+
+                        if (cerebelo > 0){
+                            for (i = 15; i <= edadGest; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                             data.push({
-                                y: 0,
+                                y: cerebelo,
                             });
+                            for (i = edadGest + 1; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
-    
-                       var cerebelo = $("#cerebelo").val();
-                       cerebelo = cerebelo.toString();
-                       cerebelo = cerebelo.replace(",", ".");
-                       cerebelo = parseFloat(cerebelo);
-    
-                        data.push({
-                            y: cerebelo,
-                        });
-                        for (i = edadGest + 1; i <= 39; i++) {
-                            data.push({
-                                y: 0,
-                            });
+                        else{
+                            for (i = 15; i <= 41; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
@@ -1971,26 +2019,34 @@ $(document).ready(function(){
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) - 1;
     
-                   for (i = 12; i <= edadGest; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-    
                    var ca = $("#ca").val();
                    ca = ca.toString();
                    ca = ca.replace(",", ".");
                    ca = parseFloat(ca);
-    
-                   data.push({
-                       y:ca,
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   return data;
+
+                    if (ca > 1){
+                        for (i = 12; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y:ca,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 12; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                }())
            }]
        });
@@ -2048,7 +2104,6 @@ $(document).ready(function(){
                      function () {
                          var data = [];
                          var edadGest = parseInt(localStorage.eg) -1;
-     
                          for (i = 16; i <= edadGest; i ++ ) {
                              data.push({
                                  y: 0,
@@ -2556,23 +2611,32 @@ $(document).ready(function(){
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
-                        for (i = 10; i <= edadGest; i ++ ) {
-                            data.push({
-                                y: 0,
-                            });
-                        }
                         var aud = $("#aud").val();
                         aud = aud.toString();
                         aud = aud.replace(",", ".");
                         aud = parseFloat(aud);
-                        
-                        data.push({
-                                y: aud,
-                            });
-                        for (i = edadGest +1; i <= 39; i ++ ) {
+
+                        if (aud > 1){
+                            for (i = 10; i <= edadGest; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                             data.push({
-                                y: 0,
-                            });
+                                    y: aud,
+                                });
+                            for (i = edadGest +1; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 10; i <= 41; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
@@ -2631,24 +2695,32 @@ $(document).ready(function(){
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
-                        for (i = 10; i <= edadGest; i ++ ) {
-                            data.push({
-                                y: 0,
-                            });
-                        }
-                        
                         var aui = $("#aui").val();
                         aui = aui.toString();
                         aui = aui.replace(",", ".");
                         aui = parseFloat(aui);
-                        
-                        data.push({
-                                y: aui,
-                            });
-                        for (i = edadGest +1; i <= 39; i ++ ) {
+
+                        if (aui > 1){
+                            for (i = 10; i <= edadGest; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                             data.push({
-                                y: 0,
-                            });
+                                    y: aui,
+                                });
+                            for (i = edadGest +1; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 10; i <= 41; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
@@ -2707,23 +2779,32 @@ $(document).ready(function(){
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
-                        for (i = 10; i <= edadGest; i ++ ) {
-                            data.push({
-                                y: 0,
-                            });
-                        }
                         var auprom = $("#auprom").val();
                         auprom = auprom.toString();
                         auprom = auprom.replace(",", ".");
                         auprom = parseFloat(auprom);
-                        
-                        data.push({
-                                y: auprom,
-                            });
-                        for (i = edadGest +1; i <= 39; i ++ ) {
+
+                        if (auprom > 1){
+                            for (i = 10; i <= edadGest; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                             data.push({
-                                y: 0,
-                            });
+                                    y: auprom,
+                                });
+                            for (i = edadGest +1; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 10; i <= 41; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
@@ -2782,25 +2863,34 @@ $(document).ready(function(){
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
-                     for (i = 20; i <= edadGest; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     var ipau = $("#ipau").val();
-                     ipau = ipau.toString();
-                     ipau = ipau.replace(",", ".");
-                     ipau = parseFloat(ipau);
-                     
-                     data.push({
-                         y: ipau,
-                     });
-                     for (i = edadGest + 1; i <= 39; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     return data;
+                    var ipau = $("#ipau").val();
+                    ipau = ipau.toString();
+                    ipau = ipau.replace(",", ".");
+                    ipau = parseFloat(ipau);
+                    
+                    if (ipau > 0){
+                        for (i = 20; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: ipau,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 20; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                  }())
              }]
         });
@@ -2859,26 +2949,34 @@ $(document).ready(function(){
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
-                     for (i = 20; i <= edadGest; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                         
-                     var ipacm = $("#ipacm").val();
-                     ipacm = ipacm.toString();
-                     ipacm = ipacm.replace(",", ".");
-                     ipacm = parseFloat(ipacm);
-                         
-                     data.push({
-                         y: ipacm,
-                     });
-                     for (i = edadGest + 1; i <= 39; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     return data;
+                    var ipacm = $("#ipacm").val();
+                    ipacm = ipacm.toString();
+                    ipacm = ipacm.replace(",", ".");
+                    ipacm = parseFloat(ipacm);
+
+                    if (ipacm > 0){
+                        for (i = 20; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: ipacm,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 20; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                  }())
              }]
         });
@@ -2933,25 +3031,34 @@ $(document).ready(function(){
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
-                     for (i = 20; i <= edadGest; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     var ccp = $("#ccp").val();
-                     ccp = ccp.toString();
-                     ccp = ccp.replace(",", ".");
-                     ccp = parseFloat(ccp);
-                     
-                     data.push({
-                         y: ccp,
-                     });
-                     for (i = edadGest + 1; i <= 38; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     return data;
+                    var ccp = $("#ccp").val();
+                    ccp = ccp.toString();
+                    ccp = ccp.replace(",", ".");
+                    ccp = parseFloat(ccp);
+
+                    if (ccp > 0){
+                        for (i = 20; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: ccp,
+                        });
+                        for (i = edadGest + 1; i <= 38; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 20; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                  }())
              }]
         });
@@ -3006,23 +3113,32 @@ $(document).ready(function(){
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
-                        for (i = 20; i <= edadGest; i ++ ) {
-                            data.push({
-                                y: 0,
-                            });
-                        }
                         var dv = $("#dv").val();
                         dv = dv.toString();
                         dv = dv.replace(",", ".");
                         dv = parseFloat(dv);
-                        
-                        data.push({
-                                y: dv,
-                            });
-                        for (i = edadGest +1; i <= 39; i ++ ) {
+
+                        if (dv > 0){
+                            for (i = 20; i <= edadGest; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                             data.push({
-                                y: 0,
-                            });
+                                    y: dv,
+                                });
+                            for (i = edadGest +1; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 20; i <= 41; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
@@ -3042,7 +3158,7 @@ $(document).ready(function(){
         $('#graficoCCCAView').highcharts({
            title: {
                text: 'Cc / Ca *',
-               x: -20 //center
+               x: -20
            },
            subtitle: {
                text: '',
@@ -3193,24 +3309,32 @@ $(document).ready(function(){
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
-                        for (i = 10; i <= edadGest; i ++ ) {
-                            data.push({
-                                y: 0,
-                            });
-                        }
-                        
                         var auprom = $("#auprom").val();
                         auprom = auprom.toString();
                         auprom = auprom.replace(",", ".");
                         auprom = parseFloat(auprom);
-                        
-                        data.push({
+
+                        if (auprom > 0){
+                            for (i = 10; i <= edadGest; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                            data.push({
                                 y: auprom,
                             });
-                        for (i = edadGest +1; i <= 39; i ++ ) {
-                            data.push({
-                                y: 0,
-                            });
+                            for (i = edadGest +1; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 10; i <= 41; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
@@ -3271,25 +3395,34 @@ $(document).ready(function(){
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
-                     for (i = 20; i <= edadGest; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     var ipau = $("#ipau").val();
-                     ipau = ipau.toString();
-                     ipau = ipau.replace(",", ".");
-                     ipau = parseFloat(ipau);
-                     
-                     data.push({
-                         y: ipau,
-                     });
-                     for (i = edadGest + 1; i <= 39; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     return data;
+                    var ipau = $("#ipau").val();
+                    ipau = ipau.toString();
+                    ipau = ipau.replace(",", ".");
+                    ipau = parseFloat(ipau);
+
+                    if (ipau > 1){
+                        for (i = 20; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        } 
+                        data.push({
+                            y: ipau,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 20; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                  }())
              }]
         });
@@ -3346,29 +3479,37 @@ $(document).ready(function(){
                  marker: { symbol: 'square' },
                  lineWidth: 0,
                  data: (function () {
-                     var data = [];
-                     var edadGest = parseInt(localStorage.eg) -1;
+                    var data = [];
+                    var edadGest = parseInt(localStorage.eg) -1;
     
-                     for (i = 20; i <= edadGest; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-    
-                     var ipacm = $("#ipacm").val();
-                     ipacm = ipacm.toString();
-                     ipacm = ipacm.replace(",", ".");
-                     ipacm = parseFloat(ipacm);
-    
-                     data.push({
-                         y: ipacm,
-                     });
-                     for (i = edadGest + 1; i <= 39; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     return data;
+                    var ipacm = $("#ipacm").val();
+                    ipacm = ipacm.toString();
+                    ipacm = ipacm.replace(",", ".");
+                    ipacm = parseFloat(ipacm);
+
+                    if (ipacm > 1){
+                        for (i = 20; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: ipacm,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 20; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                  }())
              }]
         });
@@ -3422,29 +3563,37 @@ $(document).ready(function(){
                  marker: { symbol: 'square' },
                  lineWidth: 0,
                  data: (function () {
-                     var data = [];
-                     var edadGest = parseInt(localStorage.eg) -1;
+                    var data = [];
+                    var edadGest = parseInt(localStorage.eg) -1;
     
-                     for (i = 20; i <= edadGest; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-    
-                     var ccp = $("#ccp").val();
-                     ccp = ccp.toString();
-                     ccp = ccp.replace(",", ".");
-                     ccp = parseFloat(ccp);
-    
-                     data.push({
-                         y: ccp,
-                     });
-                     for (i = edadGest + 1; i <= 38; i++) {
-                         data.push({
-                             y: 0,
-                         });
-                     }
-                     return data;
+                    var ccp = $("#ccp").val();
+                    ccp = ccp.toString();
+                    ccp = ccp.replace(",", ".");
+                    ccp = parseFloat(ccp);
+
+                    if (ccp > 1){
+                        for (i = 20; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: ccp,
+                        });
+                        for (i = edadGest + 1; i <= 38; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 20; i <= 41; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                  }())
              }]
         });
