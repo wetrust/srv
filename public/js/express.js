@@ -32,8 +32,13 @@ $(document).ready(function(){
         $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+fecha.getFullYear());
         $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
         $("#input\\.paciente\\.fum").trigger("change");
+        //cambiar a tipo de examen, paso 6
         window.location.href = "#tipoExamen";
-
+        //no mostrar el título
+        $("#titulos\\.step\\.six\\.head").addClass("d-none");
+        // sección de datos innecesarios
+        $("#paciente\\.informacion\\.ecografica").removeClass("d-none");
+        //reprogramar el boton volver
         $("#boton\\.volver\\.step\\.five").off("click");
         $("#boton\\.volver\\.step\\.five").on("click", function(){
             window.location.href = serverURL + "examen/express";
@@ -185,6 +190,10 @@ $(document).ready(function(){
     $("#step\\.five").on("click", function(){
         window.location.href = "#tipoExamen";
 
+        //mostrar el título
+        $("#titulos\\.step\\.six\\.head").removeClass("d-none");
+        //ocultar sección de datos innecesarios
+        $("#paciente\\.informacion\\.ecografica").addClass("d-none");
         $("#boton\\.volver\\.step\\.five").off("click");
         $("#boton\\.volver\\.step\\.five").on("click", function(){
             window.location.href = "#consulta";

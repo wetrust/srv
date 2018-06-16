@@ -764,7 +764,37 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <button class="btn btn-outline-danger float-right" id="boton.volver.step.five"><i class="fas fa-door-open"></i><br>Volver</button>
-                    <h1 class="text-center">Elegir Exámen Ecográfico</h1>
+                    <h1 class="text-center" id="titulos.step.six.head">Elegir Exámen Ecográfico</h1>
+                    <div class="row d-none" id="paciente.informacion.ecografica">
+                        <div class="col">
+                            <div class="form-group row">
+                                <div class="col-1">
+                                    <label for="input.paciente.fum.examen.extra" class="col-form-label">FUM</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="input.paciente.fum.examen" data-date-format="dd/mm/yyyy" onfocus="blur();">
+                                </div>
+                                <div class="col-1">
+                                    <label for="input.paciente.eg.examen.extra" class="col-form-label">EG</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="input.paciente.eg.examen" readonly>
+                                </div>
+                                <div class="col-1">
+                                    <label for="input.paciente.fpp.examen.extra" class="col-form-label">FPP</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="input.paciente.fpp.examen" readonly>
+                                </div>
+                                <div class="col">
+                                    <label for="fee" class="col-form-label">Fecha de exámen</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" type="text" id="input.paciente.fe.extra" data-date-format="dd/mm/yyyy" onfocus="blur();" name="fee">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col">
                             <h3 class="card-title text-primary">Evaluación de biometría y Doppler</h3>
