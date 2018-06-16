@@ -18,21 +18,28 @@ $(document).ready(function(){
         onHashChange();
     });
 
-    //
     $("#step\\.examen").on("click", function(){
-        //nombres predeterminados
-        $("#nombre-paciente").val("Paciente");
-        $("#apellido-paciente").val("de prueba");
         //establecer id (fecha actual)
         let fecha = new Date();
         let day = ("0" + fecha.getDate()).slice(-2);
-	    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+        let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+
+        //nombres predeterminados
+        $("#nombre-paciente").val("Paciente");
+        $("#apellido-paciente").val("de prueba");
+        $("#paciente\\.nombre\\.eco\\.basico").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.elegir").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.prim").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.segundo").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.doppler").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#paciente\\.nombre\\.imagenes").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
 
         $("#id-paciente").val((day)+(month)+fecha.getFullYear());
         //cambiar fum por la fecha actual
         $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+fecha.getFullYear());
         $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
         $("#input\\.paciente\\.fum").trigger("change");
+
         //cambiar a tipo de examen, paso 6
         window.location.href = "#tipoExamen";
         //no mostrar el título
@@ -53,6 +60,7 @@ $(document).ready(function(){
             $(this).trigger("change");
             $(this).datepicker('hide');
         });
+
         $('#input\\.paciente\\.fe\\.extra').datepicker().on('changeDate', function(ev){
             $("#input\\.paciente\\.fum\\.extra").trigger("change");
             $(this).datepicker('hide');
