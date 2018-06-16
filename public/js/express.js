@@ -41,10 +41,6 @@ $(document).ready(function(){
         //ocultar las imágenes
         $("#ecografia\\.imagenes").addClass("d-none");
         //activar los calendarios
-        //establecer la fecha de exámen
-        let fecha = new Date();
-        let day = ("0" + fecha.getDate()).slice(-2);
-	    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
 
         $("#input\\.paciente\\.fum\\.extra").val((day)+"/"+(month)+"/"+fecha.getFullYear());
         $("#input\\.paciente\\.fe\\.extra").val((day)+"/"+(month)+"/"+fecha.getFullYear());
