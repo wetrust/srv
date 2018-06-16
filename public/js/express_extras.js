@@ -17,9 +17,11 @@ function onHashChange(){
         displayElement("ecoObsSegTrim");
     }
     else if (hash=="#ecoObsPrimTrim"){
-        //bloquear los input en caso que el usuario haya regresado a la pagina anterior
-        //si haber cancelado
-        $("#boton\\.eco\\.prim\\.cancelar").trigger("click");
+        //resetea los inputs
+        $("#lcn").val("");
+        $("#lcnPct").val("");
+        $("#saco").val("");
+        $("#sacoPct").val("");
         obtenerEcoPrimTrim();
         displayElement("ecoObsPrimTrim");
     }
