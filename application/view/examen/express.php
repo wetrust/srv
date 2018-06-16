@@ -1,17 +1,13 @@
 <div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
 </div>
 <div class="container pt-2" id="div.paciente">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>/examen/express">Inicio</a></li>
-        </ol>
-    </nav>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-3">
                 <div class="card-body">
                     <div id="step-one">
                         <h6 class="text-center text-secondary">Paso 1</h6>
+                        <button class="btn btn-outline-danger float-right" id="boton.volver.step.one"><i class="fas fa-door-open"></i><br>Volver</button>
                         <h1 class="text-center">¿Qué desea hacer?</h1>
                         <div class="text-center">
                             <button type="button" class="btn btn-outline-primary" id="step.search"><i class="fas fa-address-book fa-5x my-2"></i><br>Ultimas Reservas</button>

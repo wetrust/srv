@@ -18,6 +18,10 @@ $(document).ready(function(){
     });
 
     //pacientes paso 1
+    $("#boton\\.volver\\.step\\.one").on("click", function(){
+        window.location.href = serverURL;
+    });
+
     $("#step\\.search").on("click", function(){
         $("#step-one").addClass("d-none");
         $("#step-two-find").removeClass("d-none");
