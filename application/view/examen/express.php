@@ -873,7 +873,7 @@
                         <div class="card-body">
                             <h6 class="text-center my-2">Acciones</h6>
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-info" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.modificar">Modificar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="boton.eco.prim.eliminar">Eliminar</button>
+                                <button type="button" class="btn btn-secondary" id="boton.eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger d-none" id="boton.eco.prim.eliminar">Eliminar</button>
                             </div>
                             <hr>
                             <h6 class="text-center my-2">Informes</h6>
@@ -917,7 +917,7 @@
                                 </div>
                                 <div class="col-md-12 col-lg-3 mb-2">
                                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <input type="text" class="form-control" id="lcn" readonly>
+                                        <input type="text" class="form-control" id="lcn">
                                         <div class="input-group-append"><div class="input-group-text">mm</div></div>
                                     </div>
                                 </div>
@@ -939,7 +939,7 @@
                                 </div>
                                 <div class="col-md-12 col-lg-3 mb-2">
                                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <input type="text" class="form-control" id="saco" readonly>
+                                        <input type="text" class="form-control" id="saco">
                                         <div class="input-group-append"><div class="input-group-text">mm</div></div>
                                     </div>
                                 </div>

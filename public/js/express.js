@@ -165,23 +165,6 @@ $(document).ready(function(){
     });
 
     //ecografía de primer trimestre
-    $("#boton\\.eco\\.prim\\.nuevo").on("click", function(){
-        $("#boton\\.eco\\.prim\\.nuevo").addClass("d-none");
-        $("#boton\\.eco\\.prim\\.modificar").addClass("d-none");
-        $("#boton\\.eco\\.prim\\.guardar").removeClass("d-none");
-        $("#boton\\.eco\\.prim\\.cancelar").removeClass("d-none");
-        $("#boton\\.eco\\.prim\\.eliminar").addClass("d-none");
-        $("#lcn").attr("readonly", false);
-        $("#lcn").val("");
-        $("#lcnPct").val("");
-        $("#saco").attr("readonly", false);
-        $("#saco").val("");
-        $("#sacoPct").val("");
-        $("#graficoLcn").addClass("d-none");
-        $("#graficoSaco").addClass("d-none");
-        $("#modalPreInfEcoPrimTrim").addClass("d-none");
-    });
-
     $("#boton\\.eco\\.prim\\.cancelar").on("click", function(){
         $("#boton\\.eco\\.prim\\.nuevo").removeClass("d-none");
         $("#boton\\.eco\\.prim\\.guardar").addClass("d-none");
@@ -198,15 +181,6 @@ $(document).ready(function(){
     });
 
     $("#boton\\.eco\\.prim\\.guardar").on("click", function(){
-        $("#boton\\.eco\\.prim\\.nuevo").removeClass("d-none");
-        $("#boton\\.eco\\.prim\\.guardar").addClass("d-none");
-        $("#boton\\.eco\\.prim\\.cancelar").addClass("d-none");
-        $("#lcn").attr("readonly", true);
-        $("#saco").attr("readonly", true);
-        $("#graficoLcn").removeClass("d-none");
-        $("#graficoSaco").removeClass("d-none");
-        $("#modalPreInfEcoPrimTrim").removeClass("d-none");
-
         let examen = {
             examen: 1,
             eg: $("#eco\\.prim\\.eg").val(),
