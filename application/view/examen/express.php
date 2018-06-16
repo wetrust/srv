@@ -800,7 +800,7 @@
                         </div>
                         <div class="col">
                             <h3 class="card-title text-primary">Tamizaje y evaluación morfológica</h3>
-                            <p class="text-secondary">Módulos cuyo desarrollo se realizará posteriormente.</p><p class="mb-0">&nbsp;</p>
+                            <p class="text-secondary">Módulos cuyo desarrollo se realizará posteriormente en colaboración con otros especialistas.</p><p class="mb-0">&nbsp;</p>
                             <div class="card mb-3 mt-3">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
