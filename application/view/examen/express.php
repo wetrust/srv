@@ -1133,7 +1133,7 @@
                             <input type="hidden" id="dbpRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoDbp">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoDbp"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1196,7 +1196,7 @@
                             <input type="hidden" id="ccRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoCc">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoCc"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1225,7 +1225,7 @@
                             <input type="hidden" id="caRango">
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-outline-info" id="graficoCa">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoCa"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1254,7 +1254,7 @@
                             <input type="hidden" id="lfRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoLf">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoLf"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1283,7 +1283,7 @@
                             <input type="hidden" id="lhRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoLh">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoLh"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1312,7 +1312,7 @@
                             <input type="hidden" id="cerebeloRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoCerebelo">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoCerebelo"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                 </div>
@@ -1348,7 +1348,7 @@
                             <input type="hidden" id="pfeRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoPFE">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoPFE"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row d-none" id="cccaView">
@@ -1372,7 +1372,7 @@
                             <input type="hidden" id="cccaRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoCCCA">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoCCCA"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1401,7 +1401,7 @@
                             <input type="hidden" id="bvmRango">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoBVM">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoBVM"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row d-none">
@@ -1432,7 +1432,7 @@
                             <input type="hidden" id="tallaRango">
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-outline-info" id="graficoTalla">Ver Gráfica</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoTalla"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                 </div>
@@ -1561,11 +1561,10 @@
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
                     <div class="btn-group-vertical d-flex justify-content-center">
-                        <button type="button" class="btn btn-info" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
-                        <button type="button" class="btn btn-info" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-info" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
-                        <button type="button" class="btn btn-info" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
-                        <button type="button" class="btn btn-info d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
+                        <button type="button" class="btn btn-info" id="modalPreInfEcoDoppler">Informe Doppler</button>
+                        <button type="button" class="btn btn--info" id="infDoppler1">Resumen de Gráficas</button>
+                        <!-- <button type="button" class="btn btn-secondary d-none" id="infDoppler2">PFE + Doppler Fetal</button>
+                            <button type="button" class="btn btn-secondary d-none" id="infDoppler3">PFE + Doppler Materno / Fetal</button> -->
                     </div>
                 </div>
             </div>
@@ -1601,7 +1600,7 @@
                             <input type="hidden" id="audRngo">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoAud">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoAud"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1628,7 +1627,7 @@
                             <input type="hidden" id="auiRngo">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoAui">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoAui"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1655,7 +1654,7 @@
                             <input type="hidden" id="auRngo">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoAu">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoAu"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                 </div>
@@ -1688,7 +1687,7 @@
                             <input type="hidden" id="ipauRngo">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoIpau">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoIpau"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1715,7 +1714,7 @@
                             <input type="hidden" id="ipacmRngo">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoIpacm">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoIpacm"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1742,7 +1741,7 @@
                             <input type="hidden" id="ccpRngo">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoCcp">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoCcp"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                 </div>
@@ -1776,7 +1775,7 @@
                             <input type="hidden" id="dvRngo">
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoDv">Ver Gráficas</button>
+                            <button type="button" class="btn btn-outline-info" id="graficoDv"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1792,24 +1791,7 @@
                             </div>
                         </div>
                         <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficopsmACM">Ver Gráficas</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-body text-center">
-                    <div class="row">
-                        <div class="col-6 text-left">
-                            <h5>Reporte de Flujometría Doppler</h5>
-                        </div>
-                        <div class="col text-center">
-                            <button type="button" class="btn btn-outline-info" id="modalPreInfEcoDoppler">Protocolo de Informe</button>
-                        </div>
-                        <div class="col text-center">
-                            <button type="button" class="btn btn-outline-info" id="infDoppler1">Resumen de Gráficas</button>
-                            <!-- <button type="button" class="btn btn-secondary d-none" id="infDoppler2">PFE + Doppler Fetal</button>
-                            <button type="button" class="btn btn-secondary d-none" id="infDoppler3">PFE + Doppler Materno / Fetal</button> -->
+                            <button type="button" class="btn btn-outline-info" id="graficopsmACM"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
                 </div>
