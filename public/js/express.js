@@ -257,7 +257,6 @@ $(document).ready(function(){
 
     $("#step\\.five").on("click", function(){
         window.location.href = "#tipoExamen";
-
         //mostrar el título
         $("#titulos\\.step\\.six\\.head").removeClass("d-none");
         //ocultar sección de datos innecesarios
@@ -324,7 +323,7 @@ $(document).ready(function(){
         $('#graficoLcnBaseView').highcharts({
             title: {
                 text: 'LCN 6 a 15 semanas',
-                x: -20 //center
+                x: -20
             },
             xAxis: {
                 categories: ['6', '7', '8', '9', '10',  '11', '12', '13', '14', '15']
@@ -366,8 +365,6 @@ $(document).ready(function(){
                 marker: { symbol: 'square' },
                 lineWidth: 0,
                 data: (function () {
-    
-                    // generate an array of random data
                     var data = [];
                     var egLcn2 = parseInt(localStorage.eg);
                     var lcn = $("#lcn").val();
@@ -418,7 +415,7 @@ $(document).ready(function(){
                 $('#graficoLcnView').highcharts({
                     title: {
                         text: 'LCN semana 9',
-                        x: -20 //center
+                        x: -20
                     },
                     xAxis: {
                         categories: ['6', '7', '8', '9']
@@ -460,8 +457,6 @@ $(document).ready(function(){
                         marker: { symbol: 'square' },
                         lineWidth: 0,
                         data: (function () {
-    
-                            // generate an array of random data
                             var data = [];
                             egLcn = parseInt(egLcn);
                             var lcn = $("#lcn").val();
@@ -506,7 +501,7 @@ $(document).ready(function(){
                 $('#graficoLcnView').highcharts({
                     title: {
                         text: 'LCN semana 10',
-                        x: -20 //center
+                        x: -20
                     },
                     xAxis: {
                         categories: ['10',  '10,1', '10,2', '10,3', '10,4', '10,5', '10,6']
@@ -548,8 +543,6 @@ $(document).ready(function(){
                         marker: { symbol: 'square' },
                         lineWidth: 0,
                         data: (function () {
-    
-                            // generate an array of random data
                             var data = [];
                             var lcn = $("#lcn").val();
                             lcn = lcn.toString();
@@ -596,7 +589,7 @@ $(document).ready(function(){
                 $('#graficoLcnView').highcharts({
                     title: {
                         text: 'LCN semana 11',
-                        x: -20 //center
+                        x: -20
                     },
                     xAxis: {
                         categories: ['11','11.1','11.2','11.3','11.4','11.5','11.6']
@@ -638,8 +631,6 @@ $(document).ready(function(){
                         marker: { symbol: 'square' },
                         lineWidth: 0,
                         data: (function () {
-    
-                            // generate an array of random data
                             var data = [];
                             var lcn = $("#lcn").val();
                             lcn = lcn.toString();
@@ -687,7 +678,7 @@ $(document).ready(function(){
                 $('#graficoLcnView').highcharts({
                     title: {
                         text: 'LCN semana 12',
-                        x: -20 //center
+                        x: -20
                     },
                     xAxis: {
                         categories: ['12', '12.1', '12.2', '12.3', '12.4', '12.5', '12.6']
@@ -729,8 +720,6 @@ $(document).ready(function(){
                         marker: { symbol: 'square' },
                         lineWidth: 0,
                         data: (function () {
-    
-                            // generate an array of random data
                             var data = [];
                             var egLcn = parseInt(localStorage.eg);
                             var lcn = $("#lcn").val();
@@ -779,7 +768,7 @@ $(document).ready(function(){
                 $('#graficoLcnView').highcharts({
                     title: {
                         text: 'LCN semana 13',
-                        x: -20 //center
+                        x: -20
                     },
                     xAxis: {
                         categories: ['13', '13.1', '13.2', '13.3', '13.4', '13.5', '13.6']
@@ -2401,6 +2390,87 @@ $(document).ready(function(){
         });
         $('#popupGraficos').modal('show');
     });
+    $( '#graficoBVM' ).on( 'click', function() {
+        $('#graficosTitle').html("Gráfica BVM");
+        $('#graficosBody').html("<div id='graficoBVMView'></div>");
+        $( '#impEcoObsSegTrim1').remove();
+        $( '#impEcoObsSegTrim2').remove();
+        $( '#impDoppler3').remove();
+        $( '#impDoppler2').remove();
+        $( '#impDoppler1').remove();
+        $('#graficoBVMView').highcharts({
+                 chart: {
+                 height: 250
+             },
+             title: {
+                 text: 'BVM de Líquido Amniótico ***',
+                 x: -20,
+                     style: {
+                 fontSize: '14px'
+             }
+             },
+             plotOptions: {
+                 series: {
+                     enableMouseTracking: false
+                 }
+             },
+                 legend: {
+                 itemStyle: {
+                     fontSize: '10px',
+                     fontWeight:'normal'
+                 }
+             },
+             yAxis: {
+                 title: { text: 'Milimetros (mm)' },
+                 tickPositions: [5, 16, 27, 38, 49, 60, 71, 82, 93, 104]
+             },
+             colors: ['#313131','#313131','#313131'],
+             xAxis: {
+                 categories: ['16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
+             },
+             credits: {enabled:false},
+             series: [{
+                 type: "line",
+                 name: 'Pct. 5',
+                 dashStyle: "Dot",
+                 marker: {enabled:false},
+                 data: [23,25,27,28,29,29,30,30,30,30,30,30,30,29,29,29,29,29,28,28,27,26,24,23,21]
+             }, {
+                 type: "line",
+                 name: 'Pct. 95',
+                 dashStyle: "Dot",
+                 marker: { enabled: false },
+                 data: [59,62,64,66,67,68,68,68,68,68,68,69,69,69,69,70,71,72,72,72,71,70,68,66,62]
+             }, {
+                 type: "line",
+                 name: 'BVM',
+                 dashStyle: "Dot",
+                 marker: { symbol: 'square' },
+                 lineWidth: 0,
+                 data: (
+                     function () {
+                         var data = [];
+                         var edadGest = parseInt(localStorage.eg) -1;
+     
+                         for (i = 16; i <= edadGest; i ++ ) {
+                             data.push({
+                                 y: 0,
+                             });
+                         }
+                         data.push({
+                                 y: parseFloat($('#bvm').val()),
+                             });
+                         for (i = edadGest +1; i <= 39; i ++ ) {
+                             data.push({
+                                 y: 0,
+                             });
+                         }
+                         return data;
+                     }())
+                 }]
+         });
+        $('#popupGraficos').modal('show');
+    });
 
     //ecografía doppler
     $( '#modalPreInfEcoDoppler' ).on( 'click', function() {
@@ -2482,8 +2552,7 @@ $(document).ready(function(){
                     dashStyle: "Dot",
                     marker: { symbol: 'square' },
                     lineWidth: 0,
-                data: (function () {
-                        // generate an array of random data
+                    data: (function () {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
@@ -2558,8 +2627,7 @@ $(document).ready(function(){
                     dashStyle: "Dot",
                     marker: { symbol: 'square' },
                     lineWidth: 0,
-                data: (function () {
-                        // generate an array of random data
+                    data: (function () {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
@@ -2635,8 +2703,7 @@ $(document).ready(function(){
                     dashStyle: "Dot",
                     marker: { symbol: 'square' },
                     lineWidth: 0,
-                data: (function () {
-                        // generate an array of random data
+                    data: (function () {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
@@ -2863,7 +2930,6 @@ $(document).ready(function(){
                  marker: { symbol: 'square' },
                  lineWidth: 0,
                  data: (function () {
-                     // generate an array of random data
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
@@ -2936,8 +3002,7 @@ $(document).ready(function(){
                     dashStyle: "Dot",
                     marker: { symbol: 'square' },
                     lineWidth: 0,
-                data: (function () {
-                        // generate an array of random data
+                    data: (function () {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
@@ -3124,8 +3189,7 @@ $(document).ready(function(){
                     dashStyle: "Dot",
                     marker: { symbol: 'square' },
                     lineWidth: 0,
-                data: (function () {
-                        // generate an array of random data
+                    data: (function () {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
@@ -3358,7 +3422,6 @@ $(document).ready(function(){
                  marker: { symbol: 'square' },
                  lineWidth: 0,
                  data: (function () {
-                     // generate an array of random data
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
@@ -3632,7 +3695,6 @@ $(document).ready(function(){
                  marker: { symbol: 'square' },
                  lineWidth: 0,
                  data: (function () {
-                     // generate an array of random data
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
@@ -3838,7 +3900,6 @@ $(document).ready(function(){
                     marker: { symbol: 'square' },
                     lineWidth: 0,
                 data: (function () {
-                        // generate an array of random data
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) -1;
     
@@ -3899,7 +3960,6 @@ $(document).ready(function(){
                  marker: { symbol: 'square' },
                  lineWidth: 0,
                  data: (function () {
-                     // generate an array of random data
                      var data = [];
                      var edadGest = parseInt(localStorage.eg) -1;
     
@@ -3919,6 +3979,80 @@ $(document).ready(function(){
                      return data;
                  }())
              }]
+        });
+        $('#popupGraficos').modal('show');
+    });
+
+    $( '#graficopsmACM' ).on( 'click', function() {
+        $('#graficosTitle').html("Gráfico Pick sistólico máximo de ACM");
+        $('#graficosBody').html("<div id='viewGraficopsmACM'></div>");
+        $( '#impEcoObsSegTrim1').remove();
+        $( '#impEcoObsSegTrim2').remove();
+        $( '#impDoppler3').remove();
+        $( '#impDoppler2').remove();
+        $( '#impDoppler1').remove();
+        var medida = parseFloat(document.getElementById("psmACM").value);
+                                    
+        $('#viewGraficopsmACM').highcharts({
+            title: {
+                text: 'Pick sistólico máximo de ACM',
+                x: -20 //center
+            },
+            plotOptions: {
+                series: {
+                    enableMouseTracking: false
+                }
+            },
+            yAxis: {
+                title: { text: 'cm/s' },
+                tickPositions: [20, 40, 60, 80, 100]
+            },
+            colors: ['#313131', '#313131', '#313131'],
+            xAxis: {
+                categories: ['18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40']
+            },
+            credits: { enabled: false },
+            series: [{
+                type: "line",
+                name: 'Valor de la Media',
+                marker: { enabled: false },  
+                data:  [23.2,24.3,25.5,26.7,27.9,29.3,30.7,32.1,33.6,35.2,36.9,38.7,40.5,42.4,44.4,46.5,48.7,51.1,53.5,56,58.7,61.5,64.4]
+            }, {
+                type: "line",
+                name: 'Anemia leve',
+                marker: { enabled: false },
+                data: [29.9, 31.1, 32.8,34.5,36,37.8,39.5,41.5,43.3,45.6,47.6,50.4,52.2,55,57.3,60.1,62.9,66,69,72.8,75.7,79.8,83] 
+            }, {
+                type: "line",
+                name: 'Anemia moderada',
+                marker: { enabled: false },
+                data: [34.8,36.5,38.2,39.7,41.9,44,46,48,50.4,53,55.4,58,60.9,63.5,66.6,70,73.1,76.5,80.2,84,88,92.5,96.6]
+            }, {
+                type: "line",
+                name: 'Pick sistólico máximo de ACM',
+                dashStyle: "Dot",
+                marker: { symbol: 'square' },
+                lineWidth: 0,
+                data: (function () {
+                    var data = [];
+                    var edadGest = parseInt(localStorage.eg) - 1;
+    
+                    for (i = 18; i <= edadGest; i++) {
+                        data.push({
+                            y: 0,
+                        });
+                    }
+                    data.push({
+                        y: medida,
+                    });
+                    for (i = edadGest + 1; i <= 39; i++) {
+                        data.push({
+                            y: 0,
+                        });
+                    }
+                    return data;
+                }())
+            }]
         });
         $('#popupGraficos').modal('show');
     });
