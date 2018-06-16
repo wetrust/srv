@@ -227,6 +227,16 @@ $(document).ready(function(){
         $('#configNoController').button('toggle');
     });
 
+    $('#infadicionalClinicoNoController').on('click', function(){
+        if ($('#infadicionalClinicoView').hasClass('d-none') == false){
+            $('#infadicionalClinicoView').addClass('d-none');
+        }
+    });
+    
+    $('#infadicionalClinicoSiController').on('click', function(){
+        $('#infadicionalClinicoView').removeClass('d-none');
+    });
+
     //pacientes paso 4
     $("#step\\.four").on("click", function(){
         $("#id-paciente").attr("disabled", true);
@@ -1103,6 +1113,190 @@ $(document).ready(function(){
         $('#popupGenerico').modal('show');
     });
 
+    //ecografia segundo trimestre
+    $( '#modalPreInfEcoObsSegTrim1' ).on( 'click', function() {
+        $('#popupTitle').html("Datos para informe");
+        //remueve los botones de imprimir en caso de que estén
+        $( '#impEcoObsSegTrim2').remove();
+        $( '#impEcoObsSegTrim1').remove();
+        $( '#impDoppler3').remove();
+        $( '#impDoppler2').remove();
+        $( '#impDoppler1').remove();
+        $( '#infecoObsSegTrim1Clon').remove();
+            $('#popupBody').html("<div class='form-group'> <label>Presentaci&oacute;n</label> <select id='presentacion' class='form-control'> <option value='cefalica'>Cef&aacute;lica</option> <option value='podalica'>Pod&aacute;lica</option> <option value='transversa'>transversa</option> <option value='indiferente'>indiferente</option> </select></div><div class='form-group'> <label>Dorso Fetal</label> <select id='dorso' class='form-control'> <option value='anterior'>Anterior</option> <option value='lateral izquiedo'>Lat. Izquierdo</option> <option value='posterior'>Posterior</option> <option value='lateral derecho'>Lat. Derecho</option> </select></div><div class='form-group'> <label>Actividada Cardiaca</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='accard' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='accard' value='0'> No</label> </div></div><div class='form-group'> <label>Mov. Fetales</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='movfet' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='movfet' value='0'> No</label> </div></div><div class='form-group'> <label>FCF</label> <select id='fcf' class='form-control'> <option value='90'>90</option> <option value='91'>91</option> <option value='92'>92</option> <option value='93'>93</option> <option value='94'>94</option> <option value='95'>95</option> <option value='96'>96</option> <option value='97'>97</option> <option value='98'>98</option> <option value='99'>99</option> <option value='100'>100</option> <option value='101'>101</option> <option value='102'>102</option> <option value='103'>103</option> <option value='104'>104</option> <option value='105'>105</option> <option value='106'>106</option> <option value='107'>107</option> <option value='108'>108</option> <option value='109'>109</option> <option value='110'>110</option> <option value='111'>111</option> <option value='112'>112</option> <option value='113'>113</option> <option value='114'>114</option> <option value='115'>115</option> <option value='116'>116</option> <option value='117'>117</option> <option value='118'>118</option> <option value='119'>119</option> <option value='120'>120</option> <option value='121'>121</option> <option value='122'>122</option> <option value='123'>123</option> <option value='124'>124</option> <option value='125'>125</option> <option value='126'>126</option> <option value='127'>127</option> <option value='128'>128</option> <option value='129'>129</option> <option value='130'>130</option> <option value='131'>131</option> <option value='132'>132</option> <option value='133'>133</option> <option value='134'>134</option> <option value='135'>135</option> <option value='136'>136</option> <option value='137'>137</option> <option value='138'>138</option> <option value='139'>139</option> <option selected='selected' value='140'>140</option> <option value='141'>141</option> <option value='142'>142</option> <option value='143'>143</option> <option value='144'>144</option> <option value='145'>145</option> <option value='146'>146</option> <option value='147'>147</option> <option value='148'>148</option> <option value='149'>149</option> <option value='150'>150</option> <option value='151'>151</option> <option value='152'>152</option> <option value='153'>153</option> <option value='154'>154</option> <option value='155'>155</option> <option value='156'>156</option> <option value='157'>157</option> <option value='158'>158</option> <option value='159'>159</option> <option value='160'>160</option> <option value='161'>161</option> <option value='162'>162</option> <option value='163'>163</option> <option value='164'>164</option> <option value='165'>165</option> <option value='166'>166</option> <option value='167'>167</option> <option value='168'>168</option> <option value='169'>169</option> <option value='170'>170</option> </select></div><div class='form-group'> <label>Anatom&iacute;a fetal</label> <select multiple='' id='ev-morfo' class='form-control'><option value='Descripcion general detallando distintos segmentos' selected='selected'>Descripción general detallando distintos segmentos</option><option value='no evaluada dirigidamente, pero el aspecto morfológico general es normal'>No evaluada dirigidamente, pero el aspecto morfológico general es normal</option><option value='de aspecto general normal'>de aspecto general normal</option><option value='hallasgos de siguientes patologías:'>hallasgos ecográficos compatible con:</option></select></div><div class='form-group'> <p><strong>Comentarios anatom&iacute;a</strong> </p><textarea id='comentarios-anatomia-informe-eg-texto' class='form-control' rows='3'></textarea></div><div class='row'> <div class='col'> <div class='form-group'> <label>Placenta Ubicaci&oacute;n</label> <select id='ubicacion' class='form-control'> <option value='normal'>Normal</option> <option value='prev. lateral'>previa lateral</option> <option value='prev. marginal'>previa marginal</option> <option value='prev. parcial'>previa parcial</option> <option value='prev. total'>previa total</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta incersi&oacute;n</label> <select id='incersion' class='form-control'> <option value='anterior'>anterior</option> <option value='posterior'>posterior</option> <option value='fundica'>f&uacute;ndica</option> <option value='lat. derecha'>lateral derecha</option> <option value='lat. izquierda'>lateral izquierda</option> <option value='segmentaria'>segmentaria</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta Grado (Grannum)</label> <select id='grado-placenta' class='form-control'> <option value='0'>0</option> <option value='1'>1</option> <option value='2'>2</option> <option value='3'>3</option> </select> </div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label><strong class='text-primary'>Líquido amniótico</strong></label> <select id='liq-cualitativo-eco' class='form-control'> <option value='normal'>Normal</option> <option value='disminuido'>Disminuido</option> <option value='aumentado'>Aumentado</option> </select> </div></div><div class='col'> <div class='form-group'> <label><strong class='text-primary'>BVM</strong></label> <div class='input-group mb-2 mr-sm-2 mb-sm-0'> <input type='text' class='form-control' id='bvmEcoDos'> <div class='input-group-addon'>mm.</div></div></div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label>Cord&oacute;n umbilical</label> <select id='cordon' class='form-control'> <option value='inserci&oacute;n central'>Inserci&oacute;n central</option> <option value='inserci&oacute;n marginal'>Inserci&oacute;n marginal</option> <option value='inserci&oacute;n velamentosa'>Inserci&oacute;n velamentosa</option> <option value='inserci&oacute;n no evaluable'>Inserci&oacute;n no evaluable</option> </select> </div></div><div class='col'> <div class='form-group'> <label>N&uacute;mero de vasos</label> <select id='vasos' class='form-control'> <option value='2'>2</option> <option selected='selected' value='3'>3</option> </select> </div></div></div><div class='form-group'> <p><strong>Comentarios adicionales</strong> <small class='text-primary'>(Espacio a completar por el ecografista)</small> </p><textarea id='comentarios-eco-dos-inf-dos' rows='3' class='form-control'></textarea></div>");
+        //añadir boton de imprimir
+        $( '#bvmEcoDos' ).on('change', function(){
+            bvmEcoDos();
+            $('#bvm').val($(this).val()).trigger('change');
+        });
+        $('#bvmEcoDos').val($('#bvm').val()).trigger('change');
+        
+        $('#ev-morfo').on('change', function(){
+            if ($(this).val() == "Descripcion general detallando distintos segmentos"){
+                $("#comentarios-anatomia-informe-eg-texto").val("Evaluación anatómica general de aspecto normal; cráneo y estructura internas de aspecto normal, cara cuello normal, labio superior integro, Tórax y abdomen de aspecto normal, corazón cuatro cámaras, tractos de salida de aspecto normal, cámara gástrica y vejiga visibles, riñón derecho e izquierdo de aspecto normal, pared abdominal integra, columna visible en toda su extensión, extremidades con movilidad y tono de aspecto normal, sexo fetal masculino.");
+            }
+            else{
+                $("#comentarios-anatomia-informe-eg-texto").val('');
+            }
+        });
+        $("#ev-morfo").val('no evaluada dirigidamente, pero el aspecto morfológico general es normal');
+         $('#ev-morfo').trigger('change');
+    
+        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+        $( '#impDoppler1').on("click", function(){
+              crearInformeEcoSegTrim1();
+        });
+        $('#infecoObsSegTrim1Clon').on("click", function(){
+            $('#infecoObsSegTrim1').trigger("click");
+        });
+        var percentilPeso = $('#pfePctRpt').val();
+        percentilPeso = percentilPeso.replace('&lt;','<').replace('&gt;', '>');
+        var comentarios = 'Crecimiento (peso) percentil ' + percentilPeso + ', para gráfica de peso fetal Hadlock* \r\n';
+    
+        var linea6 = "Líquido amniótico " + $('#liq-cualitativo-eco').val() + ", con bolsillo vertical mayor " + document.getElementById("bvmEcoDos").value + " mm.";
+        
+        comentarios = comentarios + linea6 + '\r\n';
+        $('#popupGenerico').modal('show');
+        $("#comentarios-eco-dos-inf-dos").val(comentarios);
+        
+    });
+    
+    $( '#modalPreInfEcoObsSegTrim2' ).on( 'click', function() {
+        var cb = parseInt($('#cerebelo').val());
+        var lh = parseInt($('#lh').val());
+        
+        if (isNaN(cb) || isNaN(lh)){
+            $('#popupTitle').html("Información");
+            $('#popupBody').html("<p><strong>Actualmente la Edad gestacional se calculará solo por biometrías de Cráneo y Fémur (Excluido CA).<br>Para mayor exactitud es recomendable ingresar mediciones de Humero y Cerebelo.</strong><br>¿Desea ingresar biometrías de Humero y Cerebelo?</p><div class='btn-group' data-toggle='buttons'><label class='btn btn-outline-primary p-3' id='infEcoObsSegTrim2verNO' aria-pressed='true'><input type='radio' value='0' checked=''> NO</label><label class='btn btn-outline-primary p-3' id='infEcoObsSegTrim2verSi' aria-pressed='true'><input type='radio' value='1'> SI</label></div>");
+            $('#impDoppler1').remove();
+            $('#infecoObsSegTrim1Clon').remove();
+            $('#popupGenerico').modal('show');
+            $( "#infEcoObsSegTrim2verNO").on("click", function(){
+                  $('#popupTitle').html("Datos para informe");
+                //remueve los botones de imprimir en caso de que estén
+                $( '#impEcoObsSegTrim2').remove();
+                $( '#impEcoObsSegTrim1').remove();
+                $( '#impDoppler3').remove();
+                $( '#impDoppler2').remove();
+                $( '#impDoppler1').remove();
+                $( '#infecoObsSegTrim1Clon').remove();
+                $('#popupBody').html("<div class='form-group'> <label>Presentaci&oacute;n</label> <select id='presentacion' class='form-control'> <option value='cefalica'>Cef&aacute;lica</option> <option value='podalica'>Pod&aacute;lica</option> <option value='transversa'>transversa</option> <option value='indiferente'>indiferente</option> </select></div><div class='form-group'> <label>Dorso Fetal</label> <select id='dorso' class='form-control'> <option value='anterior'>Anterior</option> <option value='lateral izquiedo'>Lat. Izquierdo</option> <option value='posterior'>Posterior</option> <option value='lateral derecho'>Lat. Derecho</option> </select></div><div class='form-group'> <label>Actividada Cardiaca</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='accard' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='accard' value='0'> No</label> </div></div><div class='form-group'> <label>Mov. Fetales</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='movfet' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='movfet' value='0'> No</label> </div></div><div class='form-group'> <label>FCF</label> <select id='fcf' class='form-control'> <option value='90'>90</option> <option value='91'>91</option> <option value='92'>92</option> <option value='93'>93</option> <option value='94'>94</option> <option value='95'>95</option> <option value='96'>96</option> <option value='97'>97</option> <option value='98'>98</option> <option value='99'>99</option> <option value='100'>100</option> <option value='101'>101</option> <option value='102'>102</option> <option value='103'>103</option> <option value='104'>104</option> <option value='105'>105</option> <option value='106'>106</option> <option value='107'>107</option> <option value='108'>108</option> <option value='109'>109</option> <option value='110'>110</option> <option value='111'>111</option> <option value='112'>112</option> <option value='113'>113</option> <option value='114'>114</option> <option value='115'>115</option> <option value='116'>116</option> <option value='117'>117</option> <option value='118'>118</option> <option value='119'>119</option> <option value='120'>120</option> <option value='121'>121</option> <option value='122'>122</option> <option value='123'>123</option> <option value='124'>124</option> <option value='125'>125</option> <option value='126'>126</option> <option value='127'>127</option> <option value='128'>128</option> <option value='129'>129</option> <option value='130'>130</option> <option value='131'>131</option> <option value='132'>132</option> <option value='133'>133</option> <option value='134'>134</option> <option value='135'>135</option> <option value='136'>136</option> <option value='137'>137</option> <option value='138'>138</option> <option value='139'>139</option> <option selected='selected' value='140'>140</option> <option value='141'>141</option> <option value='142'>142</option> <option value='143'>143</option> <option value='144'>144</option> <option value='145'>145</option> <option value='146'>146</option> <option value='147'>147</option> <option value='148'>148</option> <option value='149'>149</option> <option value='150'>150</option> <option value='151'>151</option> <option value='152'>152</option> <option value='153'>153</option> <option value='154'>154</option> <option value='155'>155</option> <option value='156'>156</option> <option value='157'>157</option> <option value='158'>158</option> <option value='159'>159</option> <option value='160'>160</option> <option value='161'>161</option> <option value='162'>162</option> <option value='163'>163</option> <option value='164'>164</option> <option value='165'>165</option> <option value='166'>166</option> <option value='167'>167</option> <option value='168'>168</option> <option value='169'>169</option> <option value='170'>170</option> </select></div><div class='form-group'> <label>Anatom&iacute;a fetal</label> <select multiple='' id='ev-morfo' class='form-control'><option value='Descripcion general detallando distintos segmentos' selected='selected'>Descripción general detallando distintos segmentos</option><option value='no evaluada dirigidamente, pero el aspecto morfológico general es normal'>No evaluada dirigidamente, pero el aspecto morfológico general es normal</option><option value='de aspecto general normal'>de aspecto general normal</option><option value='hallasgos ecograficos compatible con:'>hallasgos ecográficos compatible con:</option></select></div><div class='form-group'> <p><strong>Comentarios anatom&iacute;a</strong> </p><textarea id='comentarios-anatomia-informe-eg-texto' class='form-control' rows='3'></textarea></div><div class='row'> <div class='col'> <div class='form-group'> <label>Placenta Ubicaci&oacute;n</label> <select id='ubicacion' class='form-control'> <option value='normal'>Normal</option> <option value='prev. lateral'>previa lateral</option> <option value='prev. marginal'>previa marginal</option> <option value='prev. parcial'>previa parcial</option> <option value='prev. total'>previa total</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta incersi&oacute;n</label> <select id='incersion' class='form-control'> <option value='anterior'>anterior</option> <option value='posterior'>posterior</option> <option value='fundica'>f&uacute;ndica</option> <option value='lat. derecha'>lateral derecha</option> <option value='lat. izquierda'>lateral izquierda</option> <option value='segmentaria'>segmentaria</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta Grado (Grannum)</label> <select id='grado-placenta' class='form-control'> <option value='0'>0</option> <option value='1'>1</option> <option value='2'>2</option> <option value='3'>3</option> </select> </div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label><strong class='text-primary'>Líquido amniótico</strong></label> <select id='liq-cualitativo-eco' class='form-control'> <option value='normal'>Normal</option> <option value='disminuido'>Disminuido</option> <option value='aumentado'>Aumentado</option> </select> </div></div><div class='col'> <div class='form-group'> <label><strong class='text-primary'>BVM</strong></label> <div class='input-group mb-2 mr-sm-2 mb-sm-0'> <input type='text' class='form-control' id='bvmEcoDos'> <div class='input-group-addon'>mm.</div></div></div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label>Cord&oacute;n umbilical</label> <select id='cordon' class='form-control'> <option value='inserci&oacute;n central'>Inserci&oacute;n central</option> <option value='inserci&oacute;n marginal'>Inserci&oacute;n marginal</option> <option value='inserci&oacute;n velamentosa'>Inserci&oacute;n velamentosa</option> <option value='inserci&oacute;n no evaluable'>Inserci&oacute;n no evaluable</option> </select> </div></div><div class='col'> <div class='form-group'> <label>N&uacute;mero de vasos</label> <select id='vasos' class='form-control'> <option value='2'>2</option> <option selected='selected' value='3'>3</option> </select> </div></div></div><div class='form-group'> <p><strong>Comentarios adicionales</strong> <small class='text-primary'>(Espacio a completar por el ecografista)</small></p><textarea id='comentarios-eco-dos-inf-dos' rows='3' class='form-control'></textarea></div>");
+                //añadir boton de imprimir
+                var fur = $( "input[name='fum']").val();
+                var fpp = $( "input[name='fpp']").val();
+                var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp + "\r\n";
+                $('#comentarios-eco-dos-inf-dos').val(comentario);
+                $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+                $( '#impDoppler1').on("click", function(){
+                      crearInformeEcoSegTrim2();
+                });
+    
+                $('#infecoObsSegTrim1Clon').on("click", function(){
+                    $('#infecoObsSegTrim2').trigger("click");
+                });
+    
+                $( '#bvmEcoDos' ).on('change', function(){
+                    bvmEcoDos();
+                    $('#bvm').val($(this).val()).trigger('change');
+                });
+                $('#bvmEcoDos').val($('#bvm').val()).trigger('change');
+                $('#ev-morfo').on('change', function(){
+                    if ($(this).val() == "Descripcion general detallando distintos segmentos"){
+                        $("#comentarios-anatomia-informe-eg-texto").val("Evaluación anatómica general de aspecto normal; cráneo y estructura internas de aspecto normal, cara cuello normal, labio superior integro, Tórax y abdomen de aspecto normal, corazón cuatro cámaras, tractos de salida de aspecto normal, cámara gástrica y vejiga visibles, riñón derecho e izquierdo de aspecto normal, pared abdominal integra, columna visible en toda su extensión, extremidades con movilidad y tono de aspecto normal, sexo fetal masculino.");
+                    }
+                    else{
+                        $("#comentarios-anatomia-informe-eg-texto").val('');
+                    }
+                });
+                $('#ev-morfo').trigger('change');
+            });
+            $( "#infEcoObsSegTrim2verSi").on("click", function(){
+                  $('#popupGenerico').modal('hide');
+                $('#lh').focus();
+                $("html, body").animate({ scrollTop: 100 }, "slow");
+            });
+            return;
+        }
+        
+        $('#popupTitle').html("Datos para informe");
+        //remueve los botones de imprimir en caso de que estén
+        $( '#impEcoObsSegTrim2').remove();
+        $( '#impEcoObsSegTrim1').remove();
+        $( '#impDoppler3').remove();
+        $( '#impDoppler2').remove();
+        $( '#impDoppler1').remove();
+        $( '#infecoObsSegTrim1Clon').remove();
+            $('#popupBody').html("<div class='form-group'> <label>Presentaci&oacute;n</label> <select id='presentacion' class='form-control'> <option value='cefalica'>Cef&aacute;lica</option> <option value='podalica'>Pod&aacute;lica</option> <option value='transversa'>transversa</option> <option value='indiferente'>indiferente</option> </select></div><div class='form-group'> <label>Dorso Fetal</label> <select id='dorso' class='form-control'> <option value='anterior'>Anterior</option> <option value='lateral izquiedo'>Lat. Izquierdo</option> <option value='posterior'>Posterior</option> <option value='lateral derecho'>Lat. Derecho</option> </select></div><div class='form-group'> <label>Actividada Cardiaca</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='accard' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='accard' value='0'> No</label> </div></div><div class='form-group'> <label>Mov. Fetales</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='movfet' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='movfet' value='0'> No</label> </div></div><div class='form-group'> <label>FCF</label> <select id='fcf' class='form-control'> <option value='90'>90</option> <option value='91'>91</option> <option value='92'>92</option> <option value='93'>93</option> <option value='94'>94</option> <option value='95'>95</option> <option value='96'>96</option> <option value='97'>97</option> <option value='98'>98</option> <option value='99'>99</option> <option value='100'>100</option> <option value='101'>101</option> <option value='102'>102</option> <option value='103'>103</option> <option value='104'>104</option> <option value='105'>105</option> <option value='106'>106</option> <option value='107'>107</option> <option value='108'>108</option> <option value='109'>109</option> <option value='110'>110</option> <option value='111'>111</option> <option value='112'>112</option> <option value='113'>113</option> <option value='114'>114</option> <option value='115'>115</option> <option value='116'>116</option> <option value='117'>117</option> <option value='118'>118</option> <option value='119'>119</option> <option value='120'>120</option> <option value='121'>121</option> <option value='122'>122</option> <option value='123'>123</option> <option value='124'>124</option> <option value='125'>125</option> <option value='126'>126</option> <option value='127'>127</option> <option value='128'>128</option> <option value='129'>129</option> <option value='130'>130</option> <option value='131'>131</option> <option value='132'>132</option> <option value='133'>133</option> <option value='134'>134</option> <option value='135'>135</option> <option value='136'>136</option> <option value='137'>137</option> <option value='138'>138</option> <option value='139'>139</option> <option selected='selected' value='140'>140</option> <option value='141'>141</option> <option value='142'>142</option> <option value='143'>143</option> <option value='144'>144</option> <option value='145'>145</option> <option value='146'>146</option> <option value='147'>147</option> <option value='148'>148</option> <option value='149'>149</option> <option value='150'>150</option> <option value='151'>151</option> <option value='152'>152</option> <option value='153'>153</option> <option value='154'>154</option> <option value='155'>155</option> <option value='156'>156</option> <option value='157'>157</option> <option value='158'>158</option> <option value='159'>159</option> <option value='160'>160</option> <option value='161'>161</option> <option value='162'>162</option> <option value='163'>163</option> <option value='164'>164</option> <option value='165'>165</option> <option value='166'>166</option> <option value='167'>167</option> <option value='168'>168</option> <option value='169'>169</option> <option value='170'>170</option> </select></div><div class='form-group'> <label>Anatom&iacute;a fetal</label> <select multiple='' id='ev-morfo' class='form-control'><option value='Descripcion general detallando distintos segmentos' selected='selected'>Descripción general detallando distintos segmentos</option><option value='no evaluada dirigidamente, pero el aspecto morfológico general es normal'>No evaluada dirigidamente, pero el aspecto morfológico general es normal</option><option value='de aspecto general normal'>de aspecto general normal</option><option value='hallasgos ecograficos compatible con:'>hallasgos ecográficos compatible con:</option></select></div><div class='form-group'> <p><strong>Comentarios anatom&iacute;a</strong> </p><textarea id='comentarios-anatomia-informe-eg-texto' class='form-control' rows='3'></textarea></div><div class='row'> <div class='col'> <div class='form-group'> <label>Placenta Ubicaci&oacute;n</label> <select id='ubicacion' class='form-control'> <option value='normal'>Normal</option> <option value='prev. lateral'>previa lateral</option> <option value='prev. marginal'>previa marginal</option> <option value='prev. parcial'>previa parcial</option> <option value='prev. total'>previa total</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta incersi&oacute;n</label> <select id='incersion' class='form-control'> <option value='anterior'>anterior</option> <option value='posterior'>posterior</option> <option value='fundica'>f&uacute;ndica</option> <option value='lat. derecha'>lateral derecha</option> <option value='lat. izquierda'>lateral izquierda</option> <option value='segmentaria'>segmentaria</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta Grado (Grannum)</label> <select id='grado-placenta' class='form-control'> <option value='0'>0</option> <option value='1'>1</option> <option value='2'>2</option> <option value='3'>3</option> </select> </div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label><strong class='text-primary'>Líquido amniótico</strong></label> <select id='liq-cualitativo-eco' class='form-control'> <option value='normal'>Normal</option> <option value='disminuido'>Disminuido</option> <option value='aumentado'>Aumentado</option> </select> </div></div><div class='col'> <div class='form-group'> <label><strong class='text-primary'>BVM</strong></label> <div class='input-group mb-2 mr-sm-2 mb-sm-0'> <input type='text' class='form-control' id='bvmEcoDos'> <div class='input-group-addon'>mm.</div></div></div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label>Cord&oacute;n umbilical</label> <select id='cordon' class='form-control'> <option value='inserci&oacute;n central'>Inserci&oacute;n central</option> <option value='inserci&oacute;n marginal'>Inserci&oacute;n marginal</option> <option value='inserci&oacute;n velamentosa'>Inserci&oacute;n velamentosa</option> <option value='inserci&oacute;n no evaluable'>Inserci&oacute;n no evaluable</option> </select> </div></div><div class='col'> <div class='form-group'> <label>N&uacute;mero de vasos</label> <select id='vasos' class='form-control'> <option value='2'>2</option> <option selected='selected' value='3'>3</option> </select> </div></div></div><div class='form-group'> <p><strong>Comentarios adicionales</strong> <small class='text-primary'>(Espacio a completar por el ecografista)</small></p><textarea id='comentarios-eco-dos-inf-dos' rows='3' class='form-control'></textarea></div>");
+        //añadir boton de imprimir
+        var fur = $( "input[name='fum']").val();
+        var fpp = $( "input[name='fpp']").val();
+        var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp + "\r\n";
+        $('#comentarios-eco-dos-inf-dos').val(comentario);
+        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+        $( '#impDoppler1').on("click", function(){
+              crearInformeEcoSegTrim2();
+        });
+        
+        $('#infecoObsSegTrim1Clon').on("click", function(){
+            $('#infecoObsSegTrim2').trigger("click");
+        });
+        
+        $( '#bvmEcoDos' ).on('change', function(){
+            bvmEcoDos();
+            $('#bvm').val($(this).val()).trigger('change');
+        });
+        $('#bvmEcoDos').val($('#bvm').val()).trigger('change');
+        $('#ev-morfo').on('change', function(){
+            if ($(this).val() == "Descripcion general detallando distintos segmentos"){
+                $("#comentarios-anatomia-informe-eg-texto").val("Evaluación anatómica general de aspecto normal; cráneo y estructura internas de aspecto normal, cara cuello normal, labio superior integro, Tórax y abdomen de aspecto normal, corazón cuatro cámaras, tractos de salida de aspecto normal, cámara gástrica y vejiga visibles, riñón derecho e izquierdo de aspecto normal, pared abdominal integra, columna visible en toda su extensión, extremidades con movilidad y tono de aspecto normal, sexo fetal masculino.");
+            }
+            else{
+                $("#comentarios-anatomia-informe-eg-texto").val('');
+            }
+        });
+        $("#ev-morfo").val('no evaluada dirigidamente, pero el aspecto morfológico general es normal');
+         $('#ev-morfo').trigger('change');
+        $('#popupGenerico').modal('show');
+    });
+    
+    //ecografía doppler
+    $( '#modalPreInfEcoDoppler' ).on( 'click', function() {
+        $('#popupTitle').html("Datos para informe");
+        //remueve los botones de imprimir en caso de que estén
+        $( '#impEcoObsSegTrim2').remove();
+        $( '#impEcoObsSegTrim1').remove();
+        $( '#impDoppler3').remove();
+        $( '#impDoppler2').remove();
+        $( '#impDoppler1').remove();
+        $( '#infecoObsSegTrim1Clon').remove();
+            $('#popupBody').html("<div class='form-group'><label>Evaluación de líquido amniótico</label><select id='liqAmnioDoppler' class='form-control'><option value='normal'>Normal</option><option value='disminuido'>Disminuido</option><option value='aumentado'>Aumentado</option></select></div><div class='form-group'><label>BVM *</label><div class='input-group'><input id='bvmDoppler' type='number' min='001' max='999' class='form-control'><span class='input-group-addon'>mm.</span></div></div><div class='form-group'><label>Motivo del exámen</label><select id='motivo-doppler' class='form-control'><option value='RCIU Emb. Previo'>RCIU Emb. Previo</option><option value='RCIU No PEG &gt; p10'>RCIU No PEG > p10</option><option value='RCIU Moderado &lt; p10'>RCIU Moderado < p10</option><option value='RCIU Severo &lt; p3'>RCIU Severo < p3</option><option value='Seguimiento Evolución'>Seguimiento Evolución</option><option value='Síndrome Hipertensivo'>Síndrome Hipertensivo</option><option value='Preeclampsia'>Preeclampsia</option><option value='Desnutrición Materna'>Desnutrición Materna</option><option value='Amenaza Pto. Prematuro'>Amenaza Pto. Prematuro</option><option value='Tabaquismo'>Tabaquismo</option><option value='Otra Patología ARO'>Otra Patología ARO</option><option value='Sin Patología ARO'>Sin Patología ARO</option><option value='Estudio Doppler' selected>Estudio Doppler</option><option value='Estudio Doppler materno'>Estudio Doppler materno</option></select></div><div class='form-group'><label>Antecedentes Obstétricos</label><select id='antecedentes-doppler' class='form-control'><option value='RCIU Emb. Previo'>RCIU Emb. Previo</option><option value='RCIU No PEG &gt; p10'>RCIU No PEG > p10</option><option value='RCIU Moderado &lt; p10'>RCIU Moderado < p10</option><option value='RCIU Severo &lt; p3'>RCIU Severo < p3</option><option value='Síndrome Hipertensivo'>Síndrome Hipertensivo</option><option value='Desnutrición Materna'>Desnutrición Materna</option><option value='Amenaza Pto. Prematuro'>Amenaza Pto. Prematuro</option><option value='Tabaquismo'>Tabaquismo</option><option value='Otra Patología ARO'>Otra Patología ARO</option><option value='Sin Patología ARO'>Sin Patología ARO</option></select></div><div class='form-group'><label>Presentacion</label><select id='presentacion-doppler' class='form-control'><option value='cefalica' selected>Cefalica</option><option value='podalica'>Podálica</option><option value='transversa'>Transversa</option><option value='indiferente'>Indiferente</option></select></div><div class='form-group'><label>Motilidad Fetal</label><select id='motilidad-doppler' class='form-control'><option value='hiperactivo' selected>Hiperactivo</option><option value='activo'>Activo</option><option value='hipoactivo'>Hipoactivo</option><option value='inmovil'>Inmovil</option></select></div><div class='form-group'><label>Placenta Ubicación</label><select id='ubicacion-doppler' class='form-control'><option value='anterior' selected>Anterior</option><option value='posterior'>Posterior</option><option value='fúndica'>Fúndica</option><option value='lat. derecha'>Lat. derecha</option><option value='lat. izquierda'>Lat. izquierda</option><option value='otro'>Otro</option></select></div><div class='form-group'><label>Comentarios y obsevaciones <small style='font-size:70% !important;'>(La interpretación clínica de los datos es responsabilidad exclusiva de quien realiza y certifica este exámen)</small></label><textarea class='form-control' id='comentarios-doppler' rows='3'></textarea></div>");
+        //añadir boton de imprimir
+        var comentarios = "";
+        if ($('#auprom').val() > 0){
+            comentarios = 'F. Doppler materno (promedio uterinas), IP percentil ' + $('#auPctTxt').val() + '\r\n';
+        }
+        if ($('#ipau').val() > 0){
+            comentarios = comentarios + 'F. Doppler fetal, IP de CCP percentil ' + $('#ccpPctTxt').val() + '\r\n';
+        }
+        
+        $('#comentarios-doppler').val(comentarios);
+        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+        $( '#bvmDoppler' ).on('change', function(){
+            bvmDoppler();
+        });
+        $( '#impDoppler1').on("click", function(){
+             crearInformeDoppler();
+        });
+        $( '#infecoObsSegTrim1Clon').on("click", function(){
+             $('#infDoppler1').trigger('click');
+        });
+        $('#popupGenerico').modal('show');
+    });
+
+
+
+
+
     //foto ecográficas
     $("#imprimirFotos").on("click", function() {
         var fotosArreglo = [];
@@ -1248,4 +1442,113 @@ $(document).ready(function(){
         let valor = $(this).val();
         $("#sacoPct").val(egSaco(valor));
     });
+
+    $( "#dbp" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#cc").focus()
+        }
+      });
+      
+      $( "#dof" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#cc").focus()
+        }
+      });
+      
+      $( "#cc" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#cc").trigger('change');
+           $("#ca").focus().trigger('change');
+        }
+      });
+      
+      $( "#ca" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#ca").trigger('change');
+           $("#lf").focus()
+        }
+      });
+      
+      $( "#lf" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#ca").trigger('change');
+           $("#bvm").focus()
+        }
+      });
+      
+      $( "#lh" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#cerebelo").focus()
+        }
+      });
+      
+      $( "#cerebelo" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#bvm").focus()
+        }
+      });
+      
+      $( "#bvm" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#pfe").focus()
+           bvm();
+        }
+      });
+      
+      $( "#aud" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#aui").focus()
+        }
+      });
+      
+      $( "#aui" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#ipau").focus()
+        }
+      });
+      
+      $( "#aui" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#ipau").focus()
+        }
+      });
+      
+      $( "#ipau" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#ipacm").focus()
+        }
+      });
+      
+      $( "#ipacm" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#dv").focus()
+        }
+      });
+      
+      $( "#dv" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#graficoDv").focus()
+        }
+      });
+      
+      $( "#psmACM" ).keypress(function( event ) {
+        if ( event.which == 13 ) {
+           event.preventDefault();
+           $("#graficopsmACM").focus()
+        }
+      });
 });
