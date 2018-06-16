@@ -17,6 +17,24 @@ $(document).ready(function(){
         onHashChange();
     });
 
+    //
+    $("#step\\.examen").on("click", function(){
+        //nombres predeterminados
+        $("#nombre-paciente").val("Paciente");
+        $("#apellido-paciente").val("de prueba");
+        //establecer id (fecha actual)
+        let fecha = new Date();
+        let day = ("0" + fecha.getDate()).slice(-2);
+	    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+
+        $("#id-paciente").val((day)+(month)+fecha.getFullYear());
+        //cambiar fum por la fecha actual
+        $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+fecha.getFullYear());
+        $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#input\\.paciente\\.fum").trigger("change");
+        window.location.href = "#tipoExamen";
+    });
+
     //pacientes paso 1
     $("#boton\\.volver\\.step\\.one").on("click", function(){
         window.location.href = serverURL;
