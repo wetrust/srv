@@ -36,7 +36,7 @@ $(document).ready(function(){
 
         $("#boton\\.volver\\.step\\.five").off("click");
         $("#boton\\.volver\\.step\\.five").on("click", function(){
-            window.location.href = serverURL + "examen/expres";
+            window.location.href = serverURL + "examen/express";
         });
     });
 
