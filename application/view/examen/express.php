@@ -815,7 +815,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mb-2">
+                            <div class="card mb-3">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
                                     <h6 class="card-title float-left">Eco cardiografía fetal</h6><span class="card-link float-right">en desarrollo</span>
