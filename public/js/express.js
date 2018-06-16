@@ -1312,7 +1312,7 @@ $(document).ready(function(){
                    dbp = parseFloat(dbp);
 
                     if (dbp > 1){
-                        for (i = 12; i <= edadGest; i++) {
+                        for (i = 13; i <= edadGest; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -1327,7 +1327,7 @@ $(document).ready(function(){
                         }
                     }
                     else{
-                        for (i = 12; i <= 41; i++) {
+                        for (i = 13; i <= 40; i++) {
                             data.push({
                                 y: 0,
                             });
