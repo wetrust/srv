@@ -763,9 +763,8 @@
         <div class="col-md-12">
             <div class="card mb-3">
                 <div class="card-body">
-                    <h6 class="text-center text-secondary">Elegir exámen ecográfico</h6>
                     <button class="btn btn-outline-danger float-right" id="boton.volver.step.five"><i class="fas fa-door-open"></i><br>Volver</button>
-                    <h1 class="text-center">Exámen Ecográfico</h1>
+                    <h1 class="text-center">Elegir Exámen Ecográfico</h1>
                     <div class="row">
                         <div class="col">
                             <h3 class="card-title text-primary">Evaluación de biometría y Doppler</h3>
