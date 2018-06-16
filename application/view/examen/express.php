@@ -1046,18 +1046,18 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h5>Exámenes</h5>
-                <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">EG</th>
-                                    <th scope="col">Medida embrion</th>
-                                    <th scope="col">Prom. Saco</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="table.ecografia.primtrim">
-                                </tbody>
-                            </table>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">EG</th>
+                                <th scope="col">Medida embrion</th>
+                                <th scope="col">Prom. Saco</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table.ecografia.primtrim">
+                        </tbody>
+                    </table>
                 </div>
             </div> 
         </div>
@@ -1521,7 +1521,7 @@
                                 <th scope="col">Prom. Saco</th>
                             </tr>
                         </thead>
-                        <tbody id="table.ecografia.primtrim">
+                        <tbody>
                         </tbody>
                     </table>
                 </div>
@@ -1794,6 +1794,27 @@
                             <button type="button" class="btn btn-outline-info" id="graficopsmACM"><i class="fas fa-chart-bar"></i></button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5>Exámenes</h5>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">EG</th>
+                                <th scope="col">Medida embrion</th>
+                                <th scope="col">Prom. Saco</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
