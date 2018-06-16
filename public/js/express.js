@@ -27,12 +27,12 @@ $(document).ready(function(){
         //nombres predeterminados
         $("#nombre-paciente").val("Paciente");
         $("#apellido-paciente").val("de prueba");
-        $("#paciente\\.nombre\\.eco\\.basico").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
-        $("#paciente\\.nombre\\.eco\\.elegir").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
-        $("#paciente\\.nombre\\.eco\\.prim").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
-        $("#paciente\\.nombre\\.eco\\.segundo").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
-        $("#paciente\\.nombre\\.eco\\.doppler").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
-        $("#paciente\\.nombre\\.imagenes").html("Paciente de prueba, " + (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.basico").html("Paciente de prueba, " + (day)+(month)+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.elegir").html("Paciente de prueba, " + (day)+(month)+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.prim").html("Paciente de prueba, " + (day)+(month)+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.segundo").html("Paciente de prueba, " + (day)+(month)+fecha.getFullYear());
+        $("#paciente\\.nombre\\.eco\\.doppler").html("Paciente de prueba, " + (day)+(month)+fecha.getFullYear());
+        $("#paciente\\.nombre\\.imagenes").html("Paciente de prueba, " + (day)+(month)+fecha.getFullYear());
 
         $("#id-paciente").val((day)+(month)+fecha.getFullYear());
         //cambiar fum por la fecha actual
