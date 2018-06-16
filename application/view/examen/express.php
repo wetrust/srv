@@ -705,7 +705,7 @@
                     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
                     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
-                    <li class="ml-auto"><a href="#consulta" class="text-center"><i class="fas fa-door-open"></i> Volver</a></li>
+                    <li class="ml-auto"><a href="#consulta" class="text-center text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
                 </ol>
             </nav>
             <h4>Imágenes Disponibles</h4>
@@ -1121,7 +1121,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary d-none">Modificar</button><button type="button" class="btn btn-secondary d-none">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
+                        <button type="button" class="btn btn-secondary d-none">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
@@ -1589,7 +1589,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary d-none">Modificar</button><button type="button" class="btn btn-secondary d-none">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
+                        <button type="button" class="btn btn-secondary d-none">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
