@@ -38,6 +38,59 @@ $(document).ready(function(){
         $("#titulos\\.step\\.six\\.head").addClass("d-none");
         // sección de datos innecesarios
         $("#paciente\\.informacion\\.ecografica").removeClass("d-none");
+        //ocultar las imágenes
+        $("#ecografia\\.imagenes").addClass("d-none");
+        //activar los calendarios
+        //establecer la fecha de exámen
+        let fecha = new Date();
+        let day = ("0" + fecha.getDate()).slice(-2);
+	    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+
+        $("#input\\.paciente\\.fum\\.extra").val((day)+"/"+(month)+"/"+fecha.getFullYear());
+        $("#input\\.paciente\\.fe\\.extra").val((day)+"/"+(month)+"/"+fecha.getFullYear());
+        $('#input\\.paciente\\.fum\\.extra').datepicker();
+        $('#input\\.paciente\\.fe\\.extra').datepicker();
+        $('#input\\.paciente\\.fum\\.extra').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $('#input\\.paciente\\.fe\\.extra').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+        $('#input\\.paciente\\.fum\\.extra').datepicker().on('changeDate', function(ev){
+            $(this).trigger("change");
+            $(this).datepicker('hide');
+        });
+        $('#input\\.paciente\\.fe\\.extra').datepicker().on('changeDate', function(ev){
+            $("#input\\.paciente\\.fum\\.extra").trigger("change");
+            $(this).datepicker('hide');
+        });
+
+        $('#input\\.paciente\\.fum\\.extra').on("change", function(){
+            localStorage.fum = $(this).val();
+            localStorage.fee = $("#input\\.paciente\\.fe\\.extra").val();
+            localStorage.eg = calcularEG();
+            var semanas = Math.trunc(localStorage.eg);
+            var dias =  Math.trunc((localStorage.eg - Math.trunc(localStorage.eg)) * 10);
+    
+            $("#input\\.paciente\\.eg\\.dias").val(dias);
+            $("#input\\.paciente\\.eg\\.semanas").val(semanas);
+    
+            //fum para examen
+            $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
+            $("#input\\.paciente\\.fe\\.ecoprim").val(localStorage.fee);
+            //eg para examen
+            $("#input\\.paciente\\.eg\\.examen").val(localStorage.eg);
+            $("#input\\.paciente\\.eg\\.extra").val(localStorage.eg);
+            $("#eco\\.prim\\.eg").val(localStorage.eg);
+            //FPP
+            $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
+            $("#input\\.paciente\\.fpp\\.extra").val(localStorage.fpp);
+    
+            //datos para información paciente parte superior
+            $("#paciente\\.nombre\\.eco\\.basico\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+            $("#paciente\\.nombre\\.eco\\.elegir\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+            $("#paciente\\.nombre\\.eco\\.prim\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+            $("#paciente\\.nombre\\.eco\\.segundo\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+            $("#paciente\\.nombre\\.eco\\.doppler\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+            $("#paciente\\.nombre\\.imagenes\\.prim\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
+        });
+
         //reprogramar el boton volver
         $("#boton\\.volver\\.step\\.five").off("click");
         $("#boton\\.volver\\.step\\.five").on("click", function(){
@@ -194,6 +247,8 @@ $(document).ready(function(){
         $("#titulos\\.step\\.six\\.head").removeClass("d-none");
         //ocultar sección de datos innecesarios
         $("#paciente\\.informacion\\.ecografica").addClass("d-none");
+        //mostrar opcion de imagenes
+        $("#ecografia\\.imagenes").removeClass("d-none");
         $("#boton\\.volver\\.step\\.five").off("click");
         $("#boton\\.volver\\.step\\.five").on("click", function(){
             window.location.href = "#consulta";

@@ -772,19 +772,19 @@
                                     <label for="input.paciente.fum.examen.extra" class="col-form-label">FUM</label>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" id="input.paciente.fum.examen" data-date-format="dd/mm/yyyy" onfocus="blur();">
+                                    <input type="text" class="form-control" id="input.paciente.fum.extra" data-date-format="dd/mm/yyyy" onfocus="blur();">
                                 </div>
                                 <div class="col-1">
                                     <label for="input.paciente.eg.examen.extra" class="col-form-label">EG</label>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" id="input.paciente.eg.examen" readonly>
+                                    <input type="text" class="form-control" id="input.paciente.eg.extra" readonly>
                                 </div>
                                 <div class="col-1">
                                     <label for="input.paciente.fpp.examen.extra" class="col-form-label">FPP</label>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" id="input.paciente.fpp.examen" readonly>
+                                    <input type="text" class="form-control" id="input.paciente.fpp.extra" readonly>
                                 </div>
                                 <div class="col">
                                     <label for="fee" class="col-form-label">Fecha de exámen</label>
