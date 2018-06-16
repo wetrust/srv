@@ -1,4 +1,5 @@
 //funciones al cargar la página
+//el seleccionado , 6 semanas debe quedar en blanco y todos los demás en gris
 $(document).ready(function(){
     //color de fondo
     $("html").css("background", "linear-gradient(#c2e5e8, #e9f6f8)");
