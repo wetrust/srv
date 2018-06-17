@@ -1368,7 +1368,7 @@ $(document).ready(function(){
            },
            colors: ['#313131', '#313131', '#313131'],
            xAxis: {
-               categories:['12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
+               categories:['13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
            },
            credits: {enabled: false},
            series: [{
@@ -1397,7 +1397,7 @@ $(document).ready(function(){
                    cc = parseFloat(cc);
 
                     if (cc > 1){
-                        for (i = 12; i <= edadGest; i++) {
+                        for (i = 13; i <= edadGest; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -1405,14 +1405,14 @@ $(document).ready(function(){
                         data.push({
                             y: cc,
                         });
-                        for (i = edadGest + 1; i <= 39; i++) {
+                        for (i = edadGest + 1; i <= 40; i++) {
                             data.push({
                                 y: 0,
                             });
                         }
                     }
                     else{
-                        for (i = 12; i <= 41; i++) {
+                        for (i = 13; i <= 40; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -1453,7 +1453,7 @@ $(document).ready(function(){
            },
            colors: ['#313131', '#313131', '#313131'],
            xAxis: {
-               categories:['12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
+               categories:['13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
            },
            credits: { enabled: false },
            series: [{
@@ -1482,7 +1482,7 @@ $(document).ready(function(){
                    ca = parseFloat(ca);
 
                     if (ca > 1){
-                        for (i = 12; i <= edadGest; i++) {
+                        for (i = 13; i <= edadGest; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -1490,14 +1490,14 @@ $(document).ready(function(){
                         data.push({
                             y:ca,
                         });
-                        for (i = edadGest + 1; i <= 39; i++) {
+                        for (i = edadGest + 1; i <= 40; i++) {
                             data.push({
                                 y: 0,
                             });
                         }
                     }
                     else{
-                        for (i = 12; i <= 41; i++) {
+                        for (i = 13; i <= 40; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -1538,7 +1538,7 @@ $(document).ready(function(){
            },
            colors: ['#313131', '#313131', '#313131'],
            xAxis: {
-               categories:['12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
+               categories:['13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
            },
            credits: { enabled: false },
            series: [{
@@ -1567,20 +1567,20 @@ $(document).ready(function(){
                    lf = parseFloat(lf);
 
                     if (lf > 0){
-                        for (i = 12; i <= edadGest; i++) {
+                        for (i = 13; i <= edadGest; i++) {
                             data.push({ y: 0, });
                         }
                         data.push({
                             y: lf,
                         });
-                        for (i = edadGest + 1; i <= 39; i++) {
+                        for (i = edadGest + 1; i <= 40; i++) {
                             data.push({
                                 y: 0,
                             });
                         }
                     }
                     else{
-                        for (i = 12; i <= 41; i++) {
+                        for (i = 13; i <= 40; i++) {
                             data.push({ y: 0, });
                         }
                     }
@@ -1619,7 +1619,7 @@ $(document).ready(function(){
                 },
                 colors: ['#313131', '#313131', '#313131'],
                 xAxis: {
-                    categories:['12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
+                    categories:['13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40']
                 },
                 credits: { enabled: false },
                 series: [{
@@ -1648,20 +1648,20 @@ $(document).ready(function(){
                         lh = parseFloat(lh);
 
                         if (lh > 1){
-                            for (i = 12; i <= edadGest; i++) {
+                            for (i = 13; i <= edadGest; i++) {
                                 data.push({ y: 0, });
                             }    
                             data.push({
                                 y: lh,
                             });
-                            for (i = edadGest + 1; i <= 39; i++) {
+                            for (i = edadGest + 1; i <= 40; i++) {
                                 data.push({
                                     y: 0,
                                 });
                             }
                         }
                         else{
-                            for (i = 12; i <= 41; i++) {
+                            for (i = 13; i <= 40; i++) {
                                 data.push({ y: 0, });
                             }
                         }
@@ -1749,7 +1749,7 @@ $(document).ready(function(){
                             }
                         }
                         else{
-                            for (i = 15; i <= 41; i++) {
+                            for (i = 15; i <= 39; i++) {
                                 data.push({
                                     y: 0,
                                 });
@@ -1825,21 +1825,31 @@ $(document).ready(function(){
                data: (function () {
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) -1;
-    
-                   for (i = 16; i <= edadGest; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   data.push({
-                       y: parseFloat($('#pfe').val()),
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   return data;
+                    let pfe = parseFloat($('#pfe').val());
+
+                    if(pfe >1){
+                        for (i = 16; i <= edadGest; i++) {
+                            data.push({
+                               y: 0,
+                            });
+                        }
+                        data.push({
+                           y: pfe,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                               y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 16; i <= 39; i++) {
+                            data.push({
+                               y: 0,
+                            });
+                        }
+                    }
+                    return data;
                }())
            }]
         });
@@ -1892,7 +1902,7 @@ $(document).ready(function(){
                 fontSize: '14px'
             }
            },
-                legend: {
+            legend: {
                 itemStyle: {
                     fontSize: '10px',
                     fontWeight:'normal'
@@ -2507,20 +2517,31 @@ $(document).ready(function(){
                          var data = [];
                          var edadGest = parseInt(localStorage.eg) -1;
      
-                         for (i = 16; i <= edadGest; i ++ ) {
-                             data.push({
-                                 y: 0,
-                             });
-                         }
-                         data.push({
-                                 y: parseFloat($('#bvm').val()),
-                             });
-                         for (i = edadGest +1; i <= 39; i ++ ) {
-                             data.push({
-                                 y: 0,
-                             });
-                         }
-                         return data;
+                        let bvm = parseFloat($('#bvm').val());
+
+                        if (bvm < 1){
+                            for (i = 16; i <= edadGest; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                            data.push({
+                                y: bvm,
+                            });
+                            for (i = edadGest +1; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 16; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        return data;
                      }())
                  }]
          });
@@ -2716,7 +2737,7 @@ $(document).ready(function(){
                             }
                         }
                         else{
-                            for (i = 10; i <= 41; i ++ ) {
+                            for (i = 10; i <= 39; i ++ ) {
                                 data.push({
                                     y: 0,
                                 });
@@ -2800,7 +2821,7 @@ $(document).ready(function(){
                             }
                         }
                         else{
-                            for (i = 10; i <= 41; i ++ ) {
+                            for (i = 10; i <= 39; i ++ ) {
                                 data.push({
                                     y: 0,
                                 });
@@ -2884,7 +2905,7 @@ $(document).ready(function(){
                         }
                     }
                     else{
-                        for (i = 20; i <= 41; i++) {
+                        for (i = 20; i <= 39; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -2970,7 +2991,7 @@ $(document).ready(function(){
                         }
                     }
                     else{
-                        for (i = 20; i <= 41; i++) {
+                        for (i = 20; i <= 39; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -3052,7 +3073,7 @@ $(document).ready(function(){
                         }
                     }
                     else{
-                        for (i = 20; i <= 41; i++) {
+                        for (i = 20; i <= 38; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -3134,7 +3155,7 @@ $(document).ready(function(){
                             }
                         }
                         else{
-                            for (i = 20; i <= 41; i ++ ) {
+                            for (i = 20; i <= 39; i ++ ) {
                                 data.push({
                                     y: 0,
                                 });
@@ -3330,7 +3351,7 @@ $(document).ready(function(){
                             }
                         }
                         else{
-                            for (i = 10; i <= 41; i ++ ) {
+                            for (i = 10; i <= 39; i ++ ) {
                                 data.push({
                                     y: 0,
                                 });
@@ -3416,7 +3437,7 @@ $(document).ready(function(){
                         }
                     }
                     else{
-                        for (i = 20; i <= 41; i++) {
+                        for (i = 20; i <= 39; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -3503,7 +3524,7 @@ $(document).ready(function(){
                         }
                     }
                     else{
-                        for (i = 20; i <= 41; i++) {
+                        for (i = 20; i <= 39; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -3587,7 +3608,7 @@ $(document).ready(function(){
                         }
                     }
                     else{
-                        for (i = 20; i <= 41; i++) {
+                        for (i = 20; i <= 38; i++) {
                             data.push({
                                 y: 0,
                             });
