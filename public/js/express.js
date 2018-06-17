@@ -1954,20 +1954,31 @@ $(document).ready(function(){
                data: (function () {
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) -1;
-    
-                   for (i = 16; i <= edadGest; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   data.push({
-                       y: parseFloat($('#pfe').val()),
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
+                    let peso = parseFloat($('#pfe').val());
+
+                    if (peso > 1){
+                        for (i = 16; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: peso,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 16; i <= 40; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                   
                    return data;
                }())
            }]
@@ -2114,19 +2125,31 @@ $(document).ready(function(){
                      function () {
                          var data = [];
                          var edadGest = parseInt(localStorage.eg) -1;
-                         for (i = 16; i <= edadGest; i ++ ) {
-                             data.push({
-                                 y: 0,
-                             });
-                         }
-                         data.push({
-                                 y: parseFloat($('#bvm').val()),
-                             });
-                         for (i = edadGest +1; i <= 39; i ++ ) {
-                             data.push({
-                                 y: 0,
-                             });
-                         }
+                        let bvm = parseFloat($('#bvm').val());
+
+                        if (bvm > 0){
+                            for (i = 16; i <= edadGest; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                            data.push({
+                                    y: bvm,
+                                });
+                            for (i = edadGest +1; i <= 39; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 16; i <= 40; i ++ ) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                         
                          return data;
                      }())
                  }]
@@ -2653,7 +2676,7 @@ $(document).ready(function(){
                             }
                         }
                         else{
-                            for (i = 10; i <= 41; i ++ ) {
+                            for (i = 10; i <=40; i ++ ) {
                                 data.push({
                                     y: 0,
                                 });
@@ -4207,19 +4230,29 @@ $(document).ready(function(){
                     var data = [];
                     var edadGest = parseInt(localStorage.eg) - 1;
     
-                    for (i = 18; i <= edadGest; i++) {
+                    if (medida > 0){
+                        for (i = 18; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
                         data.push({
-                            y: 0,
+                            y: medida,
                         });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
                     }
-                    data.push({
-                        y: medida,
-                    });
-                    for (i = edadGest + 1; i <= 39; i++) {
-                        data.push({
-                            y: 0,
-                        });
+                    else{
+                        for (i = 18; i <= 40; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
                     }
+                    
                     return data;
                 }())
             }]
