@@ -494,9 +494,9 @@ function crearInformeEcoPrimTrim(){
 	var ecografista = $( '#profesional\\.ecografista option:selected').text();
 
 	var fur = $("#input\\.paciente\\.fum\\.examen").val();
-	var fexamen = $("#input\\.paciente\\.fe").val();
+	var fexamen = $("#input\\.paciente\\.fe\\.ecoprim").val();
 	var eg = $("#eco\\.prim\\.eg").val();
-	
+
 	InformeString = InformeString.replace(":PACIENTE", paciente);
 	InformeString = InformeString.replace(":IDPACIENTE", idpaciente);
 	InformeString = InformeString.replace(":MOTIVO", motivo);
@@ -591,10 +591,10 @@ function crearInformeEcoSegTrim1(){
         var linea5 = "<strong>Cordón umbilical</strong> " + document.getElementById("cordon").value + ", identificandose "+ document.getElementById("vasos").value +" vasos.";
         var linea6 = "<strong>Líquido amniótico **</strong>" + $('#liq-cualitativo-eco').val() + ", con bolsillo vertical mayor de " + document.getElementById("bvmEcoDos").value + " mm.";
 
-        var fur = $( "input[name='fum']").val();
-        var fexamen = $( "input[name='fee']").val();
-        var eg = $( "input[name='eg']").val();
-        var fpp = $( "input[name='fpp']").val();
+        var fur = $("#input\\.paciente\\.fum\\.examen").val();
+        var fexamen = $("#input\\.paciente\\.fe\\.ecoseg").val();
+        var eg = $("#eco\\.seg\\.eg").val();
+        var fpp = $( "#input\\.paciente\\.fpp\\.examen").val();
         var dbp = $( '#dbp').val() + ' mm';
         var dbpPct = $( '#dbpPct').val();
         var dbpRango = '( ' + $( '#dbpRango').val() + ' )';
@@ -623,8 +623,8 @@ function crearInformeEcoSegTrim1(){
 
         var paciente = $( '#nombre-paciente').val() + " " + $( '#apellido-paciente').val();
         var idpaciente = $( '#id-paciente').val();
-        var motivo = $( '#motivo-examen option:selected').text();
-        var ecografista = $( '#ecografista option:selected').text();
+        var motivo = $( '#motivo\\.examen option:selected').text();
+        var ecografista = $( '#profesional\\.ecografista option:selected').text();
         var comentario = $('#comentarios-eco-dos-inf-dos').val();
         if (typeof comentario !== 'undefined'){
             comentario = comentario.replace(/\r?\n/g, "<br>");
@@ -778,10 +778,10 @@ function crearInformeEcoSegTrim2(){
     var p50 = $('#egP50').val() + ' semanas';
     var lh =  $( '#lh').val() + ' mm';
     var lhRango =  '( ' + $( '#lhRango').val() + ' )';
-    var fur = $( "input[name='fum']").val();
-    var fexamen = $( "input[name='fee']").val();
-    var eg = $( "input[name='eg']").val();
-    var fpp = $( "input[name='fpp']").val();
+    var fur = $("#input\\.paciente\\.fum\\.examen").val();
+    var fexamen = $("#input\\.paciente\\.fe\\.ecoseg").val();
+    var eg = $("#eco\\.seg\\.eg").val();
+    var fpp = $( "#input\\.paciente\\.fpp\\.examen").val();
     var dbp = $( '#dbp').val() + ' mm';
     var dbpRango = '( ' + $( '#dbpRango').val() + ' )';
     var dof = $( '#dof').val() + ' mm';
@@ -807,7 +807,7 @@ function crearInformeEcoSegTrim2(){
     let day = ("0" + fecha.getDate()).slice(-2);
     let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
     var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
-    
+
     var linea1 = "Feto en presentación " + document.getElementById("presentacion").value + ", dorso " + document.getElementById("dorso").value + ", " + actCard + " y " + movCorp + ".";
         var linea2 = "Frecuencia cardiaca fetal de " + document.getElementById("fcf").value + " x minuto.";
         
@@ -881,13 +881,13 @@ function crearInformeDoppler(){
 
     var paciente = $( '#nombre-paciente').val() + " " + $( '#apellido-paciente').val();
     var idpaciente = $( '#id-paciente').val();
-    var motivo = $( '#motivo-examen option:selected').text();
-    var ecografista = $( '#ecografista option:selected').text();
+    var motivo = $( '#motivo\\.examen option:selected').text();
+    var ecografista = $( '#profesional\\.ecografista option:selected').text();
 
-    var fur = $( "input[name='fum']").val();
-    var fexamen = $( "input[name='fee']").val();
-    var eg = $( "input[name='eg']").val();
-    var fpp = $( "input[name='fpp']").val();
+    var fur = $("#input\\.paciente\\.fum\\.examen").val();
+    var fexamen = $("#input\\.paciente\\.fe\\.doppler").val();
+    var eg = $("#eco\\.doppler\\.eg").val();
+    var fpp = $( "#input\\.paciente\\.fpp\\.examen").val();
 
     var bvm = $('#bvmDoppler').val();
     var comentario = $("#comentarios-doppler").val();
@@ -1095,6 +1095,12 @@ function appLoadBasic(){
     $('#input\\.paciente\\.fe').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
     //establecer fecha para examen de primer trimestre
     $("#input\\.paciente\\.fe\\.ecoprim").val((day)+"/"+(month)+"/"+fecha.getFullYear());
+
+    //establecer fecha para examen de segundo, tercer trimestre
+    $("#input\\.paciente\\.fe\\.ecoseg").val((day)+"/"+(month)+"/"+fecha.getFullYear());
+
+    //establecer fecha para examen de doppler
+    $("#input\\.paciente\\.fe\\.doppler").val((day)+"/"+(month)+"/"+fecha.getFullYear());
 
     //cargar patología obstétrica
     $.get( serverURL + "configuracion/motivoexamen", function( data ) {

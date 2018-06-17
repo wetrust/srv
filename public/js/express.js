@@ -79,10 +79,13 @@ $(document).ready(function(){
             //fum para examen
             $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
             $("#input\\.paciente\\.fe\\.ecoprim").val(localStorage.fee);
+            $("#input\\.paciente\\.fe\\.ecoseg").val(localStorage.fee);
+            $("#input\\.paciente\\.fe\\.doppler").val(localStorage.fee);
             //eg para examen
             $("#input\\.paciente\\.eg\\.examen").val(localStorage.eg);
             $("#input\\.paciente\\.eg\\.extra").val(localStorage.eg);
             $("#eco\\.prim\\.eg").val(localStorage.eg);
+            $("#eco\\.seg\\.eg").val(localStorage.eg);
             //FPP
             $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
             $("#input\\.paciente\\.fpp\\.extra").val(localStorage.fpp);
@@ -4395,9 +4398,12 @@ $(document).ready(function(){
         //fum para examen
         $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
         $("#input\\.paciente\\.fe\\.ecoprim").val(localStorage.fee);
+        $("#input\\.paciente\\.fe\\.ecoseg").val(localStorage.fee);
+        $("#input\\.paciente\\.fe\\.doppler").val(localStorage.fee);
         //eg para examen
         $("#input\\.paciente\\.eg\\.examen").val(localStorage.eg);
         $("#eco\\.prim\\.eg").val(localStorage.eg);
+        $("#eco\\.seg\\.eg").val(localStorage.eg);
         //FPP
         $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
 
