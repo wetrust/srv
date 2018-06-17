@@ -810,8 +810,6 @@ $(document).ready(function(){
                         marker: { symbol: 'square' },
                         lineWidth: 0,
                         data: (function () {
-    
-                            // generate an array of random data
                             var data = [];
                             var egLcn = parseInt(localStorage.eg);
                             var lcn = $("#lcn").val();

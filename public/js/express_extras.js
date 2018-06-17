@@ -502,13 +502,6 @@ function crearInformeEcoPrimTrim(){
 	InformeString = InformeString.replace(":MOTIVO", motivo);
 	InformeString = InformeString.replace(":ECOGRAFISTA", ecografista);
     
-    
-    let fecha = new Date();
-    let day = ("0" + fecha.getDate()).slice(-2);
-	let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
-
-    var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
-    
     let fecha = new Date();
     let day = ("0" + fecha.getDate()).slice(-2);
     let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
@@ -810,11 +803,11 @@ function crearInformeEcoSegTrim2(){
     var edadmaterna = $( "select[name='edad_materna']").val();
     var patologiaObstetrica = $( '#patologiaObstetricaUno option:selected').text();
 
-    var day = ("0" + aplication.day.getDate()).slice(-2);
-    var month = ("0" + (aplication.day.getMonth() + 1)).slice(-2);
-
-    var dateInf = (day)+"/"+(month)+"/"+aplication.day.getFullYear();
-
+    let fecha = new Date();
+    let day = ("0" + fecha.getDate()).slice(-2);
+    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+    var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
+    
     var linea1 = "Feto en presentación " + document.getElementById("presentacion").value + ", dorso " + document.getElementById("dorso").value + ", " + actCard + " y " + movCorp + ".";
         var linea2 = "Frecuencia cardiaca fetal de " + document.getElementById("fcf").value + " x minuto.";
         
