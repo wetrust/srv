@@ -1004,10 +1004,11 @@ function imprSelec(muestra)
 	var estilo = '<style>@media print {.col{width:40%; height:30% float:left;}.text-center{text-align:center;}.pie-pagina{font-size:9px;}.pie-pagina-dos{font-size:10px;}#lineclear{clear:both;}h4{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}.membrete::first-letter{font-size:14px;}.membrete::first-line {font-size: 14px;}.membrete {font-size: 10px;}}</style>';
 	var funcion = '<script>document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});</script>';
 	//var membrete = $("#membrete").val().replace(/\r\n|\r|\n/g,"<br />");
-	
-	var day = ("0" + aplication.day.getDate()).slice(-2);
-	var month = ("0" + (aplication.day.getMonth() + 1)).slice(-2);
-	var dateInf = (day)+"/"+(month)+"/"+aplication.day.getFullYear();
+    
+    let fecha = new Date();
+    let day = ("0" + fecha.getDate()).slice(-2);
+    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+    var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
 	
 	document = document.replace(":DATOS", ficha);
 	document = document.replace(":DATEINFORME", dateInf);
