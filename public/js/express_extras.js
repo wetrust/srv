@@ -507,7 +507,12 @@ function crearInformeEcoPrimTrim(){
     let day = ("0" + fecha.getDate()).slice(-2);
 	let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
 
-	var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
+    var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
+    
+    let fecha = new Date();
+    let day = ("0" + fecha.getDate()).slice(-2);
+    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+    var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
 	
 	var comentario = $("#comentarios-eco-uno").val();
 	if (typeof comentario !== 'undefined'){
@@ -926,10 +931,10 @@ function crearInformeDoppler(){
     var presentacion = $("#presentacion-doppler").val();
     var edadmaterna = $( "select[name='edad_materna']").val();
 
-    var day = ("0" + aplication.day.getDate()).slice(-2);
-    var month = ("0" + (aplication.day.getMonth() + 1)).slice(-2);
-
-    var dateInf = (day)+"/"+(month)+"/"+aplication.day.getFullYear();
+    let fecha = new Date();
+    let day = ("0" + fecha.getDate()).slice(-2);
+    let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+    var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
     var patologiaObstetrica = $( '#patologiaObstetricaUno option:selected').text();
 
     InformeString = InformeString.replace(":PACIENTE", paciente);
