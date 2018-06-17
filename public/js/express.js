@@ -2246,21 +2246,31 @@ $(document).ready(function(){
                data: (function () {
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) - 1;
-    
-                   for (i = 12; i <= edadGest; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   data.push({
-                       y: parseInt(document.getElementById("cc").value),
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
-                   return data;
+                    let cc =  parseInt(document.getElementById("cc").value);
+
+                    if (cc > 1){
+                        for (i = 12; i <= edadGest; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                        data.push({
+                            y: cc,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 12; i <= 40; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    return data;
                }())
            }]
        });
@@ -2322,19 +2332,29 @@ $(document).ready(function(){
                     data: (function () {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) - 1;
+                        let cc = parseInt(document.getElementById("cerebelo").value);
     
-                        for (i = 15; i <= edadGest; i++) {
+                        if (cc > 1){
+                            for (i = 15; i <= edadGest; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                             data.push({
-                                y: 0,
+                                y: cc,
                             });
+                            for (i = edadGest + 1; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
-                        data.push({
-                            y: parseInt(document.getElementById("cerebelo").value),
-                        });
-                        for (i = edadGest + 1; i <= 39; i++) {
-                            data.push({
-                                y: 0,
-                            });
+                        else{
+                            for (i = 15; i <= 40; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
@@ -2392,18 +2412,26 @@ $(document).ready(function(){
                data: (function () {
                    var data = [];
                    var edadGest = parseInt(localStorage.eg) - 1;
-    
-                   for (i = 12; i <= edadGest; i++) {
-                       data.push({ y: 0, });
-                   }
-                   data.push({
-                       y: parseInt(document.getElementById("lf").value),
-                   });
-                   for (i = edadGest + 1; i <= 39; i++) {
-                       data.push({
-                           y: 0,
-                       });
-                   }
+                    let lf = parseInt(document.getElementById("lf").value);
+
+                    if (lf > 1){
+                        for (i = 12; i <= edadGest; i++) {
+                            data.push({ y: 0, });
+                        }
+                        data.push({
+                            y: lf,
+                        });
+                        for (i = edadGest + 1; i <= 39; i++) {
+                            data.push({
+                                y: 0,
+                            });
+                        }
+                    }
+                    else{
+                        for (i = 12; i <= 40; i++) {
+                            data.push({ y: 0, });
+                        }
+                    }
                    return data;
                }())
            }]
@@ -2460,17 +2488,25 @@ $(document).ready(function(){
                     data: (function () {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) - 1;
-    
-                        for (i = 12; i <= edadGest; i++) {
-                            data.push({ y: 0, });
-                        }
-                        data.push({
-                            y: parseInt(document.getElementById("lh").value),
-                        });
-                        for (i = edadGest + 1; i <= 39; i++) {
+                        let lh = parseInt(document.getElementById("lh").value);
+
+                        if (lh > 1){
+                            for (i = 12; i <= edadGest; i++) {
+                                data.push({ y: 0, });
+                            }
                             data.push({
-                                y: 0,
+                                y: lh,
                             });
+                            for (i = edadGest + 1; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                        }
+                        else{
+                            for (i = 12; i <= 40; i++) {
+                                data.push({ y: 0, });
+                            }
                         }
                         return data;
                     }())
