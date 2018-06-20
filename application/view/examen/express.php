@@ -606,7 +606,7 @@
                                     </div>
                                 </div>
                             </div>
-                    <div class="row mb-3">
+                    <div class="row">
                         <div class="col-9">
                             <h5 class="card-title text-primary text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</h5>
                         </div>
