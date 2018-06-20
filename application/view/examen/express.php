@@ -221,7 +221,7 @@
 	    <div class="col-md-12">
             <div class="card mb-3">
                 <div class="card-body">
-			        <div class="row">
+			        <div class="row mb-3">
                         <div class="col-9">
                             <h5 class="card-title text-primary text-left mt-2">Configuración de datos para variable de uso habitual (Opcional)</h5>
                         </div>
