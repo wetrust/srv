@@ -19,7 +19,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
-                <li class="float-right"><a href="#inicio">Volver</a></li>
+                <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
                 <div class="col-3">
@@ -85,7 +85,7 @@
                 <li class="breadcrumb-item active">Recién Nacido</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
-                <li class="float-right"><a href="#postnatal">Volver</a></li>
+                <li class="ml-auto"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-2">
                 <div class="col-5">
@@ -191,7 +191,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item active">Hipoglicemia neonatal</li>
-                <li class="float-right"><a href="#postnatal">Volver</a></li>
+                <li class="ml-auto"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-1"> 
                 <div class="col">
@@ -224,7 +224,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
                 <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
-                <li class="float-right"><a href="#recienacido">Volver</a></li>
+                <li class="ml-auto"><a href="#recienacido">Volver</a></li>
             </ol>
             <div class="row mt-1">
                 <div class="col">
