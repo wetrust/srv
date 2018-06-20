@@ -202,7 +202,6 @@ function obtenerNombre(id_paciente){
             $("#nombre-paciente").val(nombre[1]);
             $("#apellido-paciente").val(nombre[0]);
             //nombre en Eco
-            $("#paciente\\.nombre\\.eco\\.basico").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#paciente\\.nombre\\.eco\\.elegir").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#paciente\\.nombre\\.eco\\.prim").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
             $("#paciente\\.nombre\\.eco\\.segundo").html(nombre[1] + " " + nombre[0] + ", " + id_paciente);
@@ -493,7 +492,7 @@ function crearInformeEcoPrimTrim(){
 	var motivo = $( '#motivo\\.examen option:selected').text();
 	var ecografista = $( '#profesional\\.ecografista option:selected').text();
 
-	var fur = $("#input\\.paciente\\.fum\\.examen").val();
+	var fur = $("#input\\.paciente\\.fum").val();
 	var fexamen = $("#input\\.paciente\\.fe").val();
 	var eg = $("#eco\\.prim\\.eg").val();
 	
