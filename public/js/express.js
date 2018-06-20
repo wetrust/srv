@@ -250,6 +250,10 @@ $(document).ready(function(){
         $("#ecografia\\.imagenes").removeClass("d-none");
     });
 
+    $("#boton\\.volver\\.step\\.five").on("click", function(){
+        window.location.href = "#paciente";
+    });
+
     //ecografía de primer trimestre
     $("#boton\\.eco\\.prim\\.cancelar").on("click", function(){
         $("#boton\\.eco\\.prim\\.nuevo").removeClass("d-none");
