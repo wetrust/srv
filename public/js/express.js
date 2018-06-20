@@ -95,12 +95,6 @@ $(document).ready(function(){
             $("#paciente\\.nombre\\.eco\\.doppler\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
             $("#paciente\\.nombre\\.imagenes\\.prim\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
         });
-
-        //reprogramar el boton volver
-        $("#boton\\.volver\\.step\\.five").off("click");
-        $("#boton\\.volver\\.step\\.five").on("click", function(){
-            window.location.href = serverURL + "examen/express";
-        });
     });
 
     //pacientes paso 1

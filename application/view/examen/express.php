@@ -640,21 +640,6 @@
         </div>
     </div>
 </div>
-<div class="container" id="consulta" style="display:none;">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="row mt-3">
-                        <div class="col d-flex justify-content-center">
-                            <button type="button" class="btn btn-info ml-sm-2" id="step.five"><i class="fas fa-stethoscope"></i><br>Continuar a exámen</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container" id="imagenesDicom" style="display:none;">
     <div class="row">
         <div class="col pr-0">
