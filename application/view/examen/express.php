@@ -236,14 +236,6 @@
                             </div>
                         </div>
                     </div>
-			    </div>
-		    </div>
-		</div>
-	</div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card mb-3">
-                <div class="card-body">
                     <div class="row mb-3">
                         <div class="col-9">
                             <h5 class="card-title text-primary text-left mt-2 mb-4">Información útil para reporte de informe y / o graficas (Opcional)</h5>
@@ -614,12 +606,6 @@
                                     </div>
                                 </div>
                             </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="card mb-3">
-                <div class="card-body">
                     <div class="row mb-3">
                         <div class="col-9">
                             <h5 class="card-title text-primary text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</h5>
