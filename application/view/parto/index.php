@@ -196,7 +196,7 @@
             <div class="row mt-1"> 
                 <div class="col">
                     <div class="card">
-                        <div class="card-block">
+                        <div class="card-body">
                             <p>En construcción</p>
                         </div>
                     </div>
