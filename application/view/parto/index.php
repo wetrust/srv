@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <p class="bg-faded p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
+            <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
         </div>
         <div class="container" id="pdfviebox" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
@@ -1239,6 +1239,9 @@
                     }
                     else if (hash=="#pdfviebox"){
                         displayElement("pdfviebox");
+                    }
+                    else if (hash=="#hipoglicemia"){
+                        displayElement("hipoglicemia");
                     }
                 });
 
