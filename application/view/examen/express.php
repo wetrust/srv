@@ -672,7 +672,7 @@
                     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
                     <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
-                    <li class="ml-auto"><a href="#consulta" class="text-center"><i class="fas fa-door-open"></i> Volver</a></li>
+                    <li class="ml-auto"><a href="#consulta" class="text-center text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
                 </ol>
             </nav>
             <h4>Imágenes Disponibles</h4>
@@ -1088,7 +1088,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary d-none">Modificar</button><button type="button" class="btn btn-secondary d-none">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
+                        <button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
@@ -1105,6 +1105,20 @@
         <div class="col-12 col-sm-9">
             <div class="card mb-3">
                 <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-6 col-sm-3">
+                            <label for="fee" class="col-form-label">Fecha de exámen</label>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <input class="form-control" type="text" data-date-format="dd/mm/yyyy" id="input.paciente.fe.ecoseg" disabled="">
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <label for="fee" class="col-form-label">EG al exámen</label>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <input class="form-control" type="text"  onfocus="blur();" id="eco.seg.eg" readonly="">
+                        </div>
+                    </div>
                     <h5 class="card-title">BIOMETRÍA FETAL</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Hadlock FP. y col. Radiology 152: 497 - 501; 1984. *Hill LM. y col. Obstet Gynecol. 1990; 75(6) : 981-5</h6>
                     <div class="form-group row">
@@ -1556,7 +1570,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-info">Nuevo</button><button type="button" class="btn btn-secondary d-none">Modificar</button><button type="button" class="btn btn-secondary d-none">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
+                        <button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
@@ -1572,6 +1586,20 @@
         <div class="col-12 col-sm-9">
             <div class="card mb-3">
                 <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-6 col-sm-3">
+                            <label for="fee" class="col-form-label">Fecha de exámen</label>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <input class="form-control" type="text" data-date-format="dd/mm/yyyy" id="input.paciente.fe.doppler" disabled="">
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <label for="fee" class="col-form-label">EG al exámen</label>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <input class="form-control" type="text"  onfocus="blur();" id="eco.doppler.eg" readonly="">
+                        </div>
+                    </div>
                     <h4 class="card-title">FLUJOMETRÍA DOPPLER MATERNO <small>(a partir de las 11 semanas)</small></h4>
                     <h6 class="card-subtitle mb-2 text-muted">Gómes O., Figueras F., Fernandez S., Bennasar M, Martínez JM., Puerto B., Gratacos E., UOG 2008; 32: 128-32</h6>
                     <div class="form-group row">
