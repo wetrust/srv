@@ -247,11 +247,6 @@ $(document).ready(function(){
         $("#div\\.pacientes\\.fum\\.save").addClass("d-none");
         $("#div\\.pacientes\\.tipo\\.examen\\.sav").addClass("d-none");
         $("#boton\\.modificar\\.paciente").removeClass("d-none");
-        window.location.href = "#consulta";
-    });
-
-    //Fecha de exámen paso 5
-    $("#step\\.five").on("click", function(){
         window.location.href = "#tipoExamen";
         //mostrar el título
         $("#titulos\\.step\\.six\\.head").removeClass("d-none");
@@ -259,10 +254,6 @@ $(document).ready(function(){
         $("#paciente\\.informacion\\.ecografica").addClass("d-none");
         //mostrar opcion de imagenes
         $("#ecografia\\.imagenes").removeClass("d-none");
-        $("#boton\\.volver\\.step\\.five").off("click");
-        $("#boton\\.volver\\.step\\.five").on("click", function(){
-            window.location.href = "#consulta";
-        });
     });
 
     //ecografía de primer trimestre

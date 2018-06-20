@@ -1,5 +1,4 @@
-<div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);">
-</div>
+<div class="modal text-center" tabindex="-1" role="dialog" id="modalZoom" style="background-color: RGBA(0,0,0,0.8);"></div>
 <div class="container pt-2" id="div.paciente">
     <div class="row">
         <div class="col-md-12">
@@ -251,10 +250,10 @@
                         </div>
                                 <div class="col-3">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-info p-3 active" id="infadicionalNoController" data-value="0">
+                                        <label class="btn btn-outline-info active" id="infadicionalNoController" data-value="0">
                                         <input type="radio" value="0" checked=""> NO
                                         </label>
-                                        <label class="btn btn-outline-info p-3" id="infadicionalSiController" data-value="1">
+                                        <label class="btn btn-outline-info" id="infadicionalSiController" data-value="1">
                                         <input type="radio" value="1"> SI
                                         </label>
                                     </div>
@@ -627,10 +626,10 @@
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-info p-3 active" id="configConsentimientoNoController" data-value="0">
+                                <label class="btn btn-outline-info active" id="configConsentimientoNoController" data-value="0">
                                     <input type="radio" value="0" checked=""> NO
                                 </label>
-                                <label class="btn btn-outline-info p-3" id="configConsentimientoSiController" data-value="1">
+                                <label class="btn btn-outline-info" id="configConsentimientoSiController" data-value="1">
                                     <input type="radio" value="1"> SI
                                 </label>
                             </div>
