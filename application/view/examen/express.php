@@ -223,7 +223,7 @@
                 <div class="card-body">
 			        <div class="row">
                         <div class="col-9">
-                            <h5 class="card-title text-primary text-left mt-2">¿ Desea realizar configuración de datos para variable de uso  habitual ?</h5>
+                            <h5 class="card-title text-primary text-left mt-2">Configuración de datos para variable de uso habitual (Opcional)</h5>
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -246,7 +246,7 @@
                 <div class="card-body">
                     <div class="row mb-3">
                         <div class="col-9">
-                            <h5 class="card-title text-primary text-left mt-2 mb-4">¿ Desea Ingresar información  para reporte de informe y / o graficas ?</h5>
+                            <h5 class="card-title text-primary text-left mt-2 mb-4">Información útil para reporte de informe y / o graficas (Opcional)</h5>
                         </div>
                                 <div class="col-3">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
