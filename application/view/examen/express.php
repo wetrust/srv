@@ -654,9 +654,8 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
-                    <li class="ml-auto"><a href="#consulta" class="text-center text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
+                    <li class="ml-auto"><a href="#tipoExamen" class="text-center text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
                 </ol>
             </nav>
             <h4>Imágenes Disponibles</h4>
@@ -706,7 +705,6 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
             <li class="breadcrumb-item active" aria-current="page">Tipo de exámen</li>
         </ol>
     </nav>
@@ -845,7 +843,6 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
             <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
             <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica</li>
             <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
@@ -1059,7 +1056,6 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
             <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
             <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica 2do 3er trim</li>
             <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
@@ -1541,7 +1537,6 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#consulta">Nuevo exámen</a></li>
             <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
             <li class="breadcrumb-item active" aria-current="page">Ecografía Dopple</li>
             <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>

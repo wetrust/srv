@@ -4,9 +4,6 @@ function onHashChange(){
     if (hash=="#paciente"){
         displayElement("div\\.paciente");
     }
-    else if (hash=="#consulta"){
-        displayElement("consulta");
-    }
     else if (hash=="#tipoExamen"){
         displayElement("tipoExamen");
     }
