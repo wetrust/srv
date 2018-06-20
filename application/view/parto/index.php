@@ -18,6 +18,7 @@
                 <li class="breadcrumb-item active">Bienvenida</li>
                 <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
                 <li class="float-right"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -35,6 +36,7 @@
                     </div>
                 </div>
             </div>
+            <p class="bg-faded p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
         </div>
         <div class="container" id="pdfviebox" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
@@ -82,6 +84,7 @@
                 <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
                 <li class="breadcrumb-item active">Recién Nacido</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
                 <li class="float-right"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -167,6 +170,39 @@
                 </div>
             </div>
         </div>
+        <div class="container" id="hipoglicemia" style="display:none">
+            <div class="bienvenida mb-3 rounded-bottom">
+                <div class="container">
+                    <div class="media">
+                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        <div class="media-body mt-4">
+                            <h4 class="mt-0 mb-1"><em>Hipoglicemia Neonatal</em></h4>
+                            <p><em>Evaluación postnatal básica para profesionales</em></p>
+                        </div>
+                        <div class="media-body mt-4">
+                            <p class="float-right" name="fechaHora" style="color: #f0df90;">Martes, 19 de Junio 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#inicio">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
+                <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item active">Hipoglicemia neonatal</li>
+                <li class="float-right"><a href="#postnatal">Volver</a></li>
+            </ol>
+            <div class="row mt-1"> 
+                <div class="col">
+                    <div class="card">
+                        <div class="card-block">
+                            <p>En construcción</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container" id="ajustepeso" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
@@ -187,6 +223,7 @@
                 <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
                 <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
                 <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
                 <li class="float-right"><a href="#recienacido">Volver</a></li>
             </ol>
             <div class="row mt-1">
@@ -274,11 +311,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                        <p class="text-primary text-right">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
                 </div>
             </div>
         </div>
@@ -1224,6 +1256,7 @@
                 $('#ajustepeso').hide();
                 $('#pdfviebox').hide();
                 $('#recienacido').hide();
+                $('#hipoglicemia').hide();
                 $('#'+div_id).show();
             }
 
