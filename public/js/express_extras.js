@@ -2306,6 +2306,11 @@ function ajustarProgreso(valor, objeto){
 	}
 }
 
+function valCC(dof,dbp){
+    var delta = parseFloat(1.60);
+    return Math.round((parseInt(dof) + parseInt(dbp)) * delta);
+}
+
 function appClean(){
     document.location.hash = "";
 }

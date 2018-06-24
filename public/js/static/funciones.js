@@ -1090,8 +1090,3 @@ function imprInforme(muestra)
 	ventimp.document.close();
 	ventimp.show();
 }
-
-function valCC(dof,dbp){
-    var delta = parseFloat(1.60);
-    return Math.round((parseInt(dof) + parseInt(dbp)) * delta);
-}
