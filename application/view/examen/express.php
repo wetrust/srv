@@ -1003,7 +1003,7 @@
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Edad Materna</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                            <div class="input-group-prepend"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
                                             <input type="text" class="form-control" id="furReferida" readonly="">
                                         </div>
                                     </div>
@@ -1012,7 +1012,7 @@
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Longitud cefalo caudal</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                            <div class="input-group-append"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
                                             <input type="text" class="form-control" id="furReferida" readonly="">
                                         </div>
                                     </div>
@@ -1023,12 +1023,24 @@
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Translucidez Nucal</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                            <div class="input-group-append"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
                                             <input type="text" class="form-control" id="furReferida" readonly="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="trisomia" id="examen.eco.primtrim.adicionales.translucencia.trisomia.no" value="false" checked>
+                                        <label class="form-check-label" for="examen.eco.primtrim.adicionales.translucencia.trisomia.no">
+                                            No
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="trisomia" id="examen.eco.primtrim.adicionales.translucencia.trisomia.si" value="true">
+                                        <label class="form-check-label" for="examen.eco.primtrim.adicionales.translucencia.trisomia.si">
+                                            Si
+                                        </label>
+                                    </div>
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">¿Ha tenido algun hijo con trisomia 21?</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
