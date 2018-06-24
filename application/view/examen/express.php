@@ -11,7 +11,7 @@
                         <div class="text-center">
                             <button type="button" class="btn btn-outline-primary" id="step.search"><i class="fas fa-address-book fa-5x my-2"></i><br>Ver ultimos exámenes</button>
                             <button type="button" class="btn btn-outline-primary" id="step.new"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
-                            <button type="button" class="btn btn-outline-primary" id="step.examen"><i class="fas fa-male fa-5x my-2"></i><br>Ir a exámen</button>
+                            <button type="button" class="btn btn-outline-primary" id="step.examen"><i class="fas fa-male fa-5x my-2"></i><br>Exámen paciente virtual</button>
                         </div>
                     </div>
                     <div class="d-none" id="step-two-find">
@@ -994,13 +994,13 @@
                                 </div>
                                 <div class="form-group row" id="preguntaAjusteEcoPrimTrim" style="display:none;">
                                     <div class="col">
-                                        <h5 class="alert-heading">¿Necesita realizar ajuste a la edad gestacional?</h5>
+                                        <p>¿Necesita realizar ajuste a la edad gestacional?</p>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-3">
                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                            <label class="btn btn-outline-primary p-3 active">
+                                            <label class="btn btn-outline-primary active">
                                             <input type="radio" name="ajustarEcoPrimTrim" value="0" checked=""> NO</label>
-                                            <label class="btn btn-outline-primary p-3">
+                                            <label class="btn btn-outline-primary">
                                             <input type="radio" name="ajustarEcoPrimTrim" value="1"> SI</label>
                                         </div>
                                     </div>
