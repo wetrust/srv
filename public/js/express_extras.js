@@ -1561,6 +1561,7 @@ function pctlf() {
         $('#lfPctRpt').val(pctLF);
         $('#lfRango').val(pct3[eg] + ' - ' + pct97[eg]);
         p50();
+        psohdlk();
         $('#tallaFetal').val(parseInt(lf * 0.55 + 9.6));
         //$('#tallaFetal').val(parseInt(6.18+5.9*lf/10));
    
