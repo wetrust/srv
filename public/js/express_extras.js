@@ -666,10 +666,10 @@ function crearInformeEcoSegTrim1(){
         InformeString = InformeString.replace(":PFERANGO", pfeRango);
         InformeString = InformeString.replace(":IC", ic);
 
-        var day = ("0" + aplication.day.getDate()).slice(-2);
-        var month = ("0" + (aplication.day.getMonth() + 1)).slice(-2);
-
-        var dateInf = (day)+"/"+(month)+"/"+aplication.day.getFullYear();
+        let fecha = new Date();
+        let day = ("0" + fecha.getDate()).slice(-2);
+        let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+        var dateInf = (day)+"/"+(month)+"/"+fecha.getFullYear();
 
         InformeString = InformeString.replace(":DATEINFORME", dateInf);
 
