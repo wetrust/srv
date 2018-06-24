@@ -4432,107 +4432,121 @@ $(document).ready(function(){
            event.preventDefault();
            $("#cc").focus()
         }
-      });
+    });
       
-      $( "#dof" ).keypress(function( event ) {
+    $( "#dof" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#cc").focus()
         }
-      });
+    });
       
-      $( "#cc" ).keypress(function( event ) {
+    $( "#cc" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#cc").trigger('change');
            $("#ca").focus().trigger('change');
         }
-      });
+    });
       
-      $( "#ca" ).keypress(function( event ) {
+    $( "#ca" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#ca").trigger('change');
            $("#lf").focus()
         }
-      });
+    });
       
-      $( "#lf" ).keypress(function( event ) {
+    $( "#lf" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#ca").trigger('change');
            $("#bvm").focus()
         }
-      });
+    });
       
-      $( "#lh" ).keypress(function( event ) {
+    $( "#lh" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#cerebelo").focus()
         }
-      });
+    });
       
-      $( "#cerebelo" ).keypress(function( event ) {
+    $( "#cerebelo" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#bvm").focus()
         }
-      });
+    });
       
-      $( "#bvm" ).keypress(function( event ) {
+    $( "#bvm" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#pfe").focus()
            bvm();
         }
-      });
+    });
       
-      $( "#aud" ).keypress(function( event ) {
+    $( "#aud" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#aui").focus()
         }
-      });
+    });
       
-      $( "#aui" ).keypress(function( event ) {
+    $( "#aui" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#ipau").focus()
         }
-      });
+    });
       
-      $( "#aui" ).keypress(function( event ) {
+    $( "#aui" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#ipau").focus()
         }
-      });
+    });
       
-      $( "#ipau" ).keypress(function( event ) {
+    $( "#ipau" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#ipacm").focus()
         }
-      });
+    });
       
-      $( "#ipacm" ).keypress(function( event ) {
+    $( "#ipacm" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#dv").focus()
         }
-      });
+    });
       
-      $( "#dv" ).keypress(function( event ) {
+    $( "#dv" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#graficoDv").focus()
         }
-      });
+    });
       
-      $( "#psmACM" ).keypress(function( event ) {
+    $( "#psmACM" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
            $("#graficopsmACM").focus()
         }
-      });
+    });
+
+    $('#dbp').change(deDBP);
+    $('#cc').change(pctcc);
+    $('#ca').change(pctca);
+    $('#lf').change(pctlf);
+    $('#cerebelo').change(pctcb);
+    $('#lh').change(pctlh);
+    $('#dof').change(calcdof);
+
+    $('#aud').change(pctut);
+    $('#aui').change(pctut);
+    $('#dv').change(pctdv);
+    $('#ipau').change(pctau);
+    $('#ipacm').change(pctacm);
 });

@@ -14,23 +14,6 @@ function activarBotones() {
     $('#popupBody').html("<img src='img/eco3.png' class='img-fluid' alt='Responsive image'>");
     $('#popupGenerico').modal('show')
   });
-  
- $( '#dbp' ).change( deDBP);
- $( '#cc' ).change( pctcc);
- $( '#ca' ).change( pctca);
- $( '#lf' ).change( pctlf);
- $( '#cerebelo' ).change( pctcb);
- $( '#saco' ).change( egsaco); 
- $( '#lcn' ).change( eglcn);
- $( '#lh').change( pctlh);
-  $( '#dof').change( calcdof);
-  
- //doppler
- $( '#aud').change( pctut);
- $( '#aui').change( pctut);
- $( '#dv' ).change( pctdv);
- $( '#ipau' ).change( pctau);
- $( '#ipacm' ).change( pctacm);
  
  $( '#fNacimiento').on('change', function() {
       localStorage.fnac = $("#fNacimiento").val();
