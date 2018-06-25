@@ -17,9 +17,9 @@ class EcoModel
             return $response;
         }
         else if ($tipo == 2){
-            $sql = "SELECT * FROM historial WHERE user_id = :user_id";
+            $sql = "SELECT * FROM eco_segundo WHERE id_paciente = :id_paciente";
             $query = $database->prepare($sql);
-            $query->execute(array(':user_id' => $person_id));
+            $query->execute(array(':id_paciente' => $rut));
 
             $response->data = $query->fetchAll();
             return $response;
@@ -44,7 +44,7 @@ class EcoModel
             return $response;
         }
         else if ($tipo == 2){
-            $sql = "SELECT * FROM historial WHERE user_id = :user_id AND n_examen = :n_examen";
+            $sql = "SELECT * FROM eco_segundo WHERE id_paciente = :id_paciente AND n_examen = :n_examen";
             $query = $database->prepare($sql);
             $query->execute(array(':id_paciente' => $rut,':n_examen' => $numero));
 
@@ -70,9 +70,9 @@ class EcoModel
             $query = $database->prepare($sql);
             $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"],':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"], ':fecha_examen' => $data["fecha"]));
         } else if ($tipo == 2){
-            $sql = "INSERT INTO notes (note_text, user_id) VALUES (:note_text, :user_id)";
+            $sql = "INSERT INTO eco_segundo (id_paciente, n_examen, fecha_examen, eg_examen, pfe_examen, pctpeso_examen, ccca_examen, pctca_examen, pctbvm_examen) VALUES (:id_paciente, :n_examen, :fecha_examen, :eg_examen, :pfe_examen, :pctpeso_examen, :ccca_examen, :pctca_examen, :pctbvm_examen)";
             $query = $database->prepare($sql);
-            $query->execute(array(':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+            $query->execute(array(':id_paciente' => $rut, ':n_examen' => $data["examen"], ':fecha_examen' => $data["fecha"], ':eg_examen' => $data["eg"], ':pfe_examen' => $data["pfe"], ':pctpeso_examen' => $data["pctpeso"], ':ccca_examen' => $data["ccca"], ':pctca_examen' => $data["ca"], ':pctbvm_examen' => $data["bvmPct"]));
         }
 
         if ($query->rowCount() == 1) {
@@ -95,6 +95,11 @@ class EcoModel
 
         if ($tipo == 1){
             $sql = "DELETE FROM eco_prim WHERE id_paciente = :id_paciente AND eg_examen = :eg_examen LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"]));
+        }
+        else if ($tipo == 2){
+            $sql = "DELETE FROM eco_segundo WHERE id_paciente = :id_paciente AND eg_examen = :eg_examen LIMIT 1";
             $query = $database->prepare($sql);
             $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"]));
         }

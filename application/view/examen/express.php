@@ -1631,7 +1631,7 @@
                                 <th scope="col">Pct. BVM</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="table.ecografia.segundotrim">
                         </tbody>
                     </table>
                 </div>
@@ -1933,9 +1933,9 @@
                                 <th scope="col">Fecha Exámen</th>
                                 <th scope="col">EG</th>
                                 <th scope="col">Pct. Uterinas</th>
+                                <th scope="col">Pct. Umbilical</th>
                                 <th scope="col">Pct. CMedia</th>
                                 <th scope="col">Rel. CM/AU</th>
-                                <th scope="col">Pct. Ductus</th>
                             </tr>
                         </thead>
                         <tbody>

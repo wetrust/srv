@@ -1125,6 +1125,46 @@ $(document).ready(function(){
     });
 
     //ecografia segundo trimestre
+
+    $("#boton\\.eco\\.prim\\.guardar").on("click", function(){
+        let examen = {
+            examen: 1,
+            fecha: $("#input\\.paciente\\.fe\\.ecoseg").val(),
+            eg: $("#eco\\.seg\\.eg").val(),
+            dbp: $("#dbp").val(),
+            dof: $("#dof").val(),
+            cc: $("#cc").val(),
+            ca: $("#caPctRpt").val(),
+            lf: $("#lf").val(),
+            lh: $("#lh").val(),
+            cerebelo: $("#cerebelo").val(),
+            pfe: $("#pfe").val(),
+            pctpeso: $("#pfePctRpt").val(),
+            bvm: $("#bvm").val(),
+            egcal: $("#egP50").val(),
+            ccca: $("#cccaPct").val()
+        }
+        
+        let data = {
+            id: $("#id-paciente").val(),
+            tipo: 2,
+            data: JSON.stringify(examen)
+        }
+
+        $.post(serverURL + "examen/set/", data).done(function(response) {
+            if ( Object.keys(response).length > 0 ){
+                $("#table\\.ecografia\\.segundotrim").empty();
+                $.each(response.data, function(i,val){
+                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() +'" data-tipo="1">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.embrion +'</td><td>'+ val.prom_saco+'</td>';
+                    $("#table\\.ecografia\\.segundotrim").append(fila);
+                });
+                $("#table\\.ecografia\\.segundotrim tr").on('click',function(){
+                    activateTr(this);
+                });
+            }
+        });
+    });
+
     $( '#modalPreInfEcoObsSegTrim1' ).on( 'click', function() {
         $('#popupTitle').html("Datos para informe");
         //remueve los botones de imprimir en caso de que estén
