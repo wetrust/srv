@@ -4622,4 +4622,13 @@ $(document).ready(function(){
     $('#dv').change(pctdv);
     $('#ipau').change(pctau);
     $('#ipacm').change(pctacm);
+
+    $("input[name='radio_translucencia']").on("change", function(){
+        if ($(this).val() == 1){
+            $("#examen\\.eco\\.primtrim\\.adicionales").removeClass("d-none");
+        }
+        else{
+            ("#examen\\.eco\\.primtrim\\.adicionales").addClass("d-none");
+        }
+    });
 });

@@ -991,12 +991,12 @@
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-primary active"><input type="radio" name="ajustarEcoPrimTrim" value="0" checked=""> NO</label>
-                                <label class="btn btn-outline-primary"><input type="radio" name="ajustarEcoPrimTrim" value="1"> SI</label>
+                                <label class="btn btn-outline-primary active"><input type="radio" name="radio_translucencia" value="0" checked=""> NO</label>
+                                <label class="btn btn-outline-primary"><input type="radio" name="radio_translucencia" value="1"> SI</label>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row" id="examen.eco.primtrim.adicionales">
+                    <div class="form-group row d-none" id="examen.eco.primtrim.adicionales">
                         <div class="col-12">
                             <div class="row">
                                 <div class="col">
@@ -1046,10 +1046,48 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Longitud cefalo caudal</label>
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                            <input type="text" class="form-control" id="furReferida">
-                                        </div>
+                                        <select class="form-control">
+                                            <option value="45">45 mm</option>
+                                            <option value="46">46 mm</option>
+                                            <option value="47">47 mm</option>
+                                            <option value="48">48 mm</option>
+                                            <option value="49">49 mm</option>
+                                            <option value="50">50 mm</option>
+                                            <option value="51">51 mm</option>
+                                            <option value="52">52 mm</option>
+                                            <option value="53">53 mm</option>
+                                            <option value="54">54 mm</option>
+                                            <option value="55">55 mm</option>
+                                            <option value="56">56 mm</option>
+                                            <option value="57">57 mm</option>
+                                            <option value="58">58 mm</option>
+                                            <option value="59">59 mm</option>
+                                            <option value="60">60 mm</option>
+                                            <option value="61">61 mm</option>
+                                            <option value="62">62 mm</option>
+                                            <option value="63">63 mm</option>
+                                            <option value="64">64 mm</option>
+                                            <option value="65">65 mm</option>
+                                            <option value="66">66 mm</option>
+                                            <option value="67">67 mm</option>
+                                            <option value="68">68 mm</option>
+                                            <option value="69">69 mm</option>
+                                            <option value="70">70 mm</option>
+                                            <option value="71">71 mm</option>
+                                            <option value="72">72 mm</option>
+                                            <option value="73">73 mm</option>
+                                            <option value="74">74 mm</option>
+                                            <option value="75">75 mm</option>
+                                            <option value="76">76 mm</option>
+                                            <option value="77">77 mm</option>
+                                            <option value="78">78 mm</option>
+                                            <option value="79">79 mm</option>
+                                            <option value="80">80 mm</option>
+                                            <option value="81">81 mm</option>
+                                            <option value="82">82 mm</option>
+                                            <option value="83">83 mm</option>
+                                            <option value="84">84 mm</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -1059,7 +1097,7 @@
                                         <label for="formGroupExampleInput">Translucidez Nucal</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                            <input type="text" class="form-control" id="furReferida">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
