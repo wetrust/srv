@@ -182,7 +182,7 @@
                                 </select>
                             </div>
                             <div class="col-2">
-                                <label for="tipo.examen.previo" class="col-form-label">Tipo Exm. Previo</label>
+                                <label for="tipo.examen.previo" class="col-form-label">Tipo Exm. Solicitado</label>
                             </div>
                             <div class="col-4">
                                 <div class="row">
