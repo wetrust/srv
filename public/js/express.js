@@ -4396,6 +4396,36 @@ $(document).ready(function(){
         $("#paciente\\.nombre\\.eco\\.doppler\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
         $("#paciente\\.nombre\\.imagenes\\.prim\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
     });
+
+    $("#input\\.paciente\\.eg\\.semanas").on("change", function(){
+        
+        var undia = 1000 * 60 * 60 * 24;
+        var unasemana = undia * 7;
+        let semanas = $(this).val();
+        let dias = $("#input\\.paciente\\.eg\\.dias").val();
+
+        //obtener la fecha inicial del cálculo, fecha de exámen
+        let fRef = $("#input\\.paciente\\.fe").val();
+
+        fRef = fRef.split(/\//).reverse().join('/'); //convert dd/mm/yyy
+
+        semanas = semanas * unasemana;
+        dias = dias * undia;
+
+        dias = dias + semanas;
+
+        // crear una variable fecha
+        fRef = new Date(fRef)
+        // crear variable para FUR
+        var FUR = new Date();
+        //calcular la fecha de fur usando EG y fecha de exámen
+        FUR.setTime(fRef.getTime() - dias);
+
+        $("#input\\.paciente\\.fum").val((FUR.getDate())+"/"+(FUR.getMonth()+1)+"/"+FUR.getFullYear());
+        $('#input\\.paciente\\.fum').datepicker('setValue', (FUR.getDate())+"/"+(FUR.getMonth()+1)+"/"+FUR.getFullYear());
+        $("#input\\.paciente\\.fum").trigger("change");
+    });
+
     //input de apellidos de paciente
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
         let apellido = {
