@@ -305,7 +305,6 @@ $(document).ready(function(){
 
         $.each(filas,function(i,val){
             if ($(val).hasClass('table-active') == true){
-                alert ($(val).children().data("id"));
                 let examen = {
                     eg: $(val).children().data("id")
                 }
