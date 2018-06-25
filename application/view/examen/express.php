@@ -1142,6 +1142,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Fecha exámen</th>
                         <th scope="col">EG</th>
                         <th scope="col">Medida embrion</th>
                         <th scope="col">Prom. Saco</th>
