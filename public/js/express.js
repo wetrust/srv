@@ -1126,7 +1126,7 @@ $(document).ready(function(){
 
     //ecografia segundo trimestre
 
-    $("#boton\\.eco\\.prim\\.guardar").on("click", function(){
+    $("#boton\\.eco\\.segundo\\.guardar").on("click", function(){
         let examen = {
             examen: 1,
             fecha: $("#input\\.paciente\\.fe\\.ecoseg").val(),
