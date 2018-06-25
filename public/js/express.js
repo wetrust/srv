@@ -293,7 +293,7 @@ $(document).ready(function(){
                     let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.eg_examen +"</td><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
                     $("#table\\.ecografia\\.primtrim").append(fila);
                 });
-                $('#table\\.ecografia\\.primtrim tr').on('click',function(){
+                $("#table\\.ecografia\\.primtrim tr").on('click',function(){
                     activateTr(this);
                 });
             }
