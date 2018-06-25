@@ -86,6 +86,7 @@ $(document).ready(function(){
             //eg para examen
             $("#eco\\.prim\\.eg").val(localStorage.eg);
             $("#eco\\.seg\\.eg").val(localStorage.eg);
+            $("#eco\\.doppler\\.eg").val(localStorage.eg);
             //FPP
             $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
             $("#input\\.paciente\\.fpp\\.extra").val(localStorage.fpp);
@@ -4426,6 +4427,7 @@ $(document).ready(function(){
         $("#input\\.paciente\\.eg\\.examen").val(localStorage.eg);
         $("#eco\\.prim\\.eg").val(localStorage.eg);
         $("#eco\\.seg\\.eg").val(localStorage.eg);
+        $("#eco\\.doppler\\.eg").val(localStorage.eg);
         //FPP
         $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
         $("#input\\.paciente\\.fpp\\.extra").val(localStorage.fpp);

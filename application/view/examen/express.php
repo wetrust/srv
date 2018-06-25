@@ -9,9 +9,9 @@
                         <button class="btn btn-outline-danger float-right" id="boton.volver.step.one"><i class="fas fa-door-open"></i><br>Volver</button>
                         <h1 class="text-center">¿Qué desea hacer?</h1>
                         <div class="text-center">
-                            <button type="button" class="btn btn-outline-primary" id="step.search"><i class="fas fa-address-book fa-5x my-2"></i><br>Ver ultimos exámenes</button>
-                            <button type="button" class="btn btn-outline-primary" id="step.new"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
                             <button type="button" class="btn btn-outline-primary" id="step.examen"><i class="fas fa-male fa-5x my-2"></i><br>Exámen paciente virtual</button>
+                            <button type="button" class="btn btn-outline-primary" id="step.new"><i class="fas fa-user-circle fa-5x my-2"></i><br>Nuevo Paciente</button>
+                            <button type="button" class="btn btn-outline-primary" id="step.search"><i class="fas fa-address-book fa-5x my-2"></i><br>Ver ultimos exámenes</button>
                         </div>
                     </div>
                     <div class="d-none" id="step-two-find">
