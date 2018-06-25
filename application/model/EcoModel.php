@@ -72,7 +72,7 @@ class EcoModel
         } else if ($tipo == 2){
             $sql = "INSERT INTO eco_segundo (id_paciente, n_examen, fecha_examen, eg_examen, pfe_examen, pctpeso_examen, ccca_examen, pctca_examen, pctbvm_examen) VALUES (:id_paciente, :n_examen, :fecha_examen, :eg_examen, :pfe_examen, :pctpeso_examen, :ccca_examen, :pctca_examen, :pctbvm_examen)";
             $query = $database->prepare($sql);
-            $query->execute(array(':id_paciente' => $rut, ':n_examen' => $data["examen"], ':fecha_examen' => $data["fecha"], ':eg_examen' => $data["eg"], ':pfe_examen' => $data["pfe"], ':pctpeso_examen' => $data["pctpeso"], ':ccca_examen' => $data["ccca"], ':pctca_examen' => $data["ca"], ':pctbvm_examen' => $data["bvmPct"]));
+            $query->execute(array(':id_paciente' => $rut, ':n_examen' => $data["examen"], ':fecha_examen' => $data["fecha"], ':eg_examen' => $data["eg"], ':pfe_examen' => $data["pfe"], ':pctpeso_examen' => $data["pctpeso"], ':ccca_examen' => $data["ccca"], ':pctca_examen' => $data["ca"], ':pctbvm_examen' => $data["bvm"]));
         }
 
         if ($query->rowCount() == 1) {
