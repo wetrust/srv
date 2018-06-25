@@ -4383,7 +4383,7 @@ $(document).ready(function(){
         $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas);
 
         //fum para examen
-        $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
+        $("#input\\.paciente\\.fum\\.extra").val(localStorage.fum);
         $("#input\\.paciente\\.fe\\.ecoprim").val(localStorage.fee);
         $("#input\\.paciente\\.fe\\.ecoseg").val(localStorage.fee);
         $("#input\\.paciente\\.fe\\.doppler").val(localStorage.fee);
@@ -4393,6 +4393,7 @@ $(document).ready(function(){
         $("#eco\\.seg\\.eg").val(localStorage.eg);
         //FPP
         $("#input\\.paciente\\.fpp\\.examen").val(localStorage.fpp);
+        $("#input\\.paciente\\.fpp\\.extra").val(localStorage.fpp);
 
         //datos para información paciente parte superior
         $("#paciente\\.nombre\\.eco\\.elegir\\.examen").html("FUM: "+ localStorage.fum + ", EG: " + localStorage.eg +" sem., FPP: " + localStorage.fpp);
