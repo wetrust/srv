@@ -75,13 +75,15 @@ $(document).ready(function(){
     
             $("#input\\.paciente\\.eg\\.dias").val(dias);
             $("#input\\.paciente\\.eg\\.semanas").val(semanas);
+
+            $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias);
+            $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas);
     
             //fum para examen
             $("#input\\.paciente\\.fe\\.ecoprim").val(localStorage.fee);
             $("#input\\.paciente\\.fe\\.ecoseg").val(localStorage.fee);
             $("#input\\.paciente\\.fe\\.doppler").val(localStorage.fee);
             //eg para examen
-            $("#input\\.paciente\\.eg\\.extra").val(localStorage.eg);
             $("#eco\\.prim\\.eg").val(localStorage.eg);
             $("#eco\\.seg\\.eg").val(localStorage.eg);
             //FPP
@@ -4377,6 +4379,9 @@ $(document).ready(function(){
         $("#input\\.paciente\\.eg\\.dias").val(dias);
         $("#input\\.paciente\\.eg\\.semanas").val(semanas);
 
+        $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias);
+        $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas);
+
         //fum para examen
         $("#input\\.paciente\\.fum\\.examen").val(localStorage.fum);
         $("#input\\.paciente\\.fe\\.ecoprim").val(localStorage.fee);
@@ -4426,6 +4431,19 @@ $(document).ready(function(){
         $("#input\\.paciente\\.fum").trigger("change");
     });
 
+    $("#input\\.paciente\\.eg\\.dias").on("change", function(){
+        $("#input\\.paciente\\.eg\\.semanas").trigger("change");
+    });
+
+    $("#input\\.paciente\\.eg\\.semanas\\.extra").on("change", function(){
+        let semanas = $(this).val();
+        $("#input\\.paciente\\.eg\\.semanas").val(semanas).trigger("change");
+    });
+
+    $("#input\\.paciente\\.eg\\.dias\\.extra").on("change", function(){
+        let dias = $(this).val();
+        $("#input\\.paciente\\.eg\\.dias").val(dias).trigger("change");
+    });
     //input de apellidos de paciente
     $("#buscar\\.paciente\\.apellido").on("keyup", function(event){
         let apellido = {
