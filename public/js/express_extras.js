@@ -2374,7 +2374,7 @@ function appLoadBasic(){
     //    });
     //});
 
-    $.get( appUrl + "configuracion/patologiaobstetrica", function( data ) {
+    $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
         $("#tipo\\.examen\\.previo").empty();
         $.each(data, function (key, des) {
             var strTable = "<option value='" + des.patologia_id + "'>" + des.patologia_name +"</option>";
