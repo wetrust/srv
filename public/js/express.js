@@ -301,7 +301,9 @@ $(document).ready(function(){
     });
 
     $("#boton\\.eco\\.prim\\.eliminar").on("click", function(){
-        $("#table\\.ecografia\\.primtrim").each(function(i,val){
+        var filas = $("#table\\.ecografia\\.primtrim").children();
+
+        $.each(filas,function(i,val){
             if ($(val).hasClass('table-active') == true){
                 alert ($(val).data("id"));
             }
