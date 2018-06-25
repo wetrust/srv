@@ -1002,10 +1002,45 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Edad Materna</label>
-                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                            <div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                            <input type="text" class="form-control" id="furReferida" readonly="">
-                                        </div>
+                                        <select>
+                                            <option value="14">14 años</option>
+                                            <option value="15">15 años</option>
+                                            <option value="16">16 años</option>
+                                            <option value="17">17 años</option>
+                                            <option value="18">18 años</option>
+                                            <option value="19">19 años</option>
+                                            <option value="20">20 años</option>
+                                            <option value="21">21 años</option>
+                                            <option value="22">22 años</option>
+                                            <option value="23">23 años</option>
+                                            <option value="24">24 años</option>
+                                            <option value="25">25 años</option>
+                                            <option value="26">26 años</option>
+                                            <option value="27">27 años</option>
+                                            <option value="28">28 años</option>
+                                            <option value="29">29 años</option>
+                                            <option value="30">30 años</option>
+                                            <option value="31">31 años</option>
+                                            <option value="32">32 años</option>
+                                            <option value="33">33 años</option>
+                                            <option value="34">34 años</option>
+                                            <option value="35">35 años</option>
+                                            <option value="36">36 años</option>
+                                            <option value="37">37 años</option>
+                                            <option value="38">38 años</option>
+                                            <option value="39">39 años</option>
+                                            <option value="40">40 años</option>
+                                            <option value="41">41 años</option>
+                                            <option value="42">42 años</option>
+                                            <option value="43">43 años</option>
+                                            <option value="44">44 años</option>
+                                            <option value="45">45 años</option>
+                                            <option value="46">46 años</option>
+                                            <option value="47">47 años</option>
+                                            <option value="48">48 años</option>
+                                            <option value="49">49 años</option>
+                                            <option value="50">50 años</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -1013,7 +1048,7 @@
                                         <label for="formGroupExampleInput">Longitud cefalo caudal</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                            <input type="text" class="form-control" id="furReferida" readonly="">
+                                            <input type="text" class="form-control" id="furReferida">
                                         </div>
                                     </div>
                                 </div>
@@ -1024,7 +1059,7 @@
                                         <label for="formGroupExampleInput">Translucidez Nucal</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                            <input type="text" class="form-control" id="furReferida" readonly="">
+                                            <input type="text" class="form-control" id="furReferida">
                                         </div>
                                     </div>
                                 </div>
@@ -1042,6 +1077,11 @@
                                             Si
                                         </label>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary mb-2">Calcular</button>
                                 </div>
                             </div>
                         </div>
