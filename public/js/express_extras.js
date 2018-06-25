@@ -2316,6 +2316,13 @@ function appClean(){
     document.location.hash = "";
 }
 
+function activateTr(element){
+	$.each( $(element).parent().children(), function( i, val ) {
+		$( val ).removeClass( 'table-active');
+	});
+	$(element).addClass('table-active');
+}
+
 function appLoadBasic(){
     //cargar los ultimos pacientes de la bd
     loadTablePatients();

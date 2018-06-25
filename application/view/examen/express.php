@@ -1138,7 +1138,7 @@
     <div class="card mb-3">
         <div class="card-body">
             <h5>Exámenes</h5>
-            <table class="table">
+            <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
