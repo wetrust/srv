@@ -52,4 +52,12 @@ class ExamenController extends Controller
         $data = Request::post('data');
         $this->View->renderJSON(EcoModel::setEco($rut, $tipo,$data));
     }
+
+    public function del()
+    {
+        $rut = Request::post('id');
+        $tipo = Request::post('tipo');
+        $data = Request::post('data');
+        $this->View->renderJSON(EcoModel::deleteEco($rut, $tipo,$data));
+    }
 }

@@ -83,4 +83,28 @@ class EcoModel
         Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
         return false;
     }
+
+    public static function deleteEco($rut,$tipo,$data)
+    {
+        if (!$rut) {
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $data = json_decode($data, true);
+
+        if ($tipo == 1){
+            $sql = "DELETE FROM eco_prim WHERE id_paciente = :id_paciente AND eg_examen = :eg_examen LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"]));
+        }
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
+        return false;
+    }
 }

@@ -290,12 +290,20 @@ $(document).ready(function(){
             if ( Object.keys(response).length > 0 ){
                 $("#table\\.ecografia\\.primtrim").empty();
                 $.each(response.data, function(i,val){
-                    let fila = "<tr><th scope='row'>"+ val.n_examen +"</th><td>" + val.eg_examen +"</td><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
+                    let fila = "<tr><th scope='row' data-id='" + val.n_examen + "' data-paciente='" + $("#id-paciente").val() +"' data-tipo='1'>"+ val.n_examen +"</th><td>" + val.eg_examen +"</td><td>" + val.embrion +"</td><td>"+ val.prom_saco+"</td>";
                     $("#table\\.ecografia\\.primtrim").append(fila);
                 });
                 $("#table\\.ecografia\\.primtrim tr").on('click',function(){
                     activateTr(this);
                 });
+            }
+        });
+    });
+
+    $("#boton\\.eco\\.prim\\.eliminar").on("click", function(){
+        $("#table\\.ecografia\\.primtrim").each(function(i,val){
+            if ($(val).hasClass('table-active') == true){
+                alert ($(val).data("id"));
             }
         });
     });
