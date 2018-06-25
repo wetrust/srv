@@ -1002,7 +1002,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Edad Materna</label>
-                                        <select>
+                                        <select class="form-control">
                                             <option value="14">14 años</option>
                                             <option value="15">15 años</option>
                                             <option value="16">16 años</option>
