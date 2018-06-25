@@ -1180,7 +1180,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
+                        <button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
@@ -1622,9 +1622,13 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">Fecha Exámen</th>
                                 <th scope="col">EG</th>
-                                <th scope="col">Medida embrion</th>
-                                <th scope="col">Prom. Saco</th>
+                                <th scope="col">PFE</th>
+                                <th scope="col">Pct. Peso</th>
+                                <th scope="col">Pct. CC/CA</th>
+                                <th scope="col">Pct. CA</th>
+                                <th scope="col">Pct. BVM</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1926,9 +1930,12 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">Fecha Exámen</th>
                                 <th scope="col">EG</th>
-                                <th scope="col">Medida embrion</th>
-                                <th scope="col">Prom. Saco</th>
+                                <th scope="col">Pct. Uterinas</th>
+                                <th scope="col">Pct. CMedia</th>
+                                <th scope="col">Rel. CM/AU</th>
+                                <th scope="col">Pct. Ductus</th>
                             </tr>
                         </thead>
                         <tbody>
