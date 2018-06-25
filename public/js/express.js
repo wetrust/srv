@@ -305,7 +305,7 @@ $(document).ready(function(){
 
         $.each(filas,function(i,val){
             if ($(val).hasClass('table-active') == true){
-                alert ($(val).data("id"));
+                alert ($(val).children().data("id"));
             }
         });
     });
