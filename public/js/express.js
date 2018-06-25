@@ -4628,7 +4628,7 @@ $(document).ready(function(){
             $("#examen\\.eco\\.primtrim\\.adicionales").removeClass("d-none");
         }
         else{
-            ("#examen\\.eco\\.primtrim\\.adicionales").addClass("d-none");
+            $("#examen\\.eco\\.primtrim\\.adicionales").addClass("d-none");
         }
     });
 });
