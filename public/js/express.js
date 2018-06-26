@@ -1152,8 +1152,8 @@ $(document).ready(function(){
         }
 
         $.post(serverURL + "examen/set/", data).done(function(response) {
+            $("#table\\.ecografia\\.segundotrim").empty();
             if ( Object.keys(response).length > 0 ){
-                $("#table\\.ecografia\\.segundotrim").empty();
                 $.each(response.data, function(i,val){
                     let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
                     $("#table\\.ecografia\\.segundotrim").append(fila);
