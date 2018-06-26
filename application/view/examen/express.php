@@ -1180,7 +1180,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-secondary" id="boton.eco.segundo.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger">Eliminar</button>
+                        <button type="button" class="btn btn-secondary" id="boton.eco.segundo.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.segundo.eliminar">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
@@ -1665,7 +1665,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger d-none">Eliminar</button>
+                        <button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
