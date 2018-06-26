@@ -11,6 +11,7 @@ function onHashChange(){
         displayElement("ecoDoppler");
     }
     else if (hash=="#ecoObsSegTrim"){
+        obtenerEcoSegundo();
         displayElement("ecoObsSegTrim");
     }
     else if (hash=="#ecoObsPrimTrim"){
