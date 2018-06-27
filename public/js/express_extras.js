@@ -2390,8 +2390,8 @@ function loadExamen(tipo, id){
                         $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias).trigger("change");
                         $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas).trigger("change");
                         
-                        $("#lcn").val(val.embrion);
-                        $("#saco").val(val.prom_saco);
+                        $("#lcn").val(val.embrion).trigger("change");
+                        $("#saco").val(val.prom_saco).trigger("change");
                     };
                 });
             }
