@@ -2669,10 +2669,10 @@ $(document).ready(function(){
                  marker: { symbol: 'square' },
                  lineWidth: 0,
                  data: (
-                     function () {
-                         var data = [];
-                         var edadGest = parseInt(localStorage.eg) -1;
-                        let Valorbvm = parseInt(document.getElementById("lh").value);;
+                    function () {
+                        var data = [];
+                        var edadGest = parseInt(localStorage.eg) - 1;
+                        let Valorbvm = parseInt(document.getElementById("bvm").value);;
 
                         if (bvm < 1){
                             for (i = 16; i <= edadGest; i ++ ) {
