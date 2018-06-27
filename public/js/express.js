@@ -2735,7 +2735,7 @@ $(document).ready(function(){
             $("#table\\.ecografia\\.doppler").empty();
             if ( Object.keys(response).length > 0 ){
                 $.each(response.data, function(i,val){
-                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.auPctTxt +'</td><td>'+ val.ipauPctTxt+'</td><td>' + val.ipacmPctTxt +'</td><td>' + val.ccpPctTxt +'</td>';
+                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.uterinas_pct +'</td><td>'+ val.arteria_pct_umbilical+'</td><td>' + val.arteria_pct_media +'</td><td>' + val.ccp_pct +'</td>';
                     $("#table\\.ecografia\\.doppler").append(fila);
                 });
                 $("#table\\.ecografia\\.doppler tr").on('click',function(){
