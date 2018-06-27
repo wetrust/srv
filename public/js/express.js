@@ -2674,7 +2674,7 @@ $(document).ready(function(){
                         var edadGest = parseInt(localStorage.eg) - 1;
                         let Valorbvm = parseInt(document.getElementById("bvm").value);
 
-                        if (bvm > 1){
+                        if (Valorbvm > 1){
                             for (i = 16; i <= edadGest; i ++ ) {
                                 data.push({
                                     y: 0,
