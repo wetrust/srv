@@ -2702,6 +2702,81 @@ $(document).ready(function(){
     });
 
     //ecografía doppler
+
+    $("#boton\\.eco\\.doppler\\.guardar").on("click", function(){
+        let examen = {
+            examen: 1,
+            fecha: $("#input\\.paciente\\.fe\\.doppler").val(),
+            eg: $("#eco\\.doppler\\.eg").val(),
+            aud: $("#aud").val(),
+            audPctTxt: $("#audPctTxt").val(),
+            aui: $("#aui").val(),
+            auiPctTxt: $("#auiPctTxt").val(),
+            auprom: $("#auprom").val(),
+            auPctTxt: $("#auPctTxt").val(),
+            ipau: $("#ipau").val(),
+            ipauPctTxt: $("#ipauPctTxt").val(),
+            ipacm: $("#ipacm").val(),
+            ipacmPctTxt: $("#ipacmPctTxt").val(),
+            ccp: $("#ccp").val(),
+            ccpPctTxt: $("#ccpPctTxt").val(),
+            dv: $("#dv").val(),
+            dvPctTxt: $("#dvPctTxt").val(),
+            psmACM: $("#psmACM").val()
+        }
+        
+        let data = {
+            id: $("#id-paciente").val(),
+            tipo: 3,
+            data: JSON.stringify(examen)
+        }
+
+        $.post(serverURL + "examen/set/", data).done(function(response) {
+            $("#table\\.ecografia\\.doppler").empty();
+            if ( Object.keys(response).length > 0 ){
+                $.each(response.data, function(i,val){
+                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.auPctTxt +'</td><td>'+ val.ipauPctTxt+'</td><td>' + val.ipacmPctTxt +'</td><td>' + val.ccpPctTxt +'</td>';
+                    $("#table\\.ecografia\\.doppler").append(fila);
+                });
+                $("#table\\.ecografia\\.doppler tr").on('click',function(){
+                    activateTr(this);
+                });
+            }
+        });
+    });
+
+    $("#boton\\.eco\\.doppler\\.eliminar").on("click", function(){
+        var filas = $("#table\\.ecografia\\.doppler").children();
+
+        $.each(filas,function(i,val){
+            if ($(val).hasClass('table-active') == true){
+                let examen = {
+                    eg: $(val).children().data("id")
+                }
+                
+                let data = {
+                    id: $("#id-paciente").val(),
+                    tipo: 2,
+                    data: JSON.stringify(examen)
+                }
+
+                $.post(serverURL + "examen/del/", data).done(function(response) {
+                    $("#table\\.ecografia\\.doppler").empty();
+                    if ( Object.keys(response).length > 0 ){
+                        $.each(response.data, function(i,val){
+                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
+                            $("#table\\.ecografia\\.doppler").append(fila);
+                        });
+                        $("#table\\.ecografia\\.doppler tr").on('click',function(){
+                            activateTr(this);
+                        });
+                    }
+                });
+
+            }
+        });
+    });
+
     $( '#modalPreInfEcoDoppler' ).on( 'click', function() {
         $('#popupTitle').html("Datos para informe");
         //remueve los botones de imprimir en caso de que estén

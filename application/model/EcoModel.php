@@ -59,6 +59,14 @@ class EcoModel
             $response->data = $query->fetchAll();
             return $response;
         }
+        else if ($tipo == 3){
+            $sql = "SELECT * FROM eco_doppler WHERE id_paciente = :id_paciente AND n_examen = :n_examen";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_paciente' => $rut,':n_examen' => $numero));
+
+            $response->data = $query->fetchAll();
+            return $response;
+        }
 
         $response->status = "fail";
         return $response;
@@ -108,6 +116,11 @@ class EcoModel
         }
         else if ($tipo == 2){
             $sql = "DELETE FROM eco_segundo WHERE id_paciente = :id_paciente AND eg_examen = :eg_examen LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"]));
+        }
+        else if ($tipo == 3){
+            $sql = "DELETE FROM eco_doppler WHERE id_paciente = :id_paciente AND eg_examen = :eg_examen LIMIT 1";
             $query = $database->prepare($sql);
             $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"]));
         }
