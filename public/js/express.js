@@ -1155,7 +1155,7 @@ $(document).ready(function(){
             $("#table\\.ecografia\\.segundotrim").empty();
             if ( Object.keys(response).length > 0 ){
                 $.each(response.data, function(i,val){
-                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
+                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="2">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
                     $("#table\\.ecografia\\.segundotrim").append(fila);
                 });
                 $("#table\\.ecografia\\.segundotrim tr").on('click',function(){
@@ -1184,7 +1184,7 @@ $(document).ready(function(){
                     $("#table\\.ecografia\\.segundotrim").empty();
                     if ( Object.keys(response).length > 0 ){
                         $.each(response.data, function(i,val){
-                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
+                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="2">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
                             $("#table\\.ecografia\\.segundotrim").append(fila);
                         });
                         $("#table\\.ecografia\\.segundotrim tr").on('click',function(){
@@ -2735,7 +2735,7 @@ $(document).ready(function(){
             $("#table\\.ecografia\\.doppler").empty();
             if ( Object.keys(response).length > 0 ){
                 $.each(response.data, function(i,val){
-                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.uterinas_pct +'</td><td>'+ val.arteria_pct_umbilical+'</td><td>' + val.arteria_pct_media +'</td><td>' + val.ccp_pct +'</td>';
+                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="3">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.uterinas_pct +'</td><td>'+ val.arteria_pct_umbilical+'</td><td>' + val.arteria_pct_media +'</td><td>' + val.ccp_pct +'</td>';
                     $("#table\\.ecografia\\.doppler").append(fila);
                 });
                 $("#table\\.ecografia\\.doppler tr").on('click',function(){
@@ -2764,7 +2764,7 @@ $(document).ready(function(){
                     $("#table\\.ecografia\\.doppler").empty();
                     if ( Object.keys(response).length > 0 ){
                         $.each(response.data, function(i,val){
-                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
+                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="3">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
                             $("#table\\.ecografia\\.doppler").append(fila);
                         });
                         $("#table\\.ecografia\\.doppler tr").on('click',function(){
