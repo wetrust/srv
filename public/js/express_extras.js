@@ -2390,8 +2390,8 @@ function loadExamen(tipo, id){
                         $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias).trigger("change");
                         $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas).trigger("change");
                         
-                        $("#lcn").val(val.embrion).trigger("change");
-                        $("#saco").val(val.prom_saco).trigger("change");
+                        $("#lcn").val(val.embrion).trigger("keyup");
+                        $("#saco").val(val.prom_saco).trigger("keyup");
                     };
                 });
             }
@@ -2406,15 +2406,15 @@ function loadExamen(tipo, id){
                         $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias).trigger("change");
                         $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas).trigger("change");
 
-                        $("#dbp").val(val.dbp_examen);
-                        $("#dof").val(val.dof_examen);
-                        $("#cc").val(val.cc_examen);
-                        $("#ca").val(val.ca_examen);
-                        $("#lf").val(val.lf_examen);
-                        $("#lh").val(val.lh_examen);
-                        $("#cerebelo").val(val.cerebelo_examen);
-                        $("#bvm").val(val.bvm_examen);
-                        $("#lf").trigger("change");
+                        $("#dbp").val(val.dbp_examen).trigger("change");
+                        $("#dof").val(val.dof_examen).trigger("change");
+                        $("#cc").val(val.cc_examen).trigger("change");
+                        $("#ca").val(val.ca_examen).trigger("change");
+                        $("#lf").val(val.lf_examen).trigger("change");
+                        $("#lh").val(val.lh_examen).trigger("change");
+                        $("#cerebelo").val(val.cerebelo_examen).trigger("change");
+                        $("#bvm").val(val.bvm_examen).trigger("change");
+                        $("#lf").trigger("change").trigger("change");
                     };
                 });
             }
@@ -2428,14 +2428,14 @@ function loadExamen(tipo, id){
                         var dias =  Math.trunc((val.eg_examen - Math.trunc(val.eg_examen)) * 10);
                         $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias).trigger("change");
                         $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas).trigger("change");
-                        $("#aud").val(val.uterina_derecha);
-                        $("#aui").val(val.uterina_izquierda);
-                        $("#auprom").val(val.uterinas);
-                        $("#ipau").val(val.arteria_umbilical);
-                        $("#ipacm").val(val.arteria_media);
-                        $("#ccp").val(val.ccp);
-                        $("#dv").val(val.ductus);
-                        $("#psmACM").val(val.acm);
+                        $("#aud").val(val.uterina_derecha).trigger("change");
+                        $("#aui").val(val.uterina_izquierda).trigger("change");
+                        $("#auprom").val(val.uterinas).trigger("change");
+                        $("#ipau").val(val.arteria_umbilical).trigger("change");
+                        $("#ipacm").val(val.arteria_media).trigger("change");
+                        $("#ccp").val(val.ccp).trigger("change");
+                        $("#dv").val(val.ductus).trigger("change");
+                        $("#psmACM").val(val.acm).trigger("change");
                     };
                 });
             }
