@@ -1176,7 +1176,7 @@
     <hr style="border-color:rgba(0, 0, 0, 0.36);">
     <div class="row">
         <div class="col-12 col-sm-3 order-sm-1">
-            <div class="card">
+            <div class="card position-static">
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
@@ -1661,7 +1661,7 @@
     <hr style="border-color:rgba(0, 0, 0, 0.36);">
     <div class="row">
         <div class="col-12 col-sm-3 order-sm-1">
-            <div class="card">
+            <div class="card position-static">
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
