@@ -1134,15 +1134,18 @@ $(document).ready(function(){
             dbp: $("#dbp").val(),
             dof: $("#dof").val(),
             cc: $("#cc").val(),
-            ca: $("#caPctRpt").val(),
+            ca: $("#ca").val(),
+            capct: $("#ca").val(),
             lf: $("#lf").val(),
             lh: $("#lh").val(),
             cerebelo: $("#cerebelo").val(),
             pfe: $("#pfe").val(),
             pctpeso: $("#pfePctRpt").val(),
             bvm: $("#bvm").val(),
+            bvmpct: $("#bvm").val(),
             egcal: $("#egP50").val(),
-            ccca: $("#cccaPct").val()
+            ccca: $("#cccaPct").val(),
+            cccapct: $("#cccaPct").val()
         }
         
         let data = {

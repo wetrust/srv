@@ -297,14 +297,14 @@ function obtenerEcoDoppler(){
         $("#table\\.ecografia\\.doppler").empty();
         if ( Object.keys(response).length > 0 ){
             $.each(response.data, function(i,val){
-                let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen +'</td><td>' + val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
+                let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="3">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.uterinas_pct +'</td><td>'+ val.arteria_pct_umbilical+'</td><td>' + val.arteria_pct_media +'</td><td>' + val.ccp_pct +'</td>';
                 $("#table\\.ecografia\\.doppler").append(fila);
             });
             $("#table\\.ecografia\\.doppler tr").on('click',function(){
                 activateTr(this);
             });
         }
-    })
+    });
 }
 
 function eglcn(lcn) {
@@ -2366,7 +2366,81 @@ function activateTr(element){
 	$.each( $(element).parent().children(), function( i, val ) {
 		$( val ).removeClass( 'table-active');
 	});
-	$(element).addClass('table-active');
+    $(element).addClass('table-active');
+    var tipo = $(element).children().data("tipo");
+    var id = $(element).children().data("id"); 
+    loadExamen(tipo,id);
+}
+
+function loadExamen(tipo, id){
+    let data = {
+        id: $("#id-paciente").val(),
+        tipo: tipo
+    }
+
+    $.post(serverURL + "examen/get", data).done(function (response) {
+        if (tipo == 1){
+            if ( Object.keys(response).length > 0 ){
+                $.each(response.data, function(i,val){
+                    if (val.eg_examen == id){
+                        $("#input\\.paciente\\.fe\\.extra").val(val.fecha_examen);
+
+                        var semanas = Math.trunc(val.eg_examen);
+                        var dias =  Math.trunc((val.eg_examen - Math.trunc(val.eg_examen)) * 10);
+                        $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias).trigger("change");
+                        $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas).trigger("change");
+                        
+                        $("#lcn").val(val.embrion);
+                        $("#saco").val(val.prom_saco);
+                    };
+                });
+            }
+        } else if (tipo == 2){
+            if ( Object.keys(response).length > 0 ){
+                $.each(response.data, function(i,val){
+                    if (val.eg_examen == id){
+                        $("#input\\.paciente\\.fe\\.extra").val(val.fecha_examen);
+
+                        var semanas = Math.trunc(val.eg_examen);
+                        var dias =  Math.trunc((val.eg_examen - Math.trunc(val.eg_examen)) * 10);
+                        $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias).trigger("change");
+                        $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas).trigger("change");
+
+                        $("#dbp").val(val.dbp_examen);
+                        $("#dof").val(val.dof_examen);
+                        $("#cc").val(val.cc_examen);
+                        $("#ca").val(val.ca_examen);
+                        $("#lf").val(val.lf_examen);
+                        $("#lh").val(val.lh_examen);
+                        $("#cerebelo").val(val.cerebelo_examen);
+                        $("#bvm").val(val.bvm_examen);
+                        $("#lf").trigger("change");
+                    };
+                });
+            }
+        } else if (tipo == 3){
+            if ( Object.keys(response).length > 0 ){
+                $.each(response.data, function(i,val){
+                    if (val.eg_examen == id){
+                        $("#input\\.paciente\\.fe\\.extra").val(val.fecha_examen);
+
+                        var semanas = Math.trunc(val.eg_examen);
+                        var dias =  Math.trunc((val.eg_examen - Math.trunc(val.eg_examen)) * 10);
+                        $("#input\\.paciente\\.eg\\.dias\\.extra").val(dias).trigger("change");
+                        $("#input\\.paciente\\.eg\\.semanas\\.extra").val(semanas).trigger("change");
+                        $("#aud").val(val.uterina_derecha);
+                        $("#aui").val(val.uterina_izquierda);
+                        $("#auprom").val(val.uterinas);
+                        $("#ipau").val(val.arteria_umbilical);
+                        $("#ipacm").val(val.arteria_media);
+                        $("#ccp").val(val.ccp);
+                        $("#dv").val(val.ductus);
+                        $("#psmACM").val(val.acm);
+                    };
+                });
+            }
+        }
+    });
 }
 
 function appLoadBasic(){
