@@ -4859,6 +4859,7 @@ $(document).ready(function(){
     $('#dv').change(pctdv);
     $('#ipau').change(pctau);
     $('#ipacm').change(pctacm);
+    $('#bvm').change(pctbvm);
 
     $("input[name='radio_translucencia']").on("change", function(){
         if ($(this).val() == 1){
