@@ -1181,13 +1181,13 @@ $(document).ready(function(){
                 }
 
                 $.post(serverURL + "examen/del/", data).done(function(response) {
-                    $("#table\\.ecografia\\.primtrim").empty();
+                    $("#table\\.ecografia\\.segundotrim").empty();
                     if ( Object.keys(response).length > 0 ){
                         $.each(response.data, function(i,val){
-                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() +'" data-tipo="1">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen +'</td><td>' + val.embrion +'</td><td>'+ val.prom_saco+'</td>';
-                            $("#table\\.ecografia\\.primtrim").append(fila);
+                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
+                            $("#table\\.ecografia\\.segundotrim").append(fila);
                         });
-                        $("#table\\.ecografia\\.primtrim tr").on('click',function(){
+                        $("#table\\.ecografia\\.segundotrim tr").on('click',function(){
                             activateTr(this);
                         });
                     }
