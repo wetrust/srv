@@ -2672,8 +2672,7 @@ $(document).ready(function(){
                      function () {
                          var data = [];
                          var edadGest = parseInt(localStorage.eg) -1;
-     
-                        let bvm = parseFloat($('#bvm').val());
+                        let Valorbvm = parseInt(document.getElementById("lh").value);;
 
                         if (bvm < 1){
                             for (i = 16; i <= edadGest; i ++ ) {
@@ -2682,7 +2681,7 @@ $(document).ready(function(){
                                 });
                             }
                             data.push({
-                                y: bvm,
+                                y: Valorbvm,
                             });
                             for (i = edadGest +1; i <= 39; i ++ ) {
                                 data.push({
