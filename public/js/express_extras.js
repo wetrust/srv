@@ -253,8 +253,8 @@ function obtenerEcoPrimTrim(){
     }
 
    $.post(serverURL + "examen/get", data).done(function (response) {
+        $("#table\\.ecografia\\.primtrim").empty();
         if ( Object.keys(response).length > 0 ){
-            $("#table\\.ecografia\\.primtrim").empty();
             $.each(response.data, function(i,val){
                 let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() +'" data-tipo="1">'+ val.n_examen +'</th><td>' + val.fecha_examen +'</td><td>' + val.eg_examen +'</td><td>' + val.embrion +'</td><td>'+ val.prom_saco+'</td>';
                 $("#table\\.ecografia\\.primtrim").append(fila);
@@ -272,7 +272,6 @@ function obtenerEcoSegundo(){
         id: $("#id-paciente").val(),
         tipo: 2
     }
-
     $.post(serverURL + "examen/get", data).done(function (response) {
         $("#table\\.ecografia\\.segundotrim").empty();
         if ( Object.keys(response).length > 0 ){
@@ -294,9 +293,9 @@ function obtenerEcoDoppler(){
         tipo: 3
     }
 
-   $.post(serverURL + "examen/get", data).done(function (response) {
+    $.post(serverURL + "examen/get", data).done(function (response) {
+        $("#table\\.ecografia\\.doppler").empty();
         if ( Object.keys(response).length > 0 ){
-            $("#table\\.ecografia\\.doppler").empty();
             $.each(response.data, function(i,val){
                 let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '">'+ val.n_examen +'</th><td>' + val.fecha_examen +'</td><td>' + val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
                 $("#table\\.ecografia\\.doppler").append(fila);
