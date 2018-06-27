@@ -1181,8 +1181,8 @@ $(document).ready(function(){
                 }
 
                 $.post(serverURL + "examen/del/", data).done(function(response) {
+                    $("#table\\.ecografia\\.primtrim").empty();
                     if ( Object.keys(response).length > 0 ){
-                        $("#table\\.ecografia\\.primtrim").empty();
                         $.each(response.data, function(i,val){
                             let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() +'" data-tipo="1">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen +'</td><td>' + val.embrion +'</td><td>'+ val.prom_saco+'</td>';
                             $("#table\\.ecografia\\.primtrim").append(fila);
