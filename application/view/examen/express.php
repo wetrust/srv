@@ -1665,7 +1665,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-secondary">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger">Eliminar</button>
+                        <button type="button" class="btn btn-secondary" id="boton.eco.doppler.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.doppler.eliminar">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
@@ -1938,7 +1938,7 @@
                                 <th scope="col">Rel. CM/AU</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="table.ecografia.doppler">
                         </tbody>
                     </table>
                 </div>
