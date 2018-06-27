@@ -1654,7 +1654,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
             <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ecografía Dopple</li>
+            <li class="breadcrumb-item active" aria-current="page">Ecografía Doppler</li>
             <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
         </ol>
     </nav>
