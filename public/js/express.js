@@ -14,14 +14,14 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
     let a = $(window).scrollTop()
-    let b = $("#ecoObsSegTrim").height() - $("#ecoObsSegTrimMenu").height() - 100;
+    let b = $("#ecoObsSegTrim").height();
     if (a < 350){
         $("#ecoObsSegTrimMenu").addClass("position-fixed").removeClass("position-absolute");
         $("#ecoDopplerMenu").addClass("position-fixed").removeClass("position-absolute");
         $("#ecoObsSegTrimMenu").css("top","");
         $("#ecoDopplerMenu").css("top","");
     }
-    else if (a > 350 && a > b){
+    else if (a > 350 && a < b){
         $("#ecoObsSegTrimMenu").addClass("position-absolute").removeClass("position-fixed");
         $("#ecoObsSegTrimMenu").css("top","calc(100% - 19rem)");
         $("#ecoDopplerMenu").addClass("position-absolute").removeClass("position-fixed");
