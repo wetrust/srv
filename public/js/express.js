@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
     let a = $(window).scrollTop()
-    let b = $("#ecoObsSegTrimContainer").height() - $("#ecoObsSegTrimMenu").height() - 200;
+    let b = $("#ecoObsSegTrimContainer").height() - $("#ecoObsSegTrimMenu").height() - 100;
     if (a < b){
         $("#ecoObsSegTrimMenu").addClass("position-fixed").removeClass("position-absolute");
         $("#ecoDopplerMenu").addClass("position-fixed").removeClass("position-absolute");
@@ -23,9 +23,9 @@ $(window).scroll(function(){
     }
     else if ( a > b){
         $("#ecoObsSegTrimMenu").addClass("position-absolute").removeClass("position-fixed");
-        $("#ecoObsSegTrimMenu").css("top","calc(100% - 19rem)");
+        $("#ecoObsSegTrimMenu").css("top","calc(100% - 21rem)");
         $("#ecoDopplerMenu").addClass("position-absolute").removeClass("position-fixed");
-        $("#ecoDopplerMenu").css("top","calc(100% - 19rem)");
+        $("#ecoDopplerMenu").css("top","calc(100% - 21rem)");
     }
 });
 
