@@ -12,6 +12,21 @@ $(document).ready(function(){
     appLoadBasic();
 });
 
+$(window).scroll(function(){
+    let a = $(window).scrollTop()
+    let b = $("#ecoObsSegTrim").height() - $("#ecoObsSegTrimMenu").height();
+    if (a < 350){
+        $("#ecoObsSegTrimMenu").addClass("position-fixed").removeClass("position-absolute");
+        $("#ecoDopplerMenu").addClass("position-fixed").removeClass("position-absolute");
+    }
+    else if (a > 350 && a < b){
+        $("#ecoObsSegTrimMenu").addClass("position-absolute").removeClass("position-fixed");
+        $("#ecoObsSegTrimMenu").css("top","calc(100% - 19rem)");
+        $("#ecoDopplerMenu").addClass("position-absolute").removeClass("position-fixed");
+        $("#ecoDopplerMenu").css("top","calc(100% - 19rem)");
+    }
+});
+
 //funciones de botones
 $(document).ready(function(){
     $(window).on('hashchange', function(){
