@@ -1194,7 +1194,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-9">
+        <div class="col-12 col-sm-9" id="ecoObsSegTrimContainer">
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="form-group row">

@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
     let a = $(window).scrollTop()
-    let b = $("#ecoObsSegTrim").height();
+    let b = $("#ecoObsSegTrimContainer").height();
     if (a < 350){
         $("#ecoObsSegTrimMenu").addClass("position-fixed").removeClass("position-absolute");
         $("#ecoDopplerMenu").addClass("position-fixed").removeClass("position-absolute");
