@@ -23,9 +23,9 @@ $(window).scroll(function(){
     }
     else if ( a > b){
         $("#ecoObsSegTrimMenu").addClass("position-absolute").removeClass("position-fixed");
-        $("#ecoObsSegTrimMenu").css("top","calc(100% - 21rem)");
+        $("#ecoObsSegTrimMenu").css("top","calc(100% - 23.5rem)");
         $("#ecoDopplerMenu").addClass("position-absolute").removeClass("position-fixed");
-        $("#ecoDopplerMenu").css("top","calc(100% - 21rem)");
+        $("#ecoDopplerMenu").css("top","calc(100% - 23.5rem)");
     }
 });
 
