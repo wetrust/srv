@@ -21,7 +21,7 @@ $(window).scroll(function(){
         $("#ecoObsSegTrimMenu").css("top","");
         $("#ecoDopplerMenu").css("top","");
     }
-    else if (a > 350 && a < b){
+    else if (a > 350 && a > b){
         $("#ecoObsSegTrimMenu").addClass("position-absolute").removeClass("position-fixed");
         $("#ecoObsSegTrimMenu").css("top","calc(100% - 19rem)");
         $("#ecoDopplerMenu").addClass("position-absolute").removeClass("position-fixed");
