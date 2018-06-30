@@ -23,15 +23,160 @@
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
-                <div class="col-3">
-                    <img src="<?php echo Config::get('URL'); ?>img/cpeso.png" class="mr-auto ml-auto img-fluid">
-                </div>
-                <div class="col">
-                    <h6 class="alert-heading text-azul">Evaluación del crecimiento intrauterino, ¿Curva local generalizada o general individualizada?</h6>
-                    <div id="sliderParto" class="carousel slide" data-ride="carousel" data-interval="60000">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <p class="text-justify text-azul">El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br><br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</p>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Término de Gestación</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0" selected>Parto</option>
+                                    <option value="1">Aborto</option>
+                                    <option value="2">Desconocido</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Tipo de Parto</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0" selected>Vaginal</option>
+                                    <option value="1">Cesarea</option>
+                                    <option value="2">Forceps</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Patologia materna</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0" selected>Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Fecha de Parto</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Edad gestacional</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Peso RN</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Talla RN</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Perimetro Craneo</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Sexo de RN</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0" selected>Masculino</option>
+                                    <option value="1">Femenino</option>
+                                    <option value="2">Indeterminado</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Peso Placentario</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Apar 1° Min.</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Apar 5° Min.</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Indices calculados (Ipn)</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Crecimiento categorizado</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Peso/Ege</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Ipn/Ege</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Patologia del RN</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Hipoglicemia sospechada</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Hipoglicemia confirmada</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Hiperbilirrubinemia</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Poliglobulia</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Hospital - UCIN</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Sindrome D.Respiratorio</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Alta con su madre</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="edadGestacional" class="col-4">Observaciones</label>
+                                <select id="pm" class="form-control col-8">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
                             </div>
                         </div>
                     </div>
