@@ -69,6 +69,7 @@
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Fecha de Parto</label>
+                                        <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text">
                                     </div>
                                 </div>
                                 <div class="col-4">
