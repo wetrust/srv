@@ -26,21 +26,27 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <div class="form-group row">
-                                <label for="edadGestacional" class="col-4">Término de Gestación</label>
-                                <select id="pm" class="form-control col-8">
-                                    <option value="0" selected>Parto</option>
-                                    <option value="1">Aborto</option>
-                                    <option value="2">Desconocido</option>
-                                </select>
-                            </div>
-                            <div class="form-group row">
-                                <label for="edadGestacional" class="col-4">Tipo de Parto</label>
-                                <select id="pm" class="form-control col-8">
-                                    <option value="0" selected>Vaginal</option>
-                                    <option value="1">Cesarea</option>
-                                    <option value="2">Forceps</option>
-                                </select>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-4">Término de Gestación</label>
+                                        <select id="pm" class="form-control col-8">
+                                            <option value="0" selected>Parto</option>
+                                            <option value="1">Aborto</option>
+                                            <option value="2">Desconocido</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-4">Tipo de Parto</label>
+                                        <select id="pm" class="form-control col-8">
+                                            <option value="0" selected>Vaginal</option>
+                                            <option value="1">Cesarea</option>
+                                            <option value="2">Forceps</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <label for="edadGestacional" class="col-4">Patologia materna</label>
