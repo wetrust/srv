@@ -60,6 +60,14 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Tipo Patologia materna</label>
+                                        <select id="pm" class="form-control col-7">
+                                            <option value="0" selected></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Fecha de Parto</label>
                                     </div>
                                 </div>
@@ -68,13 +76,13 @@
                                         <label for="edadGestacional" class="col-5">Edad gestacional</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso RN</label>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Talla RN</label>
@@ -85,6 +93,8 @@
                                         <label for="edadGestacional" class="col-5">Perimetro Craneo</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Sexo de RN</label>
@@ -95,8 +105,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso Placentario</label>
@@ -120,6 +128,8 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Apar 5° Min.</label>
@@ -138,8 +148,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Indices calculados (Ipn)</label>
@@ -150,13 +158,13 @@
                                         <label for="edadGestacional" class="col-5">Crecimiento categorizado</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso/Ege</label>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Ipn/Ege</label>
@@ -167,6 +175,8 @@
                                         <label for="edadGestacional" class="col-5">Patologia del RN</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Hipoglicemia sospechada</label>
@@ -176,8 +186,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Hipoglicemia confirmada</label>
@@ -196,6 +204,8 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Poliglobulia</label>
@@ -205,8 +215,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Hospital - UCIN</label>
@@ -225,6 +233,8 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Alta con su madre</label>
@@ -234,8 +244,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Observaciones</label>
