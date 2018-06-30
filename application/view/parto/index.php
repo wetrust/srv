@@ -173,13 +173,13 @@
                                     <h5 class="card-title">Crecimiento categorizado</h5>
                                 </div>
                                 <div class="col-2">
-                                    <p>T. Nacional</p>
+                                    <p class="text-center">T. Nacional</p>
                                 </div>
                                 <div class="col-2">
-                                    <p>T. Regional</p>
+                                    <p class="text-center">T. Regional</p>
                                 </div>
                                 <div class="col-2">
-                                    <p>T. Ajustada</p>
+                                    <p class="text-center">T. Ajustada</p>
                                 </div>
                             </div>
                             <div class="row">
