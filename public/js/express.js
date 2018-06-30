@@ -13,8 +13,15 @@ $(document).ready(function(){
 });
 
 $(window).scroll(function(){
-    let a = $(window).scrollTop()
-    let b = $("#ecoObsSegTrimContainer").height() - $("#ecoObsSegTrimMenu").height() - 100;
+    let a = $(window).scrollTop();
+    let b = 0;
+    if ($("#").hasClass("active") == true){
+        b = $("#ecoObsSegTrimContainer").height() - $("#ecoObsSegTrimMenu").height() - 100;
+    }
+    else{
+        b = $("#ecoObsSegTrimContainer").height() - $("#ecoDopplerMenu").height() - 100; 
+    }
+    
     if (a < b){
         $("#ecoObsSegTrimMenu").addClass("position-fixed").removeClass("position-absolute");
         $("#ecoDopplerMenu").addClass("position-fixed").removeClass("position-absolute");

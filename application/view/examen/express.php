@@ -740,7 +740,7 @@
                     <div class="row">
                         <div class="col">
                             <h3 class="card-title text-primary">Evaluación de biometría y Doppler</h3>
-                            <p class="text-secondary">Módulos cuyo objetivo es la valoración de la biometría fetal más flujometria Doppler materno fetal.</p>
+                            <p class="text-secondary">Objetivos del módulo, valoración de la biometría fetal más flujometria Doppler materno fetal.</p>
                             <div class="card mb-3 mt-3" id="ecografia.uno">
                                 <div class="card-body p-2">
                                     <div class="clearfix">

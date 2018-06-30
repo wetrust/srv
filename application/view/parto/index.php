@@ -1,4 +1,44 @@
-        <div class="container" id="postnatal">
+        <div class="container" id="neonatal">
+            <div class="bienvenida mb-3 rounded-bottom">
+                <div class="container">
+                    <div class="media">
+                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
+                        <div class="media-body mt-4">
+                            <h4 class="mt-0 mb-1"><em>Datos Neonatales</em></h4>
+                            <p><em>Evaluación postnatal básica para profesionales</em></p>
+                        </div>
+                        <div class="media-body mt-4">
+                            <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+                <li class="breadcrumb-item">Datos Neonatales</li>
+                <li class="breadcrumb-item active">Bienvenida a protocolo</li>
+                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
+                <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
+                <li class="ml-auto"><a href="#inicio">Volver</a></li>
+            </ol>
+            <div class="row mt-2">
+                <div class="col-3">
+                    <img src="<?php echo Config::get('URL'); ?>img/cpeso.png" class="mr-auto ml-auto img-fluid">
+                </div>
+                <div class="col">
+                    <h6 class="alert-heading text-azul">Evaluación del crecimiento intrauterino, ¿Curva local generalizada o general individualizada?</h6>
+                    <div id="sliderParto" class="carousel slide" data-ride="carousel" data-interval="60000">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <p class="text-justify text-azul">El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br><br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="postnatal" style="display:none;">
             <div class="bienvenida mb-3 rounded-bottom">
                 <div class="container">
                     <div class="media">
@@ -15,8 +55,9 @@
             </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
-                <li class="breadcrumb-item active">Bienvenida</li>
-                <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
+                <li class="breadcrumb-item active">Bienvenida a protocolo</li>
+                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
@@ -81,8 +122,9 @@
             </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
-                <li class="breadcrumb-item active">Recién Nacido</li>
+                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida a protocolo</a></li>
+                <li class="breadcrumb-item active">Evaluación Peso e IPN</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#postnatal">Volver</a></li>
@@ -186,9 +228,10 @@
                 </div>
             </div>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#inicio">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida a protocolo</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item active">Hipoglicemia neonatal</li>
                 <li class="ml-auto"><a href="#postnatal">Volver</a></li>
@@ -220,8 +263,9 @@
             </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">Recién Nacido</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida a protocolo</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#recienacido">Volver</a></li>
