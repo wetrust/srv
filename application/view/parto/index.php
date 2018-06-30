@@ -168,7 +168,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="card-title mt-3">Crecimiento categorizado</h5>
+                            <div class="row">
+                                <div class="col-3">
+                                    <h5 class="card-title mt-3">Crecimiento categorizado</h5>
+                                </div>
+                                <div class="col-2">
+                                    <p>T. Nacional</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>T. Regional</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>T. Ajustada</p>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Peso/Ege</label>
@@ -179,10 +192,16 @@
                                 <div class="col-2">
                                     <input class="form-control" type="text">
                                 </div>
+                                <div class="col-2">
+                                    <input class="form-control" type="text">
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="edadGestacional" class="col-5">Ipn/Ege</label>
+                                    <label for="edadGestacional">Ipn/Ege</label>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control" type="text">
                                 </div>
                                 <div class="col-2">
                                     <input class="form-control" type="text">
