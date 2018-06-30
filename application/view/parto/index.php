@@ -15,8 +15,8 @@
             </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
-                <li class="breadcrumb-item">Datos Neonatales</li>
-                <li class="breadcrumb-item active">Bienvenida a protocolo</li>
+                <li class="breadcrumb-item active">Datos Neonatales</li>
+                <li class="breadcrumb-item"><a href="#postnatal">Bienvenida a protocolo</a></li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
