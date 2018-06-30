@@ -171,9 +171,7 @@
                             <h5 class="card-title mt-3">Crecimiento categorizado</h5>
                             <div class="row">
                                 <div class="col-3">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Peso/Ege</label>
-                                    </div>
+                                    <label for="edadGestacional">Peso/Ege</label>
                                 </div>
                                 <div class="col-2">
                                     <input class="form-control" type="text">
@@ -184,9 +182,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-3">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Ipn/Ege</label>
-                                    </div>
+                                    <label for="edadGestacional" class="col-5">Ipn/Ege</label>
                                 </div>
                                 <div class="col-2">
                                     <input class="form-control" type="text">
