@@ -26,6 +26,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
+                            <h4>Grupo 1</h4>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -108,6 +109,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <h4>Grupo 2</h4>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -140,6 +142,29 @@
                                                 <div class="input-group-text">mm.</div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Indices calculados (Ipn)</label>
+                                    </div>
+                                </div>
+                            <h4>Crecimiento categorizado</h4>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Peso/Ege</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Ipn/Ege</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Patologia del RN</label>
                                     </div>
                                 </div>
                             </div>
@@ -201,33 +226,6 @@
                                             <option value="9">9</option>
                                             <option value="10">10</option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Indices calculados (Ipn)</label>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Crecimiento categorizado</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Peso/Ege</label>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Ipn/Ege</label>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Patologia del RN</label>
                                     </div>
                                 </div>
                             </div>
