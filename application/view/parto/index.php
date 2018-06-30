@@ -27,10 +27,15 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="form-group row">
-                                <label for="edadGestacional" class="col-5">Id de la madre</label>
+                                <label for="edadGestacional" class="col-5">Numero de registro</label>
                             </div>
+                            datos de la madre
+                            nombre de la madre
+                            lugar de parto
+                            Recien Recien
                             
                             id del recien nacido
+                            nombre del recien nacido
                         </div>
                     </div>
                 </div>
@@ -165,7 +170,7 @@
                             </div>
                             <h5 class="card-title mt-3">Crecimiento categorizado</h5>
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-2">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso/Ege</label>
                                     </div>
@@ -178,7 +183,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-2">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Ipn/Ege</label>
                                     </div>
