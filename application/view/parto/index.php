@@ -24,9 +24,9 @@
             </ol>
             <div class="row mt-2">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card mb-3">
                         <div class="card-body">
-                            <h4>Grupo 1</h4>
+                            <h5 class="card-title">Información del Parto</h5>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -111,9 +111,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card mb-3">
                         <div class="card-body">
-                            <h4>Grupo 2</h4>
+                        <h5 class="card-title">Información del RN</h5>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -232,8 +232,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Hipoglicemia sospechada</label>
@@ -252,6 +250,8 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Hiperbilirrubinemia</label>
@@ -261,8 +261,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Poliglobulia</label>
@@ -281,6 +279,8 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Sindrome D.Respiratorio</label>
@@ -290,8 +290,6 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Alta con su madre</label>
