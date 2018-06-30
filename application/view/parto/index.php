@@ -168,9 +168,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <h5 class="card-title">Crecimiento categorizado</h5>
                             <div class="row pt-3">
-                                <div class="col-3">
-                                    <h5 class="card-title">Crecimiento categorizado</h5>
+                                <div class="col-2">
                                 </div>
                                 <div class="col-2">
                                     <p class="text-center">T. Nacional</p>
@@ -183,7 +183,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     <label for="edadGestacional">Peso/Ege</label>
                                 </div>
                                 <div class="col-2">
@@ -197,7 +197,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
                                 <div class="col-2">
