@@ -168,9 +168,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-3">
                                 <div class="col-3">
-                                    <h5 class="card-title mt-3">Crecimiento categorizado</h5>
+                                    <h5 class="card-title">Crecimiento categorizado</h5>
                                 </div>
                                 <div class="col-2">
                                     <p>T. Nacional</p>
