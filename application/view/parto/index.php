@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Edad gestacional</label>
+                                        <label for="edadGestacional" class="col-5">E. Gestacional</label>
                                         <div class="input-group px-0 col-7">
                                             <select id="pm" class="form-control">
                                                 <option value="20">20</option>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                        <h5 class="card-title">Información del RN</h5>
+                            <h5 class="card-title">Información del RN</h5>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -149,12 +149,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="row">
+                                <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Indices calculados (Ipn)</label>
                                     </div>
                                 </div>
-                            <h4>Crecimiento categorizado</h4>
+                            </div>
+                            <h5 class="card-title">Crecimiento categorizado</h5>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
