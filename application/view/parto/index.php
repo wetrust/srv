@@ -109,6 +109,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
                             <h4>Grupo 2</h4>
                             <div class="row">
                                 <div class="col-4">
@@ -162,12 +166,12 @@
                                         <label for="edadGestacional" class="col-5">Ipn/Ege</label>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Patologia del RN</label>
-                                    </div>
-                                </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Patologia del RN</h4>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
