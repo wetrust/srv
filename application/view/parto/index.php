@@ -75,7 +75,7 @@
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Edad gestacional</label>
-                                        <div class="input-group mb-2 col-7">
+                                        <div class="input-group px-0 col-7">
                                             <select id="pm" class="form-control">
                                                 <option value="20">20</option>
                                                 <option value="21">21</option>
@@ -112,7 +112,7 @@
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso RN</label>
-                                        <div class="input-group mb-2 col-7">
+                                        <div class="input-group px-0 col-7">
                                             <input class="form-control" type="text">
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
@@ -123,10 +123,10 @@
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Talla RN</label>
-                                        <div class="input-group mb-2 col-7">
+                                        <div class="input-group px-0 col-7">
                                             <input class="form-control" type="text">
                                             <div class="input-group-append">
-                                                <div class="input-group-text"mm.</div>
+                                                <div class="input-group-text">mm.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -134,7 +134,7 @@
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Perimetro Craneo</label>
-                                        <div class="input-group mb-2 col-7">
+                                        <div class="input-group px-0 col-7">
                                             <input class="form-control" type="text">
                                             <div class="input-group-append">
                                                 <div class="input-group-text">mm.</div>
@@ -157,7 +157,7 @@
                                 <div class="col-4">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso Placentario</label>
-                                        <div class="input-group mb-2 col-7">
+                                        <div class="input-group px-0 col-7">
                                             <input class="form-control" type="text">
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
