@@ -1304,6 +1304,7 @@
                 $('#pdfviebox').hide();
                 $('#recienacido').hide();
                 $('#hipoglicemia').hide();
+                $('#neonatal').hide();
                 $('#'+div_id).show();
             }
 
