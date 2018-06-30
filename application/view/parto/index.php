@@ -1505,6 +1505,9 @@
                     else if (hash=="#hipoglicemia"){
                         displayElement("hipoglicemia");
                     }
+                    else if (hash=="#neonatal"){
+                        displayElement("neonatal"); 
+                    }
                 });
 
                 $("#pdfnacionalview").on("click", function(){
