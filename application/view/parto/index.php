@@ -115,8 +115,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Información del RN</h5>
                             <div class="row">
-                                <div class="col-4">
-                                    <div class="form-group row">
+                                <div class="col-3">
                                         <label for="edadGestacional" class="col-5">Peso RN</label>
                                         <div class="input-group px-0 col-7">
                                             <input class="form-control" type="text">
@@ -124,9 +123,8 @@
                                                 <div class="input-group-text">grs.</div>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Talla RN</label>
                                         <div class="input-group px-0 col-7">
@@ -137,7 +135,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Perimetro Craneo</label>
                                         <div class="input-group px-0 col-7">
@@ -148,9 +146,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Indices calculados (Ipn)</label>
                                     </div>
