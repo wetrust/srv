@@ -168,7 +168,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="card-title">Crecimiento categorizado</h5>
+                            <h5 class="card-title mt-4">Crecimiento categorizado</h5>
                             <div class="row pt-3">
                                 <div class="col-2">
                                 </div>
