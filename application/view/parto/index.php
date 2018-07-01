@@ -393,47 +393,53 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Fecha exámen</th>
+                            <th scope="col">ID Materno</th>
+                            <th scope="col">ID Recien Nacido</th>
                             <th scope="col">EG</th>
-                            <th scope="col">Medida embrion</th>
-                            <th scope="col">Prom. Saco</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Talla</th>
                         </tr>
                     </thead>
                     <tbody id="table.ecografia.primtrim" class="text-white">
                         <tr>
-                            <td>#</td>
-                            <td>Fecha exámen</td>
-                            <td>EG</td>
-                            <td>Medida embrion</td>
-                            <td>Prom. Saco</td>
+                            <td>1</td>
+                            <td>12345</td>
+                            <td>56798</td>
+                            <td>40</td>
+                            <td>3080</td>
+                            <td>512</td>
                         </tr>
                         <tr>
-                            <td>#</td>
-                            <td>Fecha exámen</td>
-                            <td>EG</td>
-                            <td>Medida embrion</td>
-                            <td>Prom. Saco</td>
+                            <td>2</td>
+                            <td>12345</td>
+                            <td>56798</td>
+                            <td>40</td>
+                            <td>3080</td>
+                            <td>512</td>
                         </tr>
                         <tr>
-                            <td>#</td>
-                            <td>Fecha exámen</td>
-                            <td>EG</td>
-                            <td>Medida embrion</td>
-                            <td>Prom. Saco</td>
+                            <td>3</td>
+                            <td>12345</td>
+                            <td>56798</td>
+                            <td>40</td>
+                            <td>3080</td>
+                            <td>512</td>
                         </tr>
                         <tr>
-                            <td>#</td>
-                            <td>Fecha exámen</td>
-                            <td>EG</td>
-                            <td>Medida embrion</td>
-                            <td>Prom. Saco</td>
+                            <td>4</td>
+                            <td>12345</td>
+                            <td>56798</td>
+                            <td>40</td>
+                            <td>3080</td>
+                            <td>512</td>
                         </tr>
                         <tr>
-                            <td>#</td>
-                            <td>Fecha exámen</td>
-                            <td>EG</td>
-                            <td>Medida embrion</td>
-                            <td>Prom. Saco</td>
+                            <td>5</td>
+                            <td>12345</td>
+                            <td>56798</td>
+                            <td>40</td>
+                            <td>3080</td>
+                            <td>512</td>
                         </tr>
                     </tbody>
                 </table>
