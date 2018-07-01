@@ -26,16 +26,41 @@
                 <div class="col-12">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <div class="form-group row">
-                                <label for="edadGestacional" class="col-5">Numero de registro</label>
+                            <h5 class="card-title mb-3">Datos de la madre</h5>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="edadGestacional">Número de Registro</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Nombre</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Apellido</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Lugar de parto</label>
+                                    <select id="pm" class="form-control">
+                                    </select>
+                                </div>
                             </div>
-                            datos de la madre
-                            nombre de la madre
-                            lugar de parto
-                            Recien Recien
-
-                            id del recien nacido
-                            nombre del recien nacido
+                            <h5 class="card-title mb-3">Recién Nacido</h5>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="edadGestacional">Número de Registro</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Nombre</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Apellido</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,6 +68,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3">Información del Parto</h5>
+                            <hr>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -130,6 +156,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3">Información del RN</h5>
+                            <hr>
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Peso RN</label>
@@ -215,6 +242,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title mb-3">Patologia del RN</h5>
+                            <hr>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
