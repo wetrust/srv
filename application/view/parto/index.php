@@ -369,26 +369,21 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
-                <h5>Lista de Partos</div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5>Exámenes</h5>
-                        <table class="table table-hover">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Fecha exámen</th>
-                                    <th scope="col">EG</th>
-                                    <th scope="col">Medida embrion</th>
-                                    <th scope="col">Prom. Saco</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table.ecografia.primtrim">
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div class="container-fluid position-fixed" style="bottom:-6rem;left:0;">
+                <h5>Lista de Partos</h5>
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Fecha exámen</th>
+                            <th scope="col">EG</th>
+                            <th scope="col">Medida embrion</th>
+                            <th scope="col">Prom. Saco</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table.ecografia.primtrim">
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="container" id="postnatal" style="display:none;">
