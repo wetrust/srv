@@ -358,8 +358,11 @@
                                         <option value="1">No</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
                                     <label for="edadGestacional">Observaciones</label>
+                                    <input class="form-control" type="text">
                                 </div>
                             </div>
                         </div>
