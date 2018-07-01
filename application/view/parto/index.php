@@ -34,6 +34,21 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-10">
+                <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Buscar</h5>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="edadGestacional"ID de la madre</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">ID del Recien Nacido</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3">Datos de la madre</h5>
@@ -369,8 +384,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid position-fixed bg-secondary" style="bottom:-6rem;left:0;">
-                <h5>Lista de Partos</h5>
+            <div class="container position-fixed bg-secondary" style="bottom:-20rem;left:0;">
+                <h5 class="m-4 text-white">Lista de Partos</h5>
                 <table class="table table-hover">
                     <thead class="thead-dark">
                         <tr>
@@ -381,7 +396,7 @@
                             <th scope="col">Prom. Saco</th>
                         </tr>
                     </thead>
-                    <tbody id="table.ecografia.primtrim">
+                    <tbody id="table.ecografia.primtrim" class="text-white">
                         <tr>
                             <td>#</td>
                             <td>Fecha exámen</td>
