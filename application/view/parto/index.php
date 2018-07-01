@@ -213,13 +213,13 @@
                                 <div class="col-2">
                                     <label for="edadGestacional">Peso/Ege</label>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text">
                                 </div>
                             </div>
@@ -227,13 +227,13 @@
                                 <div class="col-2">
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text">
                                 </div>
                             </div>
