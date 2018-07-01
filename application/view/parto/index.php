@@ -288,7 +288,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Apar 5° Min.</label>
                                     <select id="pm" class="form-control">
@@ -320,7 +320,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
                                     <select id="pm" class="form-control">
@@ -343,7 +343,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Sindrome D.Respiratorio</label>
                                     <select id="pm" class="form-control">
@@ -359,7 +359,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-3">
                                 <div class="col-12">
                                     <label for="edadGestacional">Observaciones</label>
                                     <input class="form-control" type="text">
