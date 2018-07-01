@@ -19,11 +19,11 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
-                <div class="col-12">
+                <div class="col-8">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3">Datos de la madre</h5>
@@ -63,8 +63,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-8">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Información del Parto</h5>
@@ -140,7 +138,7 @@
                                                 <option value="30">37</option>
                                                 <option value="30">38</option>
                                                 <option value="30">39</option>
-                                                <option value="40">40</option>
+                                                <option value="40" selected>40</option>
                                                 <option value="41">41</option>
                                                 <option value="42">42</option>
                                             </select>
@@ -402,7 +400,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item active">Curvas de crecimiento</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -469,7 +467,7 @@
                 <li class="breadcrumb-item active">Evaluación Peso e IPN</li>
                 <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -576,7 +574,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
-                <li class="breadcrumb-item active">Hipoglicemia neonatal</li>
+                <li class="breadcrumb-item active">Protocolo Hipoglicemia neonatal</li>
                 <li class="ml-auto"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-1"> 
@@ -610,7 +608,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#recienacido">Volver</a></li>
             </ol>
             <div class="row mt-1">
