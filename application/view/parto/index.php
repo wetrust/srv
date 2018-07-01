@@ -767,11 +767,11 @@
 
                     if (estado == true){
                         $(this).data("hide", false);
-                        $("#contenedorListaPartos").css("top", "0");
+                        $("#contenedorListaPartos").css("bottom", "0");
                     }
                     else{
                         $(this).data("hide", true);
-                        $("#contenedorListaPartos").css("top", "-20rem");
+                        $("#contenedorListaPartos").css("bottom", "-20rem");
                     }
                 });
 
