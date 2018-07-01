@@ -23,7 +23,7 @@
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
-                <div class="col-8">
+                <div class="col-9">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3">Datos de la madre</h5>
