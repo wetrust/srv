@@ -762,7 +762,7 @@
         <script type="text/javascript">
             $( document ).ready(function() {
 
-                $("#listaPartos").on("click", function{
+                $("#listaPartos").on("click", function(){
                     let estado = $(this).data("hide");
 
                     if (estado == true){
