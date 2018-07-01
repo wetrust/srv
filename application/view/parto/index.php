@@ -39,12 +39,15 @@
                             <h5 class="card-title mb-3">Buscar</h5>
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="edadGestacional"ID de la madre</label>
+                                    <label for="edadGestacional">ID de la madre</label>
                                     <input class="form-control" type="text">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">ID del Recien Nacido</label>
                                     <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <button type="button" class="btn btn-primary">Buscar</button>
                                 </div>
                             </div>
                         </div>
