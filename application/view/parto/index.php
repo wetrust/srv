@@ -47,7 +47,7 @@
                                     <input class="form-control" type="text">
                                 </div>
                                 <div class="col-3">
-                                    <button type="button" class="btn btn-primary">Buscar</button>
+                                    <button type="button" class="btn btn-primary mt-5">Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -387,8 +387,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container position-fixed bg-secondary" style="bottom:-20rem;left:0;">
-                <h5 class="m-4 text-white">Lista de Partos</h5>
+            <div class="container-fluid position-fixed bg-secondary" style="bottom:-20rem;left:0;">
+                <h5 class="m-4 text-white" id="listaPartos" data-hide="true">Lista de Ultimos Partos</h5>
                 <table class="table table-hover">
                     <thead class="thead-dark">
                         <tr>
@@ -761,6 +761,20 @@
         </div>
         <script type="text/javascript">
             $( document ).ready(function() {
+
+                $("#listaPartos").on("click", function{
+                    let estado = $(this).data("hide");
+
+                    if (estado == true){
+                        $(this).data("hide", false);
+                        $(this).css("top", "0");
+                    }
+                    else{
+                        $(this).data("hide", true);
+                        $(this).css("top", "-20rem");
+                    }
+                });
+
                 Highcharts.chart('grafico', {
 
                     title: {
