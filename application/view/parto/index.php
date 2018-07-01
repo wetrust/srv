@@ -255,135 +255,111 @@
                             <hr class="mb-5">
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Sexo de RN</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0" selected>Masculino</option>
-                                            <option value="1">Femenino</option>
-                                            <option value="2">Indeterminado</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Sexo de RN</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0" selected>Masculino</option>
+                                        <option value="1">Femenino</option>
+                                        <option value="2">Indeterminado</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Peso Placentario</label>
-                                        <div class="input-group px-0 col-7">
-                                            <input class="form-control" type="text">
-                                            <div class="input-group-append">
-                                                <div class="input-group-text">grs.</div>
-                                            </div>
+                                    <label for="edadGestacional">Peso Placentario</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="text">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">grs.</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Apar 1° Min.</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Apar 1° Min.</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Apar 5° Min.</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Apar 5° Min.</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Hipoglicemia sospechada</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Hipoglicemia sospechada</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Hipoglicemia confirmada</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Hipoglicemia confirmada</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Hiperbilirrubinemia</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Hiperbilirrubinemia</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Poliglobulia</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Poliglobulia</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Hospital - UCIN</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Hospital - UCIN</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Sindrome D.Respiratorio</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Sindrome D.Respiratorio</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Alta con su madre</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0">Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
+                                    <label for="edadGestacional">Alta con su madre</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Observaciones</label>
-                                    </div>
+                                    <label for="edadGestacional">Observaciones</label>
                                 </div>
                             </div>
                         </div>
