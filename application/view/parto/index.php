@@ -42,7 +42,7 @@
                 <div class="col-12">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Información del Parto</h5>
+                            <h5 class="card-title mb-3">Información del Parto</h5>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -129,7 +129,7 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Información del RN</h5>
+                            <h5 class="card-title mb-3">Información del RN</h5>
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Peso RN</label>
@@ -173,13 +173,13 @@
                                 <div class="col-2">
                                 </div>
                                 <div class="col-2">
-                                    <p class="text-center">T. Nacional</p>
+                                    <p class="text-center">1.- Curva Nacional</p>
                                 </div>
                                 <div class="col-2">
-                                    <p class="text-center">T. Regional</p>
+                                    <p class="text-center">2.- Curva Regional</p>
                                 </div>
                                 <div class="col-2">
-                                    <p class="text-center">T. Ajustada</p>
+                                    <p class="text-center">3.- Curva Ajustada</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -196,7 +196,7 @@
                                     <input class="form-control" type="text">
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-1">
                                 <div class="col-2">
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
@@ -214,7 +214,7 @@
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <h4>Patologia del RN</h4>
+                            <h5 class="card-title mb-3">Patologia del RN</h5>
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
