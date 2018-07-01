@@ -24,7 +24,7 @@
             </ol>
             <div class="row mt-2">
                 <div class="col-12 col-sm-3 order-sm-1">
-                    <div class="card mb-3">
+                    <div class="card mb-3 position-fixed">
                         <div class="card-body">
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                                 <button type="button" class="btn btn-secondary" id="boton.parto.guardar">Guardar</button>
@@ -78,7 +78,7 @@
                             <h5 class="card-title">Información del Parto</h5>
                             <hr class="mb-5">
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Término de Gestación</label>
                                         <select id="pm" class="form-control col-7">
@@ -88,7 +88,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Tipo de Parto</label>
                                         <select id="pm" class="form-control col-7">
@@ -98,7 +98,9 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Patologia materna</label>
                                         <select id="pm" class="form-control col-7">
@@ -107,9 +109,7 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Tipo Patologia materna</label>
                                         <select id="pm" class="form-control col-7">
@@ -117,13 +117,15 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Fecha de Parto</label>
                                         <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text">
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">E. Gestacional</label>
                                         <div class="input-group px-0 col-7">
@@ -207,13 +209,13 @@
                             <div class="row pt-2">
                                 <div class="col-2">
                                 </div>
-                                <div class="col-2 mr-2">
+                                <div class="col-3 mr-2">
                                     <p class="text-center">1.- Curva Nacional</p>
                                 </div>
-                                <div class="col-2 mr-2">
+                                <div class="col-3 mr-2">
                                     <p class="text-center">2.- Curva Regional</p>
                                 </div>
-                                <div class="col-2 mr-2">
+                                <div class="col-3 mr-2">
                                     <p class="text-center">3.- Curva Ajustada</p>
                                 </div>
                             </div>
@@ -221,28 +223,28 @@
                                 <div class="col-2">
                                     <label for="edadGestacional">Peso/Ege</label>
                                 </div>
-                                <div class="col-2 mr-2">
-                                    <input class="form-control" type="text">
+                                <div class="col-3 mr-2">
+                                    <input class="form-control" type="text" disabled>
                                 </div>
-                                <div class="col-2 mr-2">
-                                    <input class="form-control" type="text">
+                                <div class="col-3 mr-2">
+                                    <input class="form-control" type="text" disabled>
                                 </div>
-                                <div class="col-2 mr-2">
-                                    <input class="form-control" type="text">
+                                <div class="col-3 mr-2">
+                                    <input class="form-control" type="text" disabled>
                                 </div>
                             </div>
                             <div class="row pt-1">
                                 <div class="col-2">
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
-                                <div class="col-2 mr-2">
-                                    <input class="form-control" type="text">
+                                <div class="col-3 mr-2">
+                                    <input class="form-control" type="text" disabled>
                                 </div>
-                                <div class="col-2 mr-2">
-                                    <input class="form-control" type="text">
+                                <div class="col-3 mr-2">
+                                    <input class="form-control" type="text" disabled>
                                 </div>
-                                <div class="col-2 mr-2">
-                                    <input class="form-control" type="text">
+                                <div class="col-3 mr-2">
+                                    <input class="form-control" type="text" disabled>
                                 </div>
                             </div>
                         </div>
