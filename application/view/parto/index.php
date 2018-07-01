@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-8">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Información del Parto</h5>
@@ -239,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Patologia del RN</h5>
                             <hr class="mb-5">
