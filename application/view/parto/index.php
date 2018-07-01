@@ -387,7 +387,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid position-fixed bg-secondary" style="bottom:-20rem;left:0;">
+            <div id="contenedorListaPartos" class="container-fluid position-fixed bg-secondary" style="bottom:-20rem;left:0;">
                 <h5 class="m-4 text-white" id="listaPartos" data-hide="true">Lista de Ultimos Partos</h5>
                 <table class="table table-hover">
                     <thead class="thead-dark">
@@ -767,11 +767,11 @@
 
                     if (estado == true){
                         $(this).data("hide", false);
-                        $(this).css("top", "0");
+                        $("#contenedorListaPartos").css("top", "0");
                     }
                     else{
                         $(this).data("hide", true);
-                        $(this).css("top", "-20rem");
+                        $("#contenedorListaPartos").css("top", "-20rem");
                     }
                 });
 
