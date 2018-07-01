@@ -68,7 +68,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Información del Parto</h5>
-                            <hr class="mb-3">
+                            <hr class="mb-5">
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
@@ -156,7 +156,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Información del RN</h5>
-                            <hr class="mb-3">
+                            <hr class="mb-5">
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Peso RN</label>
@@ -242,7 +242,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Patologia del RN</h5>
-                            <hr class="mb-3">
+                            <hr class="mb-5">
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group row">
