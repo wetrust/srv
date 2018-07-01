@@ -46,7 +46,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <h5 class="card-title mb-3">Recién Nacido</h5>
+                            <h5 class="card-title mt-3">Datos del RN</h5>
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Número de Registro</label>
