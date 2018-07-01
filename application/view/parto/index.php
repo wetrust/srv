@@ -369,7 +369,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid position-fixed" style="bottom:-6rem;left:0;">
+            <div class="container-fluid position-fixed bg-secondary" style="bottom:-6rem;left:0;">
                 <h5>Lista de Partos</h5>
                 <table class="table table-hover">
                     <thead class="thead-dark">
