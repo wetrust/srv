@@ -382,6 +382,41 @@
                         </tr>
                     </thead>
                     <tbody id="table.ecografia.primtrim">
+                        <tr>
+                            <td>#</td>
+                            <td>Fecha exámen</td>
+                            <td>EG</td>
+                            <td>Medida embrion</td>
+                            <td>Prom. Saco</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>Fecha exámen</td>
+                            <td>EG</td>
+                            <td>Medida embrion</td>
+                            <td>Prom. Saco</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>Fecha exámen</td>
+                            <td>EG</td>
+                            <td>Medida embrion</td>
+                            <td>Prom. Saco</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>Fecha exámen</td>
+                            <td>EG</td>
+                            <td>Medida embrion</td>
+                            <td>Prom. Saco</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>Fecha exámen</td>
+                            <td>EG</td>
+                            <td>Medida embrion</td>
+                            <td>Prom. Saco</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
