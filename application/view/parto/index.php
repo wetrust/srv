@@ -23,7 +23,7 @@
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
-                <div class="col-3">
+                <div class="col-12 col-sm-3 order-sm-1">
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-9">
+                <div class="col-12 col-sm-9">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3">Datos de la madre</h5>
