@@ -199,13 +199,13 @@
                             <div class="row pt-2">
                                 <div class="col-2">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 mr-2">
                                     <p class="text-center">1.- Curva Nacional</p>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 mr-2">
                                     <p class="text-center">2.- Curva Regional</p>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 mr-2">
                                     <p class="text-center">3.- Curva Ajustada</p>
                                 </div>
                             </div>
@@ -213,13 +213,13 @@
                                 <div class="col-2">
                                     <label for="edadGestacional">Peso/Ege</label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2 mr-2">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2 mr-2">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2 mr-2">
                                     <input class="form-control" type="text">
                                 </div>
                             </div>
@@ -227,13 +227,13 @@
                                 <div class="col-2">
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2 mr-2">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2 mr-2">
                                     <input class="form-control" type="text">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2 mr-2">
                                     <input class="form-control" type="text">
                                 </div>
                             </div>
