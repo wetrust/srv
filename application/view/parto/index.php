@@ -47,7 +47,7 @@
                                     <input class="form-control" type="text">
                                 </div>
                                 <div class="col-3">
-                                    <button type="button" class="btn btn-primary mt-5">Buscar</button>
+                                    <button type="button" class="btn btn-primary mt-4">Buscar</button>
                                 </div>
                             </div>
                         </div>

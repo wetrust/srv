@@ -12,29 +12,29 @@ $(document).ready(function(){
     appLoadBasic();
 });
 
-$(window).scroll(function(){
-    let a = $(window).scrollTop();
-    let b = 0;
-    if ($("#").hasClass("active") == true){
-        b = $("#ecoObsSegTrimContainer").height() - $("#ecoObsSegTrimMenu").height() - 100;
-    }
-    else{
-        b = $("#ecoObsSegTrimContainer").height() - $("#ecoDopplerMenu").height() - 100; 
-    }
+//$(window).scroll(function(){
+//    let a = $(window).scrollTop();
+//    let b = 0;
+//    if ($("#").hasClass("active") == true){
+//        b = $("#ecoObsSegTrimContainer").height() - $("#ecoObsSegTrimMenu").height() - 100;
+//    }
+//    else{
+//        b = $("#ecoObsSegTrimContainer").height() - $("#ecoDopplerMenu").height() - 100; 
+//    }
     
-    if (a < b){
-        $("#ecoObsSegTrimMenu").addClass("position-fixed").removeClass("position-absolute");
-        $("#ecoDopplerMenu").addClass("position-fixed").removeClass("position-absolute");
-        $("#ecoObsSegTrimMenu").css("top","");
-        $("#ecoDopplerMenu").css("top","");
-    }
-    else if ( a > b){
-        $("#ecoObsSegTrimMenu").addClass("position-absolute").removeClass("position-fixed");
-        $("#ecoObsSegTrimMenu").css("top","calc(100% - 23.5rem)");
-        $("#ecoDopplerMenu").addClass("position-absolute").removeClass("position-fixed");
-        $("#ecoDopplerMenu").css("top","calc(100% - 23.5rem)");
-    }
-});
+//    if (a < b){
+//        $("#ecoObsSegTrimMenu").addClass("position-fixed").removeClass("position-absolute");
+//        $("#ecoDopplerMenu").addClass("position-fixed").removeClass("position-absolute");
+//        $("#ecoObsSegTrimMenu").css("top","");
+//        $("#ecoDopplerMenu").css("top","");
+//    }
+//    else if ( a > b){
+//        $("#ecoObsSegTrimMenu").addClass("position-absolute").removeClass("position-fixed");
+//        $("#ecoObsSegTrimMenu").css("top","calc(100% - 23.5rem)");
+//        $("#ecoDopplerMenu").addClass("position-absolute").removeClass("position-fixed");
+//        $("#ecoDopplerMenu").css("top","calc(100% - 23.5rem)");
+//    }
+//});
 
 //funciones de botones
 $(document).ready(function(){

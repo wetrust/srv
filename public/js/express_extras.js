@@ -2488,6 +2488,111 @@ function loadExamen(tipo, id){
     });
 }
 
+function calcularRiesgo(){
+    var picker = input.pickadate('picker');
+
+    var dateNac=(picker.get('select'));
+     console.log(dateNac);
+
+
+     var compr =parseInt($()('compCab').value);
+
+     var trasl =parseInt(document.getElementById('Traslucencia').value );
+        
+        
+     if( dateNac!== null  && !Number.isNaN(compr)  ){ 
+
+
+         age=2018-dateNac.year;
+
+         NT=Number(trasl)
+
+         var gestationalAge =cacularGA(Number(compr))
+         lista=crlDependant(NT,compr);
+         var risk=lista[0];
+         riskT21=riskPriori(age,gestationalAge);
+         riskT18=(1/0.62)*riskT21;
+         riskT13=(1/0.2)*riskT21;
+
+
+         var mixtureModelCRL=lista[1];
+    
+         mixMod21=crlIndependantT21(NT,risk);
+       
+         mixMod18=crlIndependantT18(NT,risk);
+         mixMod13=crlIndependantT13(NT,risk);
+         LR21=cacularLR(mixtureModelCRL,mixMod21);
+         LR18=cacularLR(mixtureModelCRL,mixMod18);
+         LR13=cacularLR(mixtureModelCRL,mixMod13);
+         factor=relPrev();
+         risk=riskPriori();
+         
+         riskT21=Math.round(riskT21);
+
+
+         var sDownRepetido = document.getElementById('radio-choice-h-2a').checked;
+         console.log(sDownRepetido);      
+          if(sDownRepetido){
+             riskT21=(1/riskT21);
+             riskT21=riskT21+0.52;
+             riskT21=(100/riskT21);
+           }
+
+          document.getElementById("myText").innerHTML = (Math.round(riskT21) )  ;
+          document.getElementById("myText2").innerHTML =(Math.round(riskT18) )  ;
+          document.getElementById("myText3").innerHTML =(Math.round(riskT13) )  ;
+
+          document.getElementById("myText4").innerHTML = (Math.round( riskT21*(1/LR21) ));
+          document.getElementById("myText5").innerHTML = (Math.round( riskT18*(1/LR18) )) ;
+          document.getElementById("myText6").innerHTML = (Math.round(  riskT13*(1/LR13)));
+
+      
+          if(!isNaN(riskT21)){
+          var probView=document.getElementById("prob");
+          probView.style.display='block';
+           }
+            bloquearErrores();
+         if(!isNaN(NT)){
+
+          var probView2=document.getElementById("prob2");
+          probView2.style.display='block';
+          } 
+
+          else{
+                        var probView2=document.getElementById("prob2");
+          probView2.style.display='none';
+          }     
+
+
+        
+
+     }
+     else{
+         bloquearCalculos();
+         var viewErrores=document.getElementById("errores");
+         viewErrores.style.display='block';
+   
+
+       if(Number.isNaN(compr)){
+
+
+         var comprErr=document.getElementById("comprErr");
+         comprErr.style.display='block';
+       }
+       else{
+         bloquearErrores("comprErr");
+       }
+       if(dateNac===null ){
+         var NacErr=document.getElementById("NacErr");
+         NacErr.style.display='block';
+       }
+       else{
+         bloquearErrores("NacErr");
+       }
+   }
+
+}
+
 function appLoadBasic(){
     //cargar los ultimos pacientes de la bd
     loadTablePatients();
