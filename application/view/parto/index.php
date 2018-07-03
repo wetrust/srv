@@ -36,8 +36,10 @@
                 <div class="col-12 col-sm-10">
                 <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title mb-3">Buscar</h5>
                             <div class="row">
+                                <div class="col-3">
+                                    <h5 class="card-title mb-3">Buscar</h5>
+                                </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">ID de la madre</label>
                                     <input class="form-control" type="text">
@@ -87,6 +89,14 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Apellido</label>
                                     <input class="form-control" type="text">
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Sexo de RN</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0" selected>Masculino</option>
+                                        <option value="1">Femenino</option>
+                                        <option value="2">Indeterminado</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -273,14 +283,6 @@
                             <hr class="mb-5">
                             <div class="row">
                                 <div class="col-4">
-                                    <label for="edadGestacional">Sexo de RN</label>
-                                    <select id="pm" class="form-control">
-                                        <option value="0" selected>Masculino</option>
-                                        <option value="1">Femenino</option>
-                                        <option value="2">Indeterminado</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
                                     <label for="edadGestacional">Peso Placentario</label>
                                     <div class="input-group">
                                         <input class="form-control" type="text">
@@ -305,8 +307,6 @@
                                         <option value="10">10</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Apar 5° Min.</label>
                                     <select id="pm" class="form-control">
@@ -322,6 +322,10 @@
                                         <option value="9">9</option>
                                         <option value="10">10</option>
                                     </select>
+                                </div>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-4">
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Hipoglicemia sospechada</label>
