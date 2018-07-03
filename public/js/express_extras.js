@@ -1083,7 +1083,13 @@ function getDCM(RUTPACIENTE, FechaExm){
         mes = "0" + mes;
     }
 
-    $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + mes + FechaExm.getDate()).done(function(data) {
+    let dia = FechaExm.getDate();
+
+    if (dia < 10){
+        dia = "0" + dia;
+    }
+
+    $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + mes + dia).done(function(data) {
         if (data.exist == true ){
             StudyDate =  data.StudyDate;
             $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate).done(function(data) {
