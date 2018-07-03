@@ -200,7 +200,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Peso RN</label>
                                     <div class="input-group">
-                                        <input class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="datos.neonatal.peso" min="0" max="9999" type="number">
+                                        <input class="form-control" id="datos.neonatal.peso" min="0" max="9999" type="number">
                                         <div class="input-group-append">
                                             <div class="input-group-text">grs.</div>
                                         </div>
@@ -209,7 +209,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Talla RN</label>
                                     <div class="input-group">
-                                        <input class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number">
+                                        <input class="form-control" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number">
                                         <div class="input-group-append">
                                             <div class="input-group-text">mm.</div>
                                         </div>
@@ -227,7 +227,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Indices calculados (Ipn)</label>
                                     <div class="input-group">
-                                        <input class="form-control col-3" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="datos.neonatal.ipn" disabled type="number">
+                                        <input class="form-control col-3" id="datos.neonatal.ipn" disabled type="number">
                                         <div class="input-group-append">
                                             <div class="input-group-text">mm.</div>
                                         </div>
