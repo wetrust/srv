@@ -227,7 +227,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Indices calculados (Ipn)</label>
                                     <div class="input-group">
-                                        <input class="form-control col-3" id="datos.neonatal.ipn" disabled type="number">
+                                        <input class="form-control" id="datos.neonatal.ipn" disabled type="number">
                                         <div class="input-group-append">
                                             <div class="input-group-text">mm.</div>
                                         </div>
