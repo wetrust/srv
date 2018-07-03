@@ -38,7 +38,8 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-3">
-                                    <h5 class="card-title mb-3">Buscar</h5>
+                                    <h5 class="card-title mb-3">Buscar Pacientes</h5>
+                                    <p>Por:</p>
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">ID de la madre</label>
@@ -108,47 +109,6 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Término de Gestación</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0" selected>Parto</option>
-                                            <option value="1">Aborto</option>
-                                            <option value="2">Desconocido</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Tipo de Parto</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0" selected>Vaginal</option>
-                                            <option value="1">Cesarea</option>
-                                            <option value="2">Forceps</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Patologia materna</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0" selected>Si</option>
-                                            <option value="1">No</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Tipo Patologia materna</label>
-                                        <select id="pm" class="form-control col-7">
-                                            <option value="0" selected></option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Fecha de Parto</label>
                                         <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text">
                                     </div>
@@ -186,6 +146,47 @@
                                                 <div class="input-group-text">sem.</div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Término de Gestación</label>
+                                        <select id="pm" class="form-control col-7">
+                                            <option value="0" selected>Parto</option>
+                                            <option value="1">Aborto</option>
+                                            <option value="2">Desconocido</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Tipo de Parto</label>
+                                        <select id="pm" class="form-control col-7">
+                                            <option value="0" selected>Vaginal</option>
+                                            <option value="1">Cesarea</option>
+                                            <option value="2">Forceps</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Patologia materna</label>
+                                        <select id="pm" class="form-control col-7">
+                                            <option value="0" selected>Si</option>
+                                            <option value="1">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="edadGestacional" class="col-5">Tipo Patologia materna</label>
+                                        <select id="pm" class="form-control col-7">
+                                            <option value="0" selected></option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
