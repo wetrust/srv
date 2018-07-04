@@ -22,7 +22,7 @@
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
-            <div class="row mt-2">
+            <div class="row mt-2 mb-5 pb-5">
                 <div class="col-12 col-sm-2 order-sm-1">
                     <div class="card mb-3 position-fixed">
                         <div class="card-body">
@@ -773,6 +773,12 @@
         </div>
         <script type="text/javascript">
             $( document ).ready(function() {
+
+                $("#boton\\.parto\\.guardar").on("click", function(){
+                    var parto = {
+                        id
+                    }
+                });
 
                 $("#listaPartos").on("click", function(){
                     let estado = $(this).data("hide");
