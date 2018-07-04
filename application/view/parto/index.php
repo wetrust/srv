@@ -46,7 +46,7 @@
                                     <input class="form-control" type="text">
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">N° ID del Recien Nacido</label>
+                                    <label for="edadGestacional">N° ID del Recién Nacido</label>
                                     <input class="form-control" type="text">
                                 </div>
                                 <div class="col-3">
@@ -63,11 +63,11 @@
                                     <label for="edadGestacional">N° de Registro</label>
                                     <input class="form-control" type="text" id="id_parto">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <label for="edadGestacional">Nombre</label>
                                     <input class="form-control" type="text" id="nombre_madre">
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <label for="edadGestacional">Apellido</label>
                                     <input class="form-control" type="text" id="apellido_madre">
                                 </div>
