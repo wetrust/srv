@@ -835,6 +835,12 @@
                         $(this).val(min);
                     }
                 });
+                $("#datos\\.neonatal\\.peso").on("keyup", function(event){
+                    if ( event.which == 13 ) {
+                        event.preventDefault();
+                        $("#datos\\.neonatal\\.talla").focus();
+                    }
+                });
 
                 $("#datos\\.neonatal\\.talla").on("keyup", function(){
                     var max = parseInt($(this).attr('max'));
