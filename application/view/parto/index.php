@@ -238,13 +238,13 @@
                             <div class="row pt-2">
                                 <div class="col-2">
                                 </div>
-                                <div class="col-3 mr-2">
+                                <div class="col-2">
                                     <p class="text-center">1.- Curva Nacional</p>
                                 </div>
-                                <div class="col-3 mr-2">
+                                <div class="col-3">
                                     <p class="text-center">2.- Curva Regional</p>
                                 </div>
-                                <div class="col-3 mr-2">
+                                <div class="col-3">
                                     <p class="text-center">3.- Curva Ajustada</p>
                                 </div>
                             </div>
