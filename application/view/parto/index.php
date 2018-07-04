@@ -63,11 +63,11 @@
                                     <label for="edadGestacional">N° de Registro</label>
                                     <input class="form-control" type="text" id="id_parto">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <label for="edadGestacional">Nombre</label>
                                     <input class="form-control" type="text" id="nombre_madre">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-4">
                                     <label for="edadGestacional">Apellido</label>
                                     <input class="form-control" type="text" id="apellido_madre">
                                 </div>
