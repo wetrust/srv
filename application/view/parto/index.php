@@ -784,9 +784,9 @@
             $( document ).ready(function() {
 
                 $("#boton\\.parto\\.guardar").on("click", function(){
-                    var parto = {
-                        id
-                    }
+                    //var parto = {
+                    //    id
+                    //}
                 });
 
                 $("#goto_ajuste").on("click", funtion(){
