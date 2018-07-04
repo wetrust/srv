@@ -261,6 +261,9 @@
                                 <div class="col-3 mr-2">
                                     <input class="form-control" type="text" disabled>
                                 </div>
+                                <div class="col-2 mr-2">
+                                    <button type="button" class="btn btn-secondary">Ver Variables</button>
+                                </div>
                             </div>
                             <div class="row pt-1">
                                 <div class="col-2">
