@@ -620,7 +620,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Crecimiento categorizado</h5>
                             <div class="row pt-2">
-                                <div class="col-2">
+                                <div class="col-1">
                                 </div>
                                 <div class="col-2">
                                     <p class="text-center">1.- Curva Nacional</p>
@@ -628,12 +628,12 @@
                                 <div class="col-2">
                                     <p class="text-center">2.- Curva Regional</p>
                                 </div>
-                                <div class="col-2">
-                                    <p class="text-center">3.- Curva Ajustada</p>
+                                <div class="col-3">
+                                    <p class="text-center">3.- Curva regional Ajustada</p>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-1">
                                     <label for="edadGestacional">Peso/Ege</label>
                                 </div>
                                 <div class="col-2">
@@ -642,7 +642,7 @@
                                 <div class="col-2">
                                     <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-4 p-0">
@@ -650,7 +650,7 @@
                                 </div>
                             </div>
                             <div class="row pt-1">
-                                <div class="col-2">
+                                <div class="col-1">
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
                                 <div class="col-2">
@@ -658,9 +658,6 @@
                                 </div>
                                 <div class="col-2">
                                     <input class="form-control bg-white" type="text" id="ipn_eg_regional" disabled>
-                                </div>
-                                <div class="col-2">
-                                    <input class="form-control bg-white" type="text" id="ipn_eg_ajustado" disabled>
                                 </div>
                             </div>
                         </div>
