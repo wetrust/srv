@@ -656,10 +656,10 @@
                                 <div class="col-2">
                                     <input class="form-control bg-white" type="text" id="ipn_eg_nacional" disabled>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <input class="form-control bg-white" type="text" id="ipn_eg_regional" disabled>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <input class="form-control bg-white" type="text" id="ipn_eg_ajustado" disabled>
                                 </div>
                             </div>
