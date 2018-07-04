@@ -218,7 +218,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Perimetro Craneo</label>
                                     <div class="input-group">
-                                        <input class="form-control" type="text" id="perimetro_craneo_rn">
+                                        <input class="form-control" type="number" min="0" max="999" id="perimetro_craneo_rn">
                                         <div class="input-group-append">
                                             <div class="input-group-text">mm.</div>
                                         </div>
@@ -289,7 +289,7 @@
                                 <div class="col-4">
                                     <label for="edadGestacional">Peso Placentario</label>
                                     <div class="input-group">
-                                        <input class="form-control" type="text">
+                                        <input class="form-control" id="peso_placentario" type="number" min="0" max="9999">
                                         <div class="input-group-append">
                                             <div class="input-group-text">grs.</div>
                                         </div>
@@ -808,7 +808,9 @@
                     var min = parseInt($(this).attr('min'));
                     
                     if ($(this).val() > max){
-                        $(this).val(max);
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
                     }
                     else if ($(this).val() < min)
                     {
@@ -824,7 +826,9 @@
                     var min = parseInt($(this).attr('min'));
                     
                     if ($(this).val() > max){
-                        $(this).val(max);
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
                     }
                     else if ($(this).val() < min)
                     {
@@ -837,7 +841,9 @@
                     var min = parseInt($(this).attr('min'));
                     
                     if ($(this).val() > max){
-                        $(this).val(max);
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
                     }
                     else if ($(this).val() < min)
                     {
@@ -849,13 +855,45 @@
                     var max = parseInt($(this).attr('max'));
                     var min = parseInt($(this).attr('min'));
                     if ($(this).val() > max){
-                        $(this).val(max);
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
                     }
                     else if ($(this).val() < min){
                         $(this).val(min);
                     }
                     $("#tallaRN").val($(this).val());
                     $("#tallaRN").trigger("change");
+                });
+
+                $("#perimetro_craneo_rn").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#peso_placentario").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
                 });
 
                 $("#datos\\.neonatal\\.edad").on("change", function(){
