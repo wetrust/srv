@@ -618,17 +618,17 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title mt-5">Crecimiento categorizado</h5>
+                            <h5 class="card-title">Crecimiento categorizado</h5>
                             <div class="row pt-2">
                                 <div class="col-2">
                                 </div>
                                 <div class="col-2">
                                     <p class="text-center">1.- Curva Nacional</p>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <p class="text-center">2.- Curva Regional</p>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <p class="text-center">3.- Curva Ajustada</p>
                                 </div>
                             </div>
@@ -639,13 +639,13 @@
                                 <div class="col-2">
                                     <input class="form-control" type="text" id="peso_eg_nacional" disabled>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
-                                <div class="col-2 p-0">
+                                <div class="col-4 p-0">
                                     <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables para ajuste Peso / EG</button>
                                 </div>
                             </div>
