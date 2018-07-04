@@ -646,7 +646,7 @@
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-2 p-0">
-                                    <button type="button" class="btn btn-secondary">Ver Variables</button>
+                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables</button>
                                 </div>
                             </div>
                             <div class="row pt-1">
@@ -787,6 +787,10 @@
                     var parto = {
                         id
                     }
+                });
+
+                $("#goto_ajuste").on("click", funtion(){
+                    document.location.hash = "#ajustepeso";
                 });
 
                 $("#listaPartos").on("click", function(){
