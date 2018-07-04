@@ -287,11 +287,11 @@
                                 <div class="col-4">
                                     <label for="edadGestacional">Riesgo de Hipoglicemia</label>
                                     <select id="pm" class="form-control">
-                                        <option value="0">RN Pretérmino 34 - 36.6 semanas</option>
-                                        <option value="1">RN PEG (<10)</option>
+                                        <option value="0">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
-                                        <option value="1">Hijo madre DM GEG IP > 3.3</option>
-                                        <option value="1">Sin riesgo clínico de hipoglicemia</option>
+                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
+                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
+                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
@@ -646,7 +646,7 @@
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-4 p-0">
-                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables para ajuste Peso / EG</button>
+                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables para ajuste Peso / Ege</button>
                                 </div>
                             </div>
                             <div class="row pt-1">
