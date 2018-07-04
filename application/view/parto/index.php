@@ -61,19 +61,19 @@
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Número de Registro</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="id_parto">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Nombre</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="nombre_madre">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Apellido</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="apellido_madre">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Lugar de parto</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="pm" class="form-control" id="lugar_parto_rn">
                                     </select>
                                 </div>
                             </div>
@@ -81,19 +81,19 @@
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Número de Registro</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="id_rn">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Nombre</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="nombre_rn">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Apellido</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="apellido_rn">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Sexo de RN</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="sexo_rn" class="form-control">
                                         <option value="0" selected>Masculino</option>
                                         <option value="1">Femenino</option>
                                         <option value="2">Indeterminado</option>
@@ -110,14 +110,14 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Fecha de Parto</label>
-                                        <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text">
+                                        <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">E. Gestacional</label>
                                         <div class="input-group px-0 col-7">
-                                            <select id="datos.neonatal.edad" class="form-control">
+                                            <select id="datos.neonatal.edad" class="form-control" id="eg_parto">
                                                 <option value="20">20</option>
                                                 <option value="21">21</option>
                                                 <option value="22">22</option>
@@ -153,7 +153,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Término de Gestación</label>
-                                        <select id="pm" class="form-control col-7">
+                                        <select id="termino_parto" class="form-control col-7">
                                             <option value="0" selected>Parto</option>
                                             <option value="1">Aborto</option>
                                             <option value="2">Desconocido</option>
@@ -163,7 +163,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Tipo de Parto</label>
-                                        <select id="pm" class="form-control col-7">
+                                        <select id="tipo_parto" class="form-control col-7">
                                             <option value="0" selected>Vaginal</option>
                                             <option value="1">Cesarea</option>
                                             <option value="2">Forceps</option>
@@ -175,7 +175,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Patologia materna</label>
-                                        <select id="pm" class="form-control col-7">
+                                        <select id="patologia_materna" class="form-control col-7">
                                             <option value="0" selected>Si</option>
                                             <option value="1">No</option>
                                         </select>
@@ -184,7 +184,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Tipo Patologia materna</label>
-                                        <select id="pm" class="form-control col-7">
+                                        <select id="tipo_patologia_materna" class="form-control col-7">
                                             <option value="0" selected></option>
                                         </select>
                                     </div>
@@ -218,7 +218,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Perimetro Craneo</label>
                                     <div class="input-group">
-                                        <input class="form-control" type="text">
+                                        <input class="form-control" type="text" id="perimetro_craneo_rn">
                                         <div class="input-group-append">
                                             <div class="input-group-text">mm.</div>
                                         </div>
@@ -253,13 +253,13 @@
                                     <label for="edadGestacional">Peso/Ege</label>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control" type="text" disabled>
+                                    <input class="form-control" type="text" id="peso_eg_nacional" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" disabled>
+                                    <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" disabled>
+                                    <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-2 p-0">
                                     <button type="button" class="btn btn-secondary">Ver Variables</button>
@@ -270,13 +270,13 @@
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control" type="text" disabled>
+                                    <input class="form-control" type="text" id="ipn_eg_nacional" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" disabled>
+                                    <input class="form-control" type="text" id="ipn_eg_regional" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" disabled>
+                                    <input class="form-control" type="text" id="ipn_eg_ajustado" disabled>
                                 </div>
                             </div>
                         </div>
@@ -330,21 +330,24 @@
                             </div>
                             <div class="row pt-3">
                                 <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia sospechada</label>
+                                    <label for="edadGestacional">Riesgo de Hipoglicemia</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">RN Pretérmino 34 - 36.6 semanas</option>
+                                        <option value="1">RN PEG (<10)</option>
+                                        <option value="1">RN GEG (IP > 3.3)</option>
+                                        <option value="1">Hijo madre DM GEG IP > 3.3</option>
+                                        <option value="1">No</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional">Hipoglicemia sospechada Clínica</label>
                                     <select id="pm" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia confirmada</label>
-                                    <select id="pm" class="form-control">
-                                        <option value="0">Si</option>
-                                        <option value="1">No</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional">Hiperbilirrubinemia</label>
+                                    <label for="edadGestacional">Hipoglicemia confirmación Laboratorio</label>
                                     <select id="pm" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
@@ -352,6 +355,13 @@
                                 </div>
                             </div>
                             <div class="row pt-3">
+                                <div class="col-4">
+                                    <label for="edadGestacional">Hiperbilirrubinemia</label>
+                                    <select id="pm" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
+                                </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Poliglobulia</label>
                                     <select id="pm" class="form-control">
@@ -366,6 +376,8 @@
                                         <option value="1">No</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Sindrome D.Respiratorio</label>
                                     <select id="pm" class="form-control">
@@ -373,8 +385,6 @@
                                         <option value="1">No</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Alta con su madre</label>
                                     <select id="pm" class="form-control">
