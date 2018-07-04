@@ -806,6 +806,7 @@
                 $("#datos\\.neonatal\\.peso").on("change", function(){
                     var max = parseInt($(this).attr('max'));
                     var min = parseInt($(this).attr('min'));
+                    
                     if ($(this).val() > max){
                         $(this).val(max);
                     }
@@ -813,6 +814,7 @@
                     {
                         $(this).val(min);
                     }
+                    
                     $("#pesoRN").val($(this).val());
                     $("#pesoRN").trigger("change");
                 });
