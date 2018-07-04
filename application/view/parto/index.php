@@ -42,11 +42,11 @@
                                     <p>Por:</p>
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">ID de la madre</label>
+                                    <label for="edadGestacional">N° ID de la Madre</label>
                                     <input class="form-control" type="text">
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">ID del Recien Nacido</label>
+                                    <label for="edadGestacional">N° ID del Recien Nacido</label>
                                     <input class="form-control" type="text">
                                 </div>
                                 <div class="col-3">
