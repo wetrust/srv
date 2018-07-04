@@ -789,7 +789,7 @@
                     //}
                 });
 
-                $("#goto_ajuste").on("click", funtion(){
+                $("#goto_ajuste").on("click", function(){
                     document.location.hash = "#ajustepeso";
                 });
 
