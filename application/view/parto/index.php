@@ -60,7 +60,7 @@
                             <h5 class="card-title mb-3">Datos de la madre</h5>
                             <div class="row">
                                 <div class="col-2">
-                                    <label for="edadGestacional">Número de Registro</label>
+                                    <label for="edadGestacional">N° de Registro</label>
                                     <input class="form-control" type="text" id="id_parto">
                                 </div>
                                 <div class="col-3">
@@ -79,8 +79,8 @@
                             </div>
                             <h5 class="card-title mt-3">Datos del RN</h5>
                             <div class="row">
-                                <div class="col-3">
-                                    <label for="edadGestacional">Número de Registro</label>
+                                <div class="col-2">
+                                    <label for="edadGestacional">N° de Registro</label>
                                     <input class="form-control" type="text" id="id_rn">
                                 </div>
                                 <div class="col-3">
@@ -91,7 +91,7 @@
                                     <label for="edadGestacional">Apellido</label>
                                     <input class="form-control" type="text" id="apellido_rn">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-4">
                                     <label for="edadGestacional">Sexo de RN</label>
                                     <select id="sexo_rn" class="form-control">
                                         <option value="0" selected>Masculino</option>
