@@ -252,16 +252,16 @@
                                 <div class="col-2">
                                     <label for="edadGestacional">Peso/Ege</label>
                                 </div>
-                                <div class="col-3 mr-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text" disabled>
                                 </div>
-                                <div class="col-3 mr-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text" disabled>
                                 </div>
-                                <div class="col-3 mr-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text" disabled>
                                 </div>
-                                <div class="col-2 mr-2">
+                                <div class="col-2 p-0">
                                     <button type="button" class="btn btn-secondary">Ver Variables</button>
                                 </div>
                             </div>
