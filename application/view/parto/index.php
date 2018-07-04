@@ -234,51 +234,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="card-title mt-5">Crecimiento categorizado</h5>
-                            <div class="row pt-2">
-                                <div class="col-2">
-                                </div>
-                                <div class="col-2">
-                                    <p class="text-center">1.- Curva Nacional</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class="text-center">2.- Curva Regional</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class="text-center">3.- Curva Ajustada</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-2">
-                                    <label for="edadGestacional">Peso/Ege</label>
-                                </div>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" id="peso_eg_nacional" disabled>
-                                </div>
-                                <div class="col-3">
-                                    <input class="form-control" type="text" id="peso_eg_regional" disabled>
-                                </div>
-                                <div class="col-3">
-                                    <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
-                                </div>
-                                <div class="col-2 p-0">
-                                    <button type="button" class="btn btn-secondary">Ver Variables</button>
-                                </div>
-                            </div>
-                            <div class="row pt-1">
-                                <div class="col-2">
-                                    <label for="edadGestacional">Ipn/Ege</label>
-                                </div>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" id="ipn_eg_nacional" disabled>
-                                </div>
-                                <div class="col-3">
-                                    <input class="form-control" type="text" id="ipn_eg_regional" disabled>
-                                </div>
-                                <div class="col-3">
-                                    <input class="form-control" type="text" id="ipn_eg_ajustado" disabled>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="card mb-3">
@@ -663,7 +618,51 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <p>En construcción</p>
+                            <h5 class="card-title mt-5">Crecimiento categorizado</h5>
+                            <div class="row pt-2">
+                                <div class="col-2">
+                                </div>
+                                <div class="col-2">
+                                    <p class="text-center">1.- Curva Nacional</p>
+                                </div>
+                                <div class="col-3">
+                                    <p class="text-center">2.- Curva Regional</p>
+                                </div>
+                                <div class="col-3">
+                                    <p class="text-center">3.- Curva Ajustada</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <label for="edadGestacional">Peso/Ege</label>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control" type="text" id="peso_eg_nacional" disabled>
+                                </div>
+                                <div class="col-3">
+                                    <input class="form-control" type="text" id="peso_eg_regional" disabled>
+                                </div>
+                                <div class="col-3">
+                                    <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
+                                </div>
+                                <div class="col-2 p-0">
+                                    <button type="button" class="btn btn-secondary">Ver Variables</button>
+                                </div>
+                            </div>
+                            <div class="row pt-1">
+                                <div class="col-2">
+                                    <label for="edadGestacional">Ipn/Ege</label>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control" type="text" id="ipn_eg_nacional" disabled>
+                                </div>
+                                <div class="col-3">
+                                    <input class="form-control" type="text" id="ipn_eg_regional" disabled>
+                                </div>
+                                <div class="col-3">
+                                    <input class="form-control" type="text" id="ipn_eg_ajustado" disabled>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
