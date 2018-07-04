@@ -646,7 +646,7 @@
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-2 p-0">
-                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables</button>
+                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables para ajuste Peso / EG</button>
                                 </div>
                             </div>
                             <div class="row pt-1">
@@ -654,13 +654,13 @@
                                     <label for="edadGestacional">Ipn/Ege</label>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control" type="text" id="ipn_eg_nacional" disabled>
+                                    <input class="form-control bg-white" type="text" id="ipn_eg_nacional" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" id="ipn_eg_regional" disabled>
+                                    <input class="form-control bg-white" type="text" id="ipn_eg_regional" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" id="ipn_eg_ajustado" disabled>
+                                    <input class="form-control bg-white" type="text" id="ipn_eg_ajustado" disabled>
                                 </div>
                             </div>
                         </div>
