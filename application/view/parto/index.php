@@ -336,18 +336,18 @@
                                         <option value="1">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
                                         <option value="1">Hijo madre DM GEG IP > 3.3</option>
-                                        <option value="1">No</option>
+                                        <option value="1">Sin riesgo clínico de hipoglicemia</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia sospechada Clínica</label>
+                                    <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
                                     <select id="pm" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia confirmación Laboratorio</label>
+                                    <label for="edadGestacional">Hipoglicemia confirmada (Lab.)</label>
                                     <select id="pm" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
@@ -804,11 +804,28 @@
                 });
 
                 $("#datos\\.neonatal\\.peso").on("change", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    if ($(this).val() > max){
+                        $(this).val(max);
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
                     $("#pesoRN").val($(this).val());
                     $("#pesoRN").trigger("change");
                 });
 
                 $("#datos\\.neonatal\\.talla").on("change", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    if ($(this).val() > max){
+                        $(this).val(max);
+                    }
+                    else if ($(this).val() < min){
+                        $(this).val(min);
+                    }
                     $("#tallaRN").val($(this).val());
                     $("#tallaRN").trigger("change");
                 });
