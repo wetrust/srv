@@ -59,7 +59,7 @@
                         <div class="card-body">
                             <h5 class="card-title mb-3">Datos de la madre</h5>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     <label for="edadGestacional">Número de Registro</label>
                                     <input class="form-control" type="text" id="id_parto">
                                 </div>
@@ -71,7 +71,7 @@
                                     <label for="edadGestacional">Apellido</label>
                                     <input class="form-control" type="text" id="apellido_madre">
                                 </div>
-                                <div class="col-3">
+                                <div class="col-4">
                                     <label for="edadGestacional">Lugar de parto</label>
                                     <select id="pm" class="form-control" id="lugar_parto_rn">
                                     </select>
