@@ -784,7 +784,7 @@
         <script type="text/javascript">
             $( document ).ready(function() {
 
-                $("body").on("background-color", "rgb(233, 246, 248)");
+                $("body").css("background-color", "rgb(233, 246, 248)");
                 $("#boton\\.parto\\.guardar").on("click", function(){
 
                     var parto = {
