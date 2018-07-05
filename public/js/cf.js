@@ -540,7 +540,7 @@ $(document).ready(function(){
 
     $("#guardarPatologiaMaterna").on("click", function(){
         var dataPatologia = {
-            patologia_name: $("#input\\.lugar").val()
+            patologia_name: $("#input\\.materna").val()
         }
 
         $.post(appUrl + "configuracion/savepatologiamaterna", dataPatologia).done(function (data) {
@@ -598,9 +598,7 @@ $(document).ready(function(){
         $("#eliminarPatologiaObstetrica").addClass("d-none");
     });
     
-    $("#editarPatologiaObstetrica").on("click", function(){
-
-    });
+    $("#editarPatologiaObstetrica").on("click", function(){ });
 
     $("#guardarPatologiaObstetrica").on("click", function(){
         var dataPatologia = {
