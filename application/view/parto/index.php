@@ -360,10 +360,10 @@
                 </div>
             </div>
             <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-secondary">
-                <a class="navbar-brand" href="#">Lista de Ultimos Partos</a>
+                <a class="navbar-brand" id="listaPartos" href="#">Lista de Ultimos Partos</a>
             </nav>
             <!-- <div id="contenedorListaPartos" class="container-fluid position-fixed bg-secondary" style="bottom:-20rem;left:0;">
-                <h5 class="m-4 text-white" id="listaPartos" data-hide="true">Lista de Ultimos Partos</h5>
+                <h5 class="m-4 text-white"  data-hide="true">Lista de Ultimos Partos</h5>
                 <table class="table table-hover">
                     <thead class="thead-dark">
                         <tr>
