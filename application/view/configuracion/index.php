@@ -31,12 +31,6 @@
                         <a class="nav-link" data-toggle="tab" href="#lc">Lugar Control prenatal</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#lp">Lugar de Parto</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#pm">Patología Materna</a>
-                     </li>
-                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#por">Tipo exámen solicitado</a>
                      </li>
                      <li class="nav-item">
@@ -54,6 +48,15 @@
                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#usuario">Usuario registrado</a>
                      </li>
+                  </ul>
+                  <h4 class="card-title">Opciones Parto</h4>
+                  <ul class="nav flex-column">
+                        <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#lp">Lugar de Parto</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#pm">Patología Materna</a>
+                        </li>
                   </ul>
                </div>
             </div>
