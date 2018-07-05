@@ -38,7 +38,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-3">
-                                    <h5 class="card-title mb-3">Buscar Pacientes</h5>
+                                    <h5 class="card-title mb-3"><i class="fas fa-search"></i> Buscar Pacientes</h5>
                                     <p>Por:</p>
                                 </div>
                                 <div class="col-3">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title mb-3">Datos de la madre</h5>
+                            <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
                             <div class="row">
                                 <div class="col-2">
                                     <label for="edadGestacional">N° de Registro</label>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Información del Parto</h5>
+                            <h5 class="card-title"><i class="fas fa-clipboard-list"></i> Información del Parto</h5>
                             <hr class="mb-5">
                             <div class="row">
                                 <div class="col-6">
@@ -195,7 +195,7 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Información del RN</h5>
+                            <h5 class="card-title"><i class="fas fa-child"></i> Información del RN</h5>
                             <hr class="mb-5">
                             <div class="row">
                                 <div class="col-3">
@@ -239,7 +239,7 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Patologia del RN</h5>
+                            <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN</h5>
                             <hr class="mb-5">
                             <div class="row">
                                 <div class="col-4">
@@ -360,7 +360,7 @@
                 </div>
             </div>
             <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary">
-                <a class="navbar-brand" id="listaPartos" href="#"><i class="fas fa-grip-horizontal"></i> Lista de Ultimos Partos</a>
+                <a class="navbar-brand" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
             </nav>
             <!-- <div id="contenedorListaPartos" class="container-fluid position-fixed bg-secondary" style="bottom:-20rem;left:0;">
                 <h5 class="m-4 text-white"  data-hide="true">Lista de Ultimos Partos</h5>
