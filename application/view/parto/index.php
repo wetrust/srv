@@ -816,7 +816,7 @@
                     }
 
                     var data = {
-                        rut: $("#id_paciente").val(),
+                        id: $("#id_paciente").val(),
                         tipo: 4,
                         data:JSON.stringify(parto)
                     }
