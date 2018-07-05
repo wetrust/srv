@@ -234,4 +234,19 @@ public function pr()
     {
         $this->View->renderJSON(ConfiguracionEmail::deleteEmail($email_id));
     }
+
+    public function lugarparto()
+    {
+        $this->View->renderJSON(LugarPartoModel::getAll());
+    }
+    public function savelugarparto()
+    {
+        $this->View->renderJSON(LugarPartoModel::createLugarParto(Request::post('lugar_name')));
+    }
+    public function eliminarlugarparto($lugar_id)
+    {
+        $result = LugarPartoModel::deleteLugarParto($lugar_id);
+
+        $this->View->renderJSON(LugarPartoModel::getAll());
+    }
 }

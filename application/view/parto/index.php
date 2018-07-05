@@ -789,6 +789,15 @@
             $( document ).ready(function() {
 
                 $("body").css("background-color", "rgb(233, 246, 248)");
+
+                $.get( serverURL + "configuracion/lugarparto", function( data ) {
+                    $("#lugar_parto_rn").empty();
+                    $.each(data, function (key, des) {
+                        let strSelect = "<option value='" + des.lugar_id +"'>" + des.lugar_name + "</option>";
+                        $("#lugar_parto_rn").append(strSelect);
+                    });
+                });
+
                 $("#boton\\.parto\\.guardar").on("click", function(){
 
                     var parto = {

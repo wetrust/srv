@@ -7,6 +7,7 @@ $(document).ready(function(){
     loadProfesional();
     loadProfesionalReferente();
     loadLugarControl();
+    loadLugarParto();
     loadPatologiaObstetrica();
     loadMotivoExamen();
     loadPrevision();
@@ -460,6 +461,70 @@ $(document).ready(function(){
         $("#modal\\.generico\\.container").modal("show");
     });
 
+    $("#nuevoLugarParto").on("click", function(){
+        $("#table\\.parto").addClass("d-none");
+        $("#form\\.parto").removeClass("d-none");
+        $("#input\\.parto").val("");
+        $("#nuevoLugarParto").addClass("d-none");
+        $("#guardarLugarParto").removeClass("d-none");
+        $("#cancelarLugarParto").removeClass("d-none");
+        $("#eliminarLugarParto").addClass("d-none");
+    });
+    
+    $("#editarLugarParto").on("click", function(){
+
+    });
+
+    $("#guardarLugarParto").on("click", function(){
+        var dataLugar = {
+            lugar_name: $("#input\\.parto").val()
+        }
+
+        $.post(appUrl + "configuracion/savelugarparto", dataLugar).done(function (data) {
+            $("#table\\.parto").removeClass("d-none");
+            $("#form\\.parto").addClass("d-none");
+            $("#input\\.parto").val("");
+            $("#nuevoLugarParto").removeClass("d-none");
+            $("#guardarLugarParto").addClass("d-none");
+            $("#cancelarLugarParto").addClass("d-none");
+            loadLugarParto();
+        });
+    });
+
+    $("#cancelarLugarParto").on("click", function(){
+        $("#table\\.parto").removeClass("d-none");
+        $("#form\\.parto").addClass("d-none");
+        $("#input\\.parto").val("");
+        $("#nuevoLugarParto").removeClass("d-none");
+        $("#guardarLugarParto").addClass("d-none");
+        $("#cancelarLugarParto").addClass("d-none");
+        loadLugarParto();
+    });
+
+    $("#eliminarLugarParto").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Lugar del Parto");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el lugar de parto seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.parto").children();
+            var lugar_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    lugar_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarlugarparto/" + lugar_id, function( data ) {
+                loadLugarParto();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
+
     $("#nuevaPatologiaObstetrica").on("click", function(){
         $("#table\\.patologia").addClass("d-none");
         $("#form\\.patologia").removeClass("d-none");
@@ -822,6 +887,20 @@ function loadLugarControl(){
     });
 }
 
+function loadLugarParto(){
+    $.get( appUrl + "configuracion/lugarparto", function( data ) {
+        $("#table\\.body\\.parto").empty();
+        $("#eliminarLugarParto").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.lugar_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.lugar_name +"</td></tr>";
+            $("#table\\.body\\.parto").append(strTable);
+            $("#eliminarLugarParto").removeClass("d-none");
+        });
+        $("#table\\.body\\.parto tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
 
 function loadPatologiaObstetrica(){
     $.get( appUrl + "configuracion/patologiaobstetrica", function( data ) {
