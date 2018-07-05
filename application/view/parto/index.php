@@ -61,7 +61,7 @@
                             <div class="row">
                                 <div class="col-2">
                                     <label for="edadGestacional">N° de Registro</label>
-                                    <input class="form-control" type="text" id="id_parto">
+                                    <input class="form-control" type="text" id="id_paciente">
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Nombre</label>
@@ -252,7 +252,7 @@
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Apar 1° Min.</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="apgar_1" class="form-control">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -268,7 +268,7 @@
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Apar 5° Min.</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="apgar_5" class="form-control">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -286,7 +286,7 @@
                             <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Riesgo de Hipoglicemia</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="hipoglicemia_riesgo" class="form-control">
                                         <option value="0">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
                                         <option value="2">Hijo madre DM GEG IP > 3.3</option>
@@ -296,14 +296,14 @@
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="hipoglicemia_sospechada" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Hipoglicemia confirmada (Lab.)</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="hipoglicemia_confirmada" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
@@ -312,21 +312,21 @@
                             <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="hiperbilirrubinemia" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Poliglobulia</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="poliglobulia" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Hospital - UCIN</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="hospital_ucin" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
@@ -335,14 +335,14 @@
                             <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Sindrome D.Respiratorio</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="sindrome_respiratorio" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Alta con su madre</label>
-                                    <select id="pm" class="form-control">
+                                    <select id="alta_con_madre" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
@@ -351,7 +351,7 @@
                             <div class="row pt-3">
                                 <div class="col-12">
                                     <label for="edadGestacional">Observaciones</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="observaciones">
                                 </div>
                             </div>
                         </div>
@@ -371,7 +371,7 @@
                             <th scope="col">Talla</th>
                         </tr>
                     </thead>
-                    <tbody id="table.ecografia.primtrim" class="text-white">
+                    <tbody id="table.ecografia.parto" class="text-white">
                         <tr>
                             <td>1</td>
                             <td>12345</td>
@@ -781,9 +781,66 @@
             $( document ).ready(function() {
 
                 $("#boton\\.parto\\.guardar").on("click", function(){
-                    //var parto = {
-                    //    id
-                    //}
+
+                    var parto = {
+                        id_paciente: $("#id_paciente").val(),
+                        nombre_madre: $("#nombre_madre").val(),
+                        apellido_madre: $("#apellido_madre").val(),
+                        lugar_parto_rn: $("#lugar_parto_rn").val(),
+                        id_rn: $("#id_rn").val(),
+                        nombre_rn: $("#nombre_rn").val(),
+                        apellido_rn: $("#apellido_rn").val(),
+                        sexo_rn: $("#sexo_rn").val(),
+                        fecha_parto_rn: $("#fecha_parto_rn").val()
+                        eg_parto: $("#datos\\.neonatal\\.edad").val(),
+                        termino_parto: $("#termino_parto").val(),
+                        tipo_parto: $("#tipo_parto").val(),
+                        patologia_materna: $("#patologia_materna").val(),
+                        tipo_patologia_materna: $("#tipo_patologia_materna").val(),
+                        peso_rn: $("#datos\\.neonatal\\.peso").val(),
+                        talla_rn: $("#datos\\.neonatal\\.talla").val(),
+                        perimetro_craneo_rn: $("#perimetro_craneo_rn").val(),
+                        ipn_rn: $("#datos\\.neonatal\\.ipn").val(),
+                        peso_placentario: $("#peso_placentario").val(),
+                        apgar_1: $("#apgar_1").val(),
+                        apgar_5: $("#apgar_5").val(),
+                        hipoglicemia_riesgo: $("#hipoglicemia_riesgo").val(),
+                        hipoglicemia_sospechada: $("#hipoglicemia_sospechada").val(),
+                        hipoglicemia_confirmada: $("#hipoglicemia_confirmada").val(),
+                        hiperbilirrubinemia: $("#hiperbilirrubinemia").val(),
+                        poliglobulia: $("#poliglobulia").val(),
+                        hospital_ucin: $("#hospital_ucin").val(),
+                        sindrome_respiratorio: $("#sindrome_respiratorio").val(),
+                        alta_con_madre: $("#alta_con_madre").val(),
+                        observaciones: $("#observaciones").val(),
+                    }
+
+                    var data = {
+                        rut: $("#id_paciente").val(),
+                        tipo: 4,
+                        data:JSON.stringify(parto)
+                    }
+
+                    $.post(serverURL + "examen/set/", data).done(function(response) {
+                        $("#table\\.ecografia\\.parto").empty();
+                        //if ( Object.keys(response).length > 0 ){
+                        //    $.each(response.data, function(i,val){
+                        //        let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="2">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
+                        //        
+                        //        let fila = '<tr><th>1</th>
+                        //    <td>12345</td>
+                        //    <td>56798</td>
+                        //    <td>40</td>
+                        //    <td>3080</td>
+                        //    <td>512</td>
+                        //</tr>
+                        //        $("#table\\.ecografia\\.parto").append(fila);
+                        //    });
+                        //    $("#table\\.ecografia\\.parto tr").on('click',function(){
+                        //        activateTr(this);
+                        //    });
+                        //}
+                    });
                 });
 
                 $("#goto_ajuste").on("click", function(){
