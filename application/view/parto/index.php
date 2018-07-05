@@ -73,7 +73,8 @@
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Lugar de parto</label>
-                                    <select id="pm" class="form-control" id="lugar_parto_rn">
+                                    <select class="form-control" id="lugar_parto_rn">
+                                        <option value="1">temuco</option>
                                     </select>
                                 </div>
                             </div>
