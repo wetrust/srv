@@ -4,7 +4,7 @@
  * LugarPartoModel
  * This is basically a simple CRUD (Create/Read/Update/Delete) demonstration.
  */
-class PatologiaObstetricaModel
+class PatologiaMaternaModel
 {
     /**
      * Get all lcp (lcp are just example data that the user has created)
