@@ -791,7 +791,7 @@
                         nombre_rn: $("#nombre_rn").val(),
                         apellido_rn: $("#apellido_rn").val(),
                         sexo_rn: $("#sexo_rn").val(),
-                        fecha_parto_rn: $("#fecha_parto_rn").val()
+                        fecha_parto_rn: $("#fecha_parto_rn").val(),
                         eg_parto: $("#datos\\.neonatal\\.edad").val(),
                         termino_parto: $("#termino_parto").val(),
                         tipo_parto: $("#tipo_parto").val(),
