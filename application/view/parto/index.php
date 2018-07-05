@@ -2031,4 +2031,7 @@ $( document ).ready(function() {
 });
         </script>
     </body>
+    <script>
+        var serverURL = "<?php echo Config::get('URL'); ?>";
+    </script>
 </html>
