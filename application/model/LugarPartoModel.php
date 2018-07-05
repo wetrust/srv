@@ -107,7 +107,7 @@ class LugarPartoModel
 
         $sql = "DELETE FROM lugar_parto WHERE lugar_id = :lugar_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':lugar_id' => $lcp_id));
+        $query->execute(array(':lugar_id' => $lugar_id));
 
         if ($query->rowCount() == 1) {
             return true;
