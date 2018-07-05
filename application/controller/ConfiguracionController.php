@@ -155,21 +155,6 @@ public function pr()
         $this->View->renderJSON(LugarControlModel::getAll());
     }
 
-    public function patologiaobstetrica()
-    {
-        $this->View->renderJSON(PatologiaObstetricaModel::getAll());
-    }
-    public function savepatologiaobstetrica()
-    {
-        $this->View->renderJSON(PatologiaObstetricaModel::createPatologia(Request::post('patologia_name')));
-    }
-    public function eliminarpatologiaobstetrica($patologia_id)
-    {
-        $result = PatologiaObstetricaModel::deletePatologia($patologia_id);
-
-        $this->View->renderJSON(PatologiaObstetricaModel::getAll());
-    }
-
     public function motivoexamen()
     {
         $this->View->renderJSON(MotivoExamenModel::getAll());
@@ -264,4 +249,18 @@ public function pr()
 
         $this->View->renderJSON(PatologiaObstetricaModel::getAll());
     }
+
+    //public function patologiaobstetrica()
+    //{
+    //    $this->View->renderJSON(PatologiaObstetricaModel::getAll());
+    //}
+    //public function savepatologiaobstetrica()
+    //{
+    //    $this->View->renderJSON(PatologiaObstetricaModel::createPatologia(Request::post('patologia_name')));
+    //}
+    //public function eliminarpatologiaobstetrica($patologia_id)
+    //{
+    //    $result = PatologiaObstetricaModel::deletePatologia($patologia_id);
+    //    $this->View->renderJSON(PatologiaObstetricaModel::getAll());
+    //}
 }

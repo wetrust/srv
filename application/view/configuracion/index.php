@@ -450,23 +450,23 @@
                                                 <button type="button" class="btn btn-outline-primary d-none" id="eliminarPatologiaObstetrica"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
-                                    <table class="table table-hover table-bordered" id="table.materna">
+                                    <table class="table table-hover table-bordered" id="table.obstetrica">
                                           <thead class="bg-info">
                                                 <tr id="tableHead">
                                                       <th>N°</th>
                                                       <th>Nombre</th>
                                                 </tr>
                                           </thead>
-                                          <tbody id="table.body.materna">
+                                          <tbody id="table.body.obstetrica">
                                           </tbody>
                                     </table>
-                                    <div class="card formulario d-none" id="form.materna">
+                                    <div class="card formulario d-none" id="form.obstetrica">
                                           <div class="card-body">
                                                 <div class="form-group">
                                                       <h5 id="titleInput">Nombre de la Patología Materna</h5>
                                                 </div>
                                                 <div class="form-group">
-                                                      <input type="text" class="form-control" id="input.materna">
+                                                      <input type="text" class="form-control" id="input.obstetrica">
                                                 </div>
                                           </div>
                                     </div>

@@ -527,9 +527,9 @@ $(document).ready(function(){
     });
 
     $("#nuevoPatologiaObstetrica").on("click", function(){
-        $("#table\\.materna").addClass("d-none");
-        $("#form\\.materna").removeClass("d-none");
-        $("#input\\.materna").val("");
+        $("#table\\.obstetrica").addClass("d-none");
+        $("#form\\.obstetrica").removeClass("d-none");
+        $("#input\\.obstetrica").val("");
         $("#nuevoPatologiaObstetrica").addClass("d-none");
         $("#guardarPatologiaObstetrica").removeClass("d-none");
         $("#cancelarPatologiaObstetrica").removeClass("d-none");
@@ -540,13 +540,13 @@ $(document).ready(function(){
 
     $("#guardarPatologiaObstetrica").on("click", function(){
         var dataPatologia = {
-            patologia_name: $("#input\\.materna").val()
+            patologia_name: $("#input\\.obstetrica").val()
         }
 
         $.post(appUrl + "configuracion/savepatologiaobstetrica", dataPatologia).done(function (data) {
-            $("#table\\.materna").removeClass("d-none");
-            $("#form\\.materna").addClass("d-none");
-            $("#input\\.materna").val("");
+            $("#table\\.obstetrica").removeClass("d-none");
+            $("#form\\.obstetrica").addClass("d-none");
+            $("#input\\.obstetrica").val("");
             $("#nuevoPatologiaObstetrica").removeClass("d-none");
             $("#guardarPatologiaObstetrica").addClass("d-none");
             $("#cancelarPatologiaObstetrica").addClass("d-none");
@@ -555,9 +555,9 @@ $(document).ready(function(){
     });
 
     $("#cancelarPatologiaObstetrica").on("click", function(){
-        $("#table\\.materna").removeClass("d-none");
-        $("#form\\.materna").addClass("d-none");
-        $("#input\\.materna").val("");
+        $("#table\\.obstetrica").removeClass("d-none");
+        $("#form\\.obstetrica").addClass("d-none");
+        $("#input\\.obstetrica").val("");
         $("#nuevoPatologiaObstetrica").removeClass("d-none");
         $("#guardarPatologiaObstetrica").addClass("d-none");
         $("#cancelarPatologiaObstetrica").addClass("d-none");
@@ -570,7 +570,7 @@ $(document).ready(function(){
         var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
         $("#modal\\.generico\\.fotter").prepend(btnElement);
         $("#modal\\.generico\\.action").on("click", function(){
-            var tableChild =  $("#table\\.body\\.materna").children();
+            var tableChild =  $("#table\\.body\\.obstetrica").children();
             var patologia_id = 0;
             $.each(tableChild, function(key,des){
                 if ($(des).hasClass("table-active") == true){
@@ -588,60 +588,60 @@ $(document).ready(function(){
         $("#modal\\.generico\\.container").modal("show");
     });
 
-    $("#nuevaPatologiaObstetrica").on("click", function(){
-        $("#table\\.patologia").addClass("d-none");
-        $("#form\\.patologia").removeClass("d-none");
-        $("#input\\.patologia").val("");
-        $("#nuevaPatologiaObstetrica").addClass("d-none");
-        $("#guardarPatologiaObstetrica").removeClass("d-none");
-        $("#cancelarPatologiaObstetrica").removeClass("d-none");
-        $("#eliminarPatologiaObstetrica").addClass("d-none");
+    $("#nuevoTipoExamen").on("click", function(){
+        $("#table\\.tipo").addClass("d-none");
+        $("#form\\.tipo").removeClass("d-none");
+        $("#input\\.tipo").val("");
+        $("#nuevoTipoExamen").addClass("d-none");
+        $("#guardarTipoExamen").removeClass("d-none");
+        $("#cancelarTipoExamen").removeClass("d-none");
+        $("#eliminarTipoExamen").addClass("d-none");
     });
     
-    $("#editarPatologiaObstetrica").on("click", function(){ });
+    $("#editarTipoExamen").on("click", function(){ });
 
-    $("#guardarPatologiaObstetrica").on("click", function(){
-        var dataPatologia = {
-            patologia_name: $("#input\\.patologia").val()
+    $("#guardarTipoExamen").on("click", function(){
+        var dataTipo = {
+            tipo_name: $("#input\\.tipo").val()
         }
 
-        $.post(appUrl + "configuracion/savepatologiaobstetrica", dataPatologia).done(function (data) {
-            $("#table\\.patologia").removeClass("d-none");
-            $("#form\\.patologia").addClass("d-none");
-            $("#input\\.patologia").val("");
-            $("#nuevaPatologiaObstetrica").removeClass("d-none");
-            $("#guardarPatologiaObstetrica").addClass("d-none");
-            $("#cancelarPatologiaObstetrica").addClass("d-none");
-            loadPatologiaObstetrica();
+        $.post(appUrl + "configuracion/savetipoexamen", dataTipo).done(function (data) {
+            $("#table\\.tipo").removeClass("d-none");
+            $("#form\\.tipo").addClass("d-none");
+            $("#input\\.tipo").val("");
+            $("#nuevoTipoExamen").removeClass("d-none");
+            $("#guardarTipoExamen").addClass("d-none");
+            $("#cancelarTipoExamen").addClass("d-none");
+            loadTipoExamen();
         });
     });
 
-    $("#cancelarPatologiaObstetrica").on("click", function(){
-        $("#table\\.patologia").removeClass("d-none");
-        $("#form\\.patologia").addClass("d-none");
-        $("#input\\.patologia").val("");
-        $("#nuevaPatologiaObstetrica").removeClass("d-none");
-        $("#guardarPatologiaObstetrica").addClass("d-none");
-        $("#cancelarPatologiaObstetrica").addClass("d-none");
-        loadPatologiaObstetrica();
+    $("#cancelarTipoExamen").on("click", function(){
+        $("#table\\.tipo").removeClass("d-none");
+        $("#form\\.tipo").addClass("d-none");
+        $("#input\\.tipo").val("");
+        $("#nuevoTipoExamen").removeClass("d-none");
+        $("#guardarTipoExamen").addClass("d-none");
+        $("#cancelarTipoExamen").addClass("d-none");
+        loadTipoExamen();
     });
 
-    $("#eliminarPatologiaObstetrica").on("click", function(){
-        $("#modal\\.generico\\.title").html("Eliminar Profesional Referente");
-        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Profesional Referente seleccionado?</h5>");
+    $("#eliminarTipoExamen").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Tipo de examen");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el Tipo de examen seleccionado?</h5>");
         var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
         $("#modal\\.generico\\.fotter").prepend(btnElement);
         $("#modal\\.generico\\.action").on("click", function(){
-            var tableChild =  $("#table\\.body\\.patologia").children();
-            var patologia_id = 0;
+            var tableChild =  $("#table\\.body\\.tipo").children();
+            var tipo_id = 0;
             $.each(tableChild, function(key,des){
                 if ($(des).hasClass("table-active") == true){
-                    patologia_id = $(des).children("th").data("id");
+                    tipo_id = $(des).children("th").data("id");
                 }
             });
 
-            $.get( appUrl + "configuracion/eliminarpatologiaobstetrica/" + patologia_id, function( data ) {
-                loadPatologiaObstetrica();
+            $.get( appUrl + "configuracion/eliminartipoexamen/" + tipo_id, function( data ) {
+                loadTipoExamen();
             });
 
             $("#modal\\.generico\\.action").remove();
@@ -965,20 +965,20 @@ function loadLugarParto(){
 
 function loadPatologiaObstetrica(){
     $.get( appUrl + "configuracion/patologiaobstetrica", function( data ) {
-        $("#table\\.body\\.materna").empty();
+        $("#table\\.body\\.obstetrica").empty();
         $("#eliminarPatologiaObstetrica").addClass("d-none");
         $.each(data, function (key, des) {
             var strTable = "<tr><th scope='row' data-id='" + des.patologia_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.patologia_name +"</td></tr>";
-            $("#table\\.body\\.materna").append(strTable);
+            $("#table\\.body\\.obstetrica").append(strTable);
             $("#eliminarPatologiaObstetrica").removeClass("d-none");
         });
-        $("#table\\.body\\.materna tr").on('click',function(){
+        $("#table\\.body\\.obstetrica tr").on('click',function(){
             activateTr(this);
         });
     });
 }
 
-function loadPatologiaObstetrica(){
+function loadTipoExamen(){
     $.get( appUrl + "configuracion/patologiaobstetrica", function( data ) {
         $("#table\\.body\\.patologia").empty();
         $("#eliminarPatologiaObstetrica").addClass("d-none");
