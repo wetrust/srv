@@ -27,7 +27,7 @@ class PatologiaMaternaModel
      * @param int $lcp_id id of the specific lcp
      * @return object a single object (the result)
      */
-    public static function getLugarParto($patologia_id)
+    public static function getPatologia($patologia_id)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
@@ -44,7 +44,7 @@ class PatologiaMaternaModel
      * @param string $lcp_name lcp text that will be created
      * @return bool feedback (was the lcp created properly ?)
      */
-    public static function createLugarParto($patologia_name)
+    public static function createPatologia($patologia_name)
     {
         if (!$patologia_name || strlen($patologia_name) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
@@ -72,7 +72,7 @@ class PatologiaMaternaModel
      * @param string $lcp_name new text of the specific lcp
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateLugarParto($patologia_id, $patologia_name)
+    public static function updatePatologia($patologia_id, $patologia_name)
     {
         if (!$lugar_id || !$patologia_name) {
             return false;
@@ -97,7 +97,7 @@ class PatologiaMaternaModel
      * @param int $lcp_id id of the lcp
      * @return bool feedback (was the lcp deleted properly ?)
      */
-    public static function deleteLugarParto($patologia_id)
+    public static function deletePatologia($patologia_id)
     {
         if (!$lugar_id) {
             return false;
