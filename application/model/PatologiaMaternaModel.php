@@ -99,7 +99,7 @@ class PatologiaMaternaModel
      */
     public static function deletePatologia($patologia_id)
     {
-        if (!$lugar_id) {
+        if (!$patologia_id) {
             return false;
         }
 
