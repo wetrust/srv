@@ -250,18 +250,18 @@ public function pr()
         $this->View->renderJSON(LugarPartoModel::getAll());
     }
 
-    public function patologiamaterna()
+    public function patologiaobstetrica()
     {
-        $this->View->renderJSON(PatologiaMaternaModel::getAll());
+        $this->View->renderJSON(PatologiaObstetricaModel::getAll());
     }
-    public function savepatologiamaterna()
+    public function savepatologiaobstetrica()
     {
-        $this->View->renderJSON(PatologiaMaternaModel::createPatologia(Request::post('patologia_name')));
+        $this->View->renderJSON(PatologiaObstetricaModel::createPatologia(Request::post('patologia_name')));
     }
-    public function eliminarpatologiamaterna($patologia_id)
+    public function eliminarpatologiaobstetrica($patologia_id)
     {
-        $result = PatologiaMaternaModel::deletePatologia($patologia_id);
+        $result = PatologiaObstetricaModel::deletePatologia($patologia_id);
 
-        $this->View->renderJSON(PatologiaMaternaModel::getAll());
+        $this->View->renderJSON(PatologiaObstetricaModel::getAll());
     }
 }

@@ -188,8 +188,8 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Tipo Patologia materna</label>
-                                        <select id="tipo_patologia_materna" class="form-control col-7">
+                                        <label for="edadGestacional" class="col-5">Patologia Obstétrica</label>
+                                        <select id="tipo_patologia_obstetrica" class="form-control col-7">
                                             <option value="0" selected></option>
                                         </select>
                                     </div>
@@ -790,6 +790,14 @@
 
                 $("body").css("background-color", "rgb(233, 246, 248)");
 
+                let fecha = new Date();
+                let day = ("0" + fecha.getDate()).slice(-2);
+                let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
+
+                $('#fecha_parto_rn').val((day)+"/"+(month)+"/"+fecha.getFullYear());
+                $('#fecha_parto_rn').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+
+
                 $.get( serverURL + "configuracion/lugarparto", function( data ) {
                     $("#lugar_parto_rn").empty();
                     $.each(data, function (key, des) {
@@ -798,11 +806,11 @@
                     });
                 });
 
-                $.get( serverURL + "configuracion/patologiamaterna", function( data ) {
-                    $("#tipo_patologia_materna").empty();
+                $.get( serverURL + "configuracion/patologiaobstetrica", function( data ) {
+                    $("#tipo_patologia_obstetrica").empty();
                     $.each(data, function (key, des) {
                         let strSelect = "<option value='" + des.patologia_id +"'>" + des.patologia_name + "</option>";
-                        $("#tipo_patologia_materna").append(strSelect);
+                        $("#tipo_patologia_obstetrica").append(strSelect);
                     });
                 });
 
@@ -822,7 +830,7 @@
                         termino_parto: $("#termino_parto").val(),
                         tipo_parto: $("#tipo_parto").val(),
                         patologia_materna: $("#patologia_materna").val(),
-                        tipo_patologia_materna: $("#tipo_patologia_materna").val(),
+                        tipo_patologia_obstetrica: $("#tipo_patologia_obstetrica").val(),
                         peso_rn: $("#datos\\.neonatal\\.peso").val(),
                         talla_rn: $("#datos\\.neonatal\\.talla").val(),
                         perimetro_craneo_rn: $("#perimetro_craneo_rn").val(),
@@ -830,9 +838,6 @@
                         peso_placentario: $("#peso_placentario").val(),
                         apgar_1: $("#apgar_1").val(),
                         apgar_5: $("#apgar_5").val(),
-                        hipoglicemia_riesgo: $("#hipoglicemia_riesgo").val(),
-                        hipoglicemia_sospechada: $("#hipoglicemia_sospechada").val(),
-                        hipoglicemia_confirmada: $("#hipoglicemia_confirmada").val(),
                         hiperbilirrubinemia: $("#hiperbilirrubinemia").val(),
                         poliglobulia: $("#poliglobulia").val(),
                         hospital_ucin: $("#hospital_ucin").val(),
