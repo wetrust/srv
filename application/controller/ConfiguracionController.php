@@ -246,7 +246,6 @@ public function pr()
     public function eliminarpatologiaobstetrica($patologia_id)
     {
         $result = PatologiaObstetricaModel::deletePatologia($patologia_id);
-
         $this->View->renderJSON(PatologiaObstetricaModel::getAll());
     }
 
