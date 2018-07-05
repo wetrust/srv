@@ -798,6 +798,14 @@
                     });
                 });
 
+                $.get( serverURL + "configuracion/patologiamaterna", function( data ) {
+                    $("#tipo_patologia_materna").empty();
+                    $.each(data, function (key, des) {
+                        let strSelect = "<option value='" + des.patologia_id +"'>" + des.patologia_name + "</option>";
+                        $("#tipo_patologia_materna").append(strSelect);
+                    });
+                });
+
                 $("#boton\\.parto\\.guardar").on("click", function(){
 
                     var parto = {

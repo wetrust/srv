@@ -8,6 +8,7 @@ $(document).ready(function(){
     loadProfesionalReferente();
     loadLugarControl();
     loadLugarParto();
+    loadPatologiaMaterna();
     loadPatologiaObstetrica();
     loadMotivoExamen();
     loadPrevision();
@@ -525,6 +526,68 @@ $(document).ready(function(){
         $("#modal\\.generico\\.container").modal("show");
     });
 
+    $("#nuevoPatologiaMaterna").on("click", function(){
+        $("#table\\.materna").addClass("d-none");
+        $("#form\\.materna").removeClass("d-none");
+        $("#input\\.materna").val("");
+        $("#nuevoPatologiaMaterna").addClass("d-none");
+        $("#guardarPatologiaMaterna").removeClass("d-none");
+        $("#cancelarPatologiaMaterna").removeClass("d-none");
+        $("#eliminarPatologiaMaterna").addClass("d-none");
+    });
+    
+    $("#editarPatologiaMaterna").on("click", function(){});
+
+    $("#guardarPatologiaMaterna").on("click", function(){
+        var dataPatologia = {
+            patologia_name: $("#input\\.lugar").val()
+        }
+
+        $.post(appUrl + "configuracion/savepatologiamaterna", dataPatologia).done(function (data) {
+            $("#table\\.materna").removeClass("d-none");
+            $("#form\\.materna").addClass("d-none");
+            $("#input\\.materna").val("");
+            $("#nuevoPatologiaMaterna").removeClass("d-none");
+            $("#guardarPatologiaMaterna").addClass("d-none");
+            $("#cancelarPatologiaMaterna").addClass("d-none");
+            loadPatologiaMaterna();
+        });
+    });
+
+    $("#cancelarPatologiaMaterna").on("click", function(){
+        $("#table\\.materna").removeClass("d-none");
+        $("#form\\.materna").addClass("d-none");
+        $("#input\\.materna").val("");
+        $("#nuevoPatologiaMaterna").removeClass("d-none");
+        $("#guardarPatologiaMaterna").addClass("d-none");
+        $("#cancelarPatologiaMaterna").addClass("d-none");
+        loadPatologiaMaterna();
+    });
+
+    $("#eliminarPatologiaMaterna").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Patologia Materna");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar la Patología Materna seleccionada?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.materna").children();
+            var patologia_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    patologia_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarpatologiamaterna/" + patologia_id, function( data ) {
+                loadPatologiaMaterna();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
+
     $("#nuevaPatologiaObstetrica").on("click", function(){
         $("#table\\.patologia").addClass("d-none");
         $("#form\\.patologia").removeClass("d-none");
@@ -897,6 +960,21 @@ function loadLugarParto(){
             $("#eliminarLugarParto").removeClass("d-none");
         });
         $("#table\\.body\\.parto tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadPatologiaMaterna(){
+    $.get( appUrl + "configuracion/patologiamaterna", function( data ) {
+        $("#table\\.body\\.materna").empty();
+        $("#eliminarPatologiaMaterna").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.patologia_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.patologia_name +"</td></tr>";
+            $("#table\\.body\\.materna").append(strTable);
+            $("#eliminarPatologiaMaterna").removeClass("d-none");
+        });
+        $("#table\\.body\\.materna tr").on('click',function(){
             activateTr(this);
         });
     });

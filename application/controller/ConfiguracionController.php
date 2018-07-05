@@ -249,4 +249,19 @@ public function pr()
 
         $this->View->renderJSON(LugarPartoModel::getAll());
     }
+
+    public function patologiamaterna()
+    {
+        $this->View->renderJSON(PatologiaMaternaModel::getAll());
+    }
+    public function savepatologiamaterna()
+    {
+        $this->View->renderJSON(PatologiaMaternaModel::createPatologia(Request::post('patologia_name')));
+    }
+    public function eliminarpatologiamaterna($patologia_id)
+    {
+        $result = PatologiaMaternaModel::deletePatologia($patologia_id);
+
+        $this->View->renderJSON(PatologiaMaternaModel::getAll());
+    }
 }

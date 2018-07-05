@@ -34,6 +34,9 @@
                         <a class="nav-link" data-toggle="tab" href="#lp">Lugar de Parto</a>
                      </li>
                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#pm">Patología Materna</a>
+                     </li>
+                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#por">Tipo exámen solicitado</a>
                      </li>
                      <li class="nav-item">
@@ -417,6 +420,50 @@
                                                 </div>
                                                 <div class="form-group">
                                                       <input type="text" class="form-control" id="input.parto">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="tab-pane" id="pm" role="tabpanel">
+                        <h2 class="my-4">Configurar Patología Materna</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoPatologiaMaterna"><i class="fa fa-plus" aria-hidden="true"></i> Nueva Patología</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPatologiaMaterna"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar Patología</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPatologiaMaterna"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPatologiaMaterna"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPatologiaMaterna"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered" id="table.materna">
+                                          <thead class="bg-info">
+                                                <tr id="tableHead">
+                                                      <th>N°</th>
+                                                      <th>Nombre</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="table.body.materna">
+                                          </tbody>
+                                    </table>
+                                    <div class="card formulario d-none" id="form.materna">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nombre de la Patología Materna</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="input.materna">
                                                 </div>
                                           </div>
                                     </div>
