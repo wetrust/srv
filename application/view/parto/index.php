@@ -290,32 +290,6 @@
                             </div>
                             <div class="row pt-3">
                                 <div class="col-4">
-                                    <label for="edadGestacional">Riesgo de Hipoglicemia</label>
-                                    <select id="hipoglicemia_riesgo" class="form-control">
-                                        <option value="0">RN PEG (<10)</option>
-                                        <option value="1">RN GEG (IP > 3.3)</option>
-                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
-                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
-                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
-                                    <select id="hipoglicemia_sospechada" class="form-control">
-                                        <option value="0">Si</option>
-                                        <option value="1">No</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia confirmada (Lab.)</label>
-                                    <select id="hipoglicemia_confirmada" class="form-control">
-                                        <option value="0">Si</option>
-                                        <option value="1">No</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row pt-3">
-                                <div class="col-4">
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
                                     <select id="hiperbilirrubinemia" class="form-control">
                                         <option value="0">Si</option>
@@ -666,6 +640,32 @@
                                 </div>
                                 <div class="col-2">
                                     <input class="form-control bg-white" type="text" id="ipn_eg_regional" disabled>
+                                </div>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-4">
+                                    <label for="edadGestacional">Riesgo de Hipoglicemia</label>
+                                    <select id="hipoglicemia_riesgo" class="form-control">
+                                        <option value="0">RN PEG (<10)</option>
+                                        <option value="1">RN GEG (IP > 3.3)</option>
+                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
+                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
+                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
+                                    <select id="hipoglicemia_sospechada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional">Hipoglicemia confirmada (Lab.)</label>
+                                    <select id="hipoglicemia_confirmada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
