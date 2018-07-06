@@ -979,7 +979,7 @@ function loadPatologiaObstetrica(){
 }
 
 function loadTipoExamen(){
-    $.get( appUrl + "configuracion/tipoexamen", function( data ) {
+    $.get( appUrl + "configuracion/tipoexamenasdasdasdasd", function( data ) {
         $("#table\\.body\\.tipo").empty();
         $("#eliminarTipoExamen").addClass("d-none");
         $.each(data, function (key, des) {
