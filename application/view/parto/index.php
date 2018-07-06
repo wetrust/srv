@@ -792,15 +792,17 @@
 
             function obtenerPartos(){
                 //cargar los exámenes que tiene el paciente para mostrar en la grilla
-                let data = {
+
+                var data = {
                     id: "1",
                     tipo: 4
                 }
+
                 $.post(serverURL + "examen/get", data).done(function (response) {
                     $("#table\\.ecografia\\.parto").empty();
                     if ( Object.keys(response).length > 0 ){
                         $.each(response.data, function(i,val){
-                            let fila = '<tr><th scope="row" data-id="' + val.id_paciente + '" data-tipo="4">'+ val.id_paciente +'</th><td>' + val.id_rn +'</td><td>' + val.eg_parto +'</td><td>' + val.peso_rn +'</td><td>'+ val.talla_rn+'</td></tr>';
+                            let fila = '<tr><th scope="row" data-id="' + val.id_paciente + '" data-tipo="4">' + val.id_parto + '</th><td>'+ val.id_paciente +'</td><td>' + val.id_rn +'</td><td>' + val.eg_parto +'</td><td>' + val.peso_rn +'</td><td>'+ val.talla_rn+'</td></tr>';
                             $("#table\\.ecografia\\.parto").append(fila);
                         });
                         $("#table\\.ecografia\\.parto tr").on('click',function(){
@@ -815,6 +817,53 @@
                     $( val ).removeClass( 'table-active');
                 });
                 $(element).addClass('table-active');
+                var id = $(element).children().data("id"); 
+                loadExamen("4",id);
+            }
+
+            function loadExamen(tipo, id){
+                let data = {
+                    id: $("#id-paciente").val(),
+                    tipo: tipo
+                }
+
+                $.post(serverURL + "examen/get", data).done(function (response) {
+                    if (tipo == 4){
+                        if ( Object.keys(response).length > 0 ){
+                            $.each(response.data, function(i,val){
+                                if (val.id_paciente == id){
+                                    $("#id_paciente").val(val.id_paciente);
+                                    $("#nombre_madre").val(val.nombre_madre);
+                                    $("#apellido_madre").val(val.apellido_madre);
+                                    $("#lugar_parto_rn").val(val.lugar_parto_rn);
+                                    $("#id_rn").val(val.id_rn);
+                                    $("#nombre_rn").val(val.nombre_rn);
+                                    $("#apellido_rn").val(val.apellido_rn);
+                                    $("#sexo_rn").val(val.sexo_rn);
+                                    $("#fecha_parto_rn").val(val.fecha_parto_rn);
+                                    $("#datos\\.neonatal\\.edad").val(val.eg_parto);
+                                    $("#termino_parto").val(val.termino_parto);
+                                    $("#tipo_parto").val(val.tipo_parto);
+                                    $("#tipo_patologia_obstetrica").val(val.tipo_patologia_obstetrica);
+                                    $("#meconio").val(val.meconio);
+                                    $("#datos\\.neonatal\\.peso").val(val.peso_rn);
+                                    $("#datos\\.neonatal\\.talla").val(val.talla_rn);
+                                    $("#perimetro_craneo_rn").val(val.perimetro_craneo_rn);
+                                    $("#datos\\.neonatal\\.ipn").val(val.ipn_rn);
+                                    $("#peso_placentario").val(val.peso_placentario);
+                                    $("#apgar_1").val(val.apgar_1);
+                                    $("#apgar_5").val(val.apgar_5);
+                                    $("#hiperbilirrubinemia").val(val.hiperbilirrubinemia);
+                                    $("#poliglobulia").val(val.poliglobulia);
+                                    $("#hospital_ucin").val(val.hospital_ucin);
+                                    $("#sindrome_respiratorio").val(val.sindrome_respiratorio);
+                                    $("#alta_con_madre").val(val.alta_con_madre);
+                                    $("#observaciones").val(val.observaciones);
+                                };
+                            });
+                        }
+                    }
+                });
             }
 
             $( document ).ready(function() {
