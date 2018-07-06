@@ -613,7 +613,7 @@
                 <div class="col-12 col-sm-10">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Crecimiento categorizado</h5>
+                            <h5 class="card-title">Crecimiento intrauterino para la relación Peso/EG</h5>
                             <div class="row pt-2">
                                 <div class="col-1">
                                 </div>
@@ -628,19 +628,46 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-1">
-                                    <label for="edadGestacional">Peso/Ege</label>
-                                </div>
-                                <div class="col-2">
+                                <div class="col-6">
                                     <input class="form-control" type="text" id="peso_eg_nacional" disabled>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-6">
+                                    <label for="edadGestacional">Riesgo de Hipoglicemia</label>
+                                    <select id="hipoglicemia_riesgo" class="form-control">
+                                        <option value="0">RN PEG (<10)</option>
+                                        <option value="1">RN GEG (IP > 3.3)</option>
+                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
+                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
+                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
                                     <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6">
+                                    <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
+                                    <select id="hipoglicemia_sospechada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
-                                <div class="col-4 p-0">
+                                <div class="col-6">
+                                    <label for="edadGestacional">Hipoglicemia confirmada (Lab.)</label>
+                                    <select id="hipoglicemia_confirmada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
                                     <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables para ajuste Peso / Ege</button>
                                 </div>
                             </div>
@@ -672,32 +699,6 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
-                            <div class="row pt-3">
-                                <div class="col-4">
-                                    <label for="edadGestacional">Riesgo de Hipoglicemia</label>
-                                    <select id="hipoglicemia_riesgo" class="form-control">
-                                        <option value="0">RN PEG (<10)</option>
-                                        <option value="1">RN GEG (IP > 3.3)</option>
-                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
-                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
-                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
-                                    <select id="hipoglicemia_sospechada" class="form-control">
-                                        <option value="0">Si</option>
-                                        <option value="1">No</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia confirmada (Lab.)</label>
-                                    <select id="hipoglicemia_confirmada" class="form-control">
-                                        <option value="0">Si</option>
-                                        <option value="1">No</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -1200,6 +1201,7 @@
 
                     $("#peso_eg_regional").val(RN.pesoTemucoCondicion());
                     $("#peso_eg_nacional").val(RN.pesoChileCondicion());
+                    $('#g3').trigger("click");
                 }
 
                 if ($("#tallaRN").val() > 1){
@@ -1573,6 +1575,15 @@
                 dos = RN.peso - p10Pso[eg];
                 tres = parseInt((80 / (uno)) * (dos)) + 10;
                 $("#PesoEgeCAj").val(tres);
+                if (tres < 10){
+                    $("#peso_eg_ajustado").val("Pequeño");
+                }
+                else if (tres <= 90) {
+                    $("#peso_eg_ajustado").val("Adecuado");
+                }
+                else if (tres > 90) {
+                    $("#peso_eg_ajustado").val("Grande");
+                }
                 $("#tituloAjusteG").addClass("d-none");
                 $("#tituloAjusteAlto").html("Pct Peso sin ajuste");
                 $("#tituloAjusteBajo").html("Pct. Peso con ajuste");
