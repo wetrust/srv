@@ -479,7 +479,7 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoTipoExamen"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo tipo</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoTipoExamen"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo tipo examen</button>
                                           </li>
                                           <li class="nav-item">
                                                 <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarTipoExamen"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar tipo</button>
