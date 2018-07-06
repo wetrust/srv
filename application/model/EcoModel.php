@@ -33,9 +33,9 @@ class EcoModel
             return $response;
         }
         else if ($tipo == 4){
-            $sql = "SELECT * FROM parto WHERE id_paciente = :id_paciente";
+            $sql = "SELECT * FROM parto";
             $query = $database->prepare($sql);
-            $query->execute(array(':id_paciente' => $rut));
+            $query->execute();
 
             $response->data = $query->fetchAll();
             return $response;

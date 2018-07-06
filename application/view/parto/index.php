@@ -339,10 +339,10 @@
                 </div>
             </div>
             <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary">
-                <a class="navbar-brand" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
+                <a class="navbar-brand" data-hide="true" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
             </nav>
-            <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none">
-                <h5 class="m-4 text-white"  data-hide="true"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
+            <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(50%);left: 0;">
+                <h5 class="m-4 text-white" id="listaPartosDos"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
                 <table class="table table-hover">
                     <thead class="thead-dark">
                         <tr>
@@ -789,6 +789,34 @@
         <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
         <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
         <script type="text/javascript">
+
+            function obtenerPartos(){
+                //cargar los exámenes que tiene el paciente para mostrar en la grilla
+                let data = {
+                    id: "1",
+                    tipo: 4S
+                }
+                $.post(serverURL + "examen/get", data).done(function (response) {
+                    $("#table\\.ecografia\\.parto").empty();
+                    if ( Object.keys(response).length > 0 ){
+                        $.each(response.data, function(i,val){
+                            let fila = '<tr><th scope="row" data-id="' + val.id_paciente + "' data-tipo="4">'+ val.id_paciente +'</th><td>' + val.id_rn +'</td><td>' + val.eg_parto +'</td><td>' + val.peso_rn +'</td><td>'+ val.talla_rn+'</td></tr>';
+                            $("#table\\.ecografia\\.parto").append(fila);
+                        });
+                        $("#table\\.ecografia\\.parto tr").on('click',function(){
+                            activateTr(this);
+                        });
+                    }
+                });
+            }
+
+            function activateTr(element){
+                $.each( $(element).parent().children(), function( i, val ) {
+                    $( val ).removeClass( 'table-active');
+                });
+                $(element).addClass('table-active');
+            }
+            
             $( document ).ready(function() {
 
                 $("body").css("background-color", "rgb(233, 246, 248)");
@@ -856,24 +884,7 @@
                     }
 
                     $.post(serverURL + "examen/set/", data).done(function(response) {
-                        $("#table\\.ecografia\\.parto").empty();
-                        //if ( Object.keys(response).length > 0 ){
-                        //    $.each(response.data, function(i,val){
-                        //        let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="2">'+ val.n_examen +'</th><td>' + val.fecha_examen + '</td><td>'+ val.eg_examen +'</td><td>' + val.pfe_examen +'</td><td>'+ val.pctpeso_examen+'</td><td>' + val.ccca_examen +'</td><td>' + val.pctca_examen +'</td><td>' + val.pctbvm_examen + '<td>';
-                        //        
-                        //        let fila = '<tr><th>1</th>
-                        //    <td>12345</td>
-                        //    <td>56798</td>
-                        //    <td>40</td>
-                        //    <td>3080</td>
-                        //    <td>512</td>
-                        //</tr>
-                        //        $("#table\\.ecografia\\.parto").append(fila);
-                        //    });
-                        //    $("#table\\.ecografia\\.parto tr").on('click',function(){
-                        //        activateTr(this);
-                        //    });
-                        //}
+                        obtenerPartos();
                     });
                 });
 
@@ -886,12 +897,18 @@
 
                     if (estado == true){
                         $(this).data("hide", false);
-                        $("#contenedorListaPartos").css("bottom", "0");
+                        $("#contenedorListaPartos").removeClass("d-none");
+                        $("#menuListaPartos").addClass("d-none");
                     }
                     else{
                         $(this).data("hide", true);
-                        $("#contenedorListaPartos").css("bottom", "-20rem");
+                        $("#contenedorListaPartos").addClass("d-none");
+                        $("#menuListaPartos").removeClass("d-none");
                     }
+                });
+
+                $("#listaPartosDos").on("click", function(){
+                    $("#listaPartos").trigger("click");
                 });
 
                 $("#datos\\.neonatal\\.peso").on("change", function(){
