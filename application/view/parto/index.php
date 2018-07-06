@@ -644,17 +644,6 @@
                                     <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables para ajuste Peso / Ege</button>
                                 </div>
                             </div>
-                            <div class="row pt-1">
-                                <div class="col-1">
-                                    <label for="edadGestacional">Ipn/Ege</label>
-                                </div>
-                                <div class="col-2">
-                                    <input class="form-control bg-white" type="text" id="ipn_eg_nacional" disabled>
-                                </div>
-                                <div class="col-2">
-                                    <input class="form-control bg-white" type="text" id="ipn_eg_regional" disabled>
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-12">
                                     <table class="table table-striped mt-3">
@@ -1222,9 +1211,6 @@
                         $("#IpnPct").val("Pct. " + RN.ipnChile());
                         $("#IpnEge").val(RN.ipnChileCondicion());
                     }
-
-                    $("#ipn_eg_regional").val(RN.ipnTemucoCondicion());
-                    $("#ipn_eg_nacional").val(RN.ipnChileCondicion());
                 }
 
                 if (this.value == 0){
