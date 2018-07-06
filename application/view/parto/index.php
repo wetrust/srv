@@ -615,15 +615,31 @@
                         <div class="card-body">
                             <h5 class="card-title">Crecimiento intrauterino para la relación Peso/EG</h5>
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-3">
                                     <label for="edadGestacional">1.- Curva Generalizada</label>
                                 </div>
                                 <div class="col-2">
                                     <input class="form-control" type="text" id="peso_eg_pct_regional" disabled>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="edadGestacional">2.- Curva Categorizada</label>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control" type="text" id="peso_eg_pct_ajustado" disabled>
+                                </div>
+                                <div class="col-3">
+                                    <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-secondary mt-3" id="goto_ajuste">Ajuste Peso / Ege</button>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-6">
                                     <label for="edadGestacional">Riesgo de Hipoglicemia</label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
@@ -633,17 +649,6 @@
                                         <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
                                         <option value="4">Sin riesgo clínico de hipoglicemia</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-2">
-                                    <label for="edadGestacional">2.- Curva Categorizada</label>
-                                </div>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" id="peso_eg_pct_ajustado" disabled>
-                                </div>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-6">
                                     <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
@@ -660,9 +665,6 @@
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
-                                </div>
-                                <div class="col-6">
-                                    <button type="button" class="btn btn-secondary mt-3" id="goto_ajuste">Ver Variables para ajuste Peso / Ege</button>
                                 </div>
                             </div>
                             <div class="row">
