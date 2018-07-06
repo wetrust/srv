@@ -341,7 +341,7 @@
             <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary" id="menuListaPartos">
                 <a class="navbar-brand" data-hide="true" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
             </nav>
-            <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(50%);left: 0;">
+            <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(60%);left: 0;">
                 <h5 class="m-4 text-white" id="listaPartosDos"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
                 <table class="table table-hover">
                     <thead class="thead-dark">
