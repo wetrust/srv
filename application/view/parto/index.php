@@ -614,21 +614,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Crecimiento intrauterino para la relación Peso/EG</h5>
-                            <div class="row pt-2">
-                                <div class="col-1">
-                                </div>
-                                <div class="col-2">
-                                    <p class="text-center">1.- Curva Nacional</p>
-                                </div>
-                                <div class="col-2">
-                                    <p class="text-center">2.- Curva Regional</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class="text-center">3.- Curva regional Ajustada</p>
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-6">
+                                    <label for="edadGestacional">1.- Curva Nacional</label>
                                     <input class="form-control" type="text" id="peso_eg_nacional" disabled>
                                 </div>
                                 <div class="col-6">
@@ -644,6 +632,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
+                                    <label for="edadGestacional">2.- Curva Regional</label>
                                     <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
                                 <div class="col-6">
@@ -656,6 +645,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
+                                    <label for="edadGestacional">3.- Curva regional Ajustada</label>
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-6">
