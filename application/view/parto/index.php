@@ -200,7 +200,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-child"></i> Información del RN</h5>
-                            <hr class="mb-5">
+                            <hr class="mb-3">
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">Peso RN</label>
@@ -239,7 +239,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Peso Placentario</label>
                                     <div class="input-group">
