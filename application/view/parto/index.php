@@ -647,7 +647,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <table class="table table-stripe">
+                                    <table class="table table-striped">
                                         <thead class="bg-primary text-white">
                                             <tr>
                                                 <th scope="col">Exámenes Dextro</th>
