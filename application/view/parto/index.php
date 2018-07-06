@@ -180,7 +180,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso Placentario</label>
-                                        <div class="input-group col-7">
+                                        <div class="input-group col-7 p-0">
                                             <input class="form-control" id="peso_placentario" type="number" min="0" max="9999">
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
@@ -288,7 +288,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN</h5>
-                            <hr class="mb-5">
+                            <hr class="mb-3">
                             <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
