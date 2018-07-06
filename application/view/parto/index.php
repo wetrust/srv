@@ -914,9 +914,7 @@
 
                             $.post(serverURL + "examen/del/", data).done(function(response) {
                                 $("#table\\.ecografia\\.parto").empty();
-                                if ( Object.keys(response).length > 0 ){
-                                    obtenerPartos();
-                                }
+                                obtenerPartos();
                             });
                         }
                     });
