@@ -794,7 +794,7 @@
                 //cargar los exámenes que tiene el paciente para mostrar en la grilla
                 let data = {
                     id: "1",
-                    tipo: 4S
+                    tipo: 4
                 }
                 $.post(serverURL + "examen/get", data).done(function (response) {
                     $("#table\\.ecografia\\.parto").empty();
@@ -816,7 +816,7 @@
                 });
                 $(element).addClass('table-active');
             }
-            
+
             $( document ).ready(function() {
 
                 $("body").css("background-color", "rgb(233, 246, 248)");
