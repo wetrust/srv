@@ -338,7 +338,7 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary">
+            <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary" id="menuListaPartos">
                 <a class="navbar-brand" data-hide="true" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
             </nav>
             <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(50%);left: 0;">

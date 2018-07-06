@@ -33,7 +33,7 @@ class EcoModel
             return $response;
         }
         else if ($tipo == 4){
-            $sql = "SELECT * FROM parto";
+            $sql = "SELECT * FROM parto ORDER BY id_parto DESC";
             $query = $database->prepare($sql);
             $query->execute();
 
