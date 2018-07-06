@@ -619,10 +619,10 @@
                                     <label for="edadGestacional">1.- Curva Generalizada</label>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control p-0" type="text" id="peso_eg_pct_regional" disabled>
+                                    <input class="form-control" type="text" id="peso_eg_pct_regional" disabled>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control p-0" type="text" id="peso_eg_regional" disabled>
+                                    <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
                                 <div class="col-6">
                                     <label for="edadGestacional">Riesgo de Hipoglicemia</label>
@@ -1569,7 +1569,7 @@
                 dos = RN.peso - p10Pso[eg];
                 tres = parseInt((80 / (uno)) * (dos)) + 10;
                 $("#PesoEgeCAj").val(tres);
-                $("#peso_eg_pct_ajustado").val(tres);
+                $("#peso_eg_pct_ajustado").val("Pct. " + tres);
                 if (tres < 10){
                     $("#peso_eg_ajustado").val("Pequeño");
                 }
