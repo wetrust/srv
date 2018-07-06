@@ -828,6 +828,7 @@
                 $('#fecha_parto_rn').val((day)+"/"+(month)+"/"+fecha.getFullYear());
                 $('#fecha_parto_rn').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
 
+                obtenerPartos();
 
                 $.get( serverURL + "configuracion/lugarparto", function( data ) {
                     $("#lugar_parto_rn").empty();
