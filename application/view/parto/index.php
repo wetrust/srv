@@ -343,6 +343,7 @@
             </nav>
             <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(70%);left: 0;height:30%">
                 <h5 class="m-4 text-white" id="listaPartosDos"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
+                <div id="contenedorTabla">
                 <table class="table table-hover">
                     <thead class="thead-dark">
                         <tr>
@@ -397,6 +398,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         <div class="container" id="postnatal" style="display:none;">
