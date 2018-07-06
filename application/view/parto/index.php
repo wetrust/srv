@@ -613,16 +613,16 @@
                 <div class="col-12 col-sm-10">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Crecimiento intrauterino para la relación Peso/EG</h5>
+                            <h5 class="card-title">Crecimiento intrauterino para la relación Peso/Ege</h5>
                             <div class="row">
                                 <div class="col-3">
                                     <label for="edadGestacional">1.- Curva Generalizada</label>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control" type="text" id="peso_eg_pct_regional" disabled>
+                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" id="peso_eg_regional" disabled>
+                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
                                 </div>
                             </div>
                             <div class="row pt-2">
@@ -630,10 +630,10 @@
                                     <label for="edadGestacional">2.- Curva Categorizada</label>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control" type="text" id="peso_eg_pct_ajustado" disabled>
+                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
+                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-4">
                                     <button type="button" class="btn btn-secondary" id="goto_ajuste">Ajuste al Peso / Ege</button>
