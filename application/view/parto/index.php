@@ -647,8 +647,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <table class="table table-hover">
-                                        <thead class="bg-primary">
+                                    <table class="table table-stripe">
+                                        <thead class="bg-primary text-white">
                                             <tr>
                                                 <th scope="col">Exámenes Dextro</th>
                                                 <th scope="col">Valor en Mgr/dl</th>
