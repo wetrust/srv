@@ -897,6 +897,31 @@
                     });
                 });
 
+                $("#boton\\.parto\\.eliminar").on("click", function(){
+                    var filas = $("#table\\.ecografia\\.parto").children();
+
+                    $.each(filas,function(i,val){
+                        if ($(val).hasClass('table-active') == true){
+                            let examen = {
+                                eg: "0"
+                            }
+                            
+                            let data = {
+                                id: $("#id_paciente").val(),
+                                tipo: 4,
+                                data: JSON.stringify(examen)
+                            }
+
+                            $.post(serverURL + "examen/del/", data).done(function(response) {
+                                $("#table\\.ecografia\\.parto").empty();
+                                if ( Object.keys(response).length > 0 ){
+                                    obtenerPartos();
+                                }
+                            });
+                        }
+                    });
+                });
+
                 $("#boton\\.parto\\.guardar").on("click", function(){
 
                     var parto = {
