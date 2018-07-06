@@ -800,7 +800,7 @@
                     $("#table\\.ecografia\\.parto").empty();
                     if ( Object.keys(response).length > 0 ){
                         $.each(response.data, function(i,val){
-                            let fila = '<tr><th scope="row" data-id="' + val.id_paciente + "' data-tipo="4">'+ val.id_paciente +'</th><td>' + val.id_rn +'</td><td>' + val.eg_parto +'</td><td>' + val.peso_rn +'</td><td>'+ val.talla_rn+'</td></tr>';
+                            let fila = '<tr><th scope="row" data-id="' + val.id_paciente + '" data-tipo="4">'+ val.id_paciente +'</th><td>' + val.id_rn +'</td><td>' + val.eg_parto +'</td><td>' + val.peso_rn +'</td><td>'+ val.talla_rn+'</td></tr>';
                             $("#table\\.ecografia\\.parto").append(fila);
                         });
                         $("#table\\.ecografia\\.parto tr").on('click',function(){
