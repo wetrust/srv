@@ -665,11 +665,9 @@
                                                 <td>Segundo</td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
                                                 <td>Tercero</td>
-                                                <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                             </tr>
