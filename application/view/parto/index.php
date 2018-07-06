@@ -821,6 +821,7 @@
                 $(element).addClass('table-active');
                 var id = $(element).children().data("id"); 
                 loadExamen("4",id);
+                $("#listaPartos").trigger("click");
             }
 
             function loadExamen(tipo, id){
@@ -915,6 +916,33 @@
                             $.post(serverURL + "examen/del/", data).done(function(response) {
                                 $("#table\\.ecografia\\.parto").empty();
                                 obtenerPartos();
+                                $("#id_paciente").val("");
+                                $("#nombre_madre").val("");
+                                $("#apellido_madre").val("");
+                                $("#lugar_parto_rn").val("");
+                                $("#id_rn").val("");
+                                $("#nombre_rn").val("");
+                                $("#apellido_rn").val("");
+                                $("#sexo_rn").val("");
+                                $("#fecha_parto_rn").val("");
+                                $("#datos\\.neonatal\\.edad").val("");
+                                $("#termino_parto").val("");
+                                $("#tipo_parto").val("");
+                                $("#tipo_patologia_obstetrica").val("");
+                                $("#meconio").val("");
+                                $("#datos\\.neonatal\\.peso").val("");
+                                $("#datos\\.neonatal\\.talla").val("");
+                                $("#perimetro_craneo_rn").val("");
+                                $("#datos\\.neonatal\\.ipn").val("");
+                                $("#peso_placentario").val("");
+                                $("#apgar_1").val("");
+                                $("#apgar_5").val("");
+                                $("#hiperbilirrubinemia").val("");
+                                $("#poliglobulia").val("");
+                                $("#hospital_ucin").val("");
+                                $("#sindrome_respiratorio").val("");
+                                $("#alta_con_madre").val("");
+                                $("#observaciones").val("");
                             });
                         }
                     });
