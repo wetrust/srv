@@ -144,7 +144,7 @@ class EcoModel
         else if ($tipo == 4){
             $sql = "DELETE FROM parto WHERE id_paciente = :id_paciente";
             $query = $database->prepare($sql);
-            $query->execute(':id_paciente' => $rut);
+            $query->execute(array(':id_paciente' => $rut));
         }
 
         if ($query->rowCount() == 1) {
