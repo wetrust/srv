@@ -357,7 +357,7 @@
                     </thead>
                     <tbody id="table.ecografia.parto" class="text-white">
                         <tr>
-                            <td>1</td>
+                            <td></td>
                             <td>12345</td>
                             <td>56798</td>
                             <td>40</td>
@@ -643,6 +643,38 @@
                                 </div>
                                 <div class="col-2">
                                     <input class="form-control bg-white" type="text" id="ipn_eg_regional" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-hover">
+                                        <thead class="bg-primary">
+                                            <tr>
+                                                <th scope="col">Exámenes Dextro</th>
+                                                <th scope="col">Valor en Mgr/dl</th>
+                                                <th scope="col">Conducta de manejo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="table.ecografia.hipoglicemia">
+                                            <tr>
+                                                <td>Primero</td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Segundo</td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tercero</td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <div class="row pt-3">
