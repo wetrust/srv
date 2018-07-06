@@ -820,7 +820,7 @@
                   $("#InicioLink").html("Volver");
             });
       </script>
-      <!--<script src="<?php echo Config::get('URL'); ?>js/cf.js"></script> -->
+      <script src="<?php echo Config::get('URL'); ?>js/cf.js"></script>
       <script type="text/javascript">
             var appUrl = '<?php echo Config::get('URL'); ?>';
       </script>

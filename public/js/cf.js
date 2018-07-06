@@ -9,7 +9,7 @@ $(document).ready(function(){
     loadLugarControl();
     loadLugarParto();
     loadPatologiaObstetrica();
-    loadPatologiaObstetrica();
+    loadTipoExamen();
     loadMotivoExamen();
     loadPrevision();
     loadEmail();
