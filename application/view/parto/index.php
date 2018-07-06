@@ -179,7 +179,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Patologia materna</label>
+                                        <label for="edadGestacional" class="col-5">Patologia Obstétrica</label>
                                         <select id="patologia_materna" class="form-control col-7">
                                             <option value="0" selected>Si</option>
                                             <option value="1">No</option>
