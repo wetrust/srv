@@ -179,11 +179,13 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Patologia Obstétrica</label>
-                                        <select id="patologia_materna" class="form-control col-7">
-                                            <option value="0" selected>Si</option>
-                                            <option value="1">No</option>
-                                        </select>
+                                        <label for="edadGestacional" class="col-5">Peso Placentario</label>
+                                        <div class="input-group col-7">
+                                            <input class="form-control" id="peso_placentario" type="number" min="0" max="9999">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">grs.</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -241,13 +243,12 @@
                             </div>
                             <div class="row mt-3">
                                 <div class="col-4">
-                                    <label for="edadGestacional">Peso Placentario</label>
-                                    <div class="input-group">
-                                        <input class="form-control" id="peso_placentario" type="number" min="0" max="9999">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">grs.</div>
-                                        </div>
-                                    </div>
+                                    <label for="edadGestacional">Meconio al parto</label>
+                                    <select id="meconio" class="form-control">
+                                        <option value="0" selected>Ausente</option>
+                                        <option value="1">Fluido</option>
+                                        <option value="2">Espeso</option>
+                                    </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Apar 1° Min.</label>
@@ -831,8 +832,8 @@
                         eg_parto: $("#datos\\.neonatal\\.edad").val(),
                         termino_parto: $("#termino_parto").val(),
                         tipo_parto: $("#tipo_parto").val(),
-                        patologia_materna: $("#patologia_materna").val(),
                         tipo_patologia_obstetrica: $("#tipo_patologia_obstetrica").val(),
+                        meconio: $("#meconio").val(),
                         peso_rn: $("#datos\\.neonatal\\.peso").val(),
                         talla_rn: $("#datos\\.neonatal\\.talla").val(),
                         perimetro_craneo_rn: $("#perimetro_craneo_rn").val(),
