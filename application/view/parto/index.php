@@ -1208,6 +1208,9 @@
                         $("#PesoPct").val("Pct. " + RN.pesoChile());
                         $("#PesoEge").val(RN.pesoChileCondicion());
                     }
+
+                    $("#peso_eg_regional").val(RN.pesoTemucoCondicion());
+                    $("#peso_eg_nacional").val(RN.pesoChileCondicion());
                 }
 
                 if ($("#tallaRN").val() > 1){
@@ -1219,6 +1222,9 @@
                         $("#IpnPct").val("Pct. " + RN.ipnChile());
                         $("#IpnEge").val(RN.ipnChileCondicion());
                     }
+
+                    $("#ipn_eg_regional").val(RN.ipnTemucoCondicion());
+                    $("#ipn_eg_nacional").val(RN.ipnChileCondicion());
                 }
 
                 if (this.value == 0){
