@@ -615,9 +615,14 @@
                         <div class="card-body">
                             <h5 class="card-title">Crecimiento intrauterino para la relación Peso/EG</h5>
                             <div class="row">
-                                <div class="col-6">
-                                    <label for="edadGestacional">2.- Curva Generalizada</label>
-                                    <input class="form-control" type="text" id="peso_eg_regional" disabled>
+                                <div class="col-2">
+                                    <label for="edadGestacional">1.- Curva Generalizada</label>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control p-0" type="text" id="peso_eg_pct_regional" disabled>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control p-0" type="text" id="peso_eg_regional" disabled>
                                 </div>
                                 <div class="col-6">
                                     <label for="edadGestacional">Riesgo de Hipoglicemia</label>
@@ -631,8 +636,13 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-6">
-                                    <label for="edadGestacional">3.- Curva Categorizada</label>
+                                <div class="col-2">
+                                    <label for="edadGestacional">2.- Curva Categorizada</label>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control" type="text" id="peso_eg_pct_ajustado" disabled>
+                                </div>
+                                <div class="col-2">
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-6">
@@ -652,7 +662,7 @@
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ver Variables para ajuste Peso / Ege</button>
+                                    <button type="button" class="btn btn-secondary mt-3" id="goto_ajuste">Ver Variables para ajuste Peso / Ege</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -1183,6 +1193,7 @@
                         $("#PesoEge").val(RN.pesoChileCondicion());
                     }
 
+                    $("#peso_eg_pct_regional").val("Pct. " + RN.pesoTemuco());
                     $("#peso_eg_regional").val(RN.pesoTemucoCondicion());
                     $('#g3').trigger("click");
                 }
@@ -1558,6 +1569,7 @@
                 dos = RN.peso - p10Pso[eg];
                 tres = parseInt((80 / (uno)) * (dos)) + 10;
                 $("#PesoEgeCAj").val(tres);
+                $("#peso_eg_pct_ajustado").val(tres);
                 if (tres < 10){
                     $("#peso_eg_ajustado").val("Pequeño");
                 }
