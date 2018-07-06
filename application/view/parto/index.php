@@ -785,6 +785,8 @@
                 </div>
             </div>
         </div>
+        <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
+        <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
         <script type="text/javascript">
             $( document ).ready(function() {
 
