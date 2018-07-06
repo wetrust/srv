@@ -479,38 +479,38 @@
                               <div class="card-body">
                                     <ul class="nav mb-2">
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevaPatologiaObstetrica"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo tipo</button>
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoTipoExamen"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo tipo</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarPatologiaObstetrica"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar tipo</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarTipoExamen"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar tipo</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarPatologiaObstetrica"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarTipoExamen"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarPatologiaObstetrica"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarTipoExamen"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
                                           </li>
                                           <li class="nav-item">
-                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarPatologiaObstetrica"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarTipoExamen"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
                                           </li>
                                     </ul>
-                                    <table class="table table-hover table-bordered" id="table.patologia">
+                                    <table class="table table-hover table-bordered" id="table.tipo">
                                           <thead class="bg-info">
                                                 <tr id="tableHead">
                                                       <th>N°</th>
                                                       <th>Nombre</th>
                                                 </tr>
                                           </thead>
-                                          <tbody id="table.body.patologia">
+                                          <tbody id="table.body.tipo">
                                           </tbody>
                                     </table>
-                                    <div class="card formulario d-none" id="form.patologia">
+                                    <div class="card formulario d-none" id="form.tipo">
                                           <div class="card-body">
                                                 <div class="form-group">
                                                       <h5 id="titleInput">Tipo de exámen</h5>
                                                 </div>
                                                 <div class="form-group">
-                                                      <input type="text" class="form-control" id="input.patologia">
+                                                      <input type="text" class="form-control" id="input.tipo">
                                                 </div>
                                           </div>
                                     </div>

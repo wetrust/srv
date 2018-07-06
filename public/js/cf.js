@@ -979,15 +979,15 @@ function loadPatologiaObstetrica(){
 }
 
 function loadTipoExamen(){
-    $.get( appUrl + "configuracion/patologiaobstetrica", function( data ) {
-        $("#table\\.body\\.patologia").empty();
-        $("#eliminarPatologiaObstetrica").addClass("d-none");
+    $.get( appUrl + "configuracion/tipoexamen", function( data ) {
+        $("#table\\.body\\.tipo").empty();
+        $("#eliminarTipoExamen").addClass("d-none");
         $.each(data, function (key, des) {
-            var strTable = "<tr><th scope='row' data-id='" + des.patologia_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.patologia_name +"</td></tr>";
-            $("#table\\.body\\.patologia").append(strTable);
-            $("#eliminarPatologiaObstetrica").removeClass("d-none");
+            var strTable = "<tr><th scope='row' data-id='" + des.tipo_id + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.tipo_name +"</td></tr>";
+            $("#table\\.body\\.tipo").append(strTable);
+            $("#eliminarTipoExamen").removeClass("d-none");
         });
-        $("#table\\.body\\.patologia tr").on('click',function(){
+        $("#table\\.body\\.tipo tr").on('click',function(){
             activateTr(this);
         });
     });

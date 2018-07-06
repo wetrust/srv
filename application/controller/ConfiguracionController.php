@@ -249,17 +249,17 @@ public function pr()
         $this->View->renderJSON(PatologiaMaternaModel::getAll());
     }
 
-    //public function patologiaobstetrica()
-    //{
-    //    $this->View->renderJSON(PatologiaObstetricaModel::getAll());
-    //}
-    //public function savepatologiaobstetrica()
-    //{
-    //    $this->View->renderJSON(PatologiaObstetricaModel::createPatologia(Request::post('patologia_name')));
-    //}
-    //public function eliminarpatologiaobstetrica($patologia_id)
-    //{
-    //    $result = PatologiaObstetricaModel::deletePatologia($patologia_id);
-    //    $this->View->renderJSON(PatologiaObstetricaModel::getAll());
-    //}
+    public function tipoexamen()
+    {
+        $this->View->renderJSON(TipoExamenModel::getAll());
+    }
+    public function savetipoexamen()
+    {
+        $this->View->renderJSON(TipoExamenModel::createTipo(Request::post('tipo_name')));
+    }
+    public function eliminartipoexamen($tipo_id)
+    {
+        $result = TipoExamenModel::deleteTipo($patologia_id);
+        $this->View->renderJSON(TipoExamenModel::getAll());
+    }
 }

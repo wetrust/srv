@@ -1,20 +1,20 @@
 <?php
 
 /**
- * PatologiaObstetricaModel
+ * TipoExamenModel
  * This is basically a simple CRUD (Create/Read/Update/Delete) demonstration.
  */
-class PatologiaObstetricaModel
+class TipoExamenModel
 {
     /**
-     * Get all patologia (patologia are just example data that the user has created)
+     * Get all examen (examen are just example data that the user has created)
      * @return array an array with several objects (the results)
      */
     public static function getAll()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT patologia_id, patologia_name FROM patologia";
+        $sql = "SELECT tipo_id, tipo_name FROM tipo";
         $query = $database->prepare($sql);
         $query->execute();
 
@@ -23,39 +23,39 @@ class PatologiaObstetricaModel
     }
 
     /**
-     * Get a single patologia
-     * @param int $patologia_id id of the specific patologia
+     * Get a single tipo
+     * @param int $tipo_id id of the specific tipo
      * @return object a single object (the result)
      */
-    public static function getPatologia($patologia_id)
+    public static function getTipo($tipo_id)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT patologia_id, patologia_name FROM patologia WHERE patologia_id = :patologia_id LIMIT 1";
+        $sql = "SELECT tipo_id, tipo_name FROM tipo WHERE tipo_id = :tipo_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':patologia_id' => $patologia_id));
+        $query->execute(array(':tipo_id' => $tipo_id));
 
         // fetch() is the PDO method that gets a single result
         return $query->fetch();
     }
 
     /**
-     * Set a patologia (create a new one)
-     * @param string $patologia_name patologia text that will be created
-     * @return bool feedback (was the patologia created properly ?)
+     * Set a tipo (create a new one)
+     * @param string $tipo_name tipo text that will be created
+     * @return bool feedback (was the tipo created properly ?)
      */
-    public static function createPatologia($patologia_name)
+    public static function createTipo($tipo_name)
     {
-        if (!$patologia_name || strlen($patologia_name) == 0) {
+        if (!$tipo_name || strlen($tipo_name) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO patologia (patologia_name) VALUES (:patologia_name)";
+        $sql = "INSERT INTO tipo (tipo_name) VALUES (:tipo_name)";
         $query = $database->prepare($sql);
-        $query->execute(array(':patologia_name' => $patologia_name));
+        $query->execute(array(':tipo_name' => $tipo_name));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -67,22 +67,22 @@ class PatologiaObstetricaModel
     }
 
     /**
-     * Update an existing patologia
-     * @param int $patologia_id id of the specific patologia
-     * @param string $patologia_name new text of the specific patologia
+     * Update an existing tipo
+     * @param int $tipo_id id of the specific tipo
+     * @param string $tipo_name new text of the specific tipo
      * @return bool feedback (was the update successful ?)
      */
-    public static function updatePatologia($patologia_id, $patologia_name)
+    public static function updateTipo($tipo_id, $tipo_name)
     {
-        if (!$patologia_id || !$patologia_name) {
+        if (!$tipo_id || !$tipo_name) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE patologia SET patologia_name = :patologia_name WHERE patologia_id = :patologia_id LIMIT 1";
+        $sql = "UPDATE tipo SET tipo_name = :tipo_name WHERE tipo_id = :tipo_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':patologia_id' => $patologia_id, ':patologia_name' => $patologia_name));
+        $query->execute(array(':tipo_id' => $tipo_id, ':tipo_name' => $tipo_name));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -93,21 +93,21 @@ class PatologiaObstetricaModel
     }
 
     /**
-     * Delete a specific patologia
-     * @param int $patologia_id id of the patologia
-     * @return bool feedback (was the patologia deleted properly ?)
+     * Delete a specific tipo
+     * @param int $tipo_id id of the tipo
+     * @return bool feedback (was the tipo deleted properly ?)
      */
-    public static function deletePatologia($patologia_id)
+    public static function deleteTipo($tipo_id)
     {
-        if (!$patologia_id) {
+        if (!$tipo_id) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "DELETE FROM patologia WHERE patologia_id = :patologia_id LIMIT 1";
+        $sql = "DELETE FROM tipo WHERE tipo_id = :tipo_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':patologia_id' => $patologia_id));
+        $query->execute(array(':tipo_id' => $tipo_id));
 
         if ($query->rowCount() == 1) {
             return true;
