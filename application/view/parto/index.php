@@ -625,7 +625,7 @@
                                     <input class="form-control" type="text" id="peso_eg_regional" disabled>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-2">
                                 <div class="col-3">
                                     <label for="edadGestacional">2.- Curva Categorizada</label>
                                 </div>
@@ -636,10 +636,10 @@
                                     <input class="form-control" type="text" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-4">
-                                    <button type="button" class="btn btn-secondary mt-3" id="goto_ajuste">Ajuste Peso / Ege</button>
+                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ajuste al Peso / Ege</button>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row p-2">
                                 <div class="col-6">
                                     <label for="edadGestacional">Riesgo de Hipoglicemia</label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
