@@ -17,9 +17,9 @@
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item active">Datos Neonatales</li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row my-2">
@@ -420,9 +420,9 @@
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
-                <li class="breadcrumb-item active">Curvas de crecimiento</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item active">Curvas de crecimiento</li>
                 <li class="ml-auto"><a href="#inicio">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -487,9 +487,9 @@
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
                 <li class="breadcrumb-item active">Evaluación Peso e IPN</li>
-                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="ml-auto"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -594,9 +594,9 @@
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="breadcrumb-item active">Protocolo Hipoglicemia neonatal</li>
+                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="ml-auto"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-1">
@@ -724,9 +724,9 @@
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
                 <li class="ml-auto"><a href="#recienacido">Volver</a></li>
             </ol>
             <div class="row mt-1">
