@@ -616,7 +616,7 @@
                             <h5 class="card-title">Crecimiento intrauterino para la relación Peso/Ege</h5>
                             <div class="row">
                                 <div class="col-4">
-                                    <label for="edadGestacional">1.- Curva Generalizada (percentil)</label>
+                                    <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva Generalizada (percentil)</label>
                                 </div>
                                 <div class="col-1">
                                     <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
@@ -627,7 +627,7 @@
                             </div>
                             <div class="row pt-2">
                                 <div class="col-4">
-                                    <label for="edadGestacional">2.- Curva Categorizada (percentil)</label>
+                                    <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;2.- Curva Categorizada (percentil)</label>
                                 </div>
                                 <div class="col-1">
                                     <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
