@@ -616,24 +616,24 @@
                             <h5 class="card-title">Crecimiento intrauterino para la relación Peso/Ege</h5>
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="edadGestacional">1.- Curva Generalizada</label>
+                                    <label for="edadGestacional">1.- Curva Generalizada (pct.)</label>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-2">
                                     <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
+                                    <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
                                 </div>
                             </div>
                             <div class="row pt-2">
                                 <div class="col-3">
-                                    <label for="edadGestacional">2.- Curva Categorizada</label>
+                                    <label for="edadGestacional">2.- Curva Categorizada (pct.)</label>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-2">
                                     <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
                                 </div>
                                 <div class="col-2">
-                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
+                                    <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-4">
                                     <button type="button" class="btn btn-secondary" id="goto_ajuste">Ajuste al Peso / Ege</button>
@@ -1195,7 +1195,7 @@
                         $("#PesoEge").val(RN.pesoChileCondicion());
                     }
 
-                    $("#peso_eg_pct_regional").val("Pct. " + RN.pesoTemuco());
+                    $("#peso_eg_pct_regional").val(RN.pesoTemuco());
                     $("#peso_eg_regional").val(RN.pesoTemucoCondicion());
                     $('#g3').trigger("click");
                 }
@@ -1571,7 +1571,7 @@
                 dos = RN.peso - p10Pso[eg];
                 tres = parseInt((80 / (uno)) * (dos)) + 10;
                 $("#PesoEgeCAj").val(tres);
-                $("#peso_eg_pct_ajustado").val("Pct. " + tres);
+                $("#peso_eg_pct_ajustado").val(tres);
                 if (tres < 10){
                     $("#peso_eg_ajustado").val("Pequeño");
                 }
