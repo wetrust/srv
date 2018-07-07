@@ -641,7 +641,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 bg-primary">
-                                    <p>Las diferencias observadas en el potencial de crecimiento ¿implican tambien diferencias clínicas significativas?</p>
+                                    <p>Estas diferencias observadas en el potencial de crecimiento, ¿implican tambien diferencias clínicas significativas para el RN?</p>
                                 </div>
                             </div>
                             <div class="row p-2">
