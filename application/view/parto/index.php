@@ -639,6 +639,11 @@
                                     <button type="button" class="btn btn-secondary" id="goto_ajuste">Ajuste al Peso / Ege</button>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-12 bg-primary">
+                                    <p>Las diferencias observadas en el potencial de crecimiento ¿implican tambien diferencias clínicas significativas?</p>
+                                </div>
+                            </div>
                             <div class="row p-2">
                                 <div class="col-6">
                                     <label for="edadGestacional">Riesgo de Hipoglicemia</label>
