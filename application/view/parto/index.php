@@ -646,7 +646,7 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-4">
-                                    <label for="edadGestacional">Riesgo de Hipoglicemia</label>
+                                    <label for="edadGestacional"><small>Protocolo Riesgo de Hipoglicemia</small></label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
                                         <option value="0">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
@@ -656,14 +656,14 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia sospecha Clínica</label>
+                                    <label for="edadGestacional"><small>Hipoglicemia sospecha Clínicamente</small></label>
                                     <select id="hipoglicemia_sospechada" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Hipoglicemia confirmada (Lab.)</label>
+                                    <label for="edadGestacional"><small>Hipoglicemia confirmada Laboratorio</small></label>
                                     <select id="hipoglicemia_confirmada" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
