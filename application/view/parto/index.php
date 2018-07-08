@@ -671,14 +671,20 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-12 mt-3">
+                                    <div class="row bd-primary text-white">
+                                        <div class="col-4">Exámenes</div>
+                                        <div class="col-2">Dextro</div>
+                                        <div class="col-2">Glicemia eb</div>
+                                        <div class="col-4">Conducta seguida según condición clínica del RN</div>
+                                    </div>
                                     <table class="table table-striped mt-3">
                                         <thead class="bg-primary text-white">
                                             <tr>
-                                                <th scope="col">Exámenes Dextro</th>
-                                                <th scope="col">Valor en Mgr/dl</th>
-                                                <th scope="col">Valor en Mgr/dl</th>
-                                                <th scope="col">Conducta de manejo</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody id="table.ecografia.hipoglicemia">
