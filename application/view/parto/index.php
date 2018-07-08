@@ -26,20 +26,18 @@
                 <div class="col-12">
                     <div class="card bg-light">
                         <div class="card-body p-2">
-                            <div class="row">
+                            <div class="row align-items-center">
                                 <div class="col-4">
-                                    <h5 class="card-title mb-3"><i class="fas fa-search"></i> Buscar Pacientes Por:</h5>
+                                    <h5 class="card-title"><i class="fas fa-search"></i> Buscar Pacientes Por:</h5>
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">N° ID de la Madre</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" placeholder="N° ID de la Madre">
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">N° ID del Recién Nacido</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" placeholder="N° ID del Recién Nacido">
                                 </div>
                                 <div class="col-2">
-                                    <button type="button" class="btn btn-primary mt-4">Buscar</button>
+                                    <button type="button" class="btn btn-primary">Buscar</button>
                                 </div>
                             </div>
                         </div>
