@@ -1,5 +1,5 @@
-        <section class="bg-info">
-            <h4 class=" text-center pt-4 mb-0"><strong><em>Evaluación Post Natal</em></strong></h4>
+        <section>
+            <h4 class="bg-info text-center pt-4 mb-0"><strong><em>Evaluación Post Natal</em></strong></h4>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="60px" style="fill: #d1ecf1;">
                 <defs>
                     <filter id="f1" x="0" y="0" width="200%" height="200%">
@@ -951,8 +951,6 @@
             }
 
             $( document ).ready(function() {
-
-                $("body").css("background-color", "rgb(233, 246, 248)");
                 document.location.hash = "#";
                 let fecha = new Date();
                 let day = ("0" + fecha.getDate()).slice(-2);
