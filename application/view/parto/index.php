@@ -1,5 +1,5 @@
         <section>
-            <h4 class="text-center py-4 mb-0"><strong><em>Evaluación Post Natal</em></strong></h4>
+            <h4 class="text-center py-4 mb-0" id="titulo"><strong><em>Evaluación postnatal del crecimiento</em></strong></h4>
         </section>
         <div class="container" id="neonatal">
             <ol class="breadcrumb">
@@ -388,20 +388,6 @@
             </div>
         </div>
         <div class="container" id="postnatal" style="display:none;">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-4">
-                            <h4 class="mt-0 mb-1"><em>Evaluación postnatal del crecimiento</em></h4>
-                            <p><em>Evaluación postnatal básica para profesionales</em></p>
-                        </div>
-                        <div class="media-body mt-4">
-                            <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
@@ -429,20 +415,6 @@
             <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
         </div>
         <div class="container" id="pdfviebox" style="display:none;">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-4">
-                            <h4 class="mt-0 mb-1"><em>Evaluación postnatal del crecimiento</em></h4>
-                            <p><em>Evaluación postnatal básica para profesionales</em></p>
-                        </div>
-                        <div class="media-body mt-4">
-                            <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#recienacido">Volver</a></li>
             </ol>
@@ -455,20 +427,6 @@
             </div>
         </div>
         <div class="container" id="recienacido" style="display:none;">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-4">
-                            <h4 class="mt-0 mb-1"><em>Evaluación postnatal del crecimiento</em></h4>
-                            <p><em>Evaluación postnatal básica para profesionales</em></p>
-                        </div>
-                        <div class="media-body mt-4">
-                            <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
@@ -562,20 +520,6 @@
             </div>
         </div>
         <div class="container" id="hipoglicemia" style="display:none">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-4">
-                            <h4 class="mt-0 mb-1"><em>Hipoglicemia Neonatal</em></h4>
-                            <p><em>Evaluación postnatal básica para profesionales</em></p>
-                        </div>
-                        <div class="media-body mt-4">
-                            <p class="float-right" name="fechaHora" style="color: #f0df90;">Martes, 19 de Junio 2018</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
@@ -2254,22 +2198,28 @@
                     let hash = document.location.hash;
 
                     if (hash=="#postnatal"){
+                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
 			            displayElement("postnatal");
                     }
                     else if (hash=="#ajustepeso"){
+                        $("#titulo").html("<strong><em>Ajuste al peso Neonatal</em></strong>");
                         displayElement("ajustepeso");
                         verGraficoAjustePeso();
                     }
                     else if (hash=="#recienacido"){
+                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("recienacido");
                     }
                     else if (hash=="#pdfviebox"){
+                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("pdfviebox");
                     }
                     else if (hash=="#hipoglicemia"){
+                        $("#titulo").html("<strong><em>Hipoglicemia Neonatal</em></strong>");
                         displayElement("hipoglicemia");
                     }
                     else if (hash=="#neonatal"){
+                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("neonatal"); 
                     }
                 });
