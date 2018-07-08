@@ -327,6 +327,11 @@
                                         <option value="1">No</option>
                                     </select>
                                 </div>
+                                <div class="col-4">
+                                    <label>Prof. Atención Parto</label>
+                                    <select class="form-control" id="prof.atencion.parto">
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
