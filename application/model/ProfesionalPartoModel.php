@@ -14,6 +14,8 @@ class ProfesionalPartoModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
+        $tipo = intval($tipo);
+        
         if ($tipo == 0){
 
         }
