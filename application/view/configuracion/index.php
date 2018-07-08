@@ -57,12 +57,59 @@
                         <li class="nav-item">
                               <a class="nav-link" data-toggle="tab" href="#lp">Lugar de Parto</a>
                         </li>
+                        <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#parn">Profesional alta del RN</a>
+                        </li>
                   </ul>
                </div>
             </div>
          </div>
          <div class="col-12 col-md-9">
             <div class="tab-content">
+                  <div class="tab-pane" id="parn" role="tabpanel">
+                        <h2 class="my-4">Profesional alta del RN</h2>
+                        <div class="card">
+                              <div class="card-body">
+                                    <ul class="nav mb-2">
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary mr-1" id="nuevoProfesionalAltaParto"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo profesional</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="editarProfesionalAltaParto"><i class="fa fa-pencil" aria-hidden="true"></i> Modificar profesional</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="guardarProfesionalAltaParto"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none mr-1" id="cancelarProfesionalAltaParto"><i class="fa fa-ban" aria-hidden="true"></i> Cancelar</button>
+                                          </li>
+                                          <li class="nav-item">
+                                                <button type="button" class="btn btn-outline-primary d-none" id="eliminarProfesionalAltaParto"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
+                                          </li>
+                                    </ul>
+                                    <table class="table table-hover table-bordered" id="table.profesional.alta.parto">
+                                          <thead class="bg-info">
+                                                <tr>
+                                                      <th>N°</th>
+                                                      <th>Nombre</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody id="table.body.profesional.alta.parto">
+                                          </tbody>
+                                    </table>
+                                    <div class="card d-none" id="form.profesional.alta.parto">
+                                          <div class="card-body">
+                                                <div class="form-group">
+                                                      <h5 id="titleInput">Nuevo Profesional</h5>
+                                                </div>
+                                                <div class="form-group">
+                                                      <input type="text" class="form-control" id="input.profesional.alta.parto">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
                   <div class="tab-pane active" id="pais" role="tabpanel">
                         <h2 class="my-4">Configurar Nacionalidad</h2>
                         <div class="card">

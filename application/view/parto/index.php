@@ -710,12 +710,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row pt-3">
-                                <div class="col-6">
+                            <div class="row pt-4">
+                                <div class="col-8">
                                     <label>Observaciones</label>
                                     <input class="form-control" type="text" id="observaciones">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-4">
                                     <label>Profesional alta del recién nacido</label>
                                     <select class="form-control">
                                         <option value="1">Promover alimentación natural</option>
