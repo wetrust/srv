@@ -594,7 +594,7 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-12 bg-info p-2">
-                                    <p class="text-white m-0">La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿ Implica diferencias en riesgo de patología neonatal ?, para ello</p>
+                                    <p class="text-white m-0">La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿ Implica diferencias en riesgo de patología neonatal ?, tales como hipoglicemia</p>
                                 </div>
                             </div>
                             <div class="row p-2">
