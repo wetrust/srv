@@ -670,7 +670,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12 mt-3">
+                                <div class="col-12 my-3">
                                     <div class="row bg-primary text-white p-2">
                                         <div class="col-2">Exámenes</div>
                                         <div class="col-2 text-center">Dextro</div>
@@ -723,7 +723,7 @@
                                     Profesional alta del recién nacido
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row p-3">
                                 <div class="col-8">
                                     <input class="form-control" type="text" id="observaciones">
                                 </div>
