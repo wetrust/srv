@@ -580,7 +580,7 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-12 bg-info p-2">
-                                    <p class="text-white m-0">Estas diferencias observadas en el potencial de crecimiento, ¿implican tambien diferencias clínicas significativas para el RN?</p>
+                                    <p class="text-white m-0">Diferencia observada (Pct.) en la categorización del peso (implica diferencias en riesgo de patología neonatal)</p>
                                 </div>
                             </div>
                             <div class="row p-2">
