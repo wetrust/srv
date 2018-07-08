@@ -136,7 +136,6 @@ class EcoModel
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
-        $data = json_decode($data, true);
 
         if ($tipo == 4){
             $sql = "UPDATE parto SET nombre_madre = :nombre_madre,apellido_madre = :apellido_madre,lugar_parto_rn = :lugar_parto_rn,nombre_rn = :nombre_rn,apellido_rn = :apellido_rn,sexo_rn = :sexo_rn,fecha_parto_rn = :fecha_parto_rn,eg_parto = :eg_parto,termino_parto = :termino_parto,tipo_parto = :tipo_parto,tipo_patologia_obstetrica = :tipo_patologia_obstetrica,peso_rn = :peso_rn,talla_rn = :talla_rn,perimetro_craneo_rn = :perimetro_craneo_rn,ipn_rn = :ipn_rn,peso_placentario = :peso_placentario,meconio = :meconio,apgar_1 = :apgar_1,apgar_5 = :apgar_5,hiperbilirrubinemia = :hiperbilirrubinemia,poliglobulia = :poliglobulia,hospital_ucin = :hospital_ucin,sindrome_respiratorio = :sindrome_respiratorio,alta_con_madre = :alta_con_madre,observaciones = :observaciones,hipoglicemia_riesgo = :hipoglicemia_riesgo, hipoglicemia_sospechada = :hipoglicemia_sospechada, hipoglicemia_confirmada = :hipoglicemia_confirmada, dextro_uno = :dextro_uno, glicemia_uno = :glicemia_uno, conducta_uno = :conducta_uno, dextro_dos = :dextro_dos, glicemia_dos = :glicemia_dos, conducta_dos = :conducta_dos, dextro_tres = :dextro_tres, glicemia_tres = :glicemia_tres, conducta_tres = :conducta_tres WHERE id_paciente = :id_paciente LIMIT 1";
