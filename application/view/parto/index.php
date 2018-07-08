@@ -612,7 +612,7 @@
                 <div class="col-12 col-sm-10">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Crecimiento intrauterino para la relación Peso/Ege</h5>
+                            <h5 class="card-title">Crecimiento intrauterino para la relación Peso / Ege y ajuste según variables</h5>
                             <div class="row">
                                 <div class="col-4">
                                     <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva Generalizada (percentil)</label>
@@ -787,7 +787,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Estado Nutricional</label>
-                                    <select id="imc" class="form-control col-8" style="font-size: 0.8rem;height: 2rem;">
+                                    <select id="imc" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
                                         <option value="1">Enflaquecida</option>
                                         <option value="2">Normal</option>
                                         <option value="3">SobrePeso</option>
@@ -796,7 +796,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Edad Materna</label>
-                                    <select id="em" class="form-control col-8" style="font-size: 0.8rem;height: 2rem;">
+                                    <select id="em" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
                                         <option value="1">&lt; 19</option>
                                         <option value="2">20 - 21</option>
                                         <option value="3">22 - 23</option>
@@ -807,7 +807,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Etnia Materna</label>
-                                    <select id="apellm" class="form-control col-8" style="font-size: 0.8rem;height: 2rem;">
+                                    <select id="apellm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
                                         <option value="0">Ambos Caucásicos</option>
                                         <option value="2">Solo uno Caucásico</option>
                                         <option value="1" selected>Ninguno Caucásico</option>
@@ -1722,7 +1722,7 @@
                 $("#tituloAjusteBajo").html("Pct. Peso con ajuste");
                 Highcharts.chart('graficoAjustado', {
                     title: {
-                        text: 'Curva regional peso/eg ajustada por variables',
+                        text: 'Curva regional Peso/Ege ajustada por variables',
                         style: {
                         "color": "#337ab7",
                         "fontSize": "14px"
