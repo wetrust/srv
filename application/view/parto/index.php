@@ -25,10 +25,10 @@
             <div class="row my-2">
                 <div class="col-12">
                     <div class="card bg-light">
-                        <div class="card-body p-2">
+                        <div class="card-body p-2 pl-3">
                             <div class="row align-items-center">
-                                <div class="col-4 pl-2">
-                                    <h5 class="card-title m-0"><i class="fas fa-search"></i> Buscar Pacientes Por:</h5>
+                                <div class="col-4">
+                                    <h5 class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</h5>
                                 </div>
                                 <div class="col-3">
                                     <input class="form-control" type="text" placeholder="N° ID de la Madre">
