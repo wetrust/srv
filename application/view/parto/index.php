@@ -639,7 +639,7 @@
                                 </div>
                             </div>
                             <div class="row p-2">
-                                <div class="col-12 bg-primary p-2">
+                                <div class="col-12 bg-info p-2">
                                     <p class="text-white m-0">Estas diferencias observadas en el potencial de crecimiento, ¿implican tambien diferencias clínicas significativas para el RN?</p>
                                 </div>
                             </div>
@@ -671,7 +671,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 my-3">
-                                    <div class="row bg-primary text-white p-2">
+                                    <div class="row bg-info text-white p-2">
                                         <div class="col-2">Exámenes</div>
                                         <div class="col-2 text-center">Dextro</div>
                                         <div class="col-2 text-center">Glicemia ev</div>
@@ -715,7 +715,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row bg-primary text-white p-2">
+                            <div class="row bg-info text-white p-2">
                                 <div class="col-8">
                                     Observaciones
                                 </div>
