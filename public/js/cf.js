@@ -860,7 +860,7 @@ $(document).ready(function(){
     $("#guardarProfesionalAltaParto").on("click", function(){
         var dataProfesional = {
             tipo: 1,
-            profesional_text: $("#input\\.profesional\\.alta\\.parto").val()
+            nombre_profesional: $("#input\\.profesional\\.alta\\.parto").val()
         }
 
         $.post(appUrl + "configuracion/saveprofesionalparto", dataProfesional).done(function (data) {
