@@ -924,6 +924,18 @@
                                     $("#sindrome_respiratorio").val(val.sindrome_respiratorio);
                                     $("#alta_con_madre").val(val.alta_con_madre);
                                     $("#observaciones").val(val.observaciones);
+                                    $("#hipoglicemia_riesgo").val(val.hipoglicemia_riesgo);
+                                    $("#hipoglicemia_sospechada").val(val.hipoglicemia_sospechada);
+                                    $("#hipoglicemia_confirmada").val(val.hipoglicemia_confirmada);
+                                    $("#dextro_uno").val(val.dextro_uno);
+                                    $("#glicemia_uno").val(val.glicemia_uno);
+                                    $("#conducta\\.uno").val(val.conducta_uno);
+                                    $("#dextro_dos").val(val.dextro_dos);
+                                    $("#glicemia_dos").val(val.glicemia_dos);
+                                    $("#conducta\\.dos").val(val.conducta_dos);
+                                    $("#dextro_tres").val(val.dextro_tres);
+                                    $("#glicemia_tres").val(val.glicemia_tres);
+                                    $("#conducta\\.tres").val(val.conducta_tres);
                                 };
                             });
                         }
@@ -1101,6 +1113,18 @@
                         sindrome_respiratorio: $("#sindrome_respiratorio").val(),
                         alta_con_madre: $("#alta_con_madre").val(),
                         observaciones: $("#observaciones").val(),
+                        hipoglicemia_riesgo: $("#hipoglicemia_riesgo").val(),
+                        hipoglicemia_sospechada: $("#hipoglicemia_sospechada").val(),
+                        hipoglicemia_confirmada: $("#hipoglicemia_confirmada").val(),
+                        dextro_uno: $("#dextro_uno").val(),
+                        glicemia_uno: $("#glicemia_uno").val(),
+                        conducta_uno: $("#conducta\\.uno").val(),
+                        dextro_dos: $("#dextro_dos").val(),
+                        glicemia_dos: $("#glicemia_dos").val(),
+                        conducta_dos: $("#conducta\\.dos").val(),
+                        dextro_tres: $("#dextro_tres").val(),
+                        glicemia_tres: $("#glicemia_tres").val(),
+                        conducta_tres: $("#conducta\\.tres").val()
                     }
 
                     var data = {
