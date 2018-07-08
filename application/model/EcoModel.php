@@ -103,6 +103,11 @@ class EcoModel
             $query->execute(array(':id_paciente' => $rut, ':n_examen' => $data["examen"], ':fecha_examen' => $data["fecha"], ':eg_examen' => $data["eg"], ':uterina_derecha' => $data["aud"],':uterina_pct_derecha' => $data["audPctTxt"], ':uterina_izquierda' => $data["aui"],':uterina_pct_izquierda' => $data["auiPctTxt"], ':uterinas' => $data["auprom"], ':uterinas_pct' => $data["auPctTxt"], ':arteria_umbilical' => $data["ipau"], ':arteria_pct_umbilical' => $data["ipauPctTxt"], ':arteria_media' => $data["ipacm"], ':arteria_pct_media' => $data["ipacmPctTxt"], ':ccp' => $data["ccp"], ':ccp_pct' => $data["ccpPctTxt"], ':ductus' => $data["dv"], ':ductus_pct' => $data["dvPctTxt"],':acm' => $data["psmACM"]));
         }
         else if ($tipo == 4){
+
+            $sql = "SELECT * FROM parto WHERE id_paciente = :id_paciente LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_paciente' => $rut));
+
             if ($query->rowCount() == 1) {
                 self::updateEco($rut,$tipo,$data);
                 return self::getEcos($rut, $tipo);
