@@ -911,8 +911,8 @@
                                     $("#tipo_parto").val(val.tipo_parto);
                                     $("#tipo_patologia_obstetrica").val(val.tipo_patologia_obstetrica);
                                     $("#meconio").val(val.meconio);
-                                    $("#datos\\.neonatal\\.peso").val(val.peso_rn);
-                                    $("#datos\\.neonatal\\.talla").val(val.talla_rn);
+                                    $("#datos\\.neonatal\\.peso").val(val.peso_rn).trigger("change");
+                                    $("#datos\\.neonatal\\.talla").val(val.talla_rn).trigger("change");
                                     $("#perimetro_craneo_rn").val(val.perimetro_craneo_rn);
                                     $("#datos\\.neonatal\\.ipn").val(val.ipn_rn);
                                     $("#peso_placentario").val(val.peso_placentario);
