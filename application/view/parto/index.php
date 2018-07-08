@@ -570,7 +570,7 @@
                                 <div class="col-2">
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 align-self-end">
                                     <div class="row">
                                         <label class="col-6">Peso neonatal</label>
                                         <div class="input-group p-0 col-6">
@@ -592,7 +592,7 @@
                                 <div class="col-2">
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 align-self-end">
                                     <button type="button" class="btn btn-outline-secondary" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
                                 </div>
                             </div>
