@@ -328,12 +328,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row pt-3">
-                                <div class="col-12">
-                                    <label for="edadGestacional">Observaciones</label>
-                                    <input class="form-control" type="text" id="observaciones">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -714,6 +708,20 @@
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label>Observaciones</label>
+                                    <input class="form-control" type="text" id="observaciones">
+                                </div>
+                                <div class="col-6">
+                                    <label>Profesional alta del recién nacido</label>
+                                    <select class="form-control">
+                                        <option value="1">Promover alimentación natural</option>
+                                        <option value="2">Alimentación enteral</option>
+                                        <option value="3">Terapia endovenosa</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
