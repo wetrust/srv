@@ -558,7 +558,7 @@
                                     <div class="row">
                                         <label class="col-6">Peso Neonatal</label>
                                         <div class="input-group p-0 col-6">
-                                            <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number">
+                                            <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
                                             </div>
