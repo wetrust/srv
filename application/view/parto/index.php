@@ -680,20 +680,6 @@
             </div>
         </div>
         <div class="container" id="ajustepeso" style="display:none;">
-            <div class="bienvenida mb-3 rounded-bottom">
-                <div class="container">
-                    <div class="media">
-                        <img class="d-flex ml-3" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-                        <div class="media-body mt-4">
-                            <h4 class="mt-0 mb-1"><em>Ajuste al peso Neonatal</em></h4>
-                            <p><em>Evaluación postnatal básica para profesionales</em></p>
-                        </div>
-                        <div class="media-body mt-4">
-                            <p class="float-right" name="fechaHora" style="color: #f0df90;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
