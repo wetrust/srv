@@ -636,7 +636,7 @@
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
                                 </div>
                                 <div class="col-4">
-                                    <button type="button" class="btn btn-secondary" id="goto_ajuste">Ajuste al Peso / Ege</button>
+                                    <button type="button" class="btn btn-outline-secondary" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
                                 </div>
                             </div>
                             <div class="row p-2">
