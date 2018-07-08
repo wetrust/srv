@@ -672,60 +672,48 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 mt-3">
-                                    <div class="row bd-primary text-white">
+                                    <div class="row bg-primary text-white p-3">
                                         <div class="col-4">Exámenes</div>
-                                        <div class="col-2">Dextro</div>
-                                        <div class="col-2">Glicemia eb</div>
+                                        <div class="col-2"><input class="form-control" type="text"></div>
+                                        <div class="col-2"><input class="form-control" type="text"></div>
                                         <div class="col-4">Conducta seguida según condición clínica del RN</div>
                                     </div>
-                                    <table class="table table-striped mt-3">
-                                        <thead class="bg-primary text-white">
-                                            <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col"></th>
-                                                <th scope="col"></th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="table.ecografia.hipoglicemia">
-                                            <tr>
-                                                <td>Primero</td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td>
-                                                    <select class="form-control">
-                                                        <option value="1">Promover alimentación natural</option>
-                                                        <option value="2">Alimentación enteral</option>
-                                                        <option value="3">Terapia endovenosas</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Segundo</td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td>
-                                                    <select class="form-control">
-                                                        <option value="1">Promover alimentación natural</option>
-                                                        <option value="2">Alimentación enteral</option>
-                                                        <option value="3">Terapia endovenosas</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tercero</td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td>
-                                                    <select class="form-control">
-                                                        <option value="1">Promover alimentación natural</option>
-                                                        <option value="2">Alimentación enteral</option>
-                                                        <option value="3">Terapia endovenosas</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="row bg-primary text-white p-3">
+                                        <div class="col-4">Primero</div>
+                                        <div class="col-2"><input class="form-control" type="text"></div>
+                                        <div class="col-2"><input class="form-control" type="text"></div>
+                                        <div class="col-4">
+                                            <select class="form-control">
+                                                <option value="1">Promover alimentación natural</option>
+                                                <option value="2">Alimentación enteral</option>
+                                                <option value="3">Terapia endovenosas</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-primary text-white p-3">
+                                        <div class="col-4">Segundo</div>
+                                        <div class="col-2"><input class="form-control" type="text"></div>
+                                        <div class="col-2"><input class="form-control" type="text"></div>
+                                        <div class="col-4">
+                                            <select class="form-control">
+                                                <option value="1">Promover alimentación natural</option>
+                                                <option value="2">Alimentación enteral</option>
+                                                <option value="3">Terapia endovenosas</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row bg-primary text-white p-3">
+                                        <div class="col-4">Tercero</div>
+                                        <div class="col-2">Dextro</div>
+                                        <div class="col-2">Glicemia eb</div>
+                                        <div class="col-4">
+                                            <select class="form-control">
+                                                <option value="1">Promover alimentación natural</option>
+                                                <option value="2">Alimentación enteral</option>
+                                                <option value="3">Terapia endovenosas</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
