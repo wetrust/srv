@@ -599,7 +599,7 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-4">
-                                    <label for="edadGestacional" class="bg-info text-white py-1">Protocolo Riesgo de Hipoglicemia</label>
+                                    <label for="edadGestacional" class="bg-info text-white px-1">Protocolo Riesgo de Hipoglicemia</label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
                                         <option value="0">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
