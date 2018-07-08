@@ -675,7 +675,7 @@
                                     <div class="row bg-primary text-white p-3">
                                         <div class="col-2">Exámenes</div>
                                         <div class="col-2">Dextro</div>
-                                        <div class="col-2">Glicemia eb</div>
+                                        <div class="col-2">Glicemia ev</div>
                                         <div class="col-6">Conducta seguida según condición clínica del RN</div>
                                     </div>
                                     <div class="row bg-secondary text-white p-3">
@@ -686,7 +686,7 @@
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
-                                                <option value="3">Terapia endovenosas</option>
+                                                <option value="3">Terapia endovenosa</option>
                                             </select>
                                         </div>
                                     </div>
@@ -698,7 +698,7 @@
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
-                                                <option value="3">Terapia endovenosas</option>
+                                                <option value="3">Terapia endovenosa</option>
                                             </select>
                                         </div>
                                     </div>
@@ -710,7 +710,7 @@
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
-                                                <option value="3">Terapia endovenosas</option>
+                                                <option value="3">Terapia endovenosa</option>
                                             </select>
                                         </div>
                                     </div>
