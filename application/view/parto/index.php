@@ -937,7 +937,7 @@
 
                 obtenerPartos();
 
-                $.get( serverURL + "configuracion/profesionalparto/1", function( data ) {
+                $.get( appUrl + "configuracion/profesionalparto/1", function( data ) {
                     $("#prof\\.alta\\.rn").empty();
                     $.each(data, function (key, des) {
                         let strSelect = "<option value='" + des.id_profesional +"'>" + des.nombre_profesional + "</option>";
