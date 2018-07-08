@@ -624,6 +624,14 @@
                                 <div class="col-2">
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
                                 </div>
+                                <div class="col-4">
+                                    <div class="input-group">
+                                        <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">grs.</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row pt-2">
                                 <div class="col-4">
@@ -946,7 +954,7 @@
             $( document ).ready(function() {
 
                 $("body").css("background-color", "rgb(233, 246, 248)");
-
+                document.location.hash = "#";
                 let fecha = new Date();
                 let day = ("0" + fecha.getDate()).slice(-2);
                 let month = ("0" + (fecha.getMonth() + 1)).slice(-2);
@@ -1149,6 +1157,7 @@
                     }
 
                     $("#pesoRN").val($(this).val());
+                    $("#datos\\.hipoglicemia\\.peso").val($(this).val());
                     $("#pesoRN").trigger("change");
                 });
 
