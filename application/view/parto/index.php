@@ -1049,7 +1049,7 @@
 
                             $.post(serverURL + "examen/del/", data).done(function(response) {
                                 $("#table\\.ecografia\\.parto").empty();
-                                $("#boton\\.parto\\.nuevo").trigger("click")
+                                $("#boton\\.parto\\.nuevo").trigger("click");
                                 obtenerPartos();
                                 $("#id_paciente").val("");
                                 $("#nombre_madre").val("");
