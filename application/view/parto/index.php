@@ -678,7 +678,7 @@
                                         <div class="col-2">Glicemia eb</div>
                                         <div class="col-4">Conducta seguida según condición clínica del RN</div>
                                     </div>
-                                    <div class="row bg-primary text-white p-3">
+                                    <div class="row bg-secondary text-white p-3">
                                         <div class="col-4">Primero</div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
@@ -690,7 +690,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row bg-primary text-white p-3">
+                                    <div class="row p-3">
                                         <div class="col-4">Segundo</div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
@@ -702,7 +702,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row bg-primary text-white p-3">
+                                    <div class="row bg-secondary text-white p-3">
                                         <div class="col-4">Tercero</div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
