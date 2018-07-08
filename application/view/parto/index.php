@@ -673,16 +673,16 @@
                             <div class="row">
                                 <div class="col-12 mt-3">
                                     <div class="row bg-primary text-white p-3">
-                                        <div class="col-4">Exámenes</div>
+                                        <div class="col-2">Exámenes</div>
                                         <div class="col-2">Dextro</div>
                                         <div class="col-2">Glicemia eb</div>
-                                        <div class="col-4">Conducta seguida según condición clínica del RN</div>
+                                        <div class="col-6">Conducta seguida según condición clínica del RN</div>
                                     </div>
                                     <div class="row bg-secondary text-white p-3">
-                                        <div class="col-4">Primero</div>
+                                        <div class="col-2">Primero</div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
-                                        <div class="col-4">
+                                        <div class="col-6">
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
@@ -691,10 +691,10 @@
                                         </div>
                                     </div>
                                     <div class="row p-3">
-                                        <div class="col-4">Segundo</div>
+                                        <div class="col-2">Segundo</div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
-                                        <div class="col-4">
+                                        <div class="col-6">
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
@@ -703,10 +703,10 @@
                                         </div>
                                     </div>
                                     <div class="row bg-secondary text-white p-3">
-                                        <div class="col-4">Tercero</div>
+                                        <div class="col-2">Tercero</div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
                                         <div class="col-2"><input class="form-control" type="text"></div>
-                                        <div class="col-4">
+                                        <div class="col-6">
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
