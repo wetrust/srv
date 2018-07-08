@@ -1,8 +1,5 @@
         <section>
-            <h4 class="text-center pt-4 mb-0"><strong><em>Evaluación Post Natal</em></strong></h4>
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="60px" style="fill: #FFF;">
-                <path stroke-width="0" d="M0 0 C50 100 50 100 100 0" filter="url(#f1)"></path>
-            </svg>
+            <h4 class="text-center py-4 mb-0"><strong><em>Evaluación Post Natal</em></strong></h4>
         </section>
         <div class="container" id="neonatal">
             <ol class="breadcrumb">
