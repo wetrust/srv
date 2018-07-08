@@ -262,4 +262,20 @@ public function pr()
         $result = TipoExamenModel::deleteTipo($patologia_id);
         $this->View->renderJSON(TipoExamenModel::getAll());
     }
+
+    public function profesionalparto($tipo)
+    {
+        $this->View->renderJSON(ProfesionalPartoModel::getAll($tipo));
+    }
+
+    public function saveprofesionalparto()
+    {
+        $this->View->renderJSON(ProfesionalPartoModel::createProfesional(Request::post('tipo'),Request::post('nombre_profesional')));
+    }
+
+    public function eliminarprofesionalparto($tipo,$profesional_id)
+    {
+        $result = ProfesionalPartoModel::deleteProfesional($tipo,$profesional_id);
+        $this->View->renderJSON(ProfesionalPartoModel::getAll($tipo));
+    }
 }

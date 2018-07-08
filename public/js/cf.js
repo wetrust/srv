@@ -13,6 +13,7 @@ $(document).ready(function(){
     loadMotivoExamen();
     loadPrevision();
     loadEmail();
+    loadProfAltaParto();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -841,6 +842,71 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoProfesionalAltaParto").on("click", function(){
+        $("#table\\.body\\.profesional\\.alta\\.parto").addClass("d-none");
+        $("#form\\.profesional\\.alta\\.parto").removeClass("d-none");
+        $("#input\\.profesional\\.alta\\.parto").val("");
+        $("#nuevoProfesionalAltaParto").addClass("d-none");
+        $("#guardarProfesionalAltaParto").removeClass("d-none");
+        $("#cancelarProfesionalAltaParto").removeClass("d-none");
+        $("#eliminarProfesionalAltaParto").addClass("d-none");
+    });
+    
+    $("#editarProfesionalAltaParto").on("click", function(){
+
+    });
+
+    $("#guardarProfesionalAltaParto").on("click", function(){
+        var dataProfesional = {
+            tipo: 1,
+            profesional_text: $("#input\\.profesional\\.alta\\.parto").val()
+        }
+
+        $.post(appUrl + "configuracion/saveprofesionalparto", dataProfesional).done(function (data) {
+            $("#table\\.body\\.profesional\\.alta\\.parto").removeClass("d-none");
+            $("#form\\.profesional\\.alta\\.parto").addClass("d-none");
+            $("#input\\.profesional\\.alta\\.parto").val("");
+            $("#nuevoProfesionalAltaParto").removeClass("d-none");
+            $("#guardarProfesionalAltaParto").addClass("d-none");
+            $("#cancelarProfesionalAltaParto").addClass("d-none");
+            ProfesionalAltaParto();
+        });
+    });
+
+    $("#cancelarProfesionalAltaParto").on("click", function(){
+        $("#table\\.body\\.profesional\\.alta\\.parto").removeClass("d-none");
+        $("#form\\.profesional\\.alta\\.parto").addClass("d-none");
+        $("#input\\.profesional\\.alta\\.parto").val("");
+        $("#nuevoProfesionalAltaParto").removeClass("d-none");
+        $("#guardarProfesionalAltaParto").addClass("d-none");
+        $("#cancelarProfesionalAltaParto").addClass("d-none");
+        ProfesionalAltaParto();
+    });
+
+    $("#eliminarProfesionalAltaParto").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Email");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el profesional seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.profesional\\.alta\\.parto").children();
+            var profesional_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    profesional_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarprofesionalparto/1/" + profesional_id, function( data ) {
+                ProfesionalAltaParto();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -1033,6 +1099,21 @@ function loadEmail(){
             $("#eliminarEmail").removeClass("d-none");
         });
         $("#table\\.body\\.email tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadProfAltaParto(){
+    $.get( appUrl + "configuracion/profesionalparto/1", function( data ) {
+        $("#table\\.body\\.profesional\\.alta\\.parto").empty();
+        $("#eliminarProfesionalAltaParto").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.id_profesional + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.nombre_profesional +"</td></tr>";
+            $("#table\\.body\\.profesional\\.alta\\.parto").append(strTable);
+            $("#eliminarProfesionalAltaParto").removeClass("d-none");
+        });
+        $("#table\\.body\\.profesional\\.alta\\.parto tr").on('click',function(){
             activateTr(this);
         });
     });
