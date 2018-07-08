@@ -677,6 +677,7 @@
                                             <tr>
                                                 <th scope="col">Exámenes Dextro</th>
                                                 <th scope="col">Valor en Mgr/dl</th>
+                                                <th scope="col">Valor en Mgr/dl</th>
                                                 <th scope="col">Conducta de manejo</th>
                                             </tr>
                                         </thead>
@@ -685,16 +686,37 @@
                                                 <td>Primero</td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option value="1">Promover alimentación natural</option>
+                                                        <option value="2">Alimentación enteral</option>
+                                                        <option value="3">Terapia endovenosas</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>Segundo</td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option value="1">Promover alimentación natural</option>
+                                                        <option value="2">Alimentación enteral</option>
+                                                        <option value="3">Terapia endovenosas</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>Tercero</td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option value="1">Promover alimentación natural</option>
+                                                        <option value="2">Alimentación enteral</option>
+                                                        <option value="3">Terapia endovenosas</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
