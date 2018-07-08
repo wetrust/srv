@@ -870,7 +870,7 @@ $(document).ready(function(){
             $("#nuevoProfesionalAltaParto").removeClass("d-none");
             $("#guardarProfesionalAltaParto").addClass("d-none");
             $("#cancelarProfesionalAltaParto").addClass("d-none");
-            ProfesionalAltaParto();
+            loadProfAltaParto();
         });
     });
 
@@ -881,7 +881,7 @@ $(document).ready(function(){
         $("#nuevoProfesionalAltaParto").removeClass("d-none");
         $("#guardarProfesionalAltaParto").addClass("d-none");
         $("#cancelarProfesionalAltaParto").addClass("d-none");
-        ProfesionalAltaParto();
+        loadProfAltaParto();
     });
 
     $("#eliminarProfesionalAltaParto").on("click", function(){
@@ -899,7 +899,7 @@ $(document).ready(function(){
             });
 
             $.get( appUrl + "configuracion/eliminarprofesionalparto/1/" + profesional_id, function( data ) {
-                ProfesionalAltaParto();
+                loadProfAltaParto();
             });
 
             $("#modal\\.generico\\.action").remove();
