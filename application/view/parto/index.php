@@ -338,16 +338,16 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary" id="menuListaPartos">
-                <a class="navbar-brand" data-hide="true" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
+            <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary p-1" id="menuListaPartos">
+                <a class="navbar-brand ml-3" data-hide="true" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
             </nav>
             <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(70%);left: 0;height:30%">
-                <h5 class="m-4 text-white" id="listaPartosDos"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
+                <h5 class="ml-3 text-white" id="listaPartosDos"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
                 <div id="contenedorTabla">
-                <table class="table table-hover">
+                <table class="table table-hover table-sm">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col" class="p-1">#</th>
                             <th scope="col">ID Materno</th>
                             <th scope="col">ID Recien Nacido</th>
                             <th scope="col">EG</th>
