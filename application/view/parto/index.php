@@ -949,7 +949,7 @@
                     $("#prof\\.atencion\\.rn").empty();
                     $.each(data, function (key, des) {
                         let strSelect = "<option value='" + des.id_profesional +"'>" + des.nombre_profesional + "</option>";
-                        $("#prof\\.atencion\\.rn").append(strSelect);
+                        $("#prof\\.atencion\\.parto").append(strSelect);
                     });
                 });
 
