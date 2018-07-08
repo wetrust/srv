@@ -341,6 +341,10 @@
                             display: inline-table;
                             table-layout: fixed;
                         }
+                        .div-hover:hover{
+                            background-color:#17a2b8;
+                            color:white;
+                        }
                     </style>
                 <table class="table table-hover table-sm">
                     <thead class="thead-dark">
@@ -593,8 +597,8 @@
                                 </div>
                             </div>
                             <div class="row p-2">
-                                <div class="col-12 bg-info p-2">
-                                    <p class="text-white m-0"><small>La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿ Implica diferencias en riesgo metabolico para el recien nacido?,<br> tales como hipoglicemia neonatal.</small></p>
+                                <div class="col-12 border border-primary p-2 div-hover">
+                                    <p class="m-0"><small>La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿ Implica diferencias en riesgo metabolico para el recien nacido?,<br> tales como hipoglicemia neonatal.</small></p>
                                 </div>
                             </div>
                             <div class="row p-2">
