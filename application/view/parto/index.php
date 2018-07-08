@@ -671,7 +671,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 mt-3">
-                                    <div class="row bg-primary text-white p-3">
+                                    <div class="row bg-primary text-white p-2">
                                         <div class="col-2">Exámenes</div>
                                         <div class="col-2 text-center">Dextro</div>
                                         <div class="col-2 text-center">Glicemia ev</div>
@@ -715,13 +715,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row pt-4">
+                            <div class="row bg-primary text-white p-2">
                                 <div class="col-8">
-                                    <label>Observaciones</label>
+                                    Observaciones
+                                </div>
+                                <div class="col-4">
+                                    Profesional alta del recién nacido
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
                                     <input class="form-control" type="text" id="observaciones">
                                 </div>
                                 <div class="col-4">
-                                    <label>Profesional alta del recién nacido</label>
                                     <select class="form-control" id="prof.alta.rn">
                                     </select>
                                 </div>
