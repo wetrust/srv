@@ -52,6 +52,7 @@
                     <div class="card mb-3 position-fixed">
                         <div class="card-body">
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-secondary" id="boton.parto.nuevo">Nuevo</button>
                                 <button type="button" class="btn btn-secondary" id="boton.parto.guardar">Guardar</button>
                                 <button type="button" class="btn btn-danger" id="boton.parto.eliminar">Eliminar</button>
                             </div>
@@ -643,7 +644,7 @@
                                     <p class="text-white m-0">Estas diferencias observadas en el potencial de crecimiento, ¿implican tambien diferencias clínicas significativas para el RN?</p>
                                 </div>
                             </div>
-                            <div class="row p-2">
+                            <div class="row p-2 border border-info border-bottom-0">
                                 <div class="col-4">
                                     <label for="edadGestacional"><small>Protocolo Riesgo de Hipoglicemia</small></label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
@@ -669,7 +670,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row border border-info border-top-0 border-bottom-0">
                                 <div class="col-12 my-3">
                                     <div class="row bg-info text-white p-2">
                                         <div class="col-2">Exámenes</div>
@@ -689,7 +690,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row p-3">
+                                    <div class="row p-3 border border-info border-top-0 border-bottom-0">
                                         <div class="col-2">Segundo</div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos"></div>
@@ -701,7 +702,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row p-3" style="background-color:#e2e3e5;">
+                                    <div class="row p-3 border border-info border-top-0" style="background-color:#e2e3e5;">
                                         <div class="col-2">Tercero</div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres"></div>
@@ -723,7 +724,7 @@
                                     Profesional alta del recién nacido
                                 </div>
                             </div>
-                            <div class="row p-3">
+                            <div class="row border border-info p-3">
                                 <div class="col-8">
                                     <input class="form-control" type="text" id="observaciones">
                                 </div>
@@ -973,6 +974,47 @@
                         let strSelect = "<option value='" + des.patologia_id +"'>" + des.patologia_name + "</option>";
                         $("#tipo_patologia_obstetrica").append(strSelect);
                     });
+                });
+
+                $("#boton\\.parto\\.nuevo").on("click", function(){
+                    $("#id_paciente").val("");
+                    $("#nombre_madre").val("");
+                    $("#apellido_madre").val("");
+                    $("#lugar_parto_rn").val("");
+                    $("#id_rn").val("");
+                    $("#nombre_rn").val("");
+                    $("#apellido_rn").val("");
+                    $("#sexo_rn").val("");
+                    $("#fecha_parto_rn").val("");
+                    $("#datos\\.neonatal\\.edad").val("");
+                    $("#termino_parto").val("");
+                    $("#tipo_parto").val("");
+                    $("#tipo_patologia_obstetrica").val("");
+                    $("#meconio").val("");
+                    $("#datos\\.neonatal\\.peso").val("");
+                    $("#datos\\.neonatal\\.talla").val("");
+                    $("#perimetro_craneo_rn").val("");
+                    $("#datos\\.neonatal\\.ipn").val("");
+                    $("#peso_placentario").val("");
+                    $("#apgar_1").val("");
+                    $("#apgar_5").val("");
+                    $("#hiperbilirrubinemia").val("");
+                    $("#poliglobulia").val("");
+                    $("#hospital_ucin").val("");
+                    $("#sindrome_respiratorio").val("");
+                    $("#alta_con_madre").val("");
+                    $("#observaciones").val("");
+                    $("#dextro_uno").val("");
+                    $("#glicemia_uno").val("");
+                    $("#dextro_dos").val("");
+                    $("#glicemia_dos").val("");
+                    $("#dextro_tres").val("");
+                    $("#glicemia_tres").val("");
+                    $("#hipoglicemia_riesgo").val(0);
+                    $("#hipoglicemia_sospechada").val(0);
+                    $("#hipoglicemia_confirmada").val(0);
+                    $("#prof\\.atencion\\.parto").val(0);
+                    $("#prof\\.alta\\.rn").val(0);
                 });
 
                 $("#boton\\.parto\\.eliminar").on("click", function(){
