@@ -680,8 +680,8 @@
                                     </div>
                                     <div class="row p-3" style="background-color:#e2e3e5;">
                                         <div class="col-2">Primero</div>
-                                        <div class="col-2"><input class="form-control" type="number"></div>
-                                        <div class="col-2"><input class="form-control" type="number"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno"></div>
                                         <div class="col-6">
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
@@ -692,8 +692,8 @@
                                     </div>
                                     <div class="row p-3">
                                         <div class="col-2">Segundo</div>
-                                        <div class="col-2"><input class="form-control" type="number"></div>
-                                        <div class="col-2"><input class="form-control" type="number"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos"></div>
                                         <div class="col-6">
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
@@ -704,8 +704,8 @@
                                     </div>
                                     <div class="row p-3" style="background-color:#e2e3e5;">
                                         <div class="col-2">Tercero</div>
-                                        <div class="col-2"><input class="form-control" type="number"></div>
-                                        <div class="col-2"><input class="form-control" type="number"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres"></div>
                                         <div class="col-6">
                                             <select class="form-control">
                                                 <option value="1">Promover alimentación natural</option>
@@ -1091,6 +1091,97 @@
                         $(this).val(min);
                     }
                 });
+
+                $("#dextro_uno").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#glicemia_uno").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#dextro_dos").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#glicemia_dos").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#dextro_tres").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#glicemia_tres").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
                 $("#datos\\.neonatal\\.peso").on("keyup", function(event){
                     if ( event.which == 13 ) {
                         event.preventDefault();
