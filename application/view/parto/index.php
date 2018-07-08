@@ -580,12 +580,12 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-12 bg-info p-2">
-                                    <p class="text-white m-0">Diferencia observada (Pct.) en la categorización del peso (implica diferencias en riesgo de patología neonatal)</p>
+                                    <p class="text-white m-0">La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿implica también diferencias en riesgo de patología neonatal?</p>
                                 </div>
                             </div>
                             <div class="row p-2">
                                 <div class="col-4">
-                                    <label for="edadGestacional"><small>Protocolo Riesgo de Hipoglicemia</small></label>
+                                    <label for="edadGestacional" class="bg-info"><small>Protocolo Riesgo de Hipoglicemia</small></label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
                                         <option value="0">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
