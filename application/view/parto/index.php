@@ -717,10 +717,7 @@
                                 </div>
                                 <div class="col-4">
                                     <label>Profesional alta del recién nacido</label>
-                                    <select class="form-control">
-                                        <option value="1">Promover alimentación natural</option>
-                                        <option value="2">Alimentación enteral</option>
-                                        <option value="3">Terapia endovenosa</option>
+                                    <select class="form-control" id="prof.alta.rn">
                                     </select>
                                 </div>
                             </div>
@@ -934,6 +931,14 @@
                 $('#fecha_parto_rn').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
 
                 obtenerPartos();
+
+                $.get( appUrl + "configuracion/profesionalparto/1", function( data ) {
+                    $("#prof\\.alta\\.rn").empty();
+                    $.each(data, function (key, des) {
+                        let strSelect = "<option value='" + des.id_profesional +"'>" + des.nombre_profesional + "</option>";
+                        $("#prof\\.alta\\.rn").append(strSelect);
+                    });
+                });
 
                 $.get( serverURL + "configuracion/lugarparto", function( data ) {
                     $("#lugar_parto_rn").empty();
