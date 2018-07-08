@@ -625,11 +625,13 @@
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
                                 </div>
                                 <div class="col-4">
-                                    <label>Peso RN</label>
-                                    <div class="input-group float-left">
-                                        <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">grs.</div>
+                                    <div class="row">
+                                        <label class="col-6">Peso RN</label>
+                                        <div class="input-group p-0 col-6">
+                                            <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">grs.</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
