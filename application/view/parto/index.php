@@ -328,7 +328,7 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label>Prof. Atención Parto</label>
+                                    <label>Prof. Atención de Parto</label>
                                     <select class="form-control" id="prof.atencion.parto">
                                     </select>
                                 </div>
@@ -942,6 +942,14 @@
                     $.each(data, function (key, des) {
                         let strSelect = "<option value='" + des.id_profesional +"'>" + des.nombre_profesional + "</option>";
                         $("#prof\\.alta\\.rn").append(strSelect);
+                    });
+                });
+
+                $.get( appUrl + "configuracion/profesionalparto/0", function( data ) {
+                    $("#prof\\.atencion\\.rn").empty();
+                    $.each(data, function (key, des) {
+                        let strSelect = "<option value='" + des.id_profesional +"'>" + des.nombre_profesional + "</option>";
+                        $("#prof\\.atencion\\.rn").append(strSelect);
                     });
                 });
 

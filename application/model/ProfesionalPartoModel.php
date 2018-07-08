@@ -15,9 +15,11 @@ class ProfesionalPartoModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         $tipo = intval($tipo);
-        
-        if ($tipo == 0){
 
+        if ($tipo == 0){
+            $sql = "SELECT id_profesional, nombre_profesional FROM profesional_atencion_parto";
+            $query = $database->prepare($sql);
+            $query->execute();
         }
         else if ($tipo == 1){
             $sql = "SELECT id_profesional, nombre_profesional FROM profesional_alta_parto";
@@ -39,7 +41,9 @@ class ProfesionalPartoModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         if ($tipo == 0){
-
+            $sql = "SELECT id_profesional, nombre_profesional FROM profesional_atencion_parto WHERE id_profesional = :id_profesional LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_profesional' => $id_profesional));
         }
         else if ($tipo == 1){
             $sql = "SELECT id_profesional, nombre_profesional FROM profesional_alta_parto WHERE id_profesional = :id_profesional LIMIT 1";
@@ -66,7 +70,9 @@ class ProfesionalPartoModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         if ($tipo == 0){
-
+            $sql = "INSERT INTO profesional_atencion_parto (nombre_profesional) VALUES (:nombre_profesional)";
+            $query = $database->prepare($sql);
+            $query->execute(array(':nombre_profesional' => $nombre_profesional));
         }
         else if ($tipo == 1){
             $sql = "INSERT INTO profesional_alta_parto (nombre_profesional) VALUES (:nombre_profesional)";
@@ -98,7 +104,9 @@ class ProfesionalPartoModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         if ($tipo == 0){
-
+            $sql = "UPDATE profesional_atencion_parto SET nombre_profesional = :nombre_profesional WHERE id_profesional = :id_profesional LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_profesional' => $id_profesional, ':nombre_profesional' => $nombre_profesional));
         }
         else if ($tipo == 1){
             $sql = "UPDATE profesional_alta_parto SET nombre_profesional = :nombre_profesional WHERE id_profesional = :id_profesional LIMIT 1";
@@ -125,10 +133,14 @@ class ProfesionalPartoModel
             return false;
         }
 
+        $tipo = intval($tipo);
+        
         $database = DatabaseFactory::getFactory()->getConnection();
 
         if ($tipo == 0){
-
+            $sql = "DELETE FROM profesional_atencion_parto WHERE id_profesional = :id_profesional LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_profesional' => $id_profesional));
         }
         else if ($tipo == 1){
             $sql = "DELETE FROM profesional_alta_parto WHERE id_profesional = :id_profesional LIMIT 1";

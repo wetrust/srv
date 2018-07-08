@@ -14,6 +14,7 @@ $(document).ready(function(){
     loadPrevision();
     loadEmail();
     loadProfAltaParto();
+    loadProfAtencionParto();
 
     $("#nuevoPais").on("click", function(){
         $("#table\\.pais").addClass("d-none");
@@ -907,6 +908,71 @@ $(document).ready(function(){
         });
         $("#modal\\.generico\\.container").modal("show");
     });
+
+    $("#nuevoProfesionalAtencionParto").on("click", function(){
+        $("#table\\.body\\.profesional\\.atencion\\.parto").addClass("d-none");
+        $("#form\\.profesional\\.atencion\\.parto").removeClass("d-none");
+        $("#input\\.profesional\\.atencion\\.parto").val("");
+        $("#nuevoProfesionalAtencionParto").addClass("d-none");
+        $("#guardarProfesionalAtencionParto").removeClass("d-none");
+        $("#cancelarProfesionalAtencionParto").removeClass("d-none");
+        $("#eliminarProfesionalAtencionParto").addClass("d-none");
+    });
+    
+    $("#editarProfesionalAtencionParto").on("click", function(){
+
+    });
+
+    $("#guardarProfesionalAtencionParto").on("click", function(){
+        var dataProfesional = {
+            tipo: 0,
+            nombre_profesional: $("#input\\.profesional\\.atencion\\.parto").val()
+        }
+
+        $.post(appUrl + "configuracion/saveprofesionalparto", dataProfesional).done(function (data) {
+            $("#table\\.body\\.profesional\\.atencion\\.parto").removeClass("d-none");
+            $("#form\\.profesional\\.atencion\\.parto").addClass("d-none");
+            $("#input\\.profesional\\.atencion\\.parto").val("");
+            $("#nuevoProfesionalAtencionParto").removeClass("d-none");
+            $("#guardarProfesionalAtencionParto").addClass("d-none");
+            $("#cancelarProfesionalAtencionParto").addClass("d-none");
+            loadProfAtencionParto();
+        });
+    });
+
+    $("#cancelarProfesionalAtencionParto").on("click", function(){
+        $("#table\\.body\\.profesional\\.atencion\\.parto").removeClass("d-none");
+        $("#form\\.profesional\\.atencion\\.parto").addClass("d-none");
+        $("#input\\.profesional\\.atencion\\.parto").val("");
+        $("#nuevoProfesionalAtencionParto").removeClass("d-none");
+        $("#guardarProfesionalAtencionParto").addClass("d-none");
+        $("#cancelarProfesionalAtencionParto").addClass("d-none");
+        loadProfAtencionParto();
+    });
+
+    $("#eliminarProfesionalAtencionParto").on("click", function(){
+        $("#modal\\.generico\\.title").html("Eliminar Email");
+        $("#modal\\.generico\\.body").html("<h5>¿Está seguro de eliminar el profesional seleccionado?</h5>");
+        var btnElement = "<button type='button' class='btn btn-primary' id='modal.generico.action'>Si</button>";
+        $("#modal\\.generico\\.fotter").prepend(btnElement);
+        $("#modal\\.generico\\.action").on("click", function(){
+            var tableChild =  $("#table\\.body\\.profesional\\.atencion\\.parto").children();
+            var profesional_id = 0;
+            $.each(tableChild, function(key,des){
+                if ($(des).hasClass("table-active") == true){
+                    profesional_id = $(des).children("th").data("id");
+                }
+            });
+
+            $.get( appUrl + "configuracion/eliminarprofesionalparto/0/" + profesional_id, function( data ) {
+                loadProfAtencionParto();
+            });
+
+            $("#modal\\.generico\\.action").remove();
+            $("#modal\\.generico\\.container").modal("hide");
+        });
+        $("#modal\\.generico\\.container").modal("show");
+    });
 });
 
 function loadPais(){
@@ -1114,6 +1180,21 @@ function loadProfAltaParto(){
             $("#eliminarProfesionalAltaParto").removeClass("d-none");
         });
         $("#table\\.body\\.profesional\\.alta\\.parto tr").on('click',function(){
+            activateTr(this);
+        });
+    });
+}
+
+function loadProfAtencionParto(){
+    $.get( appUrl + "configuracion/profesionalparto/0", function( data ) {
+        $("#table\\.body\\.profesional\\.atencion\\.parto").empty();
+        $("#eliminarProfesionalAtencionParto").addClass("d-none");
+        $.each(data, function (key, des) {
+            var strTable = "<tr><th scope='row' data-id='" + des.id_profesional + "'>" + (parseInt(key) + parseInt(1)) +"</th><td>" + des.nombre_profesional +"</td></tr>";
+            $("#table\\.body\\.profesional\\.atencion\\.parto").append(strTable);
+            $("#eliminarProfesionalAtencionParto").removeClass("d-none");
+        });
+        $("#table\\.body\\.profesional\\.atencion\\.parto tr").on('click',function(){
             activateTr(this);
         });
     });
