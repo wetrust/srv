@@ -678,7 +678,7 @@
                                         <div class="col-2 text-center">Glicemia ev</div>
                                         <div class="col-6">Conducta seguida según condición clínica del RN</div>
                                     </div>
-                                    <div class="row p-3 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
+                                    <div class="row p-2 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
                                         <div class="col-2">Primero</div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno"></div>
@@ -690,7 +690,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row p-3 border border-info border-top-0 border-bottom-0">
+                                    <div class="row p-2 border border-info border-top-0 border-bottom-0">
                                         <div class="col-2">Segundo</div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos"></div>
@@ -702,7 +702,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row p-3 border border-info border-top-0" style="background-color:#e2e3e5;">
+                                    <div class="row p-2 border border-info border-top-0" style="background-color:#e2e3e5;">
                                         <div class="col-2">Tercero</div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres"></div>
