@@ -594,7 +594,7 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-12 bg-info p-2">
-                                    <p class="text-white m-0"><small>La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿ Implica diferencias en riesgo metabolico del recien nacido?, tales como hipoglicemia neonatal.</small></p>
+                                    <p class="text-white m-0"><small>La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿ Implica diferencias en riesgo metabolico para el recien nacido?,<br> tales como hipoglicemia neonatal.</small></p>
                                 </div>
                             </div>
                             <div class="row p-2">
