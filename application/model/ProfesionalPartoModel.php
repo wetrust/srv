@@ -129,12 +129,12 @@ class ProfesionalPartoModel
      */
     public static function deleteProfesional($tipo,$id_profesional)
     {
-        if (!$profesional_id) {
+        if (!$id_profesional) {
             return false;
         }
 
         $tipo = intval($tipo);
-        
+
         $database = DatabaseFactory::getFactory()->getConnection();
 
         if ($tipo == 0){
