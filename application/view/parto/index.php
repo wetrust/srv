@@ -559,11 +559,11 @@
                                 <label for="graficoEstandar"><strong>Seleccione Curva</strong></label>
                                 <select class="form-control" id="graficoEstandar" style="font-size: 0.8rem;">
                                     <option value="0">Peso / Edad Gestacional (Curva Nacional SOCHIPE)</option>
-                                  <option value="2">IPN / Edad Gestacional (Curva Nacional SOCHIPE)</option>
-                                  <option></option>
-                                  <option value="1">Peso / Edad Gestacional (Curva Regional Araucanía)</option>
-                                  <option value="3">IPN / Edad Gestacional (Curva Regional Araucanía)</option>
-                                  <option></option>
+                                    <option value="1">Peso / Edad Gestacional (Curva Regional Araucanía)</option>
+                                    <option></option>
+                                    <option value="2">IPN / Edad Gestacional (Curva Nacional SOCHIPE)</option>
+                                    <option value="3">IPN / Edad Gestacional (Curva Regional Araucanía)</option>
+                                    <option></option>
                                 </select>
                               </div>
                             </form>
