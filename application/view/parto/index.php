@@ -683,7 +683,7 @@
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno"></div>
                                         <div class="col-6">
-                                            <select class="form-control">
+                                            <select class="form-control" id="conducta.uno">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
                                                 <option value="3">Terapia endovenosa</option>
@@ -695,7 +695,7 @@
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos"></div>
                                         <div class="col-6">
-                                            <select class="form-control">
+                                            <select class="form-control" id="conducta.dos">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
                                                 <option value="3">Terapia endovenosa</option>
@@ -707,7 +707,7 @@
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres"></div>
                                         <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres"></div>
                                         <div class="col-6">
-                                            <select class="form-control">
+                                            <select class="form-control" id="conducta.tres">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
                                                 <option value="3">Terapia endovenosa</option>
