@@ -674,8 +674,8 @@
                                 <div class="col-12 mt-3">
                                     <div class="row bg-primary text-white p-3">
                                         <div class="col-2">Exámenes</div>
-                                        <div class="col-2">Dextro</div>
-                                        <div class="col-2">Glicemia ev</div>
+                                        <div class="col-2 text-center">Dextro</div>
+                                        <div class="col-2 text-center">Glicemia ev</div>
                                         <div class="col-6">Conducta seguida según condición clínica del RN</div>
                                     </div>
                                     <div class="row bg-secondary text-white p-3">
