@@ -1,5 +1,17 @@
+        <section class="bg-info">
+            <h4 class=" text-center pt-4 mb-0"><strong><em>Evaluación Post Natal</em></strong></h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="60px" style="fill: #d1ecf1;">
+                <defs>
+                    <filter id="f1" x="0" y="0" width="200%" height="200%">
+                    <feOffset result="offOut" in="SourceAlpha" dx="0" dy="5"></feOffset>
+                    <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"></feGaussianBlur>
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+                    </filter>
+                </defs>
+                <path stroke-width="0" d="M0 0 C50 100 50 100 100 0" filter="url(#f1)"></path>
+            </svg>
+        </section>
         <div class="container" id="neonatal">
-            <h4 class="mt-0 mb-1"><em>Evaluación Post Natal</em></h4>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item active">Datos Neonatales</li>
