@@ -710,7 +710,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row pt-3">
                                 <div class="col-6">
                                     <label>Observaciones</label>
                                     <input class="form-control" type="text" id="observaciones">
