@@ -96,8 +96,92 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-clipboard-list"></i> Información del Parto</h5>
-                            <hr class="mb-5">
+                            <h5 class="card-title"><i class="fas fa-child"></i> Datos de parto y RN</h5>
+                            <hr class="mb-3">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="edadGestacional">Peso RN</label>
+                                    <div class="input-group">
+                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">grs.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Talla RN</label>
+                                    <div class="input-group">
+                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Perimetro Craneo</label>
+                                    <div class="input-group">
+                                        <input class="form-control" style="background-color:#e9ecef;" type="number" min="0" max="999" id="perimetro_craneo_rn">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="edadGestacional">Indices calculados (Ipn)</label>
+                                    <div class="input-group">
+                                        <input class="form-control" id="datos.neonatal.ipn" disabled type="number">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="edadGestacional">Meconio al parto</label>
+                                    <select id="meconio" class="form-control">
+                                        <option value="0" selected>Ausente</option>
+                                        <option value="1">Fluido</option>
+                                        <option value="2">Espeso</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional">Apar 1° Min.</label>
+                                    <select id="apgar_1" class="form-control">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional">Apar 5° Min.</label>
+                                    <select id="apgar_5" class="form-control">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group row">
@@ -182,92 +266,6 @@
                                             <option value="0" selected></option>
                                         </select>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-child"></i> Información del RN</h5>
-                            <hr class="mb-3">
-                            <div class="row">
-                                <div class="col-3">
-                                    <label for="edadGestacional">Peso RN</label>
-                                    <div class="input-group">
-                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">grs.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <label for="edadGestacional">Talla RN</label>
-                                    <div class="input-group">
-                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">mm.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <label for="edadGestacional">Perimetro Craneo</label>
-                                    <div class="input-group">
-                                        <input class="form-control" style="background-color:#e9ecef;" type="number" min="0" max="999" id="perimetro_craneo_rn">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">mm.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <label for="edadGestacional">Indices calculados (Ipn)</label>
-                                    <div class="input-group">
-                                        <input class="form-control" id="datos.neonatal.ipn" disabled type="number">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">mm.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-4">
-                                    <label for="edadGestacional">Meconio al parto</label>
-                                    <select id="meconio" class="form-control">
-                                        <option value="0" selected>Ausente</option>
-                                        <option value="1">Fluido</option>
-                                        <option value="2">Espeso</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional">Apar 1° Min.</label>
-                                    <select id="apgar_1" class="form-control">
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional">Apar 5° Min.</label>
-                                    <select id="apgar_5" class="form-control">
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -556,7 +554,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="row">
-                                        <label class="col-6">Peso Neonatal</label>
+                                        <label class="col-6">Peso neonatal</label>
                                         <div class="input-group p-0 col-6">
                                             <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
