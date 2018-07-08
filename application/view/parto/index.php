@@ -328,6 +328,20 @@
             <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(70%);left: 0;height:30%">
                 <h5 class="ml-3 mt-3 text-white" id="listaPartosDos"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
                 <div id="contenedorTabla">
+                    <style>
+                        .scroll-table{
+                            overflow-y: scroll;
+                            height: 53%;
+                            width: 98%;
+                            position: absolute;
+                        }
+
+                        .scroll-table > tr{
+                            width: 100%;
+                            display: inline-table;
+                            table-layout: fixed;
+                        }
+                    </style>
                 <table class="table table-hover table-sm">
                     <thead class="thead-dark">
                         <tr>
@@ -339,7 +353,7 @@
                             <th scope="col">Talla</th>
                         </tr>
                     </thead>
-                    <tbody id="table.ecografia.parto" class="text-white">
+                    <tbody id="table.ecografia.parto" class="text-white scroll-table">
                         <tr>
                             <td></td>
                             <td>12345</td>
@@ -580,12 +594,12 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-12 bg-info p-2">
-                                    <p class="text-white m-0">La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿implica también diferencias en riesgo de patología neonatal?</p>
+                                    <p class="text-white m-0">La Diferencia (en Pct.) observada en categorización del peso neonatal&nbsp;&nbsp;&nbsp;&nbsp;¿ Implica diferencias en riesgo de patología neonatal ?, para ello</p>
                                 </div>
                             </div>
                             <div class="row p-2">
                                 <div class="col-4">
-                                    <label for="edadGestacional" class="bg-info"><small>Protocolo Riesgo de Hipoglicemia</small></label>
+                                    <label for="edadGestacional" class="bg-info text-white"><small>Protocolo Riesgo de Hipoglicemia</small></label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
                                         <option value="0">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
