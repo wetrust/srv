@@ -957,7 +957,11 @@
                     $("#conducta\\.tres").val("");
                 });
 
-                $("#boton\\.parto\\.eliminar #boton\\.hipoglicemia\\.eliminar").on("click", function(){
+                $("#boton\\.hipoglicemia\\.eliminar").on("click", function(){
+                    $("#boton\\.parto\\.eliminar").trigger("click");
+                });
+
+                $("#boton\\.parto\\.eliminar").on("click", function(){
                     var filas = $("#table\\.ecografia\\.parto").children();
 
                     $.each(filas,function(i,val){
@@ -980,8 +984,11 @@
                         }
                     });
                 });
-
-                $("#boton\\.parto\\.guardar #boton\\.hipoglicemia\\.guardar").on("click", function(){
+                
+                $("#boton\\.hipoglicemia\\.guardar").on("click", function(){
+                    $("#boton\\.parto\\.guardar").trigger("click");
+                })
+                $("#boton\\.parto\\.guardar").on("click", function(){
 
                     var parto = {
                         id_paciente: $("#id_paciente").val(),
