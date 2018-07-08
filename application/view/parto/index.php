@@ -570,8 +570,8 @@
                                 <div class="col-2">
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
                                 </div>
-                                <div class="col-4 align-self-end">
-                                    <div class="row">
+                                <div class="col-5 align-self-end">
+                                    <div class="row m-1">
                                         <label class="col-6">Peso neonatal</label>
                                         <div class="input-group p-0 col-6">
                                             <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
@@ -592,8 +592,8 @@
                                 <div class="col-2">
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
                                 </div>
-                                <div class="col-4 align-self-end">
-                                    <button type="button" class="btn btn-outline-secondary" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
+                                <div class="col-5 align-self-end">
+                                    <button type="button" class="btn btn-outline-secondary float-right" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
                                 </div>
                             </div>
                             <div class="row p-2">
