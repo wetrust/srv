@@ -1010,11 +1010,14 @@
                     $("#glicemia_dos").val("");
                     $("#dextro_tres").val("");
                     $("#glicemia_tres").val("");
-                    $("#hipoglicemia_riesgo").val(0);
-                    $("#hipoglicemia_sospechada").val(0);
-                    $("#hipoglicemia_confirmada").val(0);
-                    $("#prof\\.atencion\\.parto").val(0);
-                    $("#prof\\.alta\\.rn").val(0);
+                    $("#hipoglicemia_riesgo").val("");
+                    $("#hipoglicemia_sospechada").val("");
+                    $("#hipoglicemia_confirmada").val("");
+                    $("#prof\\.atencion\\.parto").val("");
+                    $("#prof\\.alta\\.rn").val("");
+                    $("#conducta\\.uno").val("");
+                    $("#conducta\\.dos").val("");
+                    $("#conducta\\.tres").val("");
                 });
 
                 $("#boton\\.parto\\.eliminar").on("click", function(){
@@ -1034,6 +1037,7 @@
 
                             $.post(serverURL + "examen/del/", data).done(function(response) {
                                 $("#table\\.ecografia\\.parto").empty();
+                                $("#boton\\.parto\\.nuevo").trigger("click")
                                 obtenerPartos();
                                 $("#id_paciente").val("");
                                 $("#nombre_madre").val("");
