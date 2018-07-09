@@ -50,7 +50,7 @@ class ExamenController extends Controller
         $rut = Request::post('id');
         $tipo = Request::post('tipo');
 
-        $this->View->renderJSON(EcoModel::getEco($rut, $tipo, 1);
+        $this->View->renderJSON(EcoModel::getEco($rut, $tipo, 1));
     }
 
     public function set()
