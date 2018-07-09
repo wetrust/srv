@@ -146,7 +146,7 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Apar 1° Min.</label>
+                                    <label for="apgar_1">Apgar 1° Min.</label>
                                     <select id="apgar_1" class="form-control">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
@@ -162,7 +162,7 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Apar 5° Min.</label>
+                                    <label for="apgar_5">Apgar 5° Min.</label>
                                     <select id="apgar_5" class="form-control">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
@@ -556,9 +556,9 @@
                                                 <div class="input-group-text">grs.</div>
                                             </div>
                                         </div>
-                                        <label class="col-2 p-0 text-center">EG</label>
+                                        <label class="col-2 p-0 text-center">Ege</label>
                                         <div class="input-group p-0 col-4">
-                                            <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
+                                            <input class="form-control" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">sem.</div>
                                             </div>
@@ -1265,11 +1265,13 @@
 
                 $("#datos\\.neonatal\\.edad").on("focusout", function(){
                     $("#edadGestacional").val($(this).val());
+                    $("#datos\\.hipoglicemia\\.eg").val($(this).val());
                     $("#edadGestacional").trigger("change");
                 });
 
                 $("#edadGestacional").on("focusout", function(){
                     $("#datos\\.neonatal\\.edad").val($(this).val());
+                    $("#datos\\.hipoglicemia\\.eg").val($(this).val());
                 });
 
 
