@@ -849,7 +849,7 @@
                                     $("#apellido_rn").val(val.apellido_rn);
                                     $("#sexo_rn").val(val.sexo_rn);
                                     $("#fecha_parto_rn").val(val.fecha_parto_rn);
-                                    $("#datos\\.neonatal\\.edad").val(val.eg_parto);
+                                    $("#datos\\.neonatal\\.edad").val(val.eg_parto).trigger("change");
                                     $("#termino_parto").val(val.termino_parto);
                                     $("#tipo_parto").val(val.tipo_parto);
                                     $("#tipo_patologia_obstetrica").val(val.tipo_patologia_obstetrica);
@@ -1279,9 +1279,14 @@
                     }
                 });
 
-                $("#datos\\.neonatal\\.edad").on("change", function(){
+                $("#datos\\.neonatal\\.edad").on("focusout", function(){
                     $("#edadGestacional").val($(this).val());
-                    $("#edadGestacional").trigger("change");
+                    $("#edadGestacional").trigger("focusout");
+                });
+
+                $("#edadGestacional").on("focusout", function(){
+                    $("#datos\\.neonatal\\.edad").val($(this).val());
+                    $("#datos\\.neonatal\\.edad").trigger("focusout");
                 });
 
 
