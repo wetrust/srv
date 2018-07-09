@@ -193,30 +193,7 @@
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">E. Gestacional</label>
                                         <div class="input-group px-0 col-7">
-                                            <select id="datos.neonatal.edad" class="form-control" id="eg_parto">
-                                                <option value="20">20</option>
-                                                <option value="21">21</option>
-                                                <option value="22">22</option>
-                                                <option value="23">23</option>
-                                                <option value="24">24</option>
-                                                <option value="25">25</option>
-                                                <option value="26">26</option>
-                                                <option value="27">27</option>
-                                                <option value="28">28</option>
-                                                <option value="29">29</option>
-                                                <option value="30">30</option>
-                                                <option value="30">31</option>
-                                                <option value="30">32</option>
-                                                <option value="30">33</option>
-                                                <option value="30">34</option>
-                                                <option value="30">35</option>
-                                                <option value="30">36</option>
-                                                <option value="30">37</option>
-                                                <option value="30">38</option>
-                                                <option value="30">39</option>
-                                                <option value="40" selected>40</option>
-                                                <option value="41">41</option>
-                                                <option value="42">42</option>
+                                            <select id="datos.neonatal.edad" class="form-control">
                                             </select>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">sem.</div>
@@ -2268,9 +2245,11 @@ $( document ).ready(function() {
     var pesoMaterno
 
     //cargar input de semanas que empiezan con 25
-    for (i = 25; i < 43; i++) {
+    for (i = 20; i < 43; i++) {
         $("#edadGestacional").append('<option value="' + i +'">' + i + '</option>');
+        $("#datos\\.neonatal\\.edad").append('<option value="' + i +'">' + i + '</option>');
         $('#edadGestacional option[value="40"]').prop('selected', true);
+        $('#datos\\.neonatal\\.edad option[value="40"]').prop('selected', true);
     }
     //cargar inputs de edad materna
     for (i = 10; i < 51; i++) {
