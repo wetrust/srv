@@ -90,9 +90,20 @@ class EcoModel
         $database = DatabaseFactory::getFactory()->getConnection();
         $data = json_decode($data, true);
         if ($tipo == 1){
-            $sql = "INSERT INTO eco_prim (id_paciente, eg_examen, n_examen,embrion,prom_saco,fecha_examen) VALUES (:id_paciente,:eg_examen, :n_examen,:embrion,:prom_saco,:fecha_examen)";
+
+            $sql = "SELECT * FROM eco_prim WHERE id_paciente = :id_paciente and n_examen = :n_examen LIMIT 1";
             $query = $database->prepare($sql);
-            $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"],':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"], ':fecha_examen' => $data["fecha"]));
+            $query->execute(array(':id_paciente' => $rut,':n_examen' => $numero));
+
+            if ($query->rowCount() == 1) {
+                self::updateEco($rut,$tipo,$data);
+                return self::getEcos($rut, $tipo);
+            }
+            else {
+                $sql = "INSERT INTO eco_prim (id_paciente, eg_examen, n_examen,embrion,prom_saco,fecha_examen) VALUES (:id_paciente,:eg_examen, :n_examen,:embrion,:prom_saco,:fecha_examen)";
+                $query = $database->prepare($sql);
+                $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"],':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"], ':fecha_examen' => $data["fecha"]));
+            }
         } else if ($tipo == 2){
             $sql = "INSERT INTO eco_segundo (id_paciente, n_examen, fecha_examen, eg_examen, pfe_examen, pctpeso_examen, ccca_examen, dbp_examen, dof_examen, cc_examen, ca_examen, lf_examen, lh_examen, cerebelo_examen, bvm_examen, ccca_pct, bvm_pct, ca_pct) VALUES (:id_paciente, :n_examen, :fecha_examen, :eg_examen, :pfe_examen, :pctpeso_examen, :ccca_examen, :dbp_examen, :dof_examen, :cc_examen, :ca_examen, :lf_examen, :lh_examen, :cerebelo_examen, :bvm_examen, :ccca_pct, :bvm_pct, :ca_pct)";
             $query = $database->prepare($sql);
@@ -137,7 +148,12 @@ class EcoModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        if ($tipo == 4){
+        if ($tipo == 1){
+            $sql = "UPDATE eco_prim SET eg_examen = :eg_examen, embrion = :embrion,prom_saco = :prom_saco,fecha_examen = :fecha_examen WHERE id_paciente = :id_paciente And n_examen = :n_examen LIMIT 1";
+                $query = $database->prepare($sql);
+                $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"],':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"], ':fecha_examen' => $data["fecha"]));
+        }
+        else if ($tipo == 4){
             $sql = "UPDATE parto SET nombre_madre = :nombre_madre,apellido_madre = :apellido_madre,lugar_parto_rn = :lugar_parto_rn,nombre_rn = :nombre_rn,apellido_rn = :apellido_rn,sexo_rn = :sexo_rn,fecha_parto_rn = :fecha_parto_rn,eg_parto = :eg_parto,termino_parto = :termino_parto,tipo_parto = :tipo_parto,tipo_patologia_obstetrica = :tipo_patologia_obstetrica,peso_rn = :peso_rn,talla_rn = :talla_rn,perimetro_craneo_rn = :perimetro_craneo_rn,ipn_rn = :ipn_rn,peso_placentario = :peso_placentario,meconio = :meconio,apgar_1 = :apgar_1,apgar_5 = :apgar_5,hiperbilirrubinemia = :hiperbilirrubinemia,poliglobulia = :poliglobulia,hospital_ucin = :hospital_ucin,sindrome_respiratorio = :sindrome_respiratorio,alta_con_madre = :alta_con_madre,observaciones = :observaciones,hipoglicemia_riesgo = :hipoglicemia_riesgo, hipoglicemia_sospechada = :hipoglicemia_sospechada, hipoglicemia_confirmada = :hipoglicemia_confirmada, dextro_uno = :dextro_uno, glicemia_uno = :glicemia_uno, conducta_uno = :conducta_uno, dextro_dos = :dextro_dos, glicemia_dos = :glicemia_dos, conducta_dos = :conducta_dos, dextro_tres = :dextro_tres, glicemia_tres = :glicemia_tres, conducta_tres = :conducta_tres, prof_alta_rn = :prof_alta_rn, prof_atencion_parto = :prof_atencion_parto WHERE id_paciente = :id_paciente LIMIT 1";
             $query = $database->prepare($sql);
             $query->execute(array(':id_paciente' => $data["id_paciente"],':nombre_madre' => $data["nombre_madre"],':apellido_madre' => $data["apellido_madre"],':lugar_parto_rn' => $data["lugar_parto_rn"],':nombre_rn' => $data["nombre_rn"],':apellido_rn' => $data["apellido_rn"],':sexo_rn' => $data["sexo_rn"],':fecha_parto_rn' => $data["fecha_parto_rn"],':eg_parto' => $data["eg_parto"],':termino_parto' => $data["termino_parto"],':tipo_parto' => $data["tipo_parto"],':tipo_patologia_obstetrica' => $data["tipo_patologia_obstetrica"],':peso_rn' => $data["peso_rn"],':talla_rn' => $data["talla_rn"],':perimetro_craneo_rn' => $data["perimetro_craneo_rn"],':ipn_rn' => $data["ipn_rn"],':peso_placentario' => $data["peso_placentario"],':meconio' => $data["meconio"],':apgar_1' => $data["apgar_1"],':apgar_5' => $data["apgar_5"],':hiperbilirrubinemia' => $data["hiperbilirrubinemia"],':poliglobulia' => $data["poliglobulia"],':hospital_ucin' => $data["hospital_ucin"],':sindrome_respiratorio' => $data["sindrome_respiratorio"],':alta_con_madre' => $data["alta_con_madre"],':observaciones' => $data["observaciones"],':hipoglicemia_riesgo' => $data["hipoglicemia_riesgo"], ':hipoglicemia_sospechada' => $data["hipoglicemia_sospechada"], ':hipoglicemia_confirmada' => $data["hipoglicemia_confirmada"], ':dextro_uno' => $data["dextro_uno"], ':glicemia_uno' => $data["glicemia_uno"], ':conducta_uno' => $data["conducta_uno"], ':dextro_dos' => $data["dextro_dos"], ':glicemia_dos' => $data["glicemia_dos"], ':conducta_dos' => $data["conducta_dos"], ':dextro_tres' => $data["dextro_tres"], ':glicemia_tres' => $data["glicemia_tres"], ':conducta_tres'=> $data["conducta_tres"], ':prof_alta_rn' => $data["prof_alta_rn"], ':prof_atencion_parto' => $data["prof_atencion_parto"]));
