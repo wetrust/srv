@@ -549,11 +549,18 @@
                                 </div>
                                 <div class="col-5 align-self-end">
                                     <div class="row m-1">
-                                        <label class="col-6">Peso neonatal</label>
-                                        <div class="input-group p-0 col-6">
+                                        <label class="col-3">Peso</label>
+                                        <div class="input-group p-0 col-3">
                                             <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
+                                            </div>
+                                        </div>
+                                        <label class="col-3">EG</label>
+                                        <div class="input-group p-0 col-3">
+                                            <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">sem.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -576,32 +583,6 @@
                             <div class="row p-2">
                                 <div class="col-12 border border-primary p-2 div-hover">
                                     <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</small></p>
-                                </div>
-                            </div>
-                            <div class="row p-2">
-                                <div class="col-4">
-                                    <label for="edadGestacional" class="bg-info text-white px-1">Protocolo Riesgo de Hipoglicemia</label>
-                                    <select id="hipoglicemia_riesgo" class="form-control">
-                                        <option value="0">RN PEG (<10)</option>
-                                        <option value="1">RN GEG (IP > 3.3)</option>
-                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
-                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
-                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional"><small>Hipoglicemia sospecha Clínicamente</small></label>
-                                    <select id="hipoglicemia_sospechada" class="form-control">
-                                        <option value="0">Si</option>
-                                        <option value="1">No</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="edadGestacional"><small>Hipoglicemia confirmada Laboratorio</small></label>
-                                    <select id="hipoglicemia_confirmada" class="form-control">
-                                        <option value="0">Si</option>
-                                        <option value="1">No</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="row">
@@ -648,6 +629,32 @@
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row p-2">
+                                <div class="col-4">
+                                    <label for="edadGestacional" class="bg-info text-white px-1">Protocolo Riesgo de Hipoglicemia</label>
+                                    <select id="hipoglicemia_riesgo" class="form-control">
+                                        <option value="0">RN PEG (<10)</option>
+                                        <option value="1">RN GEG (IP > 3.3)</option>
+                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
+                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
+                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional"><small>Hipoglicemia sospecha Clínicamente</small></label>
+                                    <select id="hipoglicemia_sospechada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional"><small>Hipoglicemia confirmada Laboratorio</small></label>
+                                    <select id="hipoglicemia_confirmada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1">No</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row bg-info text-white p-2">
@@ -826,7 +833,7 @@
                                     $("#apellido_rn").val(val.apellido_rn);
                                     $("#sexo_rn").val(val.sexo_rn);
                                     $("#fecha_parto_rn").val(val.fecha_parto_rn);
-                                    $("#datos\\.neonatal\\.edad").val(val.eg_parto).trigger("change");
+                                    $("#datos\\.neonatal\\.edad").val(val.eg_parto).trigger("focusout");
                                     $("#termino_parto").val(val.termino_parto);
                                     $("#tipo_parto").val(val.tipo_parto);
                                     $("#tipo_patologia_obstetrica").val(val.tipo_patologia_obstetrica);
