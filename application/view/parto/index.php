@@ -897,7 +897,6 @@
                                 if (response !== null){
                                     if ( Object.keys(response).length > 0 ){
                                         $.each(response.data, function(i,val){
-                                            if (val.id_paciente == id){
                                                 $("#id_paciente").val(val.id_paciente);
                                                 $("#nombre_madre").val(val.nombre_madre);
                                                 $("#apellido_madre").val(val.apellido_madre);
@@ -939,7 +938,6 @@
                                                 $("#conducta\\.tres").val(val.conducta_tres);
                                                 $("#prof\\.alta\\.rn").val(val.prof_alta_rn);
                                                 $("#prof\\.atencion\\.parto").val(val.prof_atencion_parto)
-                                            };
                                         });
                                     }
                                 }
