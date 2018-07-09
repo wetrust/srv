@@ -523,17 +523,7 @@
                 <li class="ml-auto"><a href="#postnatal">Volver</a></li>
             </ol>
             <div class="row mt-1">
-                <div class="col-12 col-sm-2 order-sm-1">
-                    <div class="card mb-3 position-fixed">
-                        <div class="card-body">
-                            <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-secondary" id="boton.hipoglicemia.guardar">Guardar</button>
-                                <button type="button" class="btn btn-danger" id="boton.hipoglicemia.eliminar">Eliminar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-10">
+                <div class="col-12">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Crecimiento intrauterino para la relación Peso / Ege y ajuste según variables</h5>
@@ -674,6 +664,8 @@
                                     </select>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-danger float-right" id="boton.hipoglicemia.eliminar">Eliminar</button>
+                            <button type="button" class="btn btn-secondary float-right" id="boton.hipoglicemia.guardar">Guardar</button>
                         </div>
                     </div>
                 </div>
