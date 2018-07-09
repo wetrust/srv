@@ -664,8 +664,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-danger float-right" id="boton.hipoglicemia.eliminar">Eliminar</button>
-                            <button type="button" class="btn btn-secondary float-right" id="boton.hipoglicemia.guardar">Guardar</button>
+                            <button type="button" class="btn btn-danger float-right mt-2" id="boton.hipoglicemia.eliminar">Eliminar</button>
+                            <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.guardar">Guardar</button>
                         </div>
                     </div>
                 </div>
