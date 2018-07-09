@@ -1286,7 +1286,6 @@
 
                 $("#edadGestacional").on("focusout", function(){
                     $("#datos\\.neonatal\\.edad").val($(this).val());
-                    $("#datos\\.neonatal\\.edad").trigger("focusout");
                 });
 
 
