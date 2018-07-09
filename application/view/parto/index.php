@@ -879,6 +879,8 @@
                                     $("#dextro_tres").val(val.dextro_tres);
                                     $("#glicemia_tres").val(val.glicemia_tres);
                                     $("#conducta\\.tres").val(val.conducta_tres);
+                                    $("#prof\\.alta\\.rn").val(val.prof_alta_rn);
+                                    $("#prof\\.atencion\\.parto").val(val.prof_atencion_parto)
                                 };
                             });
                         }
@@ -971,6 +973,8 @@
                     $("#conducta\\.uno").val("");
                     $("#conducta\\.dos").val("");
                     $("#conducta\\.tres").val("");
+                    $("#prof\\.alta\\.rn").val("");
+                    $("#prof\\.atencion\\.parto").val("");
                 });
 
                 $("#boton\\.hipoglicemia\\.eliminar").on("click", function(){
@@ -1045,7 +1049,9 @@
                         conducta_dos: $("#conducta\\.dos").val(),
                         dextro_tres: $("#dextro_tres").val(),
                         glicemia_tres: $("#glicemia_tres").val(),
-                        conducta_tres: $("#conducta\\.tres").val()
+                        conducta_tres: $("#conducta\\.tres").val(),
+                        prof_alta_rn: $("#prof\\.alta\\.rn").val(),
+                        prof_atencion_parto: $("#prof\\.atencion\\.parto").val()
                     }
 
                     var data = {
