@@ -591,7 +591,7 @@
                                             <select class="form-control" id="conducta.uno">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
-                                                <option value="3">Terapia endovenosa</option>
+                                                <option value="3" selected>Terapia endovenosa</option>
                                             </select>
                                         </div>
                                     </div>
@@ -603,7 +603,7 @@
                                             <select class="form-control" id="conducta.dos">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
-                                                <option value="3">Terapia endovenosa</option>
+                                                <option value="3" selected>Terapia endovenosa</option>
                                             </select>
                                         </div>
                                     </div>
@@ -615,7 +615,7 @@
                                             <select class="form-control" id="conducta.tres">
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
-                                                <option value="3">Terapia endovenosa</option>
+                                                <option value="3" selected>Terapia endovenosa</option>
                                             </select>
                                         </div>
                                     </div>
@@ -623,27 +623,27 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-4">
-                                    <label for="edadGestacional" class="bg-info text-white px-1">Protocolo Riesgo de Hipoglicemia</label>
+                                    <label for="edadGestacional" class="bg-info text-white px-1">Factores de Riesgo para Hipoglicemia</label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
                                         <option value="0">RN PEG (<10)</option>
                                         <option value="1">RN GEG (IP > 3.3)</option>
                                         <option value="2">Hijo madre DM GEG IP > 3.3</option>
                                         <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
-                                        <option value="4">Sin riesgo clínico de hipoglicemia</option>
+                                        <option value="4" selected>Sin riesgo clínico de hipoglicemia</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional"><small>Hipoglicemia sospecha Clínicamente</small></label>
                                     <select id="hipoglicemia_sospechada" class="form-control">
                                         <option value="0">Si</option>
-                                        <option value="1">No</option>
+                                        <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional"><small>Hipoglicemia confirmada Laboratorio</small></label>
                                     <select id="hipoglicemia_confirmada" class="form-control">
                                         <option value="0">Si</option>
-                                        <option value="1">No</option>
+                                        <option value="1" selected>No</option>
                                     </select>
                                 </div>
                             </div>
@@ -941,14 +941,14 @@
                     $("#glicemia_dos").val("");
                     $("#dextro_tres").val("");
                     $("#glicemia_tres").val("");
-                    $("#hipoglicemia_riesgo").val("");
-                    $("#hipoglicemia_sospechada").val("");
-                    $("#hipoglicemia_confirmada").val("");
+                    $("#hipoglicemia_riesgo").val(4);
+                    $("#hipoglicemia_sospechada").val(1);
+                    $("#hipoglicemia_confirmada").val(1);
                     $("#prof\\.atencion\\.parto").val("");
                     $("#prof\\.alta\\.rn").val("");
-                    $("#conducta\\.uno").val("");
-                    $("#conducta\\.dos").val("");
-                    $("#conducta\\.tres").val("");
+                    $("#conducta\\.uno").val(3);
+                    $("#conducta\\.dos").val(3);
+                    $("#conducta\\.tres").val(3);
                     $("#prof\\.alta\\.rn").val("");
                     $("#prof\\.atencion\\.parto").val("");
                 });
