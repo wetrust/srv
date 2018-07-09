@@ -598,7 +598,7 @@
                             </div>
                             <div class="row p-2">
                                 <div class="col-12 border border-primary p-2 div-hover">
-                                    <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoblicemia neonatal.</small></p>
+                                    <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</small></p>
                                 </div>
                             </div>
                             <div class="row p-2">
