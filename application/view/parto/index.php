@@ -547,17 +547,17 @@
                                 <div class="col-2">
                                     <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
                                 </div>
-                                <div class="col-5 align-self-end">
+                                <div class="col-5 align-self-end p-0">
                                     <div class="row m-1">
-                                        <label class="col-3">Peso</label>
-                                        <div class="input-group p-0 col-3">
+                                        <label class="col-2 p-0">Peso</label>
+                                        <div class="input-group p-0 col-4">
                                             <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
                                             </div>
                                         </div>
-                                        <label class="col-3">EG</label>
-                                        <div class="input-group p-0 col-3">
+                                        <label class="col-3 p-0">EG</label>
+                                        <div class="input-group p-0 col-4">
                                             <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">sem.</div>
