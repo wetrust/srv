@@ -556,7 +556,7 @@
                                                 <div class="input-group-text">grs.</div>
                                             </div>
                                         </div>
-                                        <label class="col-2 p-0">EG</label>
+                                        <label class="col-2 p-0 text-center">EG</label>
                                         <div class="input-group p-0 col-4">
                                             <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
