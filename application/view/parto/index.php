@@ -20,7 +20,7 @@
                                     <h5 class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</h5>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" placeholder="N° ID de la Madre">
+                                    <input class="form-control" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
                                 </div>
                                 <div class="col-3">
                                     <input class="form-control" type="text" placeholder="N° ID del Recién Nacido">
@@ -881,6 +881,75 @@
                         let strSelect = "<option value='" + des.id_profesional +"'>" + des.nombre_profesional + "</option>";
                         $("#prof\\.alta\\.rn").append(strSelect);
                     });
+                });
+
+                $("#buscar\\.parto\\.madre").on("keydown", function(e){
+
+                    var text = $(this).val();
+        
+                    switch (e.which) {
+                        case 13:
+                            let data = {
+                                id: $(this).val(),
+                                tipo: 4
+                            }
+                            $.post(serverURL + "examen/gets", data).done(function (response) {
+                                if (response !== null){
+                                    if ( Object.keys(response).length > 0 ){
+                                        $.each(response.data, function(i,val){
+                                            if (val.id_paciente == id){
+                                                $("#id_paciente").val(val.id_paciente);
+                                                $("#nombre_madre").val(val.nombre_madre);
+                                                $("#apellido_madre").val(val.apellido_madre);
+                                                $("#lugar_parto_rn").val(val.lugar_parto_rn);
+                                                $("#id_rn").val(val.id_rn);
+                                                $("#nombre_rn").val(val.nombre_rn);
+                                                $("#apellido_rn").val(val.apellido_rn);
+                                                $("#sexo_rn").val(val.sexo_rn);
+                                                $("#fecha_parto_rn").val(val.fecha_parto_rn);
+                                                $("#datos\\.neonatal\\.edad").val(val.eg_parto).trigger("focusout");
+                                                $("#termino_parto").val(val.termino_parto);
+                                                $("#tipo_parto").val(val.tipo_parto);
+                                                $("#tipo_patologia_obstetrica").val(val.tipo_patologia_obstetrica);
+                                                $("#meconio").val(val.meconio);
+                                                $("#datos\\.neonatal\\.peso").val(val.peso_rn).trigger("change");
+                                                $("#datos\\.neonatal\\.talla").val(val.talla_rn).trigger("change");
+                                                $("#perimetro_craneo_rn").val(val.perimetro_craneo_rn);
+                                                $("#datos\\.neonatal\\.ipn").val(val.ipn_rn);
+                                                $("#peso_placentario").val(val.peso_placentario);
+                                                $("#apgar_1").val(val.apgar_1);
+                                                $("#apgar_5").val(val.apgar_5);
+                                                $("#hiperbilirrubinemia").val(val.hiperbilirrubinemia);
+                                                $("#poliglobulia").val(val.poliglobulia);
+                                                $("#hospital_ucin").val(val.hospital_ucin);
+                                                $("#sindrome_respiratorio").val(val.sindrome_respiratorio);
+                                                $("#alta_con_madre").val(val.alta_con_madre);
+                                                $("#observaciones").val(val.observaciones);
+                                                $("#hipoglicemia_riesgo").val(val.hipoglicemia_riesgo);
+                                                $("#hipoglicemia_sospechada").val(val.hipoglicemia_sospechada);
+                                                $("#hipoglicemia_confirmada").val(val.hipoglicemia_confirmada);
+                                                $("#dextro_uno").val(val.dextro_uno);
+                                                $("#glicemia_uno").val(val.glicemia_uno);
+                                                $("#conducta\\.uno").val(val.conducta_uno);
+                                                $("#dextro_dos").val(val.dextro_dos);
+                                                $("#glicemia_dos").val(val.glicemia_dos);
+                                                $("#conducta\\.dos").val(val.conducta_dos);
+                                                $("#dextro_tres").val(val.dextro_tres);
+                                                $("#glicemia_tres").val(val.glicemia_tres);
+                                                $("#conducta\\.tres").val(val.conducta_tres);
+                                                $("#prof\\.alta\\.rn").val(val.prof_alta_rn);
+                                                $("#prof\\.atencion\\.parto").val(val.prof_atencion_parto)
+                                            };
+                                        });
+                                    }
+                                }
+                                else{
+                                    alert("No hay pacientes con el id escrito");
+                                }
+                            });
+
+                            break;
+                    }
                 });
 
                 $.get( serverURL + "configuracion/profesionalparto/0", function( data ) {
