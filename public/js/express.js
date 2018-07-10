@@ -362,7 +362,7 @@ $(document).ready(function(){
         $('#graficosTitle').html("Gráfico LCN");
         $('#graficosBody').html("<div class='row'><div class='col'><div id='graficoLcnBaseView'></div></div><div class='col'><div id='graficoLcnView'></div></div>");
             
-        var egLcn = parseFloat($("input[name='eg']").val());
+        var egLcn = parseFloat(localStorage.eg);
         $( '#impEcoObsSegTrim1').remove();
         $( '#impEcoObsSegTrim2').remove();
         $( '#impDoppler3').remove();
