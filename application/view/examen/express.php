@@ -947,8 +947,10 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
-                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                </div>
                                                 <input type="text" class="form-control" id="fppReferida" readonly="">
                                             </div>
                                         </div>
@@ -957,8 +959,10 @@
                                         <h6 class="text-center">Cálculos por ajuste ecográfico</h6>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput"><strong>FUM</strong> Ajustada</label>
-                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                </div>
                                                 <input type="text" class="form-control" id="furAjustada" readonly="">
                                             </div>
                                         </div>
