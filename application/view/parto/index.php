@@ -26,7 +26,7 @@
                                     <input class="form-control" type="text" placeholder="N° ID del Recién Nacido">
                                 </div>
                                 <div class="col-2">
-                                    <button type="button" class="btn btn-primary">Buscar</button>
+                                    <button type="button" class="btn btn-info">Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -483,7 +483,7 @@
                                     <input type="text" class="form-control col-3" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnEge" style="font-size: 0.8rem;" disabled>
                                 </div>
                             </form>
-                            <small class="text-primary">Graficas para categorizar crecimiento y ponderación de variables biológicas</small><br>
+                            <small class="text-info">Graficas para categorizar crecimiento y ponderación de variables biológicas</small><br>
                             <small style="font-size: 60%;">* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a>
                             <br>** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small>
                         </div>
@@ -571,7 +571,7 @@
                                 </div>
                             </div>
                             <div class="row p-2">
-                                <div class="col-12 border border-primary p-2 div-hover">
+                                <div class="col-12 border border-info p-2 div-hover">
                                     <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</small></p>
                                 </div>
                             </div>
@@ -740,12 +740,12 @@
                                     </select>
                                 </div>
                             </form>
-                            <h6 class="text-left text-primary" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
+                            <h6 class="text-left text-info" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
                             <div class="btn-group" role="group" aria-label="Default button group">
-                                <button type="button" class="btn btn-outline-primary" id="opt1">Cond. Neutra</button>
-                                <button type="button" class="btn btn-outline-primary" id="opt2">Potencial alto</button>
-                                <button type="button" class="btn btn-outline-primary" id="opt3">Potencial bajo</button>
-                                <button type="button" class="btn btn-outline-primary" id="opt4">Cond. extremas</button>
+                                <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
+                                <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
+                                <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
+                                <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
                             </div>
                             <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
                         </div>
