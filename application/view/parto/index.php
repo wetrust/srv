@@ -20,10 +20,14 @@
                                     <h5 class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</h5>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
+                                    <select id="buscar.parto.tipo" class="form-control">
+                                        <option value="0" selected>ID de la madre</option>
+                                        <option value="1">ID del Recién Nacido</option>
+                                        <option value="2">Apellidos de la Madre</option>
+                                    </select>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control" type="text" placeholder="N° ID del Recién Nacido">
+                                    <input class="form-control" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
                                 </div>
                                 <div class="col-2">
                                     <button type="button" class="btn btn-info">Buscar</button>
