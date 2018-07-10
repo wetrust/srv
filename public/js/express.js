@@ -1077,6 +1077,65 @@ $(document).ready(function(){
         $('#popupGraficos').modal('show');
     });
 
+    $("input[name='ajustarEcoPrimTrim']").on("change", function(){
+        if ($(this).is(":checked")){
+            if ($(this).val() == 1){
+                var LCN = parseInt($('#lcn').val());
+                var saco = parseInt($('#saco').val());
+                var eg = parseInt(localStorage.eg);
+                var oneday = 1000 * 60 * 60 * 24;
+                
+                if (isNaN(LCN) | LCN < 0 | isNaN(eg) | eg < 1) {
+                    if (isNaN(saco) | saco < 0 | isNaN(eg) | eg < 1) {
+                        $('#popupTitle').html("Información");
+                        $('#popupBody').html("<p>El paciente debe tener una Edad Gestacional y un valor en LCN o Saco Gestacional</p>");
+                        $('#popupGenerico').modal('show');
+                    }
+                    else{
+                        var EGsaco = parseFloat($('#sacoPct').val());
+                        var eg1 = new Number((Math.floor(EGsaco) * 7) + Math.round((EGsaco - Math.floor(EGsaco)) * 7));
+                        var eg2 = new Number((Math.floor(eg) * 7) + Math.round((eg - Math.floor(eg)) * 7));
+                        var diferencia = (Math.floor(eg2 - eg1) + Math.round(((eg2 - eg1) - Math.floor(eg2 - eg1)) * 7));
+                        diferencia = diferencia * oneday;
+                        var FUM = localStorage.fum;
+                        FUM = FUM.split(/\//).reverse().join('/'); //convert dd/mm/yyy
+                        FUM = new Date (FUM);
+                        var B = new Date();
+                        B.setTime(FUM.getTime() + diferencia);
+                        $("#input\\.paciente\\.fum").val(B.getDate()+"/"+(B.getMonth()+1)+"/"+B.getFullYear());
+                        $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+                        $("#input\\.paciente\\.fum").trigger("change");
+                        $('#furAjustada').val($("#input\\.paciente\\.fum").val());
+                        $('#egAjustada').val($("#input\\.paciente\\.eg\\.semanas").val() + "," + $("#input\\.paciente\\.eg\\.dias").val());
+                        $('#fppAjustada').val($("#input\\.paciente\\.fpp\\.examen").val());
+                    }
+                }
+                else{
+                    var EGLCN = parseFloat($('#lcnPct').val());
+                    var eg1 = new Number((Math.floor(EGLCN) * 7) + Math.round((EGLCN - Math.floor(EGLCN)) * 7));
+                    var eg2 = new Number((Math.floor(eg) * 7) + Math.round((eg - Math.floor(eg)) * 7));
+                    var diferencia = (Math.floor(eg2 - eg1) + Math.round(((eg2 - eg1) - Math.floor(eg2 - eg1)) * 7));
+                    diferencia = diferencia * oneday;
+                    var FUM = localStorage.fum;
+                    FUM = FUM.split(/\//).reverse().join('/'); //convert dd/mm/yyy
+                    FUM = new Date (FUM);
+                    var B = new Date();
+                    B.setTime(FUM.getTime() + diferencia);
+                    $("#input\\.paciente\\.fum").val(B.getDate()+"/"+(B.getMonth()+1)+"/"+B.getFullYear());
+                    $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+                    $("#input\\.paciente\\.fum").trigger("change");
+                    $('#furAjustada').val($("#input\\.paciente\\.fum").val());
+                    $('#egAjustada').val($("#input\\.paciente\\.eg\\.semanas").val() + "," + $("#input\\.paciente\\.eg\\.dias").val());
+                    $('#fppAjustada').val($("#input\\.paciente\\.fpp\\.examen").val());
+                }
+                $('#resultadoAjusteEcoPrimTrim').show();
+            }
+            else{
+                $('#resultadoAjusteEcoPrimTrim').hide();
+            }
+        }
+    });
+
     $( '#modalPreInfEcoPrimTrim' ).on( 'click', function() {
         $('#popupTitle').html("Datos para evaluación ecográfica de primer trimestre");
         //remueve los botones de imprimir en caso de que estén
