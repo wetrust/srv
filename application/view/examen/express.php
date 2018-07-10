@@ -968,16 +968,22 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput2"><strong>EG</strong> ajustada</label>
-                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                </div>
                                                 <input type="text" class="form-control" id="egAjustada" readonly="">
-                                                <div class="input-group-append"><div class="input-group-text">semanas</div></div>
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">semanas</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput2"><strong>FPP</strong> Ajustada</label>
-                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                </div>
                                                 <input type="text" class="form-control" id="fppAjustada" readonly="">
                                             </div>
                                         </div>
