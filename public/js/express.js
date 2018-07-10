@@ -1122,7 +1122,7 @@ $(document).ready(function(){
                     var B = new Date();
                     B.setTime(FUM.getTime() + diferencia);
                     $("#input\\.paciente\\.fum").val(B.getDate()+"/"+(B.getMonth()+1)+"/"+B.getFullYear());
-                    $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
+                    $('#input\\.paciente\\.fum').datepicker('setValue', B.getDate()+"/"+(B.getMonth()+1)+"/"+B.getFullYear());
                     $("#input\\.paciente\\.fum").trigger("change");
                     $('#furAjustada').val($("#input\\.paciente\\.fum").val());
                     $('#egAjustada').val($("#input\\.paciente\\.eg\\.semanas").val() + "," + $("#input\\.paciente\\.eg\\.dias").val());
