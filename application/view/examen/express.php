@@ -926,17 +926,23 @@
                                         <h6 class="text-center">Cálculos por FUM materna referida</h6>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
-                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                <div class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                </div>
                                                 <input type="text" class="form-control" id="furReferida" readonly="">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>
-                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                            <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>                                            
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                </div>
                                                 <input type="text" class="form-control" id="egReferida" readonly="">
-                                                <div class="input-group-append"><div class="input-group-text">semanas</div></div>
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">semanas</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
