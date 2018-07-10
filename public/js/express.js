@@ -433,22 +433,31 @@ $(document).ready(function(){
                     lcnegx[8] = 13;
                     lcnegx[9] = 14;
                     lcnegx[10] = 14;
-    
-                    for (i = 1; i <= 10; i++) {
-                        if (lcnegx[i] >= egLcn2) {
-                            if (flag == false) {
-                            data.push({
-                                y: lcn,
-                            });
-                            flag = true;
+
+                    if (egLcn2 > 1){
+                        for (i = 1; i <= 10; i++) {
+                            if (lcnegx[i] >= egLcn2) {
+                                if (flag == false) {
+                                    data.push({
+                                        y: lcn,
+                                    });
+                                    flag = true;
+                                }
+                                else {
+                                    data.push({
+                                        y:0,
+                                    });
+                                }
                             }
                             else {
-                             data.push({
-                                y:0,
-                             });
+                                data.push({
+                                    y: 0,
+                                });
                             }
                         }
-                        else {
+                    }
+                    else{
+                        for (i = 1; i <= 4; i++) {
                             data.push({
                                 y: 0,
                             });
@@ -519,22 +528,31 @@ $(document).ready(function(){
                             lcnegx[2] = 7;
                             lcnegx[3] = 8;
                             lcnegx[4] = 9;
-    
-                            for (i = 1; i <= 4; i++) {
-                                if (lcnegx[i] >= egLcn) {
-                                    if (flag == false) {
-                                    data.push({
-                                        y: lcn,
-                                    });
-                                    flag = true;
+
+                            if (egLcn > 1){
+                                for (i = 1; i <= 4; i++) {
+                                    if (lcnegx[i] >= egLcn) {
+                                        if (flag == false) {
+                                        data.push({
+                                            y: lcn,
+                                        });
+                                        flag = true;
+                                        }
+                                        else {
+                                         data.push({
+                                            y:0,
+                                         });
+                                        }
                                     }
                                     else {
-                                     data.push({
-                                        y:0,
-                                     });
+                                        data.push({
+                                            y: 0,
+                                        });
                                     }
                                 }
-                                else {
+                            }
+                            else{
+                                for (i = 1; i <= 4; i++) {
                                     data.push({
                                         y: 0,
                                     });
@@ -607,22 +625,31 @@ $(document).ready(function(){
                             lcnegx[5] = 10.4;
                             lcnegx[6] = 10.5;
                             lcnegx[7] = 10.6;
-    
-                            for (i = 1; i <= 7; i++) {
-                                if (lcnegx[i] >= egLcn) {
-                                    if (flag == false) {
-                                    data.push({
-                                        y: lcn,
-                                    });
-                                    flag = true;
+
+                            if (egLcn > 1){
+                                for (i = 1; i <= 7; i++) {
+                                    if (lcnegx[i] >= egLcn) {
+                                        if (flag == false) {
+                                        data.push({
+                                            y: lcn,
+                                        });
+                                        flag = true;
+                                        }
+                                        else {
+                                         data.push({
+                                            y:0,
+                                         });
+                                        }
                                     }
                                     else {
-                                     data.push({
-                                        y:0,
-                                     });
+                                        data.push({
+                                            y: 0,
+                                        });
                                     }
                                 }
-                                else {
+                            }
+                            else{
+                                for (i = 1; i <= 7; i++) {
                                     data.push({
                                         y: 0,
                                     });
@@ -695,22 +722,31 @@ $(document).ready(function(){
                             lcnegx[5] = 11.4;
                             lcnegx[6] = 11.5;
                             lcnegx[7] = 11.6;
-    
-                            for (i = 1; i <= 7; i++) {
-                                if (lcnegx[i] >= egLcn) {
-                                    if (flag == false) {
-                                    data.push({
-                                        y: lcn,
-                                    });
-                                    flag = true;
+
+                            if (egLcn > 1){
+                                for (i = 1; i <= 7; i++) {
+                                    if (lcnegx[i] >= egLcn) {
+                                        if (flag == false) {
+                                        data.push({
+                                            y: lcn,
+                                        });
+                                        flag = true;
+                                        }
+                                        else {
+                                         data.push({
+                                            y:0,
+                                         });
+                                        }
                                     }
                                     else {
-                                     data.push({
-                                        y:0,
-                                     });
+                                        data.push({
+                                            y: 0,
+                                        });
                                     }
                                 }
-                                else {
+                            }
+                            else{
+                                for (i = 1; i <= 7; i++) {
                                     data.push({
                                         y: 0,
                                     });
@@ -785,23 +821,31 @@ $(document).ready(function(){
                             lcnegx[5] = 12.4;
                             lcnegx[6] = 12.5;
                             lcnegx[7] = 12.6;
-    
-    
-                            for (i = 1; i <= 7; i++) {
-                                if (lcnegx[i] >= egLcn) {
-                                    if (flag == false) {
-                                    data.push({
-                                        y: lcn,
-                                    });
-                                    flag = true;
+
+                            if (egLcn > 1){
+                                for (i = 1; i <= 7; i++) {
+                                    if (lcnegx[i] >= egLcn) {
+                                        if (flag == false) {
+                                        data.push({
+                                            y: lcn,
+                                        });
+                                        flag = true;
+                                        }
+                                        else {
+                                         data.push({
+                                            y:0,
+                                         });
+                                        }
                                     }
                                     else {
-                                     data.push({
-                                        y:0,
-                                     });
+                                        data.push({
+                                            y: 0,
+                                        });
                                     }
                                 }
-                                else {
+                            }
+                            else{
+                                for (i = 1; i <= 7; i++) {
                                     data.push({
                                         y: 0,
                                     });
@@ -966,27 +1010,37 @@ $(document).ready(function(){
                             lcnegx[6] = 14.5;
                             lcnegx[7] = 14.6;
                             lcnegx[8] = 15;
-    
-                            for (i = 1; i <= 8; i++) {
-                                if (lcnegx[i] >= egLcn) {
-                                    if (flag == false) {
-                                    data.push({
-                                        y: lcn,
-                                    });
-                                    flag = true;
+
+                            if (egLcn > 1){
+                                for (i = 1; i <= 8; i++) {
+                                    if (lcnegx[i] >= egLcn) {
+                                        if (flag == false) {
+                                            data.push({
+                                                y: lcn,
+                                            });
+                                            flag = true;
+                                        }
+                                        else {
+                                            data.push({
+                                                y:0,
+                                            });
+                                        }
                                     }
                                     else {
-                                     data.push({
-                                        y:0,
-                                     });
+                                        data.push({
+                                            y: 0,
+                                        });
                                     }
                                 }
-                                else {
+                            }
+                            else{
+                                for (i = 1; i <= 8; i++) {
                                     data.push({
                                         y: 0,
                                     });
                                 }
                             }
+
                             return data;
                         }())
                     }]
@@ -1059,18 +1113,18 @@ $(document).ready(function(){
                          saco = saco.replace(",", ".");
                          saco = parseFloat(saco) / 10;
                          
-                         for (i = 0; i <= 27; i++) {
+                        for (i = 0; i <= 27; i++) {
     
-                             if (categories[i] == edadGest){
-                                  data.push({
-                                       y: saco,
-                                  });
-                             }
-                             else{
-                                  data.push({ y: -2, });
-                             }
-                         }
-                         return data;
+                            if (categories[i] == edadGest){
+                                data.push({
+                                    y: saco,
+                                });
+                            }
+                            else{
+                                data.push({ y: -2, });
+                            }
+                        }
+                        return data;
                      }())
                  }]
              });
