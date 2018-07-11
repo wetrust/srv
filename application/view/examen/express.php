@@ -1145,8 +1145,8 @@
                                     <button class="btn btn-primary mb-2" id="primtrim.adicionales.translucencia">Calcular</button>
                                 </div>
                             </div>
-                            <div class="row d-none" id="prob">
-                                <div class="col-6">
+                            <div class="row">
+                                <div class="col d-none" id="prob">
                                     <p><strong>Riesgo a priori</strong></p>
                                     <table class="table">
                                         <thead class="thead-light">
@@ -1171,7 +1171,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="col">
+                                <div class="col d-none" id="prob2">
                                     <p><strong>Riesgo a priori y translucidez nucal</strong></p>
                                     <table class="table">
                                         <thead class="thead-light">

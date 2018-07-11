@@ -1264,7 +1264,7 @@ $(document).ready(function(){
     $("#primtrim\\.adicionales\\.translucencia").on("click", function(){
         calcularRiesgo(); 
     });
-    
+
     //ecografia segundo trimestre
 
     $("#boton\\.eco\\.segundo\\.guardar").on("click", function(){
@@ -5007,6 +5007,8 @@ $(document).ready(function(){
         }
         else{
             $("#examen\\.eco\\.primtrim\\.adicionales").addClass("d-none");
+            $("#prob").addClass("d-none");
+            $("#prob2").addClass("d-none");
         }
     });
 });
