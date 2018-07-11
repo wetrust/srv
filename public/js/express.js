@@ -1261,6 +1261,7 @@ $(document).ready(function(){
         $('#popupGenerico').modal('show');
     });
 
+
     $("#primtrim\\.adicionales\\.translucencia").on("click", function(){
         calcularRiesgo(); 
     });
@@ -4890,6 +4891,13 @@ $(document).ready(function(){
         }
     });
 
+    $("#translunucal").keypress(function(){
+        if ( event.which == 13 ) {
+            event.preventDefault();
+            calcularRiesgo();
+        }
+    });
+
     $( "#dbp" ).keypress(function( event ) {
         if ( event.which == 13 ) {
            event.preventDefault();
@@ -5025,4 +5033,5 @@ $(document).ready(function(){
             $("#prob2").addClass("d-none");
         }
     });
+
 });
