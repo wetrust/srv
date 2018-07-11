@@ -1261,6 +1261,9 @@ $(document).ready(function(){
         $('#popupGenerico').modal('show');
     });
 
+    $("#primtrim\\.adicionales\\.translucencia").on("click", function(){
+        calcularRiesgo(); 
+    });
     //ecografia segundo trimestre
 
     $("#boton\\.eco\\.segundo\\.guardar").on("click", function(){

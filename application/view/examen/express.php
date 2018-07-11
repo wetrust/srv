@@ -1025,7 +1025,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Edad Materna</label>
-                                        <select class="form-control">
+                                        <select class="form-control" id="edadmaternaprimtrim">
                                             <option value="14">14 años</option>
                                             <option value="15">15 años</option>
                                             <option value="16">16 años</option>
@@ -1069,7 +1069,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Longitud cefalo caudal</label>
-                                        <select class="form-control">
+                                        <select class="form-control" id="loncefalocaudal">
                                             <option value="45">45 mm</option>
                                             <option value="46">46 mm</option>
                                             <option value="47">47 mm</option>
@@ -1120,7 +1120,7 @@
                                         <label for="formGroupExampleInput">Translucidez Nucal</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" id="translunucal">
                                         </div>
                                     </div>
                                 </div>
@@ -1142,7 +1142,61 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <button class="btn btn-primary mb-2">Calcular</button>
+                                    <button class="btn btn-primary mb-2" id="primtrim.adicionales.translucencia">Calcular</button>
+                                </div>
+                            </div>
+                            <div class="row d-none" id="prob">
+                                <div class="col">
+                                    <p><strong>Riesgo a priori</strong></p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Item</th>
+                                                <th scope="col">Riesgo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Trisomia 21</th>
+                                                <td id="trisomia.priori.veintiuno"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Trisomia 18</th>
+                                                <td id="trisomia.priori.diesiocho"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Trisomia 13</th>
+                                                <td id="trisomia.priori.trece"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row d-none" id="prob2">
+                                <div class="col">
+                                    <p><strong>Riesgo a priori y translucidez nucal</strong></p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Item</th>
+                                                <th scope="col">Riesgo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Trisomia 21</th>
+                                                <td id="trisomia.translucidez.veintiuno"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Trisomia 18</th>
+                                                <td id="trisomia.translucidez.diesiocho"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Trisomia 13</th>
+                                                <td id="trisomia.translucidez.trece"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
