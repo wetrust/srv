@@ -1170,6 +1170,8 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                                <div class="col">
                                     <p><strong>Riesgo a priori y translucidez nucal</strong></p>
                                     <table class="table">
                                         <thead class="thead-light">
