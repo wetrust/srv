@@ -2624,6 +2624,10 @@ function crlIndependantT13(nt,risk){
     return mixtureModel;
 }
 
+function cacularLR(mixModCRL,mixModTris){
+    return (mixModTris/mixModCRL);
+}
+
 function calcularRiesgo(){
 
     var compr = parseInt($("#loncefalocaudal").val());
