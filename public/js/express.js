@@ -1265,6 +1265,19 @@ $(document).ready(function(){
         calcularRiesgo(); 
     });
 
+    $("#boton\\.eco\\.prim\\.nuevo").on("click", function(){
+        $("#lcn").val("");
+        $("#saco").val("");
+        $("#translunucal").val("");
+
+        $("#edadmaternaprimtrim").val(14);
+        $("#loncefalocaudal").val(45);
+        $("#examen\\.eco\\.primtrim\\.adicionales\\.translucencia\\.trisomia\\.no").prop("checked", true);
+        $("#evaluacion\\.translucencia\\.no").prop("checked", true);
+        $("#ajuste\\.primtrim\\.no").prop("checked", true);
+        $("#resultadoAjusteEcoPrimTrim").attr("display", "none");
+    });
+
     //ecografia segundo trimestre
 
     $("#boton\\.eco\\.segundo\\.guardar").on("click", function(){
