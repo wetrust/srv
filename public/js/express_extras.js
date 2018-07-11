@@ -2672,12 +2672,12 @@ function calcularRiesgo(){
             riskT21=(100/riskT21);
         }
 
-        $("#trisomia\\.priori\\.veintiuno").HTML("1 en " + Math.round(riskT21));
-        $("#trisomia\\.priori\\.diesiocho").HTML("1 en " + Math.round(riskT18));
-        $("#trisomia\\.priori\\.trece").HTML("1 en " + Math.round(riskT13));
-        $("#trisomia\\.translucidez\\.veintiuno").HTML("1 en " + Math.round(riskT21*(1/LR21)));
-        $("#trisomia\\.translucidez\\.diesiocho").HTML("1 en " + Math.round(riskT18*(1/LR18))) ;
-        $("#trisomia\\.translucidez\\.trece").HTML("1 en " + Math.round( riskT13*(1/LR13)));
+        $("#trisomia\\.priori\\.veintiuno").html("1 en " + Math.round(riskT21));
+        $("#trisomia\\.priori\\.diesiocho").html("1 en " + Math.round(riskT18));
+        $("#trisomia\\.priori\\.trece").html("1 en " + Math.round(riskT13));
+        $("#trisomia\\.translucidez\\.veintiuno").html("1 en " + Math.round(riskT21*(1/LR21)));
+        $("#trisomia\\.translucidez\\.diesiocho").html("1 en " + Math.round(riskT18*(1/LR18))) ;
+        $("#trisomia\\.translucidez\\.trece").html("1 en " + Math.round( riskT13*(1/LR13)));
       
         if(!isNaN(riskT21)){
             $("#prob").removeClass("d-none");
