@@ -1146,10 +1146,10 @@
                                 </div>
                             </div>
                             <div class="row d-none" id="prob">
-                                <div class="col">
+                                <div class="col-6">
                                     <p><strong>Riesgo a priori</strong></p>
                                     <table class="table">
-                                        <thead>
+                                        <thead class="thead-light">
                                             <tr>
                                                 <th scope="col">Item</th>
                                                 <th scope="col">Riesgo</th>
@@ -1170,13 +1170,9 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
-                            <div class="row d-none" id="prob2">
-                                <div class="col">
                                     <p><strong>Riesgo a priori y translucidez nucal</strong></p>
                                     <table class="table">
-                                        <thead>
+                                        <thead class="thead-light">
                                             <tr>
                                                 <th scope="col">Item</th>
                                                 <th scope="col">Riesgo</th>
