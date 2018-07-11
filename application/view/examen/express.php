@@ -1003,7 +1003,7 @@
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-primary active"><input type="radio" name="ajustarEcoPrimTrim" value="0" checked=""> NO</label>
+                                <label class="btn btn-outline-primary active"><input type="radio" name="ajustarEcoPrimTrim" value="0" checked="" id="ajuste.primtrim.no"> NO</label>
                                 <label class="btn btn-outline-primary"><input type="radio" name="ajustarEcoPrimTrim" value="1"> SI</label>
                             </div>
                         </div>
@@ -1014,7 +1014,7 @@
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-primary active"><input type="radio" name="radio_translucencia" value="0" checked=""> NO</label>
+                                <label class="btn btn-outline-primary active"><input type="radio" name="radio_translucencia" value="0" checked="" id="evaluacion.translucencia.no"> NO</label>
                                 <label class="btn btn-outline-primary"><input type="radio" name="radio_translucencia" value="1"> SI</label>
                             </div>
                         </div>
