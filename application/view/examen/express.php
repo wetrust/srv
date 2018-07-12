@@ -1010,7 +1010,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col">
-                            <p>Evaluaciones adicionales (LCN 45mm - 84mm)</p>
+                            <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )</p>
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
