@@ -1009,8 +1009,11 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <div class="col-1">
+                            <img src="img/tn.jpeg" class="img-fluid" alt="feto con translucencia">
+                        </div>
                         <div class="col">
-                            <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )</p>
+                            <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )<br><small>Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo</small></p>
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
