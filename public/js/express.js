@@ -1280,6 +1280,17 @@ $(document).ready(function(){
     });
 
     //ecografia segundo trimestre
+    $("#boton\\.eco\\.segundo\\.nuevo").on("click", function(){
+        $("#dbp").val("").trigger("change");
+        $("#dof").val("").trigger("change");
+        $("#cc").val("").trigger("change");
+        $("#ca").val("").trigger("change");
+        $("#ca").val("").trigger("change");
+        $("#lf").val("").trigger("change");
+        $("#lh").val("").trigger("change");
+        $("#cerebelo").val("").trigger("change");
+        $("#bvm").val("").trigger("change");
+    });
 
     $("#boton\\.eco\\.segundo\\.guardar").on("click", function(){
         let examen = {
