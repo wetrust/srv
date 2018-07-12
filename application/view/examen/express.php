@@ -1733,7 +1733,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-secondary" id="boton.eco.doppler.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.doppler.eliminar">Eliminar</button>
+                    <button type="button" class="btn btn-secondary" id="boton.eco.doppler.nuevo">Nuevo</button><button type="button" class="btn btn-secondary" id="boton.eco.doppler.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.doppler.eliminar">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>

@@ -2870,6 +2870,16 @@ $(document).ready(function(){
     });
 
     //ecografía doppler
+    $("#boton\\.eco\\.doppler\\.nuevo").on("click", function(){
+        $("#aud").val(""),
+        $("#aui").val(""),
+        $("#auprom").val(""),
+        $("#ipau").val(""),
+        $("#ipacm").val(""),
+        $("#ccp").val(""),
+        $("#dv").val(""),
+        $("#psmACM").val("")
+    });
 
     $("#boton\\.eco\\.doppler\\.guardar").on("click", function(){
         let examen = {
