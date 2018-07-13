@@ -1013,7 +1013,7 @@
                             <img src="<?php echo Config::get('URL'); ?>img/tn.jpeg" class="img-fluid" alt="feto con translucencia">
                         </div>
                         <div class="col">
-                            <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )<br><small>Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo</small></p>
+                            <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )<br><small>Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo.<br>Gentileza Dr. Francisco Guerra B. Universidad Austral de Chile</small></p>
                         </div>
                         <div class="col-3">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
