@@ -997,7 +997,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row" id="preguntaAjusteEcoPrimTrim" style="display:none;">
+                    <div class="form-group row alert alert-info" id="preguntaAjusteEcoPrimTrim" style="display:none;">
                         <div class="col">
                             <p>¿Necesita realizar ajuste a la edad gestacional?</p>
                         </div>
