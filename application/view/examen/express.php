@@ -1175,7 +1175,7 @@
                                     </table>
                                 </div>
                                 <div class="col d-none" id="prob2">
-                                    <p><strong>Riesgo a priori y translucidez nucal</strong></p>
+                                    <p><strong>Riesgo post - test (medición de TN)</strong></p>
                                     <table class="table">
                                         <thead class="thead-light">
                                             <tr>
