@@ -1013,12 +1013,21 @@
                             <img src="<?php echo Config::get('URL'); ?>img/tn.jpeg" class="img-fluid" alt="feto con translucencia">
                         </div>
                         <div class="col">
-                            <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )<br><small>Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo.<br>Gentileza Dr. Francisco Guerra B. Universidad Austral de Chile</small></p>
-                        </div>
-                        <div class="col-3">
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-primary active" id="evaluacion.translucencia.no"><input type="radio" name="radio_translucencia" value="0" checked=""> NO</label>
-                                <label class="btn btn-outline-primary"><input type="radio" name="radio_translucencia" value="1"> SI</label>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )<br><small>Gentileza Dr. Francisco Guerra B. Universidad Austral de Chile</small></p>
+                                </div>
+                                <div class="col-3">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-outline-primary active" id="evaluacion.translucencia.no"><input type="radio" name="radio_translucencia" value="0" checked=""> NO</label>
+                                        <label class="btn btn-outline-primary"><input type="radio" name="radio_translucencia" value="1"> SI</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-right"><small>¡¡El Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo!!</small></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1035,7 +1044,7 @@
                                             <option value="17">17 años</option>
                                             <option value="18">18 años</option>
                                             <option value="19">19 años</option>
-                                            <option value="20">20 años</option>
+                                            <option value="20" select>20 años</option>
                                             <option value="21">21 años</option>
                                             <option value="22">22 años</option>
                                             <option value="23">23 años</option>
@@ -1071,7 +1080,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="formGroupExampleInput">Longitud cefalo caudal</label>
+                                        <label for="formGroupExampleInput">Longitud cefalo caudal (45 a 84 mm)</label>
                                         <select class="form-control" id="loncefalocaudal">
                                             <option value="45">45 mm</option>
                                             <option value="46">46 mm</option>
@@ -1123,7 +1132,7 @@
                                         <label for="formGroupExampleInput">Translucidez Nucal</label>
                                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                             <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                            <input type="text" class="form-control" id="translunucal">
+                                            <input type="text" class="form-control" id="translunucal" value="1">
                                         </div>
                                     </div>
                                 </div>
@@ -1145,7 +1154,7 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <button class="btn btn-primary mb-2" id="primtrim.adicionales.translucencia">Calcular</button>
+                                    <button class="btn btn-primary mb-2" id="primtrim.adicionales.translucencia">Calcular riesgo por TN</button>
                                 </div>
                             </div>
                             <div class="row">
