@@ -1008,7 +1008,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row alert alert-info">
                         <div class="col-1">
                             <img src="<?php echo Config::get('URL'); ?>img/tn.jpeg" class="img-fluid" alt="feto con translucencia">
                         </div>
@@ -1159,12 +1159,11 @@
                             </div>
                             <div class="row">
                                 <div class="col d-none" id="prob">
-                                    <p><strong>Riesgo a priori</strong></p>
                                     <table class="table">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col">Item</th>
-                                                <th scope="col">Riesgo</th>
+                                                <th scope="col">Trisomias</th>
+                                                <th scope="col">Riesgo a priori</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1184,12 +1183,11 @@
                                     </table>
                                 </div>
                                 <div class="col d-none" id="prob2">
-                                    <p><strong>Riesgo post - test (medición de TN)</strong></p>
                                     <table class="table">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col">Item</th>
-                                                <th scope="col">Riesgo</th>
+                                                <th scope="col">Trisomias</th>
+                                                <th scope="col">Riesgo post - test</th>
                                             </tr>
                                         </thead>
                                         <tbody>
