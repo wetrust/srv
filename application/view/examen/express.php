@@ -1044,7 +1044,7 @@
                                             <option value="17">17 años</option>
                                             <option value="18">18 años</option>
                                             <option value="19">19 años</option>
-                                            <option value="20" select>20 años</option>
+                                            <option value="20" selected>20 años</option>
                                             <option value="21">21 años</option>
                                             <option value="22">22 años</option>
                                             <option value="23">23 años</option>
