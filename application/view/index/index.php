@@ -35,19 +35,21 @@
   </div>
   <div class="h-100 w-100">
     <div class="container py-5">
-      <h4 class="m-3 text-center">Funciones</h4>
+      <h4 class="m-5 text-center">FUNCIONES</h4>
       <div class="row">
         <div class="col">
-          <p class="text-justify">Sitio web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.</p>
-          <p class="text-justify">El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</p>
+          <p class="text-justify"><small>Sitio web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.</small></p>
+          <p class="text-justify"><small>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</small></p>
           <ul>
-            <li>Determinación ecográfica de la edad gestacional</li>
-            <li>Valoración de biometrías y crecimiento fetal</li>
-            <li>Flujometria Doppler Materno / Fetal básico</li>
+            <li><small>Determinación ecográfica de la edad gestacional</small></li>
+            <li><small>Valoración de biometrías y crecimiento fetal</small></li>
+            <li><small>Flujometria Doppler Materno / Fetal básico</small></li>
           </ul>
-          <p class="text-justify">Tradicionalmente se valora crecimiento intrauterino mediante estándar (curvas o tablas) de peso propias de cada región (curva local generalizada). Sin embargo, para una población heterogénea, el parámetro ideal para valorar crecimiento intrauterino no necesariamente es una curva local generalizada, sino curva general individualizada, estándar ajustado a características materno-fetales individuales y, por tanto, trasciende límites geográficos.</p>
+          <p class="text-justify"><small>Tradicionalmente se valora crecimiento intrauterino mediante estándar (curvas o tablas) de peso propias de cada región (curva local generalizada). Sin embargo, para una población heterogénea, el parámetro ideal para valorar crecimiento intrauterino no necesariamente es una curva local generalizada, sino curva general individualizada, estándar ajustado a características materno-fetales individuales y, por tanto, trasciende límites geográficos.</small></p>
         </div>
-        <div class="col"></div>
+        <div class="col">
+          <img class="ml-lg-5 img-fluid" src="img/calendario.png" alt="logo" >
+        </div>
       </div>
     </div>
   </div>
