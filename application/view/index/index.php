@@ -37,7 +37,7 @@
   <div class="h-100 w-100" id="objetivos">
     <div class="container py-5">
       <div class="row">
-      <div class="col">
+      <div class="col mt-3">
           <img class="d-block mx-auto img-fluid" src="img/ecografo.png" alt="ecógrafo" >
         </div>
         <div class="col">
