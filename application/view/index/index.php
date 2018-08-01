@@ -16,13 +16,13 @@
 </head>
 <body class="h-100 w-100">
   <div class="container h-100 w-100">
-    <div class="row pt-5">
+    <div class="row pt-3">
       <div class="col mt-5">
         <div class="row">
           <div class="col">
             <img class="img-fluid" src="img/ic_launcher-web.png" alt="logo crecimientofetal.cl" >
           </div>
-          <div class="col-7">
+          <div class="col-8">
             <h3>crecimientofetal.cl</h3>
             <h5><small>Ultrasonografía obstétrica básica para profesionales</small></h5>
           </div>
