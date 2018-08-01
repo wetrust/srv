@@ -27,7 +27,7 @@
             <button type="button" class="btn btn-raised btn-primary">Más información</button>
           </div>
         </div>
-        <div class="col mt-5">
+        <div class="col-7 mt-5">
           <img class="img-fluid" src="img/feto-computador.png" alt="logo" >
         </div>
       </div>
