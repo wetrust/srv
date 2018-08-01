@@ -34,10 +34,13 @@
       </div>
     </div>
   </div>
-  <div class="h-100 w-100">
+  <div class="h-100 w-100" id="objetivos">
     <div class="container py-5">
       <h4 class="mb-5 text-center">OBJETIVO</h4>
       <div class="row">
+      <div class="col">
+          <img class="d-block mx-auto img-fluid" src="img/ecografo.png" alt="ecógrafo" >
+        </div>
         <div class="col">
           <p class="text-justify"><small>Facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</small></p>
           <ul>
@@ -47,9 +50,6 @@
           </ul>
           <p class="text-justify"><small>Tradicionalmente se valora crecimiento intrauterino mediante estándar (curvas o tablas) de peso propias de cada región (<strong>curva local generalizada</strong>). Sin embargo, para una población heterogénea, el parámetro ideal para valorar crecimiento intrauterino no necesariamente es una <strong>curva local generalizada</strong>, sino curva general individualizada, estándar ajustado a características materno-fetales individuales y, por tanto, trasciende límites geográficos.</small></p>
           <p class="text-justify"><small>Actualmente el análisis general de los datos ecográficos se encuentran disponibles para uso abierto (<strong>Iniciar exámen ecográfico</strong>), en tanto que: el guardado de pacientes en base de datos requiere acceso previo registro del examinador y/o centro ecográfico.</small></p>
-        </div>
-        <div class="col">
-          <img class="d-block mx-auto img-fluid" src="img/ecografo.png" alt="ecógrafo" >
         </div>
       </div>
       <div class="row">
