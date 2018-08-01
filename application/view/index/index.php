@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row py-3">
         <div class="col mt-5">
-          <h1>crecimientofetal.cl</h1>
+          <h1><strong>crecimientofetal.cl</strong></h1>
           <h3 class="mb-3"><small>Ultrasonografía obstétrica básica para profesionales</small></h3>
           <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.<br><br>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos, Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile</small></p>
           <div class="btn-group-vertical">
