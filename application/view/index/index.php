@@ -15,17 +15,19 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 </head>
 <body class="h-100 w-100">
-  <div class="container h-100 w-100">
-    <div class="row pt-3">
-      <div class="col mt-5">
-        <h2>crecimientofetal.cl<br><small>Ultrasonografía obstétrica básica para profesionales</small></h2>
-        <p><small>Sitio web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determinación ecográfica de la edad gestacional<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valoración de biometrías y crecimiento fetal<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flujometria Doppler Materno / Fetal básico.<br>En el ámbito postnatal se valora el crecimiento intrauterino mediante relaciones; peso e Índice ponderal neonatal (Ipn) según edad gestacional al parto, se utilizan dos estándares chilenos, grafica nacional de peso neonatal y grafica regional (región de La Araucanía), la última a objeto de valorar efecto modulador del peso esperado según diversas variables materna No patológicas.</small></p>
-        <div class="btn-group-vertical">
-          <button type="button" class="btn btn-raised btn-primary">Iniciar exámen ecográfico</button>
-          <button type="button" class="btn btn-raised btn-primary">Más información</button>
+  <div class="h-100 w-100" id="main">
+    <div class="container">
+      <div class="row pt-3">
+        <div class="col mt-5">
+          <h2>crecimientofetal.cl<br><small>Ultrasonografía obstétrica básica para profesionales</small></h2>
+          <p><small>Sitio web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determinación ecográfica de la edad gestacional<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valoración de biometrías y crecimiento fetal<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flujometria Doppler Materno / Fetal básico.<br>En el ámbito postnatal se valora el crecimiento intrauterino mediante relaciones; peso e Índice ponderal neonatal (Ipn) según edad gestacional al parto, se utilizan dos estándares chilenos, grafica nacional de peso neonatal y grafica regional (región de La Araucanía), la última a objeto de valorar efecto modulador del peso esperado según diversas variables materna No patológicas.</small></p>
+          <div class="btn-group-vertical">
+            <button type="button" class="btn btn-raised btn-primary">Iniciar exámen ecográfico</button>
+            <button type="button" class="btn btn-raised btn-primary">Más información</button>
+          </div>
         </div>
-      </div>
-      <div class="col mt-5">
+        <div class="col mt-5">
+        </div>
       </div>
     </div>
   </div>
