@@ -1,4 +1,5 @@
 body{
     background-image: url(../img/bgportada.png);
     background-position: bottom right;
+    background-repeat: no-repeat;
 }
