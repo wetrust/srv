@@ -49,7 +49,7 @@
           <p class="text-justify"><small>Actualmente el análisis general de los datos ecográficos se encuentran disponibles para uso abierto (<strong>Iniciar exámen ecográfico</strong>), en tanto que: el guardado de pacientes en base de datos requiere acceso previo registro del examinador y/o centro ecográfico.</small></p>
         </div>
         <div class="col">
-          <img class="ml-lg-5 img-fluid" src="img/ecografo" alt="ecógrafo" >
+          <img class="ml-lg-5 img-fluid" src="img/ecografo.png" alt="ecógrafo" >
         </div>
       </div>
       <div class="row">
