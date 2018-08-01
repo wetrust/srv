@@ -15,39 +15,26 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 </head>
 <body class="h-100 w-100">
-<div class="container h-100 w-100">
-  <div class="row">
-    <div class="col">
-      <h1>crecimientofetal.cl</h1>
-      <h2><small>Ultrasonografía obstétrica básica para profesionales</small></h2>
-      <button type="button" class="btn btn-raised btn-primary">Primary</button>
-      <button type="button" class="btn btn-raised btn-primary">Primary</button>
-      <button type="button" class="btn btn-raised btn-primary">Primary</button>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo Config::get('URL'); ?>examen/express"><i class="fa fa-user-md" aria-hidden="true"></i> <strong>Iniciar exámen ecográfico EXPRESS</strong> <span class="badge badge-secondary">Libre</span></a>
-        </li>
-      <?php if (Session::userIsLoggedIn()) { ?>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo Config::get('URL'); ?>dicom/view"> <strong>Ver imágenes ecográficas registradas en base</strong></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo Config::get('URL'); ?>examen/parto"><strong>Evaluación datos Post-Natales</strong> <span class="badge badge-secondary">En construcción</span></a>
-        </li>
-      <?php }
-       if (Session::userIsLoggedIn() == false) { ?>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo Config::get('URL'); ?>register/index"><i class="fa fa-user-plus" aria-hidden="true"></i>  <strong>Solicitud de ingreso al sistema</strong> <span class="badge badge-secondary">Restringido</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo Config::get('URL'); ?>login/index"><i class="fa fa-sign-in" aria-hidden="true"></i>  <strong>Ingresar a plataforma de datos</strong> <span class="badge badge-secondary">Restringido</span></a>
-        </li>
-      <?php } ?>
-      </ul>
+  <div class="container h-100 w-100">
+    <div class="row pt-5">
+      <div class="col mt-5">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col">
+            <h4>crecimientofetal.cl</h4>
+            <h5><small>Ultrasonografía obstétrica básica para profesionales</small></h5>
+          </div>
+        </div>
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-raised btn-primary">Primary</button>
+          <button type="button" class="btn btn-raised btn-primary">Primary</button>
+          <button type="button" class="btn btn-raised btn-primary">Primary</button>
+        </div>
+      </div>
+      <div class="col mt-5">
+      </div>
     </div>
-    <div class="col">
-    </div>
-  </div>
 	<div class="bienvenida mb-3 p-2">
     <div class="media">
       <img class="d-flex ml-3" src="img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
