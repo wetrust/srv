@@ -1,3 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Crecimiento Fetal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="//unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/portada.css"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="//unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="<?php echo Config::get('URL'); ?>"><i class="fa fa-hospital-o" aria-hidden="true"></i> Crecimiento Fetal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHome" aria-controls="navbarHome" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarHome">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item <?php if (View::checkForActiveController($filename, "index")) { echo 'active'; } ?>">
+                        <a class="nav-link" id="InicioLink" href="<?php echo Config::get('URL'); ?>">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item <?php if (View::checkForActiveController($filename, "profile")) { echo 'active'; } ?>">
+                        <a class="nav-link" href="<?php echo Config::get('URL'); ?>profile/index">Médicos</a>
+                    </li>
+                    <?php if (Session::userIsLoggedIn()) { ?>
+                        <li class="nav-item <?php if (View::checkForActiveController($filename, "dashboard")) { echo 'active'; } ?>">
+                            <a class="nav-link" href="<?php echo Config::get('URL'); ?>dashboard/index">Dashboard</a>
+                        </li>
+                        <li class="nav-item <?php if (View::checkForActiveController($filename, "note")) { echo 'active'; } ?>">
+                            <a class="nav-link" href="<?php echo Config::get('URL'); ?>note/index">My Notes</a>
+                        </li>
+                    <?php } else { ?>
+                        <li class="nav-item <?php if (View::checkForActiveController($filename, "register/index")) { echo 'active'; } ?>">
+                            <a class="nav-link" href="<?php echo Config::get('URL'); ?>register/index"><i class="fa fa-user-plus" aria-hidden="true"></i> Registrarse</a>
+                        </li>
+                    <?php } ?>
+                </ul>
+                <?php if (Session::userIsLoggedIn()) { ?>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Session::get('user_name'); ?> </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarUser">
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/index">Mi cuenta</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/changeUserRole">Cambiar el tipo de cuenta</a>
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/editAvatar">Cambiar mi imagen</a>
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/editusername">Cambiar mi nombre de usuario</a>
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/edituseremail">Cambiar mi correo electrónico</a>
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/changePassword">Cambiar contraseña</a>
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>login/logout">Salir</a>
+                                <div class="dropdown-divider"></div>
+                                <?php if (Session::get("user_account_type") == 7) : ?>
+                                    <a class="dropdown-item <?php if (View::checkForActiveController($filename, "admin")) {echo 'active';} ?>" href="<?php echo Config::get('URL'); ?>admin/">Administración</a>
+                                <?php endif; ?>
+                            </div>
+                        </li>
+                    </ul>
+                <?php } else { ?>
+                    <ul class="navbar-nav">
+                        <li class="nav-item <?php if (View::checkForActiveController($filename, "login/index")) { echo 'active'; } ?>">
+                            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index"><i class="fa fa-sign-in" aria-hidden="true"></i> Ingresar a plataforma</a>
+                        </li>
+                    </ul>
+                <?php } ?>
+            </div>
+        </div>
+    </nav>
 <div class="container">
 	<div class="bienvenida mb-3 p-2">
     <div class="media">
@@ -78,5 +152,9 @@
                 </div>
             </div>
 </div>
-<script src="<?php echo Config::get('URL'); ?>js/static/app.class.js"></script>
-<script src="<?php echo Config::get('URL'); ?>js/static/main.js"></script>
+<footer>
+        <div class="container">
+        </div>
+    </footer>
+</body>
+</html>
