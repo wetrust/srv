@@ -41,7 +41,7 @@
           <img class="d-block mx-auto img-fluid" src="img/ecografo.png" alt="ecógrafo" >
         </div>
         <div class="col">
-          <h4 class="mb-5">OBJETIVO</h4>
+          <h4 class="mt-5">OBJETIVO</h4>
           <p class="text-justify"><small>Facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</small></p>
           <ul class="list-unstyled">
             <li><i class="fas fa-check-double"></i> <small>Determinación ecográfica de la edad gestacional</small></li>
@@ -54,10 +54,10 @@
       </div>
     </div>
   </div>
-  <div class="h-100 w-100" id="objetivos">
+  <div class="h-100 w-100" id="advertencia">
     <div class="container py-5">
       <div class="row">
-        <div class="col-10">
+        <div class="col-10 align-self-center">
           Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.<br>La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen
         </div>
       </div>
