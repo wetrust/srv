@@ -24,6 +24,7 @@
           <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.<br><br>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos, Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile</small></p>
           <div class="btn-group-vertical">
             <button type="button" class="btn btn-raised btn-primary">Iniciar exámen ecográfico</button>
+            <button type="button" class="btn btn-raised btn-primary">Evaluación Postanal del crecimiento</button>
             <button type="button" class="btn btn-raised btn-default">Más información</button>
           </div>
         </div>
@@ -45,9 +46,10 @@
             <li><small>Flujometria Doppler Materno / Fetal básico</small></li>
           </ul>
           <p class="text-justify"><small>Tradicionalmente se valora crecimiento intrauterino mediante estándar (curvas o tablas) de peso propias de cada región (<strong>curva local generalizada</strong>). Sin embargo, para una población heterogénea, el parámetro ideal para valorar crecimiento intrauterino no necesariamente es una <strong>curva local generalizada</strong>, sino curva general individualizada, estándar ajustado a características materno-fetales individuales y, por tanto, trasciende límites geográficos.</small></p>
+          <p class="text-justify"><small>Actualmente el análisis general de los datos ecográficos se encuentran disponibles para uso abierto (<strong>Iniciar exámen ecográfico</strong>), en tanto que: el guardado de pacientes en base de datos requiere acceso previo registro del examinador y/o centro ecográfico.</small></p>
         </div>
         <div class="col">
-          <img class="ml-lg-5 img-fluid" src="img/calendario.png" alt="logo" >
+          <img class="ml-lg-5 img-fluid" src="img/ecografo" alt="ecógrafo" >
         </div>
       </div>
       <div class="row">
@@ -55,7 +57,7 @@
           <img class="ml-lg-5 img-fluid" src="img/calendario.png" alt="logo" >
         </div>
         <div class="col">
-          <p class="text-justify"><small>Actualmente el análisis general de los datos ecográficos se encuentran disponibles para uso abierto (Iniciar exámen ecográfico), en tanto que: el guardado de pacientes en base de datos requiere acceso previo registro del examinador y/o centro ecográfico.</small></p>
+          
           <p class="text-justify"><small>Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.</small></p>
           <p class="text-justify"><small>La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</small></p>
         </div>
