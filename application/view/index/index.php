@@ -18,15 +18,8 @@
   <div class="container h-100 w-100">
     <div class="row pt-3">
       <div class="col mt-5">
-        <div class="row">
-          <div class="col">
-            <img class="img-fluid" src="img/ic_launcher-web.png" alt="logo crecimientofetal.cl" >
-          </div>
-          <div class="col-8">
-            <h3>crecimientofetal.cl</h3>
-            <h5><small>Ultrasonografía obstétrica básica para profesionales</small></h5>
-          </div>
-        </div>
+        <h2>crecimientofetal.cl<br><small>Ultrasonografía obstétrica básica para profesionales</small></h2>
+        <p><small>Sitio web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determinación ecográfica de la edad gestacional<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valoración de biometrías y crecimiento fetal<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flujometria Doppler Materno / Fetal básico.<br>En el ámbito postnatal se valora el crecimiento intrauterino mediante relaciones; peso e Índice ponderal neonatal (Ipn) según edad gestacional al parto, se utilizan dos estándares chilenos, grafica nacional de peso neonatal y grafica regional (región de La Araucanía), la última a objeto de valorar efecto modulador del peso esperado según diversas variables materna No patológicas.</small></p>
         <div class="btn-group-vertical">
           <button type="button" class="btn btn-raised btn-primary">Primary</button>
           <button type="button" class="btn btn-raised btn-primary">Primary</button>
@@ -46,11 +39,6 @@
       <div class="media-body mt-4">
         <p class="float-right" name="fechaHora" style="color: #f0df90;">Viernes, 29 de Diciembre 2017</p>
       </div>
-    </div>
-	</div>
-	<div class="row">
-    <div class="col">
-      <p class="mt-0 mb-2 text-center"><small><em>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos,  Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile</em></small></p>
     </div>
 	</div>
 	<div class="row">
