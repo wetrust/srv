@@ -27,6 +27,7 @@
           </div>
         </div>
         <div class="col mt-5">
+          <img class="img-fluid" src="img/feto-computador.png" alt="logo" >
         </div>
       </div>
     </div>
