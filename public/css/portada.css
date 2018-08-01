@@ -7,3 +7,9 @@ body{
     background-repeat: no-repeat;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
 }
+#objetivos{
+    background-image: url(../img/circulo.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
+}
