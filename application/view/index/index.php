@@ -34,8 +34,8 @@
     </div>
   </div>
   <div class="h-100 w-100">
-    <div class="container">
-      <h4>Funciones</h4>
+    <div class="container py-5">
+      <h4 class="m-3 text-center">Funciones</h4>
       <div class="row">
         <div class="col">
           <p class="text-justify">Sitio web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.</p>
