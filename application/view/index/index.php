@@ -20,9 +20,10 @@
       <div class="col mt-5">
         <div class="row">
           <div class="col">
+            <img class="img-fluid" src="img/ic_launcher-web.png" alt="logo crecimientofetal.cl" >
           </div>
-          <div class="col">
-            <h4>crecimientofetal.cl</h4>
+          <div class="col-7">
+            <h3>crecimientofetal.cl</h3>
             <h5><small>Ultrasonografía obstétrica básica para profesionales</small></h5>
           </div>
         </div>
