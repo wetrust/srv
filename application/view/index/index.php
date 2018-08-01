@@ -57,7 +57,7 @@
   <div class="h-100 w-100" id="advertencia">
     <div class="container py-5">
       <div class="row">
-        <div class="col-10 align-self-center">
+        <div class="col">
           <p class="text-center">Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.<br>La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
         </div>
       </div>
