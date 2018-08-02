@@ -41,7 +41,7 @@
           <img class="d-block mx-auto img-fluid" src="img/ecografo.png" alt="ecógrafo" >
         </div>
         <div class="col">
-          <h4 class="mt-5">OBJETIVO</h4>
+          <h4 class="mt-5">MÓDULO EXÁMEN ECOGRÁFICO</h4>
           <p class="text-justify"><small>Facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</small></p>
           <ul class="list-unstyled">
             <li><i class="fas fa-check"></i> <small>Determinación ecográfica de la edad gestacional</small></li>
@@ -59,6 +59,24 @@
       <div class="row">
         <div class="col">
           <p class="text-center">Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.<br>La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="h-100 w-100" id="advertencia">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col">
+          <h4 class="mt-5">MÓDULO EVALUACIÓN POSNATAL DE CRECIMIENTO</h4>
+          <p class="text-justify"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional. Actualmente activadas herramientas informaticas para:</small></p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check"></i> <small>Categorizar peso del recién nacido</small></li>
+            <li><i class="fas fa-check"></i> <small>Calcular y categorizar el índice ponderal neonatal</small></li>
+            <li><i class="fas fa-check"></i> <small>Categorizar peso del recién nacido en base a variables biológicas maternas (Chile)</small></li>
+          </ul>
+        </div>
+        <div class="col mt-3">
+          <img class="d-block mx-auto img-fluid" src="img/ecografo.png" alt="ecógrafo" >
         </div>
       </div>
     </div>
