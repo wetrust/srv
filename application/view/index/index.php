@@ -76,7 +76,7 @@
           </ul>
         </div>
         <div class="col mt-3">
-          <img class="d-block mx-auto img-fluid" src="img/ecografo.png" alt="ecógrafo" >
+          <img class="d-block mx-auto img-fluid" src="img/pediatria.png" alt="ecógrafo" >
         </div>
       </div>
     </div>
