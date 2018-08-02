@@ -63,7 +63,7 @@
       </div>
     </div>
   </div>
-  <div class="h-100 w-100" id="advertencia">
+  <div class="h-100 w-100" id="postnatal">
     <div class="container py-5">
       <div class="row">
         <div class="col">
