@@ -42,6 +42,17 @@ $(document).ready(function(){
         onHashChange();
     });
 
+    $('#cccaController').on('click', function(){
+
+        if ($('#cccaView').hasClass('d-none')){
+            $('#cccaView').removeClass('d-none');
+        }
+        else{
+            $('#cccaView').addClass('d-none');
+        }
+    
+    });
+    
     $("#step\\.examen").on("click", function(){
         //establecer id (fecha actual)
         let fecha = new Date();
