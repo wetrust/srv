@@ -38,7 +38,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="col">
-          <h4 class="mt-5">MÓDULO EXÁMEN ECOGRÁFICO</h4>
+          <h4 class="mt-5">MÓDULO EVALUACIÓN EXÁMEN ECOGRÁFICO</h4>
           <p class="text-justify"><small>Facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</small></p>
           <ul class="list-unstyled">
             <li><i class="fas fa-check"></i> <small>Determinación ecográfica de la edad gestacional</small></li>
