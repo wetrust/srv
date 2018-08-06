@@ -52,7 +52,7 @@ $(document).ready(function(){
         }
     
     });
-    
+
     $("#step\\.examen").on("click", function(){
         //establecer id (fecha actual)
         let fecha = new Date();
@@ -1432,7 +1432,7 @@ $(document).ready(function(){
         
         if (isNaN(cb) || isNaN(lh)){
             $('#popupTitle').html("Información");
-            $('#popupBody').html("<p><strong>Actualmente la Edad gestacional se calculará solo por biometrías de Cráneo y Fémur (Excluido CA).<br>Para mayor exactitud es recomendable ingresar mediciones de Humero y Cerebelo.</strong><br>¿Desea ingresar biometrías de Humero y Cerebelo?</p><div class='btn-group' data-toggle='buttons'><label class='btn btn-outline-primary p-3' id='infEcoObsSegTrim2verNO' aria-pressed='true'><input type='radio' value='0' checked=''> NO</label><label class='btn btn-outline-primary p-3' id='infEcoObsSegTrim2verSi' aria-pressed='true'><input type='radio' value='1'> SI</label></div>");
+            $('#popupBody').html("<p><strong>Actualmente la Edad gestacional se calculará solo por biometrías de Cráneo y Fémur (Excluido CA).<br>Para mayor exactitud es recomendable ingresar mediciones de Humero y Cerebelo.</strong><br>¿Desea ingresar biometrías de Humero y Cerebelo?</p><div class='btn-group btn-group-toggle' data-toggle='buttons'><label class='btn btn-secondary active' id='infEcoObsSegTrim2verNO' aria-pressed='true'><input type='radio' value='0' checked=''> NO</label><label class='btn btn-secondary' id='infEcoObsSegTrim2verSi' aria-pressed='true'><input type='radio' value='1'> SI</label></div>");
             $('#impDoppler1').remove();
             $('#infecoObsSegTrim1Clon').remove();
             $('#popupGenerico').modal('show');
