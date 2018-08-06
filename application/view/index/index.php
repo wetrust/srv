@@ -38,7 +38,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="col">
-          <h4 class="mt-5">MÓDULO EVALUACIÓN EXÁMEN ECOGRÁFICO</h4>
+          <h4 class="mt-5">MÓDULO PRENATAL<br><small>Biometría ecográfica y flujometría doppler</small></h4>
           <p class="text-justify"><small>Facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</small></p>
           <ul class="list-unstyled">
             <li><i class="fas fa-check"></i> <small>Determinación ecográfica de la edad gestacional</small></li>
@@ -49,7 +49,7 @@
           <p class="text-justify"><small>Actualmente el análisis general de los datos ecográficos se encuentran disponibles para uso abierto (<strong>Iniciar exámen ecográfico</strong>), en tanto que: el guardado de pacientes en base de datos requiere acceso previo registro del examinador y/o centro ecográfico.</small></p>
         </div>
         <div class="col">
-          <h4 class="mt-5">MÓDULO EVALUACIÓN POSNATAL DE CRECIMIENTO</h4>
+          <h4 class="mt-5">MÓDULO POSNATAL<br><small>Evaluación de peso e IPN en función de edad gestacional</small></h4>
           <p class="text-justify"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada.<br><br>Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional. Actualmente activadas herramientas informaticas para:</small></p>
           <ul class="list-unstyled">
             <li><i class="fas fa-check"></i> <small>Categorizar peso del recién nacido</small></li>
