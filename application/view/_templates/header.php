@@ -28,16 +28,8 @@
                     <li class="nav-item <?php if (View::checkForActiveController($filename, "index")) { echo 'active'; } ?>">
                         <a class="nav-link" id="InicioLink" href="<?php echo Config::get('URL'); ?>">Inicio <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item <?php if (View::checkForActiveController($filename, "profile")) { echo 'active'; } ?>">
-                        <a class="nav-link" href="<?php echo Config::get('URL'); ?>profile/index">Médicos</a>
-                    </li>
                     <?php if (Session::userIsLoggedIn()) { ?>
-                        <li class="nav-item <?php if (View::checkForActiveController($filename, "dashboard")) { echo 'active'; } ?>">
-                            <a class="nav-link" href="<?php echo Config::get('URL'); ?>dashboard/index">Dashboard</a>
-                        </li>
-                        <li class="nav-item <?php if (View::checkForActiveController($filename, "note")) { echo 'active'; } ?>">
-                            <a class="nav-link" href="<?php echo Config::get('URL'); ?>note/index">My Notes</a>
-                        </li>
+
                     <?php } else { ?>
                         <li class="nav-item <?php if (View::checkForActiveController($filename, "register/index")) { echo 'active'; } ?>">
                             <a class="nav-link" href="<?php echo Config::get('URL'); ?>register/index"><i class="fa fa-user-plus" aria-hidden="true"></i> Registrarse</a>
