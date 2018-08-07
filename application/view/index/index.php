@@ -72,7 +72,7 @@
   <div class="h-100 w-100 generico" id="aplicaciones">
     <div class="container py-5">
         <h2 class="text-center"><strong>Aplicaciones para Smartphone</strong><br><small>Llevanos siempre contigo</small></h2>
-        <p>
+        <p>Las aplicaciones han sido creadas para facilitar la evaluación y control prenatal</p>
       <div class="row">
         <div class="col">
           <h4 class="mt-5">MÓDULO PRENATAL<br><small>Biometría ecográfica y flujometría Doppler</small></h4>
