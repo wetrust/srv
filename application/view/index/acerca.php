@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="//unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/portada.css"></script>
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="//unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
@@ -19,16 +20,16 @@
             <a class="navbar-brand" href="#">Crecimiento Fetal</a>
         </div>
     </nav>
-  <div class="h-100 w-100" id="main">
+  <div class="h-100 w-100 generico" id="about">
     <div class="container">
       <div class="row py-5">
         <div class="col mt-4">
           <h2><strong>Acerca de la plataforma</strong></h2>
-          <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.<br><br>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos, Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile <img src="<?php echo Config::get('URL'); ?>img/chile.jpg" alt="Chile"></small></p>
+          <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.</small></p>
         </div>
         <div class="col mt-4">
             <h2><strong>Acerca del autor</strong></h2>
-            <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.<br><br>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos, Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile <img src="<?php echo Config::get('URL'); ?>img/chile.jpg" alt="Chile"></small></p>
+            <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.</small></p>
         </div>
       </div>
     </div>
