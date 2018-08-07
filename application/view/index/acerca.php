@@ -21,18 +21,13 @@
     </nav>
   <div class="h-100 w-100" id="main">
     <div class="container">
-      <div class="row py-3">
+      <div class="row py-5">
         <div class="col mt-3">
-          <h1><strong>crecimientofetal.cl</strong></h1>
-          <h3 class="mb-3"><small>Ultrasonografía obstétrica básica para profesionales</small></h3>
+          <h1><strong>Acerca de la plataforma</strong></h1>
           <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.<br><br>Software obstétrico propiedad intelectual Dr. Rudecindo Lagos, Maternidad Hospital Regional de Temuco, Facultad de Medicina Universidad de La Frontera Temuco - Chile <img src="<?php echo Config::get('URL'); ?>img/chile.jpg" alt="Chile"></small></p>
-          <div class="btn-group-vertical">
-            <a href="<?php echo Config::get('URL'); ?>examen/express" class="btn btn-raised btn-primary">Iniciar módulo exámen ecográfico</a>
-            <a href="<?php echo Config::get('URL'); ?>examen/parto" class="btn btn-raised btn-primary">Evaluación Postanal del crecimiento</a>
-            <button type="button" class="btn btn-raised btn-default">Más información</button>
-          </div>
         </div>
         <div class="col-7 mt-3">
+            <h2><strong>Acerca del autor</strong></h2>
           <img class="d-block mx-auto img-fluid" src="img/feto-computador.png" alt="logo" >
         </div>
       </div>
