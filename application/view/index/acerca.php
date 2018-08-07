@@ -25,7 +25,10 @@
       <div class="row py-5">
         <div class="col mt-4">
           <h2><strong>Acerca de la plataforma</strong></h2>
-          <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.</small></p>
+            <p class="text-justify"><small>Plataforma web desarrollada para realizar un seguimiento del embarazo materno y evaluación del peso e Ipn del recién nacido. La plataforma no busca ser un protocolo, pero señala las variables importantes a medir dentro del primer, segundo y tercer trimestre de embarazo. Adicionalmente se incluye la flujometría Doppler para evaluar el flujo sanguíneo que abastece al feto. Al nacer, la evaluación postnatal del crecimiento permite evaluar el peso e Ipn del rn determinando su condición según curvas de crecimiento.</small></p>
+            <p class="text-justify"><small>Módulo de examen ecográfico: evaluación de la biometría y Doppler, gráficos de medidas en función de la edad gestaciona, informes automatizados.</small></p>
+            <p class="text-justify"><small>Módulo evaluación postnatal del crecimiento: datos del parto y rn, evaluación de peso e Ipn, ajuste al Peso neonatal (ajuste del peso neonatal en base a variables biológicas, curva exclusiva desarrollada por el Dr. Lagos y colaboradores)</small></p>
+            <p class="text-justify"><small>La plataforma esta orientada especialmente a quienes se inician en el campo de la Medicina Perinatal.</small></p>
         </div>
         <div class="col mt-4">
             <h2><strong>Acerca del autor</strong></h2>
