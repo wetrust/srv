@@ -29,7 +29,14 @@
         </div>
         <div class="col mt-4">
             <h2><strong>Acerca del autor</strong></h2>
-            <p class="text-justify"><small>Plataforma web diseñado para profesionales de la salud (médicos) vinculados con la vigilancia del control prenatal.<br>El objetivo de esta aplicación es facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. En el ámbito postnatal se valora el crecimiento intrauterino.</small></p>
+            <div class="row">
+                <div class="col-4">
+                    <img class="d-block mx-auto img-fluid" src="img/Dr_Lagos_copia.jpg" alt="logo" >
+                </div>
+                <div class="col">
+                    <p>Dr. Rudecindo Lagos Sandoval</p>
+                    <p class="text-justify">Médico cirujano, especialista en Ginecología y Obstetricia. Docente de pre y postgrado, profesor adscrito al Departamento de Obstetricia y Ginecología de la Facultad de Medicina, Universidad de La Frontera, y al Centro de Excelencia CIGES.  Encargado de la Unidad de Ultrasonografía, Hospital Hernán Hernríquez Aravena de Temuco.<br>Línea de interés, valoración del crecimiento fetal, evaluación clínica, ultrasonográfica y flujometría Doopler materno fetal.</p>
+                </div>
         </div>
       </div>
     </div>
