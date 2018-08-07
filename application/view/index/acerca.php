@@ -34,8 +34,8 @@
                     <img class="d-block mx-auto img-fluid" src="img/Dr_Lagos_copia.jpg" alt="logo" >
                 </div>
                 <div class="col">
-                    <p>Dr. Rudecindo Lagos Sandoval</p>
-                    <p class="text-justify">Médico cirujano, especialista en Ginecología y Obstetricia. Docente de pre y postgrado, profesor adscrito al Departamento de Obstetricia y Ginecología de la Facultad de Medicina, Universidad de La Frontera, y al Centro de Excelencia CIGES.  Encargado de la Unidad de Ultrasonografía, Hospital Hernán Hernríquez Aravena de Temuco.<br>Línea de interés, valoración del crecimiento fetal, evaluación clínica, ultrasonográfica y flujometría Doopler materno fetal.</p>
+                    <p><small>Dr. Rudecindo Lagos Sandoval</small></p>
+                    <p class="text-justify"><small>Médico cirujano, especialista en Ginecología y Obstetricia. Docente de pre y postgrado, profesor adscrito al Departamento de Obstetricia y Ginecología de la Facultad de Medicina, Universidad de La Frontera, y al Centro de Excelencia CIGES.  Encargado de la Unidad de Ultrasonografía, Hospital Hernán Hernríquez Aravena de Temuco.<br><br>Línea de interés, valoración del crecimiento fetal, evaluación clínica, ultrasonográfica y flujometría Doopler materno fetal.</small></p>
                 </div>
             </div>
         </div>
