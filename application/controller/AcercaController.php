@@ -10,6 +10,6 @@ class AcercaController extends Controller
 
     public function index()
     {
-        $this->View->render('index/acerca');
+        $this->View->renderWithoutHeaderAndFooter('index/acerca');
     }
 }
