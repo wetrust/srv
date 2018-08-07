@@ -14,6 +14,11 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 </head>
 <body class="h-100 w-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Crecimiento Fetal</a>
+        </div>
+    </nav>
   <div class="h-100 w-100" id="main">
     <div class="container">
       <div class="row py-3">
