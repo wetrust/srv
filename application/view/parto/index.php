@@ -1426,11 +1426,7 @@
                 $(window).on('hashchange', function(){
                     let hash = document.location.hash;
 
-                    if (hash=="#postnatal"){
-                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
-			            displayElement("postnatal");
-                    }
-                    else if (hash=="#recienacido"){
+                    if (hash=="#recienacido"){
                         $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("recienacido");
                     }
@@ -1450,7 +1446,7 @@
             });
 
             function displayElement(div_id){
-                $('#postnatal').hide();
+                $('#neonatal').hide();
                 $('#ajustepeso').hide();
                 $('#pdfviebox').hide();
                 $('#recienacido').hide();
