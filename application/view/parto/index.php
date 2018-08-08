@@ -485,7 +485,6 @@
         </div>
         <div class="container" id="postnatal" style="display:none;">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item active">Proyecto a desarrollar, curvas customizadas</li>
