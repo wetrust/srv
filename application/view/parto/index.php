@@ -1434,6 +1434,10 @@
                         $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("pdfviebox");
                     }
+                    else if (hash=="#neonatal"){
+                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
+                        displayElement("neonatal"); 
+                    }
                 });
 
                 $("#pdfnacionalview").on("click", function(){
