@@ -3,7 +3,6 @@
         </section>
         <div class="container" id="neonatal">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item active">Datos Neonatales</li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
@@ -395,7 +394,6 @@
         </div>
         <div class="container" id="recienacido" style="display:none;">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
                 <li class="breadcrumb-item active">Evaluación Peso e IPN</li>
                 <li class="ml-auto"><a href="#neonatal">Volver</a></li>
