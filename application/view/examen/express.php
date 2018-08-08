@@ -772,7 +772,7 @@
                             <div class="card mb-3" id="ecografia.exportar">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
-                                    <h6 class="card-title float-left">Exportar pacientes</h6><a href="#" class="card-link float-right">Ver Imágenes</a>
+                                    <h6 class="card-title float-left">Exportar pacientes</h6><a href="#" class="card-link float-right">crear archivo</a>
                                     </div>
                                 </div>
                             </div>
