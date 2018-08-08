@@ -58,7 +58,10 @@
       </div>
       <div class="row">
         <div class="col">
-          <p class="text-center"><i class="fas fa-check"></i> Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.<br><i class="fas fa-check"></i> La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check"></i> Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.</li>
+            <li><i class="fas fa-check"></i> La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</li>
+          </ul>
         </div>
       </div>
     </div>
