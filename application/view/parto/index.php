@@ -1285,9 +1285,7 @@
                 $("#graficoEstandar").trigger("click");
             });
             
-            var RN = 0;  
-
-        });
+            var RN = 0;
 
             function RecienNacido(peso = 0, talla = 0,eg = 40) {
                 this.peso = peso;
