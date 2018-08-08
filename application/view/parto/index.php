@@ -398,7 +398,7 @@
                 <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
                 <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
                 <li class="breadcrumb-item active">Evaluación Peso e IPN</li>
-                <li class="ml-auto"><a href="#postnatal">Volver</a></li>
+                <li class="ml-auto"><a href="#neonatal">Volver</a></li>
             </ol>
             <div class="row mt-2">
                 <div class="col-5">
