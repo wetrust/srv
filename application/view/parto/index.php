@@ -1285,11 +1285,7 @@
                 $("#graficoEstandar").trigger("click");
             });
             
-            var RN = 0;
-            var Tablas = 0;
-            var varMama = 0;
-            var p90Pso = [];
-            var p10Pso = [];       
+            var RN = 0;  
 
         });
 
