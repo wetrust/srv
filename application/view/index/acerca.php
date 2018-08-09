@@ -62,6 +62,7 @@
                 <div class="col">
                     <p><strong>Dr. Rudecindo Lagos Sandoval</strong></p>
                     <p class="text-justify"><small>Médico cirujano, especialista en Ginecología y Obstetricia. Docente de pre y postgrado, profesor adscrito al Departamento de Obstetricia y Ginecología de la Facultad de Medicina, Universidad de La Frontera, y al Centro de Excelencia CIGES.  Encargado de la Unidad de Ultrasonografía, Hospital Hernán Hernríquez Aravena de Temuco.<br><br>Línea de interés, valoración del crecimiento fetal, evaluación clínica, ultrasonográfica y flujometría Doopler materno fetal.</small></p>
+                    <a href="https://www.ciges.cl/index.php/quienes-somos/personal/academico/17-ciges-personas/ciges-academicos/47-dr-rudecindo-lagos-sandoval">Ver más</a>
                 </div>
             </div>
         </div>
