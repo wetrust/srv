@@ -22,7 +22,7 @@
     </nav>
   <div class="h-100 w-100 generico" id="about">
     <div class="container">
-      <div class="row py-5">
+      <div class="row pt-5">
         <div class="col mt-4">
           <h2><strong>Acerca de la plataforma</strong></h2>
           <p class="text-justify"><small>Plataforma web desarrollada para evaluación protocolizada del crecimiento intrauterino.<br>Para lo cual se hace énfasis en tres puntos a saber:</small></p>
@@ -59,7 +59,7 @@
     </div>
   </div>
   <div class="h-100 w-100" id="advertencia">
-    <div class="container py-5">
+    <div class="container py-3">
       <div class="row">
         <div class="col">
           <p class="text-center">Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.<br>La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
