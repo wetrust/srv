@@ -18,6 +18,16 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand" href="<?php echo Config::get('URL'); ?>">Crecimiento Fetal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="mostrar navegación">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo Config::get('URL'); ?>">Volver</a>
+                </li>
+              </ul>
+            </div>
         </div>
     </nav>
   <div class="h-100 w-100 generico" id="about">
