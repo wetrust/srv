@@ -47,7 +47,7 @@
             <li><small>Valoración del índice ponderal neonatal (Ipn).</small></li>
             <li><small>Valoración del peso en función de edad al parto.</small></li>
           </ul>
-          <p class="text-justify mb-0"><small><strong>Proyecto a realizar en recién nacidos (RN):</strong></small></p>
+          <p class="text-justify mb-0"><small><strong>Proyecto a realizar en recién nacidos:</strong></small></p>
           <ul>
             <li><small>Curvas de peso customizadas, valorar efecto modulador de variables biológicas materno/fetales en la categorización del peso al nacer.</small></li>
             <li><small>Validación clínica modelo customizado.</small></li>
@@ -61,7 +61,11 @@
                 </div>
                 <div class="col">
                     <p><strong>Dr. Rudecindo Lagos Sandoval</strong></p>
-                    <p class="text-justify"><small>Médico cirujano, especialista en Ginecología y Obstetricia. Docente de pre y postgrado, profesor adscrito al Departamento de Obstetricia y Ginecología de la Facultad de Medicina, Universidad de La Frontera, y al Centro de Excelencia CIGES.  Encargado de la Unidad de Ultrasonografía, Hospital Hernán Hernríquez Aravena de la ciudad de Temuco.<br><br>Línea de interés, valoración del crecimiento intrauterino mediante exámen ultrasonográfico, flujometría Doppler y valoración clinica del recién nacido, evaluación clínica, ultrasonográfica y flujometría Doopler materno fetal.</small></p>
+                    <p class="text-justify mb-0"><small>Médico cirujano, especialista en Ginecología y Obstetricia. Docente de pre y postgrado, profesor adscrito al Departamento de Obstetricia y Ginecología de la Facultad de Medicina, Universidad de La Frontera, y al Centro de Excelencia CIGES.  Encargado de la Unidad de Ultrasonografía, Hospital Hernán Hernríquez Aravena de la ciudad de Temuco, región de La Arauncanía.<br><br>Línea de interés:</small></p>
+                    <ul>
+                      <li>Valoración del crecimiento intrauterino mediante exámen ultrasonográfico y flujometría Doppler</li>
+                      <li>valoración clinica del recién nacido</li>
+                    </ul>
                     <a href="https://www.ciges.cl/index.php/quienes-somos/personal/academico/17-ciges-personas/ciges-academicos/47-dr-rudecindo-lagos-sandoval">Ver más sobre el CIGES</a>
                 </div>
             </div>
