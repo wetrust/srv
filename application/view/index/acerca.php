@@ -36,18 +36,18 @@
         <div class="col mt-4">
           <h2><strong>Acerca de la plataforma</strong></h2>
           <p class="text-justify"><small>Plataforma web desarrollada para evaluación protocolizada del crecimiento intrauterino.</small></p>
-          <p class="text-justify"><small><strong>Módulo para evaluación prenatal, examen ultrasonográfico:</strong></small></p>
+          <p class="text-justify mb-0"><small><strong>Módulo para evaluación prenatal, examen ultrasonográfico:</strong></small></p>
           <ul>
             <li><small>Determinación oportuna de edad gestacional.</small></li>
             <li><small>Valoración ecográfica del crecimiento fetal.</small></li>
             <li><small>Evaluación de flujometria Doppler materno/fetal.</small></li>
           </ul>
-          <p class="text-justify"><small><strong>Módulo evaluación clínica postnatal del crecimiento:</strong><br>Crecimiento en función de la edad gestacional al parto:</small></p>
+          <p class="text-justify mb-0"><small><strong>Módulo evaluación clínica postnatal del crecimiento:</strong><br>Crecimiento en función de la edad gestacional al parto:</small></p>
           <ul>
             <li><small>Valoración del índice ponderal neonatal (Ipn).</small></li>
             <li><small>Valoración del peso en función de edad al parto.</small></li>
           </ul>
-          <p class="text-justify"><small><strong>Proyecto a realizar en recién nacidos (RN):</strong></small></p>
+          <p class="text-justify mb-0"><small><strong>Proyecto a realizar en recién nacidos (RN):</strong></small></p>
           <ul>
             <li><small>Curvas de peso customizadas, valorar efecto modulador de variables biológicas materno/fetales en la categorización del peso al nacer.</small></li>
             <li><small>Validación clínica modelo customizado.</small></li>
