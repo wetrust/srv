@@ -26,21 +26,21 @@
         <div class="col mt-4">
           <h2><strong>Acerca de la plataforma</strong></h2>
           <p class="text-justify"><small>Plataforma web desarrollada para evaluación protocolizada del crecimiento intrauterino.<br>Para lo cual se hace énfasis en tres puntos a saber:</small></p>
-          <p class="text-justify"><small>Módulo de examen ecográfico:</small></p>
+          <p class="text-justify">Módulo de examen ecográfico:</p>
           <ul>
-            <li>Determinación oportuna de edad gestacional.</li>
-            <li>Valoración ecográfica del crecimiento fetal.</li>
-            <li>Evaluación de flujometria Doppler materno/fetal.</li>
+            <li><small>Determinación oportuna de edad gestacional.</small></li>
+            <li><small>Valoración ecográfica del crecimiento fetal.</small></li>
+            <li><small>Evaluación de flujometria Doppler materno/fetal.</small></li>
           </ul>
-          <p class="text-justify"><small>Módulo evaluación postnatal del crecimiento:<br>Valoración del crecimiento en función de la edad gestacional al parto:</small></p>
+          <p class="text-justify">Módulo evaluación postnatal del crecimiento:<br><small>Valoración del crecimiento en función de la edad gestacional al parto:</small></p>
           <ul>
-            <li>Valoración del índice ponderal neonatal (Ipn)</li>
-            <li>Valoración del peso en función de edad al parto</li>
+            <li><small>Valoración del índice ponderal neonatal (Ipn)</small></li>
+            <li><small>Valoración del peso en función de edad al parto</small></li>
           </ul>
-          <p class="text-justify"><small>Proyecto a realizar en el recién nacido (RN):</small></p>
+          <p class="text-justify">Proyecto a realizar en el recién nacido (RN):</p>
           <ul>
-            <li>Valoración del peso al parto según edad y efecto modulador de variables biológicas materno/fetales</li>
-            <li>Valoración clínica del crecimiento según categorización customizada</li>
+            <li><small>Valoración del peso al parto según edad y efecto modulador de variables biológicas materno/fetales</small></li>
+            <li><small>Valoración clínica del crecimiento según categorización customizada</small></li>
           </ul>
         </div>
         <div class="col mt-4">
