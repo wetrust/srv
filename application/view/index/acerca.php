@@ -47,7 +47,7 @@
             <li><small>Valoración del índice ponderal neonatal (Ipn)</small></li>
             <li><small>Valoración del peso en función de edad al parto</small></li>
           </ul>
-          <p class="text-justify"><small><strong>Proyecto a realizar en el recién nacido (RN):</small></p>
+          <p class="text-justify"><small><strong>Proyecto a realizar en el recién nacido (RN):</strong></small></p>
           <ul>
             <li><small>Valoración del peso al parto según edad y efecto modulador de variables biológicas materno/fetales</small></li>
             <li><small>Valoración clínica del crecimiento según categorización customizada</small></li>
