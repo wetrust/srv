@@ -27,7 +27,7 @@
                                     <input class="form-control" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
                                 </div>
                                 <div class="col-2">
-                                    <button type="button" class="btn btn-info">Buscar</button>
+                                    <button type="button" id="buscar.parto.madre.button" class="btn btn-info">Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -660,6 +660,56 @@
                             });
                             break;
                     }
+                });
+
+                $("#buscar\\.parto\\.madre\\.button").on("click", function(){
+                    let data = {
+                        id: $("#buscar\\.parto\\.madre").val(),
+                        tipo: 4
+                    }
+                    $.post(serverURL + "examen/gets", data).done(function (response) {
+                        if (response !== null){
+                            if ( Object.keys(response).length > 0 ){
+                                $.each(response.data, function(i,val){
+                                    $("#id_paciente").val(val.id_paciente);
+                                    $("#nombre_madre").val(val.nombre_madre);
+                                    $("#apellido_madre").val(val.apellido_madre);
+                                    $("#lugar_parto_rn").val(val.lugar_parto_rn);
+                                    $("#id_rn").val(val.id_rn);
+                                    $("#nombre_rn").val(val.nombre_rn);
+                                    $("#apellido_rn").val(val.apellido_rn);
+                                    $("#sexo_rn").val(val.sexo_rn);
+                                    $("#fecha_parto_rn").val(val.fecha_parto_rn);
+                                    $("#datos\\.neonatal\\.edad").val(val.eg_parto).trigger("focusout");
+                                    $("#termino_parto").val(val.termino_parto);
+                                    $("#tipo_parto").val(val.tipo_parto);
+                                    $("#tipo_patologia_obstetrica").val(val.tipo_patologia_obstetrica);
+                                    $("#meconio").val(val.meconio);
+                                    $("#datos\\.neonatal\\.peso").val(val.peso_rn).trigger("change");
+                                    $("#datos\\.neonatal\\.talla").val(val.talla_rn).trigger("change");
+                                    $("#perimetro_craneo_rn").val(val.perimetro_craneo_rn);
+                                    $("#datos\\.neonatal\\.ipn").val(val.ipn_rn);
+                                    $("#peso_placentario").val(val.peso_placentario);
+                                    $("#apgar_1").val(val.apgar_1);
+                                    $("#apgar_5").val(val.apgar_5);
+                                    $("#hiperbilirrubinemia").val(val.hiperbilirrubinemia);
+                                    $("#poliglobulia").val(val.poliglobulia);
+                                    $("#hospital_ucin").val(val.hospital_ucin);
+                                    $("#sindrome_respiratorio").val(val.sindrome_respiratorio);
+                                    $("#alta_con_madre").val(val.alta_con_madre);
+                                    $("#observaciones").val(val.observaciones);
+                                    $("#conducta\\.uno").val(val.conducta_uno);
+                                    $("#conducta\\.dos").val(val.conducta_dos);
+                                    $("#conducta\\.tres").val(val.conducta_tres);
+                                    $("#prof\\.alta\\.rn").val(val.prof_alta_rn);
+                                    $("#prof\\.atencion\\.parto").val(val.prof_atencion_parto)
+                                });
+                            }
+                        }
+                        else{
+                            alert("No hay pacientes con el id escrito");
+                        }
+                    });
                 });
 
                 $.get( serverURL + "configuracion/profesionalparto/0", function( data ) {
