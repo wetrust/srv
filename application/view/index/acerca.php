@@ -33,7 +33,7 @@
   <div class="h-100 w-100 generico" id="about">
     <div class="container">
       <div class="row pt-5">
-        <div class="col mt-4">
+        <div class="col my-4">
           <h2><strong>Acerca de la plataforma</strong></h2>
           <p class="text-justify"><small>Plataforma web desarrollada para evaluación protocolizada del crecimiento intrauterino.</small></p>
           <p class="text-justify mb-0"><small><strong>Módulo para evaluación prenatal, examen ultrasonográfico:</strong></small></p>
@@ -53,7 +53,7 @@
             <li><small>Validación clínica modelo customizado.</small></li>
           </ul>
         </div>
-        <div class="col mt-4">
+        <div class="col my-4">
             <h2><strong>Acerca del autor</strong></h2>
             <div class="row">
                 <div class="col-4">
@@ -88,10 +88,10 @@
       <h2 class="text-center"><small>Además puede descargar aplicaciones para Smartphone, creadas para facilitar la evaluación clínico/ecográfica del control prenatal</small></h2>
       <div class="row">
         <div class="col">
-          <h4 class="mt-5">MÓDULO PRENATAL (ecográfico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.calculadorecografico">ver</a><br><small>Biometría ecográfica y flujometría Doppler</small></h4>
+          <h5 class="mt-5">MÓDULO PRENATAL (ecográfico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.calculadorecografico">ver</a><br><small>Biometría ecográfica y flujometría Doppler</small></h5>
         </div>
         <div class="col">
-          <h4 class="mt-5">MÓDULO POSTNATAL (Clínico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.ajustepesorn">ver</a><br><small>Evaluación de peso e Ipn en función de edad gestacional</small></h4>
+          <h5 class="mt-5">MÓDULO POSTNATAL (Clínico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.ajustepesorn">ver</a><br><small>Evaluación de peso e Ipn en función de edad gestacional</small></h5>
         </div>
       </div>
     </div>
