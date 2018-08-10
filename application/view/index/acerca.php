@@ -84,7 +84,7 @@
     </div>
   </div>
   <div class="h-100 w-100 generico" id="aplicaciones">
-    <div class="container py-5">
+    <div class="container py-3">
       <h2 class="text-center"><small>Además puede descargar aplicaciones para Smartphone, creadas para facilitar la evaluación clínico/ecográfica del control prenatal</small></h2>
       <div class="row">
         <div class="col">
