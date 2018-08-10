@@ -58,7 +58,7 @@
       </div>
     </div>
   </div>
-  <div class="h-100 w-100 bg-success">
+  <div class="h-100 w-100 bg-success generico">
     <div class="container">
       <div class="row">
         <div class="col p-2">
