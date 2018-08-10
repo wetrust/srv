@@ -9,9 +9,8 @@
                         <h1 class="text-center">Busque un paciente</h1>
                         <h3 class="card-title text-primary">Buscar un Paciente</h3>
                         <div class="text-center">
-                            <button type="button" class="btn btn-outline-primary" id="step.examen"><i class="fas fa-male fa-5x my-2"></i><br>Exámen paciente virtual</button>
-                            <button type="button" class="btn btn-outline-primary" id="step.new"><i class="fas fa-user-circle fa-5x my-2"></i><br>Crear nuevo Paciente</button>
-                            <button type="button" class="btn btn-outline-primary" id="step.search"><i class="fas fa-address-book fa-5x my-2"></i><br>Ver ultimos exámenes</button>
+                            <button type="button" class="btn btn-outline-primary" id="step.examen"><i class="fas fa-male my-2"></i> Exámen paciente virtual</button>
+                            <button type="button" class="btn btn-outline-primary" id="step.new"><i class="fas fa-user-circle my-2"></i> Crear nuevo Paciente</button>
                         </div>
                         <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
                         <div class="form-group row mb-0 mx-sm-3">
