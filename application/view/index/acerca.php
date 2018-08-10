@@ -73,11 +73,12 @@
       </div>
     </div>
   </div>
-  <div class="h-100 w-100" id="advertencia">
-    <div class="container py-3">
+  <div class="h-100 w-100 bg-success generico">
+    <div class="container">
       <div class="row">
-        <div class="col">
-          <p class="text-center">Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.<br>La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
+        <div class="col pt-3">
+          <p class="text-center text-white">Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.</p>
+          <p class="text-center text-white">La interpretación de los datos extraídos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
         </div>
       </div>
     </div>
