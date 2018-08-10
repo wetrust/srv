@@ -135,11 +135,6 @@ $(document).ready(function(){
         });
     });
 
-    //pacientes paso 1
-    $("#boton\\.volver\\.step\\.one").on("click", function(){
-        window.location.href = serverURL;
-    });
-
     $("#step\\.search").on("click", function(){
         $("#step-one").addClass("d-none");
         $("#step-two-find").removeClass("d-none");
@@ -175,12 +170,6 @@ $(document).ready(function(){
         $("#input\\.paciente\\.fum").val((day)+"/"+(month)+"/"+fecha.getFullYear());
         $('#input\\.paciente\\.fum').datepicker('setValue', (day)+"/"+(month)+"/"+fecha.getFullYear());
 		$("#input\\.paciente\\.fum").trigger("change");
-    });
-
-    //pacientes paso 2
-    $("#boton\\.volver\\.step\\.two\\.find").on("click", function(){
-        $("#step-one").removeClass("d-none");
-        $("#step-two-find").addClass("d-none");
     });
 
     $("#buscar\\.paciente\\.action").on("click", function(){
