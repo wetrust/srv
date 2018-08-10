@@ -57,7 +57,9 @@
         </div>
       </div>
     </div>
-    <div class="container bg-success">
+  </div>
+  <div class="h-100 w-100 bg-success">
+    <div class="container">
       <div class="row">
         <div class="col p-2">
           <p class="text-center text-white">Los cálculos y resultados de los contenidos en esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.</p>
