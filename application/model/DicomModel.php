@@ -207,7 +207,7 @@ class DicomModel
                 // No connection, reached limit connections etc. so no point to keep it running
                 exit;
             }
-            $sql = "SELECT ObjectFile FROM DICOMImages where ImageDate = :ImageDate and ImagePat = :ImagePat";
+            $sql = "SELECT ObjectFile, NumberOfFr FROM DICOMImages where ImageDate = :ImageDate and ImagePat = :ImagePat";
             $query = $database->prepare($sql);
             $query->execute(array(':ImagePat' => $rut, ':ImageDate' => $StudyDate));
 
@@ -223,18 +223,29 @@ class DicomModel
                 else{
                     $result->empty = false;
                     $archivosJPG = array();
+                    $archivosJPG = array();
 
                     foreach($imagenes as $imagen){
                         $strArchivoJPG = Config::get('DICOM_DIRECTORY') . substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg";
+                        $JPGData = array();
+
+                        if ($imagen->NumberOfFr > 0){
+                            array_push($JPGData, true);
+                        }
+                        else{
+                            array_push($JPGData, false);  
+                        }
 
                         if(file_exists($strArchivoJPG)){
-                            array_push($archivosJPG, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
+                            array_push($JPGData, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
                         }
                         else{
                             $strCommand =  "/usr/bin/dcmj2pnm +fo +oj " . Config::get('DICOM_DIRECTORY') . $imagen->ObjectFile .  " " . $strArchivoJPG;
                             $out = exec($strCommand);
-                            array_push($archivosJPG, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
+                            array_push($JPGData, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
                         }
+
+                        array_push($archivosJPG,$JPGData);
 
                     }
 
