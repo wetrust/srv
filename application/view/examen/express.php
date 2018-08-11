@@ -9,7 +9,7 @@
                         <h1 class="text-center">¿Qué desea realizar?</h1>
                         <div class="row">
                             <div class="col">
-                                <h3 class="card-title text-primary">Ecámen con paciente virtual?</h3>
+                                <h3 class="card-title text-primary">Exámen con paciente virtual?</h3>
                             </div>
                             <div class="col">
                                 <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.examen"><i class="fas fa-male"></i> Ir</button>
