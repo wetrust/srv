@@ -84,15 +84,11 @@
   </div>
   <div class="h-100 w-100 generico" id="aplicaciones">
     <div class="container py-3">
-      <p class="text-center">Además, es factible descargar aplicaciones para Smartphone, herramientas creadas a objeto de facilitar evaluación clínica/ecográfica en control prenatal habitual.</p>
+      <p class="text-center">Además, es factible descargar dos aplicaciones para Smartphone</p>
       <div class="row">
         <div class="col">
           <ul>
             <li class="mt-3">MÓDULO PRENATAL (ecográfico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.calculadorecografico">ver</a><br><small>Biometría ecográfica y flujometría Doppler</small></li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
             <li class="mt-3">MÓDULO POSTNATAL (Clínico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.ajustepesorn">ver</a><br><small>Evaluación de peso e Ipn en función de edad gestacional</small></li>
           </ul>
         </div>
