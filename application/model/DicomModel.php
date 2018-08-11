@@ -171,11 +171,12 @@ class DicomModel
             closedir($handle);
           }
 
+          $framerate = 24
           if ($x < 10) {
             $framerate = 10;
           }
 
-          $vid_cmd = "ffmpeg -r $framerate -b 5000k -i %03d.jpg -vcodec libx264 \"$vid_file\"";
+          $vid_cmd = "ffmpeg -r $framerate -b 5000k -i %03d.jpg -vcodec libx264 \"$videoFile\"";
           $out = Execute($vid_cmd);
 
     }
