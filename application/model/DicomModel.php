@@ -146,6 +146,7 @@ class DicomModel
            // }
       //  }
         $x = 0;
+        $want = 7;
     
         if ($handle = opendir($folder . "/tmp")) {
             while (false !== ($file = readdir($handle))) {
