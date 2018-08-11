@@ -171,7 +171,7 @@ class DicomModel
             closedir($handle);
           }
 
-          $framerate = 24
+          $framerate = 24;
           if ($x < 10) {
             $framerate = 10;
           }
