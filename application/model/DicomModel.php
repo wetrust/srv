@@ -177,7 +177,7 @@ class DicomModel
           }
 
           $vid_cmd = "ffmpeg -r $framerate -b 5000k -i %03d.jpg -vcodec libx264 \"$videoFile\"";
-          $out = Execute($vid_cmd);
+          $out = exec($vid_cmd);
 
     }
 
