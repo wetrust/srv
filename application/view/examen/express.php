@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <div id="step-two-find">
                         <h6 class="text-center text-secondary">Paso 1</h6>
-                        <h1 class="text-center">¿Qué desea realizar?</h1>
+                        <h1 class="text-center mb-4">¿Qué desea realizar?</h1>
                         <div class="row">
                             <div class="col">
                                 <h3 class="card-title text-primary">Exámen con paciente virtual?</h3>
