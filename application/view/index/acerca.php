@@ -77,14 +77,14 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos mediante esta aplicación web deben ser confirmados antes de ser usados clínicamente.<br>Los resultados obtenidos, no sustituyen el buen juicio clínico. La interpretación de los datos es responsabilidad exclusiva de quien realiza y certifica el examen</p>
+          <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos mediante esta aplicación web deben ser confirmados antes de ser usados clínicamente.<br>Los resultados obtenidos, no sustituyen el buen juicio clínico. La interpretación de los datos es responsabilidad exclusiva de quien realiza y certifica el examen ultrasonográfico.</p>
         </div>
       </div>
     </div>
   </div>
   <div class="h-100 w-100 generico" id="aplicaciones">
     <div class="container py-3">
-      <h4 class="text-center"><small>Además, puede descargar aplicaciones para Smartphone, creadas para facilitar la evaluación clínica/ecográfica del control prenatal</small></h4>
+      <h4 class="text-center"><small>Además, es factible descargar aplicaciones para Smartphone, herramientas creadas a objeto de facilitar evaluación clínica/ecográfica en control prenatal habitual</small></h4>
       <div class="row">
         <div class="col">
           <h5 class="mt-5">MÓDULO PRENATAL (ecográfico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.calculadorecografico">ver</a><br><small>Biometría ecográfica y flujometría Doppler</small></h5>

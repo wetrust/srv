@@ -62,7 +62,7 @@
     <div class="container">
       <div class="row">
         <div class="col pt-3">
-        <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos mediante esta aplicación web deben ser confirmados antes de ser usados clínicamente.<br>Los resultados obtenidos, no sustituyen el buen juicio clínico. La interpretación de los datos es responsabilidad exclusiva de quien realiza y certifica el examen</p>
+        <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos mediante esta aplicación web deben ser confirmados antes de ser usados clínicamente.<br>Los resultados obtenidos, no sustituyen el buen juicio clínico. La interpretación de los datos es responsabilidad exclusiva de quien realiza y certifica el examen ultrasonográfico.</p>
         </div>
       </div>
     </div>
