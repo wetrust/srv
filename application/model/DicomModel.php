@@ -164,6 +164,7 @@ class DicomModel
                 if ($l < 7){
                     $new_name = "0$new_name"; 
                 }
+                $new_name = "img$new_name"; 
                 if ($file != $new_name) {
                     rename($file, $new_name);
                 }
