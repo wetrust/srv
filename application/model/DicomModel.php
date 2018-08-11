@@ -157,6 +157,7 @@ class DicomModel
                 }
                 $new_name = str_replace('frame.', '', $file);
                 $l = strlen($new_name);
+                echo $l . " ";
                 if ($l < 6){
                     $new_name = "0$new_name"; 
                 }
