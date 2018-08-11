@@ -84,7 +84,7 @@
   </div>
   <div class="h-100 w-100 generico" id="aplicaciones">
     <div class="container py-3">
-      <h4 class="text-center"><small>Además, es factible descargar aplicaciones para Smartphone, herramientas creadas a objeto de facilitar evaluación clínica/ecográfica en control prenatal habitual</small></h4>
+      <h4 class="text-center"><small>Además, es factible descargar aplicaciones para Smartphone, herramientas creadas a objeto de facilitar evaluación clínica/ecográfica en control prenatal habitual.</small></h4>
       <div class="row">
         <div class="col">
           <h5 class="mt-5">MÓDULO PRENATAL (ecográfico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.calculadorecografico">ver</a><br><small>Biometría ecográfica y flujometría Doppler</small></h5>
