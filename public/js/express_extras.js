@@ -1098,7 +1098,7 @@ function getDCM(RUTPACIENTE, FechaExm){
                     $.each(data.JPGFiles, function(i, item) {
                         var tmpStr = "<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item[1] + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label>";
                         if (item[0] == true){
-                            tmpStr+= '<i class="fas fa-video"></i>';
+                            tmpStr+= ' <i class="fas fa-video float-right mr-1 text-danger"></i>';
                         }
                         tmpStr+= "</div></div>";
                         $("#fotosDicom").append(tmpStr);
