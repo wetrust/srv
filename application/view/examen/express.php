@@ -23,7 +23,7 @@
                                 <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.new"><i class="fas fa-user-circle my-2"></i> Ir</button>
                             </div>
                         </div>  
-                        <h3 class="card-title text-primary">Buscar un paciente ya existente</h3>
+                        <h3 class="card-title text-primary">Buscar paciente ya existente</h3>
                         <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
                         <div class="form-group row mb-0 mx-sm-3">
                             <div class="col-12 col-sm-6">
