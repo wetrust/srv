@@ -77,7 +77,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos con esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico.<br>La interpretación de los datos obtenidos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
+          <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos con esta aplicación web deben ser confirmados antes de ser usados clínicamente, los resultados obtenidos mediante ella, no sustituyen el buen juicio clínico. La interpretación de los datos obtenidos mediante esta herramienta informática es responsabilidad exclusiva de quien realiza y certifica el examen</p>
         </div>
       </div>
     </div>
