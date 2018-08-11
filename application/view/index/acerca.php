@@ -77,7 +77,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-        <p class="text-center text-white pb-0 mb-0">Objetivo de la aplicación web: facilitar cálculos y análisis preliminar de DATOS obstétricos, los cálculos obtenidos han de ser confirmados antes de ser usados clínicamente.<br>La interpretación clínica de la INFORMACIÓN es responsabilidad exclusiva de quien realiza y certifica el exámen.<br>Los resultados obtenidos no sustituyen el buen JUCIO CLÍNICO. </p>
+        <p class="text-center text-white pb-0 mb-0"><small>Objetivo de la aplicación web: facilitar cálculos y análisis preliminar de DATOS obstétricos, los cálculos obtenidos han de ser confirmados antes de ser usados clínicamente.<br>La interpretación clínica de la INFORMACIÓN es responsabilidad exclusiva de quien realiza y certifica el exámen.<br>Los resultados obtenidos no sustituyen el buen JUCIO CLÍNICO.</small></p>
         </div>
       </div>
     </div>
