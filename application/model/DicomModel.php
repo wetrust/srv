@@ -156,7 +156,7 @@ class DicomModel
                     continue;
                 }
                 $new_name = str_replace('frame.', '', $file);
-                $new_name = substr($new_name 1, strlen($archivo) -1);
+                $new_name = substr($new_name, 1, strlen($archivo) -1);
                 $l = strlen($new_name);
                 //echo $l . " ";
                 //if ($l < 7){
