@@ -34,4 +34,8 @@ class DicomController extends Controller
     public function study($RUT){
         $this->View->renderJSON(DicomModel::getStudies($RUT));
     }
+
+    public function multiframe($RUT, $file){
+        DicomModel::multiframeToVideos($RUT, $file);
+    }
 }

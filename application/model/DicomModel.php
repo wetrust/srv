@@ -6,6 +6,62 @@ class DicomModel
      * Get all notes (notes are just example data that the user has created)
      * @return array an array with several objects (the results)
      */
+
+    public static function multiframeToVideos($rut,$file)
+    {
+        $videoFile = substr($file, 0, strlen($file) -3) . "mp4";
+        echo $videoFile;
+        $folder = Config::get('DICOM_DIRECTORY') . $rut . "/");
+        echo $folder;
+        //comprobar si existe el vide
+        if(file_exists($videoFile)){
+            echo "existe";
+            return true
+        }
+
+        echo "no existe";
+
+        //comprobar si existe una carpeta temporal para crear el video
+        if (!file_exists($folder . "tmp")) {
+            echo "creando carpeta";
+            mkdir($folder . "tmp", 0777);
+        }
+
+        echo "carpeta creada o existe";
+
+        //cambiar al directorio temporal
+        $out = chdir ($folder . "tmp");
+        //extraer todos los frames del archivo
+        $strCommand =  "/usr/bin/dcmj2pnm +Fa +oj +Jq 100 ". $folder . $file " \ frame ";
+        $out = exec($strCommand);
+    
+        $archivos = scandir($folder . "/tmp");
+        echo "escaneo de carpeta \n";
+        echo $archivos;
+
+        //if ($archivos == false){
+        //    return false;
+        //}
+        //else{
+//
+  //          $contador = 9;
+//
+  //          foreach($archivos as $archivo){
+    //            if (strlen($archivo) > 3){
+      //              if contador > 0{
+//
+  //                  }
+    //            }
+      //          $tmpString = substr($archivo 0, strlen($archivo) -3);
+        //    }
+      //  }
+        
+    
+    
+    
+    
+    }
+
     public static function getAllImages($rut, $StudyDate)
     {
             $database = "";
