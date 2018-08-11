@@ -160,10 +160,10 @@ class DicomModel
                 $l = strlen($new_name);
                 $diff = $want - $l;
                 echo $diff . "D";
-                while ($diff) {
-                    $new_name = "0$new_name";
-                    $diff--;
-                }
+                //while ($diff) {
+                //    $new_name = "0$new_name";
+                //    $diff--;
+                //}
                 if ($file != $new_name) {
                     rename($file, $new_name);
                 }
