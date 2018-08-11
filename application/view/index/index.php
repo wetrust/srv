@@ -38,21 +38,23 @@
     <div class="container py-5">
       <div class="row">
         <div class="col">
-          <h4>MÓDULO PRENATAL<br><small>Biometría ecográfica y flujometría Doppler</small></h4>
+          <h4>MÓDULO PRENATAL</h4>
+          <p>Biometría ecográfica y flujometría Doppler materno/fetal</p>
           <p class="text-justify"><small>Facilitar la valoración de datos obstétricos ecográficos relacionados con la vigilancia del crecimiento fetal. Actualmente activadas herramientas informaticas para:</small></p>
           <ul class="list-unstyled">
             <li><i class="fas fa-check"></i> <small>Determinación ecográfica de la edad gestacional</small></li>
             <li><i class="fas fa-check"></i> <small>Valoración de biometrías y crecimiento fetal</small></li>
-            <li><i class="fas fa-check"></i> <small>Flujometria Doppler Materno / Fetal básico</small></li>
+            <li><i class="fas fa-check"></i> <small>Flujometría Doppler Materno / Fetal básico</small></li>
           </ul>
-          <p class="text-justify"><small>Actualmente el análisis general de los datos ecográficos se encuentran disponibles para uso abierto (<strong>Iniciar exámen ecográfico</strong>), en tanto que: el guardado de información en base de datos, requiere registro previo del examinador y/o centro ecográfico.</small></p>
+          <p class="text-justify"><small>Actualmente el análisis general de los datos ecográficos se encuentran disponibles para uso abierto (<strong>Iniciar módulo exámen ecográfico</strong>), en tanto que: el guardado de información en base de datos, requiere registro previo del examinador y/o centro ecográfico.</small></p>
         </div>
         <div class="col">
-          <h4>MÓDULO POSTNATAL<br><small>Evaluación de datos relacionados al parto ( Peso e Ipn )</small></h4>
-          <p class="text-justify"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada.<br>Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional. Actualmente activadas herramientas informaticas para:</small></p>
+          <h4>MÓDULO POSTNATAL</h4>
+          <p>Evaluación de datos relacionados al parto ( Peso e Ipn )</p>
+          <p class="text-justify"><small>Con fines pronósticos como el manejo clínico, se categoriza el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada.<br>Secundariamente integrando talla del RN se obtiene índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica Ipn/edad gestacional. </small></p>
           <ul class="list-unstyled">
-            <li><i class="fas fa-check"></i> <small>Calcular índice ponderal neonatal ( IPN )</small></li>
-            <li><i class="fas fa-check"></i> <small>Categorizar del peso e Ipn según edad gestacional</small></li>
+            <li><i class="fas fa-check"></i> <small>Calcular índice ponderal neonatal ( Ipn )</small></li>
+            <li><i class="fas fa-check"></i> <small>Categorizar peso e Ipn según edad gestacional</small></li>
           </ul>
         </div>
       </div>
@@ -62,7 +64,7 @@
     <div class="container">
       <div class="row">
         <div class="col pt-3">
-        <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos mediante esta aplicación web deben ser confirmados antes de ser usados clínicamente.<br>Los resultados obtenidos, no sustituyen el buen juicio clínico. La interpretación de los datos es responsabilidad exclusiva de quien realiza y certifica el examen ultrasonográfico.</p>
+        <p class="text-center text-white pb-0 mb-0">Objetivo de la aplicación web: facilitar cálculos y análisis preliminar de DATOS obstétricos, los cálculos obtenidos han de ser confirmados antes de ser usados clínicamente.<br>La interpretación clínica de la INFORMACIÓN es responsabilidad exclusiva de quien realiza y certifica el exámen.<br>Los resultados obtenidos no sustituyen el buen JUCIO CLÍNICO. </p>
         </div>
       </div>
     </div>

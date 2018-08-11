@@ -77,14 +77,14 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="text-center text-white pb-0 mb-0">Los cálculos obtenidos mediante esta aplicación web deben ser confirmados antes de ser usados clínicamente.<br>Los resultados obtenidos, no sustituyen el buen juicio clínico. La interpretación de los datos es responsabilidad exclusiva de quien realiza y certifica el examen ultrasonográfico.</p>
+        <p class="text-center text-white pb-0 mb-0">Objetivo de la aplicación web: facilitar cálculos y análisis preliminar de DATOS obstétricos, los cálculos obtenidos han de ser confirmados antes de ser usados clínicamente.<br>La interpretación clínica de la INFORMACIÓN es responsabilidad exclusiva de quien realiza y certifica el exámen.<br>Los resultados obtenidos no sustituyen el buen JUCIO CLÍNICO. </p>
         </div>
       </div>
     </div>
   </div>
   <div class="h-100 w-100 generico" id="aplicaciones">
     <div class="container py-3">
-      <p class="text-center">Además, es factible descargar dos aplicaciones para Smartphone</p>
+      <p class="text-center">Acercando el software al usuario clínico, están disponibles además dos aplicaciones para Smartphone<br>Actualmente para plataforma de programación Android y próximamente en plataforma iOS</p>
       <div class="row justify-content-md-center">
         <div class="col.4">
           <ul>

@@ -6,12 +6,24 @@
                 <div class="card-body">
                     <div id="step-two-find">
                         <h6 class="text-center text-secondary">Paso 1</h6>
-                        <h1 class="text-center">¿Qué desea hacer?</h1>
-                        <h3 class="card-title text-primary">Examen paciente anónimo</h3>
-                        <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.examen"><i class="fas fa-male my-2"></i> ir a Exámen paciente virtual</button>
-                        <h3 class="card-title text-primary">Examen con nuevo paciente</h3>
-                        <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.new"><i class="fas fa-user-circle my-2"></i> Crear nuevo Paciente</button>
-                        <h3 class="card-title text-primary">Buscar un Paciente</h3>
+                        <h1 class="text-center">¿Qué desea realizar?</h1>
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="card-title text-primary">Ecámen con paciente virtual?</h3>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.examen"><i class="fas fa-male"></i> Ir</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="card-title text-primary">Ingresar nuevo paciente?</h3>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.new"><i class="fas fa-user-circle my-2"></i> Ir</button>
+                            </div>
+                        </div>  
+                        <h3 class="card-title text-primary">Buscar un paciente ya existente</h3>
                         <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
                         <div class="form-group row mb-0 mx-sm-3">
                             <div class="col-12 col-sm-6">
