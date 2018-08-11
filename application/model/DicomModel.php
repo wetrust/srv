@@ -36,7 +36,7 @@ class DicomModel
         $out = exec($strCommand);
     
         $archivos = scandir($folder . "/tmp");
-        echo "escaneo de carpeta \n"
+        echo "escaneo de carpeta \n";
         print_r($archivos);
 
         //if ($archivos == false){
