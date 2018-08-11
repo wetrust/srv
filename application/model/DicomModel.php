@@ -181,6 +181,8 @@ class DicomModel
           $vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -vcodec libx264 -pix_fmt yuv420p -vf scale=800:400  \"$folder.$videoFile\"";
           $out = exec($vid_cmd);
         return true;
+        //"https://servidor.crecimientofetal.cl/dicom/multiframe/19070494-7/1.2.276.0.26.1.1.1.2.2018.258.36118.6516656_0001_000003_1533917314028b.dcm"
+        //"https://servidor.crecimientofetal.cl/data/19070494-7/tmp/output.mp4"
     }
 
     public static function getAllImages($rut, $StudyDate)
