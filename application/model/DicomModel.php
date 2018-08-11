@@ -177,7 +177,7 @@ class DicomModel
           //if ($x < 10) {
           //  $framerate = 10;
           //}
-
+        echo "nnn" . $folder.$videoFile;
           $vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -vcodec libx264 -pix_fmt yuv420p -vf scale=800:400  \"$folder.$videoFile\"";
           $out = exec($vid_cmd);
         return true;
