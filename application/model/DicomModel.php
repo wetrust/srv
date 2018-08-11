@@ -10,24 +10,24 @@ class DicomModel
     public static function multiframeToVideos($rut,$file)
     {
         $videoFile = substr($file, 0, strlen($file) -3) . "mp4";
-        echo $videoFile;
+        echo $videoFile . "\n";
         $folder = Config::get('DICOM_DIRECTORY') . $rut . "/";
-        echo $folder;
+        echo $folder . "\n";
         //comprobar si existe el vide
         if(file_exists($videoFile)){
-            echo "existe";
+            echo "existe \n";
             return true;
         }
 
-        echo "no existe";
+        echo "no existe". "\n";
 
         //comprobar si existe una carpeta temporal para crear el video
         if (!file_exists($folder . "tmp")) {
-            echo "creando carpeta";
+            echo "creando carpeta". "\n";
             mkdir($folder . "tmp", 0777);
         }
 
-        echo "carpeta creada o existe";
+        echo "carpeta creada o existe". "\n";
 
         //cambiar al directorio temporal
         $out = chdir ($folder . "tmp");
@@ -36,8 +36,8 @@ class DicomModel
         $out = exec($strCommand);
     
         $archivos = scandir($folder . "/tmp");
-        echo "escaneo de carpeta \n";
-        echo $archivos;
+        echo "escaneo de carpeta \n"
+        print_r($archivos);
 
         //if ($archivos == false){
         //    return false;
