@@ -159,6 +159,7 @@ class DicomModel
                 $new_name = str_replace('frame.', '', $file);
                 $l = strlen($new_name);
                 $diff = $want - $l;
+                echo $diff . "D";
                 while ($diff) {
                     $new_name = "0$new_name";
                     $diff--;
