@@ -7,6 +7,96 @@ class DicomModel
      * @return array an array with several objects (the results)
      */
 
+    
+    public static function loadTags($rut, $file) {
+
+        $folder = Config::get('DICOM_DIRECTORY') . $rut . "/" . $file;
+        $dump_cmd = "/usr/bin/dcmdump -M +L +Qn ". $folder;
+        $dump = Execute($dump_cmd);
+        
+        if(!$dump) {
+          return false;
+        }
+        
+        $tags = array();
+        
+        foreach(explode("\n", $dump) as $line) {
+            $ge = '';
+            $t = preg_match_all("/\((.*)\) [A-Z][A-Z]/", $line, $matches);
+            if(isset($matches[1][0])) {
+                $ge = $matches[1][0];
+                if(!isset($tags["$ge"])) {
+                    $tags["$ge"] = '';
+                }
+            }
+            
+            if(!$ge) {
+                continue;
+            }
+            $val = '';
+            $found = 0;
+            $t = preg_match_all("/\[(.*)\]/", $line, $matches);
+          
+            if(isset($matches[1][0])) {
+                $found = 1;
+                $val = $matches[1][0];
+                if(is_array($tags["$ge"])) { // Already an array
+                    $tags["$ge"][] = $val;
+                }
+                else { // Create new array
+                    $old_val = $this->tags["$ge"];
+                    if($old_val) {
+                        $tags["$ge"] = array();
+                        $tags["$ge"][] = $old_val;
+                        $tags["$ge"][] = $val;
+                    }
+                    else {
+                        $tags["$ge"] = $val;
+                    }
+                }
+            }
+          
+            if(is_array($tags["$ge"])) {
+                $found = 1;
+            }
+          
+            if(!$found) { // a couple of tags are not in [] preceded by =
+                $t = preg_match_all("/\=(.*)\#/", $line, $matches);
+                
+                if(isset($matches[1][0])) {
+                    $found = 1;
+                    $val = $matches[1][0];
+                    $tags["$ge"] = rtrim($val);
+                }
+            }
+          
+            if(!$found) { // a couple of tags are not in []
+                $t = preg_match_all("/[A-Z][A-Z] (.*)\#/", $line, $matches);
+            
+                if(isset($matches[1][0])) {
+                    $found = 1;
+                    $val = $matches[1][0];
+                    
+                    if(strstr($val, '(no value available)')) {
+                        $val = '';
+                    }
+              
+                    $tags["$ge"] = rtrim($val);
+                }
+            }
+        }
+
+        return $tags;
+    }
+
+    public static function get_tag($tags, $group, $element) {
+        $val = '';
+        if (isset($tags["$group,$element"])) {
+          $val = $tags["$group,$element"];
+        }
+        return ($val);
+    }
+
     public static function multiframeToVideos($rut,$file)
     {
         $videoFile = substr($file, 0, strlen($file) -3) . "mp4";
@@ -35,31 +125,58 @@ class DicomModel
         $strCommand =  "/usr/bin/dcmj2pnm +Fa +oj +Jq 100 ". $folder . $file . " \ frame ";
         $out = exec($strCommand);
     
-        $archivos = scandir($folder . "/tmp");
-        echo "escaneo de carpeta \n";
-        print_r($archivos);
+   //     $archivos = scandir($folder . "/tmp");
+     //   echo "escaneo de carpeta \n";
+       // print_r($archivos);
 
-        //if ($archivos == false){
-        //    return false;
-        //}
-        //else{
-//
-  //          $contador = 9;
-//
-  //          foreach($archivos as $archivo){
-    //            if (strlen($archivo) > 3){
-      //              if contador > 0{
-//
-  //                  }
-    //            }
-      //          $tmpString = substr($archivo 0, strlen($archivo) -3);
-        //    }
+        //obtener metadata del video
+
+  //      if ($archivos == false){
+    //        return false;
       //  }
-        
+        //else{
+          //  $largo = 7;
+
+            //foreach($archivos as $archivo){
+              //  if (strlen($archivo) > 3){
+                //    $new_name = str_replace('frame.', '', $archivo);
+
+                //}
+                //$tmpString = substr($archivo 0, strlen($archivo) -3);
+           // }
+      //  }
+        $x = 0;
     
-    
-    
-    
+        if ($handle = opendir($folder . "/tmp")) {
+            while (false !== ($file = readdir($handle))) {
+                if ($file == '.' || $file == '..') {
+                    continue;
+                }
+                if (!strstr($file, '.jpg')) {
+                    continue;
+                }
+                $new_name = str_replace('frame.', '', $file);
+                $l = strlen($new_name);
+                $diff = $want - $l;
+                while ($diff) {
+                    $new_name = "0$new_name";
+                    $diff--;
+                }
+                if ($file != $new_name) {
+                    rename($file, $new_name);
+                }
+                $x++;
+            }
+            closedir($handle);
+          }
+
+          if ($x < 10) {
+            $framerate = 10;
+          }
+
+          $vid_cmd = "ffmpeg -r $framerate -b 5000k -i %03d.jpg -vcodec libx264 \"$vid_file\"";
+          $out = Execute($vid_cmd);
+
     }
 
     public static function getAllImages($rut, $StudyDate)
