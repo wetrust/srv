@@ -88,12 +88,12 @@
       <div class="row">
         <div class="col">
           <ul>
-            <li class="mt-5">MÓDULO PRENATAL (ecográfico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.calculadorecografico">ver</a><br><small>Biometría ecográfica y flujometría Doppler</small></li>
+            <li class="mt-3">MÓDULO PRENATAL (ecográfico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.calculadorecografico">ver</a><br><small>Biometría ecográfica y flujometría Doppler</small></li>
           </ul>
         </div>
         <div class="col">
           <ul>
-            <li class="mt-5">MÓDULO POSTNATAL (Clínico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.ajustepesorn">ver</a><br><small>Evaluación de peso e Ipn en función de edad gestacional</small></li>
+            <li class="mt-3">MÓDULO POSTNATAL (Clínico)<a href="https://play.google.com/store/apps/details?id=cl.wetrust.ajustepesorn">ver</a><br><small>Evaluación de peso e Ipn en función de edad gestacional</small></li>
           </ul>
         </div>
       </div>
