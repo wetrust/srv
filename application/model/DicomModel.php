@@ -16,7 +16,7 @@ class DicomModel
         //comprobar si existe el vide
         if(file_exists($videoFile)){
             echo "existe";
-            return true
+            return true;
         }
 
         echo "no existe";
