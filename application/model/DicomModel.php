@@ -11,7 +11,7 @@ class DicomModel
     {
         $videoFile = substr($file, 0, strlen($file) -3) . "mp4";
         echo $videoFile;
-        $folder = Config::get('DICOM_DIRECTORY') . $rut . "/");
+        $folder = Config::get('DICOM_DIRECTORY') . $rut . "/";
         echo $folder;
         //comprobar si existe el vide
         if(file_exists($videoFile)){
