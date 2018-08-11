@@ -237,11 +237,13 @@ class DicomModel
                         }
 
                         if(file_exists($strArchivoJPG)){
+                            $strArchivoJPG = str_replace($rut . "/", '', $strArchivoJPG);
                             array_push($JPGData, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
                         }
                         else{
                             $strCommand =  "/usr/bin/dcmj2pnm +fo +oj " . Config::get('DICOM_DIRECTORY') . $imagen->ObjectFile .  " " . $strArchivoJPG;
                             $out = exec($strCommand);
+                            $strArchivoJPG = str_replace($rut . "/", '', $strArchivoJPG);
                             array_push($JPGData, substr($imagen->ObjectFile, 0, strlen($imagen->ObjectFile) -3) . "jpg");
                         }
 
