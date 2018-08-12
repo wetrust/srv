@@ -203,6 +203,8 @@ class DicomModel
     {
         $id = Request::post('id');
 
+        echo $id;
+        echo "rm \"Config::get('DICOM_DIRECTORY').$id\"";
         $vid_cmd = "rm \"Config::get('DICOM_DIRECTORY').$id\"";
         $out = exec($vid_cmd);
     }
