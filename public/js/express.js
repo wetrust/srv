@@ -4716,10 +4716,14 @@ $(document).ready(function(){
         $("input[name='fotosElegidas']").each(function() {
             if (this.checked == true) {
                 let imgID = $(this).parent().parent().parent().data("id");
-                $.post(serverURL + "dicom/del", imgID).done(function (data) {
-                
+                var data ={
+                    id:imgID
+                };
+
+                $.post(serverURL + "dicom/del", data).done(function (data) {
                     $(this).parent().parent().parent().addClass("d-none");
                 });
+                
                 contadorIMG = contadorIMG + 1
                 this.checked = false;
             }; 

@@ -199,6 +199,14 @@ class DicomModel
         //"https://servidor.crecimientofetal.cl/data/19070494-7/tmp/output.mp4"
     }
 
+    public static function delete()
+    {
+        $id = Request::post('id');
+
+        $vid_cmd = "rm \"Config::get('DICOM_DIRECTORY').$id\"";
+        $out = exec($vid_cmd);
+    }
+
     public static function getAllImages($rut, $StudyDate)
     {
             $database = "";

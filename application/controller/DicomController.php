@@ -23,6 +23,10 @@ class DicomController extends Controller
         $this->View->renderJSON(DicomModel::getAllImages($rut,$StudyDate));
     }
 
+    public function del(){
+        $this->View->renderJSON(DicomModel::delete());
+    }
+
     public function getlastpatients(){
         $this->View->renderJSON(DicomModel::lastpatients());
     }
