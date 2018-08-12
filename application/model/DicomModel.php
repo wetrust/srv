@@ -147,6 +147,17 @@ class DicomModel
                 if (!strstr($file, '.jpg')) {
                     continue;
                 }
+
+                //cortar imagen
+                $im = @imagecreatefromjpeg($file);
+                $im = @imagecrop($im, array( 'x' => 0, 'y' => 0, 'width' => 960, 'height' => 720 ) );
+
+                imagejpeg($im,$file,100);
+
+                // Liberar memoria
+                imagedestroy($im);
+
+                //cambiar de nombre
                 $new_name = str_replace('frame.', '', $file);
                 $new_name = substr($new_name, 1, strlen($new_name) -1);
                 $l = strlen($new_name);
@@ -169,20 +180,20 @@ class DicomModel
           //if ($x < 10) {
           //  $framerate = 10;
           //}
-          $vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -vcodec libx264 -pix_fmt yuv420p -vf scale=800:400  \"$videoFile\"";
-          $out = exec($vid_cmd);
+          //$vid_cmd = "ffmpeg -r 6  -i img%03d.jpg -vcodec libx264 -pix_fmt yuv420p -vf scale=800:400  \"$videoFile\"";
+          //$out = exec($vid_cmd);
         
         //mover a la carpeta anterior
-        $vid_cmd = "mv \"$videoFile\" \"$folder\"";
-        $out = exec($vid_cmd);
+        //$vid_cmd = "mv \"$videoFile\" \"$folder\"";
+        //$out = exec($vid_cmd);
         //cambiar al directorio anterior
-        $out = chdir ($folder);
+        //$out = chdir ($folder);
         //eliminar los archivos temporales
-        $vid_cmd = "rm -R tmp";
-        $out = exec($vid_cmd);
+        //$vid_cmd = "rm -R tmp";
+        //$out = exec($vid_cmd);
 
-        $stream = new StreamModel($folder.$videoFile);
-        $stream->start();
+        //$stream = new StreamModel($folder.$videoFile);
+        //$stream->start();
         return true;
         //"https://servidor.crecimientofetal.cl/dicom/multiframe/19070494-7/1.2.276.0.26.1.1.1.2.2018.258.36118.6516656_0001_000003_1533917314028b.dcm"
         //"https://servidor.crecimientofetal.cl/data/19070494-7/tmp/output.mp4"
