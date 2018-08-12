@@ -143,7 +143,7 @@ $(document).ready(function(){
     });
 
     $("#step\\.new").on("click", function(){
-        $("#step-one").addClass("d-none");
+        $("#step-two-find").addClass("d-none");
         $("#step-three").removeClass("d-none");
         //desbloquear elementos necesarios
         $("#id-paciente").attr("disabled", false);
