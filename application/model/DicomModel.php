@@ -208,6 +208,7 @@ class DicomModel
 
         $vid_cmd = "rm \"$idJpeg\"";
         $out = exec($vid_cmd);
+        return true
     }
 
     public static function getAllImages($rut, $StudyDate)
