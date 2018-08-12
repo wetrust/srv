@@ -509,4 +509,53 @@ class DicomModel
         }
         
     }
+
+    public static function sendDicomCine()
+    {
+        $user_id = Request::post('user_id');
+        $img_id = Request::post('img_id');
+        $studyDate = Request::post('studyDate');
+        $user_email = Request::post('user_email');
+
+        $respuesta = new stdClass();
+        $mail = new Mail;
+
+        if ($user_id && $img_id && $studyDate && $user_email){
+
+            $files = self::getAllImages($user_id, $studyDate);
+            $files = $files->JPGFiles;
+            $filesJPG = [];
+            $contador = 0;
+
+            $img_id = json_decode($img_id, true);
+            foreach($files as $file){
+                if (in_array($contador, $img_id)) {
+                    $strArchivoJPG = Config::get('DICOM_DIRECTORY') . $file[1];
+                    $strArchivoJPG = str_replace('jpg', 'mp4', $strArchivoJPG);
+
+                    if(file_exists($strArchivoJPG)){
+                        $fileTmp = str_replace('jpg', 'mp4', $file[1]);
+                        array_push($filesJPG, $fileTmp);
+                    }
+                }
+                $contador++;
+            }
+
+            $body = "Servicio envio privado de imágenes ecográficas y/o Informes\n\n---- ADVERTENCIA ----\nLa información contenida en este correo electrónico, y en su caso, cualquier fichero anexo al mismo, son de carácter privado y confidencial siendo para uso exclusivode su destinatario.";
+
+            $envio = $mail->sendMailWithAttachment($user_email, Config::get('EMAIL_PASSWORD_RESET_FROM_EMAIL'), "Crecimiento Fetal", "Imágenes Gineco-Obstétricas", $body, $filesJPG);
+
+            if ($envio == false){
+                return $mail->error;
+            }
+            else{
+                return $respuesta->send = $envio;
+            }
+             
+        }
+        else{
+            return $respuesta->send = false;
+        }
+        
+    }
 }

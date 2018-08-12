@@ -21,4 +21,9 @@ class ImagenesController extends Controller
     {
         $this->View->renderJSON(DicomModel::sendDicomImages());
     }
+
+    public function sendmovie()
+    {
+        $this->View->renderJSON(DicomModel::sendDicomCine());
+    }
 }
