@@ -64,6 +64,15 @@
                               <a class="nav-link" data-toggle="tab" href="#parn">Profesional alta del RN</a>
                         </li>
                   </ul>
+                  <h4 class="card-title">Exportar</h4>
+                  <ul class="nav flex-column">
+                        <li class="nav-item">
+                              <a class="nav-link">Exportar datos de ecografía obstétrica</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link">Exportar datos de parto y rn</a>
+                        </li>
+                  </ul>
                </div>
             </div>
          </div>
