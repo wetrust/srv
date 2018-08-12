@@ -775,13 +775,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mb-3" id="ecografia.exportar">
-                                <div class="card-body p-2">
-                                    <div class="clearfix">
-                                    <h6 class="card-title float-left">Exportar pacientes</h6><a href="#" class="card-link float-right">crear archivo</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col">
                             <h3 class="card-title text-primary">Tamizaje y evaluación morfológica</h3>
