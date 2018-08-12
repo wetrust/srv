@@ -150,7 +150,7 @@ class DicomModel
 
                 //cortar imagen
                 $im = @imagecreatefromjpeg($file);
-                $im = @imagecrop($im, array( 'x' => 0, 'y' => 8, 'width' => 960, 'height' => 720 ) );
+                $im = @imagecrop($im, array( 'x' => 0, 'y' => 11, 'width' => 960, 'height' => 720 ) );
 
                 imagejpeg($im,$file,100);
 
