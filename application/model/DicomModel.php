@@ -182,7 +182,8 @@ class DicomModel
           $out = exec($vid_cmd);
         
         //mover a la carpeta anterior
-        $vid_cmd = "mv \"$videoFile\" \"$folder.$videoFile\"";
+        echo "mv \"$videoFile\" \"$folder\"";
+        $vid_cmd = "mv \"$videoFile\" \"$folder\"";
         $out = exec($vid_cmd);
         //cambiar al directorio anterior
         $out = chdir ($folder);
