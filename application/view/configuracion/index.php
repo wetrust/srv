@@ -67,10 +67,10 @@
                   <h4 class="card-title">Exportar</h4>
                   <ul class="nav flex-column">
                         <li class="nav-item">
-                              <a class="nav-link">Exportar datos de ecografía obstétrica</a>
+                              <a class="nav-link" href="#">Exportar datos de ecografía obstétrica</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link">Exportar datos de parto y rn</a>
+                              <a class="nav-link" href="#">Exportar datos de parto y rn</a>
                         </li>
                   </ul>
                </div>
