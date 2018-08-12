@@ -1098,7 +1098,9 @@ function getDCM(RUTPACIENTE, FechaExm){
                     $.each(data.JPGFiles, function(i, item) {
                         var tmpStr = "<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item[1] + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label>";
                         if (item[0] == true){
-                            tmpStr+= ' <i class="fas fa-video float-right mr-1 text-danger"></i>';
+                            let tmpFile = item[1];
+                            tmpFile = tmpFile.replace("jpg", "dcm");
+                            tmpStr+= ' <i class="fas fa-video float-right mr-1 text-danger" data-file="'+ tmpFile +'"></i>';
                         }
                         tmpStr+= "</div></div>";
                         $("#fotosDicom").append(tmpStr);
@@ -1108,6 +1110,14 @@ function getDCM(RUTPACIENTE, FechaExm){
                         $("#modalZoom").html(" ");
                         $("#modalZoom").append(img);
                         $("#modalZoom img").removeClass("zoom").css("width","auto").css("height","auto");
+                        $("#modalZoom").modal("show");
+                    });
+
+                    $('.fa-video').on("click",function(){
+                        let strfile = $(this).data("file");
+                        let videoFrame = '<video width="480" height="360" controls><source src="' + serverURL + "dicom/multiframe/"+strfile +'" type="video/mp4">debes actualizar tu navegador.</video>'; 
+                        $("#modalZoom").html(" ");
+                        $("#modalZoom").append(videoFrame);
                         $("#modalZoom").modal("show");
                     });
                 }
