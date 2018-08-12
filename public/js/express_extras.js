@@ -1096,7 +1096,9 @@ function getDCM(RUTPACIENTE, FechaExm){
                 $("#fotosDicom").html(" ");
                 if (data.DCM = true) {
                     $.each(data.JPGFiles, function(i, item) {
-                        var tmpStr = "<div class='col-12 col-lg-6 col-xl-4'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item[1] + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label>";
+                        let tmpFile = item[1];
+                        tmpFile = tmpFile.replace(".jpg", "");
+                        var tmpStr = "<div class='col-12 col-lg-6 col-xl-4' data-id='"+ tmpFile +"'><img alt='200x200' class='zoom' style='width: 250px; height: 250px;' src='" + serverURL + "data/" + item[1] + "'><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' name='fotosElegidas'>Seleccionar</label>";
                         if (item[0] == true){
                             let tmpFile = item[1];
                             tmpFile = tmpFile.replace("jpg", "dcm");

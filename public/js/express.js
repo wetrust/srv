@@ -4715,7 +4715,11 @@ $(document).ready(function(){
         var contadorIMG = 0;
         $("input[name='fotosElegidas']").each(function() {
             if (this.checked == true) {
-                $(this).parent().parent().parent().addClass("d-none");
+                let imgID = $(this).parent().parent().parent().data("id");
+                $.post(serverURL + "dicom/del", imgID).done(function (data) {
+                
+                    $(this).parent().parent().parent().addClass("d-none");
+                });
                 contadorIMG = contadorIMG + 1
                 this.checked = false;
             }; 
