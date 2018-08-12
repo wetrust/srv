@@ -474,7 +474,7 @@ class DicomModel
             $img_id = json_decode($img_id, true);
             foreach($files as $file){
                 if (in_array($contador, $img_id)) {
-                    array_push($filesJPG, $file);
+                    array_push($filesJPG, $file[1]);
                 }
                 $contador++;
             }
