@@ -201,11 +201,7 @@ class DicomModel
 
     public static function delete()
     {
-        $id = Config::get('DICOM_DIRECTORY') . Request::post('id');
-
-        echo $id;
-        echo "rm \".$id\"";
-        
+        $id = Config::get('DICOM_DIRECTORY') . Request::post('id').".dcm";
         $vid_cmd = "rm \"$id\"";
         $out = exec($vid_cmd);
     }
