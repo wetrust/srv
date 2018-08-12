@@ -180,7 +180,16 @@ class DicomModel
         echo "nnn" . $folder.$videoFile;
           $vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -vcodec libx264 -pix_fmt yuv420p -vf scale=800:400  \"$videoFile\"";
           $out = exec($vid_cmd);
-        echo $out;
+        
+        //mover a la carpeta anterior
+        $vid_cmd = "mv \"$videoFile\" \"$folder.$videoFile\"";
+        $out = exec($vid_cmd);
+        //cambiar al directorio anterior
+        $out = chdir ($folder);
+        //eliminar los archivos temporales
+        $vid_cmd = "rm -R tmp";
+        $out = exec($vid_cmd);
+
         return true;
         //"https://servidor.crecimientofetal.cl/dicom/multiframe/19070494-7/1.2.276.0.26.1.1.1.2.2018.258.36118.6516656_0001_000003_1533917314028b.dcm"
         //"https://servidor.crecimientofetal.cl/data/19070494-7/tmp/output.mp4"
