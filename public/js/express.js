@@ -4719,11 +4719,12 @@ $(document).ready(function(){
                 var data ={
                     id:imgID
                 };
+                var elemento = this;
 
                 $.post(serverURL + "dicom/del", data).done(function (data) {
-                    $(this).parent().parent().parent().addClass("d-none");
+                    $(elemento).parent().parent().parent().addClass("d-none");
                 });
-                
+
                 contadorIMG = contadorIMG + 1
                 this.checked = false;
             }; 
