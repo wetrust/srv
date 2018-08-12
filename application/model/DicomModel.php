@@ -202,7 +202,11 @@ class DicomModel
     public static function delete()
     {
         $id = Config::get('DICOM_DIRECTORY') . Request::post('id').".dcm";
+        $idJpeg = Config::get('DICOM_DIRECTORY') . Request::post('id').".jpg";
         $vid_cmd = "rm \"$id\"";
+        $out = exec($vid_cmd);
+
+        $vid_cmd = "rm \"$idJpeg\"";
         $out = exec($vid_cmd);
     }
 
