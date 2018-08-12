@@ -203,7 +203,7 @@ $(document).ready(function(){
     
     //pacientes paso 3
     $("#boton\\.volver\\.step\\.three").on("click", function(){
-        $("#step-one").removeClass("d-none");
+        $("#step-two-find").removeClass("d-none");
         $("#step-three").addClass("d-none");
     });
 
