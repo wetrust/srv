@@ -100,24 +100,16 @@ class DicomModel
     public static function multiframeToVideos($rut,$file)
     {
         $videoFile = substr($file, 0, strlen($file) -3) . "mp4";
-        echo $videoFile . "\n";
         $folder = Config::get('DICOM_DIRECTORY') . $rut . "/";
-        echo $folder . "\n";
         //comprobar si existe el vide
         if(file_exists($videoFile)){
-            echo "existe \n";
             return true;
         }
 
-        echo "no existe". "\n";
-
         //comprobar si existe una carpeta temporal para crear el video
         if (!file_exists($folder . "tmp")) {
-            echo "creando carpeta". "\n";
             mkdir($folder . "tmp", 0777);
         }
-
-        echo "carpeta creada o existe". "\n";
 
         //cambiar al directorio temporal
         $out = chdir ($folder . "tmp");
@@ -177,12 +169,10 @@ class DicomModel
           //if ($x < 10) {
           //  $framerate = 10;
           //}
-        echo "nnn" . $folder.$videoFile;
           $vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -vcodec libx264 -pix_fmt yuv420p -vf scale=800:400  \"$videoFile\"";
           $out = exec($vid_cmd);
         
         //mover a la carpeta anterior
-        echo "mv \"$videoFile\" \"$folder\"";
         $vid_cmd = "mv \"$videoFile\" \"$folder\"";
         $out = exec($vid_cmd);
         //cambiar al directorio anterior
@@ -191,6 +181,8 @@ class DicomModel
         $vid_cmd = "rm -R tmp";
         $out = exec($vid_cmd);
 
+        $stream = new StreamModel($folder.$videoFile);
+        $stream->start();
         return true;
         //"https://servidor.crecimientofetal.cl/dicom/multiframe/19070494-7/1.2.276.0.26.1.1.1.2.2018.258.36118.6516656_0001_000003_1533917314028b.dcm"
         //"https://servidor.crecimientofetal.cl/data/19070494-7/tmp/output.mp4"
