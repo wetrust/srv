@@ -1254,7 +1254,7 @@ $(document).ready(function(){
             }
         });
         $( '#embrion').trigger('click');
-        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver Impresion</button>");
+        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver Impresion</button>");
         $( '#impDoppler1').on("click", function(){
               crearInformeEcoPrimTrim();
         });
@@ -1394,7 +1394,7 @@ $(document).ready(function(){
         $("#ev-morfo").val('no evaluada dirigidamente, pero el aspecto morfológico general es normal');
          $('#ev-morfo').trigger('change');
     
-        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
         $( '#impDoppler1').on("click", function(){
               crearInformeEcoSegTrim1();
         });
@@ -1440,7 +1440,7 @@ $(document).ready(function(){
                 var fpp = $( "#input\\.paciente\\.fpp\\.extra").val();
                 var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp + "\r\n";
                 $('#comentarios-eco-dos-inf-dos').val(comentario);
-                $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+                $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
                 $( '#impDoppler1').on("click", function(){
                       crearInformeEcoSegTrim2();
                 });
@@ -1486,7 +1486,7 @@ $(document).ready(function(){
         var fpp = $( "#input\\.paciente\\.fpp\\.extra").val();
         var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp + "\r\n";
         $('#comentarios-eco-dos-inf-dos').val(comentario);
-        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
         $( '#impDoppler1').on("click", function(){
               crearInformeEcoSegTrim2();
         });
@@ -2975,7 +2975,7 @@ $(document).ready(function(){
         }
         
         $('#comentarios-doppler').val(comentarios);
-        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
+        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
         $( '#bvmDoppler' ).on('change', function(){
             bvmDoppler();
         });
@@ -3649,7 +3649,7 @@ $(document).ready(function(){
         $('#graficosTitle').html("Gráfica para evaluación de la flujometría doppler materno fetal básica");
         $( '#impDoppler1').remove();
         $( '#infecoObsSegTrim1Clon').remove();
-        $('#graficosFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Ver Impresion</button>");
+        $('#graficosFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver Impresion</button>");
         var stringGraficos = "<div class='container'><div style='width:100px;text-align:center;'></div></div><h4 class='text-center d-none'>Gráfica para evaluación de la flujometría doppler materno fetal básica</h4><span style='border-top: 1px solid #000;width: 100% !important;display: block;border-bottom: 2px solid #000;padding-top: 2px;' class='d-none mt-2'></span><div class='row d-none mt-2'> <div class='col-5'><p style='font-size:10px;'><strong>Paciente Sra. (Srta.): </strong>:PACIENTE </p></div><div class='col-3'><p style='font-size:10px;'><strong>RUT: </strong>:IDPACIENTE </p></div><div class='col-4'><p style='font-size:10px;'><strong>Fecha de Exámen: </strong>:FEXAMEN </p></div></div><div class='row'><div class='col'><div id='graficoIpArtUtView'></div></div><div class='col'><div id='graficoIpArtUmbView'></div></div></div><div class='row'><div class='col'><div id='graficoIpArtCMView'></div></div><div class='col'><div id='graficoIpCCPView'></div></div></div><div class='row' id='lineclear'><div class='col'><p class='d-none' style='font-size:12px;'><strong style='color:#045dab;'>COMENTARIOS Y OBSERVACIONES</strong><br>:COMENTARIOS</p><p class='d-none text-right top40' style='margin-right:100px; font-size: 12px;'>Ecografista Dr(a): <strong>:ECOGRAFISTA</strong> </p><span style='border-top: 1px solid #000;width: 100% !important;display: block;' class='d-none'></span><p class='d-none' style='margin-bottom:0;font-size:11px;'>Fecha Informe: :DATEINFORME</p><span class='d-none' style='border-top: 1px solid #000;width: 100% !important;display: block;'></span><p class='pie-pagina d-none'>* Referencia para Doppler promedio de arterias uterinas: Gómes O., Figueras F., Fernandez S., Bennasar M, Martínez JM., Puerto B., Gratacos E., UOG 2008; 32: 128-32<br>** Referencia para Doppler de arteria umbilical, C Media y CCP Baschat et al Ultrasound Obstet. Gynecol 2003; 21 124 - 127<br>Herramienta informática diseñada por Dr. Rudecindo Lagos S. Médico gineco-obstetra ultrasonografista y Cristopher Castro G. Ingenieria Civil.<br><strong>Las gráficas de este software tienen por objeto favorecer el análisis preliminar de los datos obtenidos en el exámen ecográfico, la interpretación clínica de los mismos, es responsabilidad exclusiva de quien realiza y certifica este documento.</strong></p></div></div>";
         var comentarios = $("#comentarios-doppler").val();
         var paciente = $( '#nombre-paciente').val()+ " " + $( '#apellido-paciente').val();
