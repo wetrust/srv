@@ -38,24 +38,24 @@
                             <div class="col-md-12">
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        <div class="row mb-3">
+                                        <div class="row mb-2">
                                             <div class="col-9">
-                                                <h5 class="card-title text-left mt-2">Configuración de datos para variable de uso habitual (Opcional)</h5>
+                                                <p class="card-title text-left mt-2">Configuración de datos para variable de uso habitual (Opcional)</p>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                    <label class="btn btn-outline-info p-2 active" id="configNoController" data-value="0">
+                                                    <label class="btn btn-outline-info active" id="configNoController" data-value="0">
                                                         <input type="radio" value="0" checked> NO
                                                     </label>
-                                                    <label class="btn btn-outline-info p-2" id="configSiController" data-value="1">
+                                                    <label class="btn btn-outline-info" id="configSiController" data-value="1">
                                                         <input type="radio" value="1"> SI
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mb-3">
+                                        <div class="row mb-2">
                                             <div class="col-9">
-                                                <h5 class="card-title text-left mt-2 mb-4">Información útil para reporte de informe y / o graficas (Opcional)</h5>
+                                                <p class="card-title text-left mt-2 mb-4">Información útil para reporte de informe y / o graficas (Opcional)</p>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -425,7 +425,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-9">
-                                                <h5 class="card-title text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</h5>
+                                                <p class="card-title text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</p>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
