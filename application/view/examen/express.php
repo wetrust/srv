@@ -9,30 +9,29 @@
                         <h1 class="text-center mb-4">¿Qué desea realizar?</h1>
                         <div class="row">
                             <div class="col">
-                                <h3 class="card-title text-primary">Exámen con paciente virtual?</h3>
+                                <h3 class="card-title text-primary">Exámen paciente virtual</h3>
                                 <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.examen"><i class="fas fa-male"></i> Ir</button>
                             </div>
                             <div class="col">
-                                <h3 class="card-title text-primary">Ingresar nuevo paciente?</h3>
+                                <h3 class="card-title text-primary">Ingresar nuevo paciente</h3>
                                 <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.new"><i class="fas fa-user-circle my-2"></i> Ir</button>
                             </div>
                             <div class="col">
-                                <h3 class="card-title text-primary">Buscar paciente ya existente</h3>
-                                <p class="text-secondary">Escriba el id o el apellido de la paciente y luego presione el botón buscar</p>
-                                <div class="form-group row mb-0 mx-sm-3">
+                                <h3 class="card-title text-primary">Buscar paciente</h3>
+                                <div class="form-group row">
                                     <div class="col-12 col-sm-6">
-                                        <label for="buscar.paciente.id" class="col-form-label mt-2"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
+                                        <label for="buscar.paciente.id" class="col-form-label"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control my-3" id="buscar.paciente.id">
+                                        <input type="text" class="form-control" id="buscar.paciente.id">
                                     </div>
                                 </div>
-                                <div class="form-group row mb-0 mx-sm-3">
+                                <div class="form-group row">
                                     <div class="col-12 col-sm-6">
-                                        <label for="buscar.paciente.apellido" class="col-form-label mt-3"><strong>Apellidos</strong></label>
+                                        <label for="buscar.paciente.apellido" class="col-form-label"><strong>Apellidos</strong></label>
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control my-3" id="buscar.paciente.apellido" list="apellidos">
+                                        <input type="text" class="form-control" id="buscar.paciente.apellido" list="apellidos">
                                         <datalist id="apellidos">
                                         </datalist>
                                     </div>
