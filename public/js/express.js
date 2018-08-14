@@ -1203,6 +1203,43 @@ $(document).ready(function() {
         }
     });
 
+    $('#saco-vitelino').on("click", function() {
+        if ($(this).val() == 'presente') {
+            $('#valor-saco-vitelino').css('display', 'block');
+        } else {
+            $('#valor-saco-vitelino').css('display', 'none');
+            $('#valor-saco-vitelino').val('');
+        }
+    });
+
+    $('#exploracion-douglas').on("click", function() {
+        if ($(this).val() == 'ocupado') {
+            $('#exploracion-douglas-informe').css('display', 'block');
+        } else {
+            $('#exploracion-douglas-informe').css('display', 'none');
+        }
+    });
+
+    $('#embrion').on("click", function() {
+        if ($(this).val() == 'no se observa aun' || $(this).val() == 'act. no evidenciable') {
+            $('#fcf-primer-trim').css('display', 'none');
+            $('#fcf-primer-trim').val('');
+            $('#lcn-informe').css('display', 'none');
+            $('#lcn-informe').val('');
+        } else if ($(this).val() == 'act. cardiaca evidenciable') {
+            $('#fcf-prim').val($("#fcf-prim option:first").val());
+            $('#lcn-informe').css('display', 'none');
+            $('#lcn-informe').val($('#lcn').val());
+        } else if ($(this).val() == 'act. card. y Corp. (-)') {
+            $('#lcn-informe').css('display', 'block');
+            $('#lcn-informe').val($('#lcn').val());
+        } else {
+            $('#fcf-primer-trim').css('display', 'block');
+            $('#lcn-informe').css('display', 'block');
+            $('#lcn-informe').val($('#lcn').val());
+        }
+    });
+
     $('#modalPreInfEcoPrimTrim').on('click', function() {
         $('#popupTitle').html("Datos para evaluación ecográfica de primer trimestre");
         //remueve los botones de imprimir en caso de que estén
@@ -1224,43 +1261,6 @@ $(document).ready(function() {
         $('#comentarios-eco-uno').val(comentario);
         $('#saco-gestacional-mm').val($('#saco').val());
         $('#lcn-informe').val($('#lcn').val());
-        $('#saco-vitelino').on("click", function() {
-            if ($(this).val() == 'presente') {
-                $('#valor-saco-vitelino').css('display', 'block');
-            } else {
-                $('#valor-saco-vitelino').css('display', 'none');
-                $('#valor-saco-vitelino').val('');
-            }
-        });
-        $('#saco-vitelino').trigger('click');
-        $('#exploracion-douglas').on("click", function() {
-            if ($(this).val() == 'ocupado') {
-                $('#exploracion-douglas-informe').css('display', 'block');
-            } else {
-                $('#exploracion-douglas-informe').css('display', 'none');
-            }
-        });
-        $('#exploracion-douglas').trigger('click');
-        $('#embrion').on("click", function() {
-            if ($(this).val() == 'no se observa aun' || $(this).val() == 'act. no evidenciable') {
-                $('#fcf-primer-trim').css('display', 'none');
-                $('#fcf-primer-trim').val('');
-                $('#lcn-informe').css('display', 'none');
-                $('#lcn-informe').val('');
-            } else if ($(this).val() == 'act. cardiaca evidenciable') {
-                $('#fcf-prim').val($("#fcf-prim option:first").val());
-                $('#lcn-informe').css('display', 'none');
-                $('#lcn-informe').val($('#lcn').val());
-            } else if ($(this).val() == 'act. card. y Corp. (-)') {
-                $('#lcn-informe').css('display', 'block');
-                $('#lcn-informe').val($('#lcn').val());
-            } else {
-                $('#fcf-primer-trim').css('display', 'block');
-                $('#lcn-informe').css('display', 'block');
-                $('#lcn-informe').val($('#lcn').val());
-            }
-        });
-        $('#embrion').trigger('click');
         $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver Impresion</button>");
         $('#impDoppler1').on("click", function() {
             crearInformeEcoPrimTrim();
