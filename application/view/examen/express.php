@@ -9,12 +9,12 @@
                         <h1 class="text-center mb-4">¿Qué desea realizar?</h1>
                         <div class="row justify-content-md-center pb-2">
                             <div class="col-3 border border-primary rounded mr-1">
-                                <h3 class="card-title text-primary">Exámen paciente virtual</h3>
-                                <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.examen"><i class="fas fa-male"></i> Ir al exámen</button>
+                                <h3 class="card-title text-primary text-center">Exámen paciente virtual</h3>
+                                <button type="button" class="btn btn-outline-secondary d-block mx-auto" id="step.examen"><i class="fas fa-male"></i> Ir al exámen</button>
                             </div>
                             <div class="col-3 border border-primary rounded mr-1">
                                 <h3 class="card-title text-primary">Ingresar nuevo paciente</h3>
-                                <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.new"><i class="fas fa-user-circle my-2"></i> Ir al exámen</button>
+                                <button type="button" class="btn btn-outline-secondary d-block mx-auto" id="step.new"><i class="fas fa-user-circle my-2"></i> Ir al exámen</button>
                             </div>
                             <div class="col-4 border border-primary rounded">
                                 <h3 class="card-title text-primary">Buscar paciente</h3>
