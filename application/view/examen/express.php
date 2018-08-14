@@ -7,7 +7,7 @@
                     <div id="step-two-find">
                         <h6 class="text-center text-secondary">Paso 1</h6>
                         <h1 class="text-center mb-4">¿Qué desea realizar?</h1>
-                        <div class="row justify-content-md-center">
+                        <div class="row justify-content-md-center pb-2">
                             <div class="col-3 border border-primary rounded mr-1">
                                 <h3 class="card-title text-primary">Exámen paciente virtual</h3>
                                 <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.examen"><i class="fas fa-male"></i> Ir al exámen</button>
