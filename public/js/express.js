@@ -7,6 +7,7 @@ $(document).ready(function() {
     $("body").css("background", "linear-gradient(#c2e5e8, #e9f6f8)").addClass("h-100");
     appClean();
     appLoadBasic();
+    document.location.hash ="#paciente";
 });
 
 //$(window).scroll(function(){
