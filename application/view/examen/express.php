@@ -425,7 +425,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-9">
-                                                <p class="card-title text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</p>
+                                                <p class="card-title text-left mb-4">¿Consentimiento informado para eventual uso en investigación?</p>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
