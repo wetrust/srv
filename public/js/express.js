@@ -7,7 +7,7 @@ $(document).ready(function() {
     $("body").css("background", "linear-gradient(#c2e5e8, #e9f6f8)").addClass("h-100");
     appClean();
     appLoadBasic();
-    location.replace(serverURL + "#paciente");
+    location.replace(serverURL + "examen/express#paciente");
 });
 //$(window).scroll(function(){
 //    let a = $(window).scrollTop();
