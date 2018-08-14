@@ -8,8 +8,14 @@ $(document).ready(function() {
     appClean();
     appLoadBasic();
     document.location.hash ="#paciente";
+
+    var deletingAll = browser.history.deleteAll();
+    deletingAll.then(onDeleteAll);
 });
 
+function onDeleteAll() {
+    console.log("Deleted all history");
+}
 //$(window).scroll(function(){
 //    let a = $(window).scrollTop();
 //    let b = 0;
