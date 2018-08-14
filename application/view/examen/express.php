@@ -633,11 +633,7 @@
 </div>
 <div class="container" id="imagenesDicom" style="display:none;">
     <div class="row">
-        <div class="col pr-0">
-            <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-        </div>
-        <div class="col col-sm-10 pl-0 mt-sm-4">
-            <h6 class="text-secondary mt-2">Imágenes ecográficas</h6>
+        <div class="col">
             <h4 class="mb-0" id="paciente.nombre.imagenes">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.imagenes.basico.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
@@ -813,11 +809,7 @@
 </div>
 <div class="container h-100" id="ecoObsPrimTrim" style="display:none;">
     <div class="row">
-        <div class="col pr-0">
-            <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-        </div>
-        <div class="col col-sm-10 pl-0 mt-sm-4">
-            <h6 class="text-secondary mt-2">Ecografía Obstétrica de 1° Trimestre</h6>
+        <div class="col">
             <h4 class="mb-0" id="paciente.nombre.eco.prim">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.eco.prim.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
@@ -1459,11 +1451,7 @@
 </div>
 <div class="container" id="ecoObsSegTrim" style="display:none;">
     <div class="row">
-        <div class="col pr-0">
-            <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-        </div>
-        <div class="col col-sm-10 pl-0 mt-sm-4">
-            <h6 class="text-secondary mt-2">Ecografía Obstétrica de 2° / 3° trimestre</h6>
+        <div class="col">
             <h4 class="mb-0" id="paciente.nombre.eco.segundo">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.eco.segundo.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
@@ -1940,11 +1928,7 @@
 </div>
 <div class="container" id="ecoDoppler" style="display:none;">
     <div class="row">
-        <div class="col pr-0">
-            <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-        </div>
-        <div class="col col-sm-10 pl-0 mt-sm-4">
-            <h6 class="text-secondary mt-2">Ecografía Doppler Materno fetal</h6>
+        <div class="col">
             <h4 class="mb-0" id="paciente.nombre.eco.doppler">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.eco.doppler.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
