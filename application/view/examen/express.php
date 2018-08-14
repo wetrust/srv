@@ -1265,14 +1265,12 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-secondary" id="boton.eco.segundo.nuevo">Nuevo</button><button type="button" class="btn btn-secondary" id="boton.eco.segundo.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.segundo.eliminar">Eliminar</button>
+                    <button type="button" class="btn btn-secondary" id="boton.eco.segundo.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.segundo.eliminar">Eliminar</button>
                     </div>
                     <hr>
-                    <h6 class="text-center my-2">Informes</h6>
+                    <h6 class="text-center my-2">Gráficas</h6>
                     <div class="btn-group-vertical d-flex justify-content-center">
-                        <button type="button" class="btn btn-info" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
                         <button type="button" class="btn btn-info" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-info" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
                         <button type="button" class="btn btn-info" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
                         <button type="button" class="btn btn-info d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
@@ -1504,6 +1502,13 @@
                         </div>
                         <div class="col mb-2">
                             <button type="button" class="btn btn-outline-info" id="graficoCerebelo"><i class="fas fa-chart-bar"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><button type="button" class="btn btn-secondary d-none" id="boton.eco.segundo.guardar">Guardar</button>
+                            <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
+                            <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Ir a hoja 2 (para Informe crecimiento)</button>
+                            <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Ir a hoja 2 (para Informe edad gestacional)</button>
                         </div>
                     </div>
                 </div>
