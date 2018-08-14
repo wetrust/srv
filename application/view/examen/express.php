@@ -8,15 +8,15 @@
                         <h6 class="text-center text-secondary">Paso 1</h6>
                         <h1 class="text-center mb-4">¿Qué desea realizar?</h1>
                         <div class="row">
-                            <div class="col border border-primary">
+                            <div class="col-3 border border-primary">
                                 <h3 class="card-title text-primary">Exámen paciente virtual</h3>
                                 <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.examen"><i class="fas fa-male"></i> Ir</button>
                             </div>
-                            <div class="col border border-primary">
+                            <div class="col-3 border border-primary">
                                 <h3 class="card-title text-primary">Ingresar nuevo paciente</h3>
                                 <button type="button" class="btn btn btn-outline-secondary mb-4" id="step.new"><i class="fas fa-user-circle my-2"></i> Ir</button>
                             </div>
-                            <div class="col border border-primary">
+                            <div class="col-4 border border-primary">
                                 <h3 class="card-title text-primary">Buscar paciente</h3>
                                 <div class="row">
                                     <div class="form-group col">
