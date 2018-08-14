@@ -859,369 +859,374 @@
             </div>
         </div>
         <div class="col-12 col-sm-9">
-        <ul class="nav nav-tabs" id="tab.eco.prim.trim" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Medidas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Informe</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="tab.body.eco.prim.trim">
-            <div class="tab-pane fade show active" id="medidas-eco-prim" role="tabpanel">
-                <div class="form-group row">
-                    <div class="col-6 col-sm-3">
-                        <label for="fee" class="col-form-label">Fecha de exámen</label>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <input class="form-control" type="text" data-date-format="dd/mm/yyyy" id="input.paciente.fe.ecoprim" disabled>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <label for="fee" class="col-form-label">EG al exámen</label>
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" id="eco.prim.eg" readonly>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-md-12 col-lg-3 mb-2">
-                        <label for="lcn">Medida del embrión</label>
-                    </div>
-                    <div class="col-md-12 col-lg-3 mb-2">
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <input type="text" class="form-control" id="lcn">
-                            <div class="input-group-append"><div class="input-group-text">mm</div></div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-3 mb-2">
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">E.G. x LCN</div>
-                            </div>
-                            <input type="text" class="form-control" id="lcnPct" readonly>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-outline-info" id="graficoLcn"><i class="fas fa-chart-bar"></i></button>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-md-12 col-lg-3 mb-2">
-                        <label for="saco">Promedio Saco Gestacional</label>
-                    </div>
-                    <div class="col-md-12 col-lg-3 mb-2">
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <input type="text" class="form-control" id="saco">
-                            <div class="input-group-append"><div class="input-group-text">mm</div></div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-3 mb-2">
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">E.G. x Saco</div>
-                            </div>
-                            <input type="text" class="form-control" id="sacoPct" readonly>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-outline-info" id="graficoSaco"><i class="fas fa-chart-bar"></i></button>
-                    </div>
-                </div>
-                <div class="form-group row mt-3" id="resultadoAjusteEcoPrimTrim" style="display:none;">
-                    <div class="col-12">
-                        <div class="alert alert-info" role="alert">
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <h6 class="text-center">Cálculos por FUM materna referida</h6>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
-                                            </div>
-                                            <input type="text" class="form-control" id="furReferida" readonly="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>                                            
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                                            </div>
-                                            <input type="text" class="form-control" id="egReferida" readonly="">
-                                            <div class="input-group-append">
-                                                <div class="input-group-text">semanas</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
-                                            </div>
-                                            <input type="text" class="form-control" id="fppReferida" readonly="">
-                                        </div>
-                                    </div>
+            <ul class="nav nav-tabs" id="tab.eco.prim.trim" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Medidas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Informe</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="tab.body.eco.prim.trim">
+                <div class="tab-pane fade show active" id="medidas-eco-prim" role="tabpanel">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <div class="col-6 col-sm-3">
+                                    <label for="fee" class="col-form-label">Fecha de exámen</label>
                                 </div>
-                                <div class="col">
-                                    <h6 class="text-center">Cálculos por ajuste ecográfico</h6>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput"><strong>FUM</strong> Ajustada</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
-                                            </div>
-                                            <input type="text" class="form-control" id="furAjustada" readonly="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput2"><strong>EG</strong> ajustada</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                                            </div>
-                                            <input type="text" class="form-control" id="egAjustada" readonly="">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">semanas</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput2"><strong>FPP</strong> Ajustada</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
-                                            </div>
-                                            <input type="text" class="form-control" id="fppAjustada" readonly="">
-                                        </div>
-                                    </div>
+                                <div class="col-6 col-sm-3">
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" id="input.paciente.fe.ecoprim" disabled>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <label for="fee" class="col-form-label">EG al exámen</label>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" onfocus="blur();" id="eco.prim.eg" readonly>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="alert alert-info" role="alert">
-                            <p class="mb-0"><span id="diferenciaEcoPrimTrim">Diferencia observada entre edad gestacional por FUM referida y edad gestacional por exámen ecografico es de 0 días.</span> Rango de tolerancia para diferencia entre edad esperada por FUM y obtenida por exámen ecográfico, para las semanas 8 a 10 es de ± 3 días.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group row alert alert-info" id="preguntaAjusteEcoPrimTrim" style="display:none;">
-                    <div class="col">
-                        <p>¿Necesita realizar ajuste a la edad gestacional?</p>
-                    </div>
-                    <div class="col-3">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-primary active" id="ajuste.primtrim.no"><input type="radio" name="ajustarEcoPrimTrim" value="0" checked=""> NO</label>
-                            <label class="btn btn-outline-primary"><input type="radio" name="ajustarEcoPrimTrim" value="1"> SI</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group row alert alert-info">
-                    <div class="col-1">
-                        <img src="<?php echo Config::get('URL'); ?>img/tn.jpeg" class="img-fluid" alt="feto con translucencia">
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )<br><small>Gentileza Dr. Francisco Guerra B. Universidad Austral de Chile</small></p>
-                            </div>
-                            <div class="col-3">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-primary active" id="evaluacion.translucencia.no"><input type="radio" name="radio_translucencia" value="0" checked=""> NO</label>
-                                    <label class="btn btn-outline-primary"><input type="radio" name="radio_translucencia" value="1"> SI</label>
+                            <div class="form-group row">
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <label for="lcn">Medida del embrión</label>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="text-right"><small>¡¡El Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo!!</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group row d-none" id="examen.eco.primtrim.adicionales">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="formGroupExampleInput">Edad Materna</label>
-                                    <select class="form-control" id="edadmaternaprimtrim">
-                                        <option value="14">14 años</option>
-                                        <option value="15">15 años</option>
-                                        <option value="16">16 años</option>
-                                        <option value="17">17 años</option>
-                                        <option value="18">18 años</option>
-                                        <option value="19">19 años</option>
-                                        <option value="20" selected>20 años</option>
-                                        <option value="21">21 años</option>
-                                        <option value="22">22 años</option>
-                                        <option value="23">23 años</option>
-                                        <option value="24">24 años</option>
-                                        <option value="25">25 años</option>
-                                        <option value="26">26 años</option>
-                                        <option value="27">27 años</option>
-                                        <option value="28">28 años</option>
-                                        <option value="29">29 años</option>
-                                        <option value="30">30 años</option>
-                                        <option value="31">31 años</option>
-                                        <option value="32">32 años</option>
-                                        <option value="33">33 años</option>
-                                        <option value="34">34 años</option>
-                                        <option value="35">35 años</option>
-                                        <option value="36">36 años</option>
-                                        <option value="37">37 años</option>
-                                        <option value="38">38 años</option>
-                                        <option value="39">39 años</option>
-                                        <option value="40">40 años</option>
-                                        <option value="41">41 años</option>
-                                        <option value="42">42 años</option>
-                                        <option value="43">43 años</option>
-                                        <option value="44">44 años</option>
-                                        <option value="45">45 años</option>
-                                        <option value="46">46 años</option>
-                                        <option value="47">47 años</option>
-                                        <option value="48">48 años</option>
-                                        <option value="49">49 años</option>
-                                        <option value="50">50 años</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="formGroupExampleInput">Longitud cefalo caudal (45 a 84 mm)</label>
-                                    <select class="form-control" id="loncefalocaudal">
-                                        <option value="45">45 mm</option>
-                                        <option value="46">46 mm</option>
-                                        <option value="47">47 mm</option>
-                                        <option value="48">48 mm</option>
-                                        <option value="49">49 mm</option>
-                                        <option value="50">50 mm</option>
-                                        <option value="51">51 mm</option>
-                                        <option value="52">52 mm</option>
-                                        <option value="53">53 mm</option>
-                                        <option value="54">54 mm</option>
-                                        <option value="55">55 mm</option>
-                                        <option value="56">56 mm</option>
-                                        <option value="57">57 mm</option>
-                                        <option value="58">58 mm</option>
-                                        <option value="59">59 mm</option>
-                                        <option value="60">60 mm</option>
-                                        <option value="61">61 mm</option>
-                                        <option value="62">62 mm</option>
-                                        <option value="63">63 mm</option>
-                                        <option value="64">64 mm</option>
-                                        <option value="65">65 mm</option>
-                                        <option value="66">66 mm</option>
-                                        <option value="67">67 mm</option>
-                                        <option value="68">68 mm</option>
-                                        <option value="69">69 mm</option>
-                                        <option value="70">70 mm</option>
-                                        <option value="71">71 mm</option>
-                                        <option value="72">72 mm</option>
-                                        <option value="73">73 mm</option>
-                                        <option value="74">74 mm</option>
-                                        <option value="75">75 mm</option>
-                                        <option value="76">76 mm</option>
-                                        <option value="77">77 mm</option>
-                                        <option value="78">78 mm</option>
-                                        <option value="79">79 mm</option>
-                                        <option value="80">80 mm</option>
-                                        <option value="81">81 mm</option>
-                                        <option value="82">82 mm</option>
-                                        <option value="83">83 mm</option>
-                                        <option value="84">84 mm</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="formGroupExampleInput">Translucidez Nucal</label>
+                                <div class="col-md-12 col-lg-3 mb-2">
                                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
-                                        <input type="text" class="form-control" id="translunucal" value="1">
+                                        <input type="text" class="form-control" id="lcn">
+                                        <div class="input-group-append"><div class="input-group-text">mm</div></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">E.G. x LCN</div>
+                                        </div>
+                                        <input type="text" class="form-control" id="lcnPct" readonly>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-info" id="graficoLcn"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <label for="saco">Promedio Saco Gestacional</label>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="saco">
+                                        <div class="input-group-append"><div class="input-group-text">mm</div></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">E.G. x Saco</div>
+                                        </div>
+                                        <input type="text" class="form-control" id="sacoPct" readonly>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-info" id="graficoSaco"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row mt-3" id="resultadoAjusteEcoPrimTrim" style="display:none;">
+                                <div class="col-12">
+                                    <div class="alert alert-info" role="alert">
+                                        <div class="row mt-3">
+                                            <div class="col">
+                                                <h6 class="text-center">Cálculos por FUM materna referida</h6>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="furReferida" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>                                            
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="egReferida" readonly="">
+                                                        <div class="input-group-append">
+                                                            <div class="input-group-text">semanas</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="fppReferida" readonly="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <h6 class="text-center">Cálculos por ajuste ecográfico</h6>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput"><strong>FUM</strong> Ajustada</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="furAjustada" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput2"><strong>EG</strong> ajustada</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="egAjustada" readonly="">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">semanas</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput2"><strong>FPP</strong> Ajustada</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="fppAjustada" readonly="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="alert alert-info" role="alert">
+                                        <p class="mb-0"><span id="diferenciaEcoPrimTrim">Diferencia observada entre edad gestacional por FUM referida y edad gestacional por exámen ecografico es de 0 días.</span> Rango de tolerancia para diferencia entre edad esperada por FUM y obtenida por exámen ecográfico, para las semanas 8 a 10 es de ± 3 días.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <label for="formGroupExampleInput">¿Ha tenido algun hijo con trisomia 21?</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="trisomia" id="examen.eco.primtrim.adicionales.translucencia.trisomia.no" value="false" checked>
-                                    <label class="form-check-label" for="examen.eco.primtrim.adicionales.translucencia.trisomia.no">No</label>
+                            <div class="form-group row alert alert-info" id="preguntaAjusteEcoPrimTrim" style="display:none;">
+                                <div class="col">
+                                    <p>¿Necesita realizar ajuste a la edad gestacional?</p>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="trisomia" id="examen.eco.primtrim.adicionales.translucencia.trisomia.si" value="true">
-                                    <label class="form-check-label" for="examen.eco.primtrim.adicionales.translucencia.trisomia.si">Si</label>
+                                <div class="col-3">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-outline-primary active" id="ajuste.primtrim.no"><input type="radio" name="ajustarEcoPrimTrim" value="0" checked=""> NO</label>
+                                        <label class="btn btn-outline-primary"><input type="radio" name="ajustarEcoPrimTrim" value="1"> SI</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button class="btn btn-primary mb-2" id="primtrim.adicionales.translucencia">Calcular riesgo por TN</button>
+                            <div class="form-group row alert alert-info">
+                                <div class="col-1">
+                                    <img src="<?php echo Config::get('URL'); ?>img/tn.jpeg" class="img-fluid" alt="feto con translucencia">
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>Evaluacion adicional de TN ( aplica para LCN de 45 a 84 mm )<br><small>Gentileza Dr. Francisco Guerra B. Universidad Austral de Chile</small></p>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-outline-primary active" id="evaluacion.translucencia.no"><input type="radio" name="radio_translucencia" value="0" checked=""> NO</label>
+                                                <label class="btn btn-outline-primary"><input type="radio" name="radio_translucencia" value="1"> SI</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="text-right"><small>¡¡El Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo!!</small></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col d-none" id="prob">
-                                <table class="table">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col">Trisomias</th>
-                                            <th scope="col">Riesgo a priori</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th>Trisomia 21</th>
-                                            <td id="trisomia.priori.veintiuno"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Trisomia 18</th>
-                                            <td id="trisomia.priori.diesiocho"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Trisomia 13</th>
-                                            <td id="trisomia.priori.trece"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col d-none" id="prob2">
-                                <table class="table">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col">Trisomias</th>
-                                            <th scope="col">Riesgo post - test</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th>Trisomia 21</th>
-                                            <td id="trisomia.translucidez.veintiuno"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Trisomia 18</th>
-                                            <td id="trisomia.translucidez.diesiocho"></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Trisomia 13</th>
-                                            <td id="trisomia.translucidez.trece"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="form-group row d-none" id="examen.eco.primtrim.adicionales">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Edad Materna</label>
+                                                <select class="form-control" id="edadmaternaprimtrim">
+                                                    <option value="14">14 años</option>
+                                                    <option value="15">15 años</option>
+                                                    <option value="16">16 años</option>
+                                                    <option value="17">17 años</option>
+                                                    <option value="18">18 años</option>
+                                                    <option value="19">19 años</option>
+                                                    <option value="20" selected>20 años</option>
+                                                    <option value="21">21 años</option>
+                                                    <option value="22">22 años</option>
+                                                    <option value="23">23 años</option>
+                                                    <option value="24">24 años</option>
+                                                    <option value="25">25 años</option>
+                                                    <option value="26">26 años</option>
+                                                    <option value="27">27 años</option>
+                                                    <option value="28">28 años</option>
+                                                    <option value="29">29 años</option>
+                                                    <option value="30">30 años</option>
+                                                    <option value="31">31 años</option>
+                                                    <option value="32">32 años</option>
+                                                    <option value="33">33 años</option>
+                                                    <option value="34">34 años</option>
+                                                    <option value="35">35 años</option>
+                                                    <option value="36">36 años</option>
+                                                    <option value="37">37 años</option>
+                                                    <option value="38">38 años</option>
+                                                    <option value="39">39 años</option>
+                                                    <option value="40">40 años</option>
+                                                    <option value="41">41 años</option>
+                                                    <option value="42">42 años</option>
+                                                    <option value="43">43 años</option>
+                                                    <option value="44">44 años</option>
+                                                    <option value="45">45 años</option>
+                                                    <option value="46">46 años</option>
+                                                    <option value="47">47 años</option>
+                                                    <option value="48">48 años</option>
+                                                    <option value="49">49 años</option>
+                                                    <option value="50">50 años</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Longitud cefalo caudal (45 a 84 mm)</label>
+                                                <select class="form-control" id="loncefalocaudal">
+                                                    <option value="45">45 mm</option>
+                                                    <option value="46">46 mm</option>
+                                                    <option value="47">47 mm</option>
+                                                    <option value="48">48 mm</option>
+                                                    <option value="49">49 mm</option>
+                                                    <option value="50">50 mm</option>
+                                                    <option value="51">51 mm</option>
+                                                    <option value="52">52 mm</option>
+                                                    <option value="53">53 mm</option>
+                                                    <option value="54">54 mm</option>
+                                                    <option value="55">55 mm</option>
+                                                    <option value="56">56 mm</option>
+                                                    <option value="57">57 mm</option>
+                                                    <option value="58">58 mm</option>
+                                                    <option value="59">59 mm</option>
+                                                    <option value="60">60 mm</option>
+                                                    <option value="61">61 mm</option>
+                                                    <option value="62">62 mm</option>
+                                                    <option value="63">63 mm</option>
+                                                    <option value="64">64 mm</option>
+                                                    <option value="65">65 mm</option>
+                                                    <option value="66">66 mm</option>
+                                                    <option value="67">67 mm</option>
+                                                    <option value="68">68 mm</option>
+                                                    <option value="69">69 mm</option>
+                                                    <option value="70">70 mm</option>
+                                                    <option value="71">71 mm</option>
+                                                    <option value="72">72 mm</option>
+                                                    <option value="73">73 mm</option>
+                                                    <option value="74">74 mm</option>
+                                                    <option value="75">75 mm</option>
+                                                    <option value="76">76 mm</option>
+                                                    <option value="77">77 mm</option>
+                                                    <option value="78">78 mm</option>
+                                                    <option value="79">79 mm</option>
+                                                    <option value="80">80 mm</option>
+                                                    <option value="81">81 mm</option>
+                                                    <option value="82">82 mm</option>
+                                                    <option value="83">83 mm</option>
+                                                    <option value="84">84 mm</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Translucidez Nucal</label>
+                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                    <div class="input-group-append"><div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div></div>
+                                                    <input type="text" class="form-control" id="translunucal" value="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="formGroupExampleInput">¿Ha tenido algun hijo con trisomia 21?</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="trisomia" id="examen.eco.primtrim.adicionales.translucencia.trisomia.no" value="false" checked>
+                                                <label class="form-check-label" for="examen.eco.primtrim.adicionales.translucencia.trisomia.no">No</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="trisomia" id="examen.eco.primtrim.adicionales.translucencia.trisomia.si" value="true">
+                                                <label class="form-check-label" for="examen.eco.primtrim.adicionales.translucencia.trisomia.si">Si</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-primary mb-2" id="primtrim.adicionales.translucencia">Calcular riesgo por TN</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col d-none" id="prob">
+                                            <table class="table">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col">Trisomias</th>
+                                                        <th scope="col">Riesgo a priori</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Trisomia 21</th>
+                                                        <td id="trisomia.priori.veintiuno"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Trisomia 18</th>
+                                                        <td id="trisomia.priori.diesiocho"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Trisomia 13</th>
+                                                        <td id="trisomia.priori.trece"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col d-none" id="prob2">
+                                            <table class="table">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col">Trisomias</th>
+                                                        <th scope="col">Riesgo post - test</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Trisomia 21</th>
+                                                        <td id="trisomia.translucidez.veintiuno"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Trisomia 18</th>
+                                                        <td id="trisomia.translucidez.diesiocho"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Trisomia 13</th>
+                                                        <td id="trisomia.translucidez.trece"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane fade" id="informe-eco-prim" role="tabpanel">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
-                                <button class="btn btn-info d-block mx-auto" type="button" id="modalPreInfEcoPrimTrim">Ir a hoja 2</button>
+                <div class="tab-pane fade" id="informe-eco-prim" role="tabpanel">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
+                                    <button class="btn btn-info d-block mx-auto" type="button" id="modalPreInfEcoPrimTrim">Ir a hoja 2</button>
+                                </div>
                             </div>
                         </div>
                     </div>
