@@ -855,11 +855,6 @@
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                         <button type="button" class="btn btn-secondary" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary" id="boton.eco.prim.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.prim.eliminar">Eliminar</button>
                     </div>
-                    <hr>
-                    <h6 class="text-center my-2">Informes</h6>
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-info" type="button" id="modalPreInfEcoPrimTrim">Reporte ecografía</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1213,6 +1208,12 @@
                                     </table>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
+                            <button class="btn btn-info d-block mx-auto" type="button" id="modalPreInfEcoPrimTrim">Ir a hoja 2</button>
                         </div>
                     </div>
                 </div>
