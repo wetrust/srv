@@ -4103,7 +4103,7 @@ $(document).ready(function() {
                     ipau = ipau.replace(",", ".");
                     ipau = parseFloat(ipau);
 
-                    if (ipau > 1) {
+                    if (ipau > 0) {
                         for (i = 20; i <= edadGest; i++) {
                             data.push({
                                 y: 0,
