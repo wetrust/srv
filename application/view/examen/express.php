@@ -18,23 +18,14 @@
                             </div>
                             <div class="col">
                                 <h3 class="card-title text-primary">Buscar paciente</h3>
-                                <div class="form-group row">
-                                    <div class="col-12 col-sm-6">
-                                        <label for="buscar.paciente.id" class="col-form-label"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control" id="buscar.paciente.id">
-                                    </div>
+                                <div class="form-group">
+                                    <label for="buscar.paciente.id" class="col-form-label"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
+                                    <input type="text" class="form-control" id="buscar.paciente.id">
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-12 col-sm-6">
-                                        <label for="buscar.paciente.apellido" class="col-form-label"><strong>Apellidos</strong></label>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control" id="buscar.paciente.apellido" list="apellidos">
-                                        <datalist id="apellidos">
-                                        </datalist>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="buscar.paciente.apellido" class="col-form-label"><strong>Apellidos</strong></label>
+                                    <input type="text" class="form-control" id="buscar.paciente.apellido" list="apellidos">
+                                    <datalist id="apellidos"></datalist>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
