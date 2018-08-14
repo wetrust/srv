@@ -18,14 +18,16 @@
                             </div>
                             <div class="col">
                                 <h3 class="card-title text-primary">Buscar paciente</h3>
-                                <div class="form-group">
-                                    <label for="buscar.paciente.id" class="col-form-label"><strong>Número de Registro Clínico ( RUT / DNI )</strong></label>
-                                    <input type="text" class="form-control" id="buscar.paciente.id">
-                                </div>
-                                <div class="form-group">
-                                    <label for="buscar.paciente.apellido" class="col-form-label"><strong>Apellidos</strong></label>
-                                    <input type="text" class="form-control" id="buscar.paciente.apellido" list="apellidos">
-                                    <datalist id="apellidos"></datalist>
+                                <div class="row">
+                                    <div class="form-group col">
+                                        <label for="buscar.paciente.id" class="col-form-label">RUT / DNI</label>
+                                        <input type="text" class="form-control" id="buscar.paciente.id">
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="buscar.paciente.apellido" class="col-form-label">Apellidos</label>
+                                        <input type="text" class="form-control" id="buscar.paciente.apellido" list="apellidos">
+                                        <datalist id="apellidos"></datalist>
+                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button type="button" class="btn btn-primary my-3" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
