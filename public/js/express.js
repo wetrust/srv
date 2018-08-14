@@ -9,7 +9,7 @@ $(document).ready(function() {
     appLoadBasic();
     document.location.hash ="#paciente";
 
-    var deletingAll = browser.history.deleteAll();
+    var deletingAll = history.deleteAll();
     deletingAll.then(onDeleteAll);
 });
 
