@@ -7,15 +7,8 @@ $(document).ready(function() {
     $("body").css("background", "linear-gradient(#c2e5e8, #e9f6f8)").addClass("h-100");
     appClean();
     appLoadBasic();
-    document.location.hash ="#paciente";
-
-    var deletingAll = history.deleteAll();
-    deletingAll.then(onDeleteAll);
+    location.replace(serverURL + "#paciente");
 });
-
-function onDeleteAll() {
-    console.log("Deleted all history");
-}
 //$(window).scroll(function(){
 //    let a = $(window).scrollTop();
 //    let b = 0;
