@@ -30,7 +30,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-primary" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
+                                    <button type="button" class="btn btn-primary mb-1" id="buscar.paciente.action"><i class="fas fa-search"></i> Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                                     <div class="card-body">
                                         <div class="row mb-3">
                                             <div class="col-9">
-                                                <h5 class="card-title text-primary text-left mt-2">Configuración de datos para variable de uso habitual (Opcional)</h5>
+                                                <h5 class="card-title text-left mt-2">Configuración de datos para variable de uso habitual (Opcional)</h5>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -55,7 +55,7 @@
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-9">
-                                                <h5 class="card-title text-primary text-left mt-2 mb-4">Información útil para reporte de informe y / o graficas (Opcional)</h5>
+                                                <h5 class="card-title text-left mt-2 mb-4">Información útil para reporte de informe y / o graficas (Opcional)</h5>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -425,7 +425,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-9">
-                                                <h5 class="card-title text-primary text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</h5>
+                                                <h5 class="card-title text-left mt-2 mb-4">¿Consentimiento informado para eventual uso en investigación?</h5>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
