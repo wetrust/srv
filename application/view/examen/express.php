@@ -642,13 +642,6 @@
             <h6 class="text-info" id="paciente.nombre.imagenes.basico.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
     </div>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Imágenes Ecográficas</li>
-                    <li class="ml-auto"><a href="#tipoExamen" class="text-center text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
-                </ol>
-            </nav>
             <h4>Imágenes Disponibles</h4>
             <hr>
             <div class="row">
@@ -685,21 +678,11 @@
         </div>
 <div class="container" id="tipoExamen" style="display:none;">
     <div class="row">
-        <div class="col pr-0">
-            <img class="d-flex justify-content-center" src="<?php echo Config::get('URL'); ?>img/ic_launcher-web.png" alt="logo" style="max-width: 128px;">
-        </div>
-        <div class="col col-sm-10 pl-0 mt-sm-4">
-            <h6 class="text-secondary mt-2">Información para el exámen</h6>
+        <div class="col">
             <h4 class="mb-0" id="paciente.nombre.eco.elegir">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.eco.elegir.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
     </div>        
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Tipo de exámen</li>
-        </ol>
-    </nav>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-3">
@@ -839,14 +822,6 @@
             <h6 class="text-info" id="paciente.nombre.eco.prim.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
     </div>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica</li>
-            <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
-        </ol>
-    </nav>
     <div class="row">
         <div class="col-12 col-sm-3 order-sm-1">
             <div class="card">
@@ -1493,15 +1468,6 @@
             <h6 class="text-info" id="paciente.nombre.eco.segundo.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
     </div>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ecografía Obstétrica 2do 3er trim</li>
-            <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
-        </ol>
-    </nav>
-    <hr style="border-color:rgba(0, 0, 0, 0.36);">
     <div class="row">
         <div class="col-12 col-sm-3 order-sm-1">
             <div class="card position-fixed" id="ecoObsSegTrimMenu">
@@ -1983,15 +1949,6 @@
             <h6 class="text-info" id="paciente.nombre.eco.doppler.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
     </div>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>examen/express">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#tipoExamen">Elija tipo de exámen ecográfico</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ecografía Doppler</li>
-            <li class="ml-auto"><a href="#tipoExamen" class="text-danger"><i class="fas fa-door-open"></i> Volver</a></li>
-        </ol>
-    </nav>
-    <hr style="border-color:rgba(0, 0, 0, 0.36);">
     <div class="row">
         <div class="col-12 col-sm-3 order-sm-1">
             <div class="card position-fixed" id="ecoDopplerMenu">
