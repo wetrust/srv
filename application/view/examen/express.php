@@ -13,11 +13,11 @@
                                 <button type="button" class="btn btn-outline-secondary d-block mx-auto" id="step.examen"><i class="fas fa-male"></i> Ir al exámen</button>
                             </div>
                             <div class="col-3 border border-primary rounded mr-1">
-                                <h3 class="card-title text-primary">Ingresar nuevo paciente</h3>
+                                <h3 class="card-title text-primary text-center">Ingresar nuevo paciente</h3>
                                 <button type="button" class="btn btn-outline-secondary d-block mx-auto" id="step.new"><i class="fas fa-user-circle my-2"></i> Ir al exámen</button>
                             </div>
                             <div class="col-4 border border-primary rounded">
-                                <h3 class="card-title text-primary">Buscar paciente</h3>
+                                <h3 class="card-title text-primary text-center">Buscar paciente</h3>
                                 <div class="row">
                                     <div class="form-group col">
                                         <label for="buscar.paciente.id" class="col-form-label">RUT / DNI</label>
