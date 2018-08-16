@@ -808,8 +808,9 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-secondary" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.prim.eliminar">Eliminar</button>
+                        <button type="button" class="btn btn-default" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-default d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-default" id="boton.eco.prim.eliminar">Eliminar</button>
                     </div>
+                    <button class="btn btn-default" type="button" id="modalPreInfEcoPrimTrim">Informe</button>
                 </div>
             </div>
         </div>
@@ -1405,12 +1406,6 @@
                             <div class='form-group'>
                                 <p><strong>Comentarios adicionales <small>(Adicionar comentarios del examinador)</small></strong> </p>
                                 <textarea id='comentarios-eco-uno' rows='3' class='form-control'></textarea>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
-                                    <button class="btn btn-info d-block mx-auto" type="button" id="modalPreInfEcoPrimTrim">Ir a hoja 2</button>
-                                </div>
                             </div>
                         </div>
                     </div>
