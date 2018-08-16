@@ -1456,6 +1456,11 @@
                         <button type="button" class="btn btn-default" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
                         <button type="button" class="btn btn-default d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
+                    <div class="btn-group-vertical d-flex justify-content-center">
+                        <button type="button" class="btn btn-default d-none" id="boton.eco.segundo.guardar">Guardar</button>
+                        <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Informe crecimiento</button>
+                        <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1694,13 +1699,6 @@
                                 </div>
                                 <div class="col mb-2">
                                     <button type="button" class="btn btn-outline-info" id="graficoCerebelo"><i class="fas fa-chart-bar"></i></button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col"><button type="button" class="btn btn-secondary d-none" id="boton.eco.segundo.guardar">Guardar</button>
-                                    <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
-                                    <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Ir a hoja 2 (para Informe crecimiento)</button>
-                                    <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Ir a hoja 2 (para Informe edad gestacional)</button>
                                 </div>
                             </div>
                         </div>
