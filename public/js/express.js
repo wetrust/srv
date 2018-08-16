@@ -1429,6 +1429,7 @@ $(document).ready(function() {
                 $('#bvmEcoDos').val($('#bvm').val()).trigger('change');
                 $('#ev-morfo').trigger('change');
                 crearInformeEcoSegTrim2();
+                $('#popupGenerico').modal('hide');
             });
             $("#infEcoObsSegTrim2verSi").on("click", function() {
                 $('#popupGenerico').modal('hide');
