@@ -1243,7 +1243,7 @@
                                     </div>
                                 </div>
                                 <div class='col'>
-                                    <div id='valor-saco-vitelino' class='form-group'>
+                                    <div id='valor-saco-vitelino' class='form-group' style="display: none;">
                                         <label>Medida de saco vitelino</label>
                                         <div class='input-group'>
                                             <input id='saco-vitelino-mm' type='text' class='form-control'>
@@ -1269,11 +1269,11 @@
                                 <div class='col-2'>
                                     <div class='form-group'>
                                         <label>mm</label>
-                                        <input type='text' class='form-control' id='lcn-informe' readonly>
+                                        <input type='text' class='form-control' style="display: none;" id='lcn-informe' readonly>
                                     </div>
                                 </div>
                                 <div class='col'>
-                                    <div class='form-group' id='fcf-primer-trim'>
+                                    <div class='form-group' id='fcf-primer-trim' style="display: none;">
                                         <label>FCF</label>
                                         <select id='fcf-prim' class='form-control'>
                                             <option value='(+) inicial'>(+) inicial</option>
