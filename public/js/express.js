@@ -1258,8 +1258,6 @@ $(document).ready(function() {
             var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp;
         }
         $('#comentarios-eco-uno').val(comentario);
-        $('#saco-gestacional-mm').val($('#saco').val());
-        $('#lcn-informe').val($('#lcn').val());
         $('#impDoppler1').on("click", function() {
             crearInformeEcoPrimTrim();
             let examen = {
@@ -5264,6 +5262,7 @@ $(document).ready(function() {
     $("#lcn").on("keyup", function() {
         let valor = $(this).val();
         $("#lcnPct").val(eglcn(valor));
+        $("#lcn-informe").val(valor);
     });
 
     $("#lcn").keypress(function(event) {
@@ -5325,6 +5324,7 @@ $(document).ready(function() {
 
     $("#saco").on("keyup", function() {
         let valor = $(this).val();
+        $('#saco-gestacional-mm').val(valor);
         $("#sacoPct").val(egSaco(valor));
     });
 
