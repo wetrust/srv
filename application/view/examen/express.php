@@ -1447,439 +1447,458 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-secondary" id="boton.eco.segundo.nuevo">Nuevo</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-danger" id="boton.eco.segundo.eliminar">Eliminar</button>
+                        <button type="button" class="btn btn-default" id="boton.eco.segundo.nuevo">Nuevo</button><button type="button" class="btn btn-default d-none">Cancelar</button><button type="button" class="btn btn-default" id="boton.eco.segundo.eliminar">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Gráficas</h6>
                     <div class="btn-group-vertical d-flex justify-content-center">
-                        <button type="button" class="btn btn-info" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-info" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
-                        <button type="button" class="btn btn-info d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
+                        <button type="button" class="btn btn-default" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
+                        <button type="button" class="btn btn-default" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
+                        <button type="button" class="btn btn-default d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-12 col-sm-9" id="ecoObsSegTrimContainer">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="form-group row">
-                        <div class="col-6 col-sm-3">
-                            <label for="fee" class="col-form-label">Fecha de exámen</label>
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <input class="form-control" type="text" data-date-format="dd/mm/yyyy" id="input.paciente.fe.ecoseg" disabled="">
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <label for="fee" class="col-form-label">EG al exámen</label>
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <input class="form-control" type="text"  onfocus="blur();" id="eco.seg.eg" readonly="">
-                        </div>
-                    </div>
-                    <h5 class="card-title">BIOMETRÍA FETAL</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Hadlock FP. y col. Radiology 152: 497 - 501; 1984. *Hill LM. y col. Obstet Gynecol. 1990; 75(6) : 981-5</h6>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="dbp" class="col-form-label">DBP</label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="dbp">
-                                <div class="input-group-append">
-						            <div class="input-group-text">mm</div>
-				    	        </div>
+            <ul class="nav nav-tabs" id="tab.eco.seg.trim" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary text-light active" id="seg-trim-med-tab" data-toggle="tab" href="#medidas-eco-seg" role="tab">Medidas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary text-light" id="seg-trim-informe-tab" data-toggle="tab" href="#informe-eco-seg" role="tab">Informe</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="tab.body.eco.seg.trim">
+                <div class="tab-pane fade show active" id="medidas-eco-seg" role="tabpanel">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <div class="col-6 col-sm-3">
+                                    <label for="fee" class="col-form-label">Fecha de exámen</label>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <input class="form-control" type="text" data-date-format="dd/mm/yyyy" id="input.paciente.fe.ecoseg" disabled="">
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <label for="fee" class="col-form-label">EG al exámen</label>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <input class="form-control" type="text"  onfocus="blur();" id="eco.seg.eg" readonly="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dbpDE">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                            <h5 class="card-title">BIOMETRÍA FETAL</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Hadlock FP. y col. Radiology 152: 497 - 501; 1984. *Hill LM. y col. Obstet Gynecol. 1990; 75(6) : 981-5</h6>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="dbp" class="col-form-label">DBP</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="dbp">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dbpDE">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="dbpPct">
+                                    <input type="hidden" id="dbpRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoDbp"><i class="fas fa-chart-bar"></i></button>
+                                </div>
                             </div>
-                            <input type="hidden" id="dbpPct">
-                            <input type="hidden" id="dbpRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoDbp"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-3 mb-2">
-                            <label for="dof" class="col-form-label">DOF</label>
-                        </div>
-                        <div class="col-3 mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="dof">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">mm</div>
+                            <div class="form-group row">
+                                <div class="col-3 mb-2">
+                                    <label for="dof" class="col-form-label">DOF</label>
+                                </div>
+                                <div class="col-3 mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="dof">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dofPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="dofPctRpt">
+                                    <input type="hidden" id="dofRango">
+                                </div>
+                                <div class="col-2 mb-2">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">IC</div>
+                                        </div>
+                                        <input type="text" class="form-control" id="ic" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="cc" class="col-form-label">CC</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="cc">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="ccPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="ccPctRpt">
+                                    <input type="hidden" id="ccRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoCc"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="ca" class="col-form-label">CA</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="ca">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="caPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="caPctRpt">
+                                    <input type="hidden" id="caRango">
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-info" id="graficoCa"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="lf" class="col-form-label">LF</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="lf">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="lfPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="lfPctRpt">
+                                    <input type="hidden" id="lfRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoLf"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="lh" class="col-form-label">LH</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="lh">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="lhPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="lhPctRpt">
+                                    <input type="hidden" id="lhRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoLh"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="cerebelo" class="col-form-label">Diámetro cerebeloso transverso</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="cerebelo">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="cerebeloPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="cerebeloPctRpt">
+                                    <input type="hidden" id="cerebeloRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoCerebelo"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><button type="button" class="btn btn-secondary d-none" id="boton.eco.segundo.guardar">Guardar</button>
+                                    <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
+                                    <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Ir a hoja 2 (para Informe crecimiento)</button>
+                                    <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Ir a hoja 2 (para Informe edad gestacional)</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3 mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="dofPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="dofPctRpt">
-                            <input type="hidden" id="dofRango">
-                        </div>
-                        <div class="col-2 mb-2">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">IC</div>
-                                </div>
-                                <input type="text" class="form-control" id="ic" readonly="">
-                            </div>
-                        </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="cc" class="col-form-label">CC</label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="cc">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">mm</div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">CRECIMIENTO INTRAUTERINO  <span class="float-right text-muted" id="cccaController"><small>Opcional CC/CA</small></span></h5>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="pfe" class="col-form-label"><strong>Peso Fetal Estimado</strong> (> 15 sem)
+                                    <br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small>
+                                    </label>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="ccPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="ccPctRpt">
-                            <input type="hidden" id="ccRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoCc"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="ca" class="col-form-label">CA</label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="ca">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">mm</div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="pfe" readonly>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">kgr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="pfePct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="pfePctRpt">
+                                    <input type="hidden" id="pfeRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoPFE"><i class="fas fa-chart-bar"></i></button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="caPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="caPctRpt">
-                            <input type="hidden" id="caRango">
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-outline-info" id="graficoCa"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="lf" class="col-form-label">LF</label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="lf">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">mm</div>
+                            <div class="form-group row d-none" id="cccaView">
+                                <div class="col mb-2">
+                                    <label for="ccca" class="col-form-label">Relación Cráneo Abdómen<br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small></label>
+                                </div>
+                                <div class="col mb-2">
+                                    <input type="text" class="form-control" id="ccca" readonly>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="cccaPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="cccaPct">
+                                    <input type="hidden" id="cccaRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoCCCA"><i class="fas fa-chart-bar"></i></button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="lfPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="lfPctRpt">
-                            <input type="hidden" id="lfRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoLf"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="lh" class="col-form-label">LH</label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="lh">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">mm</div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="bvm" class="col-form-label"><strong class="text-primary">BVM</strong></label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="bvm">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="bvmPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="bvmPct">
+                                    <input type="hidden" id="bvmRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoBVM"><i class="fas fa-chart-bar"></i></button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="lhPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="lhPctRpt">
-                            <input type="hidden" id="lhRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoLh"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="cerebelo" class="col-form-label">Diámetro cerebeloso transverso</label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="cerebelo">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">mm</div>
+                            <div class="form-group row d-none">
+                                <div class="col mb-2">
+                                    <label for="tallaFetal" class="col-form-label">Talla Fetal Estimada (> 23 sem)
+                                    <br><small class="text-muted">Referencias neonatales SOCHIPE*</small>
+                                    </label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="number" class="form-control" id="tallaFetal" readonly>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">cm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="tallaPct">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="tallaPctRpt">
+                                    <input type="hidden" id="tallaRango">
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-info" id="graficoTalla"><i class="fas fa-chart-bar"></i></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="cerebeloPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                        <p class="text-muted d-none" style="float:left">* SOCHIPE: Sociedad Chilena de Pedratría.</p>
+                        <p class="text-muted d-none" style="float:right">Artículo de referencia: Rev. Chil. Pediat 2010; 81 (3): 264-274</p>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">OPCIONAL DETERMINACIÓN DE EDAD GESTACIONAL</h5>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="egP50" class="col-form-label">Calculo de Edad Gestacional según BP50</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control bg-secondary text-white text-center" id="egP50" readonly>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">semanas</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"></div>
                             </div>
-                            <input type="hidden" id="cerebeloPctRpt">
-                            <input type="hidden" id="cerebeloRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoCerebelo"><i class="fas fa-chart-bar"></i></button>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <ul>
+                                        <li>La variabilidad en el crecimiento fetal, es directamente proporcional a la edad gestacional, variando el rango desde ± 7 días sobre las 12 semanas hasta ± 21 días en el 3er trimestre.</li>
+                                        <li>Dado que el rango de variabilidad entre las 9 a 11 semanas es mínimo (+ - 3 días), es el periodo ideal para determinación ecográfica de la Edad gestacional.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row" id="preguntaAjusteEcoSegTrim" style="">
+                                <div class="col">
+                                    <h5 class="alert-heading">¿Desea ajustar la edad gestacional referida?</h5>
+                                </div>
+                                <div class="col">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-outline-info p-3 active">
+                                            <input type="radio" name="ajustarEcoSegTrim" value="0" checked=""> NO
+                                        </label>
+                                        <label class="btn btn-outline-info p-3">
+                                            <input type="radio" name="ajustarEcoSegTrim" value="1"> SI
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <ul>
+                                        <li>Para mayor precisión  el software excluye perímetro abdominal, es recomendable adicionar el largo humeral y diámetro de cerebelo.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-secondary d-none" id="boton.eco.segundo.guardar">Guardar</button>
-                            <h6 class="text-center">Para crear informe impreso, continuar con el paso 2</h6>
-                            <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Ir a hoja 2 (para Informe crecimiento)</button>
-                            <button type="button" class="btn btn-info d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Ir a hoja 2 (para Informe edad gestacional)</button>
+                    <div class="card mb-3" id="adicionalCrecimiento" style="display:none;">
+                        <div class="card-body">
+                            <h5 class="card-title">Adicional proporcionalidad fetal</h5>
+                            <div class="form-group row">
+                                <div class="col mb-2">
+                                    <label for="dof-dbp" class="col-form-label">Indice Cefalico (IC)</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <input type="text" class="form-control" id="dof-dbp" readonly>
+                                </div>
+                                <div class="col mb-2">
+                                    <p> IC &lt; 74% = Dolicocefalia<br>IC &gt; 83 % = Braquicefalia</p>
+                                </div>
+                                <div class="col mb-2"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">CRECIMIENTO INTRAUTERINO  <span class="float-right text-muted" id="cccaController"><small>Opcional CC/CA</small></span></h5>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="pfe" class="col-form-label"><strong>Peso Fetal Estimado</strong> (> 15 sem)
-                            <br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small>
-                            </label>
+                <div class="tab-pane fade" id="informe-eco-seg" role="tabpanel">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class='form-group'> <label>Presentaci&oacute;n</label> <select id='presentacion' class='form-control'> <option value='cefalica'>Cef&aacute;lica</option> <option value='podalica'>Pod&aacute;lica</option> <option value='transversa'>transversa</option> <option value='indiferente'>indiferente</option> </select></div><div class='form-group'> <label>Dorso Fetal</label> <select id='dorso' class='form-control'> <option value='anterior'>Anterior</option> <option value='lateral izquiedo'>Lat. Izquierdo</option> <option value='posterior'>Posterior</option> <option value='lateral derecho'>Lat. Derecho</option> </select></div><div class='form-group'> <label>Actividada Cardiaca</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='accard' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='accard' value='0'> No</label> </div></div><div class='form-group'> <label>Mov. Fetales</label></div><div class='form-group'> <div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' checked='checked' name='movfet' value='1'> Si</label> </div><div class='form-check form-check-inline'> <label class='form-check-label'> <input class='form-check-input' type='radio' name='movfet' value='0'> No</label> </div></div><div class='form-group'> <label>FCF</label> <select id='fcf' class='form-control'> <option value='90'>90</option> <option value='91'>91</option> <option value='92'>92</option> <option value='93'>93</option> <option value='94'>94</option> <option value='95'>95</option> <option value='96'>96</option> <option value='97'>97</option> <option value='98'>98</option> <option value='99'>99</option> <option value='100'>100</option> <option value='101'>101</option> <option value='102'>102</option> <option value='103'>103</option> <option value='104'>104</option> <option value='105'>105</option> <option value='106'>106</option> <option value='107'>107</option> <option value='108'>108</option> <option value='109'>109</option> <option value='110'>110</option> <option value='111'>111</option> <option value='112'>112</option> <option value='113'>113</option> <option value='114'>114</option> <option value='115'>115</option> <option value='116'>116</option> <option value='117'>117</option> <option value='118'>118</option> <option value='119'>119</option> <option value='120'>120</option> <option value='121'>121</option> <option value='122'>122</option> <option value='123'>123</option> <option value='124'>124</option> <option value='125'>125</option> <option value='126'>126</option> <option value='127'>127</option> <option value='128'>128</option> <option value='129'>129</option> <option value='130'>130</option> <option value='131'>131</option> <option value='132'>132</option> <option value='133'>133</option> <option value='134'>134</option> <option value='135'>135</option> <option value='136'>136</option> <option value='137'>137</option> <option value='138'>138</option> <option value='139'>139</option> <option selected='selected' value='140'>140</option> <option value='141'>141</option> <option value='142'>142</option> <option value='143'>143</option> <option value='144'>144</option> <option value='145'>145</option> <option value='146'>146</option> <option value='147'>147</option> <option value='148'>148</option> <option value='149'>149</option> <option value='150'>150</option> <option value='151'>151</option> <option value='152'>152</option> <option value='153'>153</option> <option value='154'>154</option> <option value='155'>155</option> <option value='156'>156</option> <option value='157'>157</option> <option value='158'>158</option> <option value='159'>159</option> <option value='160'>160</option> <option value='161'>161</option> <option value='162'>162</option> <option value='163'>163</option> <option value='164'>164</option> <option value='165'>165</option> <option value='166'>166</option> <option value='167'>167</option> <option value='168'>168</option> <option value='169'>169</option> <option value='170'>170</option> </select></div><div class='form-group'> <label>Anatom&iacute;a fetal</label> <select multiple='' id='ev-morfo' class='form-control'><option value='Descripcion general detallando distintos segmentos' selected='selected'>Descripción general detallando distintos segmentos</option><option value='no evaluada dirigidamente, pero el aspecto morfológico general es normal'>No evaluada dirigidamente, pero el aspecto morfológico general es normal</option><option value='de aspecto general normal'>de aspecto general normal</option><option value='hallasgos de siguientes patologías:'>hallasgos ecográficos compatible con:</option></select></div><div class='form-group'> <p><strong>Comentarios anatom&iacute;a</strong> </p><textarea id='comentarios-anatomia-informe-eg-texto' class='form-control' rows='3'></textarea></div><div class='row'> <div class='col'> <div class='form-group'> <label>Placenta Ubicaci&oacute;n</label> <select id='ubicacion' class='form-control'> <option value='normal'>Normal</option> <option value='prev. lateral'>previa lateral</option> <option value='prev. marginal'>previa marginal</option> <option value='prev. parcial'>previa parcial</option> <option value='prev. total'>previa total</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta incersi&oacute;n</label> <select id='incersion' class='form-control'> <option value='anterior'>anterior</option> <option value='posterior'>posterior</option> <option value='fundica'>f&uacute;ndica</option> <option value='lat. derecha'>lateral derecha</option> <option value='lat. izquierda'>lateral izquierda</option> <option value='segmentaria'>segmentaria</option> </select> </div></div><div class='col'> <div class='form-group'> <label>Placenta Grado (Grannum)</label> <select id='grado-placenta' class='form-control'> <option value='0'>0</option> <option value='1'>1</option> <option value='2'>2</option> <option value='3'>3</option> </select> </div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label><strong class='text-primary'>Líquido amniótico</strong></label> <select id='liq-cualitativo-eco' class='form-control'> <option value='normal'>Normal</option> <option value='disminuido'>Disminuido</option> <option value='aumentado'>Aumentado</option> </select> </div></div><div class='col'> <div class='form-group'> <label><strong class='text-primary'>BVM</strong></label> <div class='input-group mb-2 mr-sm-2 mb-sm-0'> <input type='text' class='form-control' id='bvmEcoDos'> <div class='input-group-addon'>mm.</div></div></div></div></div><div class='row'> <div class='col'> <div class='form-group'> <label>Cord&oacute;n umbilical</label> <select id='cordon' class='form-control'> <option value='inserci&oacute;n central'>Inserci&oacute;n central</option> <option value='inserci&oacute;n marginal'>Inserci&oacute;n marginal</option> <option value='inserci&oacute;n velamentosa'>Inserci&oacute;n velamentosa</option> <option value='inserci&oacute;n no evaluable'>Inserci&oacute;n no evaluable</option> </select> </div></div><div class='col'> <div class='form-group'> <label>N&uacute;mero de vasos</label> <select id='vasos' class='form-control'> <option value='2'>2</option> <option selected='selected' value='3'>3</option> </select> </div></div></div><div class='form-group'> <p><strong>Comentarios adicionales</strong> <small class='text-primary'>(Espacio a completar por el ecografista)</small> </p><textarea id='comentarios-eco-dos-inf-dos' rows='3' class='form-control'></textarea></div>
                         </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="pfe" readonly>
-	                            <div class="input-group-append">
-		                            <div class="input-group-text">kgr</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="pfePct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="pfePctRpt">
-                            <input type="hidden" id="pfeRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoPFE"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row d-none" id="cccaView">
-                        <div class="col mb-2">
-                            <label for="ccca" class="col-form-label">Relación Cráneo Abdómen<br><small class="text-muted">Hadlock FP. y col. Radiology 181: 129 - 133; 1991</small></label>
-                        </div>
-                        <div class="col mb-2">
-                            <input type="text" class="form-control" id="ccca" readonly>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="cccaPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="cccaPct">
-                            <input type="hidden" id="cccaRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoCCCA"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="bvm" class="col-form-label"><strong class="text-primary">BVM</strong></label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control" id="bvm">
-                                <div class="input-group-append">
-				                    <div class="input-group-text">mm</div>
-				                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="bvmPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="bvmPct">
-                            <input type="hidden" id="bvmRango">
-                        </div>
-                        <div class="col mb-2">
-                            <button type="button" class="btn btn-outline-info" id="graficoBVM"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                    <div class="form-group row d-none">
-                        <div class="col mb-2">
-                            <label for="tallaFetal" class="col-form-label">Talla Fetal Estimada (> 23 sem)
-                            <br><small class="text-muted">Referencias neonatales SOCHIPE*</small>
-                            </label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="number" class="form-control" id="tallaFetal" readonly>
-                                <div class="input-group-append">
-					                <div class="input-group-text">cm</div>
-				                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="tallaPct">
-                                <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                            </div>
-                            <input type="hidden" id="tallaPctRpt">
-                            <input type="hidden" id="tallaRango">
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-outline-info" id="graficoTalla"><i class="fas fa-chart-bar"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-muted d-none" style="float:left">* SOCHIPE: Sociedad Chilena de Pedratría.</p>
-                <p class="text-muted d-none" style="float:right">Artículo de referencia: Rev. Chil. Pediat 2010; 81 (3): 264-274</p>
-            </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">OPCIONAL DETERMINACIÓN DE EDAD GESTACIONAL</h5>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="egP50" class="col-form-label">Calculo de Edad Gestacional según BP50</label>
-                        </div>
-                        <div class="col mb-2">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" class="form-control bg-secondary text-white text-center" id="egP50" readonly>
-                                <div class="input-group-append">
-       			                    <div class="input-group-text">semanas</div>
-	           	                </div>
-                            </div>
-                        </div>
-                        <div class="col"></div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <ul>
-                                <li>La variabilidad en el crecimiento fetal, es directamente proporcional a la edad gestacional, variando el rango desde ± 7 días sobre las 12 semanas hasta ± 21 días en el 3er trimestre.</li>
-                                <li>Dado que el rango de variabilidad entre las 9 a 11 semanas es mínimo (+ - 3 días), es el periodo ideal para determinación ecográfica de la Edad gestacional.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row" id="preguntaAjusteEcoSegTrim" style="">
-                        <div class="col">
-                            <h5 class="alert-heading">¿Desea ajustar la edad gestacional referida?</h5>
-                        </div>
-                        <div class="col">
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-info p-3 active">
-                                    <input type="radio" name="ajustarEcoSegTrim" value="0" checked=""> NO
-                                </label>
-                                <label class="btn btn-outline-info p-3">
-                                    <input type="radio" name="ajustarEcoSegTrim" value="1"> SI
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <ul>
-                                <li>Para mayor precisión  el software excluye perímetro abdominal, es recomendable adicionar el largo humeral y diámetro de cerebelo.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" id="adicionalCrecimiento" style="display:none;">
-                <div class="card-body">
-                    <h5 class="card-title">Adicional proporcionalidad fetal</h5>
-                    <div class="form-group row">
-                        <div class="col mb-2">
-                            <label for="dof-dbp" class="col-form-label">Indice Cefalico (IC)</label>
-                        </div>
-                        <div class="col mb-2">
-                            <input type="text" class="form-control" id="dof-dbp" readonly>
-                        </div>
-                        <div class="col mb-2">
-                            <p> IC &lt; 74% = Dolicocefalia<br>IC &gt; 83 % = Braquicefalia</p>
-                        </div>
-                        <div class="col mb-2"></div>
                     </div>
                 </div>
             </div>
