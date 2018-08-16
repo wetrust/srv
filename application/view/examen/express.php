@@ -810,7 +810,9 @@
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                         <button type="button" class="btn btn-default" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-default d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-default" id="boton.eco.prim.eliminar">Eliminar</button>
                     </div>
-                    <button class="btn btn-default d-flex justify-content-center" type="button" id="modalPreInfEcoPrimTrim">Informe</button>
+                    <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
+                    <button class="btn btn-default " type="button" id="modalPreInfEcoPrimTrim">Informe</button>
+                    </div>
                 </div>
             </div>
         </div>
