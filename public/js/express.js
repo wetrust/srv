@@ -1241,15 +1241,6 @@ $(document).ready(function() {
     });
 
     $('#modalPreInfEcoPrimTrim').on('click', function() {
-        $('#popupTitle').html("Datos para evaluación ecográfica de primer trimestre");
-        //remueve los botones de imprimir en caso de que estén
-        $('#impEcoObsSegTrim2').remove();
-        $('#impEcoObsSegTrim1').remove();
-        $('#impDoppler3').remove();
-        $('#impDoppler2').remove();
-        $('#impDoppler1').remove();
-        $('#infecoObsSegTrim1Clon').remove();
-        //añadir boton de imprimir
         var fur = $("#input\\.paciente\\.fum").val();
         var fpp = $("#input\\.paciente\\.fpp\\.examen").val();
         if ($('#lcn').val() < 1) {
@@ -1258,34 +1249,32 @@ $(document).ready(function() {
             var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp;
         }
         $('#comentarios-eco-uno').val(comentario);
-        $('#impDoppler1').on("click", function() {
-            crearInformeEcoPrimTrim();
-            let examen = {
-                examen: 1,
-                fecha: $("#input\\.paciente\\.fe\\.ecoprim").val(),
-                eg: $("#eco\\.prim\\.eg").val(),
-                embrion: $("#lcn").val(),
-                saco: $("#saco").val()
-            }
+        crearInformeEcoPrimTrim();
+        let examen = {
+            examen: 1,
+            fecha: $("#input\\.paciente\\.fe\\.ecoprim").val(),
+            eg: $("#eco\\.prim\\.eg").val(),
+            embrion: $("#lcn").val(),
+            saco: $("#saco").val()
+        }
     
-            let data = {
-                id: $("#id-paciente").val(),
-                tipo: 1,
-                data: JSON.stringify(examen)
-            }
+        let data = {
+            id: $("#id-paciente").val(),
+            tipo: 1,
+            data: JSON.stringify(examen)
+        }
     
-            $.post(serverURL + "examen/set/", data).done(function(response) {
-                if (Object.keys(response).length > 0) {
-                    $("#table\\.ecografia\\.primtrim").empty();
-                    $.each(response.data, function(i, val) {
-                        let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() + '" data-tipo="1">' + val.n_examen + '</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen + '</td><td>' + val.embrion + '</td><td>' + val.prom_saco + '</td>';
-                        $("#table\\.ecografia\\.primtrim").append(fila);
-                    });
-                    $("#table\\.ecografia\\.primtrim tr").on('click', function() {
-                        activateTr(this);
-                    });
-                }
-            });
+        $.post(serverURL + "examen/set/", data).done(function(response) {
+            if (Object.keys(response).length > 0) {
+                $("#table\\.ecografia\\.primtrim").empty();
+                $.each(response.data, function(i, val) {
+                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() + '" data-tipo="1">' + val.n_examen + '</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen + '</td><td>' + val.embrion + '</td><td>' + val.prom_saco + '</td>';
+                    $("#table\\.ecografia\\.primtrim").append(fila);
+                });
+                $("#table\\.ecografia\\.primtrim tr").on('click', function() {
+                    activateTr(this);
+                });
+            }
         });
     });
 
