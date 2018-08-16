@@ -114,7 +114,7 @@ class DicomModel
         //cambiar al directorio temporal
         $out = chdir ($folder . "tmp");
         //extraer todos los frames del archivo +Jq 100
-        $strCommand =  "/usr/bin/dcmj2pnm +Fa +ca +oj ". $folder . $file . " \ frame ";
+        $strCommand =  "/usr/bin/dcmj2pnm +Fa +cn +oj ". $folder . $file . " \ frame ";
         $out = exec($strCommand);
     
    //     $archivos = scandir($folder . "/tmp");
