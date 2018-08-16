@@ -180,7 +180,7 @@ class DicomModel
           //if ($x < 10) {
           //  $framerate = 10;
           //}
-        $vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -vcodec libx264 \"$videoFile\"";
+        $vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -pixfmt yuv420p -vcodec libx264 \"$videoFile\"";
         $out = exec($vid_cmd);
         
         //mover a la carpeta anterior
