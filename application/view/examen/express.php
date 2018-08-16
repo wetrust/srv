@@ -1451,12 +1451,12 @@
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Gráficas</h6>
-                    <div class="btn-group-vertical d-flex justify-content-center">
+                    <div class="btn-group-vertical d-flex">
                         <button type="button" class="btn btn-default" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
                         <button type="button" class="btn btn-default" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
                         <button type="button" class="btn btn-default d-none" id="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
-                    <div class="btn-group-vertical d-flex justify-content-center">
+                    <div class="btn-group-vertical d-flex">
                         <button type="button" class="btn btn-default d-none" id="boton.eco.segundo.guardar">Guardar</button>
                         <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Informe crecimiento</button>
                         <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>

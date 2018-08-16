@@ -1426,7 +1426,6 @@ $(document).ready(function() {
                 var fpp = $("#input\\.paciente\\.fpp\\.extra").val();
                 var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp + "\r\n";
                 $('#comentarios-eco-dos-inf-dos').val(comentario);
-
                 $('#bvmEcoDos').val($('#bvm').val()).trigger('change');
                 $('#ev-morfo').trigger('change');
                 crearInformeEcoSegTrim2();
@@ -1441,38 +1440,15 @@ $(document).ready(function() {
             return;
         }
 
-        $('#popupTitle').html("Datos para informe");
-        //remueve los botones de imprimir en caso de que estén
-        $('#impEcoObsSegTrim2').remove();
-        $('#impEcoObsSegTrim1').remove();
-        $('#impDoppler3').remove();
-        $('#impDoppler2').remove();
-        $('#impDoppler1').remove();
-        $('#infecoObsSegTrim1Clon').remove();
         var fur = $("#input\\.paciente\\.fum\\.extra").val();
         var fpp = $("#input\\.paciente\\.fpp\\.extra").val();
         var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp + "\r\n";
         $('#comentarios-eco-dos-inf-dos').val(comentario);
-        $('#popupFooter').prepend("<button type='button' class='btn btn-outline-info' id='impDoppler1'>Guardar y Ver informe</button><button type='button' class='btn btn-outline-info' id='infecoObsSegTrim1Clon'>Ver Gráficas</button>");
-        $('#impDoppler1').on("click", function() {
-            crearInformeEcoSegTrim2();
-        });
-
-        $('#infecoObsSegTrim1Clon').on("click", function() {
-            $('#infecoObsSegTrim2').trigger("click");
-        });
 
         $('#bvmEcoDos').val($('#bvm').val()).trigger('change');
-        $('#ev-morfo').on('change', function() {
-            if ($(this).val() == "Descripcion general detallando distintos segmentos") {
-                $("#comentarios-anatomia-informe-eg-texto").val("Evaluación anatómica general de aspecto normal; cráneo y estructura internas de aspecto normal, cara cuello normal, labio superior integro, Tórax y abdomen de aspecto normal, corazón cuatro cámaras, tractos de salida de aspecto normal, cámara gástrica y vejiga visibles, riñón derecho e izquierdo de aspecto normal, pared abdominal integra, columna visible en toda su extensión, extremidades con movilidad y tono de aspecto normal, sexo fetal masculino.");
-            } else {
-                $("#comentarios-anatomia-informe-eg-texto").val('');
-            }
-        });
         $("#ev-morfo").val('no evaluada dirigidamente, pero el aspecto morfológico general es normal');
         $('#ev-morfo').trigger('change');
-        $('#popupGenerico').modal('show');
+        crearInformeEcoSegTrim2();
     });
 
     $('#graficoDbp').on('click', function() {
