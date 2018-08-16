@@ -810,7 +810,7 @@
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                         <button type="button" class="btn btn-default" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-default d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-default" id="boton.eco.prim.eliminar">Eliminar</button>
                     </div>
-                    <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
+                    <div class="btn-group-vertical d-flex justify-content-center mt-2" role="group" aria-label="First group">
                     <button class="btn btn-default " type="button" id="modalPreInfEcoPrimTrim">Informe</button>
                     </div>
                 </div>
@@ -819,10 +819,10 @@
         <div class="col-12 col-sm-9">
             <ul class="nav nav-tabs" id="tab.eco.prim.trim" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Medidas</a>
+                    <a class="nav-link bg-secondary text-light active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Medidas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Informe</a>
+                    <a class="nav-link bg-secondary text-light" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Informe</a>
                 </li>
             </ul>
             <div class="tab-content" id="tab.body.eco.prim.trim">
