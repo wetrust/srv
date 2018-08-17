@@ -1126,7 +1126,6 @@ function imprInforme(muestra) {
 
     ventimp.document.write(document);
     ventimp.document.close();
-    ventimp.show();
 }
 
 function imprSelec(muestra) {
@@ -1152,7 +1151,6 @@ function imprSelec(muestra) {
 
     ventimp.document.write(document);
     ventimp.document.close();
-    ventimp.show();
 }
 
 $('#infadicionalNoController').on('click', function() {
