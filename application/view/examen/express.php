@@ -1941,15 +1941,15 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-secondary" id="boton.eco.doppler.nuevo">Nuevo</button><button type="button" class="btn btn-secondary" id="boton.eco.doppler.guardar">Guardar</button><button type="button" class="btn btn-secondary d-none">Cancelar</button><button type="button" class="btn btn-secondary" id="boton.eco.doppler.eliminar">Eliminar</button>
+                        <button type="button" class="btn btn-default" id="boton.eco.doppler.nuevo">Nuevo</button><button type="button" class="btn btn-default" id="boton.eco.doppler.guardar">Guardar</button><button type="button" class="btn btn-default d-none">Cancelar</button><button type="button" class="btn btn-default" id="boton.eco.doppler.eliminar">Eliminar</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
                     <div class="btn-group-vertical d-flex text-right">
-                        <button type="button" class="btn btn-secondary" id="modalPreInfEcoDoppler">Informe Doppler</button>
-                        <button type="button" class="btn btn-secondary" id="infDoppler1">Resumen de Gráficas</button>
-                        <button type="button" class="btn btn-secondary d-none" id="infDoppler2">PFE + Doppler Fetal</button>
-                        <button type="button" class="btn btn-secondary d-none" id="infDoppler3">PFE + Doppler Materno / Fetal</button>
+                        <button type="button" class="btn btn-default" id="modalPreInfEcoDoppler">Informe Doppler</button>
+                        <button type="button" class="btn btn-default" id="infDoppler1">Resumen de Gráficas</button>
+                        <button type="button" class="btn btn-default d-none" id="infDoppler2">PFE + Doppler Fetal</button>
+                        <button type="button" class="btn btn-default d-none" id="infDoppler3">PFE + Doppler Materno / Fetal</button>
                     </div>
                 </div>
             </div>
