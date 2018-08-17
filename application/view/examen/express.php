@@ -797,10 +797,10 @@
 </div>
 <div class="container h-100" id="ecoObsPrimTrim" style="display:none;">
     <div class="row">
-        <div class="col">
+        <div class="col my-3">
+            <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
             <h4 class="mb-0" id="paciente.nombre.eco.prim">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.eco.prim.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
-            <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
         </div>
     </div>
     <div class="row">
@@ -1437,10 +1437,10 @@
 </div>
 <div class="container" id="ecoObsSegTrim" style="display:none;">
     <div class="row">
-        <div class="col">
+        <div class="col my-3">
+            <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
             <h4 class="mb-0" id="paciente.nombre.eco.segundo">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.eco.segundo.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
-            <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
         </div>
     </div>
     <div class="row">
@@ -1932,10 +1932,10 @@
 </div>
 <div class="container" id="ecoDoppler" style="display:none;">
     <div class="row">
-        <div class="col">
+        <div class="col my-3">
+            <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
             <h4 class="mb-0" id="paciente.nombre.eco.doppler">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.eco.doppler.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
-            <button class="btn btn-outline-danger float-right"><i class="fas fa-door-open"></i><br>Volver</button>
         </div>
     </div>
     <div class="row">
