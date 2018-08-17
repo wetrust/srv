@@ -813,7 +813,7 @@
                         <button type="button" class="btn btn-default" id="boton.eco.prim.nuevo">Nuevo</button><button type="button" class="btn btn-default d-none" id="boton.eco.prim.cancelar">Cancelar</button><button type="button" class="btn btn-default" id="boton.eco.prim.eliminar">Eliminar</button>
                     </div>
                     <div class="btn-group-vertical d-flex justify-content-center mt-2" role="group" aria-label="First group">
-                    <button class="btn btn-default " type="button" id="modalPreInfEcoPrimTrim">Informe</button>
+                    <button class="btn btn-default " type="button" id="modalPreInfEcoPrimTrim">Ver Informe</button>
                     </div>
                 </div>
             </div>
@@ -821,10 +821,10 @@
         <div class="col-12 col-sm-9">
             <ul class="nav nav-tabs" id="tab.eco.prim.trim" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Medidas</a>
+                    <a class="nav-link bg-secondary text-light active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Ir Medidas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Informe</a>
+                    <a class="nav-link bg-secondary text-light" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Ir Informe</a>
                 </li>
             </ul>
             <div class="tab-content" id="tab.body.eco.prim.trim">
@@ -1461,8 +1461,8 @@
                     </div>
                     <div class="btn-group-vertical d-flex text-right">
                         <button type="button" class="btn btn-default d-none" id="boton.eco.segundo.guardar">Guardar</button>
-                        <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Informe crecimiento</button>
-                        <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
+                        <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim1">Ver Informe crecimiento</button>
+                        <button type="button" class="btn btn-default d-block mx-auto" id="modalPreInfEcoObsSegTrim2">Ver Informe edad gestacional</button>
                     </div>
                 </div>
             </div>
@@ -1470,10 +1470,10 @@
         <div class="col-12 col-sm-9" id="ecoObsSegTrimContainer">
             <ul class="nav nav-tabs" id="tab.eco.seg.trim" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light active" id="seg-trim-med-tab" data-toggle="tab" href="#medidas-eco-seg" role="tab">Medidas</a>
+                    <a class="nav-link bg-secondary text-light active" id="seg-trim-med-tab" data-toggle="tab" href="#medidas-eco-seg" role="tab">Ir Medidas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light" id="seg-trim-informe-tab" data-toggle="tab" href="#informe-eco-seg" role="tab">Informe</a>
+                    <a class="nav-link bg-secondary text-light" id="seg-trim-informe-tab" data-toggle="tab" href="#informe-eco-seg" role="tab">Ir Informe</a>
                 </li>
             </ul>
             <div class="tab-content" id="tab.body.eco.seg.trim">
@@ -1950,7 +1950,7 @@
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
                     <div class="btn-group-vertical d-flex text-right">
-                        <button type="button" class="btn btn-default" id="modalPreInfEcoDoppler">Informe Doppler</button>
+                        <button type="button" class="btn btn-default" id="modalPreInfEcoDoppler">Ver Informe Doppler</button>
                         <button type="button" class="btn btn-default" id="infDoppler1">Resumen de Gráficas</button>
                         <button type="button" class="btn btn-default d-none" id="infDoppler2">PFE + Doppler Fetal</button>
                         <button type="button" class="btn btn-default d-none" id="infDoppler3">PFE + Doppler Materno / Fetal</button>
@@ -1961,10 +1961,10 @@
         <div class="col-12 col-sm-9">
             <ul class="nav nav-tabs" id="tab.eco.doppler" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light active" id="doppler-med-tab" data-toggle="tab" href="#medidas-doppler" role="tab">Medidas</a>
+                    <a class="nav-link bg-secondary text-light active" id="doppler-med-tab" data-toggle="tab" href="#medidas-doppler" role="tab">Ir Medidas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light" id="doppler-informe-tab" data-toggle="tab" href="#informe-doppler" role="tab">Informe</a>
+                    <a class="nav-link bg-secondary text-light" id="doppler-informe-tab" data-toggle="tab" href="#informe-doppler" role="tab">Ir Informe</a>
                 </li>
             </ul>
             <div class="tab-content" id="tab.body.doppler">
