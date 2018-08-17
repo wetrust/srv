@@ -272,6 +272,19 @@ $(document).ready(function() {
         window.location.href = "#paciente";
     });
 
+    //botones volver
+    $("#boton\\.volver\\.eco\\.prim\\.trim").on("click", function() {
+        history.back();
+    });
+    $("#boton\\.volver\\.step\\.three").on("click", function() {
+        $("#step-two-find").removeClass("d-none");
+        $("#step-three").addClass("d-none");
+    });
+    $("#boton\\.volver\\.step\\.three").on("click", function() {
+        $("#step-two-find").removeClass("d-none");
+        $("#step-three").addClass("d-none");
+    });
+
     //ecografía de primer trimestre
     $("#boton\\.eco\\.prim\\.cancelar").on("click", function() {
         $("#boton\\.eco\\.prim\\.nuevo").removeClass("d-none");
