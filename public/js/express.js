@@ -279,9 +279,8 @@ $(document).ready(function() {
     $("#boton\\.volver\\.eco\\.seg\\.trim").on("click", function() {
         history.back();
     });
-    $("#boton\\.volver\\.step\\.three").on("click", function() {
-        $("#step-two-find").removeClass("d-none");
-        $("#step-three").addClass("d-none");
+    $("#boton\\.volver\\.eco\\.doppler").on("click", function() {
+        history.back();
     });
 
     //ecografía de primer trimestre
