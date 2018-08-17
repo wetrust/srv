@@ -283,6 +283,10 @@ $(document).ready(function() {
         history.back();
     });
 
+    $("#boton\\.volver\\.imagen").on("click", function() {
+        history.back();
+    });
+
     //ecografía de primer trimestre
     $("#boton\\.eco\\.prim\\.cancelar").on("click", function() {
         $("#boton\\.eco\\.prim\\.nuevo").removeClass("d-none");

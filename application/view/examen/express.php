@@ -621,7 +621,8 @@
 </div>
 <div class="container" id="imagenesDicom" style="display:none;">
     <div class="row">
-        <div class="col">
+        <div class="col my-3">
+            <button class="btn btn-outline-danger float-right" id="boton.volver.imagen"><i class="fas fa-door-open"></i><br>Volver</button>
             <h4 class="mb-0" id="paciente.nombre.imagenes">Juana Peres Peres, 12345678-9</h4>
             <h6 class="text-info" id="paciente.nombre.imagenes.basico.examen">FUM: 12-12-12, EG: 22,2 sem., FPP:12-12-12</h6>
         </div>
