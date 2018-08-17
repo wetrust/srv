@@ -3,14 +3,18 @@ function onHashChange() {
 
     if (hash == "#paciente") {
         displayElement("div\\.paciente");
+        $("#InicioLink").attr("href","serverURL");
     } else if (hash == "#tipoExamen") {
         displayElement("tipoExamen");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#ecoDoppler") {
         obtenerEcoDoppler();
         displayElement("ecoDoppler");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#ecoObsSegTrim") {
         obtenerEcoSegundo();
         displayElement("ecoObsSegTrim");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#ecoObsPrimTrim") {
         //resetea los inputs
         $("#lcn").val("");
@@ -19,18 +23,25 @@ function onHashChange() {
         $("#sacoPct").val("");
         obtenerEcoPrimTrim();
         displayElement("ecoObsPrimTrim");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#configuracion") {
         displayElement("configuracion");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#tamizaje-11") {
         displayElement("tamizaje-11");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#morfologica-22") {
         displayElement("morfologica-22");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#ecocardio") {
         displayElement("ecocardio");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#dneonatales") {
         displayElement("dNeonatales");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#agenda") {
         displayElement("agenda");
+        $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#imgDicom") {
         displayElement("imagenesDicom");
         let RUTPACIENTE = $("#id-paciente").val();
@@ -40,6 +51,7 @@ function onHashChange() {
         let ano = FechaExm.substring(6, 10);
         FechaExm = new Date(ano, mes, dia).getTime() / 1000
         getDCM(RUTPACIENTE, FechaExm);
+        $("#InicioLink").attr("href","#paciente");
     }
 }
 
