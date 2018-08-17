@@ -1948,8 +1948,8 @@
                     <div class="btn-group-vertical d-flex text-right">
                         <button type="button" class="btn btn-secondary" id="modalPreInfEcoDoppler">Informe Doppler</button>
                         <button type="button" class="btn btn-secondary" id="infDoppler1">Resumen de Gráficas</button>
-                        <!-- <button type="button" class="btn btn-secondary d-none" id="infDoppler2">PFE + Doppler Fetal</button>
-                            <button type="button" class="btn btn-secondary d-none" id="infDoppler3">PFE + Doppler Materno / Fetal</button> -->
+                        <button type="button" class="btn btn-secondary d-none" id="infDoppler2">PFE + Doppler Fetal</button>
+                        <button type="button" class="btn btn-secondary d-none" id="infDoppler3">PFE + Doppler Materno / Fetal</button>
                     </div>
                 </div>
             </div>
