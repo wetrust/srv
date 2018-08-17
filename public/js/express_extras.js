@@ -3,7 +3,7 @@ function onHashChange() {
 
     if (hash == "#paciente") {
         displayElement("div\\.paciente");
-        $("#InicioLink").attr("href","serverURL");
+        $("#InicioLink").attr("href",serverURL);
     } else if (hash == "#tipoExamen") {
         displayElement("tipoExamen");
         $("#InicioLink").attr("href","#paciente");
