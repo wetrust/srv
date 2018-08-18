@@ -1459,7 +1459,7 @@
                     <h6 class="text-center my-2">Ver Gráficas</h6>
                     <div class="btn-group-vertical d-flex">
                         <button type="button" class="btn btn-default text-left" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-default text-left" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
+                        <button type="button" class="btn btn-default text-left" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
                         <button type="button" class="btn btn-default d-none" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
                     <hr>
