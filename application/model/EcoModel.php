@@ -101,7 +101,7 @@ class EcoModel
 
             $sql = "SELECT * FROM eco_prim WHERE id_paciente = :id_paciente and n_examen = :n_examen LIMIT 1";
             $query = $database->prepare($sql);
-            $query->execute(array(':id_paciente' => $rut,':n_examen' => $numero));
+            $query->execute(array(':id_paciente' => $rut,':n_examen' => $data["examen"]));
 
             if ($query->rowCount() == 1) {
                 self::updateEco($rut,$tipo,$data);
