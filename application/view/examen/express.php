@@ -736,13 +736,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mb-3" id="ecografia.imagenes">
-                                <div class="card-body p-2">
-                                    <div class="clearfix">
-                                    <h6 class="card-title float-left">Ver imágenes de exámenes</h6><a href="#imgDicom" class="card-link float-right">Ver Imágenes</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col">
                             <h3 class="card-title text-primary">Tamizaje y evaluación morfológica</h3>
@@ -768,7 +761,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mb-2">
+                            <div class="card mb-2" style="display:none;">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
                                     <h6 class="card-title float-left">Neurosonografía fetal</h6><span class="card-link float-right">en desarrollo</span>
@@ -786,6 +779,21 @@
                                 <div class="card-body p-2">
                                     <div class="clearfix">
                                     <h6 class="card-title float-left">Otros protocolos</h6><a href="#ecocardio" class="card-link float-right">en desarrollo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card mb-3" id="ecografia.imagenes">
+                                <div class="card-body p-2">
+                                    <div class="clearfix">
+                                        <h6 class="card-title float-left">Ver imágenes de exámenes</h6><a href="#imgDicom" class="card-link float-right">Ver Imágenes</a>
                                     </div>
                                 </div>
                             </div>
