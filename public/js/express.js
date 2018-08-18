@@ -303,6 +303,35 @@ $(document).ready(function() {
         $("#modalPreInfEcoPrimTrim").removeClass("d-none");
     });
 
+    $('#boton\\.eco\\.prim\\.guardar').on('click', function() {
+        let examen = {
+            examen: 1,
+            fecha: $("#input\\.paciente\\.fe\\.ecoprim").val(),
+            eg: $("#eco\\.prim\\.eg").val(),
+            embrion: $("#lcn").val(),
+            saco: $("#saco").val()
+        }
+    
+        let data = {
+            id: $("#id-paciente").val(),
+            tipo: 1,
+            data: JSON.stringify(examen)
+        }
+    
+        $.post(serverURL + "examen/set/", data).done(function(response) {
+            if (Object.keys(response).length > 0) {
+                $("#table\\.ecografia\\.primtrim").empty();
+                $.each(response.data, function(i, val) {
+                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() + '" data-tipo="1">' + val.n_examen + '</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen + '</td><td>' + val.embrion + '</td><td>' + val.prom_saco + '</td>';
+                    $("#table\\.ecografia\\.primtrim").append(fila);
+                });
+                $("#table\\.ecografia\\.primtrim tr").on('click', function() {
+                    activateTr(this);
+                });
+            }
+        });
+    });
+
     $("#boton\\.eco\\.prim\\.eliminar").on("click", function() {
         $('#popupTitle').html("Información");
         $('#popupBody').html("<p><strong>¿Está seguro de eliminar el exámen seleccionado?</strong></p><div class='btn-group btn-group-toggle' data-toggle='buttons'><label class='btn btn-secondary active' id='infEcoObsSegTrim2verNO' aria-pressed='true'><input type='radio' value='0' checked=''> NO</label><label class='btn btn-secondary' id='infEcoObsSegTrim2verSi' aria-pressed='true'><input type='radio' value='1'> SI</label></div>");
@@ -1276,32 +1305,6 @@ $(document).ready(function() {
         }
         $('#comentarios-eco-uno').val(comentario);
         crearInformeEcoPrimTrim();
-        let examen = {
-            examen: 1,
-            fecha: $("#input\\.paciente\\.fe\\.ecoprim").val(),
-            eg: $("#eco\\.prim\\.eg").val(),
-            embrion: $("#lcn").val(),
-            saco: $("#saco").val()
-        }
-    
-        let data = {
-            id: $("#id-paciente").val(),
-            tipo: 1,
-            data: JSON.stringify(examen)
-        }
-    
-        $.post(serverURL + "examen/set/", data).done(function(response) {
-            if (Object.keys(response).length > 0) {
-                $("#table\\.ecografia\\.primtrim").empty();
-                $.each(response.data, function(i, val) {
-                    let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-paciente="' + $("#id-paciente").val() + '" data-tipo="1">' + val.n_examen + '</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen + '</td><td>' + val.embrion + '</td><td>' + val.prom_saco + '</td>';
-                    $("#table\\.ecografia\\.primtrim").append(fila);
-                });
-                $("#table\\.ecografia\\.primtrim tr").on('click', function() {
-                    activateTr(this);
-                });
-            }
-        });
     });
 
     $("#primtrim\\.adicionales\\.translucencia").on("click", function() {
