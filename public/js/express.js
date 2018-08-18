@@ -1389,34 +1389,47 @@ $(document).ready(function() {
     });
 
     $("#boton\\.eco\\.segundo\\.eliminar").on("click", function() {
-        var filas = $("#table\\.ecografia\\.segundotrim").children();
 
-        $.each(filas, function(i, val) {
-            if ($(val).hasClass('table-active') == true) {
-                let examen = {
-                    eg: $(val).children().data("id")
-                }
+        $('#popupTitle').html("Información");
+        $('#popupBody').html("<p><strong>¿Está seguro de eliminar el exámen seleccionado?</strong></p><div class='btn-group btn-group-toggle' data-toggle='buttons'><label class='btn btn-secondary active' id='infEcoObsSegTrim2verNO' aria-pressed='true'><input type='radio' value='0' checked=''> NO</label><label class='btn btn-secondary' id='infEcoObsSegTrim2verSi' aria-pressed='true'><input type='radio' value='1'> SI</label></div>");
+        $('#impDoppler1').remove();
+        $('#infecoObsSegTrim1Clon').remove();
+        $('#popupGenerico').modal('show');
+        $("#infEcoObsSegTrim2verNO").on("click", function() {
+            $('#popupGenerico').modal('hide');
+        });
+        $("#infEcoObsSegTrim2verSi").on("click", function() {
+            $('#popupGenerico').modal('hide');
 
-                let data = {
-                    id: $("#id-paciente").val(),
-                    tipo: 2,
-                    data: JSON.stringify(examen)
-                }
+            var filas = $("#table\\.ecografia\\.segundotrim").children();
 
-                $.post(serverURL + "examen/del/", data).done(function(response) {
-                    $("#table\\.ecografia\\.segundotrim").empty();
-                    if (Object.keys(response).length > 0) {
-                        $.each(response.data, function(i, val) {
-                            let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="2">' + val.n_examen + '</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen + '</td><td>' + val.pfe_examen + '</td><td>' + val.pctpeso_examen + '</td><td>' + val.ccca_examen + '</td><td>' + val.pctca_examen + '</td><td>' + val.pctbvm_examen + '<td>';
-                            $("#table\\.ecografia\\.segundotrim").append(fila);
-                        });
-                        $("#table\\.ecografia\\.segundotrim tr").on('click', function() {
-                            activateTr(this);
-                        });
+            $.each(filas, function(i, val) {
+                if ($(val).hasClass('table-active') == true) {
+                    let examen = {
+                        eg: $(val).children().data("id")
                     }
-                });
 
-            }
+                    let data = {
+                        id: $("#id-paciente").val(),
+                        tipo: 2,
+                        data: JSON.stringify(examen)
+                    }
+
+                    $.post(serverURL + "examen/del/", data).done(function(response) {
+                        $("#table\\.ecografia\\.segundotrim").empty();
+                        if (Object.keys(response).length > 0) {
+                            $.each(response.data, function(i, val) {
+                                let fila = '<tr><th scope="row" data-id="' + val.eg_examen + '" data-tipo="2">' + val.n_examen + '</th><td>' + val.fecha_examen + '</td><td>' + val.eg_examen + '</td><td>' + val.pfe_examen + '</td><td>' + val.pctpeso_examen + '</td><td>' + val.ccca_examen + '</td><td>' + val.pctca_examen + '</td><td>' + val.pctbvm_examen + '<td>';
+                                $("#table\\.ecografia\\.segundotrim").append(fila);
+                            });
+                            $("#table\\.ecografia\\.segundotrim tr").on('click', function() {
+                                activateTr(this);
+                            });
+                        }
+                    });
+
+                }
+            });
         });
     });
 
