@@ -1452,21 +1452,21 @@
             <div class="card position-fixed" id="ecoObsSegTrimMenu">
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
-                    <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-default" id="boton.eco.segundo.nuevo">Nuevo exámen</button><button class="btn btn-default" type="button" id="boton.eco.segundo.guardar">Guardar exámen</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.segundo.eliminar">Eliminar exámen</button>
+                    <div class="btn-group-vertical d-flex justify-content-center p-1" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-default p-1" id="boton.eco.segundo.nuevo">Nuevo exámen</button><button class="btn btn-default" type="button" id="boton.eco.segundo.guardar">Guardar exámen</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.segundo.eliminar">Eliminar exámen</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Ver Gráficas</h6>
                     <div class="btn-group-vertical d-flex">
-                        <button type="button" class="btn btn-default text-left" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-default text-left" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
-                        <button type="button" class="btn btn-default d-none" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
+                        <button type="button" class="btn btn-default text-left p-1" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
+                        <button type="button" class="btn btn-default text-left p-1" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
+                        <button type="button" class="btn btn-default d-none p-1" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Ver Informes</h6>
                     <div class="btn-group-vertical d-flex">
-                        <button type="button" class="btn btn-default text-left" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
-                        <button type="button" class="btn btn-default text-left" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
+                        <button type="button" class="btn btn-default text-left p-1" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
+                        <button type="button" class="btn btn-default text-left p-1" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
                     </div>
                 </div>
             </div>
