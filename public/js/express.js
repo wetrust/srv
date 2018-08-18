@@ -1437,8 +1437,6 @@ $(document).ready(function() {
 
     $('#modalPreInfEcoObsSegTrim1').on('click', function() {
         $('#bvmEcoDos').val($('#bvm').val()).trigger('change');
-        $("#ev-morfo").val('no evaluada dirigidamente, pero el aspecto morfológico general es normal');
-        $('#ev-morfo').trigger('change');
 
         var percentilPeso = $('#pfePctRpt').val();
         percentilPeso = percentilPeso.replace('&lt;', '<').replace('&gt;', '>');
@@ -1447,8 +1445,9 @@ $(document).ready(function() {
         var linea6 = "Líquido amniótico " + $('#liq-cualitativo-eco').val() + ", con bolsillo vertical mayor " + document.getElementById("bvmEcoDos").value + " mm.";
 
         comentarios = comentarios + linea6 + '\r\n';
-        crearInformeEcoSegTrim1();
         $("#comentarios-eco-dos-inf-dos").val(comentarios);
+        crearInformeEcoSegTrim1();
+        
     });
 
     $('#modalPreInfEcoObsSegTrim2').on('click', function() {
