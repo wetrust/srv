@@ -790,7 +790,7 @@
                 <div class="card-body">
                     <div class="row justify-content-md-center">
                         <div class="col-10">
-                            <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos <a href="#imgDicom" role="button" class="btn">Ver Imágenes ecográficas</a></p>
+                            <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos <button role="button" class="btn btn-outline-secondary" id="boton.dicom.imagen">Ver Imágenes</button></p>
                         </div>
                     </div>
                 </div>
