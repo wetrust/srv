@@ -1457,16 +1457,16 @@
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Ver Gráficas</h6>
-                    <div class="btn-group-vertical d-flex text-right">
-                        <button type="button" class="btn btn-default text-right" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-default text-right" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
+                    <div class="btn-group-vertical d-flex">
+                        <button type="button" class="btn btn-default text-left" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
+                        <button type="button" class="btn btn-default text-left" id="infecoObsSegTrim2">Gráfica Edad Gestacional</button>
                         <button type="button" class="btn btn-default d-none" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Ver Informes</h6>
-                    <div class="btn-group-vertical d-flex text-right">
-                        <button type="button" class="btn btn-default text-right" id="modalPreInfEcoObsSegTrim1">Informe crecimiento</button>
-                        <button type="button" class="btn btn-default text-right" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
+                    <div class="btn-group-vertical d-flex">
+                        <button type="button" class="btn btn-default text-left" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
+                        <button type="button" class="btn btn-default text-left" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
                     </div>
                 </div>
             </div>
