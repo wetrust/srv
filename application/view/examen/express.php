@@ -810,7 +810,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-default" id="boton.eco.prim.nuevo">Nuevo exámen</button><button type="button" class="btn btn-default d-none" id="boton.eco.prim.cancelar">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.prim.eliminar">Eliminar exámen</button>
+                        <button type="button" class="btn btn-default" id="boton.eco.prim.nuevo">Nuevo exámen</button><button class="btn btn-default " type="button">Guardar</button><button type="button" class="btn btn-default d-none" id="boton.eco.prim.cancelar">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.prim.eliminar">Eliminar exámen</button>
                     </div>
                     <div class="btn-group-vertical d-flex justify-content-center mt-2" role="group" aria-label="First group">
                     <button class="btn btn-default " type="button" id="modalPreInfEcoPrimTrim">Ver Informe</button>
@@ -1450,7 +1450,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-default" id="boton.eco.segundo.nuevo">Nuevo exámen</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.segundo.eliminar">Eliminar exámen</button>
+                        <button type="button" class="btn btn-default" id="boton.eco.segundo.nuevo">Nuevo exámen</button><button class="btn btn-default " type="button">Guardar</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.segundo.eliminar">Eliminar exámen</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Gráficas</h6>
@@ -1945,7 +1945,7 @@
                 <div class="card-body">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-default" id="boton.eco.doppler.nuevo">Nuevo exámen</button><button type="button" class="btn btn-default" id="boton.eco.doppler.guardar">Guardar exámen</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.doppler.eliminar">Eliminar exámen</button>
+                        <button type="button" class="btn btn-default" id="boton.eco.doppler.nuevo">Nuevo exámen</button><button class="btn btn-default " type="button">Guardar</button><button type="button" class="btn btn-default" id="boton.eco.doppler.guardar">Guardar exámen</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.doppler.eliminar">Eliminar exámen</button>
                     </div>
                     <hr>
                     <h6 class="text-center my-2">Informes</h6>
