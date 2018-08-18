@@ -788,9 +788,10 @@
             </div>
             <div class="card mt-3">
                 <div class="card-body">
-                    <div class="row justify-content-md-center">
-                        <div class="col-10">
-                            <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos <button role="button" class="btn btn-outline-secondary" id="boton.dicom.imagen">Ver Imágenes</button></p>
+                    <div class="row">
+                        <div class="col">
+                            <button role="button" class="btn btn-outline-secondary float-right" id="boton.dicom.imagen">Ver Imágenes</button>
+                            <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
                         </div>
                     </div>
                 </div>
