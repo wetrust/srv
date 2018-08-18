@@ -821,10 +821,10 @@
         <div class="col-12 col-sm-9">
             <ul class="nav nav-tabs" id="tab.eco.prim.trim" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Medidas</a>
+                    <a class="nav-link bg-secondary text-light active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Pagina 1 - Medidas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Ir a informe</a>
+                    <a class="nav-link bg-secondary text-light" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Página 2 - Texto</a>
                 </li>
             </ul>
             <div class="tab-content" id="tab.body.eco.prim.trim">
@@ -1470,10 +1470,10 @@
         <div class="col-12 col-sm-9" id="ecoObsSegTrimContainer">
             <ul class="nav nav-tabs" id="tab.eco.seg.trim" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light active" id="seg-trim-med-tab" data-toggle="tab" href="#medidas-eco-seg" role="tab">Medidas</a>
+                    <a class="nav-link bg-secondary text-light active" id="seg-trim-med-tab" data-toggle="tab" href="#medidas-eco-seg" role="tab">Pagina 1 - Medidas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light" id="seg-trim-informe-tab" data-toggle="tab" href="#informe-eco-seg" role="tab">Ir a informe</a>
+                    <a class="nav-link bg-secondary text-light" id="seg-trim-informe-tab" data-toggle="tab" href="#informe-eco-seg" role="tab">Página 2 - Texto</a>
                 </li>
             </ul>
             <div class="tab-content" id="tab.body.eco.seg.trim">
@@ -1961,10 +1961,10 @@
         <div class="col-12 col-sm-9">
             <ul class="nav nav-tabs" id="tab.eco.doppler" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light active" id="doppler-med-tab" data-toggle="tab" href="#medidas-doppler" role="tab">Medidas</a>
+                    <a class="nav-link bg-secondary text-light active" id="doppler-med-tab" data-toggle="tab" href="#medidas-doppler" role="tab">Pagina 1 - Medidas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg-secondary text-light" id="doppler-informe-tab" data-toggle="tab" href="#informe-doppler" role="tab">Ir a informe</a>
+                    <a class="nav-link bg-secondary text-light" id="doppler-informe-tab" data-toggle="tab" href="#informe-doppler" role="tab">Página 2 - Texto</a>
                 </li>
             </ul>
             <div class="tab-content" id="tab.body.doppler">
