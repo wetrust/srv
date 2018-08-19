@@ -5,7 +5,8 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active">Datos Neonatales</li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar, curvas customizadas</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
+                <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
                 <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
             </ol>
             <div class="row my-2">
@@ -506,6 +507,104 @@
                 </div>
             </div>
             <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
+        </div>
+        <div class="container" id="ajustepeso" style="display:none;">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
+                <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo Hipoglicemia neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
+                <li class="ml-auto"><a href="#recienacido">Volver</a></li>
+            </ol>
+            <div class="row mt-1">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Recién Nacido</h4>
+                            <form>
+                                <div class="form-group row">
+                                    <label class="col-4" for="edadGestacional">Sexo Neonatal</label>
+                                    <select id="sn" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                        <option value="1" selected>Femeníno</option>
+                                        <option value="0">Masculíno</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="edadGestacional" class="col-4">Paridad Materna</label>
+                                    <select id="pm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                        <option value="1" selected>Primípara</option>
+                                        <option value="0">Multípara</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="edadGestacional" class="col-3">Talla Materna</label>
+                                    <select id="tm" class="form-control col-3" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;"></select>
+                                    <label for="edadGestacional" class="col-3">Peso Materno</label>
+                                    <select id="pesom" class="form-control col-3" style="font-size: 0.8rem;height: 2rem;"></select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="edadGestacional" class="col-4">IMC <small>((Peso/Talla)^2)</small></label>
+                                    <input type="text" class="form-control col-8" style="background-color: #FFF;font-size: 0.8rem;height: 2rem;" id="valorimc" disabled>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="edadGestacional" class="col-4">Estado Nutricional</label>
+                                    <select id="imc" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                        <option value="1">Enflaquecida</option>
+                                        <option value="2">Normal</option>
+                                        <option value="3">SobrePeso</option>
+                                        <option value="4" selected>Obesidad</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="edadGestacional" class="col-4">Edad Materna</label>
+                                    <select id="em" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                        <option value="1">&lt; 19</option>
+                                        <option value="2">20 - 21</option>
+                                        <option value="3">22 - 23</option>
+                                        <option value="4">24 - 25</option>
+                                        <option value="5">26 - 27</option>
+                                        <option value="6" selected>&gt; 27</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="edadGestacional" class="col-4">Etnia Materna</label>
+                                    <select id="apellm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                        <option value="0">Ambos Caucásicos</option>
+                                        <option value="2">Solo uno Caucásico</option>
+                                        <option value="1" selected>Ninguno Caucásico</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <h6 class="text-left text-info" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
+                            <div class="btn-group" role="group" aria-label="Default button group">
+                                <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
+                                <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
+                                <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
+                                <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
+                            </div>
+                            <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="graficoAjustado"></div>
+                            <div>
+                                <div class="form-group row mb-0">
+                                    <p class="col-12 d-none" id="tituloAjusteG"><strong>Peso ajustado para:</strong></p>
+                                    <label for="PesoEgeSAj" class="col-4" id="tituloAjusteAlto" style="font-size: 0.8rem;height: 2rem;">Pct. peso sin ajuste</label>
+                                    <input type="text" class="form-control col-2" id="PesoEgeSAj" disabled style="font-size: 0.8rem;height: 2rem;">
+                                    <label for="PesoEgeCAj" class="col-4" id="tituloAjusteBajo" style="font-size: 0.8rem;height: 2rem;">Pct. peso con ajuste</label>
+                                    <input type="text" class="form-control col-2" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
         <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
@@ -1026,6 +1125,7 @@
 
                     $("#peso_eg_pct_regional").val(RN.pesoTemuco());
                     $("#peso_eg_regional").val(RN.pesoTemucoCondicion());
+                    $("#g3").trigger("click");
                 }
 
                 if ($("#tallaRN").val() > 1){
@@ -1358,9 +1458,428 @@
                 }
                 $("#graficoEstandar").trigger("click");
             });
+
+            function verGraficoAjustePeso(){
+                RN = new RecienNacido($("#pesoRN").val(),$("#tallaRN").val(),$("#edadGestacional").val());
+                $('#opt1').trigger("click");
+                $('#g3').trigger("click");
+            };
+            
             
             var RN = 0;
+            var Tablas = 0;
+            var varMama = 0;
+            var p90Pso = [];
+            var p10Pso = []; 
 
+            $('#g3').click(function() {
+                tipografico = 0;
+                var apell = 0;
+                if ($("#apellm").val() == 2) {
+                    apell = 1;
+                } else {
+                    apell = $("#apellm").val();
+                }
+                varMama.edad = $("#em").val();
+                varMama.apellido = apell;
+                varMama.paridad = $("#pm").val();
+                RN.sexo = $("#sn").val();
+                var p90 = [0.2418159, -0.0038925, 0.0000168, -0.0130562, -0.0127872, -0.0034632, 0.0117179, 0.0021092, -0.9260631];
+                var p10 = [-0.2639902, 0.0110356, -0.0001265, -0.0146183, -0.0134044, -0.0020684, 0.0092266, 0.0009001, 4.474501];
+                for (i = 24; i < 43; i++) {
+                    x = i - 24;
+                    p90Pso[x] = Math.pow(10, ((i * p90[0]) + (Math.pow(i, 2) * p90[1]) + (Math.pow(i, 3) * p90[2]) + (p90[3] * $("#pm").val()) + (p90[4] * $("#sn").val()) + (p90[5] * apell) + (p90[6] * $("#imc").val()) + (p90[7] * $("#em").val()) + p90[8]));
+                    p10Pso[x] = Math.pow(10, ((i * p10[0]) + (Math.pow(i, 2) * p10[1]) + (Math.pow(i, 3) * p10[2]) + (p10[3] * $("#pm").val()) + (p10[4] * $("#sn").val()) + (p10[5] * apell) + (p10[6] * $("#imc").val()) + (p10[7] * $("#em").val()) + p10[8]));;
+                }
+                $("#PesoEgeSAj").val(RN.pesoTemuco());
+                eg = RN.eg - 24;
+                var tablas = new Tabla;
+                var uno, dos, tres;
+                uno = p90Pso[eg] - p10Pso[eg];
+                dos = RN.peso - p10Pso[eg];
+                tres = parseInt((80 / (uno)) * (dos)) + 10;
+                $("#PesoEgeCAj").val(tres);
+                $("#peso_eg_pct_ajustado").val(tres);
+                if (tres < 10) {
+                    $("#peso_eg_ajustado").val("Pequeño");
+                } else if (tres <= 90) {
+                    $("#peso_eg_ajustado").val("Adecuado");
+                } else if (tres > 90) {
+                    $("#peso_eg_ajustado").val("Grande");
+                }
+                $("#tituloAjusteG").addClass("d-none");
+                $("#tituloAjusteAlto").html("Pct Peso sin ajuste");
+                $("#tituloAjusteBajo").html("Pct. Peso con ajuste");
+                Highcharts.chart('graficoAjustado', {
+                    title: {
+                        text: 'Curva regional Peso/Ege ajustada por variables',
+                        style: {
+                            "color": "#337ab7",
+                            "fontSize": "14px"
+                        }
+                    },
+                    chart: {
+                        backgroundColor: "rgba(0, 0, 0, 0)"
+                    },
+                    yAxis: {
+                        title: {
+                            text: ''
+                        },
+                        tickPositions: [400, 860, 1320, 1780, 2240, 2700, 3160, 3620, 4080, 4540, 4980],
+                        tickColor: "#337ab7",
+                        labels: {
+                            enabled: true,
+                            style: {
+                                color: '#337ab7',
+                            }
+                        }
+                    },
+                    colors: ['#ff3300', '#ff3300', '#ff3300'],
+                    xAxis: {
+                        categories: ['24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42'],
+                        labels: {
+                            enabled: true,
+                            style: {
+                                color: '#337ab7',
+                            }
+                        }
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    series: [{
+                        type: "line",
+                        name: 'Pct. 10',
+                        marker: {
+                            enabled: false
+                        },
+                        dashStyle: (function() {
+                            var estilo = 'solid';
+                            if (RN.ajustePequeno == true) {
+                                estilo = 'Dash';
+                            }
+                            return estilo;
+                        }()),
+                        color: (function() {
+                            var color = '#ff3300';
+
+                            if (RN.ajustePequeno == true) {
+                                color = '#003d99';
+                            }
+                            return color;
+                        }()),
+                        data: (function() {
+                            var data = [];
+                            for (i = 24; i < 43; i++) {
+                                x = i - 24;
+                                data.push({
+                                    y: p10Pso[x],
+                                });
+                            }
+                            return data;
+                        }())
+                    }, {
+                        type: "line",
+                        name: 'Pct. 90',
+                        marker: {
+                            enabled: false
+                        },
+                        dashStyle: (function() {
+                            var estilo = 'solid';
+
+                            if (RN.ajustePequeno == true) {
+                                estilo = 'Dash';
+                            }
+
+                            return estilo;
+                        }()),
+                        color: (function() {
+                            var color = '#ff3300';
+
+                            if (RN.ajustePequeno == true) {
+                                color = '#003d99';
+                            }
+                            return color;
+                        }()),
+                        data: (function() {
+                            var data = [];
+                            for (i = 24; i < 43; i++) {
+                                x = i - 24;
+                                data.push({
+                                    y: p90Pso[x],
+                                });
+                            }
+                            return data;
+                        }())
+                    }, {
+                        type: "line",
+                        name: 'Peso',
+                        dashStyle: "Dot",
+                        marker: {
+                            symbol: 'square'
+                        },
+                        lineWidth: 0,
+                        data: (function() {
+                            var data = [];
+
+                            for (i = 24; i <= (RN.eg - 1); i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                            data.push({
+                                y: parseInt(RN.peso),
+                            });
+                            for (i = RN.eg + 1; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                            return data;
+                        }())
+                    }]
+                });
+            });
+
+
+            $('#tm').change(function() {
+                varMama = new Mama($("#tm").val(), $("#pesom").val(), $("#em").val(), $('#apellm').val());
+                $('#valorimc').val(varMama.imc());
+                $('#imc').val(varMama.imcCondicion());
+                $('#g3').trigger("click");
+            });
+
+            $('#pesom').change(function() {
+                varMama = new Mama($("#tm").val(), $("#pesom").val(), $("#em").val(), $('#apellm').val());
+                $('#valorimc').val(varMama.imc());
+                $('#imc').val(varMama.imcCondicion());
+                $('#g3').trigger("click");
+            });
+
+            $('#sn').change(function() {
+                $('#g3').trigger("click");
+            });
+            $('#pm').change(function() {
+                $('#g3').trigger("click");
+            });
+            $('#imc').change(function() {
+                $('#g3').trigger("click");
+            });
+            $('#em').change(function() {
+                $('#g3').trigger("click");
+            });
+            $('#apellm').change(function() {
+                $('#g3').trigger("click");
+            });
+
+            $('#opt1').click(function() {
+                $('#pm').val("1");
+                $('#sn').val("1");
+                $('#tm').val("149");
+                $('#pesom').val("70");
+                $('#em').val("6");
+                $('#apellm').val("1");
+                varMama = new Mama('149', '70', $("#em").val(), $('#apellm').val());
+                varMama.talla = '149';
+                varMama.peso = '70';
+                $('#valorimc').val(varMama.imc());
+                $('#imc').val(varMama.imcCondicion());
+                RN.ajustePequeno = false;
+                $('#g3').trigger("click");
+                $("#tituloAjusteG").addClass("d-none");
+                $("#tituloAjusteAlto").html("Pct. peso sin ajuste");
+                $("#tituloAjusteBajo").html("Pct. de peso con ajuste");
+            });
+
+            $('#opt2').click(function() {
+                $('#pm').val("0");
+                $('#sn').val("0");
+                $('#tm').val("170");
+                $('#pesom').val("91");
+                $('#em').val("6");
+                $('#apellm').val("0");
+                $('#tm').change();
+                varMama = new Mama('170', '91', $("#em").val(), $('#apellm').val());
+                varMama.talla = '170';
+                varMama.peso = '91';
+                $('#valorimc').val(varMama.imc());
+                $('#imc').val(varMama.imcCondicion());
+                RN.ajustePequeno = false;
+                $('#g3').trigger("click");
+                $("#tituloAjusteG").addClass("d-none");
+                $("#tituloAjusteAlto").html("Pct. peso sin ajuste");
+                $("#tituloAjusteBajo").html("Pct. peso con ajuste");
+            });
+
+            $('#opt3').click(function() {
+                $('#sn').val("1");
+                $('#pm').val("1");
+                $('#tm').val("149");
+                $('#pesom').val("44");
+                $('#em').val("1");
+                $('#apellm').val("1");
+                $('#tm').change();
+                varMama = new Mama('149', '44', $("#em").val(), $('#apellm').val());
+                varMama.talla = '149';
+                varMama.peso = '44';
+                $('#valorimc').val(varMama.imc());
+                $('#imc').val(varMama.imcCondicion());
+                RN.ajustePequeno = true;
+                $('#g3').trigger("click");
+                $("#tituloAjusteG").addClass("d-none");
+                $("#tituloAjusteAlto").html("Pct.peso sin ajuste");
+                $("#tituloAjusteBajo").html("Pct. peso con ajuste");
+            });
+
+            $("#opt4").click(function() {
+                var chart = Highcharts.chart('graficoAjustado', {
+                    title: {
+                        text: 'Visión simultanea curvas para condiciones extremas',
+                        style: {
+                            "color": "#337ab7",
+                            "fontSize": "14px"
+                        }
+                    },
+                    chart: {
+                        backgroundColor: "rgba(0, 0, 0, 0)"
+                    },
+                    yAxis: {
+                        title: {
+                            text: ''
+                        },
+                        tickPositions: [400, 860, 1320, 1780, 2240, 2700, 3160, 3620, 4080, 4540, 4980],
+                        tickColor: "#337ab7",
+                        labels: {
+                            enabled: true,
+                            style: {
+                                color: '#337ab7',
+                            }
+                        }
+                    },
+                    colors: ['#ff3300', '#ff3300', '#ff3300'],
+                    xAxis: {
+                        categories: ['24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42'],
+                        labels: {
+                            enabled: true,
+                            style: {
+                                color: '#337ab7',
+                            }
+                        }
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    series: [{
+                        type: "line",
+                        name: 'Pct. 10',
+                        marker: {
+                            enabled: false
+                        },
+                        dashStyle: (function() {
+                            estilo = 'Dash';
+                            return estilo;
+                        }()),
+                        color: (function() {
+                            color = '#003d99';
+                            return color;
+                        }())
+                    }, {
+                        type: "line",
+                        name: 'Pct. 90',
+                        marker: {
+                            enabled: false
+                        },
+                        dashStyle: (function() {
+                            estilo = 'Dash';
+                            return estilo;
+                        }()),
+                        color: (function() {
+                            color = '#003d99';
+                            return color;
+                        }())
+                    }, {
+                        type: "line",
+                        name: 'Peso',
+                        dashStyle: "Dot",
+                        marker: {
+                            symbol: 'square'
+                        },
+                        lineWidth: 0,
+                        data: (function() {
+                            var data = [];
+                            for (i = 24; i <= (RN.eg - 1); i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                            data.push({
+                                y: parseInt(RN.peso),
+                            });
+                            for (i = RN.eg + 1; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
+                            return data;
+                        }())
+                    }, {
+                        type: "line",
+                        name: 'Pct. 10',
+                        marker: {
+                            enabled: false
+                        },
+                        dashStyle: (function() {
+                            estilo = 'solid';
+                            return estilo;
+                        }()),
+                        color: (function() {
+                            color = '#ff3300';
+                            return color;
+                        }())
+                    }, {
+                        type: "line",
+                        name: 'Pct. 90',
+                        marker: {
+                            enabled: false
+                        },
+                        dashStyle: (function() {
+                            estilo = 'solid';
+                            return estilo;
+                        }()),
+                        color: (function() {
+                            color = '#ff3300';
+                            return color;
+                        }())
+                    }]
+                });
+
+                chart.series[3].setData([614.911761594748, 688.2409351621351, 775.8261252713739, 879.2765685663702, 1000.14921864602, 1139.7859521609507, 1299.0982567628794, 1478.2976958841446, 1676.578914688683, 1891.7742075463264, 2120.0143470672206, 2355.4478861757852, 2590.0872856319534, 2813.8600915466154, 3014.940876697811, 3180.418712251241, 3297.311672544965, 3353.875214095742, 3341.073271117301]);
+                chart.series[4].setData([845.6847516567528, 1019.8791186895171, 1215.1332367429115, 1430.6549439464502, 1664.8783277732855, 1915.435357904167, 2179.1679353682594, 2452.1831280795927, 2729.951302092218, 3007.4436584447762, 3279.3026501881805, 3540.0361747837806, 3784.224559989481, 4006.728359825368, 4202.884932894939, 4368.682671927062, 4500.903482341126, 4597.226484532643, 4656.288703467283]);
+                chart.series[0].setData([532.7720094718462, 596.3058912325178, 672.1914745777674, 761.8230347419276, 866.5495478697786, 987.5336430802754, 1125.5650517432623, 1280.827076703167, 1452.6219422120837, 1639.0715041903895, 1836.8233856299587, 2040.8077742235917, 2244.1041041316807, 2437.985397218539, 2612.205863734485, 2755.5792133386753, 2856.8576426002764, 2905.8654410796826, 2894.7735782926065]);
+                chart.series[1].setData([711.5447194612854, 858.108887467441, 1022.3923706232943, 1203.7286574482926, 1400.800215862748, 1611.6146255636006, 1833.5147159659111, 2063.2250404407005, 2296.9344422785457, 2530.4117758437037, 2759.1492925532416, 2978.526031047196, 3183.981971581188, 3371.1928720061205, 3536.235665413285, 3675.7350538979554, 3786.9833875928784, 3868.0279180018288, 3917.721861188435]);
+
+                $("#tituloAjusteG").removeClass("d-none");
+                $("#tituloAjusteAlto").html("potencial de crecimiento alto");
+                $("#tituloAjusteBajo").html("potencial de crecimiento bajo");
+
+                var p90x = [845.6847516567528, 1019.8791186895171, 1215.1332367429115, 1430.6549439464502, 1664.8783277732855, 1915.435357904167, 2179.1679353682594, 2452.1831280795927, 2729.951302092218, 3007.4436584447762, 3279.3026501881805, 3540.0361747837806, 3784.224559989481, 4006.728359825368, 4202.884932894939, 4368.682671927062, 4500.903482341126, 4597.226484532643, 4656.288703467283];
+                var p10x = [614.911761594748, 688.2409351621351, 775.8261252713739, 879.2765685663702, 1000.14921864602, 1139.7859521609507, 1299.0982567628794, 1478.2976958841446, 1676.578914688683, 1891.7742075463264, 2120.0143470672206, 2355.4478861757852, 2590.0872856319534, 2813.8600915466154, 3014.940876697811, 3180.418712251241, 3297.311672544965, 3353.875214095742, 3341.073271117301];
+
+                var p90 = [711.5447194612854, 858.108887467441, 1022.3923706232943, 1203.7286574482926, 1400.800215862748, 1611.6146255636006, 1833.5147159659111, 2063.2250404407005, 2296.9344422785457, 2530.4117758437037, 2759.1492925532416, 2978.526031047196, 3183.981971581188, 3371.1928720061205, 3536.235665413285, 3675.7350538979554, 3786.9833875928784, 3868.0279180018288, 3917.721861188435];
+                var p10 = [532.7720094718462, 596.3058912325178, 672.1914745777674, 761.8230347419276, 866.5495478697786, 987.5336430802754, 1125.5650517432623, 1280.827076703167, 1452.6219422120837, 1639.0715041903895, 1836.8233856299587, 2040.8077742235917, 2244.1041041316807, 2437.985397218539, 2612.205863734485, 2755.5792133386753, 2856.8576426002764, 2905.8654410796826, 2894.7735782926065];
+
+                var uno, dos, tres;
+
+                uno = p90x[eg] - p10x[eg];
+                dos = RN.peso - p10x[eg];
+                tres = parseInt((80 / (uno)) * (dos)) + 10;
+                $("#PesoEgeSAj").val(tres);
+
+                uno = p90[eg] - p10[eg];
+                dos = RN.peso - p10[eg];
+                tres = parseInt((80 / (uno)) * (dos)) + 10;
+                $("#PesoEgeCAj").val(tres);
+            });
             function RecienNacido(peso = 0, talla = 0,eg = 40) {
                 this.peso = peso;
                 this.talla = talla;
@@ -1503,6 +2022,11 @@
                     if (hash=="#recienacido"){
                         $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("recienacido");
+                    }
+                    else if (hash=="#ajustepeso"){
+                        $("#titulo").html("<strong><em>Ajuste al peso Neonatal</em></strong>");
+                        displayElement("ajustepeso");
+                        verGraficoAjustePeso();
                     }
                     else if (hash=="#pdfviebox"){
                         $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
