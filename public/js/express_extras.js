@@ -14,6 +14,7 @@ function onHashChange() {
     } else if (hash == "#ecoObsSegTrim") {
         obtenerEcoSegundo();
         displayElement("ecoObsSegTrim");
+        $("#eco\\.seg\\.trim\\.select\\.comentario").trigger("change");
         $("#InicioLink").attr("href","#paciente");
     } else if (hash == "#ecoObsPrimTrim") {
         //resetea los inputs
