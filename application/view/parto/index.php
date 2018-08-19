@@ -2079,6 +2079,7 @@
                 //cargar inputs de Peso
                 for (i = 35; i < 130; i++) {
                     $("#peso").append('<option value="' + i +'">' + i + ' kg.</option>');
+                    $("#pesom").append('<option value="' + i +'">' + i + ' kg.</option>');
                 }
                 //cargar inputs de talla
                 for (i = 135; i < 190; i++) {
