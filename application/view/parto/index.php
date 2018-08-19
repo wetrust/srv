@@ -2287,28 +2287,22 @@ $("#dextro_uno").on("keyup", function(){
                     let hash = document.location.hash;
 
                     if (hash=="#recienacido"){
-                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("recienacido");
                     }
                     else if (hash=="#ajustepeso"){
-                        $("#titulo").html("<strong><em>Ajuste al peso Neonatal</em></strong>");
                         displayElement("ajustepeso");
                         verGraficoAjustePeso();
                     }
                     else if (hash=="#pdfviebox"){
-                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("pdfviebox");
                     }
                     else if (hash=="#neonatal"){
-                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("neonatal"); 
                     }
                     else if (hash=="#hipoglicemia"){
-                        $("#titulo").html("<strong><em>Hipoglicemia Neonatal</em></strong>");
                         displayElement("hipoglicemia");
                     }
                     else if (hash=="#postnatal"){
-                        $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
 			            displayElement("postnatal");
                     }
                 });
