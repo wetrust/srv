@@ -257,30 +257,30 @@
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
                                     <select id="hiperbilirrubinemia" class="form-control">
                                         <option value="0">Si</option>
-                                        <option value="1">No</option>
+                                        <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Poliglobulia</label>
                                     <select id="poliglobulia" class="form-control">
                                         <option value="0">Si</option>
-                                        <option value="1">No</option>
+                                        <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Hospital - UCIN</label>
                                     <select id="hospital_ucin" class="form-control">
                                         <option value="0">Si</option>
-                                        <option value="1">No</option>
+                                        <option value="1" selected>No</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row pt-3">
                                 <div class="col-4">
-                                    <label for="edadGestacional">Sindrome D.Respiratorio</label>
+                                    <label for="edadGestacional">Sindrome dificultad respiratoria</label>
                                     <select id="sindrome_respiratorio" class="form-control">
                                         <option value="0">Si</option>
-                                        <option value="1">No</option>
+                                        <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
@@ -291,7 +291,7 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label>Prof. Atención de Parto</label>
+                                    <label>Profesional atención del Parto</label>
                                     <select class="form-control" id="prof.atencion.parto">
                                     </select>
                                 </div>
