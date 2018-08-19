@@ -674,7 +674,7 @@
                 <div class="card-body">
                     <button class="btn btn-outline-danger float-right" id="boton.volver.step.five"><i class="fas fa-door-open"></i><br>Volver</button>
                     <h1 class="text-center" id="titulos.step.six.head">Elegir Exámen Ecográfico</h1>
-                    <div class="row d-none" id="paciente.informacion.ecografica">
+                    <div class="row p-1 d-none" id="paciente.informacion.ecografica">
                         <div class="col">
                             <div class="form-group row">
                                 <div class="col-1">
