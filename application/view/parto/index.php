@@ -2353,17 +2353,20 @@ $("#dextro_uno").on("keyup", function(){
                     $("#talla").append('<option value="' + i +'">' + i + ' cms.</option>');
                     $("#tm").append('<option value="' + i +'">' + i + ' cms.</option>');
                     $("#tallaMaterna").append('<option value="' + i +'">' + i + ' cms.</option>');
-                    $('#talla option[value="149"]').prop('selected', true);
-                    $('#tm option[value="149"]').prop('selected', true);
-                    $('#tallaMaterna option[value="149"]').prop('selected', true);
                 }
+
+                $('#talla option[value="149"]').prop('selected', true);
+                $('#tm option[value="149"]').prop('selected', true);
+                $('#tallaMaterna option[value="149"]').prop('selected', true);
+                
                 //cargar inputs de peso materno
                 for (i = 35; i < 140; i++) {
                     $("#pesoMaterno").append('<option value="' + i +'">' + i + ' kg</option>');
-                    $('#pesoMaterno option[value="70"]').prop('selected', true);
-                    $('#pesom option[value="70"]').prop('selected', true);
-                    $('#pesoMaterno option[value="70"]').prop('selected', true);
+                    $("#pesom").append('<option value="' + i +'">' + i + ' kg</option>');
                 }
+
+                $('#pesom option[value="70"]').prop('selected', true);
+                $('#pesoMaterno option[value="70"]').prop('selected', true);
 
                 $("#pesoRN").on("keydown", function(e){
                     var text = $(this).val();
