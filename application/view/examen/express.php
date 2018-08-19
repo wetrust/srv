@@ -2045,7 +2045,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <p><small class="text-primary">(Espacio adicional a completar por el ecografista según hallazgos e impresión clínica.<small></p>
+                            <p><small class="text-primary">(Espacio adicional a completar por el ecografista según hallazgos e impresión clínica.</small></p>
                             <textarea id="comentarios-eco-dos-inf-dos" rows="3" class="form-control"></textarea>
                         </div>
                     </div>
