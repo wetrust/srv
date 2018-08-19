@@ -737,7 +737,7 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional"><small>Hipoglicemia confirmada Laboratorio</small></label>
+                                    <label for="edadGestacional"><small>Hipoglicemia confirmada por laboratorio</small></label>
                                     <select id="hipoglicemia_confirmada" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
@@ -1131,6 +1131,10 @@
 
                 $("#listaPartosDos").on("click", function(){
                     $("#listaPartos").trigger("click");
+                });
+
+                $("#goto_ajuste").on("click", function(){
+                    document.location.hash = "#ajustepeso";
                 });
 
                 $("#datos\\.neonatal\\.peso").on("change", function(){
