@@ -3125,7 +3125,7 @@ $(document).ready(function() {
         bvmDoppler();
     });
 
-    $('#modalPreInfEcoDoppler').on('click', function() {
+    $('#graficoAud').on('click', function() {
         var comentarios = "";
         if ($('#auprom').val() > 0) {
             comentarios = 'F. Doppler materno (promedio uterinas), IP percentil ' + $('#auPctTxt').val() + '\r\n';
@@ -3134,6 +3134,9 @@ $(document).ready(function() {
             comentarios = comentarios + 'F. Doppler fetal, IP de CCP percentil ' + $('#ccpPctTxt').val() + '\r\n';
         }
         $('#comentarios-doppler').val(comentarios);
+    });
+
+    $('#modalPreInfEcoDoppler').on('click', function() {
         crearInformeDoppler();
     });
 
