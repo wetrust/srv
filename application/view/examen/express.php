@@ -669,7 +669,7 @@
         </div>
     </div>        
     <div class="row">
-        <div class="col-md-12">
+        <div class="col p-0">
             <div class="card mb-3">
                 <div class="card-body">
                     <button class="btn btn-outline-danger float-right" id="boton.volver.step.five"><i class="fas fa-door-open"></i><br>Volver</button>
