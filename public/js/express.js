@@ -3047,7 +3047,15 @@ $(document).ready(function() {
             ccpPctTxt: $("#ccpPctTxt").val(),
             dv: $("#dv").val(),
             dvPctTxt: $("#dvPctTxt").val(),
-            psmACM: $("#psmACM").val()
+            psmACM: $("#psmACM").val(),
+            liquido: $("#liqAmnioDoppler").val(),
+            bvm: $("#bvmDoppler").val(),
+            motivo: $("#motivo-doppler").val(),
+            antecedentes_obstetricos: $("#antecedentes-doppler").val(),
+            presentacion: $("#presentacion-doppler").val(),
+            motilidad_fetal: $("#motilidad-doppler").val(),
+            placenta_ubic: $("#ubicacion-doppler").val(),
+            comentarios: $("#comentarios-doppler").val()
         }
 
         let data = {

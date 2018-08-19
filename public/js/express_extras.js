@@ -3279,6 +3279,14 @@ function loadExamen(tipo, id) {
                         $("#ccp").val(val.ccp).trigger("change");
                         $("#dv").val(val.ductus).trigger("change");
                         $("#psmACM").val(val.acm);
+                        $("#liqAmnioDoppler").val(val.liquido);
+                        $("#bvmDoppler").val(val.bvm);
+                        $("#motivo-doppler").val(val.motivo);
+                        $("#antecedentes-doppler").val(val.antecedentes_obstetricos);
+                        $("#presentacion-doppler").val(val.presentacion);
+                        $("#motilidad-doppler").val(val.motilidad_fetal);
+                        $("#ubicacion-doppler").val(val.placenta_ubic);
+                        $("#comentarios-doppler").val(val.comentarios);
                     };
                 });
             }
