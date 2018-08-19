@@ -1498,7 +1498,7 @@ function valccca() {
                 var uno = pct97[eg] - pct3[eg];
                 var dos = ccca - pct3[eg];
                 var resultado = parseInt(95 / (uno) * (dos) + 3);
-                ajustarProgreso(resultado, "cccaPct");
+                ajustarProgreso(resultado, "cccaPctV");
                 var pctCCCA = '';
                 //truncador de Pct, sobre 100 o bajo 1
                 if (resultado > 99) {
