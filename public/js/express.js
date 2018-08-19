@@ -3125,7 +3125,7 @@ $(document).ready(function() {
         bvmDoppler();
     });
 
-    $('#graficoAud').on('click', function() {
+    $('#boton\\.doppler\\.comentario').on('click', function() {
         var comentarios = "";
         if ($('#auprom').val() > 0) {
             comentarios = 'F. Doppler materno (promedio uterinas), IP percentil ' + $('#auPctTxt').val() + '\r\n';
