@@ -723,8 +723,8 @@
                                 <div class="col-4">
                                     <label for="edadGestacional" class="bg-info text-white px-1">Factores de Riesgo para Hipoglicemia</label>
                                     <select id="hipoglicemia_riesgo" class="form-control">
-                                        <option value="0">RN PEG (<10)</option>
-                                        <option value="1">RN GEG (IP > 3.3)</option>
+                                        <option value="0">RN PEG (&lt;10)</option>
+                                        <option value="1">RN GEG (IP &gt; 3.3)</option>
                                         <option value="2">Hijo madre DM GEG IP > 3.3</option>
                                         <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
                                         <option value="4" selected>Sin riesgo clínico de hipoglicemia</option>
