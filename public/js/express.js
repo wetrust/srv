@@ -1313,14 +1313,6 @@ $(document).ready(function() {
     });
 
     $('#modalPreInfEcoPrimTrim').on('click', function() {
-        var fur = $("#input\\.paciente\\.fum").val();
-        var fpp = $("#input\\.paciente\\.fpp\\.examen").val();
-        if ($('#lcn').val() < 1) {
-            var comentario = "En relación a fecha de ultima menstruación referida;\r\nse sugiere reevaluar más adelante para definir edad gestacional\r\n";
-        } else {
-            var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp;
-        }
-        $('#comentarios-eco-uno').val(comentario);
         crearInformeEcoPrimTrim();
     });
 

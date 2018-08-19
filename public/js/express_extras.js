@@ -24,6 +24,11 @@ function onHashChange() {
         obtenerEcoPrimTrim();
         displayElement("ecoObsPrimTrim");
         $("#InicioLink").attr("href","#paciente");
+
+        var fur = $("#input\\.paciente\\.fum").val();
+        var fpp = $("#input\\.paciente\\.fpp\\.examen").val();
+        var comentario = "Fum operacional: " + fur + "\r\nFecha probable de parto: " + fpp;
+        $('#comentarios-eco-uno').val(comentario);
     } else if (hash == "#configuracion") {
         displayElement("configuracion");
         $("#InicioLink").attr("href","#paciente");
