@@ -1149,6 +1149,7 @@
                     }
 
                     $("#pesoRN").val($(this).val());
+                    $("#datos\\.hipoglicemia\\.peso").val($(this).val());
                     $("#pesoRN").trigger("change");
                 });
 
