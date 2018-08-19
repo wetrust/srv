@@ -313,7 +313,20 @@ $(document).ready(function() {
             fecha: $("#input\\.paciente\\.fe\\.ecoprim").val(),
             eg: $("#eco\\.prim\\.eg").val(),
             embrion: $("#lcn").val(),
-            saco: $("#saco").val()
+            saco: $("#saco").val(),
+            comentarios: $("#comentarios-eco-uno").val(),
+            douglas: $("#exploracion-douglas").val(),
+            douglas_comentarios: $("#comentarios-douglas-informe").val(),
+            anexo_der: $("#anexo-derecho").val(),
+            anexo_izq: $("#anexo-izquierdo").val(),
+            embrion_desc: $("#embrion").val(),
+            fcf: $("#fcf-prim").val(),
+            saco_vitelino: $("#saco-vitelino").val(),
+            saco_gest: $("#saco-gestacional").val(),
+            saco_vitelino_mm: $("#saco-vitelino-mm").val(),
+            utero_ubic_uno: $("#utero-ubic1").val(),
+            utero_ubic_dos: $("#utero-ubic2").val(),
+            cuerpo_uterino: $("#cuerpo-uterino").val(),
         }
     
         let data = {

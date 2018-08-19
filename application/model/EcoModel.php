@@ -108,7 +108,7 @@ class EcoModel
                 return self::getEcos($rut, $tipo);
             }
             else {
-                $sql = "INSERT INTO eco_prim (id_paciente, eg_examen, n_examen,embrion,prom_saco,fecha_examen) VALUES (:id_paciente,:eg_examen, :n_examen,:embrion,:prom_saco,:fecha_examen)";
+                $sql = "INSERT INTO eco_prim (id_paciente, eg_examen, n_examen,embrion,prom_saco,fecha_examen,comentarios, douglas, douglas_comentarios, anexo_der, anexo_izq, embrion_desc, fcf,saco_vitelino, saco_gest, saco_vitelino_mm,utero_ubic_uno,utero_ubic_dos,cuerpo_uterino) VALUES (:id_paciente,:eg_examen, :n_examen,:embrion,:prom_saco,:fecha_examen, :comentarios, :douglas, :douglas_comentarios, :anexo_der, :anexo_izq, :embrion_desc, :fcf, :saco_vitelino, :saco_gest, :saco_vitelino_mm, :utero_ubic_uno, :utero_ubic_dos, :cuerpo_uterino)";
                 $query = $database->prepare($sql);
                 $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"],':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"], ':fecha_examen' => $data["fecha"]));
             }
@@ -168,9 +168,9 @@ class EcoModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         if ($tipo == 1){
-            $sql = "UPDATE eco_prim SET eg_examen = :eg_examen, embrion = :embrion,prom_saco = :prom_saco,fecha_examen = :fecha_examen WHERE id_paciente = :id_paciente And n_examen = :n_examen LIMIT 1";
-                $query = $database->prepare($sql);
-                $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"],':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"], ':fecha_examen' => $data["fecha"]));
+            $sql = "UPDATE eco_prim SET eg_examen = :eg_examen, embrion = :embrion,prom_saco = :prom_saco,fecha_examen = :fecha_examen, comentarios = :comentarios, douglas = :douglas, douglas_comentarios = :douglas_comentarios, anexo_der = :anexo_der, anexo_izq = :anexo_izq, embrion_desc = :embrion_desc, fcf = :fcf,saco_vitelino = :saco_vitelino, saco_gest = :saco_gest, saco_vitelino_mm = :saco_vitelino_mm,utero_ubic_uno = :utero_ubic_uno,utero_ubic_dos = :utero_ubic_dos,cuerpo_uterino = :cuerpo_uterino WHERE id_paciente = :id_paciente And n_examen = :n_examen LIMIT 1";
+            $query = $database->prepare($sql);
+            $query->execute(array(':id_paciente' => $rut, ':eg_examen' => $data["eg"],':n_examen' => $data["examen"], ':embrion' => $data["embrion"], ':prom_saco' => $data["saco"], ':fecha_examen' => $data["fecha"],  ':comentarios'  => $data["comentarios"], ':douglas'  => $data["douglas"], ':douglas_comentarios'  => $data["douglas_comentarios"], ':anexo_der'  => $data["anexo_der"], ':anexo_izq'  => $data["anexo_izq"], ':embrion_desc' => $data["embrion_desc"], ':fcf' => $data["fcf"], ':saco_vitelino' => $data["saco_vitelino"], ':saco_gest' => $data["saco_gest"], ':saco_vitelino_mm' => $data["saco_vitelino_mm"],':utero_ubic_uno' => $data["utero_ubic_uno"],':utero_ubic_dos' => $data["utero_ubic_dos"],':cuerpo_uterino' => $data["cuerpo_uterino"]);
         }
         if ($tipo == 2){
             $sql = "UPDATE eco_segundo SET id_paciente = :id_paciente, n_examen = :n_examen, fecha_examen = :fecha_examen, eg_examen = :eg_examen, pfe_examen = :pfe_examen, pctpeso_examen = :pctpeso_examen, ccca_examen = :ccca_examen, dbp_examen = :dbp_examen, dof_examen = :dof_examen, cc_examen = :cc_examen, ca_examen = :ca_examen, lf_examen = :lf_examen, lh_examen = :lh_examen, cerebelo_examen = :cerebelo_examen, bvm_examen = :bvm_examen, ccca_pct = :ccca_pct, bvm_pct = :bvm_pct, ca_pct = :ca_pct";
