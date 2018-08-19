@@ -1508,7 +1508,7 @@ function valccca() {
                 } else {
                     pctCCCA = resultado;
                 }
-                $('#cccaPct').val(pctCCCA);
+                $("#cccaPct").val(pctCCCA);
                 $("#cccaRango").val(pct3[eg] + ' - ' + pct97[eg]);
             }
         } else {
