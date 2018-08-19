@@ -1996,7 +1996,7 @@
                                         <option value="3">3</option>
                                     </select>
                                 </div>
-                            <div>
+                            </div>
                             <div class="row">
                                 <div class="form-group col">
                                     <label><strong class="text-primary">Líquido amniótico</strong></label>
