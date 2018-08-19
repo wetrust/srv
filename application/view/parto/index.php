@@ -6,7 +6,8 @@
                 <li class="breadcrumb-item active">Datos Neonatales</li>
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
-                <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
             </ol>
             <div class="row my-2">
@@ -400,6 +401,7 @@
                 <li class="breadcrumb-item active">Evaluación Peso e IPN</li>
                 <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#neonatal">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -491,6 +493,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item active">Proyecto a desarrollar</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#neonatal">Volver</a></li>
             </ol>
             <div class="row mt-2">
@@ -516,6 +519,7 @@
                 <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
                 <li class="breadcrumb-item active">Ajuste al Peso Neonatal</li>
+                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
                 <li class="ml-auto"><a href="#neonatal">Volver</a></li>
             </ol>
             <div class="row mt-1">
@@ -601,6 +605,165 @@
                                     <input type="text" class="form-control col-2" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="hipoglicemia" style="display:none">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?php echo Config::get('URL'); ?>">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
+                <li class="breadcrumb-item"><a href="#ajustepeso">Ajuste al Peso Neonatal</a></li>
+                <li class="breadcrumb-item active">Protocolo Hipoglicemia neonatal</li>
+                <li class="breadcrumb-item"><a href="#postnatal">Curvas de crecimiento</a></li>
+                <li class="ml-auto"><a href="#postnatal">Volver</a></li>
+            </ol>
+            <div class="row mt-1">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Crecimiento intrauterino para la relación Peso / Ege y ajuste según variables</h5>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva Generalizada (percentil)</label>
+                                </div>
+                                <div class="col-1">
+                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
+                                </div>
+                                <div class="col-5 align-self-end p-0">
+                                    <div class="row m-1">
+                                        <label class="col-2 p-0">Peso</label>
+                                        <div class="input-group p-0 col-4">
+                                            <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">grs.</div>
+                                            </div>
+                                        </div>
+                                        <label class="col-2 p-0 text-center">Ege</label>
+                                        <div class="input-group p-0 col-4">
+                                            <input class="form-control" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">sem.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-4">
+                                    <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;2.- Curva Categorizada (percentil)</label>
+                                </div>
+                                <div class="col-1">
+                                    <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
+                                </div>
+                                <div class="col-2">
+                                    <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
+                                </div>
+                                <div class="col-5 align-self-end">
+                                    <button type="button" class="btn btn-outline-secondary float-right" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
+                                </div>
+                            </div>
+                            <div class="row p-2">
+                                <div class="col-12 border border-info p-2 div-hover">
+                                    <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</small></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 my-3">
+                                    <div class="row bg-info text-white p-2">
+                                        <div class="col-2">Exámenes</div>
+                                        <div class="col-2 text-center">Dextro</div>
+                                        <div class="col-2 text-center">Glicemia ev</div>
+                                        <div class="col-6">Conducta seguida según condición clínica del RN</div>
+                                    </div>
+                                    <div class="row p-2 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
+                                        <div class="col-2">Primero</div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno"></div>
+                                        <div class="col-6">
+                                            <select class="form-control" id="conducta.uno">
+                                                <option value="1">Promover alimentación natural</option>
+                                                <option value="2">Alimentación enteral</option>
+                                                <option value="3" selected>Terapia endovenosa</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row p-2 border border-info border-top-0 border-bottom-0">
+                                        <div class="col-2">Segundo</div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos"></div>
+                                        <div class="col-6">
+                                            <select class="form-control" id="conducta.dos">
+                                                <option value="1">Promover alimentación natural</option>
+                                                <option value="2">Alimentación enteral</option>
+                                                <option value="3" selected>Terapia endovenosa</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row p-2 border border-info border-top-0" style="background-color:#e2e3e5;">
+                                        <div class="col-2">Tercero</div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres"></div>
+                                        <div class="col-6">
+                                            <select class="form-control" id="conducta.tres">
+                                                <option value="1">Promover alimentación natural</option>
+                                                <option value="2">Alimentación enteral</option>
+                                                <option value="3" selected>Terapia endovenosa</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row p-2">
+                                <div class="col-4">
+                                    <label for="edadGestacional" class="bg-info text-white px-1">Factores de Riesgo para Hipoglicemia</label>
+                                    <select id="hipoglicemia_riesgo" class="form-control">
+                                        <option value="0">RN PEG (<10)</option>
+                                        <option value="1">RN GEG (IP > 3.3)</option>
+                                        <option value="2">Hijo madre DM GEG IP > 3.3</option>
+                                        <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
+                                        <option value="4" selected>Sin riesgo clínico de hipoglicemia</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional"><small>Hipoglicemia sospecha Clínicamente</small></label>
+                                    <select id="hipoglicemia_sospechada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1" selected>No</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="edadGestacional"><small>Hipoglicemia confirmada Laboratorio</small></label>
+                                    <select id="hipoglicemia_confirmada" class="form-control">
+                                        <option value="0">Si</option>
+                                        <option value="1" selected>No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row bg-info text-white p-2">
+                                <div class="col-8">
+                                    Observaciones
+                                </div>
+                                <div class="col-4">
+                                    Profesional alta del recién nacido
+                                </div>
+                            </div>
+                            <div class="row border border-info p-3">
+                                <div class="col-8">
+                                    <input class="form-control" type="text" id="observaciones">
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-control" id="prof.alta.rn">
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger float-right mt-2" id="boton.hipoglicemia.eliminar">Eliminar</button>
+                            <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.guardar">Guardar</button>
                         </div>
                     </div>
                 </div>
@@ -872,6 +1035,10 @@
                     $("#prof\\.atencion\\.parto").val("");
                 });
 
+                $("#boton\\.hipoglicemia\\.eliminar").on("click", function(){
+                    $("#boton\\.parto\\.eliminar").trigger("click");
+                });
+
                 $("#boton\\.parto\\.eliminar").on("click", function(){
                     var filas = $("#table\\.ecografia\\.parto").children();
 
@@ -896,6 +1063,10 @@
                     });
                 });
                 
+                $("#boton\\.hipoglicemia\\.guardar").on("click", function(){
+                    $("#boton\\.parto\\.guardar").trigger("click");
+                });
+
                 $("#boton\\.parto\\.guardar").on("click", function(){
 
                     var parto = {
@@ -996,6 +1167,96 @@
                     }
                 });
 
+$("#dextro_uno").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#glicemia_uno").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#dextro_dos").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#glicemia_dos").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#dextro_tres").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
+                $("#glicemia_tres").on("keyup", function(){
+                    var max = parseInt($(this).attr('max'));
+                    var min = parseInt($(this).attr('min'));
+                    
+                    if ($(this).val() > max){
+                        var str = String($(this).val());
+                        str = str.slice(0, -1);
+                        $(this).val(parseInt(str));
+                    }
+                    else if ($(this).val() < min)
+                    {
+                        $(this).val(min);
+                    }
+                });
+
                 $("#datos\\.neonatal\\.peso").on("keyup", function(event){
                     if ( event.which == 13 ) {
                         event.preventDefault();
@@ -1065,11 +1326,13 @@
 
                 $("#datos\\.neonatal\\.edad").on("focusout", function(){
                     $("#edadGestacional").val($(this).val());
+                    $("#datos\\.hipoglicemia\\.eg").val($(this).val());
                     $("#edadGestacional").trigger("change");
                 });
 
                 $("#edadGestacional").on("focusout", function(){
                     $("#datos\\.neonatal\\.edad").val($(this).val());
+                    $("#datos\\.hipoglicemia\\.eg").val($(this).val());
                 });
 
 
@@ -2036,6 +2299,10 @@
                         $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
                         displayElement("neonatal"); 
                     }
+                    else if (hash=="#hipoglicemia"){
+                        $("#titulo").html("<strong><em>Hipoglicemia Neonatal</em></strong>");
+                        displayElement("hipoglicemia");
+                    }
                     else if (hash=="#postnatal"){
                         $("#titulo").html("<strong><em>Evaluación postnatal del crecimiento</em></strong>");
 			            displayElement("postnatal");
@@ -2057,6 +2324,7 @@
                 $('#pdfviebox').hide();
                 $('#recienacido').hide();
                 $('#postnatal').hide();
+                $('#hipoglicemia').hide();
                 $('#'+div_id).show();
             }
 
@@ -2079,7 +2347,6 @@
                 //cargar inputs de Peso
                 for (i = 35; i < 130; i++) {
                     $("#peso").append('<option value="' + i +'">' + i + ' kg.</option>');
-                    $("#pesom").append('<option value="' + i +'">' + i + ' kg.</option>');
                 }
                 //cargar inputs de talla
                 for (i = 135; i < 190; i++) {
@@ -2093,6 +2360,8 @@
                 //cargar inputs de peso materno
                 for (i = 35; i < 140; i++) {
                     $("#pesoMaterno").append('<option value="' + i +'">' + i + ' kg</option>');
+                    $('#pesoMaterno option[value="70"]').prop('selected', true);
+                    $('#pesom option[value="70"]').prop('selected', true);
                     $('#pesoMaterno option[value="70"]').prop('selected', true);
                 }
 
