@@ -713,8 +713,8 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h3 class="card-title text-primary">Evaluación de biometría y Doppler</h3>
-                            <p class="text-secondary">Objetivos del módulo, valoración de la biometría fetal más flujometria Doppler materno fetal.</p>
+                            <h4 class="card-title text-primary">Evaluación de biometría y Doppler</h4>
+                            <p class="text-secondary"><small>Objetivos del módulo, valoración de la biometría fetal más flujometria Doppler materno fetal.</small></p>
                             <div class="card mb-3 mt-3" id="ecografia.uno">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
@@ -738,8 +738,8 @@
                             </div>
                         </div>
                         <div class="col">
-                            <h3 class="card-title text-primary">Tamizaje y evaluación morfológica</h3>
-                            <p class="text-secondary">Módulos cuyo desarrollo se realizará posteriormente en colaboración con otros especialistas.</p>
+                            <h4 class="card-title text-primary">Tamizaje y evaluación morfológica</h4>
+                            <p class="text-secondary"><small>Módulos cuyo desarrollo se realizará posteriormente en colaboración con otros especialistas.</small></p>
                             <div class="card mb-3 mt-3">
                                 <div class="card-body p-2">
                                     <div class="clearfix">
