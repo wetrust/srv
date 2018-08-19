@@ -2033,7 +2033,7 @@
                                 </div>
                             </div>
                             <div class='form-group'>
-                                <p><strong>Comentarios adicionales</strong><small class='text-primary'>(Espacio a completar por el ecografista, tambien puede elegir un comentario predeterminado según sea el motivo de la ecografía [edad gestacional o crecimiento fetal])</small></p>
+                                <p><strong>Comentarios adicionales</strong><br><small class='text-primary'>(Espacio a completar por el ecografista, tambien puede elegir un comentario predeterminado según sea el motivo de la ecografía [edad gestacional o crecimiento fetal])</small></p>
                                 <select id='eco.seg.trim.select.comentario' class='form-control'>
                                     <option value='0' selected='selected'>No seleccionado</option>
                                     <option value='1'>Comentario crecimiento</option>
