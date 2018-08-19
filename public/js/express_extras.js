@@ -2973,7 +2973,7 @@ function pctbvm() {
         var uno = pct95[eg] - pct5[eg];
         var dos = bvm - pct5[eg];
         var resultado = parseInt(90 / (uno) * (dos) + 5);
-        ajustarProgreso(resultado, "bvmPct");
+        ajustarProgreso(resultado, "bvmPctV");
         $("#bvmPct").val(resultado);
 
     }

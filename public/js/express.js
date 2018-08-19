@@ -1388,7 +1388,7 @@ $(document).ready(function() {
             dof: $("#dof").val(),
             cc: $("#cc").val(),
             ca: $("#ca").val(),
-            capct: $("#ca").val(),
+            capct: $("#caPctRpt").val(),
             lf: $("#lf").val(),
             lh: $("#lh").val(),
             cerebelo: $("#cerebelo").val(),

@@ -1781,7 +1781,7 @@
                                     </div>
                                 </div>
                                 <div class="col mb-2">
-                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="bvmPct">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="bvmPctV">
                                         <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
                                         <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
                                         <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
