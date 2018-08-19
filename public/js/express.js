@@ -3125,17 +3125,6 @@ $(document).ready(function() {
         bvmDoppler();
     });
 
-    $('#boton\\.doppler\\.comentario').on('click', function() {
-        var comentarios = "";
-        if ($('#auprom').val() > 0) {
-            comentarios = 'F. Doppler materno (promedio uterinas), IP percentil ' + $('#auPctTxt').val() + '\r\n';
-        }
-        if ($('#ipau').val() > 0) {
-            comentarios = comentarios + 'F. Doppler fetal, IP de CCP percentil ' + $('#ccpPctTxt').val() + '\r\n';
-        }
-        $('#comentarios-doppler').val(comentarios);
-    });
-
     $('#modalPreInfEcoDoppler').on('click', function() {
         crearInformeDoppler();
     });
@@ -3866,6 +3855,28 @@ $(document).ready(function() {
         $('#popupGraficos').modal('show');
     });
 
+    $("#auprom").on("change", function(){
+        var comentarios = "";
+        if ($('#auprom').val() > 0) {
+            comentarios = 'F. Doppler materno (promedio uterinas), IP percentil ' + $('#auPctTxt').val() + '\r\n';
+        }
+        if ($('#ipau').val() > 0) {
+            comentarios = comentarios + 'F. Doppler fetal, IP de CCP percentil ' + $('#ccpPctTxt').val() + '\r\n';
+        }
+        $('#comentarios-doppler').val(comentarios);
+    });
+
+    $("#ipau").on("change", function(){
+        var comentarios = "";
+        if ($('#auprom').val() > 0) {
+            comentarios = 'F. Doppler materno (promedio uterinas), IP percentil ' + $('#auPctTxt').val() + '\r\n';
+        }
+        if ($('#ipau').val() > 0) {
+            comentarios = comentarios + 'F. Doppler fetal, IP de CCP percentil ' + $('#ccpPctTxt').val() + '\r\n';
+        }
+        $('#comentarios-doppler').val(comentarios);
+    });
+    
     $('#infDoppler1').on('click', function() {
         $('#graficosTitle').html("Gráfica para evaluación de la flujometría doppler materno fetal básica");
         $('#impDoppler1').remove();
