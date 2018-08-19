@@ -2035,7 +2035,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-7">
                                     <p><strong>Resumen de exámen ecográfico y comentarios adicionales</strong></p>
                                 </div>
                                 <div class="col">
