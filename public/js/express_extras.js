@@ -3217,6 +3217,19 @@ function loadExamen(tipo, id) {
 
                         $("#lcn").val(val.embrion).trigger("keyup");
                         $("#saco").val(val.prom_saco).trigger("keyup");
+                        $("#comentarios-eco-uno").val(val.comentarios);
+                        $("#exploracion-douglas").val(val.douglas);
+                        $("#comentarios-douglas-informe").val(val.douglas_comentarios);
+                        $("#anexo-derecho").val(val.anexo_der);
+                        $("#anexo-izquierdo").val(val.anexo_izq);
+                        $("#embrion").val(val.embrion_desc);
+                        $("#fcf-prim").val(val.fcf);
+                        $("#saco-vitelino").val(val.saco_vitelino);
+                        $("#saco-gestacional").val(val.saco_gest);
+                        $("#saco-vitelino-mm").val(val.saco_vitelino_mm);
+                        $("#utero-ubic1").val(val.utero_ubic_uno);
+                        $("#utero-ubic2").val(val.utero_ubic_dos);
+                        $("#cuerpo-uterino").val(val.cuerpo_uterino);
                     };
                 });
             }
