@@ -2034,15 +2034,19 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <p><strong>Comentarios adicionales</strong><br><small class="text-primary">(Espacio a completar por el ecografista, tambien puede elegir un comentario predeterminado según sea el motivo de la ecografía [edad gestacional o crecimiento fetal])</small></p>
-                                <select id="eco.seg.trim.select.comentario" class="form-control">
-                                    <option value="0" selected="selected">No seleccionado</option>
-                                    <option value="1">Comentario crecimiento</option>
-                                    <option value="2">Comentario edad gestacional</option>
-                                </select>
-                                <textarea id="comentarios-eco-dos-inf-dos" rows="3" class="form-control"></textarea>
+                            <div class="row">
+                                <div class="col-5">
+                                    <p><strong>Resumen de exámen ecográfico y comentarios adicionales</strong></p>
+                                </div>
+                                <div class="col">
+                                    <select id="eco.seg.trim.select.comentario" class="form-control">
+                                        <option value="1" selected>Relativo a crecimiento</option>
+                                        <option value="2">Relativo a edad gestacional</option>
+                                    </select>
+                                </div>
                             </div>
+                            <p><small class="text-primary">(Espacio a completar por el ecografista, tambien puede elegir un comentario predeterminado según sea el motivo de la ecografía [edad gestacional o crecimiento fetal])</small></p>
+                            <textarea id="comentarios-eco-dos-inf-dos" rows="3" class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
