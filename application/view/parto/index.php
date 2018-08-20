@@ -308,7 +308,7 @@
             <div id="contenedorListaPartos" class="container-fluid bg-secondary d-none" style="position: fixed;top: calc(70%);left: 0;height:30%">
                 <h5 class="ml-3 mt-3 text-white" id="listaPartosDos"><i class="fas fa-th"></i> Lista de Ultimos Partos</h5>
                 <div id="contenedorTabla">
-                    <style>
+                    <!--<style>
                         .scroll-table{
                             overflow-y: scroll;
                             height: 53%;
@@ -325,7 +325,7 @@
                             background-color:#17a2b8;
                             color:white;
                         }
-                    </style>
+                    </style> -->
                 <table class="table table-hover table-sm">
                     <thead class="thead-dark">
                         <tr>
