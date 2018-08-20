@@ -2036,7 +2036,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-7">
-                                    <p><strong>Resumen de exámen ecográfico y comentarios adicionales, según hallazgos ecográficos e impresión clínica del profesional examinador</strong></p>
+                                    <p class="text-primary">Resumen de exámen ecográfico y comentarios adicionales, según hallazgos ecográficos e impresión clínica del profesional examinador</p>
                                 </div>
                                 <div class="col">
                                     <select id="eco.seg.trim.select.comentario" class="form-control">
