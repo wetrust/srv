@@ -752,7 +752,7 @@
                                     Profesional alta del recién nacido
                                 </div>
                             </div>
-                            <div class="row border border-info p-3">
+                            <div class="row">
                                 <div class="col-8">
                                     <input class="form-control" type="text" id="observaciones">
                                 </div>
