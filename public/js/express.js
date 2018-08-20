@@ -310,9 +310,11 @@ $(document).ready(function() {
     $('#boton\\.eco\\.prim\\.guardar').on('click', function() {
         let fecha = new Date();
         
+        let fechaStr = $("#input\\.paciente\\.fe\\.ecoprim").val();
+        fechaStr = fechaStr+" "+fecha.getHours()+":"+fecha.getMinutes();
         let examen = {
             examen: 1,
-            fecha: $("#input\\.paciente\\.fe\\.ecoprim").val() + " " + fecha.getHours()+":"+fecha.getMinutes(),
+            fecha: fechaStr,
             eg: $("#eco\\.prim\\.eg").val(),
             embrion: $("#lcn").val(),
             saco: $("#saco").val(),
