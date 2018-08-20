@@ -311,7 +311,7 @@ $(document).ready(function() {
         let fecha = new Date();
         
         let fechaStr = $("#input\\.paciente\\.fe\\.ecoprim").val();
-        fechaStr = fechaStr+" "+fecha.getHours()+":"+fecha.getMinutes();
+        fechaStr = fechaStr+" - "+fecha.getHours()+":"+fecha.getMinutes();
         let examen = {
             examen: 1,
             fecha: fechaStr,
