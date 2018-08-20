@@ -744,7 +744,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row text-white p-2">
+                            <div class="row p-2">
                                 <div class="col-8">
                                     Observaciones
                                 </div>
