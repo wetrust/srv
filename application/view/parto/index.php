@@ -730,14 +730,14 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional" class="bg-info text-white px-1"><small>Hipoglicemia sospecha Clínicamente</small></label>
+                                    <label for="edadGestacional" class="bg-info text-white px-1">Hipoglicemia sospecha Clínicamente</label>
                                     <select id="hipoglicemia_sospechada" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional" class="bg-info text-white px-1"><small>Hipoglicemia confirmada por laboratorio</small></label>
+                                    <label for="edadGestacional" class="bg-info text-white px-1">Hipoglicemia confirmada por laboratorio</label>
                                     <select id="hipoglicemia_confirmada" class="form-control">
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
