@@ -3,8 +3,8 @@
         </section>
         <div class="container" id="neonatal">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active">Datos Neonatales</li>
-                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
+                <li class="breadcrumb-item active">DATOS NEONATALES</li>
+                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
@@ -397,8 +397,8 @@
         </div>
         <div class="container" id="recienacido" style="display:none;">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
-                <li class="breadcrumb-item active">Evaluación Peso e IPN</li>
+                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
+                <li class="breadcrumb-item active">EVALUACIÓN PESO E IPN</li>
                 <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
@@ -489,8 +489,8 @@
         </div>
         <div class="container" id="postnatal" style="display:none;">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
                 <li class="breadcrumb-item active">Proyecto a desarrollar</li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
@@ -515,8 +515,8 @@
         </div>
         <div class="container" id="ajustepeso" style="display:none;">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
                 <li class="breadcrumb-item active">Curvas customizadas</li>
                 <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo de hipoglicemia neonatal</a></li>
@@ -612,8 +612,8 @@
         </div>
         <div class="container" id="hipoglicemia" style="display:none">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">Datos Neonatales</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">Evaluación Peso e IPN</a></li>
+                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
+                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
                 <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
                 <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
                 <li class="breadcrumb-item active">Protocolo de hipoglicemia neonatal</li>
