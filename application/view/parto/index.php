@@ -933,10 +933,10 @@
                             if ( Object.keys(response).length > 0 ){
                                 $.each(response.data, function(i,val){
                                     $("#id_paciente").val(val.id_paciente);
+                                    $("#id_rn").val(val.id_rn);
                                     $("#nombre_madre").val(val.nombre_madre);
                                     $("#apellido_madre").val(val.apellido_madre);
                                     $("#lugar_parto_rn").val(val.lugar_parto_rn);
-                                    $("#id_rn").val(val.id_rn);
                                     $("#nombre_rn").val(val.nombre_rn);
                                     $("#apellido_rn").val(val.apellido_rn);
                                     $("#sexo_rn").val(val.sexo_rn);
@@ -945,25 +945,36 @@
                                     $("#termino_parto").val(val.termino_parto);
                                     $("#tipo_parto").val(val.tipo_parto);
                                     $("#tipo_patologia_obstetrica").val(val.tipo_patologia_obstetrica);
-                                    $("#meconio").val(val.meconio);
                                     $("#datos\\.neonatal\\.peso").val(val.peso_rn).trigger("change");
                                     $("#datos\\.neonatal\\.talla").val(val.talla_rn).trigger("change");
                                     $("#perimetro_craneo_rn").val(val.perimetro_craneo_rn);
                                     $("#datos\\.neonatal\\.ipn").val(val.ipn_rn);
+                                    $("#PesoEgeCAj").val(val.peso_eg_ajustado);
+                                    $("#IpnPct").val(val.ipn_eg_ajustado);
                                     $("#peso_placentario").val(val.peso_placentario);
                                     $("#apgar_1").val(val.apgar_1);
                                     $("#apgar_5").val(val.apgar_5);
+                                    $("#hipoglicemia_riesgo").val(val.hipoglicemia_riesgo);
+                                    $("#hipoglicemia_sospechada").val(val.hipoglicemia_sospechada);
+                                    $("#hipoglicemia_confirmada").val(val.hipoglicemia_confirmada);
                                     $("#hiperbilirrubinemia").val(val.hiperbilirrubinemia);
                                     $("#poliglobulia").val(val.poliglobulia);
                                     $("#hospital_ucin").val(val.hospital_ucin);
                                     $("#sindrome_respiratorio").val(val.sindrome_respiratorio);
                                     $("#alta_con_madre").val(val.alta_con_madre);
                                     $("#observaciones").val(val.observaciones);
-                                    $("#conducta\\.uno").val(val.conducta_uno);
-                                    $("#conducta\\.dos").val(val.conducta_dos);
+                                    $("#meconio").val(val.meconio);
                                     $("#conducta\\.tres").val(val.conducta_tres);
+                                    $("#glicemia_tres").val(val.glicemia_tres);
+                                    $("#dextro_tres").val(val.dextro_tres);
+                                    $("#conducta\\.dos").val(val.conducta_dos);
+                                    $("#glicemia_dos").val(val.glicemia_dos);
+                                    $("#dextro_dos").val(val.dextro_dos);
+                                    $("#conducta\\.uno").val(val.conducta_uno);
+                                    $("#glicemia_uno").val(val.glicemia_uno);
+                                    $("#dextro_uno").val(val.dextro_uno);
                                     $("#prof\\.alta\\.rn").val(val.prof_alta_rn);
-                                    $("#prof\\.atencion\\.parto").val(val.prof_atencion_parto)
+                                    $("#prof\\.atencion\\.parto").val(val.prof_atencion_parto);
                                 });
                             }
                         }
