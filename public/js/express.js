@@ -308,9 +308,11 @@ $(document).ready(function() {
     });
 
     $('#boton\\.eco\\.prim\\.guardar').on('click', function() {
+        let fecha = new Date();
+        
         let examen = {
             examen: 1,
-            fecha: $("#input\\.paciente\\.fe\\.ecoprim").val(),
+            fecha: $("#input\\.paciente\\.fe\\.ecoprim").val() + " " + fecha.getHours()+":"+fecha.getMinutes(),
             eg: $("#eco\\.prim\\.eg").val(),
             embrion: $("#lcn").val(),
             saco: $("#saco").val(),
