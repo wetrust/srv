@@ -56,19 +56,19 @@
                             <div class="row">
                                 <div class="col-2">
                                     <label for="edadGestacional">N° de Registro</label>
-                                    <input class="form-control" type="text" id="id_paciente">
+                                    <input class="form-control" type="text" id="id_paciente" disabled>
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Nombre</label>
-                                    <input class="form-control" type="text" id="nombre_madre">
+                                    <input class="form-control" type="text" id="nombre_madre" disabled>
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Apellido</label>
-                                    <input class="form-control" type="text" id="apellido_madre">
+                                    <input class="form-control" type="text" id="apellido_madre" disabled>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Lugar de parto</label>
-                                    <select class="form-control" id="lugar_parto_rn">
+                                    <select class="form-control" id="lugar_parto_rn" disabled>
                                         <option value="1">temuco</option>
                                     </select>
                                 </div>
@@ -77,19 +77,19 @@
                             <div class="row">
                                 <div class="col-2">
                                     <label for="edadGestacional">N° de Registro</label>
-                                    <input class="form-control" type="text" id="id_rn">
+                                    <input class="form-control" type="text" id="id_rn" disabled>
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Nombre</label>
-                                    <input class="form-control" type="text" id="nombre_rn">
+                                    <input class="form-control" type="text" id="nombre_rn" disabled>
                                 </div>
                                 <div class="col-3">
                                     <label for="edadGestacional">Apellido</label>
-                                    <input class="form-control" type="text" id="apellido_rn">
+                                    <input class="form-control" type="text" id="apellido_rn" disabled>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Sexo de RN</label>
-                                    <select id="sexo_rn" class="form-control">
+                                    <select id="sexo_rn" class="form-control" disabled>
                                         <option value="0" selected>Masculino</option>
                                         <option value="1">Femenino</option>
                                         <option value="2">Indeterminado</option>
@@ -106,7 +106,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Peso RN</label>
                                     <div class="input-group">
-                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number">
+                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text">grs.</div>
                                         </div>
@@ -115,7 +115,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Talla RN</label>
                                     <div class="input-group">
-                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number">
+                                        <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text">mm.</div>
                                         </div>
@@ -124,7 +124,7 @@
                                 <div class="col-3">
                                     <label for="edadGestacional">Perimetro Craneo</label>
                                     <div class="input-group">
-                                        <input class="form-control" style="background-color:#e9ecef;" type="number" min="0" max="999" id="perimetro_craneo_rn">
+                                        <input class="form-control" style="background-color:#e9ecef;" type="number" min="0" max="999" id="perimetro_craneo_rn" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text">mm.</div>
                                         </div>
@@ -143,7 +143,7 @@
                             <div class="row mt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Meconio al parto</label>
-                                    <select id="meconio" class="form-control">
+                                    <select id="meconio" class="form-control" disabled>
                                         <option value="0" selected>Ausente</option>
                                         <option value="1">Fluido</option>
                                         <option value="2">Espeso</option>
@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="col-4">
                                     <label for="apgar_1">Apgar 1° Min.</label>
-                                    <select id="apgar_1" class="form-control">
+                                    <select id="apgar_1" class="form-control" disabled>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="col-4">
                                     <label for="apgar_5">Apgar 5° Min.</label>
-                                    <select id="apgar_5" class="form-control">
+                                    <select id="apgar_5" class="form-control" disabled>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -190,14 +190,14 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Fecha de Parto</label>
-                                        <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn">
+                                        <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">E. Gestacional</label>
                                         <div class="input-group px-0 col-7">
-                                            <select id="datos.neonatal.edad" class="form-control">
+                                            <select id="datos.neonatal.edad" class="form-control" disabled>
                                             </select>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">sem.</div>
@@ -210,7 +210,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Término de Gestación</label>
-                                        <select id="termino_parto" class="form-control col-7">
+                                        <select id="termino_parto" class="form-control col-7" disabled>
                                             <option value="0" selected>Parto</option>
                                             <option value="1">Aborto</option>
                                             <option value="2">Desconocido</option>
@@ -220,7 +220,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Tipo de Parto</label>
-                                        <select id="tipo_parto" class="form-control col-7">
+                                        <select id="tipo_parto" class="form-control col-7" disabled>
                                             <option value="0" selected>Vaginal</option>
                                             <option value="1">Cesarea</option>
                                             <option value="2">Forceps</option>
@@ -233,7 +233,7 @@
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Peso Placentario</label>
                                         <div class="input-group col-7 p-0">
-                                            <input class="form-control" id="peso_placentario" type="number" min="0" max="9999">
+                                            <input class="form-control" id="peso_placentario" type="number" min="0" max="9999" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
                                             </div>
@@ -243,7 +243,7 @@
                                 <div class="col-6">
                                     <div class="form-group row">
                                         <label for="edadGestacional" class="col-5">Patologia Obstétrica</label>
-                                        <select id="tipo_patologia_obstetrica" class="form-control col-7">
+                                        <select id="tipo_patologia_obstetrica" class="form-control col-7" disabled>
                                             <option value="0" selected></option>
                                         </select>
                                     </div>
@@ -258,21 +258,21 @@
                             <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
-                                    <select id="hiperbilirrubinemia" class="form-control">
+                                    <select id="hiperbilirrubinemia" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Poliglobulia</label>
-                                    <select id="poliglobulia" class="form-control">
+                                    <select id="poliglobulia" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Hospital - UCIN</label>
-                                    <select id="hospital_ucin" class="form-control">
+                                    <select id="hospital_ucin" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
@@ -281,21 +281,21 @@
                             <div class="row pt-3">
                                 <div class="col-4">
                                     <label for="edadGestacional">Sindrome dificultad respiratoria</label>
-                                    <select id="sindrome_respiratorio" class="form-control">
+                                    <select id="sindrome_respiratorio" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional">Alta con su madre</label>
-                                    <select id="alta_con_madre" class="form-control">
+                                    <select id="alta_con_madre" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label>Profesional atención del Parto</label>
-                                    <select class="form-control" id="prof.atencion.parto">
+                                    <select class="form-control" id="prof.atencion.parto" disabled>
                                     </select>
                                 </div>
                             </div>
@@ -339,46 +339,6 @@
                         </tr>
                     </thead>
                     <tbody id="table.ecografia.parto" class="text-white scroll-table">
-                        <tr>
-                            <td></td>
-                            <td>12345</td>
-                            <td>56798</td>
-                            <td>40</td>
-                            <td>3080</td>
-                            <td>512</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>12345</td>
-                            <td>56798</td>
-                            <td>40</td>
-                            <td>3080</td>
-                            <td>512</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>12345</td>
-                            <td>56798</td>
-                            <td>40</td>
-                            <td>3080</td>
-                            <td>512</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>12345</td>
-                            <td>56798</td>
-                            <td>40</td>
-                            <td>3080</td>
-                            <td>512</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>12345</td>
-                            <td>56798</td>
-                            <td>40</td>
-                            <td>3080</td>
-                            <td>512</td>
-                        </tr>
                     </tbody>
                 </table>
                 </div>
@@ -414,7 +374,7 @@
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">E. Gestacional</label>
                                     <div class="input-group col-8">
-                                        <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp"></select>
+                                        <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp" disabled></select>
                                         <div class="input-group-append">
                                             <div class="input-group-text p-1">semanas</div>
                                         </div>
@@ -423,7 +383,7 @@
                                 <div class="form-group row">
                                     <label for="pesoRN" class="col-4">Peso RN (gr.)</label>
                                     <div class="input-group col-8">
-                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" >
+                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text p-1">gr</div>
                                         </div>
@@ -432,7 +392,7 @@
                                 <div class="form-group row">
                                     <label for="tallaRN" class="col-4">Talla RN (mm.)</label>
                                     <div class="input-group col-8">
-                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3">
+                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text p-1">mm</div>
                                         </div>
@@ -531,21 +491,21 @@
                             <form>
                                 <div class="form-group row">
                                     <label class="col-4" for="edadGestacional">Sexo Neonatal</label>
-                                    <select id="sn" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                    <select id="sn" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
                                         <option value="1" selected>Femeníno</option>
                                         <option value="0">Masculíno</option>
                                     </select>
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Paridad Materna</label>
-                                    <select id="pm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                    <select id="pm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
                                         <option value="1" selected>Primípara</option>
                                         <option value="0">Multípara</option>
                                     </select>
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-3">Talla Materna</label>
-                                    <select id="tm" class="form-control col-3" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;"></select>
+                                    <select id="tm" class="form-control col-3" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled></select>
                                     <label for="edadGestacional" class="col-3">Peso Materno</label>
                                     <select id="pesom" class="form-control col-3" style="font-size: 0.8rem;height: 2rem;"></select>
                                 </div>
@@ -555,7 +515,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Estado Nutricional</label>
-                                    <select id="imc" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                    <select id="imc" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
                                         <option value="1">Enflaquecida</option>
                                         <option value="2">Normal</option>
                                         <option value="3">SobrePeso</option>
@@ -564,7 +524,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Edad Materna</label>
-                                    <select id="em" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                    <select id="em" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
                                         <option value="1">&lt; 19</option>
                                         <option value="2">20 - 21</option>
                                         <option value="3">22 - 23</option>
@@ -575,7 +535,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Etnia Materna</label>
-                                    <select id="apellm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;">
+                                    <select id="apellm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
                                         <option value="0">Ambos Caucásicos</option>
                                         <option value="2">Solo uno Caucásico</option>
                                         <option value="1" selected>Ninguno Caucásico</option>
@@ -683,10 +643,10 @@
                                     </div>
                                     <div class="row p-2 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
                                         <div class="col-2">Primero</div>
-                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno"></div>
-                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno" disabled></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno" disabled></div>
                                         <div class="col-6">
-                                            <select class="form-control" id="conducta.uno">
+                                            <select class="form-control" id="conducta.uno" disabled>
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
                                                 <option value="3" selected>Terapia endovenosa</option>
@@ -695,10 +655,10 @@
                                     </div>
                                     <div class="row p-2 border border-info border-top-0 border-bottom-0">
                                         <div class="col-2">Segundo</div>
-                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos"></div>
-                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos" disabled></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos" disabled></div>
                                         <div class="col-6">
-                                            <select class="form-control" id="conducta.dos">
+                                            <select class="form-control" id="conducta.dos" disabled>
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
                                                 <option value="3" selected>Terapia endovenosa</option>
@@ -707,10 +667,10 @@
                                     </div>
                                     <div class="row p-2 border border-info border-top-0" style="background-color:#e2e3e5;">
                                         <div class="col-2">Tercero</div>
-                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres"></div>
-                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres"></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres" disabled></div>
+                                        <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres" disabled></div>
                                         <div class="col-6">
-                                            <select class="form-control" id="conducta.tres">
+                                            <select class="form-control" id="conducta.tres" disabled>
                                                 <option value="1">Promover alimentación natural</option>
                                                 <option value="2">Alimentación enteral</option>
                                                 <option value="3" selected>Terapia endovenosa</option>
@@ -722,7 +682,7 @@
                             <div class="row p-2">
                                 <div class="col-4">
                                     <label for="edadGestacional" class="bg-info text-white px-1">Factores de Riesgo para Hipoglicemia</label>
-                                    <select id="hipoglicemia_riesgo" class="form-control">
+                                    <select id="hipoglicemia_riesgo" class="form-control" disabled>
                                         <option value="0">RN PEG (&lt;10)</option>
                                         <option value="1">RN GEG (IP &gt; 3.3)</option>
                                         <option value="2">Hijo madre DM GEG IP > 3.3</option>
@@ -732,14 +692,14 @@
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional" class="bg-info text-white px-1">Hipoglicemia sospecha Clínicamente</label>
-                                    <select id="hipoglicemia_sospechada" class="form-control">
+                                    <select id="hipoglicemia_sospechada" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
                                     <label for="edadGestacional" class="bg-info text-white px-1">Hipoglicemia confirmada por laboratorio</label>
-                                    <select id="hipoglicemia_confirmada" class="form-control">
+                                    <select id="hipoglicemia_confirmada" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
@@ -755,10 +715,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-8">
-                                    <input class="form-control" type="text" id="observaciones">
+                                    <input class="form-control" type="text" id="observaciones" disabled>
                                 </div>
                                 <div class="col-4">
-                                    <select class="form-control" id="prof.alta.rn">
+                                    <select class="form-control" id="prof.alta.rn" disabled>
                                     </select>
                                 </div>
                             </div>
