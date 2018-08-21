@@ -718,6 +718,7 @@
                                     </select>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.modificar">Modificar</button>
                             <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.guardar">Guardar</button>
                         </div>
                     </div>
@@ -986,6 +987,9 @@
                     });
                 });
 
+                $("#boton\\.hipoglicemia\\.nuevo").on("click", function(){
+                    $("#boton\\.parto\\.nuevo").trigger("click");
+                });
                 $("#boton\\.parto\\.nuevo").on("click", function(){
                     //desbloquear cajas
                     $("#id_paciente").prop( "disabled", false ).val("");
