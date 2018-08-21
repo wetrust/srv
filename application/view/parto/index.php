@@ -41,8 +41,8 @@
                     <div class="position-fixed btn-group-vertical d-flex justify-content-center border border-primary rounded" role="group" aria-label="First group">
                         <button type="button" class="btn btn-default text-left" id="boton.parto.nuevo">Nuevo</button>
                         <button type="button" class="btn btn-default text-left" id="boton.parto.modificar">Modificar</button>
-                        <button type="button" class="btn btn-default text-left" id="boton.parto.guardar">Guardar</button>
-                        <button type="button" class="btn btn-default text-left" id="boton.parto.eliminar">Eliminar</button>
+                        <button type="button" class="btn btn-default text-left d-none" id="boton.parto.guardar">Guardar</button>
+                        <button type="button" class="btn btn-default text-left d-none" id="boton.parto.eliminar">Eliminar</button>
                     </div>
                 </div>
                 <div class="col-12 p-0 pr-1 col-sm-10">
@@ -987,40 +987,89 @@
                 });
 
                 $("#boton\\.parto\\.nuevo").on("click", function(){
-                    $("#id_paciente").val("");
-                    $("#nombre_madre").val("");
-                    $("#apellido_madre").val("");
-                    $("#lugar_parto_rn").val("");
-                    $("#id_rn").val("");
-                    $("#nombre_rn").val("");
-                    $("#apellido_rn").val("");
-                    $("#sexo_rn").val("");
-                    $("#fecha_parto_rn").val("");
-                    $("#datos\\.neonatal\\.edad").val("");
-                    $("#termino_parto").val("");
-                    $("#tipo_parto").val("");
-                    $("#tipo_patologia_obstetrica").val("");
-                    $("#meconio").val("");
-                    $("#datos\\.neonatal\\.peso").val("");
-                    $("#datos\\.neonatal\\.talla").val("");
-                    $("#perimetro_craneo_rn").val("");
+                    //desbloquear cajas
+                    $("#id_paciente").prop( "disabled", false ).val("");
+                    $("#nombre_madre").prop( "disabled", false ).val("");
+                    $("#apellido_madre").prop( "disabled", false ).val("");
+                    $("#lugar_parto_rn").prop( "disabled", false ).val("");
+                    $("#id_rn").prop( "disabled", false ).val("");
+                    $("#nombre_rn").prop( "disabled", false ).val("");
+                    $("#apellido_rn").prop( "disabled", false ).val("");
+                    $("#sexo_rn").prop( "disabled", false ).val("");
+                    $("#fecha_parto_rn").prop( "disabled", false ).val("");
+                    $("#datos\\.neonatal\\.edad").prop( "disabled", false ).val("");
+                    $("#termino_parto").prop( "disabled", false ).val("");
+                    $("#tipo_parto").prop( "disabled", false ).val("");
+                    $("#tipo_patologia_obstetrica").prop( "disabled", false ).val("");
+                    $("#meconio").prop( "disabled", false ).val("");
+                    $("#datos\\.neonatal\\.peso").prop( "disabled", false ).val("");
+                    $("#datos\\.neonatal\\.talla").prop( "disabled", false ).val("");
+                    $("#perimetro_craneo_rn").prop( "disabled", false ).val("");
                     $("#datos\\.neonatal\\.ipn").val("");
-                    $("#peso_placentario").val("");
-                    $("#apgar_1").val("");
-                    $("#apgar_5").val("");
-                    $("#hiperbilirrubinemia").val("");
-                    $("#poliglobulia").val("");
-                    $("#hospital_ucin").val("");
-                    $("#sindrome_respiratorio").val("");
-                    $("#alta_con_madre").val("");
-                    $("#observaciones").val("");
-                    $("#prof\\.atencion\\.parto").val("");
-                    $("#prof\\.alta\\.rn").val("");
-                    $("#conducta\\.uno").val(3);
-                    $("#conducta\\.dos").val(3);
-                    $("#conducta\\.tres").val(3);
-                    $("#prof\\.alta\\.rn").val("");
-                    $("#prof\\.atencion\\.parto").val("");
+                    $("#peso_placentario").prop( "disabled", false ).val("");
+                    $("#apgar_1").prop( "disabled", false ).val("");
+                    $("#apgar_5").prop( "disabled", false ).val("");
+                    $("#hiperbilirrubinemia").prop( "disabled", false ).val("");
+                    $("#poliglobulia").prop( "disabled", false ).val("");
+                    $("#hospital_ucin").prop( "disabled", false ).val("");
+                    $("#sindrome_respiratorio").prop( "disabled", false ).val("");
+                    $("#alta_con_madre").prop( "disabled", false ).val("");
+                    $("#observaciones").prop( "disabled", false ).val("");
+                    $("#prof\\.atencion\\.parto").prop( "disabled", false ).val("");
+                    $("#dextro_uno").prop( "disabled", false ).val("");
+                    $("#glicemia_uno").prop( "disabled", false ).val("");
+                    $("#conducta\\.uno").prop( "disabled", false ).val(3);
+                    $("#dextro_dos").prop( "disabled", false ).val("");
+                    $("#glicemia_dos").prop( "disabled", false ).val("");
+                    $("#conducta\\.dos").prop( "disabled", false ).val(3);
+                    $("#dextro_tres").prop( "disabled", false ).val("");
+                    $("#glicemia_tres").prop( "disabled", false ).val("");
+                    $("#conducta\\.tres").prop( "disabled", false ).val(3);
+                    $("#prof\\.alta\\.rn").prop( "disabled", false ).val("");
+                    $("#prof\\.atencion\\.parto").prop( "disabled", false ).val("");
+                });
+
+                $("#boton\\.parto\\.modificar").on("click", function(){
+                    //desbloquear cajas
+                    $("#id_paciente").prop( "disabled", false ).val("");
+                    $("#nombre_madre").prop( "disabled", false ).val("");
+                    $("#apellido_madre").prop( "disabled", false ).val("");
+                    $("#lugar_parto_rn").prop( "disabled", false ).val("");
+                    $("#id_rn").prop( "disabled", false ).val("");
+                    $("#nombre_rn").prop( "disabled", false ).val("");
+                    $("#apellido_rn").prop( "disabled", false ).val("");
+                    $("#sexo_rn").prop( "disabled", false ).val("");
+                    $("#fecha_parto_rn").prop( "disabled", false ).val("");
+                    $("#datos\\.neonatal\\.edad").prop( "disabled", false ).val("");
+                    $("#termino_parto").prop( "disabled", false ).val("");
+                    $("#tipo_parto").prop( "disabled", false ).val("");
+                    $("#tipo_patologia_obstetrica").prop( "disabled", false ).val("");
+                    $("#meconio").prop( "disabled", false ).val("");
+                    $("#datos\\.neonatal\\.peso").prop( "disabled", false ).val("");
+                    $("#datos\\.neonatal\\.talla").prop( "disabled", false ).val("");
+                    $("#perimetro_craneo_rn").prop( "disabled", false ).val("");
+                    $("#datos\\.neonatal\\.ipn").val("");
+                    $("#peso_placentario").prop( "disabled", false ).val("");
+                    $("#apgar_1").prop( "disabled", false ).val("");
+                    $("#apgar_5").prop( "disabled", false ).val("");
+                    $("#hiperbilirrubinemia").prop( "disabled", false ).val("");
+                    $("#poliglobulia").prop( "disabled", false ).val("");
+                    $("#hospital_ucin").prop( "disabled", false ).val("");
+                    $("#sindrome_respiratorio").prop( "disabled", false ).val("");
+                    $("#alta_con_madre").prop( "disabled", false ).val("");
+                    $("#observaciones").prop( "disabled", false ).val("");
+                    $("#prof\\.atencion\\.parto").prop( "disabled", false ).val("");
+                    $("#dextro_uno").prop( "disabled", false ).val("");
+                    $("#glicemia_uno").prop( "disabled", false ).val("");
+                    $("#conducta\\.uno").prop( "disabled", false ).val(3);
+                    $("#dextro_dos").prop( "disabled", false ).val("");
+                    $("#glicemia_dos").prop( "disabled", false ).val("");
+                    $("#conducta\\.dos").prop( "disabled", false ).val(3);
+                    $("#dextro_tres").prop( "disabled", false ).val("");
+                    $("#glicemia_tres").prop( "disabled", false ).val("");
+                    $("#conducta\\.tres").prop( "disabled", false ).val(3);
+                    $("#prof\\.alta\\.rn").prop( "disabled", false ).val("");
+                    $("#prof\\.atencion\\.parto").prop( "disabled", false ).val("");
                 });
 
                 $("#boton\\.parto\\.eliminar").on("click", function(){
