@@ -507,11 +507,11 @@
                                     <label for="edadGestacional" class="col-3">Talla Materna</label>
                                     <select id="tm" class="form-control col-3" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled></select>
                                     <label for="edadGestacional" class="col-3">Peso Materno</label>
-                                    <select id="pesom" class="form-control col-3" style="font-size: 0.8rem;height: 2rem;"></select>
+                                    <select id="pesom" class="form-control col-3" style="font-size: 0.8rem;height: 2rem;" disabled></select>
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">IMC <small>((Peso/Talla)^2)</small></label>
-                                    <input type="text" class="form-control col-8" style="background-color: #FFF;font-size: 0.8rem;height: 2rem;" id="valorimc" disabled>
+                                    <input type="text" class="form-control col-8" style="font-size: 0.8rem;height: 2rem;" id="valorimc" disabled>
                                 </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Estado Nutricional</label>
