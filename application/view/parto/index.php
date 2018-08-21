@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="row mb-5 pb-5">
-                <div class="col-12 col-sm-2 order-sm-1">
+                <div class="col-12 p-0 col-sm-2 order-sm-1">
                     <div class="card mb-3 position-fixed">
                         <div class="card-body">
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-10">
+                <div class="col-12 p-0 pr-1 col-sm-10">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
