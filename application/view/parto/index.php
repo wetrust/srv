@@ -11,7 +11,7 @@
                 <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
             </ol>
             <div class="row my-2">
-                <div class="col-12">
+                <div class="col-12 p-0">
                     <div class="card bg-light">
                         <div class="card-body p-2 pl-3">
                             <div class="row align-items-center">
