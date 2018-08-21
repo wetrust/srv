@@ -41,9 +41,10 @@
                     <div class="card mb-3 position-fixed">
                         <div class="card-body">
                             <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-secondary" id="boton.parto.nuevo">Nuevo</button>
-                                <button type="button" class="btn btn-secondary" id="boton.parto.guardar">Guardar</button>
-                                <button type="button" class="btn btn-danger" id="boton.parto.eliminar">Eliminar</button>
+                                <button type="button" class="btn btn-default" id="boton.parto.nuevo">Nuevo</button>
+                                <button type="button" class="btn btn-default" id="boton.parto.modificar">Modificar</button>
+                                <button type="button" class="btn btn-default" id="boton.parto.guardar">Guardar</button>
+                                <button type="button" class="btn btn-default" id="boton.parto.eliminar">Eliminar</button>
                             </div>
                         </div>
                     </div>
@@ -761,7 +762,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-danger float-right mt-2" id="boton.hipoglicemia.eliminar">Eliminar</button>
                             <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.guardar">Guardar</button>
                         </div>
                     </div>
@@ -1065,10 +1065,6 @@
                     $("#conducta\\.tres").val(3);
                     $("#prof\\.alta\\.rn").val("");
                     $("#prof\\.atencion\\.parto").val("");
-                });
-
-                $("#boton\\.hipoglicemia\\.eliminar").on("click", function(){
-                    $("#boton\\.parto\\.eliminar").trigger("click");
                 });
 
                 $("#boton\\.parto\\.eliminar").on("click", function(){
