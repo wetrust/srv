@@ -38,7 +38,7 @@
             </div>
             <div class="row mb-5 pb-5">
                 <div class="col-12 p-0 col-sm-2 order-sm-1">
-                    <div class="position-fixed btn-group-vertical d-flex justify-content-center border border-primary" role="group" aria-label="First group">
+                    <div class="position-fixed btn-group-vertical d-flex justify-content-center border border-primary rounded" role="group" aria-label="First group">
                         <button type="button" class="btn btn-default text-left" id="boton.parto.nuevo">Nuevo</button>
                         <button type="button" class="btn btn-default text-left" id="boton.parto.modificar">Modificar</button>
                         <button type="button" class="btn btn-default text-left" id="boton.parto.guardar">Guardar</button>
