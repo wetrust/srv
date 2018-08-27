@@ -80,7 +80,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
-                            <div class="row">
+                            <div class="form-row">
                                 <div class="col-2 form-group">
                                     <label for="edadGestacional">N° de Registro</label>
                                     <input class="form-control" type="text" id="id_paciente" disabled>
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                             <h5 class="card-title mt-3">Datos del RN</h5>
-                            <div class="row">
+                            <div class="form-row">
                                 <div class="col-2">
                                     <label for="edadGestacional">N° de Registro</label>
                                     <input class="form-control" type="text" id="id_rn" disabled>
@@ -282,7 +282,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN</h5>
                             <hr class="mb-3">
-                            <div class="row pt-3">
+                            <div class="form-row">
                                 <div class="col-4">
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
                                     <select id="hiperbilirrubinemia" class="form-control" disabled>
@@ -305,7 +305,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row pt-3">
+                            <div class="form-row">
                                 <div class="col-4">
                                     <label for="edadGestacional">Sindrome dificultad respiratoria</label>
                                     <select id="sindrome_respiratorio" class="form-control" disabled>
