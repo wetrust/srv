@@ -395,6 +395,7 @@
                                 <div class="col-6">
                                     <h6 class="text-primary">Peso / EG</h6>
                                     <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoPct" style="font-size: 0.8rem;" disabled>
+                                </div>
                                 <div class="col-6">
                                     <h6 class="text-primary"></h6>
                                     <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoEge" style="font-size: 0.8rem;" disabled>
