@@ -374,23 +374,13 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-6 form-group">
+                                <div class="col-6">
                                     <h6 class="text-primary">Peso RN (gr.)</h6>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
-                                        <div class="input-group-append">
-                                            <div class="input-group-text p-1">gr</div>
-                                        </div>
-                                    </div>
+                                    <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
                                 </div>
-                                <div class="col-6 form-group">
+                                <div class="col-6">
                                     <h6 class="text-primary">Talla RN (mm.)</h6>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
-                                        <div class="input-group-append">
-                                            <div class="input-group-text p-1">mm</div>
-                                        </div>
-                                    </div>
+                                    <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
                                 </div>
                             </div>
                             <h5 class="card-title">Datos de RN calculado</h5>
