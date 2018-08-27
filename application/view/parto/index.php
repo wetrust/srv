@@ -220,13 +220,8 @@
                                 </div>
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">E. Gestacional</h6>
-                                    <div class="input-group">
-                                        <select id="datos.neonatal.edad" class="form-control" disabled>
-                                        </select>
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">sem.</div>
-                                        </div>
-                                    </div>
+                                    <select id="datos.neonatal.edad" class="form-control" disabled>
+                                    </select>
                                 </div>
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">Término de Gestación</h6>
