@@ -374,7 +374,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col form-group">
+                                <div class="col-6 form-group">
                                     <h6 class="text-primary">Peso RN (gr.)</h6>
                                     <div class="input-group">
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
@@ -383,9 +383,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col form-group">
+                                <div class="col-6 form-group">
                                     <h6 class="text-primary">Talla RN (mm.)</h6>
                                     <div class="input-group">
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
