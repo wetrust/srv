@@ -57,7 +57,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-control mt-1" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
+                                    <input class="form-control mt-2" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
                                 </div>
                                 <div class="col-2 ">
                                     <button type="button" id="buscar.parto.madre.button" class="btn btn-outline-primary my-auto">Buscar</button>
@@ -81,19 +81,19 @@
                         <div class="card-body">
                             <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-2 form-group">
                                     <label for="edadGestacional">N° de Registro</label>
                                     <input class="form-control" type="text" id="id_paciente" disabled>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3 form-group">
                                     <label for="edadGestacional">Nombre</label>
                                     <input class="form-control" type="text" id="nombre_madre" disabled>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3 form-group">
                                     <label for="edadGestacional">Apellido</label>
                                     <input class="form-control" type="text" id="apellido_madre" disabled>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <label for="edadGestacional">Lugar de parto</label>
                                     <select class="form-control" id="lugar_parto_rn" disabled>
                                         <option value="1">temuco</option>
