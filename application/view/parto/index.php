@@ -383,7 +383,7 @@
                                     <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
                                 </div>
                             </div>
-                            <h5 class="card-title mt-2">Datos de RN calculado</h5>
+                            <h5 class="card-title mt-3">Datos de RN calculado</h5>
                             <hr class="mb-3">
                             <div class="form-row">
                                 <div class="col">
