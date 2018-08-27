@@ -374,16 +374,16 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-6">
+                                <div class="col-6 mt-2">
                                     <h6 class="text-primary">Peso RN (gr.)</h6>
                                     <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6 mt-2">
                                     <h6 class="text-primary">Talla RN (mm.)</h6>
                                     <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
                                 </div>
                             </div>
-                            <h5 class="card-title">Datos de RN calculado</h5>
+                            <h5 class="card-title mt-2">Datos de RN calculado</h5>
                             <hr class="mb-3">
                             <div class="form-row">
                                 <div class="col">
@@ -392,28 +392,25 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-6">
+                                <div class="col-6 mt-2">
                                     <h6 class="text-primary">Peso / EG</h6>
                                     <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoPct" style="font-size: 0.8rem;" disabled>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6 mt-2">
                                     <h6 class="text-primary">&nbsp;</h6>
                                     <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoEge" style="font-size: 0.8rem;" disabled>
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-6">
+                                <div class="col-6 mt-2">
                                     <h6 class="text-primary">IPN / Ege</h6>
                                     <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnPct" style="font-size: 0.8rem;" disabled>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6 mt-2">
                                     <h6 class="text-primary">&nbsp;</h6>
                                     <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnEge" style="font-size: 0.8rem;" disabled>
                                 </div>
                             </div>
-                            <small class="text-info">Graficas para categorizar crecimiento y ponderación de variables biológicas</small><br>
-                            <small style="font-size: 60%;">* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a>
-                            <br>** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small>
                         </div>
                     </div>
                 </div>
@@ -437,6 +434,13 @@
                             <div id="grafico"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <small class="text-info">Graficas para categorizar crecimiento y ponderación de variables biológicas</small><br>
+                    <small style="font-size: 60%;">* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a>
+                    <br>** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small>
                 </div>
             </div>
         </div>
