@@ -41,14 +41,6 @@
         </ol>
     </section>
         <div class="container" id="neonatal">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active">DATOS NEONATALES</li>
-                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
-                <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a></li>
-                <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
-            </ol>
             <div class="row my-2">
                 <div class="col-12 p-0">
                     <div class="card bg-light">
@@ -392,14 +384,6 @@
             </div>
         </div>
         <div class="container" id="recienacido" style="display:none;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
-                <li class="breadcrumb-item active">EVALUACIÓN PESO E IPN</li>
-                <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
-                <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a></li>
-                <li class="ml-auto"><a href="#neonatal">Volver</a></li>
-            </ol>
             <div class="row mt-2">
                 <div class="col-5">
                     <div class="card">
@@ -484,14 +468,6 @@
             </div>
         </div>
         <div class="container" id="postnatal" style="display:none;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
-                <li class="breadcrumb-item active">Proyecto a desarrollar</li>
-                <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a></li>
-                <li class="ml-auto"><a href="#neonatal">Volver</a></li>
-            </ol>
             <div class="row mt-2">
                 <div class="col-3">
                     <img src="<?php echo Config::get('URL'); ?>img/cpeso.png" class="mr-auto ml-auto img-fluid">
@@ -510,14 +486,6 @@
             <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
         </div>
         <div class="container" id="ajustepeso" style="display:none;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
-                <li class="breadcrumb-item active">Curvas customizadas</li>
-                <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a></li>
-                <li class="ml-auto"><a href="#neonatal">Volver</a></li>
-            </ol>
             <div class="row mt-1">
                 <div class="col">
                     <div class="card">
@@ -607,14 +575,6 @@
             </div>
         </div>
         <div class="container" id="hipoglicemia" style="display:none">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
-                <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
-                <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
-                <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
-                <li class="breadcrumb-item active">Protocolo hipoglicemia neonatal</li>
-                <li class="ml-auto"><a href="#neonatal">Volver</a></li>
-            </ol>
             <div class="row mt-1">
                 <div class="col-12">
                     <div class="card">
