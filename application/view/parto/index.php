@@ -220,7 +220,7 @@
                                 </div>
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">E. Gestacional</h6>
-                                    <div class="input-group px-0 col-7">
+                                    <div class="input-group">
                                         <select id="datos.neonatal.edad" class="form-control" disabled>
                                         </select>
                                         <div class="input-group-append">
@@ -248,7 +248,7 @@
                                 </div>
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">Peso Placentario</h6>
-                                    <div class="input-group col-7 p-0">
+                                    <div class="input-group">
                                         <input class="form-control" id="peso_placentario" type="number" min="0" max="9999" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text">grs.</div>
