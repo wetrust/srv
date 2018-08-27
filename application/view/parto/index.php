@@ -282,7 +282,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN</h5>
                             <hr class="mb-3">
-                            <div class="form-row">
+                            <div class="form-row form-group">
                                 <div class="col-4">
                                     <label for="edadGestacional">Hiperbilirrubinemia</label>
                                     <select id="hiperbilirrubinemia" class="form-control" disabled>
@@ -290,14 +290,14 @@
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <label for="edadGestacional">Poliglobulia</label>
                                     <select id="poliglobulia" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <label for="edadGestacional">Hospital - UCIN</label>
                                     <select id="hospital_ucin" class="form-control" disabled>
                                         <option value="0">Si</option>
@@ -306,21 +306,21 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <label for="edadGestacional">Sindrome dificultad respiratoria</label>
                                     <select id="sindrome_respiratorio" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1" selected>No</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <label for="edadGestacional">Alta con su madre</label>
                                     <select id="alta_con_madre" class="form-control" disabled>
                                         <option value="0">Si</option>
                                         <option value="1">No</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <label>Profesional atención del Parto</label>
                                     <select class="form-control" id="prof.atencion.parto" disabled>
                                     </select>
