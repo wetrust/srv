@@ -230,7 +230,7 @@
                                 </div>
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">Término de Gestación</h6>
-                                    <select id="termino_parto" class="form-control col-7" disabled>
+                                    <select id="termino_parto" class="form-control" disabled>
                                         <option value="0" selected>Parto</option>
                                         <option value="1">Aborto</option>
                                         <option value="2">Desconocido</option>
@@ -240,7 +240,7 @@
                             <div class="form-row">
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">Tipo de Parto</h6>
-                                    <select id="tipo_parto" class="form-control col-7" disabled>
+                                    <select id="tipo_parto" class="form-control" disabled>
                                         <option value="0" selected>Vaginal</option>
                                         <option value="1">Cesarea</option>
                                         <option value="2">Forceps</option>
