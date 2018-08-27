@@ -257,7 +257,7 @@
                                 </div>
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">Patologia Obstétrica</h6>
-                                    <select id="tipo_patologia_obstetrica" class="form-control disabled">
+                                    <select id="tipo_patologia_obstetrica" class="form-control" disabled>
                                         <option value="0" selected></option>
                                     </select>
                                 </div>
