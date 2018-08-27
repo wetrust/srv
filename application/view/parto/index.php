@@ -47,16 +47,16 @@
                         <div class="card-body p-2 pl-3">
                             <div class="row align-items-center">
                                 <div class="col-4">
-                                    <h5 class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</h5>
+                                    <p class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</p>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3 form-group">
                                     <select id="buscar.parto.tipo" class="form-control">
                                         <option value="0" selected>ID de la madre</option>
                                         <option value="1">ID del Recién Nacido</option>
                                         <option value="2">Apellidos de la Madre</option>
                                     </select>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3 form-group">
                                     <input class="form-control" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
                                 </div>
                                 <div class="col-2">
