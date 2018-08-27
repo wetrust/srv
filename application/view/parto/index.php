@@ -129,7 +129,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-child"></i> Datos de parto y RN</h5>
                             <hr class="mb-3">
-                            <div class="row">
+                            <div class="form-row">
                                 <div class="col-3">
                                     <h6 class="text-primary"">Peso RN</h6>
                                     <div class="input-group">
@@ -167,8 +167,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-4">
+                            <div class="form-row">
+                                <div class="col-4 form-group">
                                     <h6 class="text-primary">Meconio al parto</h6>
                                     <select id="meconio" class="form-control" disabled>
                                         <option value="0" selected>Ausente</option>
@@ -176,7 +176,7 @@
                                         <option value="2">Espeso</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <h6 class="text-primary">Apgar 1° Min.</h6>
                                     <select id="apgar_1" class="form-control" disabled>
                                         <option value="0">0</option>
@@ -192,7 +192,7 @@
                                         <option value="10">10</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 form-group">
                                     <h6 class="text-primary"">Apgar 5° Min.</h6>
                                     <select id="apgar_5" class="form-control" disabled>
                                         <option value="0">0</option>
@@ -365,37 +365,37 @@
                 <div class="col-5">
                     <div class="card">
                         <div class="card-body">
-                            <h5>Datos de Recién Nacido</h5>
-                            <form style="font-size: 0.8rem;">
-                                <div class="form-group row">
-                                    <label for="edadGestacional" class="col-4">E. Gestacional</label>
-                                    <div class="input-group col-8">
-                                        <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp" disabled></select>
-                                        <div class="input-group-append">
-                                            <div class="input-group-text p-1">semanas</div>
-                                        </div>
-                                    </div>
+                            <h5 class="card-title">Datos de Recién Nacido</h5>
+                            <hr class="mb-3">
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <h6 class="text-primary">E. Gestacional</h6>
+                                    <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp" disabled></select>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="pesoRN" class="col-4">Peso RN (gr.)</label>
-                                    <div class="input-group col-8">
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <h6 class="text-primary">Peso RN (gr.)</h6>
+                                    <div class="input-group">
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text p-1">gr</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="tallaRN" class="col-4">Talla RN (mm.)</label>
-                                    <div class="input-group col-8">
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <h6 class="text-primary">Talla RN (mm.)</h6>
+                                    <div class="input-group">
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
                                         <div class="input-group-append">
                                             <div class="input-group-text p-1">mm</div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                            <h5>Datos de RN calculado</h5>
+                            </div>
+                            <h5 class="card-title">Datos de RN calculado</h5>
                             <form style="font-size: 0.8rem;">
                                 <div class="form-group row">
                                     <label for="IPNRN" class="col-6">IPN <small>((peso / talla)^3)*100</small></label>

@@ -1629,7 +1629,7 @@ $(document).ready(function() {
 
     //cargar input de semanas que empiezan con 25
     for (i = 20; i < 43; i++) {
-        $("#edadGestacional").append('<option value="' + i + '">' + i + '</option>');
+        $("#edadGestacional").append('<option value="' + i + '">' + i + ' semanas</option>');
         $("#datos\\.neonatal\\.edad").append('<option value="' + i + '">' + i + ' semanas</option>');
         $('#edadGestacional option[value="40"]').prop('selected', true);
         $('#datos\\.neonatal\\.edad option[value="40"]').prop('selected', true);
