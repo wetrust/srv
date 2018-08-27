@@ -34,7 +34,7 @@ class ExamenController extends Controller
 
     public function parto()
     {
-        $this->View->render('parto/index');
+        $this->View->renderWithoutHeaderAndFooter('parto/index');
     }
 
     public function get()
