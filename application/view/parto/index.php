@@ -49,17 +49,17 @@
                                 <div class="col-4">
                                     <p class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</p>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3 form-group">
                                     <select id="buscar.parto.tipo" class="form-control">
                                         <option value="0" selected>ID de la madre</option>
                                         <option value="1">ID del Recién Nacido</option>
                                         <option value="2">Apellidos de la Madre</option>
                                     </select>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3 form-group">
                                     <input class="form-control" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 ">
                                     <button type="button" id="buscar.parto.madre.button" class="btn btn-outline-primary">Buscar</button>
                                 </div>
                             </div>
