@@ -131,7 +131,7 @@
                             <hr class="mb-3">
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="edadGestacional">Peso RN</label>
+                                    <h6 class="text-primary"">Peso RN</h6>
                                     <div class="input-group">
                                         <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number" disabled>
                                         <div class="input-group-append">
@@ -140,7 +140,7 @@
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">Talla RN</label>
+                                    <h6 class="text-primary">Talla RN</h6>
                                     <div class="input-group">
                                         <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number" disabled>
                                         <div class="input-group-append">
@@ -149,7 +149,7 @@
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">Perimetro Craneo</label>
+                                    <h6 class="text-primary">Perimetro Craneo</h6>
                                     <div class="input-group">
                                         <input class="form-control" style="background-color:#e9ecef;" type="number" min="0" max="999" id="perimetro_craneo_rn" disabled>
                                         <div class="input-group-append">
@@ -158,7 +158,7 @@
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">Indices calculados (Ipn)</label>
+                                    <h6 class="text-primary">Indices calculados (Ipn)</h6>
                                     <div class="input-group">
                                         <input class="form-control" id="datos.neonatal.ipn" disabled type="number">
                                         <div class="input-group-append">
@@ -169,7 +169,7 @@
                             </div>
                             <div class="row mt-3">
                                 <div class="col-4">
-                                    <label for="edadGestacional">Meconio al parto</label>
+                                    <h6 class="text-primary">Meconio al parto</h6>
                                     <select id="meconio" class="form-control" disabled>
                                         <option value="0" selected>Ausente</option>
                                         <option value="1">Fluido</option>
@@ -177,7 +177,7 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="apgar_1">Apgar 1° Min.</label>
+                                    <h6 class="text-primary">Apgar 1° Min.</h6>
                                     <select id="apgar_1" class="form-control" disabled>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
@@ -193,7 +193,7 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="apgar_5">Apgar 5° Min.</label>
+                                    <h6 class="text-primary"">Apgar 5° Min.</h6>
                                     <select id="apgar_5" class="form-control" disabled>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
@@ -214,15 +214,15 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Fecha de Parto</label>
-                                        <input class="form-control col-7" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <h6 class="text-primary">Fecha de Parto</h6>
+                                        <input class="form-control" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">E. Gestacional</label>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <h6 class="text-primary">E. Gestacional</h6>
                                         <div class="input-group px-0 col-7">
                                             <select id="datos.neonatal.edad" class="form-control" disabled>
                                             </select>
@@ -232,11 +232,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
+                                <div class="col-4">
                                     <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Término de Gestación</label>
+                                        <h6 class="text-primary">Término de Gestación</h6>
                                         <select id="termino_parto" class="form-control col-7" disabled>
                                             <option value="0" selected>Parto</option>
                                             <option value="1">Aborto</option>
@@ -244,9 +242,11 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Tipo de Parto</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <h6 class="text-primary">Tipo de Parto</h6>
                                         <select id="tipo_parto" class="form-control col-7" disabled>
                                             <option value="0" selected>Vaginal</option>
                                             <option value="1">Cesarea</option>
@@ -254,11 +254,9 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Peso Placentario</label>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <h6 class="text-primary">Peso Placentario</h6>
                                         <div class="input-group col-7 p-0">
                                             <input class="form-control" id="peso_placentario" type="number" min="0" max="9999" disabled>
                                             <div class="input-group-append">
@@ -267,10 +265,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="edadGestacional" class="col-5">Patologia Obstétrica</label>
-                                        <select id="tipo_patologia_obstetrica" class="form-control col-7" disabled>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <h6 class="text-primary">Patologia Obstétrica</h6>
+                                        <select id="tipo_patologia_obstetrica" class="form-control disabled>
                                             <option value="0" selected></option>
                                         </select>
                                     </div>
