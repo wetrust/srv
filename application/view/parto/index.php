@@ -32,7 +32,7 @@
     <section>
         <h4 class="text-center py-4 mb-0" id="titulo"><strong><em>Evaluación postnatal del crecimiento</em></strong></h4>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active">DATOS NEONATALES</li>
+            <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
             <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
             <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
             <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
@@ -60,7 +60,7 @@
                                     <input class="form-control" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
                                 </div>
                                 <div class="col-2">
-                                    <button type="button" id="buscar.parto.madre.button" class="btn btn-info">Buscar</button>
+                                    <button type="button" id="buscar.parto.madre.button" class="btn btn-outline-primary">Buscar</button>
                                 </div>
                             </div>
                         </div>
