@@ -213,65 +213,53 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <h6 class="text-primary">Fecha de Parto</h6>
-                                        <input class="form-control" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
-                                    </div>
+                            <div class="form-row">
+                                <div class="col-4 form-group">
+                                    <h6 class="text-primary">Fecha de Parto</h6>
+                                    <input class="form-control" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
                                 </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <h6 class="text-primary">E. Gestacional</h6>
-                                        <div class="input-group px-0 col-7">
-                                            <select id="datos.neonatal.edad" class="form-control" disabled>
-                                            </select>
-                                            <div class="input-group-append">
-                                                <div class="input-group-text">sem.</div>
-                                            </div>
+                                <div class="col-4 form-group">
+                                    <h6 class="text-primary">E. Gestacional</h6>
+                                    <div class="input-group px-0 col-7">
+                                        <select id="datos.neonatal.edad" class="form-control" disabled>
+                                        </select>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">sem.</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="form-group row">
-                                        <h6 class="text-primary">Término de Gestación</h6>
-                                        <select id="termino_parto" class="form-control col-7" disabled>
-                                            <option value="0" selected>Parto</option>
-                                            <option value="1">Aborto</option>
-                                            <option value="2">Desconocido</option>
-                                        </select>
-                                    </div>
+                                <div class="col-4 form-group">
+                                    <h6 class="text-primary">Término de Gestación</h6>
+                                    <select id="termino_parto" class="form-control col-7" disabled>
+                                        <option value="0" selected>Parto</option>
+                                        <option value="1">Aborto</option>
+                                        <option value="2">Desconocido</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <h6 class="text-primary">Tipo de Parto</h6>
-                                        <select id="tipo_parto" class="form-control col-7" disabled>
-                                            <option value="0" selected>Vaginal</option>
-                                            <option value="1">Cesarea</option>
-                                            <option value="2">Forceps</option>
-                                        </select>
-                                    </div>
+                            <div class="form-row">
+                                <div class="col-4 form-group">
+                                    <h6 class="text-primary">Tipo de Parto</h6>
+                                    <select id="tipo_parto" class="form-control col-7" disabled>
+                                        <option value="0" selected>Vaginal</option>
+                                        <option value="1">Cesarea</option>
+                                        <option value="2">Forceps</option>
+                                    </select>
                                 </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <h6 class="text-primary">Peso Placentario</h6>
-                                        <div class="input-group col-7 p-0">
-                                            <input class="form-control" id="peso_placentario" type="number" min="0" max="9999" disabled>
-                                            <div class="input-group-append">
-                                                <div class="input-group-text">grs.</div>
-                                            </div>
+                                <div class="col-4 form-group">
+                                    <h6 class="text-primary">Peso Placentario</h6>
+                                    <div class="input-group col-7 p-0">
+                                        <input class="form-control" id="peso_placentario" type="number" min="0" max="9999" disabled>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">grs.</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <h6 class="text-primary">Patologia Obstétrica</h6>
-                                        <select id="tipo_patologia_obstetrica" class="form-control disabled>
-                                            <option value="0" selected></option>
-                                        </select>
-                                    </div>
+                                <div class="col-4 form-group">
+                                    <h6 class="text-primary">Patologia Obstétrica</h6>
+                                    <select id="tipo_patologia_obstetrica" class="form-control disabled">
+                                        <option value="0" selected></option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
