@@ -26,9 +26,7 @@
                     <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Ingresar</button>
-            </form>
+            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
         </div>
     </nav>
         <section>
