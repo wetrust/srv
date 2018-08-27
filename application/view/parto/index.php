@@ -23,15 +23,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo Config::get('URL'); ?>">Inicio <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
         </div>
     </nav>
-        <section>
-            <h4 class="text-center py-4 mb-0" id="titulo"><strong><em>Evaluación postnatal del crecimiento</em></strong></h4>
-        </section>
+    <section>
+        <h4 class="text-center py-4 mb-0" id="titulo"><strong><em>Evaluación postnatal del crecimiento</em></strong></h4>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">DATOS NEONATALES</li>
+            <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
+            <li class="breadcrumb-item"><a href="#postnatal">Proyecto a desarrollar</a></li>
+            <li class="breadcrumb-item"><a href="#ajustepeso">Curvas customizadas</a></li>
+            <li class="breadcrumb-item"><a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a></li>
+            <li class="ml-auto"><a href="<?php echo Config::get('URL'); ?>">Volver</a></li>
+        </ol>
+    </section>
         <div class="container" id="neonatal">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active">DATOS NEONATALES</li>
