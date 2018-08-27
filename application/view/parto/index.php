@@ -209,10 +209,6 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
                             <div class="form-row">
                                 <div class="col-4 form-group">
                                     <h6 class="text-primary">Fecha de Parto</h6>
