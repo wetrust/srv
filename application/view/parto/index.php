@@ -466,15 +466,15 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h4>Recién Nacido</h4>
-                            <form>
-                                <div class="form-group row">
-                                    <label class="col-4" for="edadGestacional">Sexo Neonatal</label>
-                                    <select id="sn" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
-                                        <option value="1" selected>Femeníno</option>
-                                        <option value="0">Masculíno</option>
-                                    </select>
-                                </div>
+                            <h5 class="card-title">Recién Nacido</h5>
+                            <hr class="mb-3">
+                            <div class="form-row">
+                                <h6 class="text-primary">Sexo Neonatal</h6>
+                                <select id="sn" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                    <option value="1" selected>Femeníno</option>
+                                    <option value="0">Masculíno</option>
+                                </select>
+                            </div>
                                 <div class="form-group row">
                                     <label for="edadGestacional" class="col-4">Paridad Materna</label>
                                     <select id="pm" class="form-control col-8" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
