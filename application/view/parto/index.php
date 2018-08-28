@@ -17,7 +17,7 @@
 <body class="h-100 w-100">
   <div class="h-100 w-100" id="main">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <span class="navbar-text mx-auto">Evaluación postnatal del crecimiento</span>
+        <span class="navbar-text mx-auto text-white">Evaluación postnatal del crecimiento</span>
     </nav>
     <section>
         <h4 class="text-center py-4 mb-0" id="titulo"><strong><em></em></strong></h4>
