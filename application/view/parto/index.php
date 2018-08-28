@@ -35,10 +35,10 @@
                     <li class="nav-item my-1">
                         <a href="#postnatal" class="text-secondary">Proyecto a desarrollar</a>
                     </li>
-                    <li class="nav-item ml-2">
+                    <li class="nav-item ml-2 my-1">
                         <a href="#ajustepeso">Curvas customizadas</a>
                     </li>
-                    <li class="nav-item ml-2">
+                    <li class="nav-item ml-2 my-1">
                         <a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a>
                     </li>
                 </ul>
@@ -307,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);" id="recienacido">
+                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);display:none;" id="recienacido">
                     <div class="col-5 p-0">
                             <div class="card">
                                 <div class="card-body">
@@ -376,7 +376,6 @@
                                         </select>
                                     </div>
                                     </form>
-                                    <script src="https://code.highcharts.com/highcharts.js"></script>
                                     <div id="grafico"></div>
                                 </div>
                             </div>
@@ -387,10 +386,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="postnatal">
+                    <div class="col-3">
+                        <img src="<?php echo Config::get('URL'); ?>img/cpeso.png" class="mr-auto ml-auto img-fluid">
+                    </div>
+                    <div class="col">
+                        <h6 class="alert-heading text-azul">Evaluación del crecimiento intrauterino, ¿Curva local generalizada o general individualizada?</h6>
+                        <div id="sliderParto" class="carousel slide" data-ride="carousel" data-interval="60000">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <p class="text-justify text-azul">El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br><br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
     <script src="<?php echo Config::get('URL'); ?>js/parto.js"></script>
     <script>var serverURL = "<?php echo Config::get('URL'); ?>";</script>
