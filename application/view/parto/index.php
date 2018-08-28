@@ -24,13 +24,13 @@
         <div class="row">
             <div class="col-2 px-0">
                 <ul class="nav flex-column pt-2">
-                    <li class="nav-item">
+                    <li class="nav-item my-1">
                         <a href="#neonatal">Datos Neonatales</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item my-1">
                         <a href="#recienacido">Evaluación Peso e IPN</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item my-1">
                         <a href="#postnatal" class="text-secondary">Proyecto a desarrollar</a>
                     </li>
                     <li class="nav-item ml-2">
