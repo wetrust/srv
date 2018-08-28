@@ -308,7 +308,6 @@
                     </div>
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);" id="recienacido">
-                    <div class="row mt-2">
                         <div class="col-5">
                             <div class="card">
                                 <div class="card-body">
@@ -382,9 +381,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
+                        <div class="col-12">
                             <small class="text-info">Graficas para categorizar crecimiento y ponderación de variables biológicas</small><br>
                             <small style="font-size: 60%;">* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a>    ** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small>
                         </div>
