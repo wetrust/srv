@@ -22,7 +22,7 @@
     </nav>
     <section class="container px-0 pt-2">
         <div class="row">
-            <div class="col-2 px-0">
+            <div class="col-2 px-0 border-right">
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a href="#neonatal">DATOS NEONATALES</a>
