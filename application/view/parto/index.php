@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-1 mx-0">
                     <div class="col-12 p-0 col-sm-2 order-sm-1">
                         <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                             <button type="button" class="btn btn-default text-left" id="boton.parto.nuevo">Nuevo</button>
