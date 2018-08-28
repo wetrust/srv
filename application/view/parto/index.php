@@ -17,7 +17,9 @@
 <body class="h-100 w-100">
   <div class="h-100 w-100" id="main">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>">Inicio</a>
         <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento</span>
+        <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
     </nav>
     <section>
         <h4 class="text-center py-4 mb-0" id="titulo"><strong><em></em></strong></h4>
