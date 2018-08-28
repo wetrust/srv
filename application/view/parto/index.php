@@ -60,6 +60,25 @@
                 </div>
             </div>
             <div class="row mb-5 pb-5">
+                <div class="col-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#neonatal">DATOS NEONATALES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#recienacido">EVALUACIÓN PESO E IPN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#postnatal">Proyecto a desarrollar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ajustepeso">Curvas customizadas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-12 p-0 col-sm-2 order-sm-1">
                     <div class="position-fixed btn-group-vertical d-flex justify-content-center border border-primary rounded" role="group" aria-label="First group">
                         <button type="button" class="btn btn-default text-left" id="boton.parto.nuevo">Nuevo</button>
