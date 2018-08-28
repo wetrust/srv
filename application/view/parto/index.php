@@ -20,28 +20,28 @@
         <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento</span>
         <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
     </nav>
-    <section class="container px-0 pt-2">
+    <section class="container px-0">
         <div class="row">
-            <div class="col-2 px-0 border-right">
-                <ul class="nav flex-column">
+            <div class="col-2 px-0">
+                <ul class="nav flex-column pt-2">
                     <li class="nav-item">
-                        <a href="#neonatal">DATOS NEONATALES</a>
+                        <a href="#neonatal">Datos Neonatales</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#recienacido">EVALUACIÓN PESO E IPN</a>
+                        <a href="#recienacido">Evaluación Peso e IPN</a>
                     </li>
                     <li class="nav-item">
                         <a href="#postnatal">Proyecto a desarrollar</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#ajustepeso">Curvas customizadas</a>
+                        <a href="#ajustepeso pl-2">Curvas customizadas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a>
+                        <a href="#hipoglicemia pl-2">Protocolo hipoglicemia neonatal</a>
                     </li>
                 </ul>
             </div>
-            <div class="col px-0">
+            <div class="col px-0 border-left">
             </div>
         </div>
     </section>
