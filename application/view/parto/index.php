@@ -17,21 +17,10 @@
 <body class="h-100 w-100">
   <div class="h-100 w-100" id="main">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">crecimientofetal.cl</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="<?php echo Config::get('URL'); ?>">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
-        </div>
+        <span class="navbar-text mx-auto">Evaluación postnatal del crecimiento</span>
     </nav>
     <section>
-        <h4 class="text-center py-4 mb-0" id="titulo"><strong><em>Evaluación postnatal del crecimiento</em></strong></h4>
+        <h4 class="text-center py-4 mb-0" id="titulo"><strong><em></em></strong></h4>
         <ol class="breadcrumb" id="breadrumb.menu">
             <li class="breadcrumb-item"><a href="#neonatal">DATOS NEONATALES</a></li>
             <li class="breadcrumb-item"><a href="#recienacido">EVALUACIÓN PESO E IPN</a></li>
