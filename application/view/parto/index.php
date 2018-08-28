@@ -82,40 +82,41 @@
                             <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
                             <div class="form-row">
                                 <div class="col-2 form-group">
-                                    <label for="edadGestacional">N° de Registro</label>
+                                    <h6 class="text-primary">N° de Registro</h6>
                                     <input class="form-control" type="text" id="id_paciente" disabled>
                                 </div>
                                 <div class="col-3 form-group">
-                                    <label for="edadGestacional">Nombre</label>
+                                    <h6 class="text-primary">Nombre</h6>
                                     <input class="form-control" type="text" id="nombre_madre" disabled>
                                 </div>
                                 <div class="col-3 form-group">
-                                    <label for="edadGestacional">Apellido</label>
+                                    <h6 class="text-primary">Apellido</h6>
                                     <input class="form-control" type="text" id="apellido_madre" disabled>
                                 </div>
                                 <div class="col-4 form-group">
-                                    <label for="edadGestacional">Lugar de parto</label>
+                                    <h6 class="text-primary">Lugar de parto</h6>
                                     <select class="form-control" id="lugar_parto_rn" disabled>
                                         <option value="1">temuco</option>
                                     </select>
                                 </div>
                             </div>
                             <h5 class="card-title mt-3">Datos del RN</h5>
+                            <hr class="mb-3">
                             <div class="form-row">
                                 <div class="col-2">
-                                    <label for="edadGestacional">N° de Registro</label>
+                                    <h6 class="text-primary">N° de Registro</h6>
                                     <input class="form-control" type="text" id="id_rn" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">Nombre</label>
+                                    <h6 class="text-primary">Nombre</h6>
                                     <input class="form-control" type="text" id="nombre_rn" disabled>
                                 </div>
                                 <div class="col-3">
-                                    <label for="edadGestacional">Apellido</label>
+                                    <h6 class="text-primary">Apellido</h6>
                                     <input class="form-control" type="text" id="apellido_rn" disabled>
                                 </div>
                                 <div class="col-4">
-                                    <label for="edadGestacional">Sexo de RN</label>
+                                    <h6 class="text-primary">Sexo de RN</h6>
                                     <select id="sexo_rn" class="form-control" disabled>
                                         <option value="0" selected>Masculino</option>
                                         <option value="1">Femenino</option>
