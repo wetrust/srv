@@ -540,6 +540,8 @@
                             <div class="btn-group" role="group" aria-label="Default button group">
                                 <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
                                 <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Default button group">
                                 <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
                                 <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
                             </div>
