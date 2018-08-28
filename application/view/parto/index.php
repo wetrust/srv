@@ -31,13 +31,13 @@
                         <a href="#recienacido">Evaluación Peso e IPN</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#postnatal">Proyecto a desarrollar</a>
+                        <a href="#postnatal" class="text-secondary">Proyecto a desarrollar</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#ajustepeso pl-2">Curvas customizadas</a>
+                        <a href="#ajustepeso" class="pl-2">Curvas customizadas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#hipoglicemia pl-2">Protocolo hipoglicemia neonatal</a>
+                        <a href="#hipoglicemia" class="pl-2">Protocolo hipoglicemia neonatal</a>
                     </li>
                 </ul>
             </div>
