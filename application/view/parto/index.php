@@ -535,7 +535,7 @@
                                         <option value="1" selected>Ninguno Caucásico</option>
                                     </select>
                                 </div>
-                            </form>
+                            </div>
                             <h6 class="text-left text-info" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
                             <div class="btn-group" role="group" aria-label="Default button group">
                                 <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
