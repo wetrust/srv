@@ -463,7 +463,7 @@
         </div>
         <div class="container" id="ajustepeso" style="display:none;">
             <div class="row mt-1">
-                <div class="col">
+                <div class="col-5">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Recién Nacido</h5>
