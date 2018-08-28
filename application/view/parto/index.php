@@ -33,10 +33,10 @@
                     <li class="nav-item">
                         <a href="#postnatal" class="text-secondary">Proyecto a desarrollar</a>
                     </li>
-                    <li class="nav-item" class="ml-2">
+                    <li class="nav-item ml-2">
                         <a href="#ajustepeso">Curvas customizadas</a>
                     </li>
-                    <li class="nav-item" class="ml-2">
+                    <li class="nav-item ml-2">
                         <a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a>
                     </li>
                 </ul>
