@@ -66,16 +66,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-1 mx-0">
+                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);" id="neonatal">
                     <div class="col-12 p-0 col-sm-2 order-sm-1">
                         <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-default text-left" id="boton.parto.nuevo">Nuevo</button>
-                            <button type="button" class="btn btn-default text-left" id="boton.parto.modificar">Modificar</button>
-                            <button type="button" class="btn btn-default text-left d-none" id="boton.parto.guardar">Guardar</button>
-                            <button type="button" class="btn btn-default text-left d-none" id="boton.parto.eliminar">Eliminar</button>
+                            <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.nuevo">Nuevo</button>
+                            <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.modificar">Modificar</button>
+                            <button type="button" class="btn btn-outline-secondary text-left d-none" id="boton.parto.guardar">Guardar</button>
+                            <button type="button" class="btn btn-outline-secondary text-left d-none" id="boton.parto.eliminar">Eliminar</button>
                         </div>
                     </div>
-                    <div class="col-12 p-0 pr-1 col-sm-10">
+                    <div class="col-12 p-0 pr-1 col-sm-10 h-100" style="overflow: auto;">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
@@ -304,6 +304,89 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);" id="recienacido">
+                    <div class="row mt-2">
+                        <div class="col-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Datos de Recién Nacido</h5>
+                                    <hr class="mb-3">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <h6 class="text-primary">E. Gestacional</h6>
+                                            <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp" disabled></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-6 mt-2">
+                                            <h6 class="text-primary">Peso RN (gr.)</h6>
+                                            <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
+                                        </div>
+                                        <div class="col-6 mt-2">
+                                            <h6 class="text-primary">Talla RN (mm.)</h6>
+                                            <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title mt-4">Datos de RN calculado</h5>
+                                    <hr class="mb-3">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <h6 class="text-primary">IPN <small>((peso / talla)^3)*100</small></h6>
+                                            <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IPNRN" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-6 mt-2">
+                                            <h6 class="text-primary">Peso / EG</h6>
+                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoPct" style="font-size: 0.8rem;" disabled>
+                                        </div>
+                                        <div class="col-6 mt-2">
+                                            <h6 class="text-primary">&nbsp;</h6>
+                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoEge" style="font-size: 0.8rem;" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-6 mt-2">
+                                            <h6 class="text-primary">IPN / Ege</h6>
+                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnPct" style="font-size: 0.8rem;" disabled>
+                                        </div>
+                                        <div class="col-6 mt-2">
+                                            <h6 class="text-primary">&nbsp;</h6>
+                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnEge" style="font-size: 0.8rem;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form>
+                                    <div class="form-group mb-0">
+                                        <label for="graficoEstandar"><strong>Seleccione Curva</strong></label>
+                                        <select class="form-control" id="graficoEstandar" style="font-size: 0.8rem;">
+                                            <option value="0">Peso / Edad Gestacional (Curva Nacional SOCHIPE)</option>
+                                            <option value="1">Peso / Edad Gestacional (Curva Regional Araucanía)</option>
+                                            <option></option>
+                                            <option value="2">IPN / Edad Gestacional (Curva Nacional SOCHIPE)</option>
+                                            <option value="3">IPN / Edad Gestacional (Curva Regional Araucanía)</option>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                    </form>
+                                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                                    <div id="grafico"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-info">Graficas para categorizar crecimiento y ponderación de variables biológicas</small><br>
+                            <small style="font-size: 60%;">* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a>    ** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small>
                         </div>
                     </div>
                 </div>
