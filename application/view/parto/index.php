@@ -20,7 +20,7 @@
         <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento</span>
         <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
     </nav>
-    <section class="container px-0">
+    <section class="container px-0 pt-2">
         <div class="row">
             <div class="col-2 px-0">
                 <ul class="nav flex-column">
