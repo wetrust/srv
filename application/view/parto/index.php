@@ -20,6 +20,8 @@
         <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento</span>
         <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
     </nav>
+    <?php if (Session::userIsLoggedIn() == false) { ?>
+    <?php } ?>
     <section class="container px-0">
         <div class="row">
             <div class="col-2 px-0">
@@ -42,6 +44,269 @@
                 </ul>
             </div>
             <div class="col px-0 border-left">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <h6 class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</h6>
+                            </div>
+                            <div class="col-3">
+                                <select id="buscar.parto.tipo" class="form-control">
+                                    <option value="0" selected>ID de la madre</option>
+                                    <option value="1">ID del Recién Nacido</option>
+                                    <option value="2">Apellidos de la Madre</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <input class="form-control mt-2" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
+                            </div>
+                            <div class="col-2 ">
+                                <button type="button" id="buscar.parto.madre.button" class="btn btn-outline-primary my-auto">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 p-0 col-sm-2 order-sm-1">
+                        <div class="position-fixed btn-group-vertical d-flex justify-content-center border border-primary rounded" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-default text-left" id="boton.parto.nuevo">Nuevo</button>
+                            <button type="button" class="btn btn-default text-left" id="boton.parto.modificar">Modificar</button>
+                            <button type="button" class="btn btn-default text-left d-none" id="boton.parto.guardar">Guardar</button>
+                            <button type="button" class="btn btn-default text-left d-none" id="boton.parto.eliminar">Eliminar</button>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0 pr-1 col-sm-10">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
+                                <div class="form-row">
+                                    <div class="col-2 form-group">
+                                        <h6 class="text-primary">N° de Registro</h6>
+                                        <input class="form-control" type="text" id="id_paciente" disabled>
+                                    </div>
+                                    <div class="col-3 form-group">
+                                        <h6 class="text-primary">Nombre</h6>
+                                        <input class="form-control" type="text" id="nombre_madre" disabled>
+                                    </div>
+                                    <div class="col-3 form-group">
+                                        <h6 class="text-primary">Apellido</h6>
+                                        <input class="form-control" type="text" id="apellido_madre" disabled>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Lugar de parto</h6>
+                                        <select class="form-control" id="lugar_parto_rn" disabled>
+                                            <option value="1">temuco</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <h5 class="card-title mt-3">Datos del RN</h5>
+                                <hr class="mb-3">
+                                <div class="form-row">
+                                    <div class="col-2">
+                                        <h6 class="text-primary">N° de Registro</h6>
+                                        <input class="form-control" type="text" id="id_rn" disabled>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="text-primary">Nombre</h6>
+                                        <input class="form-control" type="text" id="nombre_rn" disabled>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="text-primary">Apellido</h6>
+                                        <input class="form-control" type="text" id="apellido_rn" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6 class="text-primary">Sexo de RN</h6>
+                                        <select id="sexo_rn" class="form-control" disabled>
+                                            <option value="0" selected>Masculino</option>
+                                            <option value="1">Femenino</option>
+                                            <option value="2">Indeterminado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-child"></i> Datos de parto y RN</h5>
+                                <hr class="mb-3">
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="text-primary"">Peso RN</h6>
+                                        <div class="input-group">
+                                            <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number" disabled>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">grs.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="text-primary">Talla RN</h6>
+                                        <div class="input-group">
+                                            <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.talla" min="0" max="999" maxlength="3" type="number" disabled>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">mm.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="text-primary">Perimetro Craneo</h6>
+                                        <div class="input-group">
+                                            <input class="form-control" style="background-color:#e9ecef;" type="number" min="0" max="999" id="perimetro_craneo_rn" disabled>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">mm.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="text-primary">Indices calculados (Ipn)</h6>
+                                        <div class="input-group">
+                                            <input class="form-control" id="datos.neonatal.ipn" disabled type="number">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">mm.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Meconio al parto</h6>
+                                        <select id="meconio" class="form-control" disabled>
+                                            <option value="0" selected>Ausente</option>
+                                            <option value="1">Fluido</option>
+                                            <option value="2">Espeso</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Apgar 1° Min.</h6>
+                                        <select id="apgar_1" class="form-control" disabled>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary"">Apgar 5° Min.</h6>
+                                        <select id="apgar_5" class="form-control" disabled>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Fecha de Parto</h6>
+                                        <input class="form-control" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">E. Gestacional</h6>
+                                        <select id="datos.neonatal.edad" class="form-control" disabled>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Término de Gestación</h6>
+                                        <select id="termino_parto" class="form-control" disabled>
+                                            <option value="0" selected>Parto</option>
+                                            <option value="1">Aborto</option>
+                                            <option value="2">Desconocido</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Tipo de Parto</h6>
+                                        <select id="tipo_parto" class="form-control" disabled>
+                                            <option value="0" selected>Vaginal</option>
+                                            <option value="1">Cesarea</option>
+                                            <option value="2">Forceps</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Peso Placentario</h6>
+                                        <div class="input-group">
+                                            <input class="form-control" id="peso_placentario" type="number" min="0" max="9999" disabled>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">grs.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Patologia Obstétrica</h6>
+                                        <select id="tipo_patologia_obstetrica" class="form-control" disabled>
+                                            <option value="0" selected></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN</h5>
+                                <hr class="mb-3">
+                                <div class="form-row">
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Hiperbilirrubinemia</h6>
+                                        <select id="hiperbilirrubinemia" class="form-control" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Poliglobulia</h6>
+                                        <select id="poliglobulia" class="form-control" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Hospital - UCIN</h6>
+                                        <select id="hospital_ucin" class="form-control" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Sindrome dificultad respiratoria</h6>
+                                        <select id="sindrome_respiratorio" class="form-control" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Alta con su madre</h6>
+                                        <select id="alta_con_madre" class="form-control" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <h6 class="text-primary">Profesional atención del Parto</h6>
+                                        <select class="form-control" id="prof.atencion.parto" disabled>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
