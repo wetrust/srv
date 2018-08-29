@@ -309,53 +309,52 @@
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);display:none;" id="recienacido">
                     <div class="col-5 p-0">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Datos de Recién Nacido</h5>
-                                    <hr class="mb-3">
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <h6 class="text-primary">E. Gestacional</h6>
-                                            <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp" disabled></select>
-                                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Datos de Recién Nacido</h5>
+                                <hr class="mb-3">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">E. Gestacional</h6>
+                                        <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp" disabled></select>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="col-6 mt-2">
-                                            <h6 class="text-primary">Peso RN (gr.)</h6>
-                                            <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
-                                        </div>
-                                        <div class="col-6 mt-2">
-                                            <h6 class="text-primary">Talla RN (mm.)</h6>
-                                            <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
-                                        </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-6 mt-2">
+                                        <h6 class="text-primary">Peso RN (gr.)</h6>
+                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="pesoRN" aria-describedby="pesoRNHelp" min="0" max="9999" disabled>
                                     </div>
-                                    <h5 class="card-title mt-4">Datos de RN calculado</h5>
-                                    <hr class="mb-3">
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <h6 class="text-primary">IPN <small>((peso / talla)^3)*100</small></h6>
-                                            <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IPNRN" disabled>
-                                        </div>
+                                    <div class="col-6 mt-2">
+                                        <h6 class="text-primary">Talla RN (mm.)</h6>
+                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="tallaRN" aria-describedby="tallaRNHelp" min="0" max="999" maxlength="3" disabled>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="col-6 mt-2">
-                                            <h6 class="text-primary">Peso / EG</h6>
-                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoPct" style="font-size: 0.8rem;" disabled>
-                                        </div>
-                                        <div class="col-6 mt-2">
-                                            <h6 class="text-primary">&nbsp;</h6>
-                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoEge" style="font-size: 0.8rem;" disabled>
-                                        </div>
+                                </div>
+                                <h5 class="card-title mt-4">Datos de RN calculado</h5>
+                                <hr class="mb-3">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">IPN <small>((peso / talla)^3)*100</small></h6>
+                                        <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IPNRN" disabled>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="col-6 mt-2">
-                                            <h6 class="text-primary">IPN / Ege</h6>
-                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnPct" style="font-size: 0.8rem;" disabled>
-                                        </div>
-                                        <div class="col-6 mt-2">
-                                            <h6 class="text-primary">&nbsp;</h6>
-                                            <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnEge" style="font-size: 0.8rem;" disabled>
-                                        </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-6 mt-2">
+                                        <h6 class="text-primary">Peso / EG</h6>
+                                        <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoPct" style="font-size: 0.8rem;" disabled>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <h6 class="text-primary">&nbsp;</h6>
+                                        <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="PesoEge" style="font-size: 0.8rem;" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-6 mt-2">
+                                        <h6 class="text-primary">IPN / Ege</h6>
+                                        <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnPct" style="font-size: 0.8rem;" disabled>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <h6 class="text-primary">&nbsp;</h6>
+                                        <input type="text" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IpnEge" style="font-size: 0.8rem;" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -364,17 +363,17 @@
                             <div class="card">
                                 <div class="card-body">
                                     <form>
-                                    <div class="form-group mb-0">
-                                        <label for="graficoEstandar"><strong>Seleccione Curva</strong></label>
-                                        <select class="form-control" id="graficoEstandar" style="font-size: 0.8rem;">
-                                            <option value="0">Peso / Edad Gestacional (Curva Nacional SOCHIPE)</option>
-                                            <option value="1">Peso / Edad Gestacional (Curva Regional Araucanía)</option>
-                                            <option></option>
-                                            <option value="2">IPN / Edad Gestacional (Curva Nacional SOCHIPE)</option>
-                                            <option value="3">IPN / Edad Gestacional (Curva Regional Araucanía)</option>
-                                            <option></option>
-                                        </select>
-                                    </div>
+                                        <div class="form-group mb-0">
+                                            <label for="graficoEstandar"><strong>Seleccione Curva</strong></label>
+                                            <select class="form-control" id="graficoEstandar" style="font-size: 0.8rem;">
+                                                <option value="0">Peso / Edad Gestacional (Curva Nacional SOCHIPE)</option>
+                                                <option value="1">Peso / Edad Gestacional (Curva Regional Araucanía)</option>
+                                                <option></option>
+                                                <option value="2">IPN / Edad Gestacional (Curva Nacional SOCHIPE)</option>
+                                                <option value="3">IPN / Edad Gestacional (Curva Regional Araucanía)</option>
+                                                <option></option>
+                                            </select>
+                                        </div>
                                     </form>
                                     <div id="grafico"></div>
                                 </div>
