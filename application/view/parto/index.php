@@ -508,7 +508,7 @@
                     </div>
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="hipoglicemia">
-                    <div class="col-12">
+                    <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Crecimiento intrauterino para la relación Peso / Ege y ajuste según variables</h5>
