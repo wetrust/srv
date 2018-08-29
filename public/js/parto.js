@@ -263,6 +263,8 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.nuevo").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.parto\\.nuevo").addClass("d-none");
+        $("#boton\\.parto\\.modificar").addClass("d-none");
         //desbloquear cajas
         $("#boton.parto.guardar").class = "d-none"
         $("#id_paciente").prop("disabled", false).val("");
@@ -311,6 +313,8 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.modificar").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.parto\\.nuevo").addClass("d-none");
+        $("#boton\\.parto\\.modificar").addClass("d-none");
         //desbloquear cajas
         $("#id_paciente").prop("disabled", false);
         $("#nombre_madre").prop("disabled", false);

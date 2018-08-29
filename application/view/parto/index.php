@@ -71,7 +71,7 @@
                         <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                             <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.nuevo">Nuevo</button>
                             <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.modificar">Modificar</button>
-                            <button type="button" class="btn btn-outline-secondary text-left d-none" id="boton.parto.guardar">Guardar</button>
+                            <button type="button" class="btn btn-outline-danger text-left d-none" id="boton.parto.guardar">Guardar</button>
                             <button type="button" class="btn btn-outline-secondary text-left d-none" id="boton.parto.eliminar">Eliminar</button>
                         </div>
                     </div>
@@ -503,7 +503,7 @@
                     <div class="col-12">
                         <div class="card mt-2">
                             <div class="card-body">
-                                <h6 class="text-center text-info">Cuatro ejemplos para ajuste al peso esperado según categoria variables</h6>
+                                <h6 class="text-center text-info">Cuatro ejemplos para ajuste al peso esperado según categoria de variables</h6>
                                 <div class="btn-group d-flex justify-content-center" role="group" aria-label="Default button group">
                                     <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
                                     <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
