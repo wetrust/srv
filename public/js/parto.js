@@ -266,7 +266,6 @@ $(document).ready(function() {
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
         //desbloquear cajas
-        $("#boton.parto.guardar").class = "d-none"
         $("#id_paciente").prop("disabled", false).val("");
         $("#nombre_madre").prop("disabled", false).val("");
         $("#apellido_madre").prop("disabled", false).val("");
@@ -355,6 +354,54 @@ $(document).ready(function() {
         $("#conducta\\.tres").prop("disabled", false);
         $("#prof\\.alta\\.rn").prop("disabled", false);
         $("#prof\\.atencion\\.parto").prop("disabled", false);
+    });
+
+    $("#boton\\.parto\\.guardar").on("click", function() {
+        $("#boton\\.parto\\.guardar").addClass("d-none");
+        $("#boton\\.parto\\.nuevo").removeClass("d-none");
+        $("#boton\\.parto\\.modificar").removeClass("d-none");
+        //desbloquear cajas
+        $("#id_paciente").prop("disabled", true);
+        $("#nombre_madre").prop("disabled", true);
+        $("#apellido_madre").prop("disabled", true);
+        $("#lugar_parto_rn").prop("disabled", true);
+        $("#id_rn").prop("disabled", true);
+        $("#nombre_rn").prop("disabled", true);
+        $("#apellido_rn").prop("disabled", true);
+        $("#sexo_rn").prop("disabled", true);
+        $("#fecha_parto_rn").prop("disabled", true);
+        $("#datos\\.neonatal\\.edad").prop("disabled", true);
+        $("#termino_parto").prop("disabled", true);
+        $("#tipo_parto").prop("disabled", true);
+        $("#tipo_patologia_obstetrica").prop("disabled", true);
+        $("#meconio").prop("disabled", true);
+        $("#datos\\.neonatal\\.peso").prop("disabled", true);
+        $("#datos\\.neonatal\\.talla").prop("disabled", true);
+        $("#perimetro_craneo_rn").prop("disabled", true);
+        $("#peso_placentario").prop("disabled", true);
+        $("#apgar_1").prop("disabled", true);
+        $("#apgar_5").prop("disabled", true);
+        $("#hiperbilirrubinemia").prop("disabled", true);
+        $("#poliglobulia").prop("disabled", true);
+        $("#hospital_ucin").prop("disabled", true);
+        $("#sindrome_respiratorio").prop("disabled", true);
+        $("#alta_con_madre").prop("disabled", true);
+        $("#observaciones").prop("disabled", true);
+        $("#prof\\.atencion\\.parto").prop("disabled", true);
+        $("#dextro_uno").prop("disabled", true);
+        $("#glicemia_uno").prop("disabled", true);
+        $("#conducta\\.uno").prop("disabled", true);
+        $("#dextro_dos").prop("disabled", true);
+        $("#glicemia_dos").prop("disabled", true);
+        $("#conducta\\.dos").prop("disabled", true);
+        $("#dextro_tres").prop("disabled", true);
+        $("#glicemia_tres").prop("disabled", true);
+        $("#conducta\\.tres").prop("disabled", true);
+        $("#hipoglicemia_riesgo").prop("disabled", true);
+        $("#hipoglicemia_sospechada").prop("disabled", true);
+        $("#hipoglicemia_confirmada").prop("disabled", true);
+        $("#prof\\.alta\\.rn").prop("disabled", true);
+        $("#prof\\.atencion\\.parto").prop("disabled", true);
     });
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
