@@ -524,19 +524,10 @@
                                     </div>
                                     <div class="col-5 align-self-end p-0">
                                         <div class="row m-1">
-                                            <label class="col-2 p-0">Peso</label>
-                                            <div class="input-group p-0 col-4">
-                                                <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
-                                                <div class="input-group-append">
-                                                    <div class="input-group-text">grs.</div>
-                                                </div>
-                                            </div>
-                                            <label class="col-2 p-0 text-center">Ege</label>
-                                            <div class="input-group p-0 col-4">
-                                                <input class="form-control" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
-                                                <div class="input-group-append">
-                                                    <div class="input-group-text">sem.</div>
-                                                </div>
+                                            <label class="col-2 p-0">Peso (grs)</label>
+                                            <input class="form-control p-0 col-4" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
+                                            <label class="col-2 p-0 text-center">Ege (sem)</label>
+                                            <input class="form-control p-0 col-4" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
                                             </div>
                                         </div>
                                     </div>
