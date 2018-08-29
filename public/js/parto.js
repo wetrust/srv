@@ -522,7 +522,6 @@ $(document).ready(function() {
 
                 $.post(serverURL + "examen/del/", data).done(function(response) {
                     $("#table\\.ecografia\\.parto").empty();
-                    $("#boton\\.parto\\.nuevo").trigger("click");
                     obtenerPartos();
                 });
             }
