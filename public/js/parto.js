@@ -265,6 +265,7 @@ $(document).ready(function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
+        $("#boton\\.parto\\.eliminar").removeClass("d-none");
         //desbloquear cajas
         $("#id_paciente").prop("disabled", false).val("");
         $("#nombre_madre").prop("disabled", false).val("");
@@ -314,6 +315,7 @@ $(document).ready(function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
+        $("#boton\\.parto\\.eliminar").addClass("d-none");
         //desbloquear cajas
         $("#id_paciente").prop("disabled", false);
         $("#nombre_madre").prop("disabled", false);
@@ -360,6 +362,7 @@ $(document).ready(function() {
         $("#boton\\.parto\\.guardar").addClass("d-none");
         $("#boton\\.parto\\.nuevo").removeClass("d-none");
         $("#boton\\.parto\\.modificar").removeClass("d-none");
+        $("#boton\\.parto\\.eliminar").removeClass("d-none");
         //desbloquear cajas
         $("#id_paciente").prop("disabled", true);
         $("#nombre_madre").prop("disabled", true);
@@ -402,6 +405,61 @@ $(document).ready(function() {
         $("#hipoglicemia_confirmada").prop("disabled", true);
         $("#prof\\.alta\\.rn").prop("disabled", true);
         $("#prof\\.atencion\\.parto").prop("disabled", true);
+
+        var parto = {
+            id_paciente: $("#id_paciente").val(),
+            nombre_madre: $("#nombre_madre").val(),
+            apellido_madre: $("#apellido_madre").val(),
+            lugar_parto_rn: $("#lugar_parto_rn").val(),
+            id_rn: $("#id_rn").val(),
+            nombre_rn: $("#nombre_rn").val(),
+            apellido_rn: $("#apellido_rn").val(),
+            sexo_rn: $("#sexo_rn").val(),
+            fecha_parto_rn: $("#fecha_parto_rn").val(),
+            eg_parto: $("#datos\\.neonatal\\.edad").val(),
+            termino_parto: $("#termino_parto").val(),
+            tipo_parto: $("#tipo_parto").val(),
+            tipo_patologia_obstetrica: $("#tipo_patologia_obstetrica").val(),
+            meconio: $("#meconio").val(),
+            peso_rn: $("#datos\\.neonatal\\.peso").val(),
+            talla_rn: $("#datos\\.neonatal\\.talla").val(),
+            perimetro_craneo_rn: $("#perimetro_craneo_rn").val(),
+            ipn_rn: $("#datos\\.neonatal\\.ipn").val(),
+            peso_placentario: $("#peso_placentario").val(),
+            apgar_1: $("#apgar_1").val(),
+            apgar_5: $("#apgar_5").val(),
+            hiperbilirrubinemia: $("#hiperbilirrubinemia").val(),
+            poliglobulia: $("#poliglobulia").val(),
+            hospital_ucin: $("#hospital_ucin").val(),
+            sindrome_respiratorio: $("#sindrome_respiratorio").val(),
+            alta_con_madre: $("#alta_con_madre").val(),
+            observaciones: $("#observaciones").val(),
+            hipoglicemia_riesgo: $("#hipoglicemia_riesgo").val(),
+            hipoglicemia_sospechada: $("#hipoglicemia_sospechada").val(),
+            hipoglicemia_confirmada: $("#hipoglicemia_confirmada").val(),
+            dextro_uno: $("#dextro_uno").val(),
+            glicemia_uno: $("#glicemia_uno").val(),
+            conducta_uno: $("#conducta\\.uno").val(),
+            dextro_dos: $("#dextro_dos").val(),
+            glicemia_dos: $("#glicemia_dos").val(),
+            conducta_dos: $("#conducta\\.dos").val(),
+            dextro_tres: $("#dextro_tres").val(),
+            glicemia_tres: $("#glicemia_tres").val(),
+            conducta_tres: $("#conducta\\.tres").val(),
+            prof_alta_rn: $("#prof\\.alta\\.rn").val(),
+            prof_atencion_parto: $("#prof\\.atencion\\.parto").val()
+        }
+
+        var data = {
+            id: $("#id_paciente").val(),
+            tipo: 4,
+            data:JSON.stringify(parto)
+        }
+
+        $.post(serverURL + "examen/set/", data).done(function(response) {
+            obtenerPartos();
+        });
+
     });
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
