@@ -657,6 +657,10 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card mt-2">
+                            <div class="card-body">
                                 <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.modificar">Modificar</button>
                                 <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.guardar">Guardar</button>
                             </div>
