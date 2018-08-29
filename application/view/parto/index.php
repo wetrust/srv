@@ -507,6 +507,154 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="hipoglicemia">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Crecimiento intrauterino para la relación Peso / Ege y ajuste según variables</h5>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva Generalizada (percentil)</label>
+                                    </div>
+                                    <div class="col-1">
+                                        <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
+                                    </div>
+                                    <div class="col-5 align-self-end p-0">
+                                        <div class="row m-1">
+                                            <label class="col-2 p-0">Peso</label>
+                                            <div class="input-group p-0 col-4">
+                                                <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">grs.</div>
+                                                </div>
+                                            </div>
+                                            <label class="col-2 p-0 text-center">Ege</label>
+                                            <div class="input-group p-0 col-4">
+                                                <input class="form-control" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">sem.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pt-2">
+                                    <div class="col-4">
+                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;2.- Curva Categorizada (percentil)</label>
+                                    </div>
+                                    <div class="col-1">
+                                        <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
+                                    </div>
+                                    <div class="col-2">
+                                        <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
+                                    </div>
+                                    <div class="col-5 align-self-end">
+                                        <button type="button" class="btn btn-outline-secondary float-right" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-12 border border-info p-2 div-hover">
+                                        <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</small></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 my-3">
+                                        <div class="row bg-info text-white p-2">
+                                            <div class="col-2">Exámenes</div>
+                                            <div class="col-2 text-center">Dextro</div>
+                                            <div class="col-2 text-center">Glicemia ev</div>
+                                            <div class="col-6">Conducta seguida según condición clínica del RN</div>
+                                        </div>
+                                        <div class="row p-2 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
+                                            <div class="col-2">Primero</div>
+                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno" disabled></div>
+                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno" disabled></div>
+                                            <div class="col-6">
+                                                <select class="form-control" id="conducta.uno" disabled>
+                                                    <option value="1">Promover alimentación natural</option>
+                                                    <option value="2">Alimentación enteral</option>
+                                                    <option value="3" selected>Terapia endovenosa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row p-2 border border-info border-top-0 border-bottom-0">
+                                            <div class="col-2">Segundo</div>
+                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos" disabled></div>
+                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos" disabled></div>
+                                            <div class="col-6">
+                                                <select class="form-control" id="conducta.dos" disabled>
+                                                    <option value="1">Promover alimentación natural</option>
+                                                    <option value="2">Alimentación enteral</option>
+                                                    <option value="3" selected>Terapia endovenosa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row p-2 border border-info border-top-0" style="background-color:#e2e3e5;">
+                                            <div class="col-2">Tercero</div>
+                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres" disabled></div>
+                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres" disabled></div>
+                                            <div class="col-6">
+                                                <select class="form-control" id="conducta.tres" disabled>
+                                                    <option value="1">Promover alimentación natural</option>
+                                                    <option value="2">Alimentación enteral</option>
+                                                    <option value="3" selected>Terapia endovenosa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-4">
+                                        <label for="edadGestacional" class="bg-info text-white px-1">Factores de Riesgo para Hipoglicemia</label>
+                                        <select id="hipoglicemia_riesgo" class="form-control" disabled>
+                                            <option value="0">RN PEG (&lt;10)</option>
+                                            <option value="1">RN GEG (IP &gt; 3.3)</option>
+                                            <option value="2">Hijo madre DM GEG IP > 3.3</option>
+                                            <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
+                                            <option value="4" selected>Sin riesgo clínico de hipoglicemia</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="edadGestacional" class="bg-info text-white px-1">Hipoglicemia sospecha Clínicamente</label>
+                                        <select id="hipoglicemia_sospechada" class="form-control" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="edadGestacional" class="bg-info text-white px-1">Hipoglicemia confirmada por laboratorio</label>
+                                        <select id="hipoglicemia_confirmada" class="form-control" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-8">
+                                        Observaciones
+                                    </div>
+                                    <div class="col-4">
+                                        Profesional alta del recién nacido
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" id="observaciones" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <select class="form-control" id="prof.alta.rn" disabled>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.modificar">Modificar</button>
+                                <button type="button" class="btn btn-secondary float-right mt-2" id="boton.hipoglicemia.guardar">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
