@@ -499,7 +499,7 @@
                     <div class="col-12">
                         <div class="card mt-2">
                             <div class="card-body">
-                                <h6 class="text-enter text-info">Cuatro ejemplos para ajuste al peso esperado según categoria variables</h6>
+                                <h6 class="text-center text-info">Cuatro ejemplos para ajuste al peso esperado según categoria variables</h6>
                                 <div class="btn-group d-flex justify-content-center" role="group" aria-label="Default button group">
                                     <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
                                     <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
