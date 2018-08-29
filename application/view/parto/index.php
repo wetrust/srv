@@ -133,7 +133,7 @@
                                     <div class="col-3">
                                         <h6 class="text-primary"">Peso RN</h6>
                                         <div class="input-group">
-                                            <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number" disabled>
+                                            <input class="form-control" id="datos.neonatal.peso" min="0" max="9999" type="number">
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
                                             </div>
