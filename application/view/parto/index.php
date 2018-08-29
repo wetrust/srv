@@ -394,13 +394,117 @@
                         <div id="sliderParto" class="carousel slide" data-ride="carousel" data-interval="60000">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
-                                    <p class="text-justify text-azul">El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br><br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</p>
+                                    <p class="text-justify text-azul">El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
+                    </div>
+                </div>
+                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="ajustepeso">
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Recién Nacido</h5>
+                                <hr class="mb-3">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">Sexo Neonatal</h6>
+                                        <select id="sn" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                            <option value="1" selected>Femeníno</option>
+                                            <option value="0">Masculíno</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">Paridad Materna</h6>
+                                        <select id="pm" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                            <option value="1" selected>Primípara</option>
+                                            <option value="0">Multípara</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <h6 class="text-primary">Talla Materna</h6>
+                                        <select id="tm" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled></select>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="text-primary">Peso Materno</h6>
+                                        <select id="pesom" class="form-control" style="font-size: 0.8rem;height: 2rem;" disabled></select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">IMC <small>((Peso/Talla)^2)</small></h6>
+                                        <input type="text" class="form-control" style="font-size: 0.8rem;height: 2rem;" id="valorimc" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">Estado Nutricional</h6>
+                                        <select id="imc" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                            <option value="1">Enflaquecida</option>
+                                            <option value="2">Normal</option>
+                                            <option value="3">SobrePeso</option>
+                                            <option value="4" selected>Obesidad</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">Edad Materna</h6>
+                                        <select id="em" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                            <option value="1">&lt; 19</option>
+                                            <option value="2">20 - 21</option>
+                                            <option value="3">22 - 23</option>
+                                            <option value="4">24 - 25</option>
+                                            <option value="5">26 - 27</option>
+                                            <option value="6" selected>&gt; 27</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <h6 class="text-primary">Etnia Materna</h6>
+                                        <select id="apellm" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                            <option value="0">Ambos Caucásicos</option>
+                                            <option value="2">Solo uno Caucásico</option>
+                                            <option value="1" selected>Ninguno Caucásico</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <h6 class="text-left text-info" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
+                                    <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
+                                    <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
+                                </div>
+                                <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="graficoAjustado"></div>
+                                <div>
+                                    <div class="form-group row mb-0">
+                                        <p class="col-12 d-none" id="tituloAjusteG"><strong>Peso ajustado para:</strong></p>
+                                        <label for="PesoEgeSAj" class="col-4" id="tituloAjusteAlto" style="font-size: 0.8rem;height: 2rem;">Pct. peso sin ajuste</label>
+                                        <input type="text" class="form-control col-2" id="PesoEgeSAj" disabled style="font-size: 0.8rem;height: 2rem;">
+                                        <label for="PesoEgeCAj" class="col-4" id="tituloAjusteBajo" style="font-size: 0.8rem;height: 2rem;">Pct. peso con ajuste</label>
+                                        <input type="text" class="form-control col-2" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
