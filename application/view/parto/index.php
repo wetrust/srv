@@ -72,6 +72,7 @@
                             <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.nuevo">Nuevo</button>
                             <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.modificar">Modificar</button>
                             <button type="button" class="btn btn-outline-danger text-left d-none" id="boton.parto.guardar">Guardar</button>
+                            <button type="button" class="btn btn-outline-secondary text-left d-none" id="boton.parto.cancelar">Cancelar</button>
                             <button type="button" class="btn btn-outline-danger text-left d-none" id="boton.parto.eliminar">Eliminar</button>
                         </div>
                     </div>

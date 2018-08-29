@@ -264,6 +264,7 @@ $(document).ready(function() {
     $("#boton\\.parto\\.nuevo").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
+        $("#boton\\.parto\\.cancelar").removeClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
         $("#boton\\.parto\\.eliminar").addClass("d-none");
         //desbloquear cajas
@@ -313,8 +314,57 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.modificar").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.parto\\.cancelar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
+        $("#boton\\.parto\\.eliminar").addClass("d-none");
+        //desbloquear cajas
+        $("#id_paciente").prop("disabled", false);
+        $("#nombre_madre").prop("disabled", false);
+        $("#apellido_madre").prop("disabled", false);
+        $("#lugar_parto_rn").prop("disabled", false);
+        $("#id_rn").prop("disabled", false);
+        $("#nombre_rn").prop("disabled", false);
+        $("#apellido_rn").prop("disabled", false);
+        $("#sexo_rn").prop("disabled", false);
+        $("#fecha_parto_rn").prop("disabled", false);
+        $("#datos\\.neonatal\\.edad").prop("disabled", false);
+        $("#termino_parto").prop("disabled", false);
+        $("#tipo_parto").prop("disabled", false);
+        $("#tipo_patologia_obstetrica").prop("disabled", false);
+        $("#meconio").prop("disabled", false);
+        $("#datos\\.neonatal\\.peso").prop("disabled", false);
+        $("#datos\\.neonatal\\.talla").prop("disabled", false);
+        $("#perimetro_craneo_rn").prop("disabled", false);
+        $("#datos\\.neonatal\\.ipn");
+        $("#peso_placentario").prop("disabled", false);
+        $("#apgar_1").prop("disabled", false);
+        $("#apgar_5").prop("disabled", false);
+        $("#hiperbilirrubinemia").prop("disabled", false);
+        $("#poliglobulia").prop("disabled", false);
+        $("#hospital_ucin").prop("disabled", false);
+        $("#sindrome_respiratorio").prop("disabled", false);
+        $("#alta_con_madre").prop("disabled", false);
+        $("#observaciones").prop("disabled", false);
+        $("#prof\\.atencion\\.parto").prop("disabled", false);
+        $("#dextro_uno").prop("disabled", false);
+        $("#glicemia_uno").prop("disabled", false);
+        $("#conducta\\.uno").prop("disabled", false);
+        $("#dextro_dos").prop("disabled", false);
+        $("#glicemia_dos").prop("disabled", false);
+        $("#conducta\\.dos").prop("disabled", false);
+        $("#dextro_tres").prop("disabled", false);
+        $("#glicemia_tres").prop("disabled", false);
+        $("#conducta\\.tres").prop("disabled", false);
+        $("#prof\\.alta\\.rn").prop("disabled", false);
+        $("#prof\\.atencion\\.parto").prop("disabled", false);
+    });
+
+    $("#boton\\.parto\\.cancelar").on("click", function() {
+        $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.parto\\.nuevo").addClass("d-none");
+        $("#boton\\.parto\\.modificar").addClass("d-none");
+        $("#boton\\.parto\\.cancelar").addClass("d-none");
         $("#boton\\.parto\\.eliminar").addClass("d-none");
         //desbloquear cajas
         $("#id_paciente").prop("disabled", false);
