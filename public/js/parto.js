@@ -1198,11 +1198,7 @@ $('#g3').click(function() {
     $("#tituloAjusteBajo").html("Pct. Peso con ajuste");
     Highcharts.chart('graficoAjustado', {
         title: {
-            text: 'Curva regional Peso/Ege ajustada por variables',
-            style: {
-                "color": "#337ab7",
-                "fontSize": "14px"
-            }
+            text: null
         },
         chart: {
             backgroundColor: "rgba(0, 0, 0, 0)"

@@ -483,6 +483,8 @@
                     <div class="col-7">
                         <div class="card">
                             <div class="card-body">
+                                <h5 class="card-title">Curva regional Peso/Ege ajustada por variables</h5>
+                                <hr class="mb-3">
                                 <div id="graficoAjustado"></div>
                                 <div>
                                     <div class="form-group row mb-0">
