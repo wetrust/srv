@@ -133,7 +133,7 @@
                                     <div class="col-3">
                                         <h6 class="text-primary"">Peso RN</h6>
                                         <div class="input-group">
-                                            <input class="form-control" id="datos.neonatal.peso" min="0" max="9999" type="number">
+                                            <input class="form-control" style="background-color:#e9ecef;" id="datos.neonatal.peso" min="0" max="9999" type="number" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
                                             </div>
@@ -412,7 +412,7 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <h6 class="text-primary">Sexo Neonatal</h6>
-                                        <select id="sn" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                        <select id="sn" class="form-control">
                                             <option value="1" selected>Femeníno</option>
                                             <option value="0">Masculíno</option>
                                         </select>
@@ -421,7 +421,7 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <h6 class="text-primary">Paridad Materna</h6>
-                                        <select id="pm" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                        <select id="pm" class="form-control">
                                             <option value="1" selected>Primípara</option>
                                             <option value="0">Multípara</option>
                                         </select>
@@ -457,7 +457,7 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <h6 class="text-primary">Edad Materna</h6>
-                                        <select id="em" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                        <select id="em" class="form-control">
                                             <option value="1">&lt; 19</option>
                                             <option value="2">20 - 21</option>
                                             <option value="3">22 - 23</option>
@@ -470,7 +470,7 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <h6 class="text-primary">Etnia Materna</h6>
-                                        <select id="apellm" class="form-control" style="background-color: #ECEEEF;font-size: 0.8rem;height: 2rem;" disabled>
+                                        <select id="apellm" class="form-control">
                                             <option value="0">Ambos Caucásicos</option>
                                             <option value="2">Solo uno Caucásico</option>
                                             <option value="1" selected>Ninguno Caucásico</option>
