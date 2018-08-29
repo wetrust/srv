@@ -488,9 +488,13 @@
                                     <div class="form-group row mb-0">
                                         <p class="col-12 d-none" id="tituloAjusteG"><strong>Peso ajustado para:</strong></p>
                                         <label for="PesoEgeSAj" class="col-4" id="tituloAjusteAlto" style="font-size: 0.8rem;height: 2rem;">Pct. peso sin ajuste</label>
-                                        <input type="text" class="form-control col-2" id="PesoEgeSAj" disabled style="font-size: 0.8rem;height: 2rem;">
+                                        <div class="col-2">
+                                            <input type="text" class="form-control" id="PesoEgeSAj" disabled style="font-size: 0.8rem;height: 2rem;">
+                                        </div>
                                         <label for="PesoEgeCAj" class="col-4" id="tituloAjusteBajo" style="font-size: 0.8rem;height: 2rem;">Pct. peso con ajuste</label>
-                                        <input type="text" class="form-control col-2" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
+                                        <div class="col-2">
+                                            <input type="text" class="form-control" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
