@@ -411,7 +411,7 @@
                                 <hr class="mb-3">
                                 <div class="form-row">
                                     <div class="col">
-                                        <h6 class="text-primary m-0 mt-3">Sexo Neonatal</h6>
+                                        <h6 class="text-primary m-0">Sexo Neonatal</h6>
                                         <select id="sn" class="form-control py-0">
                                             <option value="1" selected>Femeníno</option>
                                             <option value="0">Masculíno</option>
