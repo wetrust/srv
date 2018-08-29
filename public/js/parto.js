@@ -1196,6 +1196,7 @@ $('#g3').click(function() {
     $("#tituloAjusteG").addClass("d-none");
     $("#tituloAjusteAlto").html("Pct Peso sin ajuste");
     $("#tituloAjusteBajo").html("Pct. Peso con ajuste");
+    $("#grafico\\.ajustado\\.title").html("Curva regional Peso/Ege ajustada por variables");
     Highcharts.chart('graficoAjustado', {
         title: {
             text: null
@@ -1414,13 +1415,10 @@ $('#opt3').click(function() {
 });
 
 $("#opt4").click(function() {
+    $("#grafico\\.ajustado\\.title").html("Visión simultanea curvas para condiciones extremas");
     var chart = Highcharts.chart('graficoAjustado', {
         title: {
-            text: 'Visión simultanea curvas para condiciones extremas',
-            style: {
-                "color": "#337ab7",
-                "fontSize": "14px"
-            }
+            text: null
         },
         chart: {
             backgroundColor: "rgba(0, 0, 0, 0)"
