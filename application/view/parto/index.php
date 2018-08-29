@@ -404,7 +404,7 @@
                     </div>
                 </div>
                 <div class="row mt-1 mx-0" style="overflow:auto; height: calc(100vh - 150px); display:none;" id="ajustepeso">
-                    <div class="col-5">
+                    <div class="col-4">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Recién Nacido</h5>
@@ -480,7 +480,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-7">
+                    <div class="col-8">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Curva regional Peso/Ege ajustada por variables</h5>
