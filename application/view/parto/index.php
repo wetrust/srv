@@ -447,7 +447,7 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <h6 class="text-primary m-0 mt-3">Estado Nutricional</h6>
-                                        <select id="imc" class="form-control py-0" disabled>
+                                        <select id="imc" class="form-control py-0">
                                             <option value="1">Enflaquecida</option>
                                             <option value="2">Normal</option>
                                             <option value="3">SobrePeso</option>
