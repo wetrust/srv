@@ -672,6 +672,9 @@
             </div>
         </div>
     </section>
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary p-1" id="menuListaPartos">
+        <a class="navbar-brand ml-3" data-hide="true" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
+    </nav>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
