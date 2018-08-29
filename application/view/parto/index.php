@@ -403,7 +403,7 @@
                         <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
                     </div>
                 </div>
-                <div class="row mt-1 mx-0" style="height: calc(100vh - 150px); display:none;" id="ajustepeso">
+                <div class="row mt-1 mx-0" style="overflow:auto; height: calc(100vh - 150px); display:none;" id="ajustepeso">
                     <div class="col-5">
                         <div class="card">
                             <div class="card-body">
@@ -497,14 +497,12 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card mt-2">
                             <div class="card-body">
                                 <h6 class="text-left text-info" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
-                                <div class="btn-group" role="group" aria-label="Default button group">
+                                <div class="btn-group " role="group" aria-label="Default button group">
                                     <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
                                     <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
-                                </div>
-                                <div class="btn-group" role="group" aria-label="Default button group">
                                     <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
                                     <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
                                 </div>
