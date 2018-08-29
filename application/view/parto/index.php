@@ -403,7 +403,7 @@
                         <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
                     </div>
                 </div>
-                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="ajustepeso">
+                <div class="row mt-1 mx-0" style="display:none;" id="ajustepeso">
                     <div class="col-5">
                         <div class="card">
                             <div class="card-body">
@@ -477,20 +477,10 @@
                                         </select>
                                     </div>
                                 </div>
-                                <h6 class="text-left text-info" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
-                                <div class="btn-group" role="group" aria-label="Default button group">
-                                    <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
-                                    <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
-                                </div>
-                                <div class="btn-group" role="group" aria-label="Default button group">
-                                    <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
-                                    <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
-                                </div>
-                                <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-7">
                         <div class="card">
                             <div class="card-body">
                                 <div id="graficoAjustado"></div>
@@ -503,6 +493,22 @@
                                         <input type="text" class="form-control col-2" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="text-left text-info" style="margin-top:30px;">Cuatro ejemplos para ajuste al peso esperado según variables</h6>
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
+                                    <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
+                                    <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
+                                </div>
+                                <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
                             </div>
                         </div>
                     </div>
