@@ -431,11 +431,11 @@
                                 <div class="form-row">
                                     <div class="col-6">
                                         <h6 class="text-primary m-0 mt-3">Talla Materna</h6>
-                                        <select id="tm" class="form-control py-0" disabled></select>
+                                        <select id="tm" class="form-control py-0"></select>
                                     </div>
                                     <div class="col-6">
                                         <h6 class="text-primary m-0 mt-3">Peso Materno</h6>
-                                        <select id="pesom" class="form-control py-0" disabled></select>
+                                        <select id="pesom" class="form-control py-0"></select>
                                     </div>
                                 </div>
                                 <div class="form-row">
