@@ -512,12 +512,12 @@
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
                             <div class="card-header bg-primary">
-                                <h6 class="text-white">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva generalizada y (2) curva categorizada según variables biológicas.</h6>
+                                <h6 class="text-white">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables biológicas.</h6>
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-4">
-                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva Generalizada (percentil)</label>
+                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva local Generalizada (percentil)</label>
                                     </div>
                                     <div class="col-1">
                                         <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
@@ -540,7 +540,7 @@
                                 </div>
                                 <div class="row pt-2">
                                     <div class="col-4">
-                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;2.- Curva Categorizada (percentil)</label>
+                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;2.- Curva general personalizada (percentil)</label>
                                     </div>
                                     <div class="col-1">
                                         <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
