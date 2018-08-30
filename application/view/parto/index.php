@@ -650,7 +650,7 @@
                         <div class="card mt-2 mb-5">
                             <div class="card-body">
                                 <button type="button" class="btn btn-secondary float-right" id="boton.hipoglicemia.modificar">Modificar</button>
-                                <button type="button" class="btn btn-secondary float-right" id="boton.hipoglicemia.guardar">Guardar</button>
+                                <button type="button" class="btn btn-secondary float-right d-none" id="boton.hipoglicemia.guardar">Guardar</button>
                             </div>
                         </div>
                     </div>

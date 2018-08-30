@@ -263,6 +263,8 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.nuevo").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.guardar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.modificar").addClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.cancelar").removeClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
@@ -314,6 +316,8 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.modificar").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.guardar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.modificar").addClass("d-none");
         $("#boton\\.parto\\.cancelar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
@@ -362,6 +366,8 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.cancelar").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
+        $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.modificar").addClass("d-none");
         $("#boton\\.parto\\.cancelar").addClass("d-none");
@@ -410,6 +416,8 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.guardar").on("click", function() {
         $("#boton\\.parto\\.guardar").addClass("d-none");
+        $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
+        $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").removeClass("d-none");
         $("#boton\\.parto\\.modificar").removeClass("d-none");
         $("#boton\\.parto\\.eliminar").removeClass("d-none");
@@ -576,6 +584,10 @@ $(document).ready(function() {
                 });
             }
         });
+    });
+
+    $("#boton\\.hipoglicemia\\.modificar").on("click", function() {
+        $("#boton\\.parto\\.modificar").trigger("click");
     });
 
     $("#boton\\.hipoglicemia\\.guardar").on("click", function() {
