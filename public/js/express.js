@@ -2498,18 +2498,27 @@ $(document).ready(function() {
                         var data = [];
                         var edadGest = parseInt(localStorage.eg) - 1;
     
-                        for (i = 16; i <= edadGest; i++) {
+                        if (ccca > 1 && edadGest > 16) {
+                            for (i = 16; i <= edadGest; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                             data.push({
-                                y: 0,
+                                y: parseFloat($('#ccca').val()),
                             });
+                            for (i = edadGest + 1; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
-                        data.push({
-                            y: parseFloat($('#ccca').val()),
-                        });
-                        for (i = edadGest + 1; i <= 39; i++) {
-                            data.push({
-                                y: 0,
-                            });
+                        else{
+                            for (i = 16; i <= 39; i++) {
+                                data.push({
+                                    y: 0,
+                                });
+                            }
                         }
                         return data;
                     }())
