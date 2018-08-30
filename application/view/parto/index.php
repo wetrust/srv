@@ -555,6 +555,7 @@
                         </div>
                         <div class="card mt-2">
                             <div class="card-body">
+                            <h5 class="card-title">-  Protocolo de seguimiento hipoglicemia neonatal</h5>
                                 <div class="row">
                                     <div class="col-12 my-3">
                                         <div class="row bg-primary text-white p-2">
