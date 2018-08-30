@@ -468,7 +468,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-outline-primary mr-1" id="g3">Crear Gráfico</button>
+                                <button type="button" class="btn btn-outline-primary my-5" id="g3">Crear Gráfico</button>
                             </div>
                         </div>
                     </div>
