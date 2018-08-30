@@ -625,7 +625,7 @@
                                         </select>
                                     </div>
                                     <div class="col-4">
-                                        <p class="text-white bg-primary m-0 mt-3">Hipoglicemia confirmada por laboratorio</p>
+                                        <p class="text-white bg-primary m-0 mt-3 pl-3">Hipoglicemia confirmada por laboratorio</p>
                                         <select id="hipoglicemia_confirmada" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
