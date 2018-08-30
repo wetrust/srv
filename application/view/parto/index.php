@@ -487,7 +487,7 @@
                     <div class="col-8">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="grafico.ajustado.title">Curva regional Peso/Ege ajustada por variables biológicas</h5>
+                                <h5 class="card-title" id="grafico.ajustado.title">Curva regional Peso/Ege ajustada por variables biológicas biológicas.</h5>
                                 <hr class="mb-3">
                                 <div id="graficoAjustado"></div>
                                 <div>
@@ -523,7 +523,7 @@
                                     <button type="button" class="btn btn-outline-primary mr-1" id="opt2"><small>Potencial alto</small></button>
                                     <button type="button" class="btn btn-outline-primary" id="opt4"><small>Cond. extremas</small></button>
                                 </div>
-                                <p class="mt-3 text-right">Para la validación clínica, los resultados de la nueva curva han de ser contrastados con morbilidad neonatal prevalente en la población general de recién nacidos.</p>
+                                <p class="mt-3 text-right">Para validación clínica, los resultados de curva han de ser contrastados con morbilidad neonatal prevalente en la población general de recién nacidos.</p>
                             </div>
                         </div>
                     </div>
@@ -532,7 +532,7 @@
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
                             <div class="card-header bg-primary">
-                                <h6 class="text-white">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables biológicas.</h6>
+                                <h6 class="text-white">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</h6>
                             </div>
                             <div class="card-body">
                                 <div class="row">
