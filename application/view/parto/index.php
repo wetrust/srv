@@ -560,12 +560,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mt-2">
-                            <div class="card-body">
-                                <div class="border border-info p-2 div-hover">
-                                    <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</small></p>
-                                </div>
-                            </div>
+                        <div class="border border-info p-2 div-hover">
+                            <p class="m-0 text-center"><small>La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</small></p>
                         </div>
                         <div class="card mt-2">
                             <div class="card-body">
