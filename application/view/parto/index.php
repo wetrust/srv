@@ -70,7 +70,7 @@
                     <div class="col-12 p-0 col-sm-2 order-sm-1">
                         <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
                             <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.nuevo">Nuevo</button>
-                            <button type="button" class="btn btn-outline-secondary text-left" id="boton.parto.modificar">Modificar</button>
+                            <button type="button" class="btn btn-outline-secondary text-left d-none" id="boton.parto.modificar">Modificar</button>
                             <button type="button" class="btn btn-outline-danger text-left d-none" id="boton.parto.guardar">Guardar</button>
                             <button type="button" class="btn btn-outline-secondary text-left d-none" id="boton.parto.cancelar">Cancelar</button>
                             <button type="button" class="btn btn-outline-danger text-left d-none" id="boton.parto.eliminar">Eliminar</button>
@@ -504,12 +504,12 @@
                         </div>
                         <div class="card mt-3">
                             <div class="card-body">
-                                <h6 class="text-center text-info">Cuatro ejemplos para ajuste al peso esperado según categoria de variables</h6>
+                                <p class="text-center text-primary">Cuatro ejemplos para ajuste al peso esperado según categoria de variables</p>
                                 <div class="btn-group d-flex justify-content-center" role="group" aria-label="Default button group">
-                                    <button type="button" class="btn btn-outline-info" id="opt1">Cond. Neutra</button>
-                                    <button type="button" class="btn btn-outline-info" id="opt2">Potencial alto</button>
-                                    <button type="button" class="btn btn-outline-info" id="opt3">Potencial bajo</button>
-                                    <button type="button" class="btn btn-outline-info" id="opt4">Cond. extremas</button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt1">Cond. Neutra</button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt2">Potencial alto</button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt3">Potencial bajo</button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt4">Cond. extremas</button>
                                 </div>
                                 <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
                             </div>
