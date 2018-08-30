@@ -910,7 +910,6 @@ $("#graficoEstandar").on('click', function() {
 
         $("#peso_eg_pct_regional").val(RN.pesoTemuco());
         $("#peso_eg_regional").val(RN.pesoTemucoCondicion());
-        $("#g3").trigger("click");
     }
 
     if ($("#tallaRN").val() > 1) {
@@ -1252,7 +1251,6 @@ $("#tallaRN").change(function() {
 function verGraficoAjustePeso() {
     RN = new RecienNacido($("#pesoRN").val(), $("#tallaRN").val(), $("#edadGestacional").val());
     $('#opt1').trigger("click");
-    $('#g3').trigger("click");
 };
 
 
@@ -1433,31 +1431,14 @@ $('#tm').change(function() {
     varMama = new Mama($("#tm").val(), $("#pesom").val(), $("#em").val(), $('#apellm').val());
     $('#valorimc').val(varMama.imc());
     $('#imc').val(varMama.imcCondicion());
-    $('#g3').trigger("click");
 });
 
 $('#pesom').change(function() {
     varMama = new Mama($("#tm").val(), $("#pesom").val(), $("#em").val(), $('#apellm').val());
     $('#valorimc').val(varMama.imc());
     $('#imc').val(varMama.imcCondicion());
-    $('#g3').trigger("click");
 });
 
-$('#sn').change(function() {
-    $('#g3').trigger("click");
-});
-$('#pm').change(function() {
-    $('#g3').trigger("click");
-});
-$('#imc').change(function() {
-    $('#g3').trigger("click");
-});
-$('#em').change(function() {
-    $('#g3').trigger("click");
-});
-$('#apellm').change(function() {
-    $('#g3').trigger("click");
-});
 
 $('#opt1').click(function() {
     $('#pm').val("1");
@@ -1472,7 +1453,6 @@ $('#opt1').click(function() {
     $('#valorimc').val(varMama.imc());
     $('#imc').val(varMama.imcCondicion());
     RN.ajustePequeno = false;
-    $('#g3').trigger("click");
     $("#tituloAjusteG").addClass("d-none");
     $("#tituloAjusteAlto").html("Pct. peso sin ajuste");
     $("#tituloAjusteBajo").html("Pct. de peso con ajuste");
@@ -1492,7 +1472,6 @@ $('#opt2').click(function() {
     $('#valorimc').val(varMama.imc());
     $('#imc').val(varMama.imcCondicion());
     RN.ajustePequeno = false;
-    $('#g3').trigger("click");
     $("#tituloAjusteG").addClass("d-none");
     $("#tituloAjusteAlto").html("Pct. peso sin ajuste");
     $("#tituloAjusteBajo").html("Pct. peso con ajuste");
@@ -1512,7 +1491,6 @@ $('#opt3').click(function() {
     $('#valorimc').val(varMama.imc());
     $('#imc').val(varMama.imcCondicion());
     RN.ajustePequeno = true;
-    $('#g3').trigger("click");
     $("#tituloAjusteG").addClass("d-none");
     $("#tituloAjusteAlto").html("Pct.peso sin ajuste");
     $("#tituloAjusteBajo").html("Pct. peso con ajuste");
