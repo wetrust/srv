@@ -36,10 +36,10 @@
                         <a href="#postnatal" class="btn btn-primary rounded">Proyecto a desarrollar</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#ajustepeso" class="btn btn-primary rounded">Ver Curvas<br>customizadas</a>
+                        <a href="#ajustepeso" class="btn btn-primary text-left rounded">Ver Curvas<br>customizadas</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#hipoglicemia" class="btn btn-primary rounded">Protocolo hipoglicemia<br>neonatal</a>
+                        <a href="#hipoglicemia" class="btn btn-primary text-left rounded">Protocolo hipoglicemia<br>neonatal</a>
                     </li>
                 </ul>
             </div>
@@ -391,7 +391,7 @@
                         <img src="<?php echo Config::get('URL'); ?>img/cpeso.png" class="mr-auto ml-auto img-fluid">
                     </div>
                     <div class="col">
-                        <p>Proyecto a desarrollar valoración de la categorización Peso/EG ajustando el peso por diversas variables biológicas (no patológicas)</p>
+                        <p>Proyecto a desarrollar; a la clasica categorización Peso/Edad gestacional se explora efecto modulador del peso según diversas variables biológicas, obteniendo con ello curvas customizadas.</p>
                         <h6 class="alert-heading text-azul">Evaluación del crecimiento intrauterino, ¿Curva local generalizada o general individualizada?</h6>
                         <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</small></p>
                     </div>
