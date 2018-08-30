@@ -171,7 +171,7 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Meconio al parto</h6>
-                                        <select id="meconio" class="form-control" disabled>
+                                        <select id="meconio" class="form-control text-center" disabled>
                                             <option value="0" selected>Ausente</option>
                                             <option value="1">Fluido</option>
                                             <option value="2">Espeso</option>
@@ -179,7 +179,7 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Apgar 1° Min.</h6>
-                                        <select id="apgar_1" class="form-control" disabled>
+                                        <select id="apgar_1" class="form-control text-center" disabled>
                                             <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -195,7 +195,7 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary"">Apgar 5° Min.</h6>
-                                        <select id="apgar_5" class="form-control" disabled>
+                                        <select id="apgar_5" class="form-control text-center" disabled>
                                             <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -222,7 +222,7 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Término de Gestación</h6>
-                                        <select id="termino_parto" class="form-control" disabled>
+                                        <select id="termino_parto" class="form-control text-center" disabled>
                                             <option value="0" selected>Parto</option>
                                             <option value="1">Aborto</option>
                                             <option value="2">Desconocido</option>
@@ -232,7 +232,7 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Tipo de Parto</h6>
-                                        <select id="tipo_parto" class="form-control" disabled>
+                                        <select id="tipo_parto" class="form-control text-center" disabled>
                                             <option value="0" selected>Vaginal</option>
                                             <option value="1">Cesarea</option>
                                             <option value="2">Forceps</option>
@@ -241,7 +241,7 @@
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Peso Placentario</h6>
                                         <div class="input-group">
-                                            <input class="form-control" id="peso_placentario" type="number" min="0" max="9999" disabled>
+                                            <input class="form-control text-center" id="peso_placentario" type="number" min="0" max="9999" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
                                             </div>
@@ -249,7 +249,7 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Patologia Obstétrica</h6>
-                                        <select id="tipo_patologia_obstetrica" class="form-control" disabled>
+                                        <select id="tipo_patologia_obstetrica" class="form-control text-center" disabled>
                                             <option value="0" selected></option>
                                         </select>
                                     </div>
