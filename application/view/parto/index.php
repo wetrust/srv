@@ -386,11 +386,17 @@
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="postnatal">
                     <div class="col-3">
-                        <img src="<?php echo Config::get('URL'); ?>img/cpeso.png" class="mr-auto ml-auto img-fluid">
+                        <img src="<?php echo Config::get('URL'); ?>img/clg.png" class="mr-auto ml-auto img-fluid">
                     </div>
-                    <div class="col">
+                    <div class="col-9">
                         <h6 class="alert-heading text-azul">Proyecto a desarrollar; para la clasica curva de categorización Peso/Edad gestacional, se explora en este estudio efecto modulador del peso neonatal según diversas variables biológicas, obteniendo con ello curvas de peso customizadas.</h6>
-                        <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br><br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</small></p>
+                        <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.</small></p>
+                    </div>
+                    <div class="col-3">
+                        <img src="<?php echo Config::get('URL'); ?>img/cgi.png" class="mr-auto ml-auto img-fluid">
+                    </div>
+                    <div class="col-9">
+                        <p class="text-justify text-azul"><small>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</small></p>
                         <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
                     </div>
                 </div>
@@ -511,6 +517,7 @@
                                     <button type="button" class="btn btn-outline-primary mr-1" id="opt2"><small>Potencial alto</small></button>
                                     <button type="button" class="btn btn-outline-primary" id="opt4"><small>Cond. extremas</small></button>
                                 </div>
+                                <p class="mt-3 text-right">Para la validación clínica, los resultados de la nueva curva han de ser contrastados con morbilidad neonatal prevalente en la población general de recién nacidos.</p>
                             </div>
                         </div>
                     </div>
@@ -559,7 +566,6 @@
                                         <button type="button" class="btn btn-outline-secondary float-right" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
                                     </div>
                                 </div>
-                                <p class="mt-3 text-right">Para la validación clínica, los resultados de la nueva curva han de ser contrastados con morbilidad neonatal prevalente en la población general de recién nacidos.</p>
                             </div>
                         </div>
                         <div class="card mt-2">
