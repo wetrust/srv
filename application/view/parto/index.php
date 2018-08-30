@@ -482,11 +482,11 @@
                                     <div class="row mb-0">
                                         <h6 class="col-4" style="font-size: 0.8rem;height: 2rem;">Peso recien nacido</h6>
                                         <div class="col-2">
-                                            <input type="text" class="form-control" id="datos.ajuste.peso" disabled style="font-size: 0.8rem;height: 2rem;">
+                                            <input type="text" val="" class="form-control" id="datos.ajuste.peso" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
                                         <h6 class="col-4" style="font-size: 0.8rem;height: 2rem;">Edad gestacional</h6>
                                         <div class="col-2">
-                                            <input type="text" class="form-control" id="datos.ajuste.eg" disabled style="font-size: 0.8rem;height: 2rem;">
+                                            <input type="text" val="" class="form-control" id="datos.ajuste.eg" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
                                     </div>
                                     <div class="row mb-0">
