@@ -511,8 +511,8 @@
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="hipoglicemia">
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
-                            <div class="card-header bg-primary text-white">
-                                - Categorización del peso en funcion de la edad gestacional al parto: (1) Curva generalizada y (2) curva categorizada según variables biológicas.
+                            <div class="card-header bg-primary">
+                                <h6 class="text-white">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva generalizada y (2) curva categorizada según variables biológicas.</h6>
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -556,8 +556,8 @@
                             </div>
                         </div>
                         <div class="card mt-2">
-                            <div class="card-header bg-primary text-white">
-                                -  Hipoglicemia neonatal, como patología prevalente en el RN, instrumento para validación clínica de tabla con categorización del peso customizado
+                            <div class="card-header bg-primary">
+                                <h6 class="text-white">-  Hipoglicemia neonatal, como patología prevalente en el RN, instrumento para validación clínica de tabla con categorización del peso customizado.</h6>
                             </div>
                             <div class="card-body">
                                 <div class="row">
