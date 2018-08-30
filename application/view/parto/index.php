@@ -512,7 +512,7 @@
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
                             <div class="card-header bg-primary text-white">
-                                - Crecimiento intrauterino para la relación Peso / Edad Gestacional(1) y ajuste por variables biológicas(2)
+                                - Categorización del peso en funcion de la edad gestacional al parto: (1) Curva generalizada y (2) curva categorizada según variables biológicas.
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -557,7 +557,7 @@
                         </div>
                         <div class="card mt-2">
                             <div class="card-header bg-primary text-white">
-                                -  Protocolo de seguimiento hipoglicemia neonatal
+                                -  Hipoglicemia neonatal, como patología prevalente en el RN para validación clínica de nueva tabla de categorización del peso customizado
                             </div>
                             <div class="card-body">
                                 <div class="row">
