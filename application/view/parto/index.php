@@ -557,7 +557,7 @@
                         </div>
                         <div class="card mt-2">
                             <div class="card-header bg-primary text-white">
-                                -  Hipoglicemia neonatal, como patología prevalente en el RN para validación clínica de nueva tabla de categorización del peso customizado
+                                -  Hipoglicemia neonatal, como patología prevalente en el RN, instrumento para validación clínica de tabla con categorización del peso customizado
                             </div>
                             <div class="card-body">
                                 <div class="row">
