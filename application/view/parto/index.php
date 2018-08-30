@@ -17,7 +17,7 @@
 <body class="h-100 w-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>">Inicio</a>
-        <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento</span>
+        <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento intrauterino</span>
         <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
     </nav>
     <?php if (Session::userIsLoggedIn() == false) { ?>
@@ -258,7 +258,7 @@
                         </div>
                         <div class="card mb-5">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN <small class="text-primary" style="font-size:70%!important;">( Hipoglicemia neonatal ver protocolo de seguimiento )</small></h5>
+                                <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN <small class="text-primary" style="font-size:70%!important;.">( Hipoglicemia neonatal ver protocolo de seguimiento )</small></h5>
                                 <hr class="mb-3">
                                 <div class="form-row">
                                     <div class="col-4 form-group">
@@ -276,7 +276,7 @@
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
-                                        <h6 class="text-primary">Hospital - UCIN</h6>
+                                        <h6 class="text-primary">Hospitalizado en UCIN</h6>
                                         <select id="hospital_ucin" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
@@ -392,13 +392,7 @@
                     </div>
                     <div class="col">
                         <h6 class="alert-heading text-azul">Evaluación del crecimiento intrauterino, ¿Curva local generalizada o general individualizada?</h6>
-                        <div id="sliderParto" class="carousel slide" data-ride="carousel" data-interval="60000">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active">
-                                    <p class="text-justify text-azul">El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.<br><br>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</small></p>
                     </div>
                     <div class="col-12">
                         <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
