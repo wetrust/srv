@@ -512,7 +512,7 @@
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">- Crecimiento intrauterino para la relación Peso / Ege y ajuste por variables biológicas</h5>
+                                <h5 class="card-title">- Crecimiento intrauterino para la relación Peso / Ege(1) y ajuste por variables biológicas(2)</h5>
                                 <div class="row">
                                     <div class="col-4">
                                         <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva Generalizada (percentil)</label>
