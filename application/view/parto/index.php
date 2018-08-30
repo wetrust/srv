@@ -552,12 +552,12 @@
                                         <button type="button" class="btn btn-outline-secondary float-right" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
                                     </div>
                                 </div>
-                                <p class="mt-3 text-right">Para la validación clínica los resultados de la nueva curva, han de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido.</p>
+                                <p class="mt-3 text-right">Para la validación clínica, los resultados de la nueva curva han de ser contrastados con morbilidad neonatal prevalente en la población general de recién nacidos.</p>
                             </div>
                         </div>
                         <div class="card mt-2">
                             <div class="card-header bg-primary">
-                                <h6 class="text-white">-  Hipoglicemia neonatal, como patología prevalente en el RN, instrumento para validación clínica de tabla de peso categorizada.</h6>
+                                <h6 class="text-white">-  Hipoglicemia neonatal, como patología prevalente en el recien nacido, instrumento para validación clínica de nueva tabla de peso categorizada.</h6>
                             </div>
                             <div class="card-body">
                                 <div class="row">
