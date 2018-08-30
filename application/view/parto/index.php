@@ -258,7 +258,7 @@
                         </div>
                         <div class="card mb-5">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN <small class="text-primary">Hipoglicemia neonatal ver protocolo de seguimiento</small></h5>
+                                <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN <small class="text-primary" style="font-size:70%!important;">( Hipoglicemia neonatal ver protocolo de seguimiento )</small></h5>
                                 <hr class="mb-3">
                                 <div class="form-row">
                                     <div class="col-4 form-group">
