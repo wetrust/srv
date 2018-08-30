@@ -517,7 +517,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-4">
-                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva local Generalizada (percentil)</label>
+                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva local generalizada (percentil)</label>
                                     </div>
                                     <div class="col-1">
                                         <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
@@ -552,7 +552,7 @@
                                         <button type="button" class="btn btn-outline-secondary float-right" id="goto_ajuste">Ver variables para ajuste al peso neonatal</button>
                                     </div>
                                 </div>
-                                <p class="mt-3">La Diferencia observada (Percentil), ha de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido, ejemplo hipoglicemia neonatal.</p>
+                                <p class="mt-3 text-right">Para la validación clínica los resultados de la nueva curva, han de ser contrastada con morbilidad neonatal prevalente en la población general de recién nacido.</p>
                             </div>
                         </div>
                         <div class="card mt-2">
