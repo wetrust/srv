@@ -171,7 +171,7 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Meconio al parto</h6>
-                                        <select id="meconio" class="form-control text-center" disabled>
+                                        <select id="meconio" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0" selected>Ausente</option>
                                             <option value="1">Fluido</option>
                                             <option value="2">Espeso</option>
@@ -179,7 +179,7 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Apgar 1° Min.</h6>
-                                        <select id="apgar_1" class="form-control text-center" disabled>
+                                        <select id="apgar_1" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -195,7 +195,7 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary"">Apgar 5° Min.</h6>
-                                        <select id="apgar_5" class="form-control text-center" disabled>
+                                        <select id="apgar_5" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -217,12 +217,12 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">E. Gestacional</h6>
-                                        <select id="datos.neonatal.edad" class="form-control text-center" disabled>
+                                        <select id="datos.neonatal.edad" class="form-control text-center" style="text-align-last:center;" disabled>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Término de Gestación</h6>
-                                        <select id="termino_parto" class="form-control text-center" disabled>
+                                        <select id="termino_parto" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0" selected>Parto</option>
                                             <option value="1">Aborto</option>
                                             <option value="2">Desconocido</option>
@@ -232,7 +232,7 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Tipo de Parto</h6>
-                                        <select id="tipo_parto" class="form-control text-center" disabled>
+                                        <select id="tipo_parto" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0" selected>Vaginal</option>
                                             <option value="1">Cesarea</option>
                                             <option value="2">Forceps</option>
@@ -241,7 +241,7 @@
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Peso Placentario</h6>
                                         <div class="input-group">
-                                            <input class="form-control text-center" id="peso_placentario" type="number" min="0" max="9999" disabled>
+                                            <input class="form-control text-center" style="text-align-last:center;" id="peso_placentario" type="number" min="0" max="9999" disabled>
                                             <div class="input-group-append">
                                                 <div class="input-group-text">grs.</div>
                                             </div>
@@ -249,7 +249,7 @@
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Patologia Obstétrica</h6>
-                                        <select id="tipo_patologia_obstetrica" class="form-control text-center" disabled>
+                                        <select id="tipo_patologia_obstetrica" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0" selected></option>
                                         </select>
                                     </div>
@@ -263,21 +263,21 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Hiperbilirrubinemia</h6>
-                                        <select id="hiperbilirrubinemia" class="form-control text-center" disabled>
+                                        <select id="hiperbilirrubinemia" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Poliglobulia</h6>
-                                        <select id="poliglobulia" class="form-control text-center" disabled>
+                                        <select id="poliglobulia" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Hospital - UCIN</h6>
-                                        <select id="hospital_ucin" class="form-control text-center" disabled>
+                                        <select id="hospital_ucin" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
@@ -286,21 +286,21 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Sindrome dificultad respiratoria</h6>
-                                        <select id="sindrome_respiratorio" class="form-control text-center" disabled>
+                                        <select id="sindrome_respiratorio" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Alta con su madre</h6>
-                                        <select id="alta_con_madre" class="form-control text-center" disabled>
+                                        <select id="alta_con_madre" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1">No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Profesional atención del Parto</h6>
-                                        <select class="form-control text-center" id="prof.atencion.parto" disabled>
+                                        <select class="form-control text-center" id="prof.atencion.parto" style="text-align-last:center;" disabled>
                                         </select>
                                     </div>
                                 </div>
@@ -575,10 +575,10 @@
                                         </div>
                                         <div class="row p-2 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
                                             <div class="col-2">Primero</div>
-                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_uno" disabled></div>
-                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_uno" disabled></div>
+                                            <div class="col-2"><input class="form-control text-center" type="number" min="0" max="99" id="dextro_uno" disabled></div>
+                                            <div class="col-2"><input class="form-control text-center" type="number" min="0" max="99" id="glicemia_uno" disabled></div>
                                             <div class="col-6">
-                                                <select class="form-control" id="conducta.uno" disabled>
+                                                <select class="form-control text-center" style="text-align-last:center;" id="conducta.uno" disabled>
                                                     <option value="1">Promover alimentación natural</option>
                                                     <option value="2">Alimentación enteral</option>
                                                     <option value="3" selected>Terapia endovenosa</option>
@@ -587,10 +587,10 @@
                                         </div>
                                         <div class="row p-2 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
                                             <div class="col-2">Segundo</div>
-                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos" disabled></div>
-                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos" disabled></div>
+                                            <div class="col-2"><input class="form-control text-center" type="number" min="0" max="99" id="dextro_dos" disabled></div>
+                                            <div class="col-2"><input class="form-control text-center" type="number" min="0" max="99" id="glicemia_dos" disabled></div>
                                             <div class="col-6">
-                                                <select class="form-control" id="conducta.dos" disabled>
+                                                <select class="form-control text-center" style="text-align-last:center;" id="conducta.dos" disabled>
                                                     <option value="1">Promover alimentación natural</option>
                                                     <option value="2">Alimentación enteral</option>
                                                     <option value="3" selected>Terapia endovenosa</option>
@@ -599,10 +599,10 @@
                                         </div>
                                         <div class="row p-2 border border-info border-top-0" style="background-color:#e2e3e5;">
                                             <div class="col-2">Tercero</div>
-                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_tres" disabled></div>
-                                            <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_tres" disabled></div>
+                                            <div class="col-2"><input class="form-control text-center" type="number" min="0" max="99" id="dextro_tres" disabled></div>
+                                            <div class="col-2"><input class="form-control text-center" type="number" min="0" max="99" id="glicemia_tres" disabled></div>
                                             <div class="col-6">
-                                                <select class="form-control" id="conducta.tres" disabled>
+                                                <select class="form-control text-center" style="text-align-last:center;" id="conducta.tres" disabled>
                                                     <option value="1">Promover alimentación natural</option>
                                                     <option value="2">Alimentación enteral</option>
                                                     <option value="3" selected>Terapia endovenosa</option>
@@ -614,7 +614,7 @@
                                 <div class="row p-2">
                                     <div class="col-4">
                                         <p class="text-primary m-0 mt-3">Factores de Riesgo para Hipoglicemia</p>
-                                        <select id="hipoglicemia_riesgo" class="form-control" disabled>
+                                        <select id="hipoglicemia_riesgo" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">RN PEG (&lt;10)</option>
                                             <option value="1">RN GEG (IP &gt; 3.3)</option>
                                             <option value="2">Hijo madre DM GEG IP > 3.3</option>
@@ -624,14 +624,14 @@
                                     </div>
                                     <div class="col-4">
                                         <p class="text-primary m-0 mt-3">Sospecha Clínica de Hipoglicemia</p>
-                                        <select id="hipoglicemia_sospechada" class="form-control" disabled>
+                                        <select id="hipoglicemia_sospechada" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4">
                                         <p class="text-primary m-0 mt-3">Hipoglicemia confirmada por laboratorio</p>
-                                        <select id="hipoglicemia_confirmada" class="form-control" disabled>
+                                        <select id="hipoglicemia_confirmada" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
