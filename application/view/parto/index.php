@@ -404,6 +404,7 @@
                                 <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
                             </div>
                         </div>
+                    </div>
                 </div>
                 <div class="row mt-1 mx-0" style="overflow:auto; height: calc(100vh - 150px); display:none;" id="ajustepeso">
                     <div class="col-4">
