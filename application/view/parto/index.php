@@ -27,19 +27,19 @@
             <div class="col-2 px-0">
                 <ul class="nav flex-column pt-2">
                     <li class="nav-item my-1">
-                        <a href="#neonatal">Datos Neonatales</a>
+                        <a href="#neonatal" class="btn btn-primary rounded">Datos Neonatales</a>
                     </li>
                     <li class="nav-item my-1">
-                        <a href="#recienacido">Evaluación Peso e IPN</a>
+                        <a href="#recienacido" class="btn btn-primary rounded">Evaluación Peso e IPN</a>
                     </li>
                     <li class="nav-item my-1">
-                        <a href="#postnatal" class="text-secondary">Proyecto a desarrollar</a>
+                        <a href="#postnatal" class="btn btn-primary rounded">Proyecto a desarrollar</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#ajustepeso">Curvas customizadas</a>
+                        <a href="#ajustepeso" class="btn btn-primary rounded">Curvas customizadas</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#hipoglicemia">Protocolo hipoglicemia neonatal</a>
+                        <a href="#hipoglicemia" class="btn btn-primary rounded">Protocolo hipoglicemia neonatal</a>
                     </li>
                 </ul>
             </div>
