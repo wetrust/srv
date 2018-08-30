@@ -502,14 +502,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card my-3">
+                        <div class="card mt-3 mb-3">
                             <div class="card-body">
                                 <p class="text-center text-primary">Cuatro ejemplos para ajuste al peso esperado según categoria de variables</p>
                                 <div class="btn-group d-flex justify-content-center" role="group" aria-label="Default button group">
-                                    <button type="button" class="btn btn-outline-primary" id="opt1">Cond. Neutra</button>
-                                    <button type="button" class="btn btn-outline-primary" id="opt2">Potencial alto</button>
-                                    <button type="button" class="btn btn-outline-primary" id="opt3">Potencial bajo</button>
-                                    <button type="button" class="btn btn-outline-primary" id="opt4">Cond. extremas</button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt1"><small>Cond. Neutra</small></button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt2"><small>Potencial alto</small></button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt3"><small>Potencial bajo</small></button>
+                                    <button type="button" class="btn btn-outline-primary" id="opt4"><small>Cond. extremas</small></button>
                                 </div>
                                 <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
                             </div>
