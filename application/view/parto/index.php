@@ -468,6 +468,7 @@
                                         </select>
                                     </div>
                                 </div>
+                                <button type="button" class="btn btn-outline-primary mr-1">Crear Gráfico</button>
                             </div>
                         </div>
                     </div>
