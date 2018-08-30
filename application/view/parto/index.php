@@ -573,7 +573,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12 my-3">
-                                        <div class="row bg-info text-white p-2">
+                                        <div class="row bg-primary text-white p-2">
                                             <div class="col-2">Exámenes</div>
                                             <div class="col-2 text-center">Dextro</div>
                                             <div class="col-2 text-center">Glicemia ev</div>
@@ -703,3 +703,16 @@
     <script>var serverURL = "<?php echo Config::get('URL'); ?>";</script>
 </body>
 </html>
+
+        <div class="container" id="pdfviebox" style="display:none;">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#recienacido">Volver</a></li>
+            </ol>
+            <div class="row mt-2">
+                <div class="col">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="pdfview" class="embed-responsive-item" src=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
