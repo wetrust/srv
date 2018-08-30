@@ -256,28 +256,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-3">
+                        <div class="card mb-5">
                             <div class="card-body">
                                 <h5 class="card-title"><i class="fas fa-notes-medical"></i> Patologia del RN</h5>
                                 <hr class="mb-3">
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Hiperbilirrubinemia</h6>
-                                        <select id="hiperbilirrubinemia" class="form-control" disabled>
+                                        <select id="hiperbilirrubinemia" class="form-control text-center" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Poliglobulia</h6>
-                                        <select id="poliglobulia" class="form-control" disabled>
+                                        <select id="poliglobulia" class="form-control text-center" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Hospital - UCIN</h6>
-                                        <select id="hospital_ucin" class="form-control" disabled>
+                                        <select id="hospital_ucin" class="form-control text-center" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
@@ -286,21 +286,21 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Sindrome dificultad respiratoria</h6>
-                                        <select id="sindrome_respiratorio" class="form-control" disabled>
+                                        <select id="sindrome_respiratorio" class="form-control text-center" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Alta con su madre</h6>
-                                        <select id="alta_con_madre" class="form-control" disabled>
+                                        <select id="alta_con_madre" class="form-control text-center" disabled>
                                             <option value="0">Si</option>
                                             <option value="1">No</option>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Profesional atención del Parto</h6>
-                                        <select class="form-control" id="prof.atencion.parto" disabled>
+                                        <select class="form-control text-center" id="prof.atencion.parto" disabled>
                                         </select>
                                     </div>
                                 </div>
