@@ -511,7 +511,7 @@
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="hipoglicemia">
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
-                            <div class="card-header bg-primary">
+                            <div class="card-header bg-primary text-white">
                                 - Crecimiento intrauterino para la relación Peso / Edad Gestacional(1) y ajuste por variables biológicas(2)
                             </div>
                             <div class="card-body">
@@ -556,13 +556,13 @@
                             </div>
                         </div>
                         <div class="card mt-2">
-                            <div class="card-header bg-primary">
+                            <div class="card-header bg-primary text-white">
                                 -  Protocolo de seguimiento hipoglicemia neonatal
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12 mb-3">
-                                        <div class="row bg-primary text-white p-2">
+                                        <div class="row border border-info p-2">
                                             <div class="col-2">Exámenes</div>
                                             <div class="col-2 text-center">Dextro</div>
                                             <div class="col-2 text-center">Glicemia ev</div>
