@@ -502,7 +502,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card mt-3">
                             <div class="card-body">
                                 <h6 class="text-center text-info">Cuatro ejemplos para ajuste al peso esperado según categoria de variables</h6>
                                 <div class="btn-group d-flex justify-content-center" role="group" aria-label="Default button group">
