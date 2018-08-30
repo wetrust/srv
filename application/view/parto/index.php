@@ -36,10 +36,10 @@
                         <a href="#postnatal" class="btn btn-primary rounded">Proyecto a desarrollar</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#ajustepeso" class="btn btn-primary rounded">Curvas customizadas</a>
+                        <a href="#ajustepeso" class="btn btn-primary rounded">Ver Curvas<br>customizadas</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#hipoglicemia" class="btn btn-primary rounded">Protocolo hipoglicemia neonatal</a>
+                        <a href="#hipoglicemia" class="btn btn-primary rounded">Protocolo hipoglicemia<br>neonatal</a>
                     </li>
                 </ul>
             </div>
