@@ -22,7 +22,7 @@
     </nav>
     <?php if (Session::userIsLoggedIn() == false) { ?>
     <?php } ?>
-    <section class="container px-0">
+    <section class="container-fluid px-0">
         <div class="row">
             <div class="col-2 px-0">
                 <ul class="nav flex-column pt-2">
