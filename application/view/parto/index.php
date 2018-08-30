@@ -385,20 +385,25 @@
                     </div>
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="postnatal">
-                    <div class="col-3">
-                        <img src="<?php echo Config::get('URL'); ?>img/clg.png" class="mr-auto ml-auto img-fluid">
-                    </div>
-                    <div class="col-9">
-                        <h6 class="alert-heading text-azul">Proyecto a desarrollar; para la clasica curva de categorización Peso/Edad gestacional, se explora en este estudio efecto modulador del peso neonatal según diversas variables biológicas, obteniendo con ello curvas de peso customizadas.</h6>
-                        <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.</small></p>
-                    </div>
-                    <div class="col-3">
-                        <img src="<?php echo Config::get('URL'); ?>img/cgi.png" class="mr-auto ml-auto img-fluid">
-                    </div>
-                    <div class="col-9">
-                        <p class="text-justify text-azul"><small>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</small></p>
-                        <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
-                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="<?php echo Config::get('URL'); ?>img/clg.png" class="mr-auto ml-auto img-fluid">
+                            </div>
+                            <div class="col-9">
+                                <h6 class="alert-heading text-azul">Proyecto a desarrollar; para la clasica curva de categorización Peso/Edad gestacional, se explora en este estudio efecto modulador del peso neonatal según diversas variables biológicas, obteniendo con ello curvas de peso customizadas.</h6>
+                                <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.</small></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="<?php echo Config::get('URL'); ?>img/cgi.png" class="mr-auto ml-auto img-fluid">
+                            </div>
+                            <div class="col-9">
+                                <p class="text-justify text-azul"><small>Sin embargo, para una población heterogénea, el mejor parámetro para delinear crecimiento intrauterino no necesariamente sería un estándar local generalizado (Peso / Edad), sino uno que además se ajuste a características materno-fetales individuales y por tanto trasciende límites geográficos. Para el ajuste al peso han sido reportado diverso factores (No patológicos) que modulan significativamente el peso a término, entre ellos destacan las variables: Paridad, talla y edad materna, sexo del recién nacido, estado nutricional materno y características étnicas maternas.</small></p>
+                                <p class="bg-light p-2 text-center">Al paradigma actual: Peso/ Edad gestacional, con el tiempo tal vez debamos adicionarle características propias de cada embarazada.</p>
+                            </div>
+                        </div>
                 </div>
                 <div class="row mt-1 mx-0" style="overflow:auto; height: calc(100vh - 150px); display:none;" id="ajustepeso">
                     <div class="col-4">
@@ -474,14 +479,14 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-outline-primary my-5" id="g3">Crear Gráfico peso / edad gestacional</button>
+                                <button type="button" class="btn btn-outline-primary my-5" id="g3">Ver gráficas peso/ege ajustada</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-8">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title" id="grafico.ajustado.title">Curva regional Peso/Ege ajustada por variables</h5>
+                                <h5 class="card-title" id="grafico.ajustado.title">Curva regional Peso/Ege ajustada por variables biológicas</h5>
                                 <hr class="mb-3">
                                 <div id="graficoAjustado"></div>
                                 <div>
@@ -534,7 +539,7 @@
                                         <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva local generalizada (percentil)</label>
                                     </div>
                                     <div class="col-1">
-                                        <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
+                                        <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
                                     </div>
                                     <div class="col-2">
                                         <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_regional" disabled>
@@ -543,11 +548,11 @@
                                         <div class="row m-1">
                                             <label class="col-2 p-0">Peso (grs)</label>
                                             <div class="p-0 col-4">
-                                                <input class="form-control" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
+                                                <input class="form-control text-center" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             </div>
                                             <label class="col-2 p-0 text-center">Ege (sem)</label>
                                             <div class="p-0 col-4">
-                                                <input class="form-control" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
+                                                <input class="form-control text-center" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -557,7 +562,7 @@
                                         <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;2.- Curva general personalizada (percentil)</label>
                                     </div>
                                     <div class="col-1">
-                                        <input class="form-control" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
+                                        <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
                                     </div>
                                     <div class="col-2">
                                         <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_ajustado" disabled>
