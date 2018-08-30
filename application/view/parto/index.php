@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="col-12 p-0 pr-1 col-sm-10 h-100" style="overflow: auto;">
-                        <div class="card my-3">
+                        <div class="card mb-3 mt-2">
                             <div class="card-body">
                                 <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
                                 <div class="form-row">
