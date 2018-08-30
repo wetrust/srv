@@ -511,8 +511,10 @@
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="hipoglicemia">
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
+                            <div class="card-header bg-primary">
+                                - Crecimiento intrauterino para la relación Peso / Edad Gestacional(1) y ajuste por variables biológicas(2)
+                            </div>
                             <div class="card-body">
-                                <h5 class="card-title">- Crecimiento intrauterino para la relación Peso / Ege(1) y ajuste por variables biológicas(2)</h5>
                                 <div class="row">
                                     <div class="col-4">
                                         <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva Generalizada (percentil)</label>
@@ -554,8 +556,10 @@
                             </div>
                         </div>
                         <div class="card mt-2">
+                            <div class="card-header bg-primary">
+                                -  Protocolo de seguimiento hipoglicemia neonatal
+                            </div>
                             <div class="card-body">
-                            <h5 class="card-title m-0">-  Protocolo de seguimiento hipoglicemia neonatal</h5>
                                 <div class="row">
                                     <div class="col-12 mb-3">
                                         <div class="row bg-primary text-white p-2">
