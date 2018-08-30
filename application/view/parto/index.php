@@ -468,7 +468,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-outline-primary mr-1">Crear Gráfico</button>
+                                <button type="button" class="btn btn-outline-primary mr-1" id="g3">Crear Gráfico</button>
                             </div>
                         </div>
                     </div>
@@ -502,7 +502,6 @@
                                     <button type="button" class="btn btn-outline-primary mr-1" id="opt2"><small>Potencial alto</small></button>
                                     <button type="button" class="btn btn-outline-primary" id="opt4"><small>Cond. extremas</small></button>
                                 </div>
-                                <button class="btn btn-outline-info d-none" id="g3">Graficar percentil ajustado</button>
                             </div>
                         </div>
                     </div>
