@@ -213,11 +213,11 @@
                                 <div class="form-row">
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">Fecha de Parto</h6>
-                                        <input class="form-control" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
+                                        <input class="form-control text-center" data-date-format="dd/mm/yyyy" type="text" id="fecha_parto_rn" disabled>
                                     </div>
                                     <div class="col-4 form-group">
                                         <h6 class="text-primary">E. Gestacional</h6>
-                                        <select id="datos.neonatal.edad" class="form-control" disabled>
+                                        <select id="datos.neonatal.edad" class="form-control text-center" disabled>
                                         </select>
                                     </div>
                                     <div class="col-4 form-group">
