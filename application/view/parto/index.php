@@ -591,7 +591,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row p-2 border border-info border-top-0 border-bottom-0">
+                                        <div class="row p-2 border border-info border-top-0 border-bottom-0" style="background-color:#e2e3e5;">
                                             <div class="col-2">Segundo</div>
                                             <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="dextro_dos" disabled></div>
                                             <div class="col-2"><input class="form-control" type="number" min="0" max="99" id="glicemia_dos" disabled></div>
