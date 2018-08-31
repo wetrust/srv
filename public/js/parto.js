@@ -14,6 +14,10 @@ function obtenerPartos() {
             $("#table\\.ecografia\\.parto tr").on('click', function() {
                 activateTr(this);
             });
+            $("#boton\\.parto\\.eliminar").removeClass("d-none");
+        }
+        else{
+            $("#boton\\.parto\\.eliminar").addClass("d-none");
         }
     });
 }
@@ -365,13 +369,12 @@ $(document).ready(function() {
     });
 
     $("#boton\\.parto\\.cancelar").on("click", function() {
-        $("#boton\\.parto\\.guardar").removeClass("d-none");
+        $("#boton\\.parto\\.guardar").addClass("d-none");
         $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
         $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
-        $("#boton\\.parto\\.nuevo").addClass("d-none");
-        $("#boton\\.parto\\.modificar").addClass("d-none");
+        $("#boton\\.parto\\.nuevo").removeClass("d-none");
+        $("#boton\\.parto\\.modificar").removeClass("d-none");
         $("#boton\\.parto\\.cancelar").addClass("d-none");
-        $("#boton\\.parto\\.eliminar").addClass("d-none");
         //desbloquear cajas
         $("#id_paciente").prop("disabled", false);
         $("#nombre_madre").prop("disabled", false);
@@ -412,6 +415,7 @@ $(document).ready(function() {
         $("#conducta\\.tres").prop("disabled", false);
         $("#prof\\.alta\\.rn").prop("disabled", false);
         $("#prof\\.atencion\\.parto").prop("disabled", false);
+        obtenerPartos();
     });
 
     $("#boton\\.parto\\.guardar").on("click", function() {
@@ -566,12 +570,14 @@ $(document).ready(function() {
         $("#prof\\.alta\\.rn").val("");
         $("#prof\\.atencion\\.parto").val("");
 
-        $.each(filas, function(i, val) {
-            if ($(val).hasClass('table-active') == true) {
+        var filas = $("#table\\.ecografia\\.parto").children();
+
+        $.each(filas,function(i,val){
+            if ($(val).hasClass('table-active') == true){
                 let examen = {
                     eg: "0"
                 }
-
+                
                 let data = {
                     id: $("#id_paciente").val(),
                     tipo: 4,
