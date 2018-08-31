@@ -496,7 +496,7 @@
                                         <div class="col-2">
                                             <input type="text" val="" class="form-control text-center" id="datos.ajuste.peso" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
-                                        <h6 class="col-5" id="tituloAjusteAlto" style="font-size: 0.8rem;height: 2rem;">Pct. peso sin ajuste</h6>
+                                        <h6 class="col-5" id="tituloAjusteAlto" style="font-size: 0.8rem;height: 2rem;">Percentil de Peso/Ege sin ajuste</h6>
                                         <div class="col-2">
                                             <input type="text" class="form-control text-center" id="PesoEgeSAj" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
@@ -506,7 +506,7 @@
                                         <div class="col-2">
                                             <input type="text" val="" class="form-control text-center" id="datos.ajuste.eg" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
-                                        <h6 class="col-5" id="tituloAjusteBajo" style="font-size: 0.8rem;height: 2rem;">Pct. peso con ajuste</h6>
+                                        <h6 class="col-5" id="tituloAjusteBajo" style="font-size: 0.8rem;height: 2rem;">Percentil de Peso/Ege con ajuste</h6>
                                         <div class="col-2">
                                             <input type="text" class="form-control text-center" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
                                         </div>
