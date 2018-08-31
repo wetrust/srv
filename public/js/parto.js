@@ -14,9 +14,13 @@ function obtenerPartos() {
             $("#table\\.ecografia\\.parto tr").on('click', function() {
                 activateTr(this);
             });
+            $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
+            $("#boton\\.parto\\.modificar").removeClass("d-none");
             $("#boton\\.parto\\.eliminar").removeClass("d-none");
         }
         else{
+            $("#boton\\.hipoglicemia\\.modificar").addClass("d-none");
+            $("#boton\\.parto\\.modificar").addClass("d-none");
             $("#boton\\.parto\\.eliminar").addClass("d-none");
         }
     });
@@ -371,9 +375,7 @@ $(document).ready(function() {
     $("#boton\\.parto\\.cancelar").on("click", function() {
         $("#boton\\.parto\\.guardar").addClass("d-none");
         $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
-        $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").removeClass("d-none");
-        $("#boton\\.parto\\.modificar").removeClass("d-none");
         $("#boton\\.parto\\.cancelar").addClass("d-none");
         //desbloquear cajas
         $("#id_paciente").prop("disabled", false);
