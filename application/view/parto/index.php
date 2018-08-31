@@ -492,7 +492,7 @@
                                 <div id="graficoAjustado"></div>
                                 <div>
                                     <div class="row mb-0">
-                                        <h6 class="col-3" style="font-size: 0.8rem;height: 2rem;">Peso Recien Nacido</h6>
+                                        <h6 class="col-2" style="font-size: 0.8rem;height: 2rem;">Peso Recien Nacido</h6>
                                         <div class="col-2">
                                             <input type="text" val="" class="form-control text-center" id="datos.ajuste.peso" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
@@ -503,7 +503,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-0">
-                                        <h6 class="col-3" style="font-size: 0.8rem;height: 2rem;">Edad Gestacional</h6>
+                                        <h6 class="col-2" style="font-size: 0.8rem;height: 2rem;">Edad Gestacional</h6>
                                         <div class="col-2">
                                             <input type="text" val="" class="form-control text-center" id="datos.ajuste.eg" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
