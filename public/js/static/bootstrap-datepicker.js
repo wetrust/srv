@@ -450,7 +450,7 @@
 						'</thead>',
 		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>'
 	};
-	DPGlobal.template = '<div class="datepicker" style="position:absolute;">'+
+	DPGlobal.template = '<div class="datepicker" style="position:absolute;display:none">'+
 							'<div class="datepicker-days">'+
 								'<table class=" table-condensed">'+
 									DPGlobal.headTemplate+
