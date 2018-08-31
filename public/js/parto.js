@@ -1301,7 +1301,7 @@ $('#g3').click(function() {
     }
     $("#tituloAjusteAlto").html("Pct Peso sin ajuste");
     $("#tituloAjusteBajo").html("Pct. Peso con ajuste");
-    $("#grafico\\.ajustado\\.title").html("Curva regional Peso/Ege ajustada por variables");
+    $("#grafico\\.ajustado\\.title").html("Curva regional Peso/Ege ajustada por variables biológicas");
     Highcharts.chart('graficoAjustado', {
         title: {
             text: null
