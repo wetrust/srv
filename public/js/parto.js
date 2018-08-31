@@ -708,7 +708,7 @@ $(document).ready(function() {
         }
 
         $("#pesoRN").val($(this).val());
-        $("#datos\\.ajuste\\.peso").val($(this).val());
+        $("#datos\\.ajuste\\.peso").val($(this).val() + " gramos");
         $("#datos\\.hipoglicemia\\.peso").val($(this).val());
         $("#pesoRN").trigger("change");
     });
@@ -867,7 +867,7 @@ $(document).ready(function() {
     $("#datos\\.neonatal\\.edad").on("focusout", function() {
         $("#edadGestacional").val($(this).val());
         $("#datos\\.hipoglicemia\\.eg").val($(this).val());
-        $("#datos\\.ajuste\\.eg").val($(this).val());
+        $("#datos\\.ajuste\\.eg").val($(this).val() + " semanas");
         $("#edadGestacional").trigger("change");
     });
 
