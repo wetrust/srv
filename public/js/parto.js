@@ -7,16 +7,23 @@ function obtenerPartos() {
     $.post(serverURL + "examen/get", data).done(function(response) {
         $("#table\\.ecografia\\.parto").empty();
         if (Object.keys(response).length > 0) {
-            $.each(response.data, function(i, val) {
-                let fila = '<tr><th scope="row" data-id="' + val.id_paciente + '" data-tipo="4">' + val.id_parto + '</th><td>' + val.id_paciente + '</td><td>' + val.id_rn + '</td><td>' + val.eg_parto + '</td><td>' + val.peso_rn + '</td><td>' + val.talla_rn + '</td></tr>';
-                $("#table\\.ecografia\\.parto").append(fila);
-            });
-            $("#table\\.ecografia\\.parto tr").on('click', function() {
-                activateTr(this);
-            });
-            $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
-            $("#boton\\.parto\\.modificar").removeClass("d-none");
-            $("#boton\\.parto\\.eliminar").removeClass("d-none");
+            if (Object.keys(response.data).length > 0) {
+                $.each(response.data, function(i, val) {
+                    let fila = '<tr><th scope="row" data-id="' + val.id_paciente + '" data-tipo="4">' + val.id_parto + '</th><td>' + val.id_paciente + '</td><td>' + val.id_rn + '</td><td>' + val.eg_parto + '</td><td>' + val.peso_rn + '</td><td>' + val.talla_rn + '</td></tr>';
+                    $("#table\\.ecografia\\.parto").append(fila);
+                });
+                $("#table\\.ecografia\\.parto tr").on('click', function() {
+                    activateTr(this);
+                });
+                $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
+                $("#boton\\.parto\\.modificar").removeClass("d-none");
+                $("#boton\\.parto\\.eliminar").removeClass("d-none");
+            }
+            else{
+                $("#boton\\.hipoglicemia\\.modificar").addClass("d-none");
+                $("#boton\\.parto\\.modificar").addClass("d-none");
+                $("#boton\\.parto\\.eliminar").addClass("d-none");
+            }
         }
         else{
             $("#boton\\.hipoglicemia\\.modificar").addClass("d-none");
