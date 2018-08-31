@@ -375,6 +375,9 @@ $(document).ready(function() {
         $("#dextro_tres").prop("disabled", false);
         $("#glicemia_tres").prop("disabled", false);
         $("#conducta\\.tres").prop("disabled", false);
+        $("#hipoglicemia_riesgo").prop("disabled", false);
+        $("#hipoglicemia_sospechada").prop("disabled", false);
+        $("#hipoglicemia_confirmada").prop("disabled", false);
         $("#prof\\.alta\\.rn").prop("disabled", false);
         $("#prof\\.atencion\\.parto").prop("disabled", false);
     });
@@ -422,6 +425,9 @@ $(document).ready(function() {
         $("#dextro_tres").prop("disabled", false);
         $("#glicemia_tres").prop("disabled", false);
         $("#conducta\\.tres").prop("disabled", false);
+        $("#hipoglicemia_riesgo").prop("disabled", false);
+        $("#hipoglicemia_sospechada").prop("disabled", false);
+        $("#hipoglicemia_confirmada").prop("disabled", false);
         $("#prof\\.alta\\.rn").prop("disabled", false);
         $("#prof\\.atencion\\.parto").prop("disabled", false);
         obtenerPartos();
