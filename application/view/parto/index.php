@@ -492,21 +492,21 @@
                                 <div id="graficoAjustado"></div>
                                 <div>
                                     <div class="row mb-0">
-                                        <h6 class="col-4" style="font-size: 0.8rem;height: 2rem;">Peso recien nacido</h6>
+                                        <h6 class="col-3" style="font-size: 0.8rem;height: 2rem;">Peso Recien Nacido</h6>
                                         <div class="col-2">
                                             <input type="text" val="" class="form-control text-center" id="datos.ajuste.peso" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
-                                        <h6 class="col-4" id="tituloAjusteAlto" style="font-size: 0.8rem;height: 2rem;">Pct. peso sin ajuste</h6>
+                                        <h6 class="col-5" id="tituloAjusteAlto" style="font-size: 0.8rem;height: 2rem;">Pct. peso sin ajuste</h6>
                                         <div class="col-2">
                                             <input type="text" class="form-control text-center" id="PesoEgeSAj" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
                                     </div>
                                     <div class="row mb-0">
-                                        <h6 class="col-4" style="font-size: 0.8rem;height: 2rem;">Edad gestacional</h6>
+                                        <h6 class="col-3" style="font-size: 0.8rem;height: 2rem;">Edad Gestacional</h6>
                                         <div class="col-2">
                                             <input type="text" val="" class="form-control text-center" id="datos.ajuste.eg" disabled style="font-size: 0.8rem;height: 2rem;">
                                         </div>
-                                        <h6 class="col-4" id="tituloAjusteBajo" style="font-size: 0.8rem;height: 2rem;">Pct. peso con ajuste</h6>
+                                        <h6 class="col-5" id="tituloAjusteBajo" style="font-size: 0.8rem;height: 2rem;">Pct. peso con ajuste</h6>
                                         <div class="col-2">
                                             <input type="text" class="form-control text-center" id="PesoEgeCAj" disabled style="font-size: 0.8rem;height: 2rem;background-color: #bfe9fb;">
                                         </div>
