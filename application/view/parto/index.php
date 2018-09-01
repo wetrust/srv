@@ -52,7 +52,7 @@
                        Datos del Parto y RN
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#neonatal" class="btn btn-primary rounded">Datos Neonatales</a>
+                        <a href="#neonatal" class="btn btn-primary rounded">Ingreso de Datos</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
                         <a href="#recienacido" class="btn btn-primary rounded">Evaluación Peso e IPN</a>
@@ -61,7 +61,7 @@
                        Proyecto en desarrollo
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#postnatal" class="btn btn-primary rounded">Proyecto a desarrollar</a>
+                        <a href="#postnatal" class="btn btn-primary rounded">Curvas de crecimiento</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
                         <a href="#ajustepeso" class="btn btn-primary text-left rounded">Ver Curvas<br>customizadas</a>
