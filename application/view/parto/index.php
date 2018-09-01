@@ -392,12 +392,12 @@
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="postnatal">
                     <div class="col-12">
+                        <h6 class="alert-heading text-azul">Proyecto a desarrollar; para la clasica curva de categorización Peso/Edad gestacional, se explora en este estudio efecto modulador del peso neonatal según diversas variables biológicas, obteniendo con ello curvas de peso customizadas.</h6>
                         <div class="row">
                             <div class="col-3">
                                 <img src="<?php echo Config::get('URL'); ?>img/clg.png" class="mr-auto ml-auto img-fluid">
                             </div>
                             <div class="col-9">
-                                <h6 class="alert-heading text-azul">Proyecto a desarrollar; para la clasica curva de categorización Peso/Edad gestacional, se explora en este estudio efecto modulador del peso neonatal según diversas variables biológicas, obteniendo con ello curvas de peso customizadas.</h6>
                                 <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.</small></p>
                             </div>
                         </div>
