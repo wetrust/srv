@@ -629,8 +629,8 @@
                             </div>
                         </div>
                         <div class="card mt-2">
-                            <div class="card-header bg-primary">
-                                <h6 class="text-white">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</h6>
+                            <div class="card-header">
+                                <h6>- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</h6>
                             </div>
                             <div class="card-body">
                                 <div class="row">
