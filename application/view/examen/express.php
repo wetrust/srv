@@ -793,7 +793,7 @@
                             <img src="<?php echo Config::get('URL'); ?>img/ecografia.jpeg" class="img-fluid">
                         </div>
                         <div class="col text-center">
-                            <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
+                            <h6>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </h6>
                             <button role="button" class="btn btn-outline-secondary" id="boton.dicom.imagen">Ver Imágenes</button>
                         </div>
                     </div>
