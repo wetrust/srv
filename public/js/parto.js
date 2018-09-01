@@ -376,11 +376,11 @@ $(document).ready(function() {
         $("#peso_placentario").prop("disabled", false).val("");
         $("#apgar_1").prop("disabled", false).val("");
         $("#apgar_5").prop("disabled", false).val("");
-        $("#hiperbilirrubinemia").prop("disabled", false).val("");
-        $("#poliglobulia").prop("disabled", false).val("");
-        $("#hospital_ucin").prop("disabled", false).val("");
-        $("#sindrome_respiratorio").prop("disabled", false).val("");
-        $("#alta_con_madre").prop("disabled", false).val("");
+        $("#hiperbilirrubinemia").prop("disabled", false).val(1);
+        $("#poliglobulia").prop("disabled", false).val(1);
+        $("#hospital_ucin").prop("disabled", false).val(1);
+        $("#sindrome_respiratorio").prop("disabled", false).val(1);
+        $("#alta_con_madre").prop("disabled", false).val(0);
         $("#observaciones").prop("disabled", false).val("");
         $("#prof\\.atencion\\.parto").prop("disabled", false).val("");
         $("#dextro_uno").prop("disabled", false).val("");
