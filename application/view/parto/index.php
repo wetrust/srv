@@ -392,7 +392,7 @@
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="postnatal">
                     <div class="col-12">
-                        <h6 class="alert-heading text-azul mt-2">Proyecto a desarrollar; para la clasica curva de categorización Peso/Edad gestacional, se explora en este estudio efecto modulador del peso neonatal según diversas variables biológicas, obteniendo con ello curvas de peso customizadas.</h6>
+                        <h6 class="alert-heading text-azul mt-2">Del clasico modelo de valoración Peso/Edad gestacional, se propone hoy evaluar adicionalmente el efecto modulador sobre el peso neonatal de diversas variables no patológicas (biológicas), obteniendo así, curvas de peso customizadas (individuales).</h6>
                         <div class="row">
                             <div class="col-3">
                                 <img src="<?php echo Config::get('URL'); ?>img/clg.png" class="mr-auto ml-auto img-fluid">
