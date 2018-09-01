@@ -534,7 +534,7 @@
                     <div class="col-12 h-100" style="overflow: auto;">
                         <div class="card">
                             <div class="card-header bg-primary">
-                                <p class="text-white">-  Hipoglicemia neonatal, como patología prevalente en el recien nacido, instrumento para validación clínica de nueva tabla de peso categorizada.</p>
+                                <p class="text-white m-0">-  Hipoglicemia neonatal, como patología prevalente en el recien nacido, instrumento para validación clínica de nueva tabla de peso categorizada.</p>
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -630,7 +630,7 @@
                         </div>
                         <div class="card mt-2">
                             <div class="card-header">
-                                <p>- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</p>
+                                <p class="m-0">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</p>
                             </div>
                             <div class="card-body">
                                 <div class="row">
