@@ -794,9 +794,7 @@
                         </div>
                         <div class="col">
                             <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
-                        </div>
-                        <div class="col-2">
-                            <button role="button" class="btn btn-outline-secondary" id="boton.dicom.imagen">Ver Imágenes</button>
+                            <button role="button" class="btn btn-outline-secondary text-center" id="boton.dicom.imagen">Ver Imágenes</button>
                         </div>
                     </div>
                 </div>
