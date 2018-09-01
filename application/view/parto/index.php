@@ -630,7 +630,7 @@
                         </div>
                         <div class="card mt-2">
                             <div class="card-header">
-                                <p class="m-0">- Categorización del peso en funcion de la edad gestacional al parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</p>
+                                <p class="m-0">- Ejemplo peso categorizado en funcion de la Ege/Parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</p>
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -646,11 +646,12 @@
                                     <div class="col-5 align-self-end p-0">
                                         <div class="row m-1">
                                             <p class="col-2 p-0 m-0">Peso (grs)</p>
-                                            <div class="p-0 col-4">
+                                            <div class="p-0 col-3">
                                                 <input class="form-control text-center" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             </div>
+                                            <div class="col-2"></div>
                                             <p class="col-2 p-0 m-0">Ege (sem)</p>
-                                            <div class="p-0 col-4">
+                                            <div class="p-0 col-3">
                                                 <input class="form-control text-center" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
                                             </div>
                                         </div>
