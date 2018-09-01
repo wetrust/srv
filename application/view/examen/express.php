@@ -789,13 +789,13 @@
             <div class="card mt-3">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-1">
                             <img src="<?php echo Config::get('URL'); ?>img/femur.jpg" class="img-fluid">
                         </div>
                         <div class="col">
                             <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-2">
                             <button role="button" class="btn btn-outline-secondary" id="boton.dicom.imagen">Ver Imágenes</button>
                         </div>
                     </div>
