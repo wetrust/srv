@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2 px-0">
+            <div class="col-2 px-0 mt-4">
                 <ul class="nav flex-column pt-2">
                     <li class="nav-item ml-2 my-1">
                        Datos del Parto y RN
