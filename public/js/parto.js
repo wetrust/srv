@@ -613,11 +613,20 @@ $(document).ready(function() {
     });
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
-        $("#modal\\.action").off("click");
-        $("#modal\\.action").on("click", function(){
-            eliminarParto();
-            $("#dialog").modal("hide");
-        });
+        if ($("#id_paciente").val() == ""){
+            $("#modal\\.text").html("Debe seleccional un examen primero");
+            $("#modal\\.action").off("click").addClass("d-none");
+            $("#modal\\.exit").html("Aceptar");    
+        }
+        else{
+            $("#modal\\.text").html("¿Está seguro de eliminar el exámen seleccionado?");
+            $("#modal\\.exit").html("Cancelar"); 
+            $("#modal\\.action").off("click").removeClass("d-none");
+            $("#modal\\.action").on("click", function(){
+                eliminarParto();
+                $("#dialog").modal("hide");
+            });
+        }
         $("#dialog").modal("show");
     });
 
