@@ -392,7 +392,7 @@
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="postnatal">
                     <div class="col-12">
-                        <h6 class="alert-heading text-azul mt-2">Del clasico modelo de valoración Peso/Edad gestacional, se propone hoy evaluar adicionalmente el efecto modulador sobre el peso neonatal de diversas variables no patológicas (biológicas), obteniendo así, curvas de peso customizadas (individuales).</h6>
+                        <h6 class="alert-heading text-azul mt-2">Para la valoración del crecimiento intrauterino, se utiliza el clásico modelo peso / edad gestacional propuesto por Lubchenco, señalando también la necesidad de contar con graficas locales propias de cada región (curva local generalizada). Hoy además, se recomienda usar graficas personalizadas, ajustada por variables no patológicas (biológicas) propias de cada embarazada (curva general individualizada).</h6>
                         <div class="row">
                             <div class="col-3">
                                 <img src="<?php echo Config::get('URL'); ?>img/clg.png" class="mr-auto ml-auto img-fluid">
@@ -695,7 +695,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="dialog-title">Eliminar</h5>
+                    <h5 class="modal-title" id="dialog.title">Eliminar</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>

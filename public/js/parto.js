@@ -402,6 +402,7 @@ $(document).ready(function() {
     $("#boton\\.parto\\.modificar").on("click", function() {
 
         if ($("#id_paciente").val() == ""){
+            $("#dialog\\.title").html("Modificar");
             $("#modal\\.text").html("Debe seleccional un examen primero");
             $("#modal\\.action").off("click").addClass("d-none");
             $("#modal\\.exit").html("Aceptar");    
@@ -623,11 +624,13 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
         if ($("#id_paciente").val() == ""){
+            $("#dialog\\.title").html("Eliminar");
             $("#modal\\.text").html("Debe seleccional un examen primero");
             $("#modal\\.action").off("click").addClass("d-none");
             $("#modal\\.exit").html("Aceptar");    
         }
         else{
+            $("#dialog\\.title").html("Eliminar");
             $("#modal\\.text").html("¿Está seguro de eliminar el exámen seleccionado?");
             $("#modal\\.exit").html("Cancelar"); 
             $("#modal\\.action").off("click").removeClass("d-none");
