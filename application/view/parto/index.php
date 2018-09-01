@@ -23,6 +23,28 @@
     <?php if (Session::userIsLoggedIn() == false) { ?>
     <?php } ?>
     <section class="container-fluid">
+        <div class="card bg-light">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <h6 class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</h6>
+                    </div>
+                    <div class="col-3">
+                        <select id="buscar.parto.tipo" class="form-control">
+                            <option value="0" selected>ID de la madre</option>
+                            <option value="1">ID del Recién Nacido</option>
+                            <option value="2">Apellidos de la Madre</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <input class="form-control mt-2" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
+                    </div>
+                    <div class="col-2 ">
+                        <button type="button" id="buscar.parto.madre.button" class="btn btn-outline-primary my-auto">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-2 px-0">
                 <ul class="nav flex-column pt-2">
@@ -50,28 +72,6 @@
                 </ul>
             </div>
             <div class="col px-0 border-left">
-                <div class="card bg-light">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-4">
-                                <h6 class="card-title m-0"><i class="fas fa-search"></i>  Buscar Pacientes Por:</h6>
-                            </div>
-                            <div class="col-3">
-                                <select id="buscar.parto.tipo" class="form-control">
-                                    <option value="0" selected>ID de la madre</option>
-                                    <option value="1">ID del Recién Nacido</option>
-                                    <option value="2">Apellidos de la Madre</option>
-                                </select>
-                            </div>
-                            <div class="col-3">
-                                <input class="form-control mt-2" id="buscar.parto.madre" type="text" placeholder="N° ID de la Madre">
-                            </div>
-                            <div class="col-2 ">
-                                <button type="button" id="buscar.parto.madre.button" class="btn btn-outline-primary my-auto">Buscar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);" id="neonatal">
                     <div class="col-12 p-0 col-sm-2 order-sm-1">
                         <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
