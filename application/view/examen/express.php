@@ -789,7 +789,7 @@
             <div class="card mt-3">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-1">
+                        <div class="col-2">
                             <img src="<?php echo Config::get('URL'); ?>img/femur.jpg" class="img-fluid">
                         </div>
                         <div class="col">

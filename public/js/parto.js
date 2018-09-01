@@ -276,9 +276,14 @@ $(document).ready(function() {
         $("#boton\\.parto\\.nuevo").trigger("click");
     });
 
+    $("#boton\\.hipoglicemia\\.cancelar").on("click", function() {
+        $("#boton\\.parto\\.cancelar").trigger("click");
+    });
+
     $("#boton\\.parto\\.nuevo").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
         $("#boton\\.hipoglicemia\\.guardar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.cancelar").removeClass("d-none");
         $("#boton\\.hipoglicemia\\.modificar").addClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
         $("#boton\\.parto\\.cancelar").removeClass("d-none");
@@ -332,6 +337,7 @@ $(document).ready(function() {
     $("#boton\\.parto\\.modificar").on("click", function() {
         $("#boton\\.parto\\.guardar").removeClass("d-none");
         $("#boton\\.hipoglicemia\\.guardar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.cancelar").removeClass("d-none");
         $("#boton\\.hipoglicemia\\.modificar").addClass("d-none");
         $("#boton\\.parto\\.cancelar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").addClass("d-none");
@@ -385,6 +391,7 @@ $(document).ready(function() {
     $("#boton\\.parto\\.cancelar").on("click", function() {
         $("#boton\\.parto\\.guardar").addClass("d-none");
         $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
+        $("#boton\\.hipoblicemia\\.cancelar").addClass("d-none");
         $("#boton\\.parto\\.nuevo").removeClass("d-none");
         $("#boton\\.parto\\.cancelar").addClass("d-none");
         //desbloquear cajas
@@ -437,6 +444,7 @@ $(document).ready(function() {
         $("#boton\\.parto\\.guardar").addClass("d-none");
         $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
         $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
+        $("#boton\\.hipoglicemia\\.cancelar").removeClass("d-none");
         $("#boton\\.parto\\.nuevo").removeClass("d-none");
         $("#boton\\.parto\\.modificar").removeClass("d-none");
         $("#boton\\.parto\\.eliminar").removeClass("d-none");
