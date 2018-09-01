@@ -635,7 +635,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-4">
-                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;1.- Curva local generalizada (percentil)</label>
+                                        <p class="m-0 pl-3">1.- Curva local generalizada (percentil)</p>
                                     </div>
                                     <div class="col-1">
                                         <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_regional" disabled>
@@ -645,11 +645,11 @@
                                     </div>
                                     <div class="col-5 align-self-end p-0">
                                         <div class="row m-1">
-                                            <label class="col-2 p-0">Peso (grs)</label>
+                                            <p class="col-2 p-0 m-0">Peso (grs)</p>
                                             <div class="p-0 col-4">
                                                 <input class="form-control text-center" id="datos.hipoglicemia.peso" min="0" max="9999" type="number" disabled>
                                             </div>
-                                            <label class="col-2 p-0 text-center">Ege (sem)</label>
+                                            <p class="col-2 p-0 m-0">Ege (sem)</p>
                                             <div class="p-0 col-4">
                                                 <input class="form-control text-center" id="datos.hipoglicemia.eg" min="0" max="9999" type="number" disabled>
                                             </div>
@@ -658,7 +658,7 @@
                                 </div>
                                 <div class="row pt-2">
                                     <div class="col-4">
-                                        <label for="edadGestacional">&nbsp;&nbsp;&nbsp;&nbsp;2.- Curva general personalizada (percentil)</label>
+                                        <p class="m-0 pl-3">2.- Curva general personalizada (percentil)</p>
                                     </div>
                                     <div class="col-1">
                                         <input class="form-control text-center" type="text" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="peso_eg_pct_ajustado" disabled>
