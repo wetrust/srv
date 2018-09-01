@@ -314,7 +314,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);display:none;" id="recienacido">
+                <div class="row mt-1 mx-0" style="height: calc(100vh - 150px);display:none;" id="recienacido">
                     <div class="col-5 p-0">
                         <div class="card">
                             <div class="card-body">
@@ -339,7 +339,7 @@
                                 <h5 class="card-title mt-4">Datos de RN calculado</h5>
                                 <hr class="mb-3">
                                 <div class="form-row">
-                                    <div class="col">
+                                    <div class="col-6">
                                         <h6 class="text-primary">IPN <small>((peso / talla)^3)*100</small></h6>
                                         <input type="number" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" id="IPNRN" disabled>
                                     </div>
