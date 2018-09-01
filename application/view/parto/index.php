@@ -61,7 +61,7 @@
                        Proyecto en desarrollo
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#postnatal" class="btn btn-primary rounded">Curvas de crecimiento,<br>(dos modelos)</a>
+                        <a href="#postnatal" class="btn btn-primary rounded text-left">Curvas de crecimiento,<br>(dos modelos)</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
                         <a href="#ajustepeso" class="btn btn-primary text-left rounded">Ver Curvas<br>customizadas</a>
