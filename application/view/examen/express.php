@@ -792,7 +792,7 @@
                         <div class="col-2">
                             <img src="<?php echo Config::get('URL'); ?>img/ecografia.jpeg" class="img-fluid">
                         </div>
-                        <div class="col">
+                        <div class="col text-center">
                             <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
                             <button role="button" class="btn btn-outline-secondary text-center" id="boton.dicom.imagen">Ver Imágenes</button>
                         </div>
