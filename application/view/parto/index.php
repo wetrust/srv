@@ -676,7 +676,7 @@
                         <div class="card mt-2 mb-5">
                             <div class="card-body">
                                 <button type="button" class="btn btn-outline-primary float-right" id="boton.hipoglicemia.modificar">Modificar</button>
-                                <button type="button" class="btn btn-outline-primary float-right d-none" id="boton.hipoglicemia.cancelar">Cancelar</button>
+                                <button type="button" class="btn btn-outline-primary float-right ml-1 d-none" id="boton.hipoglicemia.cancelar">Cancelar</button>
                                 <button type="button" class="btn btn-outline-danger float-right d-none" id="boton.hipoglicemia.guardar">Guardar</button>
                             </div>
                         </div>
