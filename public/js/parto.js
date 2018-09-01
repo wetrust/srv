@@ -616,6 +616,7 @@ $(document).ready(function() {
         $("#modal\\.action").off("click");
         $("#modal\\.action").on("click", function(){
             eliminarParto();
+            $("#dialog").modal("hide");
         });
         $("#dialog").modal("show");
     });
