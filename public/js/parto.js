@@ -391,7 +391,7 @@ $(document).ready(function() {
     $("#boton\\.parto\\.cancelar").on("click", function() {
         $("#boton\\.parto\\.guardar").addClass("d-none");
         $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
-        $("#boton\\.hipoblicemia\\.cancelar").addClass("d-none");
+        $("#boton\\.hipoglicemia\\.cancelar").addClass("d-none");
         $("#boton\\.parto\\.nuevo").removeClass("d-none");
         $("#boton\\.parto\\.cancelar").addClass("d-none");
         //desbloquear cajas
