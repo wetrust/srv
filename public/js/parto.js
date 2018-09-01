@@ -615,10 +615,9 @@ $(document).ready(function() {
     $("#boton\\.parto\\.eliminar").on("click", function() {
         $("#modal\\.action").off("click");
         $("#modal\\.action").on("click", function(){
-
+            eliminarParto();
         });
-        $("").modal("show");
-        eliminarParto
+        $("#dialog").modal("show");
     });
 
     $("#boton\\.hipoglicemia\\.modificar").on("click", function() {
