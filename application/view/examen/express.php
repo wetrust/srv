@@ -793,10 +793,10 @@
                             <img src="<?php echo Config::get('URL'); ?>img/femur.jpg" class="img-fluid">
                         </div>
                         <div class="col">
-                            <button role="button" class="btn btn-outline-secondary" id="boton.dicom.imagen">Ver Imágenes</button>
+                            <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
                         </div>
                         <div class="col-3">
-                            <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
+                            <button role="button" class="btn btn-outline-secondary" id="boton.dicom.imagen">Ver Imágenes</button>
                         </div>
                     </div>
                 </div>
