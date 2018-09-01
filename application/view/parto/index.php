@@ -315,7 +315,7 @@
                     </div>
                 </div>
                 <div class="row mt-1 mx-0" style="overflow:auto;height: calc(100vh - 150px);display:none;" id="recienacido">
-                    <div class="col-5 p-0 mb-5">
+                    <div class="col-5 p-0 mb-5 pb-3">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Datos de Recién Nacido</h5>
