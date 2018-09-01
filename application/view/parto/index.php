@@ -628,8 +628,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mt-2">
-                            <div class="card-header">
+                        <div class="card mt-2 bg-primary">
+                            <div class="card-header p-1 pl-3">
                                 <p class="m-0">- Ejemplo peso categorizado en funcion de la Ege/Parto: (1) Curva local generalizada y (2) curva general personalizada según variables.</p>
                             </div>
                             <div class="card-body">
