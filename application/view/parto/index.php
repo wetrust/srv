@@ -314,14 +314,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-1 mx-0" style="height: calc(100vh - 150px);display:none;" id="recienacido">
-                    <div class="col-5 p-0">
+                <div class="row mt-1 mx-0" style="overflow:auto;height: calc(100vh - 150px);display:none;" id="recienacido">
+                    <div class="col-5 p-0 mb-5">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Datos de Recién Nacido</h5>
                                 <hr class="mb-3">
                                 <div class="form-row">
-                                    <div class="col">
+                                    <div class="col-6">
                                         <h6 class="text-primary">E. Gestacional</h6>
                                         <select id="edadGestacional" class="form-control" style="font-size: 0.8rem;height: calc(2rem + 2px);" aria-describedby="edadGestacionalHelp" disabled></select>
                                     </div>
