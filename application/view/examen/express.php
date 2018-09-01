@@ -790,7 +790,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-2">
-                            <img src="<?php echo Config::get('URL'); ?>img/ecografia.jpg" class="img-fluid">
+                            <img src="<?php echo Config::get('URL'); ?>img/ecografia.jpeg" class="img-fluid">
                         </div>
                         <div class="col">
                             <p>Ver imágenes de exámenes ultrasonográficos almacenados en base de datos </p>
