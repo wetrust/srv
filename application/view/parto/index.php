@@ -537,6 +537,32 @@
                                 <p class="text-white">-  Hipoglicemia neonatal, como patología prevalente en el recien nacido, instrumento para validación clínica de nueva tabla de peso categorizada.</p>
                             </div>
                             <div class="card-body">
+                                <div class="row p-2">
+                                    <div class="col-4">
+                                        <p class="text-primary m-0 mt-3">Factores de Riesgo para Hipoglicemia</p>
+                                        <select id="hipoglicemia_riesgo" class="form-control text-center" style="text-align-last:center;" disabled>
+                                            <option value="0">RN PEG (&lt;10)</option>
+                                            <option value="1">RN GEG (IP &gt; 3.3)</option>
+                                            <option value="2">Hijo madre DM GEG IP > 3.3</option>
+                                            <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
+                                            <option value="4" selected>Sin riesgo clínico de hipoglicemia</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="text-primary m-0 mt-3">Sospecha Clínica de Hipoglicemia</p>
+                                        <select id="hipoglicemia_sospechada" class="form-control text-center" style="text-align-last:center;" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="text-white bg-primary m-0 mt-3 pl-3">Hipoglicemia confirmada por laboratorio</p>
+                                        <select id="hipoglicemia_confirmada" class="form-control text-center" style="text-align-last:center;" disabled>
+                                            <option value="0">Si</option>
+                                            <option value="1" selected>No</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-12 mb-3">
                                         <div class="row border border-info p-2">
@@ -581,32 +607,6 @@
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row p-2">
-                                    <div class="col-4">
-                                        <p class="text-primary m-0 mt-3">Factores de Riesgo para Hipoglicemia</p>
-                                        <select id="hipoglicemia_riesgo" class="form-control text-center" style="text-align-last:center;" disabled>
-                                            <option value="0">RN PEG (&lt;10)</option>
-                                            <option value="1">RN GEG (IP &gt; 3.3)</option>
-                                            <option value="2">Hijo madre DM GEG IP > 3.3</option>
-                                            <option value="3">RN Pretérmino 34 - 36.6 semanas</option>
-                                            <option value="4" selected>Sin riesgo clínico de hipoglicemia</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-4">
-                                        <p class="text-primary m-0 mt-3">Sospecha Clínica de Hipoglicemia</p>
-                                        <select id="hipoglicemia_sospechada" class="form-control text-center" style="text-align-last:center;" disabled>
-                                            <option value="0">Si</option>
-                                            <option value="1" selected>No</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-4">
-                                        <p class="text-white bg-primary m-0 mt-3 pl-3">Hipoglicemia confirmada por laboratorio</p>
-                                        <select id="hipoglicemia_confirmada" class="form-control text-center" style="text-align-last:center;" disabled>
-                                            <option value="0">Si</option>
-                                            <option value="1" selected>No</option>
-                                        </select>
                                     </div>
                                 </div>
                                 <div class="row p-2">
