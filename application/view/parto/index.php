@@ -539,7 +539,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-4">
-                                        <p class="text-primary m-0 mt-3">Factores de Riesgo para Hipoglicemia</p>
+                                        <p class="text-primary m-0">Factores de Riesgo para Hipoglicemia</p>
                                         <select id="hipoglicemia_riesgo" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">RN PEG (&lt;10)</option>
                                             <option value="1">RN GEG (IP &gt; 3.3)</option>
@@ -549,14 +549,14 @@
                                         </select>
                                     </div>
                                     <div class="col-4">
-                                        <p class="text-primary m-0 mt-3">Sospecha Clínica de Hipoglicemia</p>
+                                        <p class="text-primary m-0">Sospecha Clínica de Hipoglicemia</p>
                                         <select id="hipoglicemia_sospechada" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
                                         </select>
                                     </div>
                                     <div class="col-4">
-                                        <p class="text-white bg-primary m-0 mt-3 pl-3">Hipoglicemia confirmada por laboratorio</p>
+                                        <p class="text-white bg-primary m-0 pl-3">Hipoglicemia confirmada por laboratorio</p>
                                         <select id="hipoglicemia_confirmada" class="form-control text-center" style="text-align-last:center;" disabled>
                                             <option value="0">Si</option>
                                             <option value="1" selected>No</option>
