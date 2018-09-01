@@ -55,7 +55,7 @@
                         <a href="#neonatal" class="btn btn-primary rounded">Ingreso de Datos</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        <a href="#recienacido" class="btn btn-primary rounded">Evaluación Peso e IPN</a>
+                        <a href="#recienacido" class="btn btn-primary rounded text-left">Evaluación Peso e IPN,<br>(dos curvas)</a>
                     </li>
                     <li class="nav-item ml-2 my-1">
                        Proyecto en desarrollo
