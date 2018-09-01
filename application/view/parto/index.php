@@ -537,7 +537,7 @@
                                 <p class="text-white">-  Hipoglicemia neonatal, como patología prevalente en el recien nacido, instrumento para validación clínica de nueva tabla de peso categorizada.</p>
                             </div>
                             <div class="card-body">
-                                <div class="row p-2">
+                                <div class="row">
                                     <div class="col-4">
                                         <p class="text-primary m-0 mt-3">Factores de Riesgo para Hipoglicemia</p>
                                         <select id="hipoglicemia_riesgo" class="form-control text-center" style="text-align-last:center;" disabled>
@@ -564,7 +564,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 mb-3">
+                                    <div class="col-12 my-3">
                                         <div class="row border border-info p-2">
                                             <div class="col-2">Exámenes</div>
                                             <div class="col-2 text-center">Dextro</div>
