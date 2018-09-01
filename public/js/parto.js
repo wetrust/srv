@@ -104,6 +104,71 @@ function loadExamen(tipo, id) {
     });
 }
 
+function eliminarParto(){
+    var filas = $("#table\\.ecografia\\.parto").children();
+
+        $.each(filas,function(i,val){
+            if ($(val).hasClass('table-active') == true){
+                let examen = {
+                    eg: "0"
+                }
+                
+                let data = {
+                    id: $("#id_paciente").val(),
+                    tipo: 4,
+                    data: JSON.stringify(examen)
+                }
+
+                $.post(serverURL + "examen/del/", data).done(function(response) {
+                    $("#table\\.ecografia\\.parto").empty();
+                    obtenerPartos();
+                    $("#id_paciente").val("");
+                    $("#nombre_madre").val("");
+                    $("#apellido_madre").val("");
+                    $("#lugar_parto_rn").val("");
+                    $("#id_rn").val("");
+                    $("#nombre_rn").val("");
+                    $("#apellido_rn").val("");
+                    $("#sexo_rn").val("");
+                    $("#fecha_parto_rn").val("");
+                    $("#datos\\.neonatal\\.edad").val("");
+                    $("#termino_parto").val("");
+                    $("#tipo_parto").val("");
+                    $("#tipo_patologia_obstetrica").val("");
+                    $("#meconio").val("");
+                    $("#datos\\.neonatal\\.peso").val("");
+                    $("#datos\\.neonatal\\.talla").val("");
+                    $("#perimetro_craneo_rn").val("");
+                    $("#datos\\.neonatal\\.ipn").val("");
+                    $("#peso_placentario").val("");
+                    $("#apgar_1").val("");
+                    $("#apgar_5").val("");
+                    $("#hiperbilirrubinemia").val("");
+                    $("#poliglobulia").val("");
+                    $("#hospital_ucin").val("");
+                    $("#sindrome_respiratorio").val("");
+                    $("#alta_con_madre").val("");
+                    $("#observaciones").val("");
+                    $("#prof\\.atencion\\.parto").val("");
+                    $("#dextro_uno").val("");
+                    $("#glicemia_uno").val("");
+                    $("#conducta\\.uno").val(3);
+                    $("#dextro_dos").val("");
+                    $("#glicemia_dos").val("");
+                    $("#conducta\\.dos").val(3);
+                    $("#dextro_tres").val("");
+                    $("#glicemia_tres").val("");
+                    $("#conducta\\.tres").val(3);
+                    $("#hipoglicemia_riesgo").val("");
+                    $("#hipoglicemia_sospechada").val("");
+                    $("#hipoglicemia_confirmada").val("");
+                    $("#prof\\.alta\\.rn").val("");
+                    $("#prof\\.atencion\\.parto").val("");
+                });
+            }
+        });
+}
+
 $(document).ready(function() {
     document.location.hash = "#";
     let fecha = new Date();
@@ -548,68 +613,12 @@ $(document).ready(function() {
     });
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
-        var filas = $("#table\\.ecografia\\.parto").children();
+        $("#modal\\.action").off("click");
+        $("#modal\\.action").on("click", function(){
 
-        $.each(filas,function(i,val){
-            if ($(val).hasClass('table-active') == true){
-                let examen = {
-                    eg: "0"
-                }
-                
-                let data = {
-                    id: $("#id_paciente").val(),
-                    tipo: 4,
-                    data: JSON.stringify(examen)
-                }
-
-                $.post(serverURL + "examen/del/", data).done(function(response) {
-                    $("#table\\.ecografia\\.parto").empty();
-                    obtenerPartos();
-                    $("#id_paciente").val("");
-                    $("#nombre_madre").val("");
-                    $("#apellido_madre").val("");
-                    $("#lugar_parto_rn").val("");
-                    $("#id_rn").val("");
-                    $("#nombre_rn").val("");
-                    $("#apellido_rn").val("");
-                    $("#sexo_rn").val("");
-                    $("#fecha_parto_rn").val("");
-                    $("#datos\\.neonatal\\.edad").val("");
-                    $("#termino_parto").val("");
-                    $("#tipo_parto").val("");
-                    $("#tipo_patologia_obstetrica").val("");
-                    $("#meconio").val("");
-                    $("#datos\\.neonatal\\.peso").val("");
-                    $("#datos\\.neonatal\\.talla").val("");
-                    $("#perimetro_craneo_rn").val("");
-                    $("#datos\\.neonatal\\.ipn").val("");
-                    $("#peso_placentario").val("");
-                    $("#apgar_1").val("");
-                    $("#apgar_5").val("");
-                    $("#hiperbilirrubinemia").val("");
-                    $("#poliglobulia").val("");
-                    $("#hospital_ucin").val("");
-                    $("#sindrome_respiratorio").val("");
-                    $("#alta_con_madre").val("");
-                    $("#observaciones").val("");
-                    $("#prof\\.atencion\\.parto").val("");
-                    $("#dextro_uno").val("");
-                    $("#glicemia_uno").val("");
-                    $("#conducta\\.uno").val(3);
-                    $("#dextro_dos").val("");
-                    $("#glicemia_dos").val("");
-                    $("#conducta\\.dos").val(3);
-                    $("#dextro_tres").val("");
-                    $("#glicemia_tres").val("");
-                    $("#conducta\\.tres").val(3);
-                    $("#hipoglicemia_riesgo").val("");
-                    $("#hipoglicemia_sospechada").val("");
-                    $("#hipoglicemia_confirmada").val("");
-                    $("#prof\\.alta\\.rn").val("");
-                    $("#prof\\.atencion\\.parto").val("");
-                });
-            }
         });
+        $("").modal("show");
+        eliminarParto
     });
 
     $("#boton\\.hipoglicemia\\.modificar").on("click", function() {
