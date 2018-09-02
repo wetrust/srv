@@ -26,7 +26,7 @@
     </nav>
     <section class="container-fluid">
         <?php if (Session::userIsLoggedIn() == false) { ?>
-            <div class="alert alert-warning" role="alert">
+            <div class="alert alert-warning text-center" role="alert">
                 Para guardar sus exámenes, debe ingresar o iniciar sesion en el sistema
             </div>
         <?php }?>
