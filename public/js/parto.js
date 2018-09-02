@@ -658,7 +658,7 @@ $(document).ready(function() {
             $("#dialog\\.title").html("Eliminar");
             $("#dialog\\.text").html("<p>¿Está seguro de eliminar el exámen seleccionado?</p>");
             $("#dialog\\.exit").html("Cancelar"); 
-            $("#dialog\\.action").off("click").removeClass("d-none");
+            $("#dialog\\.action").off("click").removeClass("d-none").html("Eliminar");
             $("#dialog\\.action").on("click", function(){
                 eliminarParto();
                 $("#dialog").modal("hide");
