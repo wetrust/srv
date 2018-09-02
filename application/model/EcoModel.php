@@ -76,10 +76,25 @@ class EcoModel
             return $response;
         }
         else if ($tipo == 4){
-            $sql = "SELECT * FROM parto WHERE id_paciente = :id_paciente";
-            $query = $database->prepare($sql);
-            $query->execute(array(':id_paciente' => $rut));
 
+            $tipoB = Request::post('tipoB');
+
+            if ($tipoB == 0){
+                $sql = "SELECT * FROM parto WHERE id_paciente = :id_paciente";
+                $query = $database->prepare($sql);
+                $query->execute(array(':id_paciente' => $rut));
+            }
+            else if ($tipoB == 1){
+                $sql = "SELECT * FROM parto WHERE id_rn = :id_rn";
+                $query = $database->prepare($sql);
+                $query->execute(array(':id_rn' => $rut));
+            }
+            else if ($tipoB == 2){
+                $sql = "SELECT * FROM parto WHERE apellido_madre = :apellido_madre";
+                $query = $database->prepare($sql);
+                $query->execute(array(':apellido_madre' => $rut));
+            }
+            
             $response->data = $query->fetchAll();
             return $response;
         }

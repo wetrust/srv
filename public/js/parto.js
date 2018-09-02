@@ -306,10 +306,15 @@ $(document).ready(function() {
         var text = $(this).val();
         switch (e.which) {
             case 13:
+
+                let tpoBusqueda = $("#buscar\\.parto\\.tipo").val();
+
                 let data = {
                     id: $(this).val(),
-                    tipo: 4
+                    tipo: 4,
+                    tipoB:tpoBusqueda
                 }
+
                 $.post(serverURL + "examen/gets", data).done(function(response) {
                     if (response !== null) {
                         if (Object.keys(response).length > 0) {
@@ -360,7 +365,7 @@ $(document).ready(function() {
                             });
                         }
                     } else {
-                        alert("No hay pacientes con el id escrito");
+                        alert("No hay pacientes que coincidan con la búsqueda");
                     }
                 });
                 break;
@@ -368,9 +373,13 @@ $(document).ready(function() {
     });
 
     $("#buscar\\.parto\\.madre\\.button").on("click", function() {
+
+        let tpoBusqueda = $("#buscar\\.parto\\.tipo").val();
+
         let data = {
             id: $("#buscar\\.parto\\.madre").val(),
-            tipo: 4
+            tipo: 4,
+            tipoB:tpoBusqueda
         }
         $.post(serverURL + "examen/gets", data).done(function(response) {
             if (response !== null) {
