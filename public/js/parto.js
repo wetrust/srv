@@ -654,7 +654,7 @@ $(document).ready(function() {
                     guardarParto(solicitado,aceptado);
                     $("#dialog").modal("hide");
                 });
-                ("#dialog").modal("show"); 
+                $("#dialog").modal("show"); 
             }
             else{
                 guardarParto(false,false);
