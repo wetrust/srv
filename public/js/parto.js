@@ -1856,6 +1856,7 @@ $(document).ready(function() {
         }
      else if (hash == "#db") {
         displayElement("db");
+        databasePartos();
     }
     });
 

@@ -717,7 +717,7 @@
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: auto;height: calc(100vh - 150px); display:none;" id="db">
                     <div class="col">
-                        <table class="table">
+                        <table class="table table-responsive">
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">#</th>
