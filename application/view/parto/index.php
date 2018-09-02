@@ -23,9 +23,13 @@
         <?php } else { ?>
             <span class="navbar-text my-2 my-sm-0"><?php echo Session::get('user_name'); ?></span>
         <?php } ?>
-        
     </nav>
     <section class="container-fluid">
+        <?php if (Session::userIsLoggedIn() == false) { ?>
+            <div class="alert alert-warning" role="alert">
+                Para guardar sus exámenes, debe ingresar o iniciar sesion en el sistema
+            </div>
+        <?php }?>
         <div class="card bg-light">
             <div class="card-body">
                 <div class="row align-items-center">
