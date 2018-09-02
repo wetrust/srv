@@ -90,7 +90,11 @@ function guardarParto(){
         glicemia_tres: $("#glicemia_tres").val(),
         conducta_tres: $("#conducta\\.tres").val(),
         prof_alta_rn: $("#prof\\.alta\\.rn").val(),
-        prof_atencion_parto: $("#prof\\.atencion\\.parto").val()
+        prof_atencion_parto: $("#prof\\.atencion\\.parto").val(),
+        peso_eg_nacional: 0,
+        peso_eg_regional: 0,
+        peso_eg_ajustado: $("#PesoEgeCAj").val(),
+        ipn_eg_ajustado: $("#IpnPct").val()
     }
 
     var data = {
@@ -669,67 +673,6 @@ $(document).ready(function() {
 
     $("#boton\\.hipoglicemia\\.guardar").on("click", function() {
         $("#boton\\.parto\\.guardar").trigger("click");
-    });
-
-    $("#boton\\.parto\\.guardar").on("click", function() {
-
-        var parto = {
-            id_paciente: $("#id_paciente").val(),
-            id_rn: $("#id_rn").val(),
-            nombre_madre: $("#nombre_madre").val(),
-            apellido_madre: $("#apellido_madre").val(),
-            lugar_parto_rn: $("#lugar_parto_rn").val(),
-            nombre_rn: $("#nombre_rn").val(),
-            apellido_rn: $("#apellido_rn").val(),
-            sexo_rn: $("#sexo_rn").val(),
-            fecha_parto_rn: $("#fecha_parto_rn").val(),
-            eg_parto: $("#datos\\.neonatal\\.edad").val(),
-            termino_parto: $("#termino_parto").val(),
-            tipo_parto: $("#tipo_parto").val(),
-            tipo_patologia_obstetrica: $("#tipo_patologia_obstetrica").val(),
-            peso_rn: $("#datos\\.neonatal\\.peso").val(),
-            talla_rn: $("#datos\\.neonatal\\.talla").val(),
-            perimetro_craneo_rn: $("#perimetro_craneo_rn").val(),
-            ipn_rn: $("#datos\\.neonatal\\.ipn").val(),
-            peso_eg_nacional: 0,
-            peso_eg_regional: 0,
-            peso_eg_ajustado: $("#PesoEgeCAj").val(),
-            ipn_eg_ajustado: $("#IpnPct").val(),
-            peso_placentario: $("#peso_placentario").val(),
-            apgar_1: $("#apgar_1").val(),
-            apgar_5: $("#apgar_5").val(),
-            hipoglicemia_riesgo: $("#hipoglicemia_riesgo").val(),
-            hipoglicemia_sospechada: $("#hipoglicemia_sospechada").val(),
-            hipoglicemia_confirmada: $("#hipoglicemia_confirmada").val(),
-            hiperbilirrubinemia: $("#hiperbilirrubinemia").val(),
-            poliglobulia: $("#poliglobulia").val(),
-            hospital_ucin: $("#hospital_ucin").val(),
-            sindrome_respiratorio: $("#sindrome_respiratorio").val(),
-            alta_con_madre: $("#alta_con_madre").val(),
-            observaciones: $("#observaciones").val(),
-            meconio: $("#meconio").val(),
-            conducta_tres: $("#conducta\\.tres").val(),
-            glicemia_tres: $("#glicemia_tres").val(),
-            dextro_tres: $("#dextro_tres").val(),
-            conducta_dos: $("#conducta\\.dos").val(),
-            glicemia_dos: $("#glicemia_dos").val(),
-            dextro_dos: $("#dextro_dos").val(),
-            conducta_uno: $("#conducta\\.uno").val(),
-            glicemia_uno: $("#glicemia_uno").val(),
-            dextro_uno: $("#dextro_uno").val(),
-            prof_alta_rn: $("#prof\\.alta\\.rn").val(),
-            prof_atencion_parto: $("#prof\\.atencion\\.parto").val()
-        }
-
-        var data = {
-            id: $("#id_paciente").val(),
-            tipo: 4,
-            data: JSON.stringify(parto)
-        }
-
-        $.post(serverURL + "examen/set/", data).done(function(response) {
-            obtenerPartos();
-        });
     });
 
     $("#listaPartos").on("click", function() {
