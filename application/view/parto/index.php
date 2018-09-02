@@ -85,6 +85,9 @@
                     <li class="nav-item ml-2">
                         <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfregionalview"><small>PDF Regional</small></a>
                     </li>
+                    <li class="nav-item ml-2">
+                        <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfregionalview"><small>Ver Base de datos</small></a>
+                    </li>
                 </ul>
             </div>
             <div class="col px-0 border-left">
