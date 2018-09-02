@@ -640,7 +640,7 @@ $(document).ready(function() {
         }
         else{
             let content = "";
-            if ($("#datos\\.parto\\.consentimiento").val() == false){
+            if ($("#datos\\.parto\\.consentimiento").val() === false){
                 $("#dialog\\.title").html("Guardar");
                 content = '<p>Antes de guardar, se sugiere solicitar consentimiento informado</p><p>¿Consentimiento solicitado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="false" checked><label class="form-check-label">No</label></div></div></div><p>¿Consentimiento aceptado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="false" checked><label class="form-check-label">No</label></div></div></div>';
                 $("#dialog\\.text").html(content);
