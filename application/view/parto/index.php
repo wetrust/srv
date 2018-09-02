@@ -73,10 +73,10 @@
                         Ver PDF de curvas
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfregionalview"><small>PDF Regional</small></a>
+                        <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfnacionalview"><small>PDF Nacional</small></a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfnacionalview"><small>PDF Nacional</small></a>
+                        <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfregionalview"><small>PDF Regional</small></a>
                     </li>
                 </ul>
             </div>
