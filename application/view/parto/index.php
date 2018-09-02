@@ -401,13 +401,13 @@
                 </div>
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px); display:none;" id="postnatal">
                     <div class="col-12">
-                        <h6 class="alert-heading text-azul mt-2">Para la valoración del crecimiento intrauterino, se utiliza el clásico modelo peso / edad gestacional propuesto por Lubchenco, señalando también la necesidad de contar con graficas locales propias de cada región (curva local generalizada). Hoy además, se recomienda usar graficas personalizadas, ajustada por variables no patológicas (biológicas) propias de cada embarazada (curva general individualizada).</h6>
+                        <h6 class="alert-heading text-azul mt-2">Para la valoración del crecimiento intrauterino, se utiliza el clásico modelo peso / edad gestacional propuesto por Lubchenco (1963), se señala además la necesidad de contar con graficas locales propias de cada región (curva local generalizada). Hoy además, se recomienda usar graficas personalizadas, ajustada por variables no patológicas (biológicas) propias de cada embarazada (curva general individualizada).</h6>
                         <div class="row">
                             <div class="col-3">
                                 <img src="<?php echo Config::get('URL'); ?>img/clg.png" class="mr-auto ml-auto img-fluid">
                             </div>
                             <div class="col-9">
-                                <p class="text-justify text-azul"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.</small></p>
+                                <p class="text-justify text-azul mt-2"><small>El criterio neonatal, tanto con fines pronóstico como de manejo clínico, es categorizar el peso del recién nacido (RN) como pequeño (PEG), adecuado (AEG) o grande (GEG) para su edad gestacional, según se ubique bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de una gráfica de crecimiento determinada. Secundariamente integrando la talla del RN se obtiene el índice ponderal neonatal ((peso / talla)^3)*100), clasificando tambien a los RN en enflaquecidos, eutróficos y obesos, según se ubiquen bajo el percentil 10, entre los percentiles 10 y 90 o sobre el percentil 90 de la gráfica IPN/edad gestacional.</small></p>
                             </div>
                         </div>
                         <div class="row">
@@ -540,7 +540,7 @@
                                     <button type="button" class="btn btn-outline-primary mr-1" id="opt2"><small>Potencial alto</small></button>
                                     <button type="button" class="btn btn-outline-primary" id="opt4"><small>Cond. extremas</small></button>
                                 </div>
-                                <p class="mt-3 text-right">Para validación clínica, los resultados de curva han de ser contrastados con morbilidad neonatal prevalente en la población general de recién nacidos.</p>
+                                <p class="mt-3 text-right text-white bg-primary">Para validación clínica del nuevo modelo, los pesos categorizados con esta curva han de ser contrastados con morbilidad neonatal prevalente en la población general de recién nacidos.</p>
                             </div>
                         </div>
                     </div>
