@@ -51,22 +51,22 @@
                     <li class="nav-item ml-2 my-1">
                        Datos del Parto y RN
                     </li>
-                    <li class="nav-item ml-2 my-1">
+                    <li class="nav-item ml-2">
                         <a href="#neonatal" class="btn btn-primary rounded">Ingreso de Datos</a>
                     </li>
-                    <li class="nav-item ml-2 my-1">
+                    <li class="nav-item ml-2">
                         <a href="#recienacido" class="btn btn-primary rounded text-left">Evaluación Peso e IPN,<br><span class="text-lowercase">(dos curvas)</span></a>
                     </li>
                     <li class="nav-item ml-2 my-1">
                        Proyecto en desarrollo
                     </li>
-                    <li class="nav-item ml-2 my-1">
+                    <li class="nav-item ml-2">
                         <a href="#postnatal" class="btn btn-primary rounded text-left">Curvas de crecimiento,<br><span class="text-lowercase">(dos modelos)</span></a>
                     </li>
-                    <li class="nav-item ml-2 my-1">
+                    <li class="nav-item ml-2">
                         <a href="#ajustepeso" class="btn btn-primary text-left rounded">Ver Curvas<br>customizadas</a>
                     </li>
-                    <li class="nav-item ml-2 my-1">
+                    <li class="nav-item ml-2">
                         <a href="#hipoglicemia" class="btn btn-primary text-left rounded">Protocolo hipoglicemia<br>neonatal</a>
                     </li>
                 </ul>
