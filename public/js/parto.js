@@ -510,7 +510,8 @@ $(document).ready(function() {
             $("#dialog\\.title").html("Modificar");
             $("#dialog\\.text").html("<p>Debe seleccional un examen primero</p>");
             $("#dialog\\.action").off("click").addClass("d-none");
-            $("#dialog\\.exit").html("Aceptar");    
+            $("#dialog\\.exit").html("Aceptar");
+            $("#dialog").modal("show");
         }
         else{
             $("#boton\\.parto\\.guardar").removeClass("d-none");
@@ -565,7 +566,6 @@ $(document).ready(function() {
             $("#prof\\.alta\\.rn").prop("disabled", false);
             $("#prof\\.atencion\\.parto").prop("disabled", false);
         }
-        $("#dialog").modal("show");
     });
 
     $("#boton\\.parto\\.cancelar").on("click", function() {
