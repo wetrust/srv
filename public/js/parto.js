@@ -2,9 +2,10 @@ function guardarParto(solicitado, aceptado){
     $("#boton\\.parto\\.guardar").addClass("d-none");
     $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
     $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
-    $("#boton\\.hipoglicemia\\.cancelar").removeClass("d-none");
+    $("#boton\\.hipoglicemia\\.cancelar").addClass("d-none");
     $("#boton\\.parto\\.nuevo").removeClass("d-none");
     $("#boton\\.parto\\.modificar").removeClass("d-none");
+    $("#boton\\.parto\\.cancelar").addClass("d-none");
     $("#boton\\.parto\\.eliminar").removeClass("d-none");
     //desbloquear cajas
     $("#id_paciente").prop("disabled", true);
