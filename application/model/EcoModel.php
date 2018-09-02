@@ -154,8 +154,8 @@ class EcoModel
                 return self::getEcos($rut, $tipo);
             }
             else {
-                $data["solicito_consentimiento"] = ($data["solicito_consentimiento"] = "true" ? 1 : 0);
-                $data["acepto_consentimiento"] = ($data["acepto_consentimiento"] = "true" ? 1 : 0);
+                $data["solicito_consentimiento"] = ($data["solicito_consentimiento"] == "true" ? 1 : 0);
+                $data["acepto_consentimiento"] = ($data["acepto_consentimiento"] == "true" ? 1 : 0);
 
                 $sql = "INSERT INTO parto (id_paciente ,id_rn, nombre_madre ,apellido_madre ,lugar_parto_rn ,nombre_rn ,apellido_rn , sexo_rn,fecha_parto_rn ,eg_parto ,termino_parto ,tipo_parto ,tipo_patologia_obstetrica ,peso_rn ,talla_rn ,perimetro_craneo_rn ,ipn_rn ,peso_eg_nacional ,peso_eg_regional ,peso_eg_ajustado ,ipn_eg_ajustado ,peso_placentario ,apgar_1 ,apgar_5 ,hipoglicemia_riesgo ,hipoglicemia_sospechada ,hipoglicemia_confirmada ,hiperbilirrubinemia ,poliglobulia ,hospital_ucin ,sindrome_respiratorio ,alta_con_madre ,observaciones ,meconio ,conducta_tres ,glicemia_tres,dextro_tres,conducta_dos,glicemia_dos,dextro_dos ,conducta_uno ,glicemia_uno ,dextro_uno ,prof_alta_rn ,prof_atencion_parto,solicito_consentimiento,acepto_consentimiento) VALUES (:id_paciente,:id_rn,:nombre_madre,:apellido_madre,:lugar_parto_rn,:nombre_rn,:apellido_rn,:sexo_rn, :fecha_parto_rn,:eg_parto,:termino_parto,:tipo_parto,:tipo_patologia_obstetrica,:peso_rn,:talla_rn,:perimetro_craneo_rn,:ipn_rn,:peso_eg_nacional,:peso_eg_regional,:peso_eg_ajustado,:ipn_eg_ajustado,:peso_placentario,:apgar_1,:apgar_5,:hipoglicemia_riesgo,:hipoglicemia_sospechada,:hipoglicemia_confirmada,:hiperbilirrubinemia,:poliglobulia,:hospital_ucin,:sindrome_respiratorio,:alta_con_madre,:observaciones,:meconio,:conducta_tres,:glicemia_tres,:dextro_tres,:conducta_dos,:glicemia_dos,:dextro_dos,:conducta_uno ,:glicemia_uno, :dextro_uno ,:prof_alta_rn ,:prof_atencion_parto,:solicito_consentimiento,:acepto_consentimiento)";
                 $query = $database->prepare($sql);
