@@ -59,7 +59,7 @@
                 <?php } else { ?>
                     <ul class="navbar-nav">
                         <li class="nav-item <?php if (View::checkForActiveController($filename, "login/index")) { echo 'active'; } ?>">
-                            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index"><i class="fa fa-sign-in" aria-hidden="true"></i> Ingresar a plataforma</a>
+                            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar a plataforma personalizada</a>
                         </li>
                     </ul>
                 <?php } ?>

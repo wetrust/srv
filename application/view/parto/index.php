@@ -19,7 +19,7 @@
         <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>">Inicio</a>
         <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento intrauterino</span>
         <?php if (Session::userIsLoggedIn() == false) { ?>
-            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
+            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar a plataforma personalizada</a>
         <?php } else { ?>
             <span class="navbar-text my-2 my-sm-0"><?php echo Session::get('user_name'); ?></span>
         <?php } ?>
