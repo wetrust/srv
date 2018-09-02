@@ -651,12 +651,13 @@ $(document).ready(function() {
                     guardarParto(solicitado,aceptado);
                     $("#dialog").modal("hide");
                 });
+                ("#dialog").modal("show"); 
             }
             else{
                 guardarParto(false,false);
             }
         }
-        $("#dialog").modal("show"); 
+        $
     });
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
