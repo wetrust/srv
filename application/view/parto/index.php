@@ -18,10 +18,13 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>">Inicio</a>
         <span class="navbar-text mx-auto text-white text-uppercase">Evaluación postnatal del crecimiento intrauterino</span>
-        <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
+        <?php if (Session::userIsLoggedIn() == false) { ?>
+            <a class="btn btn-outline-light my-2 my-sm-0" href="<?php echo Config::get('URL'); ?>login/index">Ingresar</a>
+        <?php } else { ?>
+            <span class="navbar-text my-2 my-sm-0"><?php echo Session::get('user_name'); ?></span>
+        <?php } ?>
+        
     </nav>
-    <?php if (Session::userIsLoggedIn() == false) { ?>
-    <?php } ?>
     <section class="container-fluid">
         <div class="card bg-light">
             <div class="card-body">
