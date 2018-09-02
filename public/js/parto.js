@@ -640,6 +640,9 @@ $(document).ready(function() {
             $("#dialog\\.exit").html("Cancelar");
             $("#dialog\\.action").off("click").removeClass("d-none").html("Guardar");
             $("#dialog\\.action").on("click", function(){
+
+                alert("solicitado: " + $( "input[type=radio][name=consentimiento_solicitado]:checked" ).val());
+                alert("aceptado: " + $( "input[type=radio][name=consentimiento_aceptado]:checked" ).val());
                 guardarParto();
                 $("#dialog").modal("hide");
             });
