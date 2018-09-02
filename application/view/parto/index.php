@@ -86,7 +86,7 @@
                         <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfregionalview"><small>PDF Regional</small></a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#pdfviebox" class="btn btn-primary p-1 text-left" id="pdfregionalview"><small>Ver Base de datos</small></a>
+                        <a href="#pdfviebox" class="btn btn-primary p-1 text-left" .id="pdfregionalview"><small>Ver Base de datos</small></a>
                     </li>
                 </ul>
             </div>
@@ -708,6 +708,71 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-1 mx-0" style="overflow: auto;height: calc(100vh - 150px); display:none;" id="pdfviebox">
+                    <div class="col">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe id="pdfview" class="embed-responsive-item" src=""></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-1 mx-0" style="overflow: auto;height: calc(100vh - 150px); display:none;" id="db">
+                    <div class="col">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Id Paciente</th>
+                                    <th scope="col">Nombre Madre</th>
+                                    <th scope="col">Apellido Madre</th>
+                                    <th scope="col">Lugar Parto RN</th>
+                                    <th scope="col">Id RN</th>
+                                    <th scope="col">Nombre RN</th>
+                                    <th scope="col">Apellido RN</th>
+                                    <th scope="col">Sexo RN</th>
+                                    <th scope="col">Fecha parto RN</th>
+                                    <th scope="col">Eg parto</th>
+                                    <th scope="col">Termino parto</th>
+                                    <th scope="col">Tipo parto</th>
+                                    <th scope="col">Tipo patologia obstetrica</th>
+                                    <th scope="col">Meconio</th>
+                                    <th scope="col">Peso RN</th>
+                                    <th scope="col">Talla RN</th>
+                                    <th scope="col">Perimetro Craneo RN</th>
+                                    <th scope="col">IPN/RN</th>
+                                    <th scope="col">Peso placentario</th>
+                                    <th scope="col">Apgar 1</th>
+                                    <th scope="col">Apgar 5</th>
+                                    <th scope="col">Hiperbilirrubinemia</th>
+                                    <th scope="col">Poliglobulia</th>
+                                    <th scope="col">Hospital ucin</th>
+                                    <th scope="col">Sindrome respiratorio</th>
+                                    <th scope="col">Alta con madre</th>
+                                    <th scope="col">Observaciones</th>
+                                    <th scope="col">Hipoglicemia Riesgo</th>
+                                    <th scope="col">Hipoglicemia Sospechada</th>
+                                    <th scope="col">Hipoglicemia Confirmada</th>
+                                    <th scope="col">Dextro uno</th>
+                                    <th scope="col">Glicemia uno</th>
+                                    <th scope="col">Conducta uno</th>
+                                    <th scope="col">Dextro dos</th>
+                                    <th scope="col">Glicemia dos</th>
+                                    <th scope="col">Conducta dos</th>
+                                    <th scope="col">Dextro tres</th>
+                                    <th scope="col">Glicemia tres</th>
+                                    <th scope="col">Conducta tres</th>
+                                    <th scope="col">Prof alta RN</th>
+                                    <th scope="col">Prof atencion parto</th>
+                                    <th scope="col">Peso/Eg ajustado</th>
+                                    <th scope="col">IPN/Eg ajustado</th>
+                                    <th scope="col">Solicito Consentimiento</th>
+                                    <th scope="col">Acepto Consentimiento</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table.db.partos">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Modal -->
@@ -730,7 +795,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-secondary p-1" id="menuListaPartos">
         <a class="navbar-brand ml-3" data-hide="true" id="listaPartos" href="#"><i class="fas fa-th"></i> Lista de Ultimos Partos</a>
@@ -763,15 +827,4 @@
 </body>
 </html>
 
-        <div class="container" id="pdfviebox" style="display:none;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#recienacido">Volver</a></li>
-            </ol>
-            <div class="row mt-2">
-                <div class="col">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe id="pdfview" class="embed-responsive-item" src=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+        

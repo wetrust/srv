@@ -111,6 +111,26 @@ function guardarParto(solicitado, aceptado){
         obtenerPartos();
     });
 }
+
+function databasePartos(){
+
+    var data = {
+        id: "1",
+        tipo: 4
+    }
+
+    $.post(serverURL + "examen/get", data).done(function(response) {
+        $("#table\\.db\\.partos").empty();
+        if (Object.keys(response).length > 0) {
+            if (Object.keys(response.data).length > 0) {
+                $.each(response.data, function(i, val) {
+                    let fila = "<tr><th scope='row'>"+ val.id_parto+ "</th><td>"+val.id_paciente+"</td><td>"+val.nombre_madre+"</td><td>"+val.apellido_madre+"</td><td>"+val.lugar_parto_rn+"</td><td>"+val.id_rn+"</td><td>"+val.nombre_rn+"</td><td>"+val.apellido_rn+"</td><td>"+val.sexo_rn+"</td><td>"+val.fecha_parto_rn+"</td><td>"+val.eg_parto+"</td><td>"+val.termino_parto+"</td><td>"+val.tipo_parto+"</td><td>"+val.tipo_patologia_obstetrica+"</td><td>"+val.meconio+"</td><td>"+val.peso_rn+"</td><td>"+val.talla_rn+"</td><td>"+val.perimetro_craneo_rn+"</td><td>"+val.ipn_rn+"</td><td>"+val.peso_placentario+"</td><td>"+val.apgar_1+"</td><td>"+val.apgar_5+"</td><td>"+val.hiperbilirrubinemia+"</td><td>"+val.poliglobulia+"</td><td>"+val.hospital_ucin+"</td><td>"+val.sindrome_respiratorio+"</td><td>"+val.alta_con_madre+"</td><td>"+val.observaciones+"</td><td>"+val.hipoglicemia_riesgo+"</td><td>"+val.hipoglicemia_sospechada+"</td><td>"+val.hipoglicemia_confirmada+"</td><td>"+val.dextro_uno+"</td><td>"+val.glicemia_uno+"</td><td>"+val.conducta_uno+"</td><td>"+val.dextro_dos+"</td><td>"+val.glicemia_dos+"</td><td>"+val.conducta_dos+"</td><td>"+val.dextro_tres+"</td><td>"+val.glicemia_tres+"</td><td>"+val.conducta_tres+"</td><td>"+val.prof_alta_rn+"</td><td>"+val.prof_atencion_parto+"</td><td>"+val.peso_eg_ajustado+"</td><td>"+val.ipn_eg_ajustado+"</td><td>"+val.solicito_consentimiento+"</td><td>"+val.acepto_consentimiento+"</td></tr>";
+                    $("#table\\.db\\.partos").append(fila);
+                });
+            }
+        }
+    });
+}
 function obtenerPartos() {
     var data = {
         id: "1",
@@ -1832,7 +1852,11 @@ $(document).ready(function() {
             displayElement("hipoglicemia");
         } else if (hash == "#postnatal") {
             displayElement("postnatal");
+            obtenerPartos();
         }
+     else if (hash == "#db") {
+        displayElement("db");
+    }
     });
 
     $("#pdfnacionalview").on("click", function() {
@@ -1851,6 +1875,7 @@ function displayElement(div_id) {
     $('#recienacido').hide();
     $('#postnatal').hide();
     $('#hipoglicemia').hide();
+    $('#db').hide();
     $('#' + div_id).show();
 }
 
