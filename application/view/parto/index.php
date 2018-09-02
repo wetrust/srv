@@ -710,11 +710,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p id="modal.text">¿Está seguro de eliminar el exámen seleccionado?</p>
+                    <p id="dialog.text">¿Está seguro de eliminar el exámen seleccionado?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modal.exit">Cancelar</button>
-                    <button type="button" class="btn btn-primary" id="modal.action">Eliminar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="dialog.exit">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="dialog.action">Eliminar</button>
                 </div>
                 </div>
             </div>

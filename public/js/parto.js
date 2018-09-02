@@ -1,3 +1,108 @@
+function guardarParto(){
+    $("#boton\\.parto\\.guardar").addClass("d-none");
+    $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
+    $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
+    $("#boton\\.hipoglicemia\\.cancelar").removeClass("d-none");
+    $("#boton\\.parto\\.nuevo").removeClass("d-none");
+    $("#boton\\.parto\\.modificar").removeClass("d-none");
+    $("#boton\\.parto\\.eliminar").removeClass("d-none");
+    //desbloquear cajas
+    $("#id_paciente").prop("disabled", true);
+    $("#nombre_madre").prop("disabled", true);
+    $("#apellido_madre").prop("disabled", true);
+    $("#lugar_parto_rn").prop("disabled", true);
+    $("#id_rn").prop("disabled", true);
+    $("#nombre_rn").prop("disabled", true);
+    $("#apellido_rn").prop("disabled", true);
+    $("#sexo_rn").prop("disabled", true);
+    $("#fecha_parto_rn").prop("disabled", true);
+    $("#datos\\.neonatal\\.edad").prop("disabled", true);
+    $("#termino_parto").prop("disabled", true);
+    $("#tipo_parto").prop("disabled", true);
+    $("#tipo_patologia_obstetrica").prop("disabled", true);
+    $("#meconio").prop("disabled", true);
+    $("#datos\\.neonatal\\.peso").prop("disabled", true);
+    $("#datos\\.neonatal\\.talla").prop("disabled", true);
+    $("#perimetro_craneo_rn").prop("disabled", true);
+    $("#peso_placentario").prop("disabled", true);
+    $("#apgar_1").prop("disabled", true);
+    $("#apgar_5").prop("disabled", true);
+    $("#hiperbilirrubinemia").prop("disabled", true);
+    $("#poliglobulia").prop("disabled", true);
+    $("#hospital_ucin").prop("disabled", true);
+    $("#sindrome_respiratorio").prop("disabled", true);
+    $("#alta_con_madre").prop("disabled", true);
+    $("#observaciones").prop("disabled", true);
+    $("#prof\\.atencion\\.parto").prop("disabled", true);
+    $("#dextro_uno").prop("disabled", true);
+    $("#glicemia_uno").prop("disabled", true);
+    $("#conducta\\.uno").prop("disabled", true);
+    $("#dextro_dos").prop("disabled", true);
+    $("#glicemia_dos").prop("disabled", true);
+    $("#conducta\\.dos").prop("disabled", true);
+    $("#dextro_tres").prop("disabled", true);
+    $("#glicemia_tres").prop("disabled", true);
+    $("#conducta\\.tres").prop("disabled", true);
+    $("#hipoglicemia_riesgo").prop("disabled", true);
+    $("#hipoglicemia_sospechada").prop("disabled", true);
+    $("#hipoglicemia_confirmada").prop("disabled", true);
+    $("#prof\\.alta\\.rn").prop("disabled", true);
+    $("#prof\\.atencion\\.parto").prop("disabled", true);
+
+    var parto = {
+        id_paciente: $("#id_paciente").val(),
+        nombre_madre: $("#nombre_madre").val(),
+        apellido_madre: $("#apellido_madre").val(),
+        lugar_parto_rn: $("#lugar_parto_rn").val(),
+        id_rn: $("#id_rn").val(),
+        nombre_rn: $("#nombre_rn").val(),
+        apellido_rn: $("#apellido_rn").val(),
+        sexo_rn: $("#sexo_rn").val(),
+        fecha_parto_rn: $("#fecha_parto_rn").val(),
+        eg_parto: $("#datos\\.neonatal\\.edad").val(),
+        termino_parto: $("#termino_parto").val(),
+        tipo_parto: $("#tipo_parto").val(),
+        tipo_patologia_obstetrica: $("#tipo_patologia_obstetrica").val(),
+        meconio: $("#meconio").val(),
+        peso_rn: $("#datos\\.neonatal\\.peso").val(),
+        talla_rn: $("#datos\\.neonatal\\.talla").val(),
+        perimetro_craneo_rn: $("#perimetro_craneo_rn").val(),
+        ipn_rn: $("#datos\\.neonatal\\.ipn").val(),
+        peso_placentario: $("#peso_placentario").val(),
+        apgar_1: $("#apgar_1").val(),
+        apgar_5: $("#apgar_5").val(),
+        hiperbilirrubinemia: $("#hiperbilirrubinemia").val(),
+        poliglobulia: $("#poliglobulia").val(),
+        hospital_ucin: $("#hospital_ucin").val(),
+        sindrome_respiratorio: $("#sindrome_respiratorio").val(),
+        alta_con_madre: $("#alta_con_madre").val(),
+        observaciones: $("#observaciones").val(),
+        hipoglicemia_riesgo: $("#hipoglicemia_riesgo").val(),
+        hipoglicemia_sospechada: $("#hipoglicemia_sospechada").val(),
+        hipoglicemia_confirmada: $("#hipoglicemia_confirmada").val(),
+        dextro_uno: $("#dextro_uno").val(),
+        glicemia_uno: $("#glicemia_uno").val(),
+        conducta_uno: $("#conducta\\.uno").val(),
+        dextro_dos: $("#dextro_dos").val(),
+        glicemia_dos: $("#glicemia_dos").val(),
+        conducta_dos: $("#conducta\\.dos").val(),
+        dextro_tres: $("#dextro_tres").val(),
+        glicemia_tres: $("#glicemia_tres").val(),
+        conducta_tres: $("#conducta\\.tres").val(),
+        prof_alta_rn: $("#prof\\.alta\\.rn").val(),
+        prof_atencion_parto: $("#prof\\.atencion\\.parto").val()
+    }
+
+    var data = {
+        id: $("#id_paciente").val(),
+        tipo: 4,
+        data:JSON.stringify(parto)
+    }
+
+    $.post(serverURL + "examen/set/", data).done(function(response) {
+        obtenerPartos();
+    });
+}
 function obtenerPartos() {
     var data = {
         id: "1",
@@ -403,9 +508,9 @@ $(document).ready(function() {
 
         if ($("#id_paciente").val() == ""){
             $("#dialog\\.title").html("Modificar");
-            $("#modal\\.text").html("Debe seleccional un examen primero");
-            $("#modal\\.action").off("click").addClass("d-none");
-            $("#modal\\.exit").html("Aceptar");    
+            $("#dialog\\.text").html("<p>Debe seleccional un examen primero</p>");
+            $("#dialog\\.action").off("click").addClass("d-none");
+            $("#dialog\\.exit").html("Aceptar");    
         }
         else{
             $("#boton\\.parto\\.guardar").removeClass("d-none");
@@ -516,125 +621,39 @@ $(document).ready(function() {
     });
 
     $("#boton\\.parto\\.guardar").on("click", function() {
-        $("#boton\\.parto\\.guardar").addClass("d-none");
-        $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
-        $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
-        $("#boton\\.hipoglicemia\\.cancelar").removeClass("d-none");
-        $("#boton\\.parto\\.nuevo").removeClass("d-none");
-        $("#boton\\.parto\\.modificar").removeClass("d-none");
-        $("#boton\\.parto\\.eliminar").removeClass("d-none");
-        //desbloquear cajas
-        $("#id_paciente").prop("disabled", true);
-        $("#nombre_madre").prop("disabled", true);
-        $("#apellido_madre").prop("disabled", true);
-        $("#lugar_parto_rn").prop("disabled", true);
-        $("#id_rn").prop("disabled", true);
-        $("#nombre_rn").prop("disabled", true);
-        $("#apellido_rn").prop("disabled", true);
-        $("#sexo_rn").prop("disabled", true);
-        $("#fecha_parto_rn").prop("disabled", true);
-        $("#datos\\.neonatal\\.edad").prop("disabled", true);
-        $("#termino_parto").prop("disabled", true);
-        $("#tipo_parto").prop("disabled", true);
-        $("#tipo_patologia_obstetrica").prop("disabled", true);
-        $("#meconio").prop("disabled", true);
-        $("#datos\\.neonatal\\.peso").prop("disabled", true);
-        $("#datos\\.neonatal\\.talla").prop("disabled", true);
-        $("#perimetro_craneo_rn").prop("disabled", true);
-        $("#peso_placentario").prop("disabled", true);
-        $("#apgar_1").prop("disabled", true);
-        $("#apgar_5").prop("disabled", true);
-        $("#hiperbilirrubinemia").prop("disabled", true);
-        $("#poliglobulia").prop("disabled", true);
-        $("#hospital_ucin").prop("disabled", true);
-        $("#sindrome_respiratorio").prop("disabled", true);
-        $("#alta_con_madre").prop("disabled", true);
-        $("#observaciones").prop("disabled", true);
-        $("#prof\\.atencion\\.parto").prop("disabled", true);
-        $("#dextro_uno").prop("disabled", true);
-        $("#glicemia_uno").prop("disabled", true);
-        $("#conducta\\.uno").prop("disabled", true);
-        $("#dextro_dos").prop("disabled", true);
-        $("#glicemia_dos").prop("disabled", true);
-        $("#conducta\\.dos").prop("disabled", true);
-        $("#dextro_tres").prop("disabled", true);
-        $("#glicemia_tres").prop("disabled", true);
-        $("#conducta\\.tres").prop("disabled", true);
-        $("#hipoglicemia_riesgo").prop("disabled", true);
-        $("#hipoglicemia_sospechada").prop("disabled", true);
-        $("#hipoglicemia_confirmada").prop("disabled", true);
-        $("#prof\\.alta\\.rn").prop("disabled", true);
-        $("#prof\\.atencion\\.parto").prop("disabled", true);
 
-        var parto = {
-            id_paciente: $("#id_paciente").val(),
-            nombre_madre: $("#nombre_madre").val(),
-            apellido_madre: $("#apellido_madre").val(),
-            lugar_parto_rn: $("#lugar_parto_rn").val(),
-            id_rn: $("#id_rn").val(),
-            nombre_rn: $("#nombre_rn").val(),
-            apellido_rn: $("#apellido_rn").val(),
-            sexo_rn: $("#sexo_rn").val(),
-            fecha_parto_rn: $("#fecha_parto_rn").val(),
-            eg_parto: $("#datos\\.neonatal\\.edad").val(),
-            termino_parto: $("#termino_parto").val(),
-            tipo_parto: $("#tipo_parto").val(),
-            tipo_patologia_obstetrica: $("#tipo_patologia_obstetrica").val(),
-            meconio: $("#meconio").val(),
-            peso_rn: $("#datos\\.neonatal\\.peso").val(),
-            talla_rn: $("#datos\\.neonatal\\.talla").val(),
-            perimetro_craneo_rn: $("#perimetro_craneo_rn").val(),
-            ipn_rn: $("#datos\\.neonatal\\.ipn").val(),
-            peso_placentario: $("#peso_placentario").val(),
-            apgar_1: $("#apgar_1").val(),
-            apgar_5: $("#apgar_5").val(),
-            hiperbilirrubinemia: $("#hiperbilirrubinemia").val(),
-            poliglobulia: $("#poliglobulia").val(),
-            hospital_ucin: $("#hospital_ucin").val(),
-            sindrome_respiratorio: $("#sindrome_respiratorio").val(),
-            alta_con_madre: $("#alta_con_madre").val(),
-            observaciones: $("#observaciones").val(),
-            hipoglicemia_riesgo: $("#hipoglicemia_riesgo").val(),
-            hipoglicemia_sospechada: $("#hipoglicemia_sospechada").val(),
-            hipoglicemia_confirmada: $("#hipoglicemia_confirmada").val(),
-            dextro_uno: $("#dextro_uno").val(),
-            glicemia_uno: $("#glicemia_uno").val(),
-            conducta_uno: $("#conducta\\.uno").val(),
-            dextro_dos: $("#dextro_dos").val(),
-            glicemia_dos: $("#glicemia_dos").val(),
-            conducta_dos: $("#conducta\\.dos").val(),
-            dextro_tres: $("#dextro_tres").val(),
-            glicemia_tres: $("#glicemia_tres").val(),
-            conducta_tres: $("#conducta\\.tres").val(),
-            prof_alta_rn: $("#prof\\.alta\\.rn").val(),
-            prof_atencion_parto: $("#prof\\.atencion\\.parto").val()
+        if ($("#id_paciente").val() == ""){
+            $("#dialog\\.title").html("Guardar");
+            $("#dialog\\.text").html("<p>Debe seleccional un examen primero</p>");
+            $("#dialog\\.action").off("click").addClass("d-none");
+            $("#dialog\\.exit").html("Aceptar");    
         }
-
-        var data = {
-            id: $("#id_paciente").val(),
-            tipo: 4,
-            data:JSON.stringify(parto)
+        else{
+            let content = "";
+            content = '<p>Antes de guardar, se sugiere solicitar consentimiento informado</p><p>¿Consentimiento solicitado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="false" checked><label class="form-check-label">No</label></div></div></div><p>¿Consentimiento aceptado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="false" checked><label class="form-check-label">No</label></div></div></div>';
+            $("#dialog\\.title").html(content);
+            $("#dialog\\.exit").html("Cancelar");
+            $("#dialog\\.action").off("click").removeClass("d-none");
+            $("#dialog\\.action").on("click", function(){
+                guardarParto();
+                $("#dialog").modal("hide");
+            });
         }
-
-        $.post(serverURL + "examen/set/", data).done(function(response) {
-            obtenerPartos();
-        });
-
     });
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
         if ($("#id_paciente").val() == ""){
             $("#dialog\\.title").html("Eliminar");
-            $("#modal\\.text").html("Debe seleccional un examen primero");
-            $("#modal\\.action").off("click").addClass("d-none");
-            $("#modal\\.exit").html("Aceptar");    
+            $("#dialog\\.text").html("<p>Debe seleccional un examen primero</p>");
+            $("#dialog\\.action").off("click").addClass("d-none");
+            $("#dialog\\.exit").html("Aceptar");    
         }
         else{
             $("#dialog\\.title").html("Eliminar");
-            $("#modal\\.text").html("¿Está seguro de eliminar el exámen seleccionado?");
-            $("#modal\\.exit").html("Cancelar"); 
-            $("#modal\\.action").off("click").removeClass("d-none");
-            $("#modal\\.action").on("click", function(){
+            $("#dialog\\.text").html("<p>¿Está seguro de eliminar el exámen seleccionado?</p>");
+            $("#dialog\\.exit").html("Cancelar"); 
+            $("#dialog\\.action").off("click").removeClass("d-none");
+            $("#dialog\\.action").on("click", function(){
                 eliminarParto();
                 $("#dialog").modal("hide");
             });
