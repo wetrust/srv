@@ -1,4 +1,4 @@
-function guardarParto(){
+function guardarParto(solicitado, aceptado){
     $("#boton\\.parto\\.guardar").addClass("d-none");
     $("#boton\\.hipoglicemia\\.guardar").addClass("d-none");
     $("#boton\\.hipoglicemia\\.modificar").removeClass("d-none");
@@ -94,7 +94,9 @@ function guardarParto(){
         peso_eg_nacional: 0,
         peso_eg_regional: 0,
         peso_eg_ajustado: $("#PesoEgeCAj").val(),
-        ipn_eg_ajustado: $("#IpnPct").val()
+        ipn_eg_ajustado: $("#IpnPct").val(),
+        solicito_consentimiento: solicitado,
+        acepto_consentimiento: aceptado
     }
 
     var data = {
@@ -206,6 +208,7 @@ function loadExamen(tipo, id) {
                         $("#dextro_uno").val(val.dextro_uno);
                         $("#prof\\.alta\\.rn").val(val.prof_alta_rn);
                         $("#prof\\.atencion\\.parto").val(val.prof_atencion_parto);
+                        $("#datos\\.parto\\.consentimiento").val(true);
                     };
                 });
             }
@@ -506,6 +509,7 @@ $(document).ready(function() {
         $("#hipoglicemia_confirmada").prop("disabled", false).val(1);
         $("#prof\\.alta\\.rn").prop("disabled", false).val("");
         $("#prof\\.atencion\\.parto").prop("disabled", false).val("");
+        $("#datos\\.parto\\.consentimiento").val(false);
     });
 
     $("#boton\\.parto\\.modificar").on("click", function() {
@@ -626,26 +630,31 @@ $(document).ready(function() {
 
     $("#boton\\.parto\\.guardar").on("click", function() {
 
+        
         if ($("#id_paciente").val() == ""){
             $("#dialog\\.title").html("Guardar");
-            $("#dialog\\.text").html("<p>Debe seleccional un examen primero</p>");
+            $("#dialog\\.text").html("<p>Ingrese un numero de registro (id, RUT)</p>");
             $("#dialog\\.action").off("click").addClass("d-none");
             $("#dialog\\.exit").html("Aceptar");   
         }
         else{
             let content = "";
-            $("#dialog\\.title").html("Guardar");
-            content = '<p>Antes de guardar, se sugiere solicitar consentimiento informado</p><p>¿Consentimiento solicitado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="false" checked><label class="form-check-label">No</label></div></div></div><p>¿Consentimiento aceptado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="false" checked><label class="form-check-label">No</label></div></div></div>';
-            $("#dialog\\.text").html(content);
-            $("#dialog\\.exit").html("Cancelar");
-            $("#dialog\\.action").off("click").removeClass("d-none").html("Guardar");
-            $("#dialog\\.action").on("click", function(){
-
-                alert("solicitado: " + $( "input[type=radio][name=consentimiento_solicitado]:checked" ).val());
-                alert("aceptado: " + $( "input[type=radio][name=consentimiento_aceptado]:checked" ).val());
-                guardarParto();
-                $("#dialog").modal("hide");
-            });
+            if ($("#datos\\.parto\\.consentimiento").val() == false){
+                $("#dialog\\.title").html("Guardar");
+                content = '<p>Antes de guardar, se sugiere solicitar consentimiento informado</p><p>¿Consentimiento solicitado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="false" checked><label class="form-check-label">No</label></div></div></div><p>¿Consentimiento aceptado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="false" checked><label class="form-check-label">No</label></div></div></div>';
+                $("#dialog\\.text").html(content);
+                $("#dialog\\.exit").html("Cancelar");
+                $("#dialog\\.action").off("click").removeClass("d-none").html("Guardar");
+                $("#dialog\\.action").on("click", function(){
+                    let solicitado = $( "input[type=radio][name=consentimiento_solicitado]:checked" ).val();
+                    let aceptado = $( "input[type=radio][name=consentimiento_aceptado]:checked" ).val();
+                    guardarParto(solicitado,aceptado);
+                    $("#dialog").modal("hide");
+                });
+            }
+            else{
+                guardarParto(false,false);
+            }
         }
         $("#dialog").modal("show"); 
     });

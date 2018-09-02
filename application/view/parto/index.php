@@ -95,6 +95,7 @@
                         <div class="card mb-3 mt-2">
                             <div class="card-body">
                                 <h5 class="card-title mb-3"><i class="fas fa-female"></i> Datos de la madre</h5>
+                                <input id="datos.parto.consentimiento" type="hidden" value="false">
                                 <div class="form-row">
                                     <div class="col-2 form-group">
                                         <h6 class="text-primary">N° de Registro</h6>
