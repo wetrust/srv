@@ -52,31 +52,31 @@
                        Datos del Parto y RN
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#neonatal" class="btn btn-primary rounded">Ingreso de Datos</a>
+                        <a href="#neonatal" class="btn btn-primary rounded"><small>Ingreso de Datos</small></a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#recienacido" class="btn btn-primary rounded text-left">Evaluación Peso e IPN,<br><span class="text-lowercase">(dos curvas)</span></a>
+                        <a href="#recienacido" class="btn btn-primary rounded text-left"><small>Evaluación Peso e IPN,<br><span class="text-lowercase">(dos curvas)</span></small></a>
                     </li>
                     <li class="nav-item ml-2 my-1">
                        Proyecto en desarrollo
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#postnatal" class="btn btn-primary rounded text-left">Curvas de crecimiento,<br><span class="text-lowercase">(dos modelos)</span></a>
+                        <a href="#postnatal" class="btn btn-primary rounded text-left"><small>Curvas de crecimiento,<br><span class="text-lowercase">(dos modelos)</span></small></a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#ajustepeso" class="btn btn-primary text-left rounded">Ver Curvas<br>customizadas</a>
+                        <a href="#ajustepeso" class="btn btn-primary text-left rounded"><small>Ver Curvas<br>customizadas</small></a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#hipoglicemia" class="btn btn-primary text-left rounded">Protocolo hipoglicemia<br>neonatal</a>
+                        <a href="#hipoglicemia" class="btn btn-primary text-left rounded"><small>Protocolo hipoglicemia<br>neonatal</small></a>
                     </li>
                     <li class="nav-item ml-2 my-1">
-                        Ver PDF
+                        Ver PDF de curvas
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#pdfviebox" class="btn btn-primary text-left rounded" id="pdfregionalview">PDF Regional</a>
+                        <a href="#pdfviebox" class="btn btn-primary text-left rounded" id="pdfregionalview"><small>PDF Regional</small></a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a href="#pdfviebox" class="btn btn-primary text-left rounded" id="pdfnacionalview">PDF Nacional</a>
+                        <a href="#pdfviebox" class="btn btn-primary text-left rounded" id="pdfnacionalview"><small>PDF Nacional</small></a>
                     </li>
                 </ul>
             </div>
