@@ -69,6 +69,15 @@
                     <li class="nav-item ml-2">
                         <a href="#hipoglicemia" class="btn btn-primary text-left rounded">Protocolo hipoglicemia<br>neonatal</a>
                     </li>
+                    <li class="nav-item ml-2 my-1">
+                        Ver PDF
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a href="#pdfviebox" class="btn btn-primary text-left rounded" id="pdfregionalview">PDF Regional</a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a href="#pdfviebox" class="btn btn-primary text-left rounded" id="pdfnacionalview">PDF Nacional</a>
+                    </li>
                 </ul>
             </div>
             <div class="col px-0 border-left">
@@ -365,7 +374,7 @@
                                     </div>
                                 </div>
                                 <small class="text-info">Graficas para categorizar crecimiento y ponderación de variables biológicas</small><br>
-                                <small>* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274. <a id="pdfnacionalview" href="#pdfviebox">Ver PDF</a><br>** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4). <a id="pdfregionalview" href="#pdfviebox">Ver PDF</a></small>
+                                <small>* Grafica Nacional: M. Milad. A y Col.; Rev. Chil. Pediatr. 2010; 81(3): 1264-274.<br>** Grafica Regional: Lagos y col. Rev. Chilena Obtet. Ginecol. 2009; 74(4).</small>
                             </div>
                         </div>
                     </div>
