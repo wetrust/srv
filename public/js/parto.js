@@ -49,6 +49,7 @@ function guardarParto(solicitado, aceptado){
     $("#hipoglicemia_confirmada").prop("disabled", true);
     $("#prof\\.alta\\.rn").prop("disabled", true);
     $("#prof\\.atencion\\.parto").prop("disabled", true);
+    $("#datos\\.parto\\.consentimiento").val(true)
 
     var parto = {
         id_paciente: $("#id_paciente").val(),
