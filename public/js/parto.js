@@ -626,8 +626,7 @@ $(document).ready(function() {
             $("#dialog\\.title").html("Guardar");
             $("#dialog\\.text").html("<p>Debe seleccional un examen primero</p>");
             $("#dialog\\.action").off("click").addClass("d-none");
-            $("#dialog\\.exit").html("Aceptar"); 
-            $("#dialog").modal("show");   
+            $("#dialog\\.exit").html("Aceptar");   
         }
         else{
             let content = "";
@@ -635,13 +634,13 @@ $(document).ready(function() {
             content = '<p>Antes de guardar, se sugiere solicitar consentimiento informado</p><p>¿Consentimiento solicitado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_solicitado" value="false" checked><label class="form-check-label">No</label></div></div></div><p>¿Consentimiento aceptado?</p><div class="form-row"><div class="col"><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="true"><label class="form-check-label">Si</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="consentimiento_aceptado" value="false" checked><label class="form-check-label">No</label></div></div></div>';
             $("#dialog\\.text").html(content);
             $("#dialog\\.exit").html("Cancelar");
-            $("#dialog\\.action").off("click").removeClass("d-none");
+            $("#dialog\\.action").off("click").removeClass("d-none").html("Guardar");
             $("#dialog\\.action").on("click", function(){
                 guardarParto();
                 $("#dialog").modal("hide");
             });
-            $("#dialog").modal("show");
         }
+        $("#dialog").modal("show"); 
     });
 
     $("#boton\\.parto\\.eliminar").on("click", function() {
