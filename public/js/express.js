@@ -289,7 +289,7 @@ $(document).ready(function() {
 
     $("#boton\\.dicom\\.imagen").on("click", function() {
         document.location.hash = "#imgDicom";
-        $("#boton\\.volver\\.imagen").on("off");
+        $("#boton\\.volver\\.imagen").off("click");
         $("#boton\\.volver\\.imagen").on("click", function() {
             history.back();
         });
