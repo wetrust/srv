@@ -135,8 +135,7 @@ function loadTablePatients() {
             $("#boton\\.volver\\.imagen").off("click");
             $("#boton\\.volver\\.imagen").on("click", function(){
                 window.location.href = "#paciente";
-                $("#step-one").removeClass("d-none");
-                $("#step-two-find").addClass("d-none");
+                $("#step-two-find").removeClass("d-none");
                 $("#step-three").addClass("d-none");
             });
         });
