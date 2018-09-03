@@ -132,6 +132,10 @@ function loadTablePatients() {
             obtenerNombre(RUTPACIENTE);
 
             window.location.href = "#imgDicom";
+            $("#boton\\.volver\\.imagen").off("click");
+            $("#boton\\.volver\\.imagen").on("click", function(){
+                window.location.href = "#paciente";
+            });
         });
     });
 }
