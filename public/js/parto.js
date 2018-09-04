@@ -1495,7 +1495,6 @@ $('#g3').click(function() {
     });
 });
 
-
 $('#tm').change(function() {
     varMama = new Mama($("#tm").val(), $("#pesom").val(), $("#em").val(), $('#apellm').val());
     $('#valorimc').val(varMama.imc());
