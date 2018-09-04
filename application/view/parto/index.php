@@ -90,7 +90,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col px-0 border-left">
+            <div class="col-10 px-0 border-left">
                 <div class="row mt-1 mx-0" style="overflow: hidden;height: calc(100vh - 150px);" id="neonatal">
                     <div class="col-12 p-0 col-sm-2 order-sm-1">
                         <div class="btn-group-vertical d-flex justify-content-center" role="group" aria-label="First group">
@@ -762,8 +762,8 @@
                                     <th scope="col">Conducta tres</th>
                                     <th scope="col">Prof alta RN</th>
                                     <th scope="col">Prof atencion parto</th>
-                                    <th scope="col">Peso/Eg ajustado</th>
-                                    <th scope="col">IPN/Eg ajustado</th>
+                                    <th scope="col">Peso/Eg</th>
+                                    <th scope="col">IPN/Eg</th>
                                     <th scope="col">Solicito Consentimiento</th>
                                     <th scope="col">Acepto Consentimiento</th>
                                 </tr>
