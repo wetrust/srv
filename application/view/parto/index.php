@@ -764,6 +764,7 @@
                                     <th scope="col">Prof atencion parto</th>
                                     <th scope="col">Peso/Eg</th>
                                     <th scope="col">IPN/Eg</th>
+                                    <th scope="col">Peso/Eg Ajustado</td>
                                     <th scope="col">Solicito Consentimiento</th>
                                     <th scope="col">Acepto Consentimiento</th>
                                 </tr>
