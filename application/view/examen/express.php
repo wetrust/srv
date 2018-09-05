@@ -1655,6 +1655,35 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col mb-2">
+                                    <label for="bvm" class="col-form-label">BVM</label>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" class="form-control" id="bvm">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">mm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-2">
+                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="bvmPctV">
+                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
+                                    </div>
+                                    <input type="hidden" id="bvmPct">
+                                    <input type="hidden" id="bvmRango">
+                                </div>
+                                <div class="col mb-2">
+                                    <button type="button" class="btn btn-outline-info" id="graficoBVM"><i class="fas fa-chart-bar"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col mb-2">
                                     <label for="lh" class="col-form-label">LH</label>
                                 </div>
                                 <div class="col mb-2">
@@ -1769,35 +1798,6 @@
                                 </div>
                                 <div class="col mb-2">
                                     <button type="button" class="btn btn-outline-info" id="graficoCCCA"><i class="fas fa-chart-bar"></i></button>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col mb-2">
-                                    <label for="bvm" class="col-form-label"><strong class="text-primary">BVM</strong></label>
-                                </div>
-                                <div class="col mb-2">
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <input type="text" class="form-control" id="bvm">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text">mm</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mb-2">
-                                    <div class="progress mt-2 mb-2 mr-sm-2 mb-sm-0" id="bvmPctV">
-                                        <div class="progress-bar bg-light text-primary pivote-cero" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        <div class="progress-bar bg-light text-primary pivote-uno" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar bg-light text-primary pivote-dos" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar bg-light text-primary pivote-centro" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                        <div class="progress-bar bg-light text-primary pivote-tres" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar bg-light text-primary pivote-cuatro" role="progressbar" style="width: 17%" aria-valuemin="0" aria-valuemax="100"></div>
-                                        <div class="progress-bar bg-light text-primary pivote-cien" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">|</div>
-                                    </div>
-                                    <input type="hidden" id="bvmPct">
-                                    <input type="hidden" id="bvmRango">
-                                </div>
-                                <div class="col mb-2">
-                                    <button type="button" class="btn btn-outline-info" id="graficoBVM"><i class="fas fa-chart-bar"></i></button>
                                 </div>
                             </div>
                             <div class="form-group row d-none">
