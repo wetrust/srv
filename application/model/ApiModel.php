@@ -53,7 +53,6 @@ class ApiModel
 
         $chart->chart = new stdClass();
         $chart->chart->animation = false;
-        $chart->chart->width = 250;
         $chart->boost = new stdClass();
         $chart->boost->enabled = true;
         $chart->boost->useGPUTranslations = true;
@@ -129,6 +128,11 @@ class ApiModel
                     $Peso[$EG] = intval($data["PESO"]);
                 }
             } 
+            if(array_key_exists("WIDTH",$data)){
+                if (is_numeric($data["WIDTH"]) && is_numeric($data["PESO"])){
+                    $chart->chart->width = $data["WIDTH"];
+                }
+            }
         }
 
         $Serie5 = new stdClass();
