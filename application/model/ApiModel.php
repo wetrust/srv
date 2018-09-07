@@ -137,6 +137,6 @@ class ApiModel
 
         $chart->series = array($Serie1,$Serie2,$Serie3,$Serie4,$Serie5);
 
-        return $chart
+        return $chart;
     }
 }
