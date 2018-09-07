@@ -72,7 +72,7 @@ class ApiModel
         $chart->plotOptions->series->marker->symbol = "square";
         $chart->yAxis = new stdClass();
         $chart->yAxis->allowDecimals = false;
-        $chart->yAxis->min = 20;
+        $chart->yAxis->min = 50;
         $chart->yAxis->tickInterval = 300; // pasos
         $chart->yAxis->title = new stdClass();
         $chart->yAxis->title->text = 'Kilogramos';  //Unidad de medida
