@@ -71,10 +71,10 @@ class ApiModel
         $chart->plotOptions->series->marker->enabled = true;
         $chart->plotOptions->series->marker->symbol = "square";
         $chart->yAxis = new stdClass();
-        $chart->yAxis->allowDecimals: false;
-        $chart->yAxis->tickInterval: 300; // pasos
+        $chart->yAxis->allowDecimals = false;
+        $chart->yAxis->tickInterval = 300; // pasos
         $chart->yAxis->title = new stdClass();
-        $chart->yAxis->title->text: 'Kilogramos';  //Unidad de medida
+        $chart->yAxis->title->text = 'Kilogramos';  //Unidad de medida
         $chart->colors= array("#C70039", "#313131","#009688", "#313131","#C70039");
         $chart->xAxis = new stdClass();
         $chart->xAxis->min = 16;  //semana en que comienza el gráfico
