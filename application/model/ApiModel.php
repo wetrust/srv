@@ -30,7 +30,7 @@ class ApiModel
         else if ($type == "LH"){}
         else if ($type == "DCT"){}
         else if ($type == "PFE"){
-            return = self::PFE($data);
+            return self::PFE($data);
         }
         else if ($type == "CCCA"){}
         else if ($type == "AUT"){}
