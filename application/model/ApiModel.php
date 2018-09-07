@@ -128,9 +128,9 @@ class ApiModel
                     $Peso[$EG] = intval($data["PESO"]);
                 }
             } 
-            if(array_key_exists("WIDTH",$data)){
-                if (is_numeric($data["WIDTH"]) && is_numeric($data["PESO"])){
-                    $chart->chart->width = $data["WIDTH"];
+            if(array_key_exists("HEIGHT",$data)){
+                if (is_numeric($data["HEIGHT"])){
+                    $chart->chart->height = $data["HEIGHT"];
                 }
             }
         }
