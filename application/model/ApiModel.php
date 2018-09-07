@@ -53,6 +53,7 @@ class ApiModel
 
         $chart->chart = new stdClass();
         $chart->chart->animation = false;
+        $chart->chart->width = 250;
         $chart->boost = new stdClass();
         $chart->boost->enabled = true;
         $chart->boost->useGPUTranslations = true;
