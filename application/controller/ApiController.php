@@ -11,8 +11,8 @@ class ApiController extends Controller
     public function graph()
     {
         header("Access-Control-Allow-Origin: *");
-        $type = Request::get("type");
-        $data = Request::get("data");
+        $type = Request::post("type");
+        $data = Request::post("data");
         $this->View->renderJSON(ApiModel::makeChart($type,$data));
     }
 }
