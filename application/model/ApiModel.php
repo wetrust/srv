@@ -132,7 +132,7 @@ class ApiModel
         $Serie1->type = "line";
         $Serie1->name = 'Peso';
         $Serie1->dashStyle = "Dot";
-        $Serie1->lineWidth: 0,
+        $Serie1->lineWidth = 0,
         $Serie1->data = $Peso;
 
         $chart->series = array($Serie1,$Serie2,$Serie3,$Serie4,$Serie5);
