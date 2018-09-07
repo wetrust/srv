@@ -75,7 +75,7 @@ class ApiModel
         $chart->yAxis->tickInterval = 300; // pasos
         $chart->yAxis->title = new stdClass();
         $chart->yAxis->title->text = 'Kilogramos';  //Unidad de medida
-        $chart->colors= array("#C70039", "#313131","#009688", "#313131","#C70039");
+        $chart->colors= array("#C70039", "#313131","#313131","#C70039","#009688");
         $chart->xAxis = new stdClass();
         $chart->xAxis->min = 16;  //semana en que comienza el gráfico
         $chart->xAxis->max = 40;  //semana en que termina el gráfico
