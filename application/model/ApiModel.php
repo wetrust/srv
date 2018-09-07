@@ -3,7 +3,7 @@
 class ApiModel
 {
 
-    public static function makeChart($type = NULL,$data = $NULL){
+    public static function makeChart($type = NULL,$data = NULL){
 
         //tipos de gráfico
         //LCN, Saco Gestacional, DBP,DOF, CC, CA, LF, BVM
