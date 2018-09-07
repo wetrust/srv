@@ -120,7 +120,7 @@ class ApiModel
         $Serie1->data = $pct97PesoEge;
 
         if (isset($data)){
-            $data = json_decode($data);
+            $data = json_decode($data, true);
             if(array_key_exists("EG",$data) && array_key_exists("PESO",$data)){
                 if (is_numeric($data["EG"]) && is_numeric($data["PESO"])){
                     $EG = intval($data["EG"]) - 16;
