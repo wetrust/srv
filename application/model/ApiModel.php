@@ -96,28 +96,28 @@ class ApiModel
         $Serie1->marker->enabled = false;
         $Serie1->data = $pct3PesoEge;
 
-        $Serie1 = new stdClass();
-        $Serie1->type = "line";
-        $Serie1->name = 'Pct 10';
-        $Serie1->dashStyle = "Dash";
-        $Serie1->marker = new stdClass();
-        $Serie1->marker->enabled = false;
-        $Serie1->data = $pct10PesoEge;
+        $Serie2 = new stdClass();
+        $Serie2->type = "line";
+        $Serie2->name = 'Pct 10';
+        $Serie2->dashStyle = "Dash";
+        $Serie2->marker = new stdClass();
+        $Serie2->marker->enabled = false;
+        $Serie2->data = $pct10PesoEge;
 
-        $Serie1 = new stdClass();
-        $Serie1->type = "line";
-        $Serie1->name = 'Pct 90';
-        $Serie1->dashStyle = "Dash";
-        $Serie1->marker = new stdClass();
-        $Serie1->marker->enabled = false;
-        $Serie1->data = $pct90PesoEge;
+        $Serie3 = new stdClass();
+        $Serie3->type = "line";
+        $Serie3->name = 'Pct 90';
+        $Serie3->dashStyle = "Dash";
+        $Serie3->marker = new stdClass();
+        $Serie3->marker->enabled = false;
+        $Serie3->data = $pct90PesoEge;
 
-        $Serie1 = new stdClass();
-        $Serie1->type = "line";
-        $Serie1->name = 'Pct 97';
-        $Serie1->marker = new stdClass();
-        $Serie1->marker->enabled = false;
-        $Serie1->data = $pct97PesoEge;
+        $Serie4 = new stdClass();
+        $Serie4->type = "line";
+        $Serie4->name = 'Pct 97';
+        $Serie4->marker = new stdClass();
+        $Serie4->marker->enabled = false;
+        $Serie4->data = $pct97PesoEge;
 
         if (isset($data)){
             $data = json_decode($data, true);
@@ -129,12 +129,12 @@ class ApiModel
             } 
         }
 
-        $Serie1 = new stdClass();
-        $Serie1->type = "line";
-        $Serie1->name = 'Peso';
-        $Serie1->dashStyle = "Dot";
-        $Serie1->lineWidth = 0;
-        $Serie1->data = $Peso;
+        $Serie5 = new stdClass();
+        $Serie5->type = "line";
+        $Serie5->name = 'Peso';
+        $Serie5->dashStyle = "Dot";
+        $Serie5->lineWidth = 0;
+        $Serie5->data = $Peso;
 
         $chart->series = array($Serie1,$Serie2,$Serie3,$Serie4,$Serie5);
 
