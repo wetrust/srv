@@ -2037,16 +2037,21 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <select id="eco.seg.trim.select.comentario" class="form-control">
-                                        <option value="1" selected>Informe relativo a crecimiento</option>
-                                        <option value="2">Informe relativo a edad gestacional</option>
-                                    </select>
+                            <div class='form-group'>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p><strong class="text-primary">Seleccione informe</strong></p>
+                                    </div>
+                                    <div class="col-6">
+                                        <select id="eco.seg.trim.select.comentario" class="form-control">
+                                            <option value="1" selected>Informe relativo a crecimiento</option>
+                                            <option value="2">Informe relativo a edad gestacional</option>
+                                        </select>
+                                    </div>
                                 </div>
+                                <textarea id='comentarios-eco-dos-inf-dos' rows='3' class='form-control'></textarea>
+                                <p><small class='text-primary text-center'>(Comentarios adicionales, espacio a completar según hallazgos ecográficos e impresión clínica del profesional examinador )</small> </p>
                             </div>
-                            <p><strong>Comentarios adicionales</strong> <small class="text-primary">(Espacio a completar según hallazgos ecográficos e impresión clínica del profesional examinador )</small> </p>
-                            <textarea id="comentarios-eco-dos-inf-dos" rows="3" class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
