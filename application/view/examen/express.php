@@ -1464,7 +1464,7 @@
                         <button type="button" class="btn btn-default p-0" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
                     </div>
                     <h6 class="text-center my-2">Ver Gráficas</h6>
-                    <div class="btn-group-vertical d-flex justify-content-center p-0 pb-1">
+                    <div class="btn-group-vertical d-flex justify-content-center p-0 pb-2">
                         <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
                         <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
                         <button type="button" class="btn btn-default d-none p-0" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
@@ -1472,7 +1472,7 @@
                 </div>
             </div>
             <div class="card mt-3">
-                <div class="card-block" style="background-color:#eceeef;">
+                <div class="card-body" style="background-color:#eceeef;">
                     <p>Acopio en base de datos tanto de información obtenida como imágenes (fotos): </p>
                     <ul>
                         <li>Requeriere acreditación previa del profesional examinador, y además</li>
