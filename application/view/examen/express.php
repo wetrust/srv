@@ -857,7 +857,7 @@
                                 </div>
                                 <div class="col-md-12 col-lg-3 mb-2">
                                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <input type="text" class="form-control" id="lcn">
+                                        <input type="text" class="form-control text-center" id="lcn">
                                         <div class="input-group-append"><div class="input-group-text">mm</div></div>
                                     </div>
                                 </div>
@@ -866,7 +866,7 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">E.G. x LCN</div>
                                         </div>
-                                        <input type="text" class="form-control" id="lcnPct" readonly>
+                                        <input type="text" class="form-control text-center" id="lcnPct" readonly>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -879,7 +879,7 @@
                                 </div>
                                 <div class="col-md-12 col-lg-3 mb-2">
                                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <input type="text" class="form-control" id="saco">
+                                        <input type="text" class="form-control text-center" id="saco">
                                         <div class="input-group-append"><div class="input-group-text">mm</div></div>
                                     </div>
                                 </div>
@@ -888,7 +888,7 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">E.G. x Saco</div>
                                         </div>
-                                        <input type="text" class="form-control" id="sacoPct" readonly>
+                                        <input type="text" class="form-control text-center" id="sacoPct" readonly>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -1452,25 +1452,33 @@
     </div>
     <div class="row">
         <div class="col-12 col-sm-3 order-sm-1">
-            <div class="card position-fixed" id="ecoObsSegTrimMenu">
-                <div class="card-body">
+            <div class="card" id="ecoObsSegTrimMenu">
+                <div class="card-body py-0">
                     <h6 class="text-center my-2">Acciones</h6>
-                    <div class="btn-group-vertical d-flex justify-content-center p-1" role="group" aria-label="First group">
+                    <div class="btn-group-vertical d-flex justify-content-center p-0" role="group" aria-label="First group">
                         <button type="button" class="btn btn-default p-1" id="boton.eco.segundo.nuevo">Nuevo exámen</button><button class="btn btn-default" type="button" id="boton.eco.segundo.guardar">Guardar exámen</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.segundo.eliminar">Eliminar exámen</button>
                     </div>
-                    <hr>
                     <h6 class="text-center my-2">Ver Informes</h6>
                     <div class="btn-group-vertical d-flex">
-                        <button type="button" class="btn btn-default text-left p-1" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
-                        <button type="button" class="btn btn-default text-left p-1" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
+                        <button type="button" class="btn btn-default text-left p-0" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
+                        <button type="button" class="btn btn-default text-left p-0" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
                     </div>
-                    <hr>
                     <h6 class="text-center my-2">Ver Gráficas</h6>
                     <div class="btn-group-vertical d-flex">
-                        <button type="button" class="btn btn-default text-left p-1" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-default text-left p-1" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
-                        <button type="button" class="btn btn-default d-none p-1" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
+                        <button type="button" class="btn btn-default text-left p-0" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
+                        <button type="button" class="btn btn-default text-left p-0" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
+                        <button type="button" class="btn btn-default d-none p-0" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-block" style="background-color:#eceeef;">
+                    <p>Acopio en base de datos tanto de información obtenida como imágenes (fotos): </p>
+                    <ul>
+                        <li>Se incluirá más adelante, software en desarrollo</li>
+                        <li>Requerirá acreditación previa del profesional examinador, y además</li>
+                        <li>Consentimiento informado de la embarazada</li>
+                    </ul>
                 </div>
             </div>
         </div>
