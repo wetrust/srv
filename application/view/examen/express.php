@@ -1456,17 +1456,17 @@
                 <div class="card-body py-0">
                     <h6 class="text-center my-2">Acciones</h6>
                     <div class="btn-group-vertical d-flex justify-content-center p-0" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-default p-1" id="boton.eco.segundo.nuevo">Nuevo exámen</button><button class="btn btn-default" type="button" id="boton.eco.segundo.guardar">Guardar exámen</button><button type="button" class="btn btn-default d-none">Cancelar exámen</button><button type="button" class="btn btn-default" id="boton.eco.segundo.eliminar">Eliminar exámen</button>
+                        <button type="button" class="btn btn-default p-0" id="boton.eco.segundo.nuevo">Nuevo exámen</button><button class="btn btn-default p-0" type="button" id="boton.eco.segundo.guardar">Guardar exámen</button><button type="button" class="btn btn-default  p-0 d-none">Cancelar exámen</button><button type="button" class="btn btn-default p-0" id="boton.eco.segundo.eliminar">Eliminar exámen</button>
                     </div>
                     <h6 class="text-center my-2">Ver Informes</h6>
-                    <div class="btn-group-vertical d-flex">
-                        <button type="button" class="btn btn-default text-left p-0" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
-                        <button type="button" class="btn btn-default text-left p-0" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
+                    <div class="btn-group-vertical d-flex justify-content-center p-0">
+                        <button type="button" class="btn btn-default p-0" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
+                        <button type="button" class="btn btn-default p-0" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
                     </div>
                     <h6 class="text-center my-2">Ver Gráficas</h6>
-                    <div class="btn-group-vertical d-flex">
-                        <button type="button" class="btn btn-default text-left p-0" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-default text-left p-0" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
+                    <div class="btn-group-vertical d-flex justify-content-center p-0 pb-1">
+                        <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
+                        <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
                         <button type="button" class="btn btn-default d-none p-0" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
                 </div>
@@ -1475,8 +1475,7 @@
                 <div class="card-block" style="background-color:#eceeef;">
                     <p>Acopio en base de datos tanto de información obtenida como imágenes (fotos): </p>
                     <ul>
-                        <li>Se incluirá más adelante, software en desarrollo</li>
-                        <li>Requerirá acreditación previa del profesional examinador, y además</li>
+                        <li>Requeriere acreditación previa del profesional examinador, y además</li>
                         <li>Consentimiento informado de la embarazada</li>
                     </ul>
                 </div>
