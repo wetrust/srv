@@ -1473,7 +1473,7 @@
             </div>
             <div class="card mt-3">
                 <div class="card-body" style="background-color:#eceeef;">
-                    <p>Acopio en base de datos tanto de información obtenida como imágenes (fotos): </p>
+                    <p>Acopio en base de datos:</p>
                     <ul>
                         <li>Requeriere acreditación previa del profesional examinador, y además</li>
                         <li>Consentimiento informado de la embarazada</li>
