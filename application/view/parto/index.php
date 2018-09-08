@@ -62,13 +62,13 @@
                         <a href="#neonatal" class="btn btn-primary p-1"><small>Ingreso de Datos</small></a>
                     </li>
                     <li class="nav-item ml-2">
+                        <a href="#postnatal" class="btn btn-primary p-1 text-left"><small>Curvas de crecimiento,<br><span class="text-lowercase">(dos modelos)</span></small></a>
+                    </li>
+                    <li class="nav-item ml-2">
                         <a href="#recienacido" class="btn btn-primary p-1 text-left"><small>Evaluación Peso e IPN,<br><span class="text-lowercase">(dos curvas)</span></small></a>
                     </li>
                     <li class="nav-item ml-2 my-1">
                        Proyecto en desarrollo
-                    </li>
-                    <li class="nav-item ml-2">
-                        <a href="#postnatal" class="btn btn-primary p-1 text-left"><small>Curvas de crecimiento,<br><span class="text-lowercase">(dos modelos)</span></small></a>
                     </li>
                     <li class="nav-item ml-2">
                         <a href="#ajustepeso" class="btn btn-primary p-1 text-left"><small>Ver Curvas<br>customizadas</small></a>
