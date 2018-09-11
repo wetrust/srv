@@ -992,7 +992,7 @@
                                 </div>
                             </div>
                             <div class="form-group row alert alert-info">
-                                <div class="col-1">
+                                <div class="col-2">
                                     <img src="<?php echo Config::get('URL'); ?>img/tn.jpeg" class="img-fluid" alt="feto con translucencia">
                                 </div>
                                 <div class="col">
