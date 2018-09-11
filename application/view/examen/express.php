@@ -2117,7 +2117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card mt-3">
                 <div class="card-body" style="background-color:#eceeef;">
                     <p><small>Requisitos para catalogar a un feto como pequeño constitucional se requiere:</small></p>
                     <ul>
