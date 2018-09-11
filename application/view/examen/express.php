@@ -823,6 +823,12 @@
                     </div>
                 </div>
             </div>
+            <div class="card mt-5">
+                <div class="card-body" style="background-color:#eceeef;">
+                    <p>¡Tamizaje NO es Diagnóstico!</p>
+                    <p>Es valorar probabilidad de riesgo, respecto al de una población homologable.</p>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-sm-9">
             <ul class="nav nav-tabs" id="tab.eco.prim.trim" role="tablist">
