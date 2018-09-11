@@ -2117,6 +2117,15 @@
                     </div>
                 </div>
             </div>
+            <div class="card-block" style="background-color:#eceeef;">
+                <p><small>Requisitos para catalogar a un feto como pequeño constitucional se requiere:</small></p>
+                <ul>
+                    <li><small>PFE mayor p 3</small></li>
+                    <li><small>ICP Normal ( &gt;p 5 )</small></li>
+                    <li><small>Doppler de uterinas normal<br>( &lt;p 95 )</small></li>
+                </ul>
+                <p><small>Alteración en una o más de las anteriores obligan a descartar RCIU Tardío</small></p>
+            </div>
         </div>
         <div class="col-12 col-sm-9">
             <ul class="nav nav-tabs" id="tab.eco.doppler" role="tablist">
