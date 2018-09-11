@@ -823,7 +823,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card mt-5">
+            <div class="card mt-2">
                 <div class="card-body" style="background-color:#eceeef;">
                     <p>¡Tamizaje NO es Diagnóstico!</p>
                     <p>Es valorar probabilidad de riesgo, respecto al de una población homologable.</p>
@@ -1005,11 +1005,6 @@
                                                 <label class="btn btn-outline-primary active" id="evaluacion.translucencia.no"><input type="radio" name="radio_translucencia" value="0" checked=""> NO</label>
                                                 <label class="btn btn-outline-primary"><input type="radio" name="radio_translucencia" value="1"> SI</label>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <p class="text-right"><small>¡¡El Cribado no constituye diagnóstico, es solo valorar probabilidad de riesgo!!</small></p>
                                         </div>
                                     </div>
                                 </div>
