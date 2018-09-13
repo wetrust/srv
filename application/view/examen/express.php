@@ -2046,13 +2046,13 @@
                                 </div>
                             </div>
                             <div class='form-group'>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p><strong class="text-primary">Seleccione informe ecográfico relativo a:</strong></p>
+                                <div class="row p-2 rounded" style="background-color: #6c757d !important;">
+                                    <div class="col-6 mt-1">
+                                        <h6><strong class="text-white">Seleccione el tipo de informe ecográfico deseado:</strong></h6>
                                     </div>
                                     <div class="col-6">
                                         <select id="eco.seg.trim.select.comentario" class="form-control">
-                                            <option value="1" selected>Informe relativo a crecimiento</option>
+                                            <option value="1" selected="">Informe relativo a crecimiento fetal</option>
                                             <option value="2">Informe relativo a edad gestacional</option>
                                         </select>
                                     </div>
