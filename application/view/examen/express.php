@@ -835,7 +835,7 @@
                 <li class="nav-item">
                     <a class="nav-link bg-secondary text-light active" id="home-tab" data-toggle="tab" href="#medidas-eco-prim" role="tab">Pagina 1 - Medidas</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-3">
                     <a class="nav-link bg-secondary text-light" id="profile-tab" data-toggle="tab" href="#informe-eco-prim" role="tab">Página 2 - Texto</a>
                 </li>
             </ul>
@@ -1461,13 +1461,13 @@
                     </div>
                     <h6 class="text-center my-2">Ver Informes</h6>
                     <div class="btn-group-vertical d-flex justify-content-center p-0">
-                        <button type="button" class="btn btn-default p-0" id="modalPreInfEcoObsSegTrim1">Informe de crecimiento</button>
-                        <button type="button" class="btn btn-default p-0" id="modalPreInfEcoObsSegTrim2">Informe edad gestacional</button>
+                        <button type="button" class="btn btn-default p-0" id="modalPreInfEcoObsSegTrim1"><li>Crecimiento</li></button>
+                        <button type="button" class="btn btn-default p-0" id="modalPreInfEcoObsSegTrim2"><li>Edad gestacional</li></button>
                     </div>
                     <h6 class="text-center my-2">Ver Gráficas</h6>
                     <div class="btn-group-vertical d-flex justify-content-center p-0 pb-2">
-                        <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim1">Gráficas de crecimiento</button>
-                        <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim2">Gráfica edad gestacional</button>
+                        <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim1"><li>Crecimiento</li></button>
+                        <button type="button" class="btn btn-default p-0" id="infecoObsSegTrim2"><li>Edad gestacional</li></button>
                         <button type="button" class="btn btn-default d-none p-0" i="adicionalCrecimientoView">Adicional proporcionalidad</button>
                     </div>
                 </div>
@@ -1487,7 +1487,7 @@
                 <li class="nav-item">
                     <a class="nav-link bg-secondary text-light active" id="seg-trim-med-tab" data-toggle="tab" href="#medidas-eco-seg" role="tab">Pagina 1 - Medidas</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-3">
                     <a class="nav-link bg-secondary text-light" id="seg-trim-informe-tab" data-toggle="tab" href="#informe-eco-seg" role="tab">Página 2 - Texto</a>
                 </li>
             </ul>
@@ -2135,7 +2135,7 @@
                 <li class="nav-item">
                     <a class="nav-link bg-secondary text-light active" id="doppler-med-tab" data-toggle="tab" href="#medidas-doppler" role="tab">Pagina 1 - Medidas</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-3">
                     <a class="nav-link bg-secondary text-light" id="doppler-informe-tab" data-toggle="tab" href="#informe-doppler" role="tab">Página 2 - Texto</a>
                 </li>
             </ul>
