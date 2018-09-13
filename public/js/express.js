@@ -5459,14 +5459,14 @@ $(document).ready(function() {
             var LCN = parseInt($('#lcn').val());
 
             if (isNaN(LCN) | LCN < 0 | isNaN(eg) | eg < 1) {
-                $('#diferenciaEcoPrimTrim').html('La diferencia observada entre edad gestacional por FUM referida y la edad por ecografia es de 0 días.');
+                $('#diferenciaEcoPrimTrim').html('Días de diferencia observado entre edad gestacional por FUR referida y exámen ecográfico es de 0 días.');
                 $('#preguntaAjusteEcoPrimTrim').hide();
             } else {
                 var EGLCN = parseFloat($('#lcnPct').val());
                 var eg1 = new Number((Math.floor(EGLCN) * 7) + Math.round((EGLCN - Math.floor(EGLCN)) * 7));
                 var eg2 = new Number((Math.floor(eg) * 7) + Math.round((eg - Math.floor(eg)) * 7));
                 var diferencia = Math.abs(Math.floor(eg2 - eg1) + Math.round(((eg2 - eg1) - Math.floor(eg2 - eg1)) * 7));
-                $('#diferenciaEcoPrimTrim').html('La diferencia observada entre edad gestacional por FUM referida y la edad por exámen ecografico es de ' + diferencia + ' días.');
+                $('#diferenciaEcoPrimTrim').html('Días de diferencia observado entre edad gestacional por FUR referida y exámen ecográfico es de ' + diferencia + ' días.');
                 $('#preguntaAjusteEcoPrimTrim').show();
                 $('#resultadoAjusteEcoPrimTrim').show();
 
@@ -5520,7 +5520,7 @@ $(document).ready(function() {
             var eg1 = new Number((Math.floor(EGsaco) * 7) + Math.round((EGsaco - Math.floor(EGsaco)) * 7));
             var eg2 = new Number((Math.floor(eg) * 7) + Math.round((eg - Math.floor(eg)) * 7));
             var diferencia = Math.abs(Math.floor(eg2 - eg1) + Math.round(((eg2 - eg1) - Math.floor(eg2 - eg1)) * 7));
-            $('#diferenciaEcoPrimTrim').html('La diferencia observada entre edad gestacional por FUM referida y la edad por exámen ecografico es de ' + diferencia + ' días.<br><small>La determinación de edad gestacional ecográfica y ajuste a edad gestacional real, ha de realizarse solo una vez lograda la medición embrionaria (LCN).</small>');
+            $('#diferenciaEcoPrimTrim').html('Días de diferencia observado entre edad gestacional por FUR referida y exámen ecográfico es de ' + diferencia + ' días.<br><small>La determinación de edad gestacional ecográfica y ajuste a edad gestacional real, ha de realizarse solo una vez lograda la medición embrionaria (LCN).</small>');
             $('#preguntaAjusteEcoPrimTrim').hide();
             $("#graficoSaco").focus();
         }

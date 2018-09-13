@@ -969,8 +969,11 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
+                                    <p><span id="diferenciaEcoPrimTrim">Diferencia observada entre edad gestacional por FUM referida y edad gestacional por exámen ecografico es de 0 días.</span></p>
+                                </div>
+                                <div class="col-12">
                                     <div class="alert alert-info" role="alert">
-                                        <p class="mb-0"><span id="diferenciaEcoPrimTrim">Diferencia observada entre edad gestacional por FUM referida y edad gestacional por exámen ecografico es de 0 días.</span> Rango de tolerancia para diferencia entre edad esperada por FUM y obtenida por exámen ecográfico, para las semanas 8 a 10 es de ± 3 días.</p>
+                                        <p class="mb-0">Para semanas 8 a 10, el rango de diferencia clínica aceptable, entre FUM referida y calculada es ± 3 días.</p>
                                     </div>
                                 </div>
                             </div>
