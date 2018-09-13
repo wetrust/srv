@@ -906,21 +906,19 @@
                                     <div class="alert alert-info" role="alert">
                                         <div class="row mt-3">
                                             <div class="col">
-                                                <h6 class="text-center">Cálculos por FUM materna referida</h6>
+                                                <h6 class="text-center">Referida</h6>
                                                 <div class="form-group">
-                                                    <label for="formGroupExampleInput"><strong>FUM</strong> Referida</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                            <div class="input-group-text">FUM</div>
                                                         </div>
                                                         <input type="text" class="form-control" id="furReferida" readonly="">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="formGroupExampleInput2"><strong>EG</strong> por FUM referida</label>                                            
+                                                <div class="form-group">                                            
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                            <div class="input-group-text">EG</div>
                                                         </div>
                                                         <input type="text" class="form-control" id="egReferida" readonly="">
                                                         <div class="input-group-append">
@@ -929,31 +927,28 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="formGroupExampleInput2"><strong>FPP</strong> por FUM referida</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                            <div class="input-group-text">FPP</div>
                                                         </div>
                                                         <input type="text" class="form-control" id="fppReferida" readonly="">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <h6 class="text-center">Cálculos por ajuste ecográfico</h6>
+                                                <h6 class="text-center">Calculado</h6>
                                                 <div class="form-group">
-                                                    <label for="formGroupExampleInput"><strong>FUM</strong> Ajustada</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                            <div class="input-group-text">FUM</div>
                                                         </div>
                                                         <input type="text" class="form-control" id="furAjustada" readonly="">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="formGroupExampleInput2"><strong>EG</strong> ajustada</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <div class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                            <div class="input-group-text">EG</div>
                                                         </div>
                                                         <input type="text" class="form-control" id="egAjustada" readonly="">
                                                         <div class="input-group-prepend">
@@ -962,10 +957,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="formGroupExampleInput2"><strong>FPP</strong> Ajustada</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                                                            <div class="input-group-text">FPP</div>
                                                         </div>
                                                         <input type="text" class="form-control" id="fppAjustada" readonly="">
                                                     </div>
