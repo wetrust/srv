@@ -32,10 +32,21 @@ class ApuntesController extends Controller
      * Creates a new note. This is usually the target of form submit actions.
      * POST request.
      */
-    public function create()
+    public function api()
     {
-        NoteModel::createNote(Request::post('note_text'));
-        Redirect::to('note');
+        $accion = Request::post('accion');
+        $resultado = "";
+        switch ($i) {
+            case "tabla":
+                $resultado = ApuntesModel::getAllApuntes();
+                break;
+            case "nuevo":
+                $resultado = ApuntesModel::createApunte(Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'));
+                break;
+        }
+
+        return $this->View->renderJSON($resultado);
+
     }
 
     /**

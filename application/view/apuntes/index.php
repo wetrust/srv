@@ -35,29 +35,11 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Fecha</th>
-                            <th scope="col">Resumen</th>
+                            <th scope="col">Nombre paciente</th>
                             <th scope="col">Palabras claves</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                    <tbody id="tabla.resultado">
                     </tbody>
                 </table>
             </div>
@@ -65,7 +47,7 @@
     </div>
 </div>
 <div class="modal" tabindex="-1" role="dialog" id="dialog.view">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="dialog.title"></h5>
@@ -84,9 +66,52 @@
   </div>
 </div>
 <script>
-    $("#boton\\.nuevo").on("click", function(){
-        $("#dialog\\.title").html("Nuevo Apunte")
-        $("#dialog\\.body").html('<div class="form-group"><label for="formulario.fecha">Fecha</label><input type="text" class="form-control" id="formulario.fecha"></div><div class="form-group"><label for="formulario.hora">Hora</label><input type="text" class="form-control" id="formulario.hora"></div><div class="form-group"><label for="formulario.paciente">Nombre del paciente</label><input type="email" class="form-control" id="formulario.paciente"></div><div class="form-group"><label for="formulario.actividad">Actividad realizada</label><select class="form-control" id="formulario.actividad"></select></div></div><div class="form-group"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div><div class="form-group"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div><div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input type="text" class="form-control" id="formulario.fcancelacion"></div><div class="form-group"><label for="formulario.valor">Valor</label><input type="number" class="form-control" id="formulario.valor"></div><div class="form-group"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div><div class="form-group"><label for="formulario.palabras">Palabras claves</label><input type="text" class="form-control" id="formulario.palabras"></div>');
-        $("#dialog\\.view").modal("show");
-    })
+    $(document).ready(function(){
+        cargarTabla();
+    
+        $("#boton\\.nuevo").on("click", function(){
+            $("#dialog\\.title").html("Nuevo Apunte")
+            $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" type="text"></div><div class="form-group col"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div></div><div class="row"><div class="form-group col"><label for="formulario.paciente">Nombre del paciente</label><input class="form-control" id="formulario.paciente" type="email"></div><div class="form-group col"><label for="formulario.actividad">Actividad realizada</label><select class="form-control" id="formulario.actividad"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div><div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control" id="formulario.fcancelacion" type="text"></div><div class="form-group"><label for="formulario.valor">Valor</label><input class="form-control" id="formulario.valor" type="number"></div></div><div class="form-group"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div><div class="form-group"><label for="formulario.palabras">Palabras claves</label><input class="form-control" id="formulario.palabras" type="text"></div>');
+            $("#dialog\\.ok").off("click").on("click", function(){
+                var formulario = {
+                    accion: "nuevo",
+                    fecha: $("#formulario\\.fecha").val(),
+                    hora: $("#formulario\\.hora").val(),
+                    paciente: $("#formulario\\.paciente").val(),
+                    actividad: $("#formulario\\.actividad").val(),
+                    lugar: $("#formulario\\.lugar").val(),
+                    cancelacion: $("#formulario\\.cancelacion").val(),
+                    fcancelacion: $("#formulario\\.fcancelacion").val(),
+                    valor: $("#formulario\\.valor").val(),
+                    comentarios: $("#formulario\\.comentarios").val(),
+                    palabras: $("#formulario\\.palabras").val()
+                }
+                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                    $("#dialog\\.view").modal("hide");
+                    cargarTabla();
+                })
+            })
+            $("#dialog\\.view").modal("show");
+        });
+    });
+
+    function cargarTabla(){
+        var solicitud = {
+            accion: "tabla"
+        };
+
+        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+            $("#tabla\\.resultado").empty();
+            $.each(data function(i, item) {
+                let fila = '<tr><th scope="row">';
+
+                fila += item["apunte_id"] + '</th><td>';
+                fila += item["apunte_date"] + '</td><td>';
+                fila += item["apunte_person"] + '</td><td>';
+                fila += item["apunte_keywords"] + '</td></tr>';
+
+                $("#tabla\\.resultado").append(fila);
+            };
+        });
+    }
 </script>
