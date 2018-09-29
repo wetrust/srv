@@ -31,8 +31,8 @@
         <div class="card-body">
             <h5 class="card-title">Ultimos Apuntes</h5>
             <div class="table-responsive">
-                <table class="table">
-                    <thead>
+                <table class="table table-hover">
+                    <thead class="table-success">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Fecha</th>
