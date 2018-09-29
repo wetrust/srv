@@ -77,14 +77,15 @@
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="dialog.ok">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="dialog.ok">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
       </div>
     </div>
   </div>
 </div>
 <script>
     $("#boton\\.nuevo").on("click", function(){
+        $("#dialog\\.title").html("Nuevo Apunte")
         $("#dialog\\.body").html('<div class="form-group"><label for="formulario.fecha">Fecha</label><input type="text" class="form-control" id="formulario.fecha"></div><div class="form-group"><label for="formulario.hora">Hora</label><input type="text" class="form-control" id="formulario.hora"></div><div class="form-group"><label for="formulario.paciente">Nombre del paciente</label><input type="email" class="form-control" id="formulario.paciente"></div><div class="form-group"><label for="formulario.actividad">Actividad realizada</label><select class="form-control" id="formulario.actividad"></select></div></div><div class="form-group"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div><div class="form-group"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div><div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input type="text" class="form-control" id="formulario.fcancelacion"></div><div class="form-group"><label for="formulario.valor">Valor</label><input type="number" class="form-control" id="formulario.valor"></div><div class="form-group"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div><div class="form-group"><label for="formulario.palabras">Palabras claves</label><input type="text" class="form-control" id="formulario.palabras"></div>');
         $("#dialog\\.view").modal("show");
     })
