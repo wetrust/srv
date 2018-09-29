@@ -7,11 +7,11 @@
             <a class="nav-link" href="#">Configuración</a>
         </li>
     </ul>
-    <div class="card">
+    <div class="card mb-1">
         <div class="card-body">
             <h5 class="card-title">Buscar</h5>
-            <form>
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col">
                     <label for="exampleFormControlSelect1">por</label>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option>actividades</option>
@@ -20,11 +20,11 @@
                         <option>palabras claves</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group col">
                     <label for="exampleFormControlInput1">palabra</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1">
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <div class="card">
