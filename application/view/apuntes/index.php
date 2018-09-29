@@ -102,7 +102,7 @@
 
         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
             $("#tabla\\.resultado").empty();
-            $.each(data function(i, item) {
+            $.each(data, function(i, item) {
                 let fila = '<tr><th scope="row">';
 
                 fila += item["apunte_id"] + '</th><td>';
