@@ -4,7 +4,7 @@
             <a class="nav-link active" href="#" id="boton.nuevo">Nuevo Apunte</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Configuración</a>
+            <a class="nav-link" href="#" id="boton.configuracion">Configuración</a>
         </li>
     </ul>
     <div class="card mb-1">
@@ -68,10 +68,10 @@
 <script>
     $(document).ready(function(){
         cargarTabla();
-    
+
         $("#boton\\.nuevo").on("click", function(){
             $("#dialog\\.title").html("Nuevo Apunte");
-            $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" type="text"></div><div class="form-group col"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div></div><div class="row"><div class="form-group col"><label for="formulario.paciente">Nombre del paciente</label><input class="form-control" id="formulario.paciente" type="email"></div><div class="form-group col"><label for="formulario.actividad">Actividad realizada</label><select class="form-control" id="formulario.actividad"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div><div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control" id="formulario.fcancelacion" type="text"></div><div class="form-group"><label for="formulario.valor">Valor</label><input class="form-control" id="formulario.valor" type="number"></div></div><div class="form-group"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div><div class="form-group"><label for="formulario.palabras">Palabras claves</label><input class="form-control" id="formulario.palabras" type="text"></div>');
+            $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" type="text"></div><div class="form-group col"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div></div><div class="row"><div class="form-group col"><label for="formulario.paciente">Nombre del paciente</label><input class="form-control" id="formulario.paciente" type="email"></div><div class="form-group col"><label for="formulario.actividad">Actividad realizada</label><select class="form-control" id="formulario.actividad"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div><div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control" id="formulario.fcancelacion" type="text"></div><div class="form-group col"><label for="formulario.valor">Valor</label><input class="form-control" id="formulario.valor" type="number"></div></div><div class="form-group"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div><div class="form-group"><label for="formulario.palabras">Palabras claves</label><input class="form-control" id="formulario.palabras" type="text"></div>');
             $("#dialog\\.ok").off("click").on("click", function(){
                 var formulario = {
                     accion: "nuevo",
@@ -92,6 +92,12 @@
                 });
             });
             $("#dialog\\.view").modal("show");
+        });
+
+        $("#boton\\.configuracion").on("click", function(){
+            $("#dialog\\.title").html("Configuración");
+            $("#dialog\\.view").modal("show");
+            $("#dialog\\.body").html('<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item"> <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Actividades</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugares</a> </li><li class="nav-item"> <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li></ul><div class="tab-content" id="myTabContent"> <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre de la actividad</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre de la actividad</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre del Lugar</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del Lugar</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Tipo de cancelación</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button><button type="submit" class="btn btn-primary">Cancelar</button></div></div><table class="table table-hover"><thead class="table-success"><tr><th scope="col">#</th><th scope="col">Tipo de cancelación</th></tr></thead><tbody id="tabla.actividad"></tbody></table></div></div>');
         });
     });
 
