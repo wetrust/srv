@@ -111,7 +111,7 @@
                 fila += item["apunte_keywords"] + '</td></tr>';
 
                 $("#tabla\\.resultado").append(fila);
-            };
+            });
         });
     }
 </script>
