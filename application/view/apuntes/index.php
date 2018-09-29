@@ -89,8 +89,8 @@
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                     $("#dialog\\.view").modal("hide");
                     cargarTabla();
-                })
-            })
+                });
+            });
             $("#dialog\\.view").modal("show");
         });
     });
