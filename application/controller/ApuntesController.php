@@ -36,7 +36,7 @@ class ApuntesController extends Controller
     {
         $accion = Request::post('accion');
         $resultado = "";
-        switch ($i) {
+        switch ($accion) {
             case "tabla":
                 $resultado = ApuntesModel::getAllApuntes();
                 break;
