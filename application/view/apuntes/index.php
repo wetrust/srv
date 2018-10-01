@@ -1,13 +1,10 @@
 <div class="container">
-    <ul class="nav mt-3">
-        <li class="nav-item">
-            <a class="nav-link active" href="#" id="boton.nuevo">Nuevo Apunte</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#" id="boton.configuracion">Configuración</a>
-        </li>
-    </ul>
-    <div class="card mb-1">
+    <div class="btn-group float-right" role="group" aria-label="Menú">
+        <button type="button" class="btn btn-secondary" id="boton.nuevo"><i class="fas fa-pen"></i></button>
+        <button type="button" class="btn btn-secondary" id="boton.buscar"><i class="fas fa-search"></i></button>
+        <button type="button" class="btn btn-secondary" id="boton.configuracion"><i class="fas fa-cog"></i></button>
+    </div>
+    <div class="card mb-1 d-none">
         <div class="card-body">
             <div class="row">
                 <div class="form-group col">
