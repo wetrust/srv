@@ -23,7 +23,7 @@
                           <input type="hidden" name="redirect" value="<?php echo $this->encodeHTML($this->redirect); ?>" />
                         <?php } ?>
                         <input type="hidden" name="csrf_token" value="<?= Csrf::makeToken(); ?>" />
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> Ingresar</button>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-door-open"></i></button>
                     </form>
                 </div>
             </div>
