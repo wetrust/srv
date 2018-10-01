@@ -1,7 +1,5 @@
-
-
 <!doctype html>
-<html lang="es">
+<html lang="es" class="h-100">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,52 +7,56 @@
       <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
       <title>Apuntes</title>
    </head>
-   <body>
-      <div class="container">
-         <div class="btn-group float-right" role="group" aria-label="Menú">
-            <button type="button" class="btn btn-secondary" id="boton.nuevo"><i class="fas fa-pen"></i></button>
-            <button type="button" class="btn btn-secondary" id="boton.buscar"><i class="fas fa-search"></i></button>
-            <button type="button" class="btn btn-secondary" id="boton.configuracion"><i class="fas fa-cog"></i></button>
-         </div>
-         <div class="card mb-1 d-none">
-            <div class="card-body">
-               <div class="row">
-                  <div class="form-group col">
-                     <label for="exampleFormControlSelect1">Buscar por</label>
-                     <select class="form-control" id="exampleFormControlSelect1">
-                        <option>actividades</option>
-                        <option>cancelacion</option>
-                        <option>lugar</option>
-                        <option>palabras claves</option>
-                     </select>
-                  </div>
-                  <div class="form-group col">
-                     <label for="exampleFormControlInput1">palabra</label>
-                     <input type="text" class="form-control" id="exampleFormControlInput1">
-                  </div>
-               </div>
+   <body class="h-100">
+        <div class="row">
+            <div class="col-3 border-right">
             </div>
-         </div>
-         <div class="card">
-            <div class="card-body">
-               <h5 class="card-title">Ultimos Apuntes</h5>
-               <div class="table-responsive">
-                  <table class="table table-hover">
-                     <thead class="table-success">
-                        <tr>
-                           <th scope="col">#</th>
-                           <th scope="col">Fecha</th>
-                           <th scope="col">Nombre paciente</th>
-                           <th scope="col">Palabras claves</th>
-                        </tr>
-                     </thead>
-                     <tbody id="tabla.resultado">
-                     </tbody>
-                  </table>
-               </div>
+            <div class="col-9">
+                <div class="btn-group float-right" role="group" aria-label="Menú">
+                    <button type="button" class="btn btn-secondary" id="boton.nuevo"><i class="fas fa-pen"></i></button>
+                    <button type="button" class="btn btn-secondary" id="boton.buscar"><i class="fas fa-search"></i></button>
+                    <button type="button" class="btn btn-secondary" id="boton.configuracion"><i class="fas fa-cog"></i></button>
+                </div>
+                <div class="card mb-1 d-none">
+                    <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="exampleFormControlSelect1">Buscar por</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>actividades</option>
+                                <option>cancelacion</option>
+                                <option>lugar</option>
+                                <option>palabras claves</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="exampleFormControlInput1">palabra</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Ultimos Apuntes</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-success">
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Nombre paciente</th>
+                                <th scope="col">Palabras claves</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla.resultado">
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
+        </div>
       <div class="modal" tabindex="-1" role="dialog" id="dialog.view">
          <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
