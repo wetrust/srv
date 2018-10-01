@@ -11,7 +11,7 @@
    </head>
    <body class="h-100">
         <div class="row h-100 w-100">
-            <div class="col-3 border-right">
+            <div class="col-3 border-right pr-0">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Apuntes</a>
                     <form class="form-inline">
