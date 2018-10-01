@@ -14,14 +14,10 @@
             <div class="col-3 border-right pr-0">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Apuntes</a>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
                     <div class="btn-group" role="group" aria-label="Menú">
-                        <button type="button" class="btn btn-secondary" id="boton.nuevo"><i class="fas fa-pen"></i></button>
-                        <button type="button" class="btn btn-secondary" id="boton.buscar"><i class="fas fa-search"></i></button>
-                        <button type="button" class="btn btn-secondary" id="boton.configuracion"><i class="fas fa-cog"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.nuevo"><i class="fas fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.buscar"><i class="fas fa-search"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion"><i class="fas fa-cog"></i></button>
                     </div>
                 </nav>
             </div>
