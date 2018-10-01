@@ -24,7 +24,7 @@ class ApuntesController extends Controller
      */
     public function index()
     {
-        $this->View->render('apuntes/index');
+        $this->View->renderWithoutHeaderAndFooter('apuntes/index');
     }
 
     /**
