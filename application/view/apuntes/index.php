@@ -116,7 +116,7 @@
                     palabras: ""
                 };
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                    $("#formulario\\.id").val(data.id);
+                    $("#formulario\\.id").val(data.apunte_id);
                     $("#formulario\\.fecha").val(data.apunte_date);
                     $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
                     $("#formulario\\.hora").val("");
