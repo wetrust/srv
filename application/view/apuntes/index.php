@@ -20,6 +20,10 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion"><i class="fas fa-cog"></i></button>
                     </div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 4.8rem);">
                     <div class="card">
