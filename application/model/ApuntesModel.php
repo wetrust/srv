@@ -78,7 +78,7 @@ class ApuntesModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_hour = :apunte_hour, apunte_person = apunte_person, apunte_activity = :apunte_activity, apunte_location = :apunte_location, apunte_cancellation = :apunte_cancellation, apunte_fcancellation = :apunte_fcancellation, apunte_cost = :apunte_cost, apunte_text = :apunte_text, apunte_keywords = :apunte_keywords WHERE apunte_id = :apunte_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_hour = :apunte_hour, apunte_person = :apunte_person, apunte_activity = :apunte_activity, apunte_location = :apunte_location, apunte_cancellation = :apunte_cancellation, apunte_fcancellation = :apunte_fcancellation, apunte_cost = :apunte_cost, apunte_text = :apunte_text, apunte_keywords = :apunte_keywords WHERE apunte_id = :apunte_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':apunte_id' => $apunte_id, ':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id')));
 
