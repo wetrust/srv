@@ -27,18 +27,6 @@
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 4.8rem);" id="contenedor.tarjetas">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row apunte">
-                                <div class="col">
-                                    <p class="my-2">This is some text within a card body.</p>
-                                </div>
-                                <div class="col-4 d-none">
-                                    <button type="button" id="boton.nuevo" class="btn btn-outline-warning px-3"><i class="fas fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-8 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
@@ -182,14 +170,8 @@
                  $("#dialog\\.view").modal("show");
                  $("#dialog\\.body").html('<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item"> <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Actividades</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugares</a> </li><li class="nav-item"> <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li></ul><div class="tab-content" id="myTabContent"> <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre de la actividad</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre de la actividad</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre del Lugar</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del Lugar</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Tipo de cancelación</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button><button type="submit" class="btn btn-primary">Cancelar</button></div></div><table class="table table-hover"><thead class="table-success"><tr><th scope="col">#</th><th scope="col">Tipo de cancelación</th></tr></thead><tbody id="tabla.actividad"></tbody></table></div></div>');
              });
-            
-            $(".apunte").on("mouseenter", function(){
-                $(this).children(".col-4").removeClass("d-none");
-            }).on("mouseleave", function(){
-                $(this).children(".col-4").addClass("d-none");
-            });
          });
-         
+
         function guardarAutomatico(){
             var formulario = {
                 accion: "guardar",
@@ -221,25 +203,26 @@
             });
         }
 
-         function cargarTabla(){
-             var solicitud = {
-                 accion: "tabla"
-             };
-         
-             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                 $("#tabla\\.resultado").empty();
-                 $.each(data, function(i, item) {
-                     let fila = '<tr><th scope="row">';
-         
-                     fila += item["apunte_id"] + '</th><td>';
-                     fila += item["apunte_date"] + '</td><td>';
-                     fila += item["apunte_person"] + '</td><td>';
-                     fila += item["apunte_keywords"] + '</td></tr>';
-         
-                     $("#tabla\\.resultado").append(fila);
-                 });
-             });
-         }
+        function cargarTabla(){
+            var solicitud = {
+                accion: "tabla"
+            };
+
+            $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                $("#contenedor\\.tarjetas").empty();
+
+                $.each(data, function(i, item) {
+                    let fila = '<div class="card"><div class="card-body p-3"><div class="row apunte"><div class="col text-truncate"><p class="my-2">' + item["apunte_person"] +'</p></div><div class="col-4 d-none"><button type="button" id="boton.nuevo" data-id="' + item["apunte_id"] + '" class="btn btn-outline-warning px-3"><i class="fas fa-trash"></i></button></div></div></div></div>';
+                    $("#contenedor\\.tarjetas").append(fila);
+                });
+
+                $(".apunte").on("mouseenter", function(){
+                    $(this).children(".col-4").removeClass("d-none");
+                }).on("mouseleave", function(){
+                    $(this).children(".col-4").addClass("d-none");
+                });
+            });
+        }
       </script>
    </body>
 </html>
