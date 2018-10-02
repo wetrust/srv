@@ -27,9 +27,9 @@
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 4.8rem);">
-                    <div class="card apunte">
+                    <div class="card">
                         <div class="card-body p-3">
-                            <div class="row">
+                            <div class="row apunte">
                                 <div class="col">
                                     <p class="my-2">This is some text within a card body.</p>
                                 </div>
@@ -184,9 +184,9 @@
              });
             
             $(".apunte").on("mouseenter", function(){
-                $(this).children().children().children("col-4").removeClass("d-none");
+                $(this).children(".col-4").removeClass("d-none");
             }).on("mouseleave", function(){
-                $(this).children().children().children("col-4").addClass("d-none");
+                $(this).children(".col-4").addClass("d-none");
             });
          });
          
