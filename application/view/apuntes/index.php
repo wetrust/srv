@@ -12,11 +12,12 @@
    </head>
    <body class="h-100">
         <div class="row h-100 w-100" style="overflow:hide">
-            <div class="col-3 border-right pr-0 h-100">
+            <div class="col-4 border-right pr-0 h-100">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo"><i class="fas fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar"><i class="fas fa-print"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion"><i class="fas fa-cog"></i></button>
                     </div>
@@ -158,10 +159,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
+            <div class="col-8 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
                 <div class="card">
                     <div class="card-body">
-                        <div class="form-group col"><label for="formulario.paciente">Nombre del apunte o evento</label><input class="form-control" id="formulario.paciente" type="email"></div>
+                        <div class="form-group col"><label for="formulario.paciente">Nombre del evento o apuntes</label><input class="form-control" id="formulario.paciente" type="email"></div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" type="text"></div>
                             <div class="form-group col"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div>
@@ -225,7 +226,7 @@
                     }
                 });
 
-             $("#boton\\.nuevo").on("click", function(){
+            $("#boton\\.nuevo").on("click", function(){
                 //var formulario = {
                 //    accion: "nuevo",
                 //    fecha: $("#formulario\\.fecha").val(),
@@ -265,7 +266,11 @@
                     $("#formulario\\.comentarios").val(""),
                     $("#formulario\\.palabras").val("")
                 });
-             });
+            });
+
+            $("#formulario\\.paciente").on("focusout", function(){
+                guardarAutomatico();
+            });
          
              $("#boton\\.configuracion").on("click", function(){
                  $("#dialog\\.title").html("Configuración");
@@ -274,6 +279,37 @@
              });
          });
          
+        function guardarAutomatico(){
+            var formulario = {
+                accion: "guardar",
+                id: $("#formulario\\.id").val(),
+                fecha: $("#formulario\\.fecha").val(),
+                hora: $("#formulario\\.hora").val(),
+                paciente: $("#formulario\\.paciente").val(),
+                actividad: $("#formulario\\.actividad").val(),
+                lugar: $("#formulario\\.lugar").val(),
+                cancelacion: $("#formulario\\.cancelacion").val(),
+                fcancelacion: $("#formulario\\.fcancelacion").val(),
+                valor: $("#formulario\\.valor").val(),
+                comentarios: $("#formulario\\.comentarios").val(),
+                palabras: $("#formulario\\.palabras").val()
+            };
+
+            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                $("#formulario\\.id").val(data.id)
+                $("#formulario\\.fecha").val(""),
+                $("#formulario\\.hora").val(""),
+                $("#formulario\\.paciente").val(""),
+                $("#formulario\\.actividad").val(""),
+                $("#formulario\\.lugar").val(""),
+                $("#formulario\\.cancelacion").val(""),
+                $("#formulario\\.fcancelacion").val(""),
+                $("#formulario\\.valor").val(""),
+                $("#formulario\\.comentarios").val(""),
+                $("#formulario\\.palabras").val("")
+            });
+        }
+
          function cargarTabla(){
              var solicitud = {
                  accion: "tabla"
