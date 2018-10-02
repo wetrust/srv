@@ -46,10 +46,6 @@ class ApuntesModel
      */
     public static function createApunte($apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost,  $apunte_text, $apunte_keywords)
     {
-        if (!$apunte_text || strlen($apunte_text) == 0) {
-            Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
-            return false;
-        }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
