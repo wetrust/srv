@@ -153,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-9 h-100">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Ultimos Apuntes</h5>
