@@ -76,10 +76,11 @@
                         <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="btn-group" role="group" aria-label="Menú">
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button>
                             </div>
                             <div class="row d-none" id="div.actividad">
-                                <div class="form-group col"> <label for="exampleInputEmail1">Nombre de la actividad</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div>
-                                <div class="col-3"><button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button></div>
+                                <div class="form-group col"> <label for="exampleInputEmail1">Nombre de la actividad</label> <input type="text" class="form-control" id="exampleInputEmail1"> </div>
                             </div>
                             <table class="table table-hover">
                                 <thead class="table-success">
@@ -153,11 +154,15 @@
                 $("#boton\\.actividad\\.nuevo").on("click", function(){
                     $("#div\\.actividad").removeClass("d-none");
                     $("#boton\\.actividad\\.nuevo").addClass("d-none");
+                    $("#boton\\.actividad\\.guardar").removeClass("d-none");
+                    $("#boton\\.actividad\\.cancelar").removeClass("d-none");
                 });
 
                 $("#boton\\.actividad\\.cancelar").on("click", function(){
                     $("#div\\.actividad").addClass("d-none");
                     $("#boton\\.actividad\\.nuevo").removeClass("d-none");
+                    $("#boton\\.actividad\\.guardar").addClass("d-none");
+                    $("#boton\\.actividad\\.cancelar").addClass("d-none");
                 });
 
             $("#boton\\.nuevo").on("click", function(){
