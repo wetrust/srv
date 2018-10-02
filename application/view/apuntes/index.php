@@ -160,44 +160,6 @@
                         <div class="row"><div class="form-group col"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" type="text"></div><div class="form-group col"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div></div><div class="row"><div class="form-group col"><label for="formulario.paciente">Nombre del paciente</label><input class="form-control" id="formulario.paciente" type="email"></div><div class="form-group col"><label for="formulario.actividad">Actividad realizada</label><select class="form-control" id="formulario.actividad"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div><div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div></div><div class="row"><div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control" id="formulario.fcancelacion" type="text"></div><div class="form-group col"><label for="formulario.valor">Valor</label><input class="form-control" id="formulario.valor" type="number"></div></div><div class="form-group"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div><div class="form-group"><label for="formulario.palabras">Palabras claves</label><input class="form-control" id="formulario.palabras" type="text"></div>
                     </div>
                 </div>
-                <div class="card mb-1 d-none">
-                    <div class="card-body">
-                    <div class="row">
-                        <div class="form-group col">
-                            <label for="exampleFormControlSelect1">Buscar por</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>actividades</option>
-                                <option>cancelacion</option>
-                                <option>lugar</option>
-                                <option>palabras claves</option>
-                            </select>
-                        </div>
-                        <div class="form-group col">
-                            <label for="exampleFormControlInput1">palabra</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                    <h5 class="card-title">Ultimos Apuntes</h5>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead class="table-success">
-                                <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Nombre paciente</th>
-                                <th scope="col">Palabras claves</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tabla.resultado">
-                            </tbody>
-                        </table>
-                    </div>
-                    </div>
-                </div>
             </div>
         </div>
       <div class="modal" tabindex="-1" role="dialog" id="dialog.view">
