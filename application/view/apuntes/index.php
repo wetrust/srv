@@ -27,134 +27,16 @@
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 4.8rem);">
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            This is some text within a card body.
+                    <div class="card apunte">
+                        <div class="card-body p-3">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="my-2">This is some text within a card body.</p>
+                                </div>
+                                <div class="col-4 d-none">
+                                    <button type="button" id="boton.nuevo" class="btn btn-outline-success px-3"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -227,19 +109,6 @@
                 });
 
             $("#boton\\.nuevo").on("click", function(){
-                //var formulario = {
-                //    accion: "nuevo",
-                //    fecha: $("#formulario\\.fecha").val(),
-                //    hora: $("#formulario\\.hora").val(),
-                //    paciente: $("#formulario\\.paciente").val(),
-                //    actividad: $("#formulario\\.actividad").val(),
-                //    lugar: $("#formulario\\.lugar").val(),
-                //    cancelacion: $("#formulario\\.cancelacion").val(),
-                //    fcancelacion: $("#formulario\\.fcancelacion").val(),
-                //    valor: $("#formulario\\.valor").val(),
-                //    comentarios: $("#formulario\\.comentarios").val(),
-                //    palabras: $("#formulario\\.palabras").val()
-                //};
                 var formulario = {
                     accion: "nuevo",
                     fecha: "",
@@ -271,12 +140,54 @@
             $("#formulario\\.paciente").on("focusout", function(){
                 guardarAutomatico();
             });
+
+            $("#formulario\\.fecha").on("focusout", function(){
+                guardarAutomatico();
+            });
+
+            $("#formulario\\.hora").on("focusout", function(){
+                guardarAutomatico();
+            });
+
+            $("#formulario\\.actividad").on("focusout", function(){
+                guardarAutomatico();
+            });
+
+            $("#formulario\\.lugar").on("focusout", function(){
+                guardarAutomatico();
+            });
+
+            $("#formulario\\.cancelacion").on("focusout", function(){
+                guardarAutomatico();
+            });
+
+            $("#formulario\\.fcancelacion").on("focusout", function(){
+                guardarAutomatico();
+            });
+
+            $("#formulario\\.valor").on("focusout", function(){
+                guardarAutomatico();
+            });
          
+            $("#formulario\\.comentarios").on("focusout", function(){
+                guardarAutomatico();
+            });
+
+            $("#formulario\\.palabras").on("focusout", function(){
+                guardarAutomatico();
+            });
+
              $("#boton\\.configuracion").on("click", function(){
                  $("#dialog\\.title").html("Configuración");
                  $("#dialog\\.view").modal("show");
                  $("#dialog\\.body").html('<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item"> <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Actividades</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugares</a> </li><li class="nav-item"> <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li></ul><div class="tab-content" id="myTabContent"> <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre de la actividad</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre de la actividad</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre del Lugar</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del Lugar</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Tipo de cancelación</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button><button type="submit" class="btn btn-primary">Cancelar</button></div></div><table class="table table-hover"><thead class="table-success"><tr><th scope="col">#</th><th scope="col">Tipo de cancelación</th></tr></thead><tbody id="tabla.actividad"></tbody></table></div></div>');
              });
+            
+            $(".apunte").on("focus", function(){
+                $(this).children().children("col-4").removeClass("d-none");
+            }).on("focusout", function(){
+                $(this).children().children("col-4").addClass("d-none");
+            });
          });
          
         function guardarAutomatico(){
