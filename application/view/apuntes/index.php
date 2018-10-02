@@ -215,10 +215,15 @@
          $(document).ready(function(){
              cargarTabla();
          
-                $("#boton\\.busqueda").on("click", function(){
-                    $("#div\\.busqueda").removeClass("d-none");
+                $("#boton\\.buscar").on("click", function(){
+                    if ($("#div\\.busqueda").hasClass("d-none")){
+                        $("#div\\.busqueda").removeClass("d-none");
+                    }
+                    else{
+                        $("#div\\.busqueda").addClass("d-none");
+                    }
                 });
-                
+
              $("#boton\\.nuevo").on("click", function(){
                  $("#dialog\\.title").html("Nuevo Apunte");
                  $("#dialog\\.body").html('');
