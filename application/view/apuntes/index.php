@@ -26,7 +26,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                 </nav>
-                <div style="overflow-y:scroll;height:calc(100% - 4.8rem);">
+                <div style="overflow-y:scroll;height:calc(100% - 4.8rem);" id="contenedor.tarjetas">
                     <div class="card">
                         <div class="card-body p-3">
                             <div class="row apunte">
@@ -63,7 +63,7 @@
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div>
                             <div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text"></div>
-                            <div class="form-group col"><label for="formulario.valor">Valor</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
+                            <div class="form-group col"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
                         </div>
                     </div>
                 </div>
