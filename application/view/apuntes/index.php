@@ -184,10 +184,9 @@
              });
             
             $(".apunte").on("mouseenter", function(){
-                let nodo = $(this).children()
-                $(nodo).children("col-4").removeClass("d-none");
+                $(this).children().children().children("col-4").removeClass("d-none");
             }).on("mouseleave", function(){
-                $(this).children().children("col-4").addClass("d-none");
+                $(this).children().children().children("col-4").addClass("d-none");
             });
          });
          
