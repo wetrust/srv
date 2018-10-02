@@ -120,7 +120,7 @@
                     $("#formulario\\.fecha").val(data.apunte_date);
                     $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
                     $("#formulario\\.hora").val("");
-                    $("#formulario\\.paciente").val("");
+                    $("#formulario\\.paciente").val(data.apunte_person);
                     $("#formulario\\.actividad").val("");
                     $("#formulario\\.lugar").val("");
                     $("#formulario\\.cancelacion").val("");
