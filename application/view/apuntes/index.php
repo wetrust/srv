@@ -171,16 +171,16 @@
                             <div class="form-group col"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div>
                         </div>
                         <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div>
-                            <div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text"></div>
-                            <div class="form-group col"><label for="formulario.valor">Valor</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
-                        </div>
-                        <div class="row m-0">
                             <div class="form-group col"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div>
                         </div>
                         <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.palabras">Palabras claves</label><input class="form-control" id="formulario.palabras" type="text"></div>
+                            <div class="form-group col"><label for="formulario.palabras">Palabras claves de búsqueda</label><input class="form-control" id="formulario.palabras" type="text"></div>
                             <input id="formulario.id" type="hidden" name="redirect" value="" />
+                        </div>
+                        <div class="row m-0">
+                            <div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div>
+                            <div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text"></div>
+                            <div class="form-group col"><label for="formulario.valor">Valor</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
                         </div>
                     </div>
                 </div>
