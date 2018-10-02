@@ -71,7 +71,7 @@ class ApuntesModel
      */
     public static function updateApunte($apunte_id, $apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost, $apunte_text, $apunte_keywords)
     {
-        if (!$apunte_id || !$apunte_text) {
+        if (!$apunte_id) {
             return false;
         }
 

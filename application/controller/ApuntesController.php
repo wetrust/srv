@@ -43,6 +43,9 @@ class ApuntesController extends Controller
             case "nuevo":
                 $resultado = ApuntesModel::createApunte(Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'));
                 break;
+            case "guardar":
+                $resultado = ApuntesModel::updateApunte(Request::post('id'),Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'));
+                break;
         }
 
         return $this->View->renderJSON($resultado);
