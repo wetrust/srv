@@ -10,8 +10,8 @@
       <title>Apuntes</title>
    </head>
    <body class="h-100">
-        <div class="row h-100 w-100">
-            <div class="col-3 border-right pr-0">
+        <div class="row h-100 w-100" style="overflow:hide">
+            <div class="col-3 border-right pr-0 h-100">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
@@ -20,19 +20,136 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion"><i class="fas fa-cog"></i></button>
                     </div>
                 </nav>
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
+                <div style="overflow-y:scroll">
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            This is some text within a card body.
+                        </div>
                     </div>
                 </div>
             </div>
