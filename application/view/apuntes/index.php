@@ -161,7 +161,7 @@
             <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
                 <div class="card">
                     <div class="card-body">
-                        <div class="form-group col"><label for="formulario.paciente">Nombre del paciente</label><input class="form-control" id="formulario.paciente" type="email"></div>
+                        <div class="form-group col"><label for="formulario.paciente">Nombre del apunte o evento</label><input class="form-control" id="formulario.paciente" type="email"></div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" type="text"></div>
                             <div class="form-group col"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div>
