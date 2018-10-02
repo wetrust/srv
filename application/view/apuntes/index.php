@@ -21,7 +21,7 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion"><i class="fas fa-cog"></i></button>
                     </div>
                     <div class="form-inline d-none" id="div.busqueda">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                 </nav>
