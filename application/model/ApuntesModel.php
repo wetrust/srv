@@ -82,7 +82,7 @@ class ApuntesModel
         $query->execute(array(':apunte_id' => $apunte_id, ':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id')));
 
         if ($query->rowCount() == 1) {
-            return true;
+            return self::getApunte($apunte_id);
         }
 
         Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_EDITING_FAILED'));
