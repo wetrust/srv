@@ -39,10 +39,10 @@
                         </div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.actividad">Actividad realizada</label><select class="form-control" id="formulario.actividad"></select></div>
-                            <div class="form-group col"><label for="formulario.lugar">Lugar</label><select class="form-control" id="formulario.lugar"></select></div>
+                            <div class="form-group col"><label for="formulario.lugar">Lugar del evento</label><select class="form-control" id="formulario.lugar"></select></div>
                         </div>
                         <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.comentarios">Comentarios</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div>
+                            <div class="form-group col"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div>
                         </div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.palabras">Palabras claves de búsqueda</label><input class="form-control" id="formulario.palabras" type="text"></div>
@@ -223,7 +223,7 @@
                 $("#contenedor\\.tarjetas").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<div class="card"><div class="card-body p-3"><div class="row apunte"><div class="col text-truncate"><p class="my-2">' + item["apunte_person"] +'</p></div><div class="col-4 d-none"><button type="button" id="boton.nuevo" data-id="' + item["apunte_id"] + '" class="btn btn-outline-warning px-3"><i class="fas fa-trash"></i></button></div></div></div></div>';
+                    let fila = '<div class="card"><div class="card-body p-3"><div class="row apunte" data-id="' + item["apunte_id"] + '"><div class="col text-truncate"><p class="my-2">' + item["apunte_person"] +'</p></div><div class="col-4 d-none"><button type="button" id="boton.nuevo" data-id="' + item["apunte_id"] + '" class="btn btn-outline-warning px-3"><i class="fas fa-trash"></i></button></div></div></div></div>';
                     $("#contenedor\\.tarjetas").append(fila);
                 });
 
@@ -231,6 +231,30 @@
                     $(this).children(".col-4").removeClass("d-none");
                 }).on("mouseleave", function(){
                     $(this).children(".col-4").addClass("d-none");
+                }).on("click",function(){
+                    let apunte_id = $(this).data("id");
+
+                    var solicitud = {
+                        accion: "apunte",
+                        id: apunte_id
+                    };
+
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                        $("#formulario\\.id").val(data.apunte_id);
+                        $("#formulario\\.fecha").val(data.apunte_date);
+                        $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                        $("#formulario\\.hora").val(data.apunte_hour);
+                        $("#formulario\\.paciente").val(data.apunte_person);
+                        $("#formulario\\.actividad").val(data.apunte_activity);
+                        $("#formulario\\.lugar").val(data.apunte_location);
+                        $("#formulario\\.cancelacion").val(data.apunte_cancellation);
+                        $("#formulario\\.fcancelacion").val(data.apunte_fcancellation),
+                        $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+                        $("#formulario\\.valor").val(data.apunte_cost);
+                        $("#formulario\\.comentarios").val(data.apunte_text);
+                        $("#formulario\\.palabras").val(data.apunte_keywords);
+                    });
+
                 });
             });
         }

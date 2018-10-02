@@ -40,6 +40,9 @@ class ApuntesController extends Controller
             case "tabla":
                 $resultado = ApuntesModel::getAllApuntes();
                 break;
+            case "apunte":
+                $resultado = ApuntesModel::getApunte(Request::post('id'));
+                break;
             case "nuevo":
                 $resultado = ApuntesModel::createApunte(Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'));
                 break;
