@@ -180,6 +180,7 @@
                         </div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.palabras">Palabras claves</label><input class="form-control" id="formulario.palabras" type="text"></div>
+                            <input id="formulario.id" type="hidden" name="redirect" value="" />
                         </div>
                     </div>
                 </div>
@@ -225,28 +226,45 @@
                 });
 
              $("#boton\\.nuevo").on("click", function(){
-                 $("#dialog\\.title").html("Nuevo Apunte");
-                 $("#dialog\\.body").html('');
-                 $("#dialog\\.ok").off("click").on("click", function(){
-                     var formulario = {
-                         accion: "nuevo",
-                         fecha: $("#formulario\\.fecha").val(),
-                         hora: $("#formulario\\.hora").val(),
-                         paciente: $("#formulario\\.paciente").val(),
-                         actividad: $("#formulario\\.actividad").val(),
-                         lugar: $("#formulario\\.lugar").val(),
-                         cancelacion: $("#formulario\\.cancelacion").val(),
-                         fcancelacion: $("#formulario\\.fcancelacion").val(),
-                         valor: $("#formulario\\.valor").val(),
-                         comentarios: $("#formulario\\.comentarios").val(),
-                         palabras: $("#formulario\\.palabras").val()
-                     }
-                     $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                         $("#dialog\\.view").modal("hide");
-                         cargarTabla();
-                     });
-                 });
-                 $("#dialog\\.view").modal("show");
+                //var formulario = {
+                //    accion: "nuevo",
+                //    fecha: $("#formulario\\.fecha").val(),
+                //    hora: $("#formulario\\.hora").val(),
+                //    paciente: $("#formulario\\.paciente").val(),
+                //    actividad: $("#formulario\\.actividad").val(),
+                //    lugar: $("#formulario\\.lugar").val(),
+                //    cancelacion: $("#formulario\\.cancelacion").val(),
+                //    fcancelacion: $("#formulario\\.fcancelacion").val(),
+                //    valor: $("#formulario\\.valor").val(),
+                //    comentarios: $("#formulario\\.comentarios").val(),
+                //    palabras: $("#formulario\\.palabras").val()
+                //};
+                var formulario = {
+                    accion: "nuevo",
+                    fecha: "",
+                    hora: "",
+                    paciente: "",
+                    actividad: "",
+                    lugar: "",
+                    cancelacion: "",
+                    fcancelacion: "",
+                    valor: "",
+                    comentarios: "",
+                    palabras: ""
+                };
+                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                    $("#formulario\\.id").val(data.id)
+                    $("#formulario\\.fecha").val(""),
+                    $("#formulario\\.hora").val(""),
+                    $("#formulario\\.paciente").val(""),
+                    $("#formulario\\.actividad").val(""),
+                    $("#formulario\\.lugar").val(""),
+                    $("#formulario\\.cancelacion").val(""),
+                    $("#formulario\\.fcancelacion").val(""),
+                    $("#formulario\\.valor").val(""),
+                    $("#formulario\\.comentarios").val(""),
+                    $("#formulario\\.palabras").val("")
+                });
              });
          
              $("#boton\\.configuracion").on("click", function(){
