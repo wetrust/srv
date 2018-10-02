@@ -176,7 +176,7 @@
                         </div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.palabras">Palabras claves de búsqueda</label><input class="form-control" id="formulario.palabras" type="text"></div>
-                            <input id="formulario.id" type="hidden" name="redirect" value="" />
+                            <input id="formulario.id" type="hidden" value="" />
                         </div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.cancelacion">Cancelación</label><select class="form-control" id="formulario.cancelacion"></select></div>
