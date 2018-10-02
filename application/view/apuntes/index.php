@@ -129,6 +129,7 @@
                     $("#formulario\\.valor").val("");
                     $("#formulario\\.comentarios").val("");
                     $("#formulario\\.palabras").val("");
+                    cargarTabla();
                 });
             });
 
@@ -209,6 +210,7 @@
                 $("#formulario\\.valor").val(data.apunte_cost);
                 $("#formulario\\.comentarios").val(data.apunte_text);
                 $("#formulario\\.palabras").val(data.apunte_keywords);
+                cargarTabla();
             });
         }
 
