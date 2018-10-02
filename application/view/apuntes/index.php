@@ -16,10 +16,10 @@
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo"><i class="fas fa-pen"></i></button>
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.imprimir"><i class="fas fa-print"></i></button>
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar"><i class="fas fa-search"></i></button>
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion"><i class="fas fa-cog"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo" title="Nuevo apunte"><i class="fas fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.imprimir" title="Imprimir apunte actual"><i class="fas fa-print"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion" title="Configuración"><i class="fas fa-cog"></i></button>
                     </div>
                     <div class="form-inline d-none" id="div.busqueda">
                         <input class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
@@ -97,31 +97,38 @@
                 });
 
             $("#boton\\.nuevo").on("click", function(){
+
+                var dateTime = new Date();
+                var day = ("0" + dateTime.getDate()).slice(-2);
+                var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+
                 var formulario = {
                     accion: "nuevo",
-                    fecha: "",
+                    fecha: day + "/" + month + "/" + dateTime.getFullYear(),
                     hora: "",
                     paciente: "",
                     actividad: "",
                     lugar: "",
                     cancelacion: "",
-                    fcancelacion: "",
+                    fcancelacion: day + "/" + month + "/" + dateTime.getFullYear(),
                     valor: "",
                     comentarios: "",
                     palabras: ""
                 };
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                    $("#formulario\\.id").val(data.id)
-                    $("#formulario\\.fecha").val(""),
-                    $("#formulario\\.hora").val(""),
-                    $("#formulario\\.paciente").val(""),
-                    $("#formulario\\.actividad").val(""),
-                    $("#formulario\\.lugar").val(""),
-                    $("#formulario\\.cancelacion").val(""),
-                    $("#formulario\\.fcancelacion").val(""),
-                    $("#formulario\\.valor").val(""),
-                    $("#formulario\\.comentarios").val(""),
-                    $("#formulario\\.palabras").val("")
+                    $("#formulario\\.id").val(data.id);
+                    $("#formulario\\.fecha").val(data.apunte_date);
+                    $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                    $("#formulario\\.hora").val("");
+                    $("#formulario\\.paciente").val("");
+                    $("#formulario\\.actividad").val("");
+                    $("#formulario\\.lugar").val("");
+                    $("#formulario\\.cancelacion").val("");
+                    $("#formulario\\.fcancelacion").val(data.apunte_fcancellation),
+                    $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+                    $("#formulario\\.valor").val("");
+                    $("#formulario\\.comentarios").val("");
+                    $("#formulario\\.palabras").val("");
                 });
             });
 
@@ -189,17 +196,19 @@
             };
 
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                $("#formulario\\.id").val(data.id)
-                $("#formulario\\.fecha").val(""),
-                $("#formulario\\.hora").val(""),
-                $("#formulario\\.paciente").val(""),
-                $("#formulario\\.actividad").val(""),
-                $("#formulario\\.lugar").val(""),
-                $("#formulario\\.cancelacion").val(""),
-                $("#formulario\\.fcancelacion").val(""),
-                $("#formulario\\.valor").val(""),
-                $("#formulario\\.comentarios").val(""),
-                $("#formulario\\.palabras").val("")
+                $("#formulario\\.id").val(data.id);
+                $("#formulario\\.fecha").val(data.apunte_date);
+                $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                $("#formulario\\.hora").val(data.apunte_hour);
+                $("#formulario\\.paciente").val(data.apunte_person);
+                $("#formulario\\.actividad").val(data.apunte_activity);
+                $("#formulario\\.lugar").val(data.apunte_location);
+                $("#formulario\\.cancelacion").val(data.apunte_cancellation);
+                $("#formulario\\.fcancelacion").val(data.apunte_fcancellation),
+                $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+                $("#formulario\\.valor").val(data.apunte_cost);
+                $("#formulario\\.comentarios").val(data.apunte_text);
+                $("#formulario\\.palabras").val(data.apunte_keywords);
             });
         }
 

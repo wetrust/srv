@@ -31,7 +31,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_id = :apunte_id LIMIT 1";
+        $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_id = :apunte_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_id' => $apunte_id));
 
@@ -47,7 +47,6 @@ class ApuntesModel
     public static function createApunte($apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost,  $apunte_text, $apunte_keywords)
     {
 
-        $result = new stdClass();
         $database = DatabaseFactory::getFactory()->getConnection();
 
         $sql = "INSERT INTO apuntes (apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, user_id) VALUES (:apunte_date, :apunte_hour, :apunte_person, :apunte_activity, :apunte_location, :apunte_cancellation, :apunte_fcancellation, :apunte_cost, :apunte_text, :apunte_keywords, :user_id)";
@@ -55,8 +54,8 @@ class ApuntesModel
         $query->execute(array(':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id')));
 
         if ($query->rowCount() == 1) {
-            $result->id = $database->lastInsertId();
-            return $result;
+            $apunte_id = $database->lastInsertId();
+            return self::getApunte($apunte_id);
         }
 
         // default return
