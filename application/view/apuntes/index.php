@@ -20,7 +20,7 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion"><i class="fas fa-cog"></i></button>
                     </div>
                 </nav>
-                <div style="overflow-y:scroll">
+                <div style="overflow-y:scroll;height:calc(100hv - 10rem);">
                     <div class="card">
                         <div class="card-body">
                             This is some text within a card body.
