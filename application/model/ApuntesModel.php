@@ -230,7 +230,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, lugar_id, lugar_text FROM lugares WHERE user_id = :user_id";
+        $sql = "SELECT lugar_id, lugar_text FROM lugares WHERE user_id = :user_id";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id')));
 
@@ -457,7 +457,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, cancelacion_id, cancelacion_text FROM cancelaciones WHERE user_id = :user_id";
+        $sql = "SELECT cancelacion_id, cancelacion_text FROM cancelaciones WHERE user_id = :user_id";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id')));
 

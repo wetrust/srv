@@ -110,7 +110,7 @@
                                     <th scope="col">Nombre del Lugar</th>
                                     </tr>
                                 </thead>
-                                <tbody id="tabla.actividad"> </tbody>
+                                <tbody id="tabla.lugar"> </tbody>
                             </table>
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -129,7 +129,7 @@
                                     <th scope="col">Tipo de cancelación</th>
                                     </tr>
                                 </thead>
-                                <tbody id="tabla.actividad"></tbody>
+                                <tbody id="tabla.cancelacion"></tbody>
                             </table>
                         </div>
                     </div>
@@ -151,6 +151,8 @@
         $(document).ready(function(){
             cargarTabla();
             cargarActividad();
+            cargarLugar();
+            cargarCancelacion();
          
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
@@ -177,21 +179,21 @@
                 $("#boton\\.actividad\\.cancelar").removeClass("d-none");
             });
 
-                $("#boton\\.actividad\\.guardar").on("click", function(){
-                    $("#div\\.actividad").addClass("d-none");
-                    $("#boton\\.actividad\\.nuevo").removeClass("d-none");
-                    $("#boton\\.actividad\\.guardar").addClass("d-none");
-                    $("#boton\\.actividad\\.cancelar").addClass("d-none");
+            $("#boton\\.actividad\\.guardar").on("click", function(){
+                $("#div\\.actividad").addClass("d-none");
+                $("#boton\\.actividad\\.nuevo").removeClass("d-none");
+                $("#boton\\.actividad\\.guardar").addClass("d-none");
+                $("#boton\\.actividad\\.cancelar").addClass("d-none");
 
-                    var formulario = {
-                        accion: "nuevoActividad",
-                        actividad_text: $("#actividad\\.texto").val(),
-                    };
+                var formulario = {
+                    accion: "nuevoActividad",
+                    actividad_text: $("#actividad\\.texto").val(),
+                };
 
-                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                        cargarActividad();
-                    });
+                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                    cargarActividad();
                 });
+            });
 
             $("#boton\\.actividad\\.cancelar").on("click", function(){
                 $("#div\\.actividad").addClass("d-none");
@@ -206,6 +208,22 @@
                 $("#boton\\.lugar\\.guardar").removeClass("d-none");
                 $("#boton\\.lugar\\.cancelar").removeClass("d-none");
             });
+            
+            $("#boton\\.lugar\\.guardar").on("click", function(){
+                $("#div\\.lugar").addClass("d-none");
+                $("#boton\\.lugar\\.nuevo").removeClass("d-none");
+                $("#boton\\.lugar\\.guardar").addClass("d-none");
+                $("#boton\\.lugar\\.cancelar").addClass("d-none");
+
+                var formulario = {
+                    accion: "nuevoLugar",
+                    lugar_text: $("#lugar\\.texto").val(),
+                };
+
+                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                    cargarLugar();
+                });
+            });
 
             $("#boton\\.lugar\\.cancelar").on("click", function(){
                 $("#div\\.lugar").addClass("d-none");
@@ -219,6 +237,22 @@
                 $("#boton\\.cancelacion\\.nuevo").addClass("d-none");
                 $("#boton\\.cancelacion\\.guardar").removeClass("d-none");
                 $("#boton\\.cancelacion\\.cancelar").removeClass("d-none");
+            });
+
+            $("#boton\\.cancelacion\\.guardar").on("click", function(){
+                $("#div\\.cancelacion").addClass("d-none");
+                $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
+                $("#boton\\.cancelacion\\.guardar").addClass("d-none");
+                $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
+
+                var formulario = {
+                    accion: "nuevaCancelacion",
+                    cancelacion_text: $("#cancelacion\\.texto").val(),
+                };
+
+                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                    cargarCancelacion();
+                });
             });
 
             $("#boton\\.cancelacion\\.cancelar").on("click", function(){
@@ -400,10 +434,46 @@
                 $("#tabla\\.actividad").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<tr><th scope="row" data-id="' + item["actividad_id"] + '">' + item["actividad_text"] + '</th><td>' + item["actividad_text"] + '</td></tr>';
+                    let fila = '<tr><th scope="row" data-id="' + item["actividad_id"] + '">' + item["actividad_id"] + '</th><td>' + item["actividad_text"] + '</td></tr>';
                     let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
                     $("#tabla\\.actividad").append(fila);
                     $("#formulario\\.actividad").append(option);
+                });
+            });
+        }
+
+        function cargarLugar(){
+            var solicitud = {
+                accion: "lugar"
+            };
+
+            $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                $("#formulario\\.lugar").empty();
+                $("#tabla\\.lugar").empty();
+
+                $.each(data, function(i, item) {
+                    let fila = '<tr><th scope="row" data-id="' + item["lugar_id"] + '">' + item["lugar_id"] + '</th><td>' + item["lugar_text"] + '</td></tr>';
+                    let option = '<option value="'+ item["lugar_id"]+'">' +item["lugar_text"]+'</option>';
+                    $("#tabla\\.lugar").append(fila);
+                    $("#formulario\\.lugar").append(option);
+                });
+            });
+        }
+
+        function cargarCancelacion(){
+            var solicitud = {
+                accion: "cancelacion"
+            };
+
+            $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                $("#formulario\\.cancelacion").empty();
+                $("#tabla\\.cancelacion").empty();
+
+                $.each(data, function(i, item) {
+                    let fila = '<tr><th scope="row" data-id="' + item["cancelacion_id"] + '">' + item["cancelacion_id"] + '</th><td>' + item["cancelacion_text"] + '</td></tr>';
+                    let option = '<option value="'+ item["cancelacion_id"]+'">' +item["cancelacion_text"]+'</option>';
+                    $("#tabla\\.cancelacion").append(fila);
+                    $("#formulario\\.cancelacion").append(option);
                 });
             });
         }
