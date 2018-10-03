@@ -135,7 +135,6 @@
                     </div>
                </div>
                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" id="dialog.ok">Guardar</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                </div>
             </div>
