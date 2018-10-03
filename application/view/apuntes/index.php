@@ -380,8 +380,12 @@
 
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                             cargarTabla();
+                            $("#dialog\\.delete").remove();
+                            $("#dialog\\.view").modal("hide");
                         });
                     });
+
+                    $("#dialog\\.view").modal("show");
                 });
             });
         }
