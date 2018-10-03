@@ -26,7 +26,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                 </nav>
-                <div style="overflow-y:scroll;height:calc(100% - 4.8rem);" id="contenedor.tarjetas">
+                <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" id="contenedor.tarjetas">
                 </div>
             </div>
             <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
