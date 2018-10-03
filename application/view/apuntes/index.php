@@ -70,9 +70,9 @@
                </div>
                <div class="modal-body" id="dialog.body">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugar de evento</a> </li>
+                        <li class="nav-item"> <a class="nav-link active show" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugar de evento</a> </li>
                         <li class="nav-item"> <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Busqueda por evento</a> </li>
-                        <li class="nav-item"> <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li>
+                        <li class="nav-item"> <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -95,9 +95,13 @@
                             </table>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row">
-                                <div class="form-group col"> <label for="exampleInputEmail1">Nombre del Lugar</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div>
-                                <div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div>
+                            <div class="btn-group" role="group" aria-label="Menú">
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.lugar.nuevo" title="Nueva lugar"><i class="fas fa-pen"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.cancelar" title="Nueva lugar"><i class="fas fa-ban"></i></button>
+                            </div>
+                            <div class="row d-none" id="div.lugar">
+                                <div class="form-group col"> <label for="lugar.texto">Nombre del Lugar</label> <input type="text" class="form-control" id="lugar.texto"> </div>
                             </div>
                             <table class="table table-hover">
                                 <thead class="table-success">
@@ -110,9 +114,13 @@
                             </table>
                         </div>
                         <div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="row">
-                                <div class="form-group col"> <label for="exampleInputEmail1">Tipo de cancelación</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div>
-                                <div class="col"> <button type="submit" class="btn btn-primary">Guardar</button><button type="submit" class="btn btn-primary">Cancelar</button></div>
+                            <div class="btn-group" role="group" aria-label="Menú">
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.cancelacion.nuevo" title="Nueva cancelacion"><i class="fas fa-pen"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelacion.guardar" title="Nueva cancelacion"><i class="fas fa-save"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelacion.cancelar" title="Nueva cancelacion"><i class="fas fa-ban"></i></button>
+                            </div>
+                            <div class="row d-none" id="div.cancelacion">
+                                <div class="form-group col"> <label for="cancelacion.texto">Tipo de cancelación</label> <input type="text" class="form-control" id="cancelacion.texto"> </div>
                             </div>
                             <table class="table table-hover">
                                 <thead class="table-success">
