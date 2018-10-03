@@ -41,15 +41,13 @@
                                 <div class="form-group"><label for="formulario.actividad">Busqueda por evento</label><select class="form-control" id="formulario.actividad"></select></div>
                                 <div class="form-group"><label for="formulario.palabras">Asistentes al eventos</label><input class="form-control" id="formulario.palabras" type="text"></div>
                                 <input id="formulario.id" type="hidden" value="" />
+                                <div class="form-group"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
+                                <div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
+                                <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows=19"></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows=24"></textarea></div>
                             </div>
-                        </div>
-                        <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
-                            <div class="form-group col"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
-                            <div class="form-group col"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
                         </div>
                     </div>
                 </div>
