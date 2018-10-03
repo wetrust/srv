@@ -186,6 +186,9 @@
             });
 
             $("#boton\\.configuracion").on("click", function(){
+                cargarActividad();
+                cargarLugar();
+                cargarCancelacion();
                 $("#dialog\\.title").html("Configuración");
                 $("#dialog\\.delete").remove();
                 $("#dialog\\.view").modal("show");
