@@ -43,7 +43,7 @@
                                 <input id="formulario.id" type="hidden" value="" />
                             </div>
                             <div class="col">
-                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows="6"></textarea></div>
                             </div>
                         </div>
                         <div class="row m-0">
