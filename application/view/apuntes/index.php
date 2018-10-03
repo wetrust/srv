@@ -29,7 +29,7 @@
                 <div style="overflow-y:scroll;height:calc(100% - 4.8rem);" id="contenedor.tarjetas">
                 </div>
             </div>
-            <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
+            <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group col"><label for="formulario.paciente">Nombre del evento</label><input class="form-control" id="formulario.paciente" type="email"></div>
