@@ -150,33 +150,32 @@
       <script>$(document).ready(function() { var dateTime = new Date(); var day = ("0" + dateTime.getDate()).slice(-2); var month = ("0" + (dateTime.getMonth() + 1)).slice(-2); $("#formulario\\.fecha").val((day) + "/" + (month) + "/" + dateTime.getFullYear()); $('#formulario\\.fecha').datepicker('setValue', (day) + "/" + (month) + "/" + dateTime.getFullYear());$("#formulario\\.fcancelacion").val((day) + "/" + (month) + "/" + dateTime.getFullYear()); $('#formulario\\.fcancelacion').datepicker('setValue', (day) + "/" + (month) + "/" + dateTime.getFullYear());});</script>
       <script>
          $(document).ready(function(){
-             cargarTabla();
+            cargarTabla();
          
-                $("#boton\\.buscar").on("click", function(){
-                    if ($("#div\\.busqueda").hasClass("d-none")){
-                        $("#div\\.busqueda").removeClass("d-none");
-                    }
-                    else{
-                        $("#div\\.busqueda").addClass("d-none");
-                    }
-                });
+            $("#boton\\.buscar").on("click", function(){
+                if ($("#div\\.busqueda").hasClass("d-none")){
+                    $("#div\\.busqueda").removeClass("d-none");
+                }
+                else{
+                    $("#div\\.busqueda").addClass("d-none");
+                }
+            });
 
-                $("#opcion\\.financiera").on("click", function(){
+            $("#opcion\\.financiera").on("click", function(){
+                if ($(this).is(':checked')){
+                    $("#div\\.financiero").removeClass("d-none");
+                }
+                else{
+                    $("#div\\.financiero").addClass("d-none");
+                } 
+            });
 
-                    if ($(this).is(':checked')){
-                        $("#div\\.financiero").removeClass("d-none");
-                    }
-                    else{
-                        $("#div\\.financiero").addClass("d-none");
-                    } 
-                });
-
-                $("#boton\\.actividad\\.nuevo").on("click", function(){
-                    $("#div\\.actividad").removeClass("d-none");
-                    $("#boton\\.actividad\\.nuevo").addClass("d-none");
-                    $("#boton\\.actividad\\.guardar").removeClass("d-none");
-                    $("#boton\\.actividad\\.cancelar").removeClass("d-none");
-                });
+            $("#boton\\.actividad\\.nuevo").on("click", function(){
+                $("#div\\.actividad").removeClass("d-none");
+                $("#boton\\.actividad\\.nuevo").addClass("d-none");
+                $("#boton\\.actividad\\.guardar").removeClass("d-none");
+                $("#boton\\.actividad\\.cancelar").removeClass("d-none");
+            });
 
                 $("#boton\\.actividad\\.guardar").on("click", function(){
                     $("#div\\.actividad").addClass("d-none");
@@ -194,12 +193,26 @@
                     });
                 });
 
-                $("#boton\\.actividad\\.cancelar").on("click", function(){
-                    $("#div\\.actividad").addClass("d-none");
-                    $("#boton\\.actividad\\.nuevo").removeClass("d-none");
-                    $("#boton\\.actividad\\.guardar").addClass("d-none");
-                    $("#boton\\.actividad\\.cancelar").addClass("d-none");
-                });
+            $("#boton\\.actividad\\.cancelar").on("click", function(){
+                $("#div\\.actividad").addClass("d-none");
+                $("#boton\\.actividad\\.nuevo").removeClass("d-none");
+                $("#boton\\.actividad\\.guardar").addClass("d-none");
+                $("#boton\\.actividad\\.cancelar").addClass("d-none");
+            });
+
+            $("#boton\\.lugar\\.nuevo").on("click", function(){
+                $("#div\\.lugar").removeClass("d-none");
+                $("#boton\\.lugar\\.nuevo").addClass("d-none");
+                $("#boton\\.lugar\\.guardar").removeClass("d-none");
+                $("#boton\\.lugar\\.cancelar").removeClass("d-none");
+            });
+
+            $("#boton\\.lugar\\.cancelar").on("click", function(){
+                $("#div\\.lugar").addClass("d-none");
+                $("#boton\\.lugar\\.nuevo").removeClass("d-none");
+                $("#boton\\.lugar\\.guardar").addClass("d-none");
+                $("#boton\\.lugar\\.cancelar").addClass("d-none");
+            });
 
             $("#boton\\.nuevo").on("click", function(){
 
