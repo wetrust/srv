@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control border" id="formulario.comentarios" rows="35"></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control border" id="formulario.comentarios" rows="25"></textarea></div>
                             </div>
                         </div>
                     </div>
