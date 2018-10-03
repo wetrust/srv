@@ -46,7 +46,7 @@
                                 <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows="28"></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control border" id="formulario.comentarios" rows="36"></textarea></div>
                             </div>
                         </div>
                     </div>
