@@ -42,7 +42,7 @@
                                 <div class="form-group"><label for="formulario.palabras">Asistentes al eventos</label><input class="form-control" id="formulario.palabras" type="text"></div>
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <input type="checkbox" class="form-check-input" id="opcion.financiera">
                                     <label class="form-check-label" for="opcion.financiera">Financiero</label>
                                 </div>
                                 <div class="d-none" id="div.financiero">
@@ -151,6 +151,16 @@
                     else{
                         $("#div\\.busqueda").addClass("d-none");
                     }
+                });
+
+                $("#opcion\\.financiera").on("change", function(){
+
+                    if ($("#div\\.busqueda").is(':checked')){
+                        $("#div.financiero").removeClass("d-none");
+                    }
+                    else{
+                        $("#div.financiero").addClass("d-none");
+                    } 
                 });
 
                 $("#boton\\.actividad\\.nuevo").on("click", function(){
