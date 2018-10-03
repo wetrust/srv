@@ -42,7 +42,7 @@
                                 <div class="form-group"><label for="formulario.palabras"><strong>Asistentes al eventos</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input h6" id="opcion.financiera">
+                                    <input type="checkbox" class="form-check-input" id="opcion.financiera">
                                     <label class="form-check-label" for="opcion.financiera"><strong>Registro financiero</strong></label>
                                 </div>
                                 <div class="d-none" id="div.financiero">
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios generales</strong></label><textarea class="form-control border" id="formulario.comentarios" rows="25" disabled></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios generales</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
                             </div>
                         </div>
                     </div>
