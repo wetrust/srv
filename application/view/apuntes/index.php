@@ -75,26 +75,7 @@
                         <li class="nav-item"> <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="btn-group" role="group" aria-label="Menú">
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button>
-                            </div>
-                            <div class="row d-none" id="div.actividad">
-                                <div class="form-group col"> <label for="actividad.texto">Nombre de la Busqueda por evento</label> <input type="text" class="form-control" id="actividad.texto"> </div>
-                            </div>
-                            <table class="table table-hover">
-                                <thead class="table-success">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre de la busqueda por evento</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabla.actividad"> </tbody>
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="btn-group" role="group" aria-label="Menú">
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.lugar.nuevo" title="Nueva lugar"><i class="fas fa-pen"></i></button>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button>
@@ -111,6 +92,25 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tabla.lugar"> </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="btn-group" role="group" aria-label="Menú">
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button>
+                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button>
+                            </div>
+                            <div class="row d-none" id="div.actividad">
+                                <div class="form-group col"> <label for="actividad.texto">Nombre de la Busqueda por evento</label> <input type="text" class="form-control" id="actividad.texto"> </div>
+                            </div>
+                            <table class="table table-hover">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre de la busqueda por evento</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla.actividad"> </tbody>
                             </table>
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
