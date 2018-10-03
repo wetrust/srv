@@ -12,7 +12,7 @@
    </head>
    <body class="h-100">
         <div class="row h-100 w-100" style="overflow:hide">
-            <div class="col-4 border-right pr-0 h-100">
+            <div class="col-3 border-right pr-0 h-100">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
@@ -29,7 +29,7 @@
                 <div style="overflow-y:scroll;height:calc(100% - 4.8rem);" id="contenedor.tarjetas">
                 </div>
             </div>
-            <div class="col-8 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
+            <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group col"><label for="formulario.paciente">Nombre del evento</label><input class="form-control" id="formulario.paciente" type="email"></div>
@@ -41,6 +41,10 @@
                                 <div class="form-group"><label for="formulario.actividad">Busqueda por evento</label><select class="form-control" id="formulario.actividad"></select></div>
                                 <div class="form-group"><label for="formulario.palabras">Asistentes al eventos</label><input class="form-control" id="formulario.palabras" type="text"></div>
                                 <input id="formulario.id" type="hidden" value="" />
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
                                 <div class="form-group"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
                                 <div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
                                 <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
