@@ -156,10 +156,10 @@
                 $("#opcion\\.financiera").on("click", function(){
 
                     if ($(this).is(':checked')){
-                        $("#div.financiero").removeClass("d-none");
+                        $("#div\\.financiero").removeClass("d-none");
                     }
                     else{
-                        $("#div.financiero").addClass("d-none");
+                        $("#div\\.financiero").addClass("d-none");
                     } 
                 });
 
