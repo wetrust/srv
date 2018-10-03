@@ -43,11 +43,13 @@
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <label class="form-check-label" for="opcion.financiera">Financiero</label>
                                 </div>
-                                <div class="form-group"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
-                                <div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
-                                <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
+                                <div class="d-none" id="div.financiero">
+                                    <div class="form-group"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
+                                    <div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
+                                    <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
+                                </div>
                             </div>
                             <div class="col-8">
                                 <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control border" id="formulario.comentarios" rows="35"></textarea></div>
