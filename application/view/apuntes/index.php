@@ -214,6 +214,20 @@
                 $("#boton\\.lugar\\.cancelar").addClass("d-none");
             });
 
+            $("#boton\\.cancelacion\\.nuevo").on("click", function(){
+                $("#div\\.cancelacion").removeClass("d-none");
+                $("#boton\\.cancelacion\\.nuevo").addClass("d-none");
+                $("#boton\\.cancelacion\\.guardar").removeClass("d-none");
+                $("#boton\\.cancelacion\\.cancelar").removeClass("d-none");
+            });
+
+            $("#boton\\.cancelacion\\.cancelar").on("click", function(){
+                $("#div\\.cancelacion").addClass("d-none");
+                $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
+                $("#boton\\.cancelacion\\.guardar").addClass("d-none");
+                $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
+            });
+
             $("#boton\\.nuevo").on("click", function(){
 
                 var dateTime = new Date();
