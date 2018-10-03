@@ -32,27 +32,27 @@
             <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
                 <div class="card">
                     <div class="card-body">
-                        <div class="form-group col"><label for="formulario.paciente"><strong>Nombre del evento</strong></label><input class="form-control" id="formulario.paciente" type="email"></div>
+                        <div class="form-group col"><label for="formulario.paciente"><strong>Nombre del evento</strong></label><input class="form-control" id="formulario.paciente" type="email" disabled></div>
                         <div class="row m-0">
                             <div class="col">
-                                <div class="form-group"><label for="formulario.fecha"><strong>Fecha</strong></label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text"></div>
-                                <div class="form-group"><label for="formulario.hora"><strong>Hora</strong></label><input class="form-control" id="formulario.hora" type="text"></div>
-                                <div class="form-group"><label for="formulario.lugar"><strong>Lugar del evento</strong></label><select class="form-control" id="formulario.lugar"></select></div>
-                                <div class="form-group"><label for="formulario.actividad"><strong>Definir método de búsqueda</strong></label><select class="form-control" id="formulario.actividad"></select></div>
-                                <div class="form-group"><label for="formulario.palabras"><strong>Asistentes al eventos</strong></label><input class="form-control" id="formulario.palabras" type="text"></div>
+                                <div class="form-group"><label for="formulario.fecha"><strong>Fecha</strong></label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text" disabled></div>
+                                <div class="form-group"><label for="formulario.hora"><strong>Hora</strong></label><input class="form-control" id="formulario.hora" type="text" disabled></div>
+                                <div class="form-group"><label for="formulario.lugar"><strong>Lugar del evento</strong></label><select class="form-control" id="formulario.lugar" disabled></select></div>
+                                <div class="form-group"><label for="formulario.actividad"><strong>Definir método de búsqueda</strong></label><select class="form-control" id="formulario.actividad" disabled></select></div>
+                                <div class="form-group"><label for="formulario.palabras"><strong>Asistentes al eventos</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="opcion.financiera">
                                     <label class="form-check-label" for="opcion.financiera"><strong>Registro financiero</strong></label>
                                 </div>
                                 <div class="d-none" id="div.financiero">
-                                    <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cancelación $</strong></label><select class="form-control" id="formulario.cancelacion"></select></div>
-                                    <div class="form-group"><label for="formulario.fcancelacion"><strong>Fecha de cancelación</strong></label><input class="form-control" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
-                                    <div class="form-group"><label for="formulario.valor"><strong>Valor cancelado</strong></label><input class="form-control" id="formulario.valor" type="number"></div>
+                                    <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cancelación $</strong></label><select class="form-control" id="formulario.cancelacion" disabled></select></div>
+                                    <div class="form-group"><label for="formulario.fcancelacion"><strong>Fecha de cancelación</strong></label><input class="form-control" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy" disabled></div>
+                                    <div class="form-group"><label for="formulario.valor"><strong>Valor cancelado</strong></label><input class="form-control" id="formulario.valor" type="number" disabled></div>
                                 </div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios generales</strong></label><textarea class="form-control border" id="formulario.comentarios" rows="25"></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios generales</strong></label><textarea class="form-control border" id="formulario.comentarios" rows="25" disabled></textarea></div>
                             </div>
                         </div>
                     </div>
