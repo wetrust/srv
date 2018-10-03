@@ -128,19 +128,19 @@
                     palabras: ""
                 };
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                    $("#formulario\\.id").val(data.apunte_id);
-                    $("#formulario\\.fecha").val(data.apunte_date);
+                    $("#formulario\\.id").val(data.apunte_id).attr("disabled", false);
+                    $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
                     $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
-                    $("#formulario\\.hora").val("");
-                    $("#formulario\\.paciente").val(data.apunte_person);
-                    $("#formulario\\.actividad").val("");
-                    $("#formulario\\.lugar").val("");
-                    $("#formulario\\.cancelacion").val("");
-                    $("#formulario\\.fcancelacion").val(data.apunte_fcancellation),
+                    $("#formulario\\.hora").val("").attr("disabled", false);
+                    $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
+                    $("#formulario\\.actividad").val("").attr("disabled", false);
+                    $("#formulario\\.lugar").val("").attr("disabled", false);
+                    $("#formulario\\.cancelacion").val("").attr("disabled", false);
+                    $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false);
                     $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
-                    $("#formulario\\.valor").val("");
-                    $("#formulario\\.comentarios").val("");
-                    $("#formulario\\.palabras").val("");
+                    $("#formulario\\.valor").val("").attr("disabled", false);
+                    $("#formulario\\.comentarios").val("").attr("disabled", false);
+                    $("#formulario\\.palabras").val("").attr("disabled", false);
                     cargarTabla();
                 });
             });
@@ -352,19 +352,19 @@
                     };
 
                     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                        $("#formulario\\.id").val(data.apunte_id);
-                        $("#formulario\\.fecha").val(data.apunte_date);
+                        $("#formulario\\.id").val(data.apunte_id).attr("disabled", false);
+                        $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
                         $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
-                        $("#formulario\\.hora").val(data.apunte_hour);
-                        $("#formulario\\.paciente").val(data.apunte_person);
-                        $("#formulario\\.actividad").val(data.apunte_activity);
-                        $("#formulario\\.lugar").val(data.apunte_location);
-                        $("#formulario\\.cancelacion").val(data.apunte_cancellation);
-                        $("#formulario\\.fcancelacion").val(data.apunte_fcancellation),
+                        $("#formulario\\.hora").val(data.apunte_hour).attr("disabled", false);
+                        $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
+                        $("#formulario\\.actividad").val(data.apunte_activity).attr("disabled", false);
+                        $("#formulario\\.lugar").val(data.apunte_location).attr("disabled", false);
+                        $("#formulario\\.cancelacion").val(data.apunte_cancellation).attr("disabled", false);
+                        $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false),
                         $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
-                        $("#formulario\\.valor").val(data.apunte_cost);
-                        $("#formulario\\.comentarios").val(data.apunte_text);
-                        $("#formulario\\.palabras").val(data.apunte_keywords);
+                        $("#formulario\\.valor").val(data.apunte_cost).attr("disabled", false);
+                        $("#formulario\\.comentarios").val(data.apunte_text).attr("disabled", false);
+                        $("#formulario\\.palabras").val(data.apunte_keywords).attr("disabled", false);
                     });
                 });
 
@@ -386,13 +386,31 @@
                             cargarTabla();
                             $("#dialog\\.delete").remove();
                             $("#dialog\\.view").modal("hide");
+
+                            var dateTime = new Date();
+                            var day = ("0" + dateTime.getDate()).slice(-2);
+                            var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+
+                            $("#formulario\\.id").val("").attr("disabled", true);
+                            $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
+                            $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                            $("#formulario\\.hora").val("").attr("disabled", true);
+                            $("#formulario\\.paciente").val("").attr("disabled", true);
+                            $("#formulario\\.actividad").val("").attr("disabled", true);
+                            $("#formulario\\.lugar").val("").attr("disabled", true);
+                            $("#formulario\\.cancelacion").val("").attr("disabled", true);
+                            $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
+                            $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                            $("#formulario\\.valor").val("").attr("disabled", true);
+                            $("#formulario\\.comentarios").val("").attr("disabled", true);
+                            $("#formulario\\.palabras").val("").attr("disabled", true);
                         });
                     });
 
                     $("#dialog\\.view").modal("show");
                 });
             });
-        }
+        }day + "/" + month + "/" + dateTime.getFullYear()
 
         function cargarActividad(){
             var solicitud = {
