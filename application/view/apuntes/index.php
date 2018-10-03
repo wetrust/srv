@@ -192,6 +192,7 @@
 
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                     cargarActividad();
+                    $("#actividad\\.texto").val("");
                 });
             });
 
@@ -200,6 +201,7 @@
                 $("#boton\\.actividad\\.nuevo").removeClass("d-none");
                 $("#boton\\.actividad\\.guardar").addClass("d-none");
                 $("#boton\\.actividad\\.cancelar").addClass("d-none");
+                $("#actividad\\.texto").val("");
             });
 
             $("#boton\\.lugar\\.nuevo").on("click", function(){
@@ -222,6 +224,7 @@
 
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                     cargarLugar();
+                    $("#lugar\\.texto").val("");
                 });
             });
 
@@ -230,6 +233,7 @@
                 $("#boton\\.lugar\\.nuevo").removeClass("d-none");
                 $("#boton\\.lugar\\.guardar").addClass("d-none");
                 $("#boton\\.lugar\\.cancelar").addClass("d-none");
+                $("#lugar\\.texto").val("");
             });
 
             $("#boton\\.cancelacion\\.nuevo").on("click", function(){
@@ -252,6 +256,7 @@
 
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                     cargarCancelacion();
+                    $("#cancelacion\\.texto").val("");
                 });
             });
 
@@ -260,6 +265,7 @@
                 $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
                 $("#boton\\.cancelacion\\.guardar").addClass("d-none");
                 $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
+                $("#cancelacion\\.texto").val("");
             });
 
             $("#boton\\.nuevo").on("click", function(){
