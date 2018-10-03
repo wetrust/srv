@@ -42,8 +42,8 @@
                                 <div class="form-group"><label for="formulario.palabras">Asistentes al eventos</label><input class="form-control" id="formulario.palabras" type="text"></div>
                                 <input id="formulario.id" type="hidden" value="" />
                             </div>
-                            <div class="col">
-                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows="6"></textarea></div>
+                            <div class="col-8">
+                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows=12"></textarea></div>
                             </div>
                         </div>
                         <div class="row m-0">
