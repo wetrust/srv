@@ -38,7 +38,7 @@
                                 <div class="form-group"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text"></div>
                                 <div class="form-group"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div>
                                 <div class="form-group"><label for="formulario.lugar">Lugar del evento</label><select class="form-control" id="formulario.lugar"></select></div>
-                                <div class="form-group"><label for="formulario.actividad">Busqueda por evento</label><select class="form-control" id="formulario.actividad"></select></div>
+                                <div class="form-group"><label for="formulario.actividad">Definir método de búsqueda</label><select class="form-control" id="formulario.actividad"></select></div>
                                 <div class="form-group"><label for="formulario.palabras">Asistentes al eventos</label><input class="form-control" id="formulario.palabras" type="text"></div>
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-check">
@@ -69,70 +69,6 @@
                   </button>
                </div>
                <div class="modal-body" id="dialog.body">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item"> <a class="nav-link active show" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugar de evento</a> </li>
-                        <li class="nav-item"> <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Busqueda por evento</a> </li>
-                        <li class="nav-item"> <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="btn-group" role="group" aria-label="Menú">
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.lugar.nuevo" title="Nueva lugar"><i class="fas fa-pen"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.cancelar" title="Nueva lugar"><i class="fas fa-ban"></i></button>
-                            </div>
-                            <div class="row d-none" id="div.lugar">
-                                <div class="form-group col"> <label for="lugar.texto">Nombre del Lugar</label> <input type="text" class="form-control" id="lugar.texto"> </div>
-                            </div>
-                            <table class="table table-hover">
-                                <thead class="table-success">
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre del Lugar</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabla.lugar"> </tbody>
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="btn-group" role="group" aria-label="Menú">
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button>
-                            </div>
-                            <div class="row d-none" id="div.actividad">
-                                <div class="form-group col"> <label for="actividad.texto">Nombre de la Busqueda por evento</label> <input type="text" class="form-control" id="actividad.texto"> </div>
-                            </div>
-                            <table class="table table-hover">
-                                <thead class="table-success">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre de la busqueda por evento</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabla.actividad"> </tbody>
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="btn-group" role="group" aria-label="Menú">
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.cancelacion.nuevo" title="Nueva cancelacion"><i class="fas fa-pen"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelacion.guardar" title="Nueva cancelacion"><i class="fas fa-save"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelacion.cancelar" title="Nueva cancelacion"><i class="fas fa-ban"></i></button>
-                            </div>
-                            <div class="row d-none" id="div.cancelacion">
-                                <div class="form-group col"> <label for="cancelacion.texto">Tipo de cancelación</label> <input type="text" class="form-control" id="cancelacion.texto"> </div>
-                            </div>
-                            <table class="table table-hover">
-                                <thead class="table-success">
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Tipo de cancelación</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabla.cancelacion"></tbody>
-                            </table>
-                        </div>
-                    </div>
                </div>
                <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -170,102 +106,6 @@
                 else{
                     $("#div\\.financiero").addClass("d-none");
                 } 
-            });
-
-            $("#boton\\.actividad\\.nuevo").on("click", function(){
-                $("#div\\.actividad").removeClass("d-none");
-                $("#boton\\.actividad\\.nuevo").addClass("d-none");
-                $("#boton\\.actividad\\.guardar").removeClass("d-none");
-                $("#boton\\.actividad\\.cancelar").removeClass("d-none");
-            });
-
-            $("#boton\\.actividad\\.guardar").on("click", function(){
-                $("#div\\.actividad").addClass("d-none");
-                $("#boton\\.actividad\\.nuevo").removeClass("d-none");
-                $("#boton\\.actividad\\.guardar").addClass("d-none");
-                $("#boton\\.actividad\\.cancelar").addClass("d-none");
-
-                var formulario = {
-                    accion: "nuevoActividad",
-                    actividad_text: $("#actividad\\.texto").val(),
-                };
-
-                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                    cargarActividad();
-                    $("#actividad\\.texto").val("");
-                });
-            });
-
-            $("#boton\\.actividad\\.cancelar").on("click", function(){
-                $("#div\\.actividad").addClass("d-none");
-                $("#boton\\.actividad\\.nuevo").removeClass("d-none");
-                $("#boton\\.actividad\\.guardar").addClass("d-none");
-                $("#boton\\.actividad\\.cancelar").addClass("d-none");
-                $("#actividad\\.texto").val("");
-            });
-
-            $("#boton\\.lugar\\.nuevo").on("click", function(){
-                $("#div\\.lugar").removeClass("d-none");
-                $("#boton\\.lugar\\.nuevo").addClass("d-none");
-                $("#boton\\.lugar\\.guardar").removeClass("d-none");
-                $("#boton\\.lugar\\.cancelar").removeClass("d-none");
-            });
-            
-            $("#boton\\.lugar\\.guardar").on("click", function(){
-                $("#div\\.lugar").addClass("d-none");
-                $("#boton\\.lugar\\.nuevo").removeClass("d-none");
-                $("#boton\\.lugar\\.guardar").addClass("d-none");
-                $("#boton\\.lugar\\.cancelar").addClass("d-none");
-
-                var formulario = {
-                    accion: "nuevoLugar",
-                    lugar_text: $("#lugar\\.texto").val(),
-                };
-
-                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                    cargarLugar();
-                    $("#lugar\\.texto").val("");
-                });
-            });
-
-            $("#boton\\.lugar\\.cancelar").on("click", function(){
-                $("#div\\.lugar").addClass("d-none");
-                $("#boton\\.lugar\\.nuevo").removeClass("d-none");
-                $("#boton\\.lugar\\.guardar").addClass("d-none");
-                $("#boton\\.lugar\\.cancelar").addClass("d-none");
-                $("#lugar\\.texto").val("");
-            });
-
-            $("#boton\\.cancelacion\\.nuevo").on("click", function(){
-                $("#div\\.cancelacion").removeClass("d-none");
-                $("#boton\\.cancelacion\\.nuevo").addClass("d-none");
-                $("#boton\\.cancelacion\\.guardar").removeClass("d-none");
-                $("#boton\\.cancelacion\\.cancelar").removeClass("d-none");
-            });
-
-            $("#boton\\.cancelacion\\.guardar").on("click", function(){
-                $("#div\\.cancelacion").addClass("d-none");
-                $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
-                $("#boton\\.cancelacion\\.guardar").addClass("d-none");
-                $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
-
-                var formulario = {
-                    accion: "nuevaCancelacion",
-                    cancelacion_text: $("#cancelacion\\.texto").val(),
-                };
-
-                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                    cargarCancelacion();
-                    $("#cancelacion\\.texto").val("");
-                });
-            });
-
-            $("#boton\\.cancelacion\\.cancelar").on("click", function(){
-                $("#div\\.cancelacion").addClass("d-none");
-                $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
-                $("#boton\\.cancelacion\\.guardar").addClass("d-none");
-                $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
-                $("#cancelacion\\.texto").val("");
             });
 
             $("#boton\\.nuevo").on("click", function(){
@@ -348,7 +188,103 @@
             $("#boton\\.configuracion").on("click", function(){
                 $("#dialog\\.title").html("Configuración");
                 $("#dialog\\.view").modal("show");
-                //$("#dialog\\.body").html('<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item"> <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Actividades</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugares</a> </li><li class="nav-item"> <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li></ul><div class="tab-content" id="myTabContent"> <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre de la actividad</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre de la actividad</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Nombre del Lugar</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="submit" class="btn btn-primary">Cancelar</button> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del Lugar</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <div class="row"> <div class="form-group col"> <label for="exampleInputEmail1">Tipo de cancelación</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> </div><div class="col"> <button type="submit" class="btn btn-primary">Guardar</button><button type="submit" class="btn btn-primary">Cancelar</button></div></div><table class="table table-hover"><thead class="table-success"><tr><th scope="col">#</th><th scope="col">Tipo de cancelación</th></tr></thead><tbody id="tabla.actividad"></tbody></table></div></div>');
+                $("#dialog\\.body").html('<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item"> <a class="nav-link active show" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugar de evento</a> </li><li class="nav-item"> <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Busqueda por evento</a> </li><li class="nav-item"> <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li></ul> <div class="tab-content" id="myTabContent"> <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.lugar.nuevo" title="Nueva lugar"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.cancelar" title="Nueva lugar"><i class="fas fa-ban"></i></button> </div><div class="row d-none" id="div.lugar"> <div class="form-group col"> <label for="lugar.texto">Nombre del Lugar</label> <input type="text" class="form-control" id="lugar.texto"> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del Lugar</th> </tr></thead> <tbody id="tabla.lugar"> </tbody> </table> </div><div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button> </div><div class="row d-none" id="div.actividad"> <div class="form-group col"> <label for="actividad.texto">Nombre de la Busqueda por evento</label> <input type="text" class="form-control" id="actividad.texto"> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre de la busqueda por evento</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.cancelacion.nuevo" title="Nueva cancelacion"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelacion.guardar" title="Nueva cancelacion"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelacion.cancelar" title="Nueva cancelacion"><i class="fas fa-ban"></i></button> </div><div class="row d-none" id="div.cancelacion"> <div class="form-group col"> <label for="cancelacion.texto">Tipo de cancelación</label> <input type="text" class="form-control" id="cancelacion.texto"> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Tipo de cancelación</th> </tr></thead> <tbody id="tabla.cancelacion"></tbody> </table> </div></div>');
+            
+                $("#boton\\.actividad\\.nuevo").on("click", function(){
+                    $("#div\\.actividad").removeClass("d-none");
+                    $("#boton\\.actividad\\.nuevo").addClass("d-none");
+                    $("#boton\\.actividad\\.guardar").removeClass("d-none");
+                    $("#boton\\.actividad\\.cancelar").removeClass("d-none");
+                });
+
+                $("#boton\\.actividad\\.guardar").on("click", function(){
+                    $("#div\\.actividad").addClass("d-none");
+                    $("#boton\\.actividad\\.nuevo").removeClass("d-none");
+                    $("#boton\\.actividad\\.guardar").addClass("d-none");
+                    $("#boton\\.actividad\\.cancelar").addClass("d-none");
+
+                    var formulario = {
+                        accion: "nuevoActividad",
+                        actividad_text: $("#actividad\\.texto").val(),
+                    };
+
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                        cargarActividad();
+                        $("#actividad\\.texto").val("");
+                    });
+                });
+
+                $("#boton\\.actividad\\.cancelar").on("click", function(){
+                    $("#div\\.actividad").addClass("d-none");
+                    $("#boton\\.actividad\\.nuevo").removeClass("d-none");
+                    $("#boton\\.actividad\\.guardar").addClass("d-none");
+                    $("#boton\\.actividad\\.cancelar").addClass("d-none");
+                    $("#actividad\\.texto").val("");
+                });
+
+                $("#boton\\.lugar\\.nuevo").on("click", function(){
+                    $("#div\\.lugar").removeClass("d-none");
+                    $("#boton\\.lugar\\.nuevo").addClass("d-none");
+                    $("#boton\\.lugar\\.guardar").removeClass("d-none");
+                    $("#boton\\.lugar\\.cancelar").removeClass("d-none");
+                });
+                
+                $("#boton\\.lugar\\.guardar").on("click", function(){
+                    $("#div\\.lugar").addClass("d-none");
+                    $("#boton\\.lugar\\.nuevo").removeClass("d-none");
+                    $("#boton\\.lugar\\.guardar").addClass("d-none");
+                    $("#boton\\.lugar\\.cancelar").addClass("d-none");
+
+                    var formulario = {
+                        accion: "nuevoLugar",
+                        lugar_text: $("#lugar\\.texto").val(),
+                    };
+
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                        cargarLugar();
+                        $("#lugar\\.texto").val("");
+                    });
+                });
+
+                $("#boton\\.lugar\\.cancelar").on("click", function(){
+                    $("#div\\.lugar").addClass("d-none");
+                    $("#boton\\.lugar\\.nuevo").removeClass("d-none");
+                    $("#boton\\.lugar\\.guardar").addClass("d-none");
+                    $("#boton\\.lugar\\.cancelar").addClass("d-none");
+                    $("#lugar\\.texto").val("");
+                });
+
+                $("#boton\\.cancelacion\\.nuevo").on("click", function(){
+                    $("#div\\.cancelacion").removeClass("d-none");
+                    $("#boton\\.cancelacion\\.nuevo").addClass("d-none");
+                    $("#boton\\.cancelacion\\.guardar").removeClass("d-none");
+                    $("#boton\\.cancelacion\\.cancelar").removeClass("d-none");
+                });
+
+                $("#boton\\.cancelacion\\.guardar").on("click", function(){
+                    $("#div\\.cancelacion").addClass("d-none");
+                    $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
+                    $("#boton\\.cancelacion\\.guardar").addClass("d-none");
+                    $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
+
+                    var formulario = {
+                        accion: "nuevaCancelacion",
+                        cancelacion_text: $("#cancelacion\\.texto").val(),
+                    };
+
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                        cargarCancelacion();
+                        $("#cancelacion\\.texto").val("");
+                    });
+                });
+
+                $("#boton\\.cancelacion\\.cancelar").on("click", function(){
+                    $("#div\\.cancelacion").addClass("d-none");
+                    $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
+                    $("#boton\\.cancelacion\\.guardar").addClass("d-none");
+                    $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
+                    $("#cancelacion\\.texto").val("");
+                });
             });
         });
 
