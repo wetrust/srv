@@ -395,7 +395,7 @@
                 $("#contenedor\\.tarjetas").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<div class="card"><div class="card-body p-3"><div class="row apunte" data-id="' + item["apunte_id"] + '"><div class="col text-truncate"><p class="my-2">' + item["apunte_person"] +'</p></div><div class="col-4 d-none"><button type="button" id="boton.nuevo" data-id="' + item["apunte_id"] + '" class="btn btn-outline-warning px-3"><i class="fas fa-trash"></i></button></div></div></div></div>';
+                    let fila = '<div class="card"><div class="card-body p-3"><div class="row apunte" data-id="' + item["apunte_id"] + '"><div class="col text-truncate"><p class="my-2">' + item["apunte_person"] +'</p></div><div class="col-4 d-none"><button type="button" data-id="' + item["apunte_id"] + '" class="btn btn-outline-warning px-3 eliminar"><i class="fas fa-trash"></i></button></div></div></div></div>';
                     $("#contenedor\\.tarjetas").append(fila);
                 });
 
@@ -425,6 +425,19 @@
                         $("#formulario\\.valor").val(data.apunte_cost);
                         $("#formulario\\.comentarios").val(data.apunte_text);
                         $("#formulario\\.palabras").val(data.apunte_keywords);
+                    });
+                });
+
+                $(".eliminar").on("click",function(){
+                    let apunte_id = $(this).data("id");
+
+                    var solicitud = {
+                        accion: "eliminar",
+                        id: apunte_id
+                    };
+
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                        cargarTabla();
                     });
                 });
             });

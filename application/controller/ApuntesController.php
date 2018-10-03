@@ -49,6 +49,9 @@ class ApuntesController extends Controller
             case "guardar":
                 $resultado = ApuntesModel::updateApunte(Request::post('id'),Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'));
                 break;
+            case "eliminar":
+                $resultado = ApuntesModel::deleteApunte(Request::post('id'));
+                break;
             case "actividad":
                 $resultado = ApuntesModel::getAllActividades();
                 break;
