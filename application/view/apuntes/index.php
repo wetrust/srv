@@ -155,7 +155,7 @@
 
                 $("#opcion\\.financiera").on("click", function(){
 
-                    if ($("#div\\.busqueda").is(':checked')){
+                    if ($("#opcion\\.financiera").is(':checked')){
                         $("#div.financiero").removeClass("d-none");
                     }
                     else{
