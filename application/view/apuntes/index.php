@@ -153,7 +153,7 @@
                     }
                 });
 
-                $("#opcion\\.financiera").on("change", function(){
+                $("#opcion\\.financiera").on("click", function(){
 
                     if ($("#div\\.busqueda").is(':checked')){
                         $("#div.financiero").removeClass("d-none");
