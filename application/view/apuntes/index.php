@@ -150,6 +150,7 @@
       <script>
          $(document).ready(function(){
             cargarTabla();
+            cargarActividad();
          
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
@@ -188,7 +189,7 @@
                     };
 
                     $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                        cargarTabla();
+                        cargarActividad();
                     });
                 });
 
@@ -386,6 +387,24 @@
                         $("#formulario\\.palabras").val(data.apunte_keywords);
                     });
 
+                });
+            });
+        }
+
+        function cargarActividad(){
+            var solicitud = {
+                accion: "actividad"
+            };
+
+            $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                $("#formulario\\.actividad").empty();
+                $("#tabla\\.actividad").empty();
+
+                $.each(data, function(i, item) {
+                    let fila = '';
+                    let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
+                    $("#tabla\\.actividad").append(fila);
+                    $("#formulario\\.actividad").append(option);
                 });
             });
         }
