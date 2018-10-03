@@ -65,7 +65,7 @@ class ApuntesController extends Controller
                 $resultado = ApuntesModel::getAllCancelaciones();
                 break;
             case "nuevaCancelacion":
-                $resultado = ApuntesModel::createCancelacion(Request::post('cancelacion_text');
+                $resultado = ApuntesModel::createCancelacion(Request::post('cancelacion_text'));
                 break;
         }
 
