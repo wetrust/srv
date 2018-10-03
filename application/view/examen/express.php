@@ -1966,7 +1966,7 @@
                                     <option value="no evaluada dirigidamente, pero el aspecto morfológico general es normal" selected="selected">No evaluada dirigidamente, pero el aspecto morfológico general es normal</option>
                                     <option value="Descripcion general detallando distintos segmentos">Descripción general detallando distintos segmentos</option>
                                     <option value="de aspecto general normal">de aspecto general normal</option>
-                                    <option value="hallasgos de siguientes patologías:">hallasgos ecográficos compatible con:</option>
+                                    <option value="hallazgos de siguientes patologías:">hallazgos ecográficos compatible con:</option>
                                 </select>
                             </div>
                             <div class="form-group">
