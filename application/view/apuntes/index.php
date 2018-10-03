@@ -47,8 +47,8 @@
                                 </div>
                                 <div class="d-none" id="div.financiero">
                                     <div class="form-group mt-4"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
-                                    <div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control m-2" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
-                                    <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
+                                    <div class="form-group"><label for="formulario.fcancelacion">Fecha de cancelación</label><input class="form-control" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy"></div>
+                                    <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control" id="formulario.valor" type="number"></div>
                                 </div>
                             </div>
                             <div class="col-8">
