@@ -70,7 +70,7 @@
                </div>
                <div class="modal-body" id="dialog.body">
                </div>
-               <div class="modal-footer">
+               <div class="modal-footer" id="dialog.footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                </div>
             </div>
@@ -367,13 +367,20 @@
                 $(".eliminar").on("click",function(){
                     let apunte_id = $(this).data("id");
 
-                    var solicitud = {
-                        accion: "eliminar",
-                        id: apunte_id
-                    };
+                    $("#dialog\\.title").html('Eliminar Evento')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el evento seleccionado?')
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + apunte_id + '">Eliminar</button>');
 
-                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                        cargarTabla();
+                    $("#dialog\\.delete").on("click", function(){
+                        let apunte_id = $(this).data("id");
+                        var solicitud = {
+                            accion: "eliminar",
+                            id: apunte_id
+                        };
+
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                            cargarTabla();
+                        });
                     });
                 });
             });
