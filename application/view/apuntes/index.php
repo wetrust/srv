@@ -32,7 +32,7 @@
             <div class="col-8 h-100" style="overflow-y:scroll;height:calc(100% - 4.8rem);">
                 <div class="card">
                     <div class="card-body">
-                        <div class="form-group col"><label for="formulario.paciente">Nombre del evento o apuntes</label><input class="form-control" id="formulario.paciente" type="email"></div>
+                        <div class="form-group col"><label for="formulario.paciente">Nombre del evento</label><input class="form-control" id="formulario.paciente" type="email"></div>
                         <div class="row m-0">
                             <div class="col">
                                 <div class="form-group"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text"></div>
@@ -46,7 +46,7 @@
                                 <div class="form-group"><label for="formulario.valor">Valor cancelado</label><input class="form-control m-2" id="formulario.valor" type="number"></div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows=24"></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows=26"></textarea></div>
                             </div>
                         </div>
                     </div>
