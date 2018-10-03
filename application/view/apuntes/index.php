@@ -34,19 +34,17 @@
                     <div class="card-body">
                         <div class="form-group col"><label for="formulario.paciente">Nombre del evento o apuntes</label><input class="form-control" id="formulario.paciente" type="email"></div>
                         <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text"></div>
-                            <div class="form-group col"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div>
-                        </div>
-                        <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.lugar">Lugar del evento</label><select class="form-control" id="formulario.lugar"></select></div>
-                            <div class="form-group col"><label for="formulario.actividad">Busqueda por evento</label><select class="form-control" id="formulario.actividad"></select></div>
-                        </div>
-                        <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.palabras">Asistentes al eventos</label><input class="form-control" id="formulario.palabras" type="text"></div>
-                            <input id="formulario.id" type="hidden" value="" />
-                        </div>
-                        <div class="row m-0">
-                            <div class="form-group col"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div>
+                            <div class="col">
+                                <div class="form-group"><label for="formulario.fecha">Fecha</label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text"></div>
+                                <div class="form-group"><label for="formulario.hora">Hora</label><input class="form-control" id="formulario.hora" type="text"></div>
+                                <div class="form-group"><label for="formulario.lugar">Lugar del evento</label><select class="form-control" id="formulario.lugar"></select></div>
+                                <div class="form-group"><label for="formulario.actividad">Busqueda por evento</label><select class="form-control" id="formulario.actividad"></select></div>
+                                <div class="form-group"><label for="formulario.palabras">Asistentes al eventos</label><input class="form-control" id="formulario.palabras" type="text"></div>
+                                <input id="formulario.id" type="hidden" value="" />
+                            </div>
+                            <div class="col">
+                                <div class="form-group"><label for="formulario.comentarios">Comentarios generales</label><textarea class="form-control" id="formulario.comentarios" rows="3"></textarea></div>
+                            </div>
                         </div>
                         <div class="row m-0">
                             <div class="form-group col"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
