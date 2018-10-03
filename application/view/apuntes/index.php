@@ -43,7 +43,7 @@
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="opcion.financiera">
-                                    <label class="form-check-label" for="opcion.financiera">Financiero</label>
+                                    <label class="form-check-label" for="opcion.financiera">Registro financiero</label>
                                 </div>
                                 <div class="d-none" id="div.financiero">
                                     <div class="form-group mt-4"><label for="formulario.cancelacion">Cancelación $</label><select class="form-control" id="formulario.cancelacion"></select></div>
@@ -75,7 +75,7 @@
                         <li class="nav-item"> <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Cancelacion</a> </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="btn-group" role="group" aria-label="Menú">
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button>
@@ -113,7 +113,7 @@
                                 <tbody id="tabla.actividad"> </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                             <div class="btn-group" role="group" aria-label="Menú">
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.cancelacion.nuevo" title="Nueva cancelacion"><i class="fas fa-pen"></i></button>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelacion.guardar" title="Nueva cancelacion"><i class="fas fa-save"></i></button>
@@ -400,7 +400,7 @@
                 $("#tabla\\.actividad").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '';
+                    let fila = '<tr><th scope="row" data-id="' + item["actividad_id"] + '">' + item["actividad_text"] + '</th><td>' + item["actividad_text"] + '</td></tr>';
                     let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
                     $("#tabla\\.actividad").append(fila);
                     $("#formulario\\.actividad").append(option);
