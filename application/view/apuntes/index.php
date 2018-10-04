@@ -92,10 +92,22 @@
             cargarCancelacion();
          
             $("#boton\\.calculos").on("click", function(){
+
+                var dateTime = new Date();
+                var day = ("0" + dateTime.getDate()).slice(-2);
+                var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+
                 $("#dialog\\.title").html("Calculos");
                 $("#dialog\\.delete").remove();
                 $("#dialog\\.view").modal("show");
-                $("#dialog\\.body").html('<div class="row"><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha inicio</label><input type="text" class="form-control" id="calculos.fecha.uno"></div></div><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha fin</label><input type="text" class="form-control" id="calculos.fecha.dos"></div></div></div><div class="row"><div class="col"><div class="table-responsive"><table class="table"><thead><tr><th scope="col">#</th><th scope="col">Nombre del evento</th><th scope="col">Fecha</th><th scope="col">Lugar</th><th scope="col">Valor cancelado</th></tr></thead><tbody><tr><th scope="row">1</th><td>Cell</td><td>Cell</td></tr><tr><th scope="row">2</th><td>Cell</td><td>Cell</td></tr><tr><th scope="row">3</th><td>Cell</td><td>Cell</td></tr></tbody></table></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.lugar"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="formulario.lugar"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.actividad"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="formulario.cancelacion"><strong>Cierre de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.cancelacion"></select></div></div></div>');
+                $("#dialog\\.body").html('<div class="row"><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha inicio</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd/mm/yyyy"></div></div><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha fin</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd/mm/yyyy"></div></div></div><div class="row"><div class="col"><div class="table-responsive"><table class="table"><thead><tr><th scope="col">#</th><th scope="col">Nombre del evento</th><th scope="col">Fecha</th><th scope="col">Lugar</th><th scope="col">Valor cancelado</th></tr></thead><tbody><tr><th scope="row">1</th><td>Cell</td><td>Cell</td></tr><tr><th scope="row">2</th><td>Cell</td><td>Cell</td></tr><tr><th scope="row">3</th><td>Cell</td><td>Cell</td></tr></tbody></table></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.lugar"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="formulario.lugar"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.actividad"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="formulario.cancelacion"><strong>Cierre de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.cancelacion"></select></div></div></div>');
+            
+                $("#calculos\\.fecha\\.uno").val(day + "/" + month + "/" + dateTime.getFullYear());
+                $("#calculos\\.fecha\\.uno").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                $("#calculos\\.fecha\\.dos").val(day + "/" + month + "/" + dateTime.getFullYear());
+                $("#calculos\\.fecha\\.dos").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+
+
             });
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
