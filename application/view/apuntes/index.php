@@ -410,7 +410,7 @@
                     $("#dialog\\.view").modal("show");
                 });
             });
-        }day + "/" + month + "/" + dateTime.getFullYear()
+        }
 
         function cargarActividad(){
             var solicitud = {
@@ -458,10 +458,38 @@
                 $("#tabla\\.cancelacion").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<tr><th scope="row" data-id="' + item["cancelacion_id"] + '">' + item["cancelacion_id"] + '</th><td>' + item["cancelacion_text"] + '</td></tr>';
+                    let fila = '<tr><th scope="row">' + item["cancelacion_id"] + '</th><td class="columna-cancelacion">' + item["cancelacion_text"] + '<button type="button" data-id="' + item["cancelacion_id"] + '" class="btn btn-outline-warning px-3 eliminar-cancelacion float-right"><i class="fas fa-trash"></i></button></td></tr>';
                     let option = '<option value="'+ item["cancelacion_id"]+'">' +item["cancelacion_text"]+'</option>';
                     $("#tabla\\.cancelacion").append(fila);
                     $("#formulario\\.cancelacion").append(option);
+                });
+
+                $(".columna-cancelacion").on("focusin",function(){
+                    $(this).children("button").removeClass("d-none");
+                }).on("focusout", function(){
+                    $(this).children("button").addClass("d-none");
+                });
+
+                $(".eliminar-cancelacion").on("click", function(){
+                    let cancelacion_id = $(this).data("id");
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Eliminar tipo de cancelación')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el tipo de cancelación seleccionado?')
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + evento_id + '">Eliminar</button>');
+
+                    $("#dialog\\.delete").on("click", function(){
+                        let cancelacion_id = $(this).data("id");
+                        var solicitud = {
+                            accion: "eliminarCancelacion",
+                            id: cancelacion_id
+                        };
+
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                            cargarCancelacion();
+                        });
+                    });
+
+                    $("#dialog\\.view").modal("show");
                 });
             });
         }
