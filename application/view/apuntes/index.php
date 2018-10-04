@@ -487,6 +487,7 @@
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                             cargarCancelacion();
                             $("#boton\\.configuracion").trigger("click");
+                            $('#myTab a[href="#contact"]').tab('show')
                         });
                     });
 
