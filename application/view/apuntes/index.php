@@ -440,10 +440,40 @@
                 $("#tabla\\.lugar").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<tr><th scope="row" data-id="' + item["lugar_id"] + '">' + item["lugar_id"] + '</th><td>' + item["lugar_text"] + '</td></tr>';
+                    let fila = '<tr><th scope="row">' + item["lugar_id"] + '</th><td class="columna-lugar">' + item["lugar_text"] + '<button type="button" data-id="' + item["lugar_id"] + '" class="btn btn-outline-warning px-3 eliminar-lugar float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                     let option = '<option value="'+ item["lugar_id"]+'">' +item["lugar_text"]+'</option>';
                     $("#tabla\\.lugar").append(fila);
                     $("#formulario\\.lugar").append(option);
+                });
+
+                $(".columna-lugar").on("mouseenter",function(){
+                    $(this).children("button").removeClass("d-none");
+                }).on("mouseleave", function(){
+                    $(this).children("button").addClass("d-none");
+                });
+
+                $(".eliminar-lugar").on("click", function(){
+                    let lugar_id = $(this).data("id");
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Eliminar Lugar')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el lugar seleccionado?')
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + lugar_id + '">Eliminar</button>');
+
+                    $("#dialog\\.delete").on("click", function(){
+                        let lugar_id = $(this).data("id");
+                        var solicitud = {
+                            accion: "eliminarLugar",
+                            id: lugar_id
+                        };
+
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                            cargarLugar();
+                            $("#boton\\.configuracion").trigger("click");
+                            $('#myTab a[href="#profile"]').tab('show')
+                        });
+                    });
+
+                    $("#dialog\\.view").modal("show");
                 });
             });
         }
