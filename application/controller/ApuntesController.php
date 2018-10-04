@@ -58,17 +58,20 @@ class ApuntesController extends Controller
             case "nuevoActividad":
                 $resultado = ApuntesModel::createActividad(Request::post('actividad_text'));
                 break;
+            case "eliminarActividad":
+                $resultado = ApuntesModel::deleteActividad(Request::post('id'));
+                break;
             case "lugar":
                 $resultado = ApuntesModel::getAllLugares();
                 break;
             case "nuevoLugar":
                 $resultado = ApuntesModel::createLugar(Request::post('lugar_text'));
                 break;
-            case "cancelacion":
-                $resultado = ApuntesModel::getAllCancelaciones();
-                break;
             case "eliminarLugar":
                 $resultado = ApuntesModel::deleteLugar(Request::post('id'));
+                break;
+            case "cancelacion":
+                $resultado = ApuntesModel::getAllCancelaciones();
                 break;
             case "nuevaCancelacion":
                 $resultado = ApuntesModel::createCancelacion(Request::post('cancelacion_text'));

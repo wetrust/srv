@@ -18,6 +18,7 @@
                     <div class="btn-group" role="group" aria-label="Menú">
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo" title="Nuevo apunte"><i class="fas fa-pen"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.imprimir" title="Imprimir apunte actual"><i class="fas fa-print"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.calculos" title="calculos"><i class="fas fa-calculator"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion" title="Configuración"><i class="fas fa-cog"></i></button>
                     </div>
@@ -422,10 +423,40 @@
                 $("#tabla\\.actividad").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<tr><th scope="row" data-id="' + item["actividad_id"] + '">' + item["actividad_id"] + '</th><td>' + item["actividad_text"] + '</td></tr>';
+                    let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["lugar_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                     let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
                     $("#tabla\\.actividad").append(fila);
                     $("#formulario\\.actividad").append(option);
+                });
+
+                $(".columna-actividad").on("mouseenter",function(){
+                    $(this).children("button").removeClass("d-none");
+                }).on("mouseleave", function(){
+                    $(this).children("button").addClass("d-none");
+                });
+
+                $(".eliminar-actividad").on("click", function(){
+                    let actividad_id = $(this).data("id");
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Eliminar Busqueda por evento')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar la Busqueda por evento seleccionada?')
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + actividad_id + '">Eliminar</button>');
+
+                    $("#dialog\\.delete").on("click", function(){
+                        let actividad_id = $(this).data("id");
+                        var solicitud = {
+                            accion: "eliminarActividad",
+                            id: actividad_id
+                        };
+
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                            cargarActividad();
+                            $("#boton\\.configuracion").trigger("click");
+                            $('#myTab a[href="#profile"]').tab('show')
+                        });
+                    });
+
+                    $("#dialog\\.view").modal("show");
                 });
             });
         }
