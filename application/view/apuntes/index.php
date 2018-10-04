@@ -43,6 +43,10 @@
                                 <div class="form-group"><label for="formulario.actividad"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.actividad" disabled></select></div>
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cierre de evento</strong> (<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.cancelacion" disabled></select></div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="opcion.financiera">
+                                    <label class="form-check-label" for="opcion.financiera"><strong>Registro financiero</strong></label>
+                                </div>
                                 <div class="d-none" id="div.financiero">
                                     <div class="form-group"><label for="formulario.fcancelacion"><strong>Fecha de cancelación</strong></label><input class="form-control" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy" disabled></div>
                                     <div class="form-group"><label for="formulario.valor"><strong>Valor cancelado</strong></label><input class="form-control" id="formulario.valor" type="number" disabled></div>
@@ -96,8 +100,8 @@
                 }
             });
 
-            $("#boton\\.calculos").on("click", function(){
-                if ($("#div\\.financiero").hasClass("d-none")){
+            $("#opcion\\.financiera").on("click", function(){
+                if ($(this).is(':checked')){
                     $("#div\\.financiero").removeClass("d-none");
                 }
                 else{
@@ -419,7 +423,7 @@
                 $("#tabla\\.actividad").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["lugar_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                    let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                     let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
                     $("#tabla\\.actividad").append(fila);
                     $("#formulario\\.actividad").append(option);
@@ -448,7 +452,7 @@
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                             cargarActividad();
                             $("#boton\\.configuracion").trigger("click");
-                            $('#myTab a[href="#profile"]').tab('show')
+                            $('#myTab a[href="#home"]').tab('show')
                         });
                     });
 
