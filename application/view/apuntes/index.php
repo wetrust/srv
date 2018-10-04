@@ -458,15 +458,15 @@
                 $("#tabla\\.cancelacion").empty();
 
                 $.each(data, function(i, item) {
-                    let fila = '<tr><th scope="row">' + item["cancelacion_id"] + '</th><td class="columna-cancelacion">' + item["cancelacion_text"] + '<button type="button" data-id="' + item["cancelacion_id"] + '" class="btn btn-outline-warning px-3 eliminar-cancelacion float-right"><i class="fas fa-trash"></i></button></td></tr>';
+                    let fila = '<tr><th scope="row">' + item["cancelacion_id"] + '</th><td class="columna-cancelacion">' + item["cancelacion_text"] + '<button type="button" data-id="' + item["cancelacion_id"] + '" class="btn btn-outline-warning px-3 eliminar-cancelacion float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                     let option = '<option value="'+ item["cancelacion_id"]+'">' +item["cancelacion_text"]+'</option>';
                     $("#tabla\\.cancelacion").append(fila);
                     $("#formulario\\.cancelacion").append(option);
                 });
 
-                $(".columna-cancelacion").on("focusin",function(){
+                $(".columna-cancelacion").on("mouseenter",function(){
                     $(this).children("button").removeClass("d-none");
-                }).on("focusout", function(){
+                }).on("mouseleave", function(){
                     $(this).children("button").addClass("d-none");
                 });
 
