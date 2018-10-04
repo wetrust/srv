@@ -91,6 +91,12 @@
             cargarLugar();
             cargarCancelacion();
          
+            $("#boton\\.calculos").on("click", function(){
+                $("#dialog\\.title").html("Calculos");
+                $("#dialog\\.delete").remove();
+                $("#dialog\\.view").modal("show");
+                $("#dialog\\.body").html("");
+            });
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
                     $("#div\\.busqueda").removeClass("d-none");
