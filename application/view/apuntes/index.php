@@ -42,12 +42,8 @@
                                 <div class="form-group"><label for="formulario.actividad"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.actividad" disabled></select></div>
                                 <div class="form-group"><label for="formulario.palabras"><strong>Asistentes al eventos</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
                                 <input id="formulario.id" type="hidden" value="" />
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="opcion.financiera">
-                                    <label class="form-check-label" for="opcion.financiera"><strong>Registro financiero</strong></label>
-                                </div>
+                                <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cancelación $</strong> (<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.cancelacion" disabled></select></div>
                                 <div class="d-none" id="div.financiero">
-                                    <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cancelación $</strong> (<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.cancelacion" disabled></select></div>
                                     <div class="form-group"><label for="formulario.fcancelacion"><strong>Fecha de cancelación</strong></label><input class="form-control" id="formulario.fcancelacion" type="text" data-date-format="dd/mm/yyyy" disabled></div>
                                     <div class="form-group"><label for="formulario.valor"><strong>Valor cancelado</strong></label><input class="form-control" id="formulario.valor" type="number" disabled></div>
                                 </div>
@@ -100,8 +96,8 @@
                 }
             });
 
-            $("#opcion\\.financiera").on("click", function(){
-                if ($(this).is(':checked')){
+            $("#boton\\.calculos").on("click", function(){
+                if ($("#div\\.financiero").hasClass("d-none")){
                     $("#div\\.financiero").removeClass("d-none");
                 }
                 else{
