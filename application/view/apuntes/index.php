@@ -115,7 +115,7 @@
                     accion: "nuevo",
                     fecha: day + "/" + month + "/" + dateTime.getFullYear(),
                     hora: "",
-                    paciente: "Apunte sin título",
+                    paciente: "Nuevo apunte",
                     actividad: "",
                     lugar: "",
                     cancelacion: "",
