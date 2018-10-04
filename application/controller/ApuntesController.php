@@ -71,7 +71,7 @@ class ApuntesController extends Controller
                 $resultado = ApuntesModel::createCancelacion(Request::post('cancelacion_text'));
                 break;
             case "eliminarCancelacion":
-                $resultado = ApuntesModel::deleteCancelacion(Request::post('cancelacion_id'));
+                $resultado = ApuntesModel::deleteCancelacion(Request::post('id'));
                 break;
         }
 
