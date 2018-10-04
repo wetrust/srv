@@ -95,7 +95,7 @@
                 $("#dialog\\.title").html("Calculos");
                 $("#dialog\\.delete").remove();
                 $("#dialog\\.view").modal("show");
-                $("#dialog\\.body").html('<div class="row"><div class="col"><div class="form-group"><label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1"></div></div><div class="col"></div></div>');
+                $("#dialog\\.body").html('<div class="row"><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha inicio</label><input type="text" class="form-control" id="calculos.fecha.uno"></div></div><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha inicio</label><input type="text" class="form-control" id="calculos.fecha.uno"></div></div></div>');
             });
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
