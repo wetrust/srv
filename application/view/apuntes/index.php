@@ -445,6 +445,7 @@
                     let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
                     $("#tabla\\.actividad").append(fila);
                     $("#formulario\\.actividad").append(option);
+                    $("#calculos\\.formulario\\.actividad").append(option);
                 });
 
                 $(".columna-actividad").on("mouseenter",function(){
@@ -493,6 +494,7 @@
                     let option = '<option value="'+ item["lugar_id"]+'">' +item["lugar_text"]+'</option>';
                     $("#tabla\\.lugar").append(fila);
                     $("#formulario\\.lugar").append(option);
+                    $("#calculos\\.formulario\\.lugar").append(option);
                 });
 
                 $(".columna-lugar").on("mouseenter",function(){
