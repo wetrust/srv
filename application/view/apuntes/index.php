@@ -92,7 +92,6 @@
             cargarCancelacion();
          
             $("#boton\\.calculos").on("click", function(){
-
                 var dateTime = new Date();
                 var day = ("0" + dateTime.getDate()).slice(-2);
                 var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
@@ -102,13 +101,15 @@
                 $("#dialog\\.view").modal("show");
                 $("#dialog\\.body").html('<div class="row"><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha inicio</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd/mm/yyyy"></div></div><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha fin</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd/mm/yyyy"></div></div></div><div class="row"><div class="col"><div class="table-responsive"><table class="table"><thead><tr><th scope="col">#</th><th scope="col">Nombre del evento</th><th scope="col">Fecha</th><th scope="col">Lugar</th><th scope="col">Valor cancelado</th></tr></thead><tbody><tr><th scope="row">1</th><td>Cell</td><td>Cell</td></tr><tr><th scope="row">2</th><td>Cell</td><td>Cell</td></tr><tr><th scope="row">3</th><td>Cell</td><td>Cell</td></tr></tbody></table></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.actividad"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"></select></div></div></div>');
             
+                cargarActividad();
+                cargarLugar();
+                cargarCancelacion();
                 $("#calculos\\.fecha\\.uno").val(day + "/" + month + "/" + dateTime.getFullYear());
                 $("#calculos\\.fecha\\.uno").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
                 $("#calculos\\.fecha\\.dos").val(day + "/" + month + "/" + dateTime.getFullYear());
                 $("#calculos\\.fecha\\.dos").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
-
-
             });
+
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
                     $("#div\\.busqueda").removeClass("d-none");
@@ -439,6 +440,7 @@
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                 $("#formulario\\.actividad").empty();
                 $("#tabla\\.actividad").empty();
+                $("#calculos\\.formulario\\.actividad").empty();
 
                 $.each(data, function(i, item) {
                     let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
@@ -488,6 +490,7 @@
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                 $("#formulario\\.lugar").empty();
                 $("#tabla\\.lugar").empty();
+                $("#calculos\\.formulario\\.lugar").empty();
 
                 $.each(data, function(i, item) {
                     let fila = '<tr><th scope="row">' + item["lugar_id"] + '</th><td class="columna-lugar">' + item["lugar_text"] + '<button type="button" data-id="' + item["lugar_id"] + '" class="btn btn-outline-warning px-3 eliminar-lugar float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
@@ -537,6 +540,7 @@
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                 $("#formulario\\.cancelacion").empty();
                 $("#tabla\\.cancelacion").empty();
+                $("#calculos\\.formulario\\.cancelacion").empty();
 
                 $.each(data, function(i, item) {
                     let fila = '<tr><th scope="row">' + item["cancelacion_id"] + '</th><td class="columna-cancelacion">' + item["cancelacion_text"] + '<button type="button" data-id="' + item["cancelacion_id"] + '" class="btn btn-outline-warning px-3 eliminar-cancelacion float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
