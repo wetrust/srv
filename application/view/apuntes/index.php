@@ -475,7 +475,7 @@
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Eliminar tipo de cancelación')
                     $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el tipo de cancelación seleccionado?')
-                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + evento_id + '">Eliminar</button>');
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + cancelacion_id + '">Eliminar</button>');
 
                     $("#dialog\\.delete").on("click", function(){
                         let cancelacion_id = $(this).data("id");
