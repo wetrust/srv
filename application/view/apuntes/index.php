@@ -38,9 +38,9 @@
                             <div class="col">
                                 <div class="form-group"><label for="formulario.fecha"><strong>Fecha</strong></label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.hora"><strong>Hora</strong></label><input class="form-control" id="formulario.hora" type="text" disabled></div>
+                                <div class="form-group"><label for="formulario.palabras"><strong>Otros participantes</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.lugar" disabled></select></div>
                                 <div class="form-group"><label for="formulario.actividad"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.actividad" disabled></select></div>
-                                <div class="form-group"><label for="formulario.palabras"><strong>Asistentes al eventos</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cierre de evento</strong> (<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.cancelacion" disabled></select></div>
                                 <div class="d-none" id="div.financiero">
