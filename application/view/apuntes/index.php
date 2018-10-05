@@ -394,28 +394,40 @@
                         $(this).removeClass("bg-secondary").removeClass("text-white");;
                     });
                 }).on("click",function(){
-                    let apunte_id = $(this).data("id");
 
-                    var solicitud = {
-                        accion: "apunte",
-                        id: apunte_id
-                    };
 
-                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                        $("#formulario\\.id").val(data.apunte_id).attr("disabled", false);
-                        $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
-                        $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
-                        $("#formulario\\.hora").val(data.apunte_hour).attr("disabled", false);
-                        $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
-                        $("#formulario\\.actividad").val(data.apunte_activity).attr("disabled", false);
-                        $("#formulario\\.lugar").val(data.apunte_location).attr("disabled", false);
-                        $("#formulario\\.cancelacion").val(data.apunte_cancellation).attr("disabled", false);
-                        $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false),
-                        $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
-                        $("#formulario\\.valor").val(data.apunte_cost).attr("disabled", false);
-                        $("#formulario\\.comentarios").val(data.apunte_text).attr("disabled", false);
-                        $("#formulario\\.palabras").val(data.apunte_keywords).attr("disabled", false);
-                    });
+
+                    if ($("#formulario\\.paciente").is('disables') == false){
+                        $("#dialog\\.delete").remove();
+                        $("#dialog\\.title").html('Eliminar Lugar')
+                        $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el lugar seleccionado?')
+                        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + lugar_id + '">Eliminar</button>');
+                        $("#dialog\\.view").modal("show");
+                    }
+                    else{
+                        let apunte_id = $(this).data("id");
+
+                        var solicitud = {
+                            accion: "apunte",
+                            id: apunte_id
+                        };
+
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                            $("#formulario\\.id").val(data.apunte_id).attr("disabled", false);
+                            $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
+                            $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                            $("#formulario\\.hora").val(data.apunte_hour).attr("disabled", false);
+                            $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
+                            $("#formulario\\.actividad").val(data.apunte_activity).attr("disabled", false);
+                            $("#formulario\\.lugar").val(data.apunte_location).attr("disabled", false);
+                            $("#formulario\\.cancelacion").val(data.apunte_cancellation).attr("disabled", false);
+                            $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false),
+                            $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+                            $("#formulario\\.valor").val(data.apunte_cost).attr("disabled", false);
+                            $("#formulario\\.comentarios").val(data.apunte_text).attr("disabled", false);
+                            $("#formulario\\.palabras").val(data.apunte_keywords).attr("disabled", false);
+                        });
+                    }
                 });
 
                 $(".eliminar").on("click",function(){
