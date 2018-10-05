@@ -539,6 +539,9 @@
                 $("#tabla\\.actividad").empty();
                 $("#calculos\\.formulario\\.actividad").empty();
 
+                let option = '<option value="99" selected>Todos</option>';
+                $("#calculos\\.formulario\\.actividad").append(option);
+
                 $.each(data, function(i, item) {
                     let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                     let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
@@ -589,6 +592,9 @@
                 $("#tabla\\.lugar").empty();
                 $("#calculos\\.formulario\\.lugar").empty();
 
+                let option = '<option value="99" selected>Todos</option>';
+                $("#calculos\\.formulario\\.lugar").append(option);
+
                 $.each(data, function(i, item) {
                     let fila = '<tr><th scope="row">' + item["lugar_id"] + '</th><td class="columna-lugar">' + item["lugar_text"] + '<button type="button" data-id="' + item["lugar_id"] + '" class="btn btn-outline-warning px-3 eliminar-lugar float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                     let option = '<option value="'+ item["lugar_id"]+'">' +item["lugar_text"]+'</option>';
@@ -638,6 +644,9 @@
                 $("#formulario\\.cancelacion").empty();
                 $("#tabla\\.cancelacion").empty();
                 $("#calculos\\.formulario\\.cancelacion").empty();
+
+                let option = '<option value="99" selected>Todos</option>';
+                $("#calculos\\.formulario\\.cancelacion").append(option);
 
                 $.each(data, function(i, item) {
                     let fila = '<tr><th scope="row">' + item["cancelacion_id"] + '</th><td class="columna-cancelacion">' + item["cancelacion_text"] + '<button type="button" data-id="' + item["cancelacion_id"] + '" class="btn btn-outline-warning px-3 eliminar-cancelacion float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
