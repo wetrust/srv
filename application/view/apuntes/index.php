@@ -281,6 +281,9 @@
                     $("#formulario\\.comentarios").val("").attr("disabled", false);
                     $("#formulario\\.palabras").val("").attr("disabled", false);
                     cargarTabla();
+                    $("#boton\\.nuevo").addClass("d-none");
+                    $("#boton\\.guardar").removeClass("d-none");
+                    $("#boton\\.cancelar").removeClass("d-none");
                 });
             });
 
