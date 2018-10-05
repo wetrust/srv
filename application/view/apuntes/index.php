@@ -16,7 +16,6 @@
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo" title="Nuevo apunte"><i class="fas fa-pen"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.imprimir" title="Imprimir apunte actual"><i class="fas fa-print"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion" title="Configuración"><i class="fas fa-cog"></i></button>
@@ -32,6 +31,12 @@
             <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
                 <div class="card">
                     <div class="card-body">
+                        <div class="btn-group" role="group" aria-label="Menú">
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo" title="Nuevo apunte"><i class="far fa-plus-square"></i></button>
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.editar" title="Nuevo apunte"><i class="fas fa-pen"></i></button>
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.guardar" title="Imprimir apunte actual"><i class="fas fa-save"></i></button>
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.cancelar" title="Buscar apunte"><i class="fas fa-ban"></i></button>
+                        </div>
                         <div class="form-group col"><label for="formulario.paciente"><strong>Nombre del evento</strong></label><input class="form-control" id="formulario.paciente" type="email" disabled></div>
                         <div class="row m-0">
                             <div class="col">
