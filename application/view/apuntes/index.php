@@ -699,13 +699,9 @@
             };
 
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                let fila = '<tr><th scope="row">' + item["cancelacion_id"] + '</th><td class="columna-cancelacion">' + item["cancelacion_text"] + '<button type="button" data-id="' + item["cancelacion_id"] + '" class="btn btn-outline-warning px-3 eliminar-cancelacion float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 $("#tabla\\.cancelacion").append(fila);
-                
-                cargarCancelacion();
-                            $("#boton\\.configuracion").trigger("click");
-                            $('#myTab a[href="#contact"]').tab('show')
-                        });
+            });
         }
       </script>
    </body>
