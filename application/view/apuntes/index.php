@@ -353,6 +353,8 @@
                     $("#formulario\\.valor").val("").attr("disabled", true);
                     $("#formulario\\.comentarios").val("").attr("disabled", true);
                     $("#formulario\\.palabras").val("").attr("disabled", true);
+                    $("#boton\\.guardar").addClass("d-none");
+                    $("#boton\\.cancelar").addClass("d-none");
                 });
             });
 
