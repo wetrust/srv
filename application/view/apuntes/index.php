@@ -289,39 +289,23 @@
 
             $("#boton\\.guardar").on("click", function(){
 
-                var dateTime = new Date();
-                var day = ("0" + dateTime.getDate()).slice(-2);
-                var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+                guardarAutomatico();
+                $("#boton\\.nuevo").removeClass("d-none");
+                $("#boton\\.guardar").addClass("d-none");
+                $("#boton\\.cancelar").addClass("d-none");
 
-                var formulario = {
-                    accion: "nuevo",
-                    fecha: day + "/" + month + "/" + dateTime.getFullYear(),
-                    hora: "",
-                    paciente: "Nuevo evento",
-                    actividad: "",
-                    lugar: "",
-                    cancelacion: "",
-                    fcancelacion: day + "/" + month + "/" + dateTime.getFullYear(),
-                    valor: "",
-                    comentarios: "",
-                    palabras: ""
-                };
-                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                    $("#formulario\\.id").val(data.apunte_id).attr("disabled", false);
-                    $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
-                    $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
-                    $("#formulario\\.hora").val("").attr("disabled", false);
-                    $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
-                    $("#formulario\\.actividad").val("").attr("disabled", false);
-                    $("#formulario\\.lugar").val("").attr("disabled", false);
-                    $("#formulario\\.cancelacion").val("").attr("disabled", false);
-                    $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false);
-                    $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
-                    $("#formulario\\.valor").val("").attr("disabled", false);
-                    $("#formulario\\.comentarios").val("").attr("disabled", false);
-                    $("#formulario\\.palabras").val("").attr("disabled", false);
-                    cargarTabla();
-                });
+                cargarTabla();
+                $("#formulario\\.fecha").attr("disabled", true);
+                $("#formulario\\.hora").attr("disabled", true);
+                $("#formulario\\.paciente").attr("disabled", true);
+                $("#formulario\\.actividad").attr("disabled", true);
+                $("#formulario\\.lugar").attr("disabled", true);
+                $("#formulario\\.cancelacion").attr("disabled", true);
+                $('#formulario\\.fcancelacion').attr("disabled", true);
+                $("#formulario\\.valor").attr("disabled", true);
+                $("#formulario\\.comentarios").attr("disabled", true);
+                $("#formulario\\.palabras").attr("disabled", true);
+
             });
 
             $("#boton\\.cancelar").on("click", function(){
