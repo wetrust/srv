@@ -699,6 +699,7 @@
         }
 
         function updateCalculos(){
+            $("#tabla\\.calculos").empty();
             var solicitud = {
                 accion: "calculos",
                 uno: $("#calculos\\.fecha\\.uno").val(),
