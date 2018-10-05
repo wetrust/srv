@@ -395,14 +395,27 @@
                     });
                 }).on("click",function(){
 
-
-
                     if ($("#formulario\\.paciente").is(':disabled') == false){
                         $("#dialog\\.delete").remove();
-                        $("#dialog\\.title").html('Eliminar Lugar')
-                        $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el lugar seleccionado?')
-                        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" >Eliminar</button>');
+                        $("#dialog\\.title").html('Guardar cambios')
+                        $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?')
+                        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" >Guardar</button>');
                         $("#dialog\\.view").modal("show");
+
+                        $("#dialog\\.delete").("click", function(){
+                            guardarAutomatico();
+                            $("#dialog\\.view").modal("hide");
+                            $("#formulario\\.fecha").attr("disabled", true);
+                            $("#formulario\\.hora").attr("disabled", true);
+                            $("#formulario\\.paciente").attr("disabled", true);
+                            $("#formulario\\.actividad").attr("disabled", true);
+                            $("#formulario\\.lugar").attr("disabled", true);
+                            $("#formulario\\.cancelacion").attr("disabled", true);
+                            $('#formulario\\.fcancelacion').attr("disabled", true);
+                            $("#formulario\\.valor").attr("disabled", true);
+                            $("#formulario\\.comentarios").attr("disabled", true);
+                            $("#formulario\\.palabras").attr("disabled", true);
+                        });
                     }
                     else{
                         let apunte_id = $(this).data("id");
@@ -413,19 +426,19 @@
                         };
 
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                            $("#formulario\\.id").val(data.apunte_id).attr("disabled", false);
-                            $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
+                            $("#formulario\\.id").val(data.apunte_id);
+                            $("#formulario\\.fecha").val(data.apunte_date);
                             $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
-                            $("#formulario\\.hora").val(data.apunte_hour).attr("disabled", false);
-                            $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
-                            $("#formulario\\.actividad").val(data.apunte_activity).attr("disabled", false);
-                            $("#formulario\\.lugar").val(data.apunte_location).attr("disabled", false);
-                            $("#formulario\\.cancelacion").val(data.apunte_cancellation).attr("disabled", false);
-                            $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false),
+                            $("#formulario\\.hora").val(data.apunte_hour);
+                            $("#formulario\\.paciente").val(data.apunte_person);
+                            $("#formulario\\.actividad").val(data.apunte_activity);
+                            $("#formulario\\.lugar").val(data.apunte_location);
+                            $("#formulario\\.cancelacion").val(data.apunte_cancellation);
+                            $("#formulario\\.fcancelacion").val(data.apunte_fcancellation);
                             $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
-                            $("#formulario\\.valor").val(data.apunte_cost).attr("disabled", false);
-                            $("#formulario\\.comentarios").val(data.apunte_text).attr("disabled", false);
-                            $("#formulario\\.palabras").val(data.apunte_keywords).attr("disabled", false);
+                            $("#formulario\\.valor").val(data.apunte_cost);
+                            $("#formulario\\.comentarios").val(data.apunte_text);
+                            $("#formulario\\.palabras").val(data.apunte_keywords);
                         });
                     }
                 });
