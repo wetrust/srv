@@ -605,7 +605,7 @@
 
         function updateCalculos(){
             var solicitud = {
-                accion: "calculos"
+                accion: "calculos",
                 uno: $("#calculos\\.fecha\\.uno").val(),
                 dos: $("#calculos\\.fecha\\.dos").val(),
                 lugar: $("#calculos\\.formulario\\.lugar").val(),
