@@ -42,7 +42,7 @@
                             <div class="col">
                                 <div class="form-group"><label for="formulario.fecha"><strong>Fecha</strong></label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.hora"><strong>Hora</strong></label><input class="form-control" id="formulario.hora" type="text" disabled></div>
-                                <div class="form-group"><label for="formulario.palabras"><strong>Otros participantes</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
+                                <div class="form-group"><label for="formulario.palabras"><strong>Otros participantes o ayudantes</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.lugar" disabled></select></div>
                                 <div class="form-group"><label for="formulario.actividad"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.actividad" disabled></select></div>
                                 <input id="formulario.id" type="hidden" value="" />
@@ -104,7 +104,7 @@
                 $("#dialog\\.title").html("Calculos");
                 $("#dialog\\.delete").remove();
                 $("#dialog\\.view").modal("show");
-                $("#dialog\\.body").html('<div class="row"><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha inicio</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd/mm/yyyy"></div></div><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha fin</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd/mm/yyyy"></div></div></div><div class="row"><div class="col"><div class="table-responsive"><table class="table table-striped"><thead class="thead-dark"><tr><th scope="col">#</th><th scope="col">Nombre del evento</th><th scope="col">Fecha</th><th scope="col">Lugar</th><th scope="col">Valor cancelado</th></tr></thead><tbody id="tabla.calculos"></tbody></table></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.actividad"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"></select></div></div></div>');
+                $("#dialog\\.body").html('<div class="row"><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha inicio</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd/mm/yyyy"></div></div><div class="col"><div class="form-group"><label for="calculos.fecha.uno">Fecha fin</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd/mm/yyyy"></div></div></div><div class="row"><div class="col"><div class="table-responsive"><table class="table table-striped"><thead class="thead-dark"><tr><th scope="col">#</th><th scope="col">Nombre del evento</th><th scope="col">Fecha</th><th scope="col">Ayudantes</th><th scope="col">Valor cancelado</th></tr></thead><tbody id="tabla.calculos"></tbody></table></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.actividad"><strong>Método de búsqueda</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"></select></div></div></div>');
             
                 cargarActividad();
                 cargarLugar();
@@ -713,7 +713,13 @@
                 if (Object.keys(data).length > 0) {
                     $.each(data, function(i, item) {
 
-                        let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location_name"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                        let location_name = item["apunte_location_name"];
+                        if (typeof location_name === "undefined"){ 
+                            location_name = "";
+                        }
+
+                        
+                        let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_keywords"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                         $("#tabla\\.calculos").append(fila);
                     });
                 }
