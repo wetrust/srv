@@ -48,11 +48,11 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        //if ($lugar == 99 && $actividad == && $cancelacion == 99){
+        if ($lugar == 99 && $actividad == && $cancelacion == 99){
             $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
             $query = $database->prepare($sql);
             $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos));
-        //}
+        }
 
         // fetch() is the PDO method that gets a single result
         return $query->fetchAll();
