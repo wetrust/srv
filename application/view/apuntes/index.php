@@ -387,11 +387,11 @@
 
                 $(".apunte").on("mouseenter", function(){
                     $(this).children(".col-4").removeClass("d-none");
-                    $(this).parent().parent().addClass("bg-secondary");
+                    $(this).parent().parent().addClass("bg-secondary").addClass("text-white");
                 }).on("mouseleave", function(){
                     $(this).children(".col-4").addClass("d-none");
                     $(this).parent().parent().parent().children().each(function(i){
-                        $(this).removeClass("bg-secondary");
+                        $(this).removeClass("bg-secondary").removeClass("text-white");;
                     });
                 }).on("click",function(){
                     let apunte_id = $(this).data("id");
