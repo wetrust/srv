@@ -324,6 +324,38 @@
                 });
             });
 
+            $("#boton\\.cancelar").on("click", function(){
+
+                var dateTime = new Date();
+                var day = ("0" + dateTime.getDate()).slice(-2);
+                var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+
+                let apunte_id = $("#formulario\\.id").val();
+                var solicitud = {
+                    accion: "eliminar",
+                    id: apunte_id
+                };
+
+                $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                    cargarTabla();
+                    $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear());
+                    $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                    $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear());
+                    $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+
+                    $("#formulario\\.fecha").attr("disabled", true);
+                    $("#formulario\\.hora").val("").attr("disabled", true);
+                    $("#formulario\\.paciente").val("").attr("disabled", true);
+                    $("#formulario\\.actividad").val("").attr("disabled", true);
+                    $("#formulario\\.lugar").val("").attr("disabled", true);
+                    $("#formulario\\.cancelacion").val("").attr("disabled", true);
+                    $("#formulario\\.fcancelacion").attr("disabled", true);
+                    $("#formulario\\.valor").val("").attr("disabled", true);
+                    $("#formulario\\.comentarios").val("").attr("disabled", true);
+                    $("#formulario\\.palabras").val("").attr("disabled", true);
+                });
+            });
+
             //$("#formulario\\.comentarios").on("click", function(){
             //    if ($("#formulario\\.comentarios").is("disabled")){
             //        $("#dialog\\.title").html("Editar texto");
