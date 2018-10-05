@@ -710,10 +710,12 @@
             };
 
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                $.each(data, function(i, item) {
-                    let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
-                    $("#tabla\\.calculos").append(fila);
-                });
+                if (Object.keys(data).length > 0) {
+                    $.each(data, function(i, item) {
+                        let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                        $("#tabla\\.calculos").append(fila);
+                    });
+                }
             });
         }
       </script>
