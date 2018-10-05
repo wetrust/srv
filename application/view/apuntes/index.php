@@ -378,7 +378,7 @@
 
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                 $("#contenedor\\.tarjetas").empty();
-
+                $("#boton\\.editar").addClass("d-none");
                 $.each(data, function(i, item) {
                     let fila = '<div class="card"><div class="card-body p-3"><div class="row apunte" data-id="' + item["apunte_id"] + '"><div class="col text-truncate"><p class="my-2">' + item["apunte_person"] +'</p></div><div class="col-4 d-none"><button type="button" data-id="' + item["apunte_id"] + '" class="btn btn-outline-warning px-3 eliminar"><i class="fas fa-trash"></i></button></div></div></div></div>';
                     $("#contenedor\\.tarjetas").append(fila);
@@ -417,6 +417,7 @@
                         });
                     }
                     else{
+                        $("#boton\\.editar").removeClass("d-none");
                         let apunte_id = $(this).data("id");
 
                         var solicitud = {
