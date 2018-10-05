@@ -167,24 +167,24 @@
                     $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false);
                     $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
                     $("#formulario\\.valor").val("").attr("disabled", false);
-                    $("#formulario\\.comentarios").val("").attr("disabled", true);
+                    $("#formulario\\.comentarios").val("").attr("disabled", false);
                     $("#formulario\\.palabras").val("").attr("disabled", false);
                     cargarTabla();
                 });
             });
 
-            $("#formulario\\.comentarios").on("click", function(){
-                if ($("#formulario\\.comentarios").is("disabled")){
-                    $("#dialog\\.title").html("Editar texto");
-                    $("#dialog\\.delete").remove();
-                    $("#dialog\\.view").modal("show");
-                    $("#dialog\\.body").html('<p class="text-center">¿Desea editar el texto?</p>');
-                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete">SI</button>');
-                    $("#dialog\\.delete").on("click", function(){
-                        $("#formulario\\.comentarios").attr("disabled", false);
-                    });
-                }
-            });
+            //$("#formulario\\.comentarios").on("click", function(){
+            //    if ($("#formulario\\.comentarios").is("disabled")){
+            //        $("#dialog\\.title").html("Editar texto");
+            //        $("#dialog\\.delete").remove();
+            //        $("#dialog\\.view").modal("show");
+            //        $("#dialog\\.body").html('<p class="text-center">¿Desea editar el texto?</p>');
+            //        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete">SI</button>');
+            //        $("#dialog\\.delete").on("click", function(){
+            //            $("#formulario\\.comentarios").attr("disabled", false);
+            //        });
+            //    }
+            //});
 
             $("#formulario\\.paciente").on("focusout", function(){
                 guardarAutomatico();
@@ -404,7 +404,7 @@
                         $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false),
                         $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
                         $("#formulario\\.valor").val(data.apunte_cost).attr("disabled", false);
-                        $("#formulario\\.comentarios").val(data.apunte_text).attr("disabled", true);
+                        $("#formulario\\.comentarios").val(data.apunte_text).attr("disabled", false);
                         $("#formulario\\.palabras").val(data.apunte_keywords).attr("disabled", false);
                     });
                 });
