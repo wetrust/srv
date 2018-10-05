@@ -402,7 +402,7 @@
                         $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" >Guardar</button>');
                         $("#dialog\\.view").modal("show");
 
-                        $("#dialog\\.delete").("click", function(){
+                        $("#dialog\\.delete").on("click", function(){
                             guardarAutomatico();
                             $("#dialog\\.view").modal("hide");
                             $("#formulario\\.fecha").attr("disabled", true);
