@@ -79,6 +79,9 @@ class ApuntesController extends Controller
             case "eliminarCancelacion":
                 $resultado = ApuntesModel::deleteCancelacion(Request::post('id'));
                 break;
+            case "calculos":
+                $resultado = ApuntesModel::getFilterApunte(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                break;
         }
 
         return $this->View->renderJSON($resultado);

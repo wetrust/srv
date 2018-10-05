@@ -40,6 +40,25 @@ class ApuntesModel
     }
 
     /**
+     * Get a filter apuntes
+     * @param int $apunte_id id of the specific apunte
+     * @return object a single object (the result)
+     */
+    public static function getFilterApunte($uno,$dos,$lugar,$actividad,$cancelacion)
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        //if ($lugar == 99 && $actividad == && $cancelacion == 99){
+            $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_date = :apunte_date";
+            $query = $database->prepare($sql);
+            $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno));
+        //}
+
+        // fetch() is the PDO method that gets a single result
+        return $query->fetch();
+    }
+
+    /**
      * Set a apunte (create a new one)
      * @param string $apunte_text apunte text that will be created
      * @return bool feedback (was the apunte created properly ?)

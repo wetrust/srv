@@ -114,6 +114,16 @@
                 $("#calculos\\.fecha\\.dos").val(day + "/" + month + "/" + dateTime.getFullYear());
                 $("#calculos\\.fecha\\.dos").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
 
+                $('#calculos\\.fecha\\.uno').datepicker().on('changeDate', function(ev) {
+                    $(this).trigger("change");
+                    $(this).datepicker('hide');
+                });
+
+                $('#calculos\\.fecha\\.dos').datepicker().on('changeDate', function(ev) {
+                    $(this).trigger("change");
+                    $(this).datepicker('hide');
+                });
+
                 $("#calculos\\.fecha\\.uno").on("change", function(){updateCalculos();});
                 $("#calculos\\.fecha\\.dos").on("change", function(){updateCalculos();});
                 $("#calculos\\.formulario\\.lugar").on("change", function(){updateCalculos();});
