@@ -397,7 +397,7 @@
 
 
 
-                    if ($("#formulario\\.paciente").is('disables') == false){
+                    if ($("#formulario\\.paciente").is('disables')){
                         $("#dialog\\.delete").remove();
                         $("#dialog\\.title").html('Eliminar Lugar')
                         $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el lugar seleccionado?')
