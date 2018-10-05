@@ -401,7 +401,7 @@
                         $("#dialog\\.delete").remove();
                         $("#dialog\\.title").html('Eliminar Lugar')
                         $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el lugar seleccionado?')
-                        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + lugar_id + '">Eliminar</button>');
+                        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" >Eliminar</button>');
                         $("#dialog\\.view").modal("show");
                     }
                     else{
