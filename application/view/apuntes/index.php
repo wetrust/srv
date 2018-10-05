@@ -699,8 +699,10 @@
             };
 
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
-                $("#tabla\\.cancelacion").append(fila);
+                $.each(data, function(i, item) {
+                    let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                    $("#tabla\\.cancelacion").append(fila);
+                });
             });
         }
       </script>
