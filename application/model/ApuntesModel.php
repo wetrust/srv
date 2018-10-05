@@ -63,14 +63,14 @@ class ApuntesModel
      * @param string $apunte_text apunte text that will be created
      * @return bool feedback (was the apunte created properly ?)
      */
-    public static function createApunte($apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost,  $apunte_text, $apunte_keywords)
+    public static function createApunte($apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost,  $apunte_text, $apunte_keywords, $location_name)
     {
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO apuntes (apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, user_id) VALUES (:apunte_date, :apunte_hour, :apunte_person, :apunte_activity, :apunte_location, :apunte_cancellation, :apunte_fcancellation, :apunte_cost, :apunte_text, :apunte_keywords, :user_id)";
+        $sql = "INSERT INTO apuntes (apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, user_id, apunte_location_name) VALUES (:apunte_date, :apunte_hour, :apunte_person, :apunte_activity, :apunte_location, :apunte_cancellation, :apunte_fcancellation, :apunte_cost, :apunte_text, :apunte_keywords, :user_id, :apunte_location_name)";
         $query = $database->prepare($sql);
-        $query->execute(array(':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id'), ':apunte_location_name' => $location_name));
 
         if ($query->rowCount() == 1) {
             $apunte_id = $database->lastInsertId();
@@ -88,7 +88,7 @@ class ApuntesModel
      * @param string $apunte_text new text of the specific apunte
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateApunte($apunte_id, $apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost, $apunte_text, $apunte_keywords)
+    public static function updateApunte($apunte_id, $apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost, $apunte_text, $apunte_keywords, $location_name)
     {
         if (!$apunte_id) {
             return false;
@@ -96,9 +96,9 @@ class ApuntesModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_hour = :apunte_hour, apunte_person = :apunte_person, apunte_activity = :apunte_activity, apunte_location = :apunte_location, apunte_cancellation = :apunte_cancellation, apunte_fcancellation = :apunte_fcancellation, apunte_cost = :apunte_cost, apunte_text = :apunte_text, apunte_keywords = :apunte_keywords WHERE apunte_id = :apunte_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_hour = :apunte_hour, apunte_person = :apunte_person, apunte_activity = :apunte_activity, apunte_location = :apunte_location, apunte_cancellation = :apunte_cancellation, apunte_fcancellation = :apunte_fcancellation, apunte_cost = :apunte_cost, apunte_text = :apunte_text, apunte_keywords = :apunte_keywords, apunte_location_name = :apunte_location_name WHERE apunte_id = :apunte_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':apunte_id' => $apunte_id, ':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':apunte_id' => $apunte_id, ':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id'),':apunte_location_name' => $location_name));
 
         return self::getApunte($apunte_id);
     }

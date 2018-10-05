@@ -335,7 +335,6 @@
                 $("#formulario\\.valor").attr("disabled", true);
                 $("#formulario\\.comentarios").attr("disabled", true);
                 $("#formulario\\.palabras").attr("disabled", true);
-
             });
 
             $("#boton\\.cancelar").on("click", function(){
@@ -351,7 +350,7 @@
                 //};
 
                 //$.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                    cargarTabla();
+                cargarTabla();
                 //    $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear());
                 //    $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
                 //    $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear());
@@ -367,9 +366,9 @@
                 //    $("#formulario\\.valor").val("").attr("disabled", true);
                 //    $("#formulario\\.comentarios").val("").attr("disabled", true);
                 //    $("#formulario\\.palabras").val("").attr("disabled", true);
-                    $("#boton\\.nuevo").removeClass("d-none");
-                    $("#boton\\.guardar").addClass("d-none");
-                    $("#boton\\.cancelar").addClass("d-none");
+                $("#boton\\.nuevo").removeClass("d-none");
+                $("#boton\\.guardar").addClass("d-none");
+                $("#boton\\.cancelar").addClass("d-none");
                 //});
             });
 
@@ -397,7 +396,8 @@
                 hora: $("#formulario\\.hora").val(),
                 paciente: $("#formulario\\.paciente").val(),
                 actividad: $("#formulario\\.actividad").val(),
-                lugar: $("#formulario\\.lugar option:selected").text(),
+                lugar: $("#formulario\\.lugar").val(),
+                location_name: $("#formulario\\.lugar option:selected").text()
                 cancelacion: $("#formulario\\.cancelacion").val(),
                 fcancelacion: $("#formulario\\.fcancelacion").val(),
                 valor: $("#formulario\\.valor").val(),
@@ -712,7 +712,8 @@
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                 if (Object.keys(data).length > 0) {
                     $.each(data, function(i, item) {
-                        let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+
+                        let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_location_name"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                         $("#tabla\\.calculos").append(fila);
                     });
                 }
