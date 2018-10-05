@@ -55,7 +55,7 @@ class ApuntesModel
         //}
 
         // fetch() is the PDO method that gets a single result
-        return $query->fetch();
+        return $query->fetchAll();
     }
 
     /**
