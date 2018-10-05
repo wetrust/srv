@@ -16,6 +16,7 @@
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.home" title="Imprimir apunte actual"><i class="fas fa-home"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.imprimir" title="Imprimir apunte actual"><i class="fas fa-print"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion" title="Configuración"><i class="fas fa-cog"></i></button>
@@ -132,6 +133,27 @@
 
                 updateCalculos();
             });
+
+            $("#boton\\.home").on("click", function(){
+
+                var dateTime = new Date();
+                var day = ("0" + dateTime.getDate()).slice(-2);
+                var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+
+                $("#formulario\\.id").val("");
+                $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", false);
+                $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                $("#formulario\\.hora").val("");
+                $("#formulario\\.paciente").val("");
+                $("#formulario\\.actividad").val("");
+                $("#formulario\\.lugar").val("");
+                $("#formulario\\.cancelacion").val("");
+                $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear());
+                $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                $("#formulario\\.valor").val("");
+                $("#formulario\\.comentarios").val("");
+                $("#formulario\\.palabras").val("");
+            })
 
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
