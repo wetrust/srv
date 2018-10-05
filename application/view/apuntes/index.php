@@ -387,8 +387,12 @@
 
                 $(".apunte").on("mouseenter", function(){
                     $(this).children(".col-4").removeClass("d-none");
+                    $(this).parent().parent().addClass("text-secondary");
                 }).on("mouseleave", function(){
                     $(this).children(".col-4").addClass("d-none");
+                    $(this).parent().parent().parent().children().each(function(i){
+                        $(this).removeClass("text-secondary");
+                    });
                 }).on("click",function(){
                     let apunte_id = $(this).data("id");
 
