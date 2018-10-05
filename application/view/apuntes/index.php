@@ -180,7 +180,7 @@
                     $("#dialog\\.view").modal("show");
                     $("#dialog\\.body").html('<p class="text-center">¿Desea editar el texto?</p>');
                     $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete">SI</button>');
-                    $("#dialog\\.delete").("click", function(){
+                    $("#dialog\\.delete").on("click", function(){
                         $("#formulario\\.comentarios").attr("disabled", false);
                     });
                 }
