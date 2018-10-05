@@ -397,7 +397,7 @@
                 hora: $("#formulario\\.hora").val(),
                 paciente: $("#formulario\\.paciente").val(),
                 actividad: $("#formulario\\.actividad").val(),
-                lugar: $("#formulario\\.lugar").val(),
+                lugar: $("#formulario\\.lugar option:selected").text(),
                 cancelacion: $("#formulario\\.cancelacion").val(),
                 fcancelacion: $("#formulario\\.fcancelacion").val(),
                 valor: $("#formulario\\.valor").val(),
