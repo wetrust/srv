@@ -141,7 +141,7 @@
                 var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
 
                 $("#formulario\\.id").val("");
-                $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", false);
+                $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear());
                 $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
                 $("#formulario\\.hora").val("");
                 $("#formulario\\.paciente").val("");
