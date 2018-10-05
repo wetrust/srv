@@ -287,6 +287,26 @@
                 });
             });
 
+            $("#boton\\.editar").on("click", function(){
+
+                $("#boton\\.nuevo").addClass("d-none");
+                $(this).addClass("d-none");
+                $("#boton\\.guardar").removeClass("d-none");
+                $("#boton\\.cancelar").removeClass("d-none");
+
+                $("#formulario\\.fecha").attr("disabled", false);
+                $("#formulario\\.hora").attr("disabled", false);
+                $("#formulario\\.paciente").attr("disabled", false);
+                $("#formulario\\.actividad").attr("disabled", false);
+                $("#formulario\\.lugar").attr("disabled", false);
+                $("#formulario\\.cancelacion").attr("disabled", false);
+                $('#formulario\\.fcancelacion').attr("disabled", false);
+                $("#formulario\\.valor").attr("disabled", false);
+                $("#formulario\\.comentarios").attr("disabled", false);
+                $("#formulario\\.palabras").attr("disabled", false);
+
+            });
+
             $("#boton\\.guardar").on("click", function(){
 
                 guardarAutomatico();
