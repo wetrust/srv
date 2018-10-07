@@ -197,6 +197,7 @@
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Advertencia')
                     $("#dialog\\.body").html('<p class="text-center">Debe seleccionar un apunte antes de imprimir</p>');
+                    $("#dialog\\.view").modal("show");
                 }
             });
 
