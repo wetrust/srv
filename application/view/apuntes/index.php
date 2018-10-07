@@ -741,6 +741,9 @@
                         $("#tabla\\.calculos").append(fila);
                     });
 
+                    var solicitud = {
+                        accion: "calculosSum",
+                    }
                     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                         if (Object.keys(data).length > 0) {
                             let fila = '<tr><th scope="row"></th><td></td><td></td><td></td><td>' + data[0].SUM(apunte_cost) + '</td></tr>';
