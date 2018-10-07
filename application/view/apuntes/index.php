@@ -83,8 +83,6 @@
             </div>
          </div>
       </div>
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
       <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
@@ -116,13 +114,11 @@
                 $("#calculos\\.fecha\\.dos").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
 
                 $('#calculos\\.fecha\\.uno').datepicker().on('changeDate', function(ev) {
-                    $(this).trigger("change");
-                    $(this).datepicker('hide');
+                    $(this).trigger("change");$(this).datepicker('hide');
                 });
 
                 $('#calculos\\.fecha\\.dos').datepicker().on('changeDate', function(ev) {
-                    $(this).trigger("change");
-                    $(this).datepicker('hide');
+                    $(this).trigger("change");$(this).datepicker('hide');
                 });
 
                 $("#calculos\\.fecha\\.uno").on("change", function(){updateCalculos();});
