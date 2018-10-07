@@ -106,7 +106,7 @@ class ApuntesModel
         $lugar = (is_numeric($lugar) ? intval($lugar) : 99);
         $actividad = (is_numeric($actividad) ? intval($actividad) : 99);
         $cancelacion = (is_numeric($cancelacion) ? intval($cancelacion) : 99);
-        AS totDistance
+
         if (($lugar == 99) && ($actividad == 99) && ($cancelacion == 99)){
             $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
             $query = $database->prepare($sql);
