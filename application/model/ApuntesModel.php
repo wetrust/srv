@@ -106,45 +106,45 @@ class ApuntesModel
         $lugar = (is_numeric($lugar) ? intval($lugar) : 99);
         $actividad = (is_numeric($actividad) ? intval($actividad) : 99);
         $cancelacion = (is_numeric($cancelacion) ? intval($cancelacion) : 99);
-        
+        AS totDistance
         if (($lugar == 99) && ($actividad == 99) && ($cancelacion == 99)){
-            $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+            $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
             $query = $database->prepare($sql);
             $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos));
         }
         else{
             if (($lugar !== 99) && ($actividad !== 99) && ($cancelacion !== 99)){
-                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_activity' => $actividad, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar !== 99) && ($actividad !== 99) && ($cancelacion == 99)){
-                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity  AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity  AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_activity' => $actividad));
             }
             else if  (($lugar !== 99) && ($actividad == 99) && ($cancelacion !== 99)){
-                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar == 99) && ($actividad !== 99) && ($cancelacion !== 99)){
-                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_activity' => $actividad, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar !== 99) && ($actividad == 99) && ($cancelacion == 99)){
-                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar));
             }
             else if  (($lugar == 99) && ($actividad == 99) && ($cancelacion !== 99)){
-                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar == 99) && ($actividad !== 99) && ($cancelacion == 99)){
-                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT SUM(apunte_cost) as apunte_costo FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_activity' => $actividad));
             }
