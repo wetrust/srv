@@ -81,38 +81,8 @@ class ApuntesController extends Controller
                 break;
             case "calculos":
 
-                $lugar = Request::post('lugar');
-                $actividad = Request::post('actividad');
-                $cancelacion = Request::post('cancelacion');
 
-                if (is_numeric($lugar) == true){
-                    echo 'lugar es un numero<br>';
-                }
-                else{
-                    echo 'lugar no es un numero<br>';
-                }
-
-                if (is_numeric($actividad) == true){
-                    echo 'actividad es un numero<br>';
-                }
-
-                if ($lugar == 99){
-                    echo 'lugar99<br>';
-                }
-                else{
-                    echo 'lugar<br>';
-                }
-
-                if (intval($actividad) !== 99){
-                    echo 'actividad<br>';
-                }
-                else{
-                    echo 'actividad99<br>';
-                }
-
-
-                //($lugar == 99) && (!$actividad == 99) && ($cancelacion == 99)
-                //$resultado = ApuntesModel::getFilterApunte(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                $resultado = ApuntesModel::getFilterApunte(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
                 break;
         }
 
