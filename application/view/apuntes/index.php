@@ -740,6 +740,13 @@
                         let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_person"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_keywords"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                         $("#tabla\\.calculos").append(fila);
                     });
+
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                        if (Object.keys(data).length > 0) {
+                            let fila = '<tr><th scope="row"></th><td></td><td></td><td></td><td>' + data[0].SUM(apunte_cost) + '</td></tr>';
+                            $("#tabla\\.calculos").append(fila);
+                        }
+                    });
                 }
             });
         }
