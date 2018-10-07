@@ -85,6 +85,17 @@ class ApuntesController extends Controller
                 $actividad = Request::post('actividad');
                 $cancelacion = Request::post('cancelacion');
 
+                if (is_numeric($lugar) == true){
+                    echo 'lugar es un numero<br>';
+                }
+                else{
+                    echo 'lugar no es un numero<br>';
+                }
+
+                if (is_numeric($actividad) == true){
+                    echo 'actividad es un numero<br>';
+                }
+
                 if ($lugar == 99){
                     echo 'lugar99<br>';
                 }
