@@ -83,6 +83,8 @@ class ApuntesController extends Controller
 
 
                 $resultado = ApuntesModel::getFilterApunte(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                $sumatoria = ApuntesModel::getFilterApunteSum(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                $resultado->append($sumatoria);
                 break;
         }
 

@@ -99,6 +99,61 @@ class ApuntesModel
         return $query->fetchAll();
     }
 
+    public static function getFilterApunteSum($uno,$dos,$lugar,$actividad,$cancelacion)
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $lugar = (is_numeric($lugar) ? intval($lugar) : 99);
+        $actividad = (is_numeric($actividad) ? intval($actividad) : 99);
+        $cancelacion = (is_numeric($cancelacion) ? intval($cancelacion) : 99);
+        
+        if (($lugar == 99) && ($actividad == 99) && ($cancelacion == 99)){
+            $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+            $query = $database->prepare($sql);
+            $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos));
+        }
+        else{
+            if (($lugar !== 99) && ($actividad !== 99) && ($cancelacion !== 99)){
+                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $query = $database->prepare($sql);
+                $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_activity' => $actividad, ':apunte_cancellation' => $cancelacion));
+            }
+            else if  (($lugar !== 99) && ($actividad !== 99) && ($cancelacion == 99)){
+                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity  AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $query = $database->prepare($sql);
+                $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_activity' => $actividad));
+            }
+            else if  (($lugar !== 99) && ($actividad == 99) && ($cancelacion !== 99)){
+                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $query = $database->prepare($sql);
+                $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_cancellation' => $cancelacion));
+            }
+            else if  (($lugar == 99) && ($actividad !== 99) && ($cancelacion !== 99)){
+                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $query = $database->prepare($sql);
+                $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_activity' => $actividad, ':apunte_cancellation' => $cancelacion));
+            }
+            else if  (($lugar !== 99) && ($actividad == 99) && ($cancelacion == 99)){
+                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $query = $database->prepare($sql);
+                $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar));
+            }
+            else if  (($lugar == 99) && ($actividad == 99) && ($cancelacion !== 99)){
+                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $query = $database->prepare($sql);
+                $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_cancellation' => $cancelacion));
+            }
+            else if  (($lugar == 99) && ($actividad !== 99) && ($cancelacion == 99)){
+                $sql = "SELECT SUM(apunte_cost) FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $query = $database->prepare($sql);
+                $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_activity' => $actividad));
+            }
+        }
+
+        // fetch() is the PDO method that gets a single result
+        return $query->fetchAll();
+    }
+
     /**
      * Set a apunte (create a new one)
      * @param string $apunte_text apunte text that will be created
