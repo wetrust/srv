@@ -366,7 +366,6 @@
             });
 
             $("#boton\\.editar").on("click", function(){
-
                 $("#boton\\.nuevo").addClass("d-none");
                 $(this).addClass("d-none");
                 $("#boton\\.guardar").removeClass("d-none");
@@ -382,7 +381,6 @@
                 $("#formulario\\.valor").attr("disabled", false);
                 $("#formulario\\.comentarios").attr("disabled", false);
                 $("#formulario\\.palabras").attr("disabled", false);
-
             });
 
             $("#boton\\.guardar").on("click", function(){
@@ -428,19 +426,20 @@
                 //    $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear());
                 //    $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
 
-                //    $("#formulario\\.fecha").attr("disabled", true);
-                //    $("#formulario\\.hora").val("").attr("disabled", true);
-                //    $("#formulario\\.paciente").val("").attr("disabled", true);
-                //    $("#formulario\\.actividad").val("").attr("disabled", true);
-                //    $("#formulario\\.lugar").val("").attr("disabled", true);
-                //    $("#formulario\\.cancelacion").val("").attr("disabled", true);
-                //    $("#formulario\\.fcancelacion").attr("disabled", true);
-                //    $("#formulario\\.valor").val("").attr("disabled", true);
-                //    $("#formulario\\.comentarios").val("").attr("disabled", true);
-                //    $("#formulario\\.palabras").val("").attr("disabled", true);
+                $("#formulario\\.fecha").attr("disabled", true);
+                $("#formulario\\.hora").val("").attr("disabled", true);
+                $("#formulario\\.paciente").val("").attr("disabled", true);
+                $("#formulario\\.actividad").val("").attr("disabled", true);
+                $("#formulario\\.lugar").val("").attr("disabled", true);
+                $("#formulario\\.cancelacion").val("").attr("disabled", true);
+                $("#formulario\\.fcancelacion").attr("disabled", true);
+                $("#formulario\\.valor").val("").attr("disabled", true);
+                $("#formulario\\.comentarios").val("").attr("disabled", true);
+                $("#formulario\\.palabras").val("").attr("disabled", true);
                 $("#boton\\.nuevo").removeClass("d-none");
                 $("#boton\\.guardar").addClass("d-none");
                 $("#boton\\.cancelar").addClass("d-none");
+                $("#boton\\.home").trigger("click");
                 //});
             });
 
