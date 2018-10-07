@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios generales</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
+                                <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios generales relativos al evento; operación, reunión, etc.</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.calculos" title="calculos"><i class="fas fa-calculator"></i></button>
                             </div>
                         </div>
