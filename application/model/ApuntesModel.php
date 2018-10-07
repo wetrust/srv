@@ -48,6 +48,10 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
+        $lugar = (is_numeric($lugar) ? intval($lugar) : 99);
+        $actividad = (is_numeric($actividad) ? intval($actividad) : 99);
+        $cancelacion = (is_numeric($cancelacion) ? intval($cancelacion) : 99);
+        
         if (($lugar == 99) && ($actividad == 99) && ($cancelacion == 99)){
             $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
             $query = $database->prepare($sql);
