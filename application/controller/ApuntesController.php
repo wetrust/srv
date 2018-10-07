@@ -92,7 +92,7 @@ class ApuntesController extends Controller
                     echo 'lugar<br>';
                 }
 
-                if (!$actividad == 99){
+                if ($actividad !== 99){
                     echo 'actividad<br>';
                 }
                 else{
