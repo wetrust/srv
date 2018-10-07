@@ -80,11 +80,10 @@ class ApuntesController extends Controller
                 $resultado = ApuntesModel::deleteCancelacion(Request::post('id'));
                 break;
             case "calculos":
-
-
-                //$resultado = ApuntesModel::getFilterApunte(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                $resultado = ApuntesModel::getFilterApunte(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                break;
+            case "calculosSum":
                 $resultado = ApuntesModel::getFilterApunteSum(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
-                //$resultado->append($sumatoria);
                 break;
         }
 
