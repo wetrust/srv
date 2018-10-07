@@ -95,6 +95,14 @@
             cargarLugar();
             cargarCancelacion();
          
+            $('#formulario\\.fecha').datepicker().on('changeDate', function(ev) {
+                $(this).datepicker('hide');
+            });
+
+            $('#formulario\\.fcancelacion').datepicker().on('changeDate', function(ev) {
+                $(this).datepicker('hide');
+            });
+
             $("#boton\\.calculos").on("click", function(){
                 var dateTime = new Date();
                 var day = ("0" + dateTime.getDate()).slice(-2);
