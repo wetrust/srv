@@ -174,17 +174,17 @@
                     let fcancelacion  = $("#formulario\\.fcancelacion").val();
                     let valor = $("#formulario\\.valor").val();
                     let comentarios = $("#formulario\\.comentarios").val();
-
-                    informe.replace(":PACIENTE", paciente);
-                    informe.replace(":FECHA", fecha);
-                    informe.replace(":HORA", hora);
-                    informe.replace(":PALABRAS", palabras);
-                    informe.replace(":LUGAR", lugar);
-                    informe.replace(":CANCELACION", cancelacion);
-                    informe.replace(":ACTIVIDAD", actividad);
-                    informe.replace(":FCANCELACION", fcancelacion);
-                    informe.replace(":VALOR", valor);
-                    informe.replace(":COMENTARIOS", comentarios);
+                    
+                    informe.replace("/:PACIENTE/g", paciente);
+                    informe.replace("/:FECHA/g", fecha);
+                    informe.replace("/:HORA/g", hora);
+                    informe.replace("/:PALABRAS/g", palabras);
+                    informe.replace("/:LUGAR/g", lugar);
+                    informe.replace("/:CANCELACION/g", cancelacion);
+                    informe.replace("/:ACTIVIDAD/g", actividad);
+                    informe.replace("/:FCANCELACION/g", fcancelacion);
+                    informe.replace("/:VALOR/g", valor);
+                    informe.replace("/:COMENTARIOS/g", comentarios);
 
                     var ventimp = window.open(" ", "popimpr");
                     ventimp.document.write(informe);
