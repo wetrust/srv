@@ -340,7 +340,7 @@
                 if ($("#formulario\\.valor").val() == ""){
                     $("#formulario\\.valor").val("0");
                 }
-                
+
                 guardarAutomatico();
                 $("#boton\\.nuevo").removeClass("d-none");
                 $("#boton\\.guardar").addClass("d-none");
@@ -747,6 +747,11 @@
 
                     var solicitud = {
                         accion: "calculosSum",
+                        uno: $("#calculos\\.fecha\\.uno").val(),
+                        dos: $("#calculos\\.fecha\\.dos").val(),
+                        lugar: $("#calculos\\.formulario\\.lugar").val(),
+                        actividad: $("#calculos\\.formulario\\.actividad").val(),
+                        cancelacion: $("#calculos\\.formulario\\.cancelacion").val()
                     }
                     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                         if (Object.keys(data).length > 0) {
