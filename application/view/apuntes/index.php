@@ -146,7 +146,7 @@
                 $("#formulario\\.cancelacion").val("");
                 $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear());
                 $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
-                $("#formulario\\.valor").val("");
+                $("#formulario\\.valor").val("0");
                 $("#formulario\\.comentarios").val("");
                 $("#formulario\\.palabras").val("");
             })
@@ -290,7 +290,7 @@
                     lugar: "",
                     cancelacion: "",
                     fcancelacion: day + "/" + month + "/" + dateTime.getFullYear(),
-                    valor: "",
+                    valor: "0",
                     comentarios: "",
                     palabras: ""
                 };
@@ -305,7 +305,7 @@
                     $("#formulario\\.cancelacion").val("").attr("disabled", false);
                     $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false);
                     $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
-                    $("#formulario\\.valor").val("").attr("disabled", false);
+                    $("#formulario\\.valor").val("0").attr("disabled", false);
                     $("#formulario\\.comentarios").val("").attr("disabled", false);
                     $("#formulario\\.palabras").val("").attr("disabled", false);
                     cargarTabla();
@@ -550,7 +550,7 @@
                             $("#formulario\\.cancelacion").val("").attr("disabled", true);
                             $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
                             $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
-                            $("#formulario\\.valor").val("").attr("disabled", true);
+                            $("#formulario\\.valor").val("0").attr("disabled", true);
                             $("#formulario\\.comentarios").val("").attr("disabled", true);
                             $("#formulario\\.palabras").val("").attr("disabled", true);
                         });
