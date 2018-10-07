@@ -337,6 +337,10 @@
 
             $("#boton\\.guardar").on("click", function(){
 
+                if ($("#formulario\\.valor").val() == ""){
+                    $("#formulario\\.valor").val("0");
+                }
+                
                 guardarAutomatico();
                 $("#boton\\.nuevo").removeClass("d-none");
                 $("#boton\\.guardar").addClass("d-none");
@@ -746,7 +750,7 @@
                     }
                     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                         if (Object.keys(data).length > 0) {
-                            let fila = '<tr><th scope="row"></th><td></td><td></td><td></td><td>' + data[0].apunte_costo + '</td></tr>';
+                            let fila = '<tr><th scope="row"></th><td></td><td></td><td></td><td>' + data.apunte_costo + '</td></tr>';
                             $("#tabla\\.calculos").append(fila);
                         }
                     });
