@@ -157,7 +157,46 @@
                 $("#formulario\\.valor").val("0");
                 $("#formulario\\.comentarios").val("");
                 $("#formulario\\.palabras").val("");
-            })
+            });
+
+            $("#boton\\.imprimir").on("click", function(){
+                if ($("#formulario\\.comentarios").val() == ""){
+                    
+                    let informe = '<html lang="es"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title> </head> <body> <h1 class="text-center">Informe apunte de eventos</h1> <div class="row"> <div class="col"><p><strong>Nombre del evento</strong> :paciente</p></div><div class="col"><p><strong>Fecha</strong> :fecha</p></div><div class="col"><p><strong>Hora</strong> :hora</p></div></div><div class="row"> <div class="col"><p><strong>Otros participantes</strong> :palabras</p></div><div class="col"><p><strong>Lugar del evento</strong> :lugar</p></div><div class="col"><p><strong>Cierre de evento</strong> :cancelacion</p></div></div><div class="row"> <div class="col"><p><strong>Tipo de evento</strong> :actividad</p></div><div class="col"><p><strong>Fecha de cancelación</strong> :fcancelacion</p></div><div class="col"><p><strong>Valor cancelado</strong> :valor</p></div></div><div class="row"> <div class="col"><p><strong>Comentarios generales</strong> :comentarios</p></div></div></body></html>';
+                
+                    let paciente = $("#formulario\\.paciente").val();
+                    let fecha  = $("#formulario\\.fecha").val();
+                    let hora  = $("#formulario\\.hora").val();
+                    let palabras  = $("#formulario\\.palabras").val();
+                    let lugar  = $("#formulario\\.lugar option:selected").text()
+                    let cancelacion  = $("#formulario\\.cancelacion option:selected").text()
+                    let actividad  = $("#formulario\\.actividad option:selected").text()
+                    let fcancelacion  = $("#formulario\\.fcancelacion").val();
+                    let valor = $("#formulario\\.valor").val();
+                    let comentarios = $("#formulario\\.comentarios").val();
+
+                    informe.replace(":paciente", paciente);
+                    informe.replace(":fecha", fecha);
+                    informe.replace(":hora", hora);
+                    informe.replace(":palabras", palabras);
+                    informe.replace(":lugar", lugar);
+                    informe.replace(":cancelacion", cancelacion);
+                    informe.replace(":actividad", actividad);
+                    informe.replace(":fcancelacion", fcancelacion);
+                    informe.replace(":valor", valor);
+                    informe.replace(":comentarios", comentarios);
+
+                    var ventimp = window.open(" ", "popimpr");
+                    ventimp.document.write(informe);
+                    ventimp.document.close();
+                    
+                }
+                else{
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Advertencia')
+                    $("#dialog\\.body").html('<p class="text-center">Debe seleccionar un apunte antes de imprimir</p>');
+                }
+            });
 
             $("#boton\\.buscar").on("click", function(){
                 if ($("#div\\.busqueda").hasClass("d-none")){
