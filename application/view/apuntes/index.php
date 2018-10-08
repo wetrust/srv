@@ -177,6 +177,7 @@
                     let valor = $("#formulario\\.valor").val();
                     let comentarios = $("#formulario\\.comentarios").val().replace(/\r\n|\r|\n/g,"<br />");
 
+                    let escript = '<script>document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});</script>';
                     informe = informe.replace(":PACIENTE", paciente);
                     informe = informe.replace(":FECHA", fecha);
                     informe = informe.replace(":HORA", hora);
@@ -187,7 +188,7 @@
                     informe = informe.replace(":FCANCELACION", fcancelacion);
                     informe = informe.replace(":VALOR", valor);
                     informe = informe.replace(":COMENTARIOS", comentarios);
-                    informe = informe.replace(":SCRIPT", '<script>document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});</script>')
+                    informe = informe.replace(":SCRIPT", escript);
 
                     var ventimp = window.open(" ", "popimpr");
                     ventimp.document.write(informe);
