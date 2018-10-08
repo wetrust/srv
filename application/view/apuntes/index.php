@@ -175,7 +175,7 @@
                     let actividad  = $("#formulario\\.actividad option:selected").text()
                     let fcancelacion  = $("#formulario\\.fcancelacion").val();
                     let valor = $("#formulario\\.valor").val();
-                    let comentarios = $("#formulario\\.comentarios").val();
+                    let comentarios = $("#formulario\\.comentarios").val().replace(/\r\n|\r|\n/g,"<br />");
 
                     informe = informe.replace(":PACIENTE", paciente);
                     informe = informe.replace(":FECHA", fecha);
