@@ -16,10 +16,10 @@
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.home" title="Imprimir apunte actual"><i class="fas fa-home"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.home" title="Empezar nuevamente"><i class="fas fa-home"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.configuracion" title="Configuración"><i class="fas fa-cog"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.imprimir" title="Imprimir apunte actual"><i class="fas fa-print"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.imprimir" title="Ver resumen e imprimir"><i class="fas fa-print"></i></button>
                     </div>
                     <div class="form-inline d-none" id="div.busqueda">
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
