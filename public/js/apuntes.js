@@ -14,6 +14,7 @@ $(document).ready(function(){
 
     $("#boton\\.busqueda").on("click", function(){
         var data ={
+            accion: "busqueda",
             texto: $("#caja\\.busqueda").val()
         }
 
@@ -128,7 +129,7 @@ $(document).ready(function(){
     
                 $("#dialog\\.view").modal("show");
             });
-            });
+        });
     });
 
     $("#boton\\.calculos").on("click", function(){
