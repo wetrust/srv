@@ -12,6 +12,125 @@ $(document).ready(function(){
         $(this).datepicker('hide');
     });
 
+    $("#boton\\.busqueda").on("click", function(){
+        var data ={
+            texto: $("#caja\\.busqueda").val()
+        }
+
+        $.post("https://servidor.crecimientofetal.cl/apuntes/api", data).done(function(response){
+            $("#contenedor\\.tarjetas").empty();
+            $("#boton\\.editar").addClass("d-none");
+            $.each(data, function(i, item) {
+                let fila = '<div class="card"><div class="card-body p-3"><div class="row apunte" data-id="' + item["apunte_id"] + '"><div class="col text-truncate"><p class="my-2">' + item["apunte_person"] +'</p></div><div class="col-4 d-none"><button type="button" data-id="' + item["apunte_id"] + '" class="btn btn-outline-warning px-3 eliminar"><i class="fas fa-trash"></i></button></div></div></div></div>';
+                $("#contenedor\\.tarjetas").append(fila);
+            });
+    
+            $(".apunte").on("mouseenter", function(){
+                $(this).children(".col-4").removeClass("d-none");
+                $(this).parent().parent().addClass("bg-secondary").addClass("text-white");
+            }).on("mouseleave", function(){
+                $(this).children(".col-4").addClass("d-none");
+                $(this).parent().parent().parent().children().each(function(i){
+                    $(this).removeClass("bg-secondary").removeClass("text-white");;
+                });
+            }).on("click",function(){
+    
+                if ($("#formulario\\.paciente").is(':disabled') == false){
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Guardar cambios')
+                    $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?')
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" >Guardar</button>');
+                    $("#dialog\\.view").modal("show");
+    
+                    $("#dialog\\.delete").on("click", function(){
+                        guardarAutomatico();
+                        $("#dialog\\.view").modal("hide");
+                        $("#formulario\\.fecha").attr("disabled", true);
+                        $("#formulario\\.hora").attr("disabled", true);
+                        $("#formulario\\.participante").attr("disabled", true);
+                        $("#formulario\\.paciente").attr("disabled", true);
+                        $("#formulario\\.actividad").attr("disabled", true);
+                        $("#formulario\\.lugar").attr("disabled", true);
+                        $("#formulario\\.cancelacion").attr("disabled", true);
+                        $('#formulario\\.fcancelacion').attr("disabled", true);
+                        $("#formulario\\.valor").attr("disabled", true);
+                        $("#formulario\\.comentarios").attr("disabled", true);
+                        $("#formulario\\.palabras").attr("disabled", true);
+                    });
+                }
+                else{
+                    $("#boton\\.editar").removeClass("d-none");
+                    let apunte_id = $(this).data("id");
+    
+                    var solicitud = {
+                        accion: "apunte",
+                        id: apunte_id
+                    };
+    
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                        $("#formulario\\.id").val(data.apunte_id);
+                        $("#formulario\\.fecha").val(data.apunte_date);
+                        $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                        $("#formulario\\.hora").val(data.apunte_hour);
+                        $("#formulario\\.participante").val(data.participante);
+                        $("#formulario\\.paciente").val(data.apunte_person);
+                        $("#formulario\\.actividad").val(data.apunte_activity);
+                        $("#formulario\\.lugar").val(data.apunte_location);
+                        $("#formulario\\.cancelacion").val(data.apunte_cancellation);
+                        $("#formulario\\.fcancelacion").val(data.apunte_fcancellation);
+                        $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+                        $("#formulario\\.valor").val(data.apunte_cost);
+                        $("#formulario\\.comentarios").val(data.apunte_text);
+                        $("#formulario\\.palabras").val(data.apunte_keywords);
+                    });
+                }
+            });
+    
+            $(".eliminar").on("click",function(){
+                let apunte_id = $(this).data("id");
+                $("#dialog\\.delete").remove();
+                $("#dialog\\.title").html('Eliminar Evento')
+                $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el evento seleccionado?')
+                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + apunte_id + '">Eliminar</button>');
+    
+                $("#dialog\\.delete").on("click", function(){
+                    let apunte_id = $(this).data("id");
+                    var solicitud = {
+                        accion: "eliminar",
+                        id: apunte_id
+                    };
+    
+                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                        cargarTabla();
+                        $("#dialog\\.delete").remove();
+                        $("#dialog\\.view").modal("hide");
+    
+                        var dateTime = new Date();
+                        var day = ("0" + dateTime.getDate()).slice(-2);
+                        var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
+    
+                        $("#formulario\\.id").val("").attr("disabled", true);
+                        $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
+                        $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                        $("#formulario\\.hora").val("").attr("disabled", true);
+                        $("#formulario\\.participante").val("").attr("disabled", true);
+                        $("#formulario\\.paciente").val("").attr("disabled", true);
+                        $("#formulario\\.actividad").val("").attr("disabled", true);
+                        $("#formulario\\.lugar").val("").attr("disabled", true);
+                        $("#formulario\\.cancelacion").val("").attr("disabled", true);
+                        $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
+                        $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                        $("#formulario\\.valor").val("0").attr("disabled", true);
+                        $("#formulario\\.comentarios").val("").attr("disabled", true);
+                        $("#formulario\\.palabras").val("").attr("disabled", true);
+                    });
+                });
+    
+                $("#dialog\\.view").modal("show");
+            });
+            });
+    });
+
     $("#boton\\.calculos").on("click", function(){
         var dateTime = new Date();
         var day = ("0" + dateTime.getDate()).slice(-2);
@@ -74,7 +193,7 @@ $(document).ready(function(){
 
         if (texto.length > 0){
 
-            let informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center my-4">Informe apuntes de eventos</h1> <hr> <div class="row"> <div class="col"> <h4><strong>Nombre del evento</strong> :PACIENTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div></div><div class="row"> <div class="col"> <h4><strong>Hora</strong> :HORA</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Tipo de evento</strong> :ACTIVIDAD</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre de evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr><div class="row"> <div class="col"> <h4><strong class="h4">Comentarios generales relativos al evento</strong><br>:COMENTARIOS</h4></div></div><script>:SCRIPT</script></body></html>';
+            let informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe apuntes de eventos</h1> <hr> <div class="row"> <div class="col"> <h4><strong>Nombre del evento</strong> :PACIENTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div></div><div class="row"> <div class="col"> <h4><strong>Hora</strong> :HORA</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Tipo de evento</strong> :ACTIVIDAD</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre de evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr><div class="row"> <div class="col"> <h4><strong class="h4">Comentarios generales relativos al evento</strong><br>:COMENTARIOS</h4></div></div><script>:SCRIPT</script></body></html>';
 
             let paciente = $("#formulario\\.paciente").val();
             let fecha  = $("#formulario\\.fecha").val();

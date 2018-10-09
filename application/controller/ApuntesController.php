@@ -86,7 +86,7 @@ class ApuntesController extends Controller
                 $resultado = ApuntesModel::getFilterApunteSum(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
                 break;
             case "busqueda":
-                $resultado = ApuntesModel::getFilterApunteSum(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                $resultado = ApuntesModel::findText(Request::post('texto'));
                 break;
         }
 

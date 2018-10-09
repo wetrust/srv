@@ -22,8 +22,8 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.configuracion" title="Configuración"><i class="fas fa-cog"></i></button>
                     </div>
                     <div class="form-inline d-none" id="div.busqueda">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                        <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
+                        <button id="boton.busqueda" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-search"></i></button>
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" id="contenedor.tarjetas">

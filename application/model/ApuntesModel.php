@@ -6,6 +6,18 @@
  */
 class ApuntesModel
 {
+
+    public static function findText($searchText){
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_person = :apunte_person OR apunte_text = :apunte_text OR apunte_participante = :apunte_participante OR apunte_keywords = :apunte_keywords";
+        $query = $database->prepare($sql);
+        $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_person' => $searchText,':apunte_text' => $searchText,':apunte_participante' => $searchText,':apunte_keywords' => $searchText));
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
+    }
+
     /**
      * Get all apuntes (apuntes are just example data that the user has created)
      * @return array an array with several objects (the results)
