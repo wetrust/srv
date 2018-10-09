@@ -85,6 +85,9 @@ class ApuntesController extends Controller
             case "calculosSum":
                 $resultado = ApuntesModel::getFilterApunteSum(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
                 break;
+            case "busqueda":
+                $resultado = ApuntesModel::getFilterApunteSum(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
+                break;
         }
 
         return $this->View->renderJSON($resultado);
