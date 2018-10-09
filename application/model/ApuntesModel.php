@@ -14,7 +14,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id LIMIT 10";
+        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id LIMIT 10";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id')));
 
@@ -31,7 +31,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_id = :apunte_id LIMIT 1";
+        $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_id = :apunte_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_id' => $apunte_id));
 
@@ -53,43 +53,43 @@ class ApuntesModel
         $cancelacion = (is_numeric($cancelacion) ? intval($cancelacion) : 99);
         
         if (($lugar == 99) && ($actividad == 99) && ($cancelacion == 99)){
-            $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+            $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
             $query = $database->prepare($sql);
             $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos));
         }
         else{
             if (($lugar !== 99) && ($actividad !== 99) && ($cancelacion !== 99)){
-                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_activity' => $actividad, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar !== 99) && ($actividad !== 99) && ($cancelacion == 99)){
-                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity  AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_activity = :apunte_activity  AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_activity' => $actividad));
             }
             else if  (($lugar !== 99) && ($actividad == 99) && ($cancelacion !== 99)){
-                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar == 99) && ($actividad !== 99) && ($cancelacion !== 99)){
-                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_activity' => $actividad, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar !== 99) && ($actividad == 99) && ($cancelacion == 99)){
-                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_location = :apunte_location AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_location' => $lugar));
             }
             else if  (($lugar == 99) && ($actividad == 99) && ($cancelacion !== 99)){
-                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_cancellation = :apunte_cancellation AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_cancellation' => $cancelacion));
             }
             else if  (($lugar == 99) && ($actividad !== 99) && ($cancelacion == 99)){
-                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
+                $sql = "SELECT apunte_id, apunte_date, apunte_hour, apunte_participante, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords FROM apuntes WHERE user_id = :user_id AND apunte_activity = :apunte_activity AND apunte_date BETWEEN :apunte_date AND :apunte_date2";
                 $query = $database->prepare($sql);
                 $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_date' => $uno, ':apunte_date2' => $dos, ':apunte_activity' => $actividad));
             }
@@ -159,14 +159,14 @@ class ApuntesModel
      * @param string $apunte_text apunte text that will be created
      * @return bool feedback (was the apunte created properly ?)
      */
-    public static function createApunte($apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost,  $apunte_text, $apunte_keywords, $location_name)
+    public static function createApunte($apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost,  $apunte_text, $apunte_keywords, $location_name, $apunte_participante)
     {
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO apuntes (apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, user_id, apunte_location_name) VALUES (:apunte_date, :apunte_hour, :apunte_person, :apunte_activity, :apunte_location, :apunte_cancellation, :apunte_fcancellation, :apunte_cost, :apunte_text, :apunte_keywords, :user_id, :apunte_location_name)";
+        $sql = "INSERT INTO apuntes (apunte_date, apunte_hour, apunte_person, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, user_id, apunte_location_name, apunte_participante) VALUES (:apunte_date, :apunte_hour, :apunte_person, :apunte_activity, :apunte_location, :apunte_cancellation, :apunte_fcancellation, :apunte_cost, :apunte_text, :apunte_keywords, :user_id, :apunte_location_name, :apunte_participante)";
         $query = $database->prepare($sql);
-        $query->execute(array(':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id'), ':apunte_location_name' => $location_name));
+        $query->execute(array(':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id'), ':apunte_location_name' => $location_name, ":apunte_participante" => $apunte_participante);
 
         if ($query->rowCount() == 1) {
             $apunte_id = $database->lastInsertId();
@@ -184,7 +184,7 @@ class ApuntesModel
      * @param string $apunte_text new text of the specific apunte
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateApunte($apunte_id, $apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost, $apunte_text, $apunte_keywords, $location_name)
+    public static function updateApunte($apunte_id, $apunte_date, $apunte_hour, $apunte_person, $apunte_activity, $apunte_location, $apunte_cancellation, $apunte_fcancellation, $apunte_cost, $apunte_text, $apunte_keywords, $location_name, $apunte_participante)
     {
         if (!$apunte_id) {
             return false;
@@ -192,9 +192,9 @@ class ApuntesModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_hour = :apunte_hour, apunte_person = :apunte_person, apunte_activity = :apunte_activity, apunte_location = :apunte_location, apunte_cancellation = :apunte_cancellation, apunte_fcancellation = :apunte_fcancellation, apunte_cost = :apunte_cost, apunte_text = :apunte_text, apunte_keywords = :apunte_keywords, apunte_location_name = :apunte_location_name WHERE apunte_id = :apunte_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_hour = :apunte_hour, apunte_person = :apunte_person, apunte_activity = :apunte_activity, apunte_location = :apunte_location, apunte_cancellation = :apunte_cancellation, apunte_fcancellation = :apunte_fcancellation, apunte_cost = :apunte_cost, apunte_text = :apunte_text, apunte_keywords = :apunte_keywords, apunte_location_name = :apunte_location_name, apunte_participante = :apunte_participante WHERE apunte_id = :apunte_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':apunte_id' => $apunte_id, ':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id'),':apunte_location_name' => $location_name));
+        $query->execute(array(':apunte_id' => $apunte_id, ':apunte_date' => $apunte_date, ':apunte_hour' => $apunte_hour, ':apunte_person' => $apunte_person, ':apunte_activity' => $apunte_activity, ':apunte_location' => $apunte_location, ':apunte_cancellation' => $apunte_cancellation, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_cost' => $apunte_cost, ':apunte_text' => $apunte_text, ':apunte_keywords' => $apunte_keywords, ':user_id' => Session::get('user_id'),':apunte_location_name' => $location_name, ":apunte_participante" => $apunte_participante));
 
         return self::getApunte($apunte_id);
     }
