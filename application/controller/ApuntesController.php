@@ -44,10 +44,10 @@ class ApuntesController extends Controller
                 $resultado = ApuntesModel::getApunte(Request::post('id'));
                 break;
             case "nuevo":
-                $resultado = ApuntesModel::createApunte(Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'));
+                $resultado = ApuntesModel::createApunte(Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'), Request::post('participante'));
                 break;
             case "guardar":
-                $resultado = ApuntesModel::updateApunte(Request::post('id'),Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'));
+                $resultado = ApuntesModel::updateApunte(Request::post('id'),Request::post('fecha'),Request::post('hora'),Request::post('paciente'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'), Request::post('participante'));
                 break;
             case "eliminar":
                 $resultado = ApuntesModel::deleteApunte(Request::post('id'));
