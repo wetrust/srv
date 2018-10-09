@@ -69,7 +69,7 @@ $(document).ready(function(){
         $("#formulario\\.palabras").val("");
     });
 
-    $("#boton\\.imprimir").on("keydown", function( event ) {
+    $("#caja\\.busqueda").on("keydown", function( event ) {
         if ( event.which == 13 ) {
             var data ={
                 accion: "busqueda",
