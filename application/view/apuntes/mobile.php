@@ -12,33 +12,122 @@
     </head>
     <body>
         <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
-  <header class="bmd-layout-header">
-    <div class="navbar navbar-light bg-faded">
-      <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-p2">
-        <span class="sr-only">Toggle drawer</span>
-        <i class="material-icons">menu</i>
-      </button>
-      <ul class="nav navbar-nav">
-        <li class="nav-item">Title</li>
-      </ul>
-    </div>
-  </header>
-  <div id="dw-p2" class="bmd-layout-drawer bg-faded">
-    <header>
-      <a class="navbar-brand">Title</a>
-    </header>
-    <ul class="list-group">
-      <a class="list-group-item">Link 1</a>
-      <a class="list-group-item">Link 2</a>
-      <a class="list-group-item">Link 3</a>
-    </ul>
-  </div>
-  <main class="bmd-layout-content">
-    <div class="container">
-      <!-- main content -->
-    </div>
-  </main>
-</div>
+            <header class="bmd-layout-header">
+                <div class="navbar navbar-light bg-faded">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">Notas de apuntes</li>
+                    </ul>
+                    <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-p2">
+                        <span class="sr-only">Toggle drawer</span>
+                        <i class="material-icons">menu</i>
+                    </button>
+                </div>
+            </header>
+            <div id="dw-p2" class="bmd-layout-drawer bg-faded">
+                <header>
+                    <a class="navbar-brand">Notas de apuntes</a>
+                </header>
+                <ul class="list-group">
+                    <a class="list-group-item">Link 1</a>
+                    <a class="list-group-item">Link 2</a>
+                    <a class="list-group-item">Link 3</a>
+                </ul>
+            </div>
+            <main class="bmd-layout-content">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
