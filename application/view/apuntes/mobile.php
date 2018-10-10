@@ -32,7 +32,7 @@
                     <a class="list-group-item">Link 3</a>
                 </ul>
             </div>
-            <main class="bmd-layout-content">
+            <main class="bmd-layout-content bg-secondary">
                 <div class="container" id="contenedor.tarjetas">
                 </div>
             </main>
