@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="bg-secondary">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,7 +32,7 @@
                     <a class="list-group-item">Link 3</a>
                 </ul>
             </div>
-            <main class="bmd-layout-content bg-secondary">
+            <main class="bmd-layout-content">
                 <div class="container" id="contenedor.tarjetas">
                 </div>
             </main>
