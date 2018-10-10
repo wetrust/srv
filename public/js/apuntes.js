@@ -598,7 +598,7 @@ function cargarTabla(){
                     $("#formulario\\.fecha").val(data.apunte_date);
                     $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
                     $("#formulario\\.hora").val(data.apunte_hour);
-                    $("#formulario\\.participante").val(data.participante);
+                    $("#formulario\\.participante").val(data.apunte_participante);
                     $("#formulario\\.paciente").val(data.apunte_person);
                     $("#formulario\\.actividad").val(data.apunte_activity);
                     $("#formulario\\.lugar").val(data.apunte_location);
