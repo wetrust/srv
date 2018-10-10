@@ -17,8 +17,7 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item">Notas de apuntes</li>
                     </ul>
-                    <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-p2">
-                        <span class="sr-only">Toggle drawer</span>
+                    <button class="btn bmd-btn-icon dropdown-toggle" type="button" data-toggle="drawer" data-target="#dw-p2">
                         <i class="material-icons">more_vert</i>
                     </button>
                 </div>
