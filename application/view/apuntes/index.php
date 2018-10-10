@@ -21,7 +21,7 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.imprimir" title="Ver resumen e imprimir"><i class="fas fa-print"></i></button>
                     </div>
-                    <div class="dropdown pull-xs-right">
+                    <div class="dropdown">
                         <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="lr1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons">more_vert</i>
                         </button>
