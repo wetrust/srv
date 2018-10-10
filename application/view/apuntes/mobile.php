@@ -13,16 +13,18 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Notas de apuntes</a>
-            <div class="dropdown pull-xs-right">
-                <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="lr1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i><div class="ripple-container"></div></button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lr1" x-placement="bottom-end" style="position: absolute; top: 32px; left: 32px; will-change: top, left;">
-                    <button class="dropdown-item" type="button">Action</button>
-                    <button class="dropdown-item" type="button">Another action</button>
-                    <button class="dropdown-item disabled" type="button">Disabled action</button>
-                    <div class="dropdown-divider"> </div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-            </div>
+            <div class="btn-group">
+  <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="ll1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="material-icons">more_vert</i>
+  </button>
+  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ll1">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item disabled" type="button">Disabled action</button>
+    <div class="dropdown-divider"> </div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
         </nav>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
