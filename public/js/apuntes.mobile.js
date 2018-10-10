@@ -17,11 +17,11 @@ function cargarTabla(){
 
         $(".apunte").on("mouseenter", function(){
             $(this).children(".col-4").removeClass("d-none");
-            $(this).parent().parent().addClass("bg-secondary").addClass("text-white");
+            $(this).parent().parent().addClass("bg-info").addClass("text-white");
         }).on("mouseleave", function(){
             $(this).children(".col-4").addClass("d-none");
             $(this).parent().parent().parent().children().each(function(i){
-                $(this).removeClass("bg-secondary").removeClass("text-white");;
+                $(this).removeClass("bg-info").removeClass("text-white");;
             });
         }).on("click",function(){
 
