@@ -11,7 +11,7 @@
         <title>Notas de apuntes</title>
     </head>
     <body>
-    <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
+        <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
   <header class="bmd-layout-header">
     <div class="navbar navbar-light bg-faded">
       <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-p2">
@@ -45,5 +45,6 @@
         <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
         <!--<script src="<?php echo Config::get('URL'); ?>js/apuntes.js"></script>
         <script>$(document).ready(function() { var dateTime = new Date(); var day = ("0" + dateTime.getDate()).slice(-2); var month = ("0" + (dateTime.getMonth() + 1)).slice(-2); $("#formulario\\.fecha").val((day) + "/" + (month) + "/" + dateTime.getFullYear()); $('#formulario\\.fecha').datepicker('setValue', (day) + "/" + (month) + "/" + dateTime.getFullYear());$("#formulario\\.fcancelacion").val((day) + "/" + (month) + "/" + dateTime.getFullYear()); $('#formulario\\.fcancelacion').datepicker('setValue', (day) + "/" + (month) + "/" + dateTime.getFullYear());});</script> -->
+        <script>$(document).ready(function() { $('body').bootstrapMaterialDesign();});</script>
     </body>
 </html>
