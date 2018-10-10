@@ -40,7 +40,7 @@
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" id="contenedor.tarjetas">
                 </div>
             </div>
-            <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
+            <div class="col-9 h-100 invisible" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
                 <div class="card">
                     <div class="card-body">
                         <div class="btn-group" role="group" aria-label="Menú">
