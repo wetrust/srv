@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
         <title>Notas de apuntes</title>
     </head>
-    <body style="background-color:transparent;">
+    <body style="background-color:transparent;" class="h-100">
         <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
             <header class="bmd-layout-header">
                 <div class="navbar bg-light navbar-light bg-faded">
