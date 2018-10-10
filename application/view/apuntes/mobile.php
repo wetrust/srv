@@ -13,7 +13,7 @@
     <body style="background-color:transparent;">
         <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
             <header class="bmd-layout-header">
-                <div class="navbar navbar-light bg-faded">
+                <div class="navbar bg-light navbar-light bg-faded">
                     <ul class="nav navbar-nav">
                         <li class="nav-item">Notas de apuntes</li>
                     </ul>
