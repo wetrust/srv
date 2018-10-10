@@ -19,7 +19,7 @@
                     </ul>
                     <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-p2">
                         <span class="sr-only">Toggle drawer</span>
-                        <i class="material-icons">menu</i>
+                        <i class="material-icons">more_vert</i>
                     </button>
                 </div>
             </header>
