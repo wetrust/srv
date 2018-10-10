@@ -11,8 +11,8 @@
         <title>Notas de apuntes</title>
    </head>
    <body class="h-100">
-        <div class="row h-100 w-100" style="overflow:hide">
-            <div class="col-3 border-right pr-0 h-100">
+        <div class="row h-100 w-100 m-0" style="overflow:hide">
+            <div class="col-12 col-md-3 col-lg-3 border-right p-0 h-100">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
