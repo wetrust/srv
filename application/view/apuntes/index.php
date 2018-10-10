@@ -11,8 +11,8 @@
         <title>Notas de apuntes</title>
    </head>
    <body class="h-100">
-        <div class="row h-100 w-100 m-0" style="overflow:hide">
-            <div class="col-12 col-md-3 col-lg-3 border-right p-0 h-100">
+        <div class="row h-100 w-100" style="overflow:hide">
+            <div class="col-3 border-right pr-0 h-100">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
@@ -21,18 +21,6 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0" id="boton.imprimir" title="Ver resumen e imprimir"><i class="fas fa-print"></i></button>
                     </div>
-                    <div class="dropdown pull-xs-right">
-  <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="lr1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <i class="material-icons">more_vert</i>
-  </button>
-  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lr1">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item disabled" type="button">Disabled action</button>
-    <div class="dropdown-divider"> </div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
                     <div class="form-inline d-none" id="div.busqueda">
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
@@ -40,7 +28,7 @@
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" id="contenedor.tarjetas">
                 </div>
             </div>
-            <div class="col-9 h-100 invisible" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
+            <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
                 <div class="card">
                     <div class="card-body">
                         <div class="btn-group" role="group" aria-label="Menú">
