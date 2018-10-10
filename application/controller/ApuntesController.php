@@ -27,6 +27,11 @@ class ApuntesController extends Controller
         $this->View->renderWithoutHeaderAndFooter('apuntes/index');
     }
 
+    public function mobile()
+    {
+        $this->View->renderWithoutHeaderAndFooter('apuntes/mobile');
+    }
+
     /**
      * This method controls what happens when you move to /dashboard/create in your app.
      * Creates a new note. This is usually the target of form submit actions.
