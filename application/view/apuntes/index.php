@@ -25,6 +25,7 @@
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
                 </nav>
+                <h5>listado de eventos</h5>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" id="contenedor.tarjetas">
                 </div>
             </div>
