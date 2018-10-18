@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es" class="h-100">
-   <head>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
         <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/datepicker.css">
         <title>Notas de apuntes</title>
-   </head>
-   <body class="h-100">
+    </head>
+    <body class="h-100">
         <div class="row h-100 w-100" style="overflow:hide">
             <div class="col-3 border-right pr-0 h-100">
                 <nav class="navbar navbar-light bg-light justify-content-between">
@@ -48,7 +48,7 @@
                                 <div class="form-group"><label for="formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.actividad" disabled></select></div>
                                 <div class="form-group"><label for="formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.lugar" disabled></select></div>
                                 <input id="formulario.id" type="hidden" value="" />
-                                <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cierre de evento</strong> (<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="formulario.cancelacion" disabled></select></div>
+                                <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cierre de evento</strong></label><select class="form-control" id="formulario.cancelacion" disabled></select></div>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="opcion.financiera">
                                     <label class="form-check-label" for="opcion.financiera"><strong>Registro financiero</strong></label>

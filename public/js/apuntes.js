@@ -2,7 +2,6 @@ $(document).ready(function(){
     cargarTabla();
     cargarActividad();
     cargarLugar();
-    cargarCancelacion();
  
     $('#formulario\\.fecha').datepicker().on('changeDate', function(ev) {
         $(this).datepicker('hide');
@@ -24,7 +23,6 @@ $(document).ready(function(){
 
         cargarActividad();
         cargarLugar();
-        cargarCancelacion();
         $("#calculos\\.fecha\\.uno").val(day + "/" + month + "/" + dateTime.getFullYear());
         $("#calculos\\.fecha\\.uno").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
         $("#calculos\\.fecha\\.dos").val(day + "/" + month + "/" + dateTime.getFullYear());
@@ -228,7 +226,6 @@ $(document).ready(function(){
             var ventimp = window.open(" ", "popimpr");
             ventimp.document.write(informe);
             ventimp.document.close();
-
         }
         else{
             $("#dialog\\.delete").remove();
@@ -250,7 +247,6 @@ $(document).ready(function(){
     $("#boton\\.configuracion").on("click", function(){
         cargarActividad();
         cargarLugar();
-        cargarCancelacion();
         $("#dialog\\.title").html("Configuración");
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
@@ -318,38 +314,6 @@ $(document).ready(function(){
             $("#boton\\.lugar\\.guardar").addClass("d-none");
             $("#boton\\.lugar\\.cancelar").addClass("d-none");
             $("#lugar\\.texto").val("");
-        });
-
-        $("#boton\\.cancelacion\\.nuevo").on("click", function(){
-            $("#div\\.cancelacion").removeClass("d-none");
-            $("#boton\\.cancelacion\\.nuevo").addClass("d-none");
-            $("#boton\\.cancelacion\\.guardar").removeClass("d-none");
-            $("#boton\\.cancelacion\\.cancelar").removeClass("d-none");
-        });
-
-        $("#boton\\.cancelacion\\.guardar").on("click", function(){
-            $("#div\\.cancelacion").addClass("d-none");
-            $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
-            $("#boton\\.cancelacion\\.guardar").addClass("d-none");
-            $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
-
-            var formulario = {
-                accion: "nuevaCancelacion",
-                cancelacion_text: $("#cancelacion\\.texto").val(),
-            };
-
-            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                cargarCancelacion();
-                $("#cancelacion\\.texto").val("");
-            });
-        });
-
-        $("#boton\\.cancelacion\\.cancelar").on("click", function(){
-            $("#div\\.cancelacion").addClass("d-none");
-            $("#boton\\.cancelacion\\.nuevo").removeClass("d-none");
-            $("#boton\\.cancelacion\\.guardar").addClass("d-none");
-            $("#boton\\.cancelacion\\.cancelar").addClass("d-none");
-            $("#cancelacion\\.texto").val("");
         });
     });
 
@@ -755,59 +719,6 @@ function cargarLugar(){
                     cargarLugar();
                     $("#boton\\.configuracion").trigger("click");
                     $('#myTab a[href="#profile"]').tab('show')
-                });
-            });
-
-            $("#dialog\\.view").modal("show");
-        });
-    });
-}
-
-function cargarCancelacion(){
-    var solicitud = {
-        accion: "cancelacion"
-    };
-
-    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-        $("#formulario\\.cancelacion").empty();
-        $("#tabla\\.cancelacion").empty();
-        $("#calculos\\.formulario\\.cancelacion").empty();
-
-        let option = '<option value="99" selected>Todos</option>';
-        $("#calculos\\.formulario\\.cancelacion").append(option);
-
-        $.each(data, function(i, item) {
-            let fila = '<tr><th scope="row">' + item["cancelacion_id"] + '</th><td class="columna-cancelacion">' + item["cancelacion_text"] + '<button type="button" data-id="' + item["cancelacion_id"] + '" class="btn btn-outline-warning px-3 eliminar-cancelacion float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
-            let option = '<option value="'+ item["cancelacion_id"]+'">' +item["cancelacion_text"]+'</option>';
-            $("#tabla\\.cancelacion").append(fila);
-            $("#formulario\\.cancelacion").append(option);
-            $("#calculos\\.formulario\\.cancelacion").append(option);
-        });
-
-        $(".columna-cancelacion").on("mouseenter",function(){
-            $(this).children("button").removeClass("d-none");
-        }).on("mouseleave", function(){
-            $(this).children("button").addClass("d-none");
-        });
-
-        $(".eliminar-cancelacion").on("click", function(){
-            let cancelacion_id = $(this).data("id");
-            $("#dialog\\.delete").remove();
-            $("#dialog\\.title").html('Eliminar tipo de cancelación')
-            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el tipo de cancelación seleccionado?')
-            $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + cancelacion_id + '">Eliminar</button>');
-
-            $("#dialog\\.delete").on("click", function(){
-                let cancelacion_id = $(this).data("id");
-                var solicitud = {
-                    accion: "eliminarCancelacion",
-                    id: cancelacion_id
-                };
-
-                $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                    cargarCancelacion();
-                    $("#boton\\.configuracion").trigger("click");
-                    $('#myTab a[href="#contact"]').tab('show')
                 });
             });
 
