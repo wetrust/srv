@@ -658,11 +658,11 @@ function cargarActividad(){
             if ($(this).val() == 0){
                 $("#formulario\\.comentarios").val("DIAGNOSTICO :\nOPERACIÓN     :\nPREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :\n- Ayudante     :\n- Arsenalera   :"); 
             }
-            else if ($(this).val == 1){
+            else if ($(this).val() == 1){
                 $("#formulario\\.comentarios").val("DIAGNOSTICO :\nOPERACIÓN     :\nPREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :");
             }
         });
-        
+
         $(".columna-actividad").on("mouseenter",function(){
             $(this).children("button").removeClass("d-none");
         }).on("mouseleave", function(){
