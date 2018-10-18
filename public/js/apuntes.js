@@ -664,7 +664,7 @@ function cargarActividad(){
                 $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :");
             }
             else if ($(this).val() == 2){
-                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera           :");
+                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
             }
         });
 
