@@ -265,12 +265,16 @@ $(document).ready(function(){
             $("#boton\\.actividad\\.guardar").addClass("d-none");
             $("#boton\\.actividad\\.cancelar").addClass("d-none");
 
-            if ($("#actividad\\.texto").val() == 'Parto cesarea'){
-                alert("no puede crear una opcion que se llama operacion cesarea, ya existe una con ese nombre");
+            if ($("#actividad\\.texto").val() == 'Parto cesárea'){
+                alert("no puede crear una opcion que se llama operacion cesárea, ya existe una con ese nombre");
                 return;
             }
             if ($("#actividad\\.texto").val() == 'Parto vaginal'){
                 alert("no puede crear una opcion que se llama Parto vaginal, ya existe una con ese nombre");
+                return;
+            }
+            if ($("#actividad\\.texto").val() == 'Otra operación'){
+                alert("no puede crear una opcion que se llama Otra operación, ya existe una con ese nombre");
                 return;
             }
             var formulario = {
@@ -640,11 +644,9 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").empty();
 
         let option = '<option value="99" selected>Todos</option>';
-        let option2 = '<option value="0">Parto cesarea</option>';
-        let option3 = '<option value="1">Parto vaginal</option>';
+        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
         $("#formulario\\.actividad").append(option2);
-        $("#formulario\\.actividad").append(option3);
 
         $.each(data, function(i, item) {
             let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
@@ -656,10 +658,13 @@ function cargarActividad(){
 
         $("#formulario\\.actividad").on("click", function(){
             if ($(this).val() == 0){
-                $("#formulario\\.comentarios").val("DIAGNOSTICO :\nOPERACIÓN     :\nPREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :\n- Ayudante     :\n- Arsenalera   :"); 
+                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n- OPERACIÓN     :\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :\n- Ayudante     :\n- Arsenalera   :"); 
             }
             else if ($(this).val() == 1){
-                $("#formulario\\.comentarios").val("DIAGNOSTICO :\nOPERACIÓN     :\nPREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :");
+                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n- OPERACIÓN     :\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :");
+            }
+            else if ($(this).val() == 2){
+                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n- OPERACIÓN     :\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano       :\n- Ayudante       :\n- Anestesista       :\n- Arsenalera :");
             }
         });
 
