@@ -265,8 +265,12 @@ $(document).ready(function(){
             $("#boton\\.actividad\\.guardar").addClass("d-none");
             $("#boton\\.actividad\\.cancelar").addClass("d-none");
 
-            if ($("#actividad\\.texto").val() == 'operacion'){
-                alert("no puede crear una opcion que se llama operacion, ya existe una con ese nombre");
+            if ($("#actividad\\.texto").val() == 'Parto cesarea'){
+                alert("no puede crear una opcion que se llama operacion cesarea, ya existe una con ese nombre");
+                return;
+            }
+            if ($("#actividad\\.texto").val() == 'Parto vaginal'){
+                alert("no puede crear una opcion que se llama Parto vaginal, ya existe una con ese nombre");
                 return;
             }
             var formulario = {
@@ -357,7 +361,7 @@ $(document).ready(function(){
             $("#formulario\\.hora").val("").attr("disabled", false);
             $("#formulario\\.participante").val("").attr("disabled", false);
             $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
-            $("#formulario\\.actividad").val("").attr("disabled", false);
+            $("#formulario\\.actividad").val(0).attr("disabled", false);
             $("#formulario\\.lugar").val("").attr("disabled", false);
             $("#formulario\\.cancelacion").val("").attr("disabled", false);
             $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false);
@@ -636,7 +640,11 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").empty();
 
         let option = '<option value="99" selected>Todos</option>';
+        let option2 = '<option value="0">Parto cesarea</option>';
+        let option3 = '<option value="1">Parto vaginal</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
+        $("#formulario\\.actividad").append(option2);
+        $("#formulario\\.actividad").append(option3);
 
         $.each(data, function(i, item) {
             let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
@@ -646,6 +654,15 @@ function cargarActividad(){
             $("#calculos\\.formulario\\.actividad").append(option);
         });
 
+        $("#formulario\\.actividad").on("click", function(){
+            if ($(this).val() == 0){
+                $("#formulario\\.comentarios").val("DIAGNOSTICO :\nOPERACIÓN     :\nPREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :\n- Ayudante     :\n- Arsenalera   :"); 
+            }
+            else if ($(this).val == 1){
+                $("#formulario\\.comentarios").val("DIAGNOSTICO :\nOPERACIÓN     :\nPREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n- Matrona       :\n- Pediatra       :\n- Anestesista :");
+            }
+        });
+        
         $(".columna-actividad").on("mouseenter",function(){
             $(this).children("button").removeClass("d-none");
         }).on("mouseleave", function(){
