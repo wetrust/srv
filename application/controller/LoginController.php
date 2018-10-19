@@ -49,7 +49,7 @@ class LoginController extends Controller
 
         // check login status: if true, then redirect user to user/index, if false, then to login form again
         if ($login_successful) {
-            if (Request::post('redirect')) {
+            if (Request::get('redirect')) {
                 Redirect::toPreviousViewedPageAfterLogin(ltrim(urldecode(Request::post('redirect')), '/'));
             } else {
                 Redirect::home();
