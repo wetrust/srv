@@ -267,14 +267,17 @@ $(document).ready(function(){
 
             if ($("#actividad\\.texto").val() == 'Parto cesárea'){
                 alert("no puede crear una opcion que se llama operacion cesárea, ya existe una con ese nombre");
+                $("#actividad\\.texto").val("");
                 return;
             }
             if ($("#actividad\\.texto").val() == 'Parto vaginal'){
                 alert("no puede crear una opcion que se llama Parto vaginal, ya existe una con ese nombre");
+                $("#actividad\\.texto").val("");
                 return;
             }
             if ($("#actividad\\.texto").val() == 'Otra operación'){
                 alert("no puede crear una opcion que se llama Otra operación, ya existe una con ese nombre");
+                $("#actividad\\.texto").val("");
                 return;
             }
             var formulario = {
