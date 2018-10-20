@@ -284,6 +284,11 @@ $(document).ready(function(){
                 $("#actividad\\.texto").val("");
                 return;
             }
+            if ($("#actividad\\.text").val() == 'Ayudantía operatoria'){
+                alert("no puede crear una opcion que se llama Ayudantía operatoria, ya existe una con ese nombre");
+                $("#actividad\\.texto").val("");
+                return;
+            }
             var formulario = {
                 accion: "nuevoActividad",
                 actividad_text: $("#actividad\\.texto").val()
@@ -660,7 +665,7 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").empty();
 
         let option = '<option value="99" selected>Todos</option>';
-        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option>';
+        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía operatoria</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
         $("#formulario\\.actividad").append(option2);
 
@@ -681,6 +686,9 @@ function cargarActividad(){
             }
             else if ($(this).val() == 2){
                 $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
+            }
+            else if ($(this).val() == 3){
+                $("#formulario\\.comentarios").val("\n- CIRUJANO DR:\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN       :\n\nPREVISIÓN          :");
             }
             else{
                 $("#formulario\\.comentarios").val("");
