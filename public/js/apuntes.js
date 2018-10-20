@@ -688,7 +688,7 @@ function cargarActividad(){
                 $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
             }
             else if ($(this).val() == 3){
-                $("#formulario\\.comentarios").val("\n- CIRUJANO DR:\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN       :\n\nPREVISIÓN          :");
+                $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
             }
             else{
                 $("#formulario\\.comentarios").val("");
