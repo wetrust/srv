@@ -697,7 +697,7 @@ function cargarActividad(){
             $("#formulario\\.paciente").val(texto);
         });
 
-        $("#formulario\\.actividad").on("click", function(){
+        $("#formulario\\.actividad").on("change", function(){
             if ($(this).val() == 0){
                 $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :\n\n- Ayudante     :\n\n- Arsenalera   :"); 
             }
@@ -706,6 +706,9 @@ function cargarActividad(){
             }
             else if ($(this).val() == 2){
                 $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
+            }
+            else if ($(this).val() == 3){
+                $("#formulario\\.comentarios").val("\n- CIRUJANO DR:\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN       :\n\nPREVISIÓN          :");
             }
             else{
                 $("#formulario\\.comentarios").val("");
