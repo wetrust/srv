@@ -54,6 +54,7 @@ $(document).ready(function(){
         $("#formulario\\.id").val("");
         $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear());
         $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $('#formulario\\.nombre').val("");
         $("#formulario\\.hora").val("");
         $("#formulario\\.participante").val("");
         $("#formulario\\.paciente").val("");
@@ -102,6 +103,7 @@ $(document).ready(function(){
                         $("#dialog\\.delete").on("click", function(){
                             guardarAutomatico();
                             $("#dialog\\.view").modal("hide");
+                            $('#formulario\\.nombre').attr("disabled", true);
                             $("#formulario\\.fecha").attr("disabled", true);
                             $("#formulario\\.hora").attr("disabled", true);
                             $("#formulario\\.participante").attr("disabled", true);
@@ -128,6 +130,7 @@ $(document).ready(function(){
                             $("#formulario\\.id").val(data.apunte_id);
                             $("#formulario\\.fecha").val(data.apunte_date);
                             $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                            $('#formulario\\.nombre').val(data.apunte_nombre);
                             $("#formulario\\.hora").val(data.apunte_hour);
                             $("#formulario\\.participante").val(data.apunte_participante);
                             $("#formulario\\.paciente").val(data.apunte_person);
@@ -170,6 +173,7 @@ $(document).ready(function(){
                             $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
                             $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
                             $("#formulario\\.hora").val("").attr("disabled", true);
+                            $('#formulario\\.nombre').val("").attr("disabled", true);
                             $("#formulario\\.participante").val("").attr("disabled", true);
                             $("#formulario\\.paciente").val("").attr("disabled", true);
                             $("#formulario\\.actividad").val("").attr("disabled", true);
@@ -366,6 +370,7 @@ $(document).ready(function(){
             $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
             $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
             $("#formulario\\.hora").val("").attr("disabled", false);
+            $('#formulario\\.nombre').val("").attr("disabled", false);
             $("#formulario\\.participante").val("").attr("disabled", false);
             $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
             $("#formulario\\.actividad").val(0).attr("disabled", false);
@@ -391,6 +396,7 @@ $(document).ready(function(){
 
         $("#formulario\\.fecha").attr("disabled", false);
         $("#formulario\\.hora").attr("disabled", false);
+        $('#formulario\\.nombre').attr("disabled", false);
         $("#formulario\\.participante").attr("disabled", false);
         $("#formulario\\.paciente").attr("disabled", false);
         $("#formulario\\.actividad").attr("disabled", false);
@@ -416,6 +422,7 @@ $(document).ready(function(){
         cargarTabla();
         $("#formulario\\.fecha").attr("disabled", true);
         $("#formulario\\.hora").attr("disabled", true);
+        $('#formulario\\.nombre').attr("disabled", true);
         $("#formulario\\.participante").attr("disabled", true);
         $("#formulario\\.paciente").attr("disabled", true);
         $("#formulario\\.actividad").attr("disabled", true);
@@ -449,6 +456,7 @@ $(document).ready(function(){
         $("#formulario\\.fecha").attr("disabled", true);
         $("#formulario\\.hora").val("").attr("disabled", true);
         $("#formulario\\.participante").val("").attr("disabled", true);
+        $("#formulario\\.nombre").val("").attr("disabled", true);
         $("#formulario\\.paciente").val("").attr("disabled", true);
         $("#formulario\\.actividad").val("").attr("disabled", true);
         $("#formulario\\.lugar").val("").attr("disabled", true);
@@ -486,6 +494,7 @@ function guardarAutomatico(){
         id: $("#formulario\\.id").val(),
         fecha: $("#formulario\\.fecha").val(),
         hora: $("#formulario\\.hora").val(),
+        nombre: $('#formulario\\.nombre').val(),
         participante: $("#formulario\\.participante").val(),
         paciente: $("#formulario\\.paciente").val(),
         actividad: $("#formulario\\.actividad").val(),
@@ -503,6 +512,7 @@ function guardarAutomatico(){
         $("#formulario\\.fecha").val(data.apunte_date);
         $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
         $("#formulario\\.hora").val(data.apunte_hour);
+        $('#formulario\\.nombre').val(data.apunte_nombre);
         $("#formulario\\.participante").val(data.apunte_participante);
         $("#formulario\\.paciente").val(data.apunte_person);
         $("#formulario\\.actividad").val(data.apunte_activity);
@@ -553,6 +563,7 @@ function cargarTabla(){
                     $("#formulario\\.fecha").attr("disabled", true);
                     $("#formulario\\.hora").attr("disabled", true);
                     $("#formulario\\.participante").attr("disabled", true);
+                    $('#formulario\\.nombre').attr("disabled", true);
                     $("#formulario\\.paciente").attr("disabled", true);
                     $("#formulario\\.actividad").attr("disabled", true);
                     $("#formulario\\.lugar").attr("disabled", true);
@@ -577,6 +588,7 @@ function cargarTabla(){
                     $("#formulario\\.fecha").val(data.apunte_date);
                     $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
                     $("#formulario\\.hora").val(data.apunte_hour);
+                    $('#formulario\\.nombre').val(data.apunte_nombre);
                     $("#formulario\\.participante").val(data.apunte_participante);
                     $("#formulario\\.paciente").val(data.apunte_person);
                     $("#formulario\\.actividad").val(data.apunte_activity);
@@ -618,6 +630,7 @@ function cargarTabla(){
                     $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
                     $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
                     $("#formulario\\.hora").val("").attr("disabled", true);
+                    $('#formulario\\.nombre').val("").attr("disabled", true);
                     $("#formulario\\.participante").val("").attr("disabled", true);
                     $("#formulario\\.paciente").val("").attr("disabled", true);
                     $("#formulario\\.actividad").val("").attr("disabled", true);
@@ -672,6 +685,8 @@ function cargarActividad(){
             else{
                 $("#formulario\\.comentarios").val("");
             }
+            var texto = $("#formulario\\.actividad option:selected").text()
+            $("#formulario\\.paciente").val(texto);
         });
 
         $("#formulario\\.actividad").on("click", function(){
@@ -687,6 +702,8 @@ function cargarActividad(){
             else{
                 $("#formulario\\.comentarios").val("");
             }
+            var texto = $("#formulario\\.actividad option:selected").text()
+            $("#formulario\\.paciente").val(texto);
         });
 
         $(".columna-actividad").on("mouseenter",function(){

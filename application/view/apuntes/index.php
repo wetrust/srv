@@ -34,13 +34,13 @@
                     <div class="card-body">
                         <div class="btn-group" role="group" aria-label="Menú">
                             <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo" title="Nuevo apunte"><i class="fas fa-plus"></i></button>
-                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.editar" title="Editar apunte"><i class="fas fa-pen"></i></button>
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.editar" title="Modificar apunte"><i class="fas fa-pen"></i></button>
                             <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.guardar" title="Guardar apunte"><i class="fas fa-save"></i></button>
                             <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelar" title="Cancelar apunte"><i class="fas fa-ban"></i></button>
                         </div>
-                        <div class="form-group col"><label for="formulario.paciente"><strong>Nombre del evento</strong></label><input class="form-control" id="formulario.paciente" type="email" disabled></div>
                         <div class="row m-0">
                             <div class="col">
+                                <div class="form-group"><label for="formulario.paciente"><strong>Nombre del evento</strong></label><input class="form-control" id="formulario.paciente" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.fecha"><strong>Fecha</strong></label><input class="form-control" id="formulario.fecha" data-date-format="dd/mm/yyyy" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.hora"><strong>Hora</strong></label><input class="form-control" id="formulario.hora" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.palabras"><strong>Primer participante</strong></label><input class="form-control" id="formulario.participante" type="text" disabled></div>
@@ -59,6 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-8">
+                            <div class="form-group"><label for="formulario.paciente"><strong>Nombre del evento</strong></label><input class="form-control" id="formulario.nombre" type="text" disabled></div>
                                 <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios relativos al evento; operación, reunión, etc.</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.calculos" title="calculos"><i class="fas fa-calculator"></i></button>
                             </div>
