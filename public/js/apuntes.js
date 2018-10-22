@@ -45,6 +45,28 @@ $(document).ready(function(){
         updateCalculos();
     });
 
+    $("#boton\\.aplicar").on("click", function(){
+        if ($("#boton\\.guardar").hasClass("d-none") == false){
+            if ($(this).val() == 0){
+                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :\n\n- Ayudante     :\n\n- Arsenalera   :"); 
+            }
+            else if ($(this).val() == 1){
+                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :");
+            }
+            else if ($(this).val() == 2){
+                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
+            }
+            else if ($(this).val() == 3){
+                $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
+            }
+            else{
+                $("#formulario\\.comentarios").val("");
+            }
+            var texto = $("#formulario\\.actividad option:selected").text()
+            $("#formulario\\.paciente").val(texto);
+        }
+    });
+
     $("#boton\\.home").on("click", function(){
 
         var dateTime = new Date();
@@ -66,6 +88,7 @@ $(document).ready(function(){
         $("#formulario\\.valor").val("0");
         $("#formulario\\.comentarios").val("");
         $("#formulario\\.palabras").val("");
+        $("#boton\\.editar").addClass("d-none");
     });
 
     $("#caja\\.busqueda").on("keydown", function( event ) {
@@ -668,6 +691,7 @@ function cargarActividad(){
         let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía operatoria</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
         $("#formulario\\.actividad").append(option2);
+        $("#calculos\\.formulario\\.actividad").append(option2);
 
         $.each(data, function(i, item) {
             let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
@@ -675,46 +699,6 @@ function cargarActividad(){
             $("#tabla\\.actividad").append(fila);
             $("#formulario\\.actividad").append(option);
             $("#calculos\\.formulario\\.actividad").append(option);
-        });
-
-        $("#formulario\\.actividad").on("click", function(){
-            if ($(this).val() == 0){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :\n\n- Ayudante     :\n\n- Arsenalera   :"); 
-            }
-            else if ($(this).val() == 1){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :");
-            }
-            else if ($(this).val() == 2){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
-            }
-            else if ($(this).val() == 3){
-                $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
-            }
-            else{
-                $("#formulario\\.comentarios").val("");
-            }
-            var texto = $("#formulario\\.actividad option:selected").text()
-            $("#formulario\\.paciente").val(texto);
-        });
-
-        $("#formulario\\.actividad").on("change", function(){
-            if ($(this).val() == 0){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :\n\n- Ayudante     :\n\n- Arsenalera   :"); 
-            }
-            else if ($(this).val() == 1){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :");
-            }
-            else if ($(this).val() == 2){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
-            }
-            else if ($(this).val() == 3){
-                $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
-            }
-            else{
-                $("#formulario\\.comentarios").val("");
-            }
-            var texto = $("#formulario\\.actividad option:selected").text()
-            $("#formulario\\.paciente").val(texto);
         });
 
         $(".columna-actividad").on("mouseenter",function(){
