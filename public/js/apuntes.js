@@ -47,16 +47,16 @@ $(document).ready(function(){
 
     $("#boton\\.aplicar").on("click", function(){
         if ($("#boton\\.guardar").hasClass("d-none") == false){
-            if ($(this).val() == 0){
+            if ($("#formulario\\.actividad").val() == 0){
                 $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :\n\n- Ayudante     :\n\n- Arsenalera   :"); 
             }
-            else if ($(this).val() == 1){
+            else if ($("#formulario\\.actividad").val() == 1){
                 $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :");
             }
-            else if ($(this).val() == 2){
+            else if ($("#formulario\\.actividad").val() == 2){
                 $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
             }
-            else if ($(this).val() == 3){
+            else if ($("#formulario\\.actividad").val() == 3){
                 $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
             }
             else{
