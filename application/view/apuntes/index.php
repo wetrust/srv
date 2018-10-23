@@ -20,7 +20,7 @@
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.configuracion" title="Configuración"><i class="fas fa-cog"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.imprimir" title="Ver resumen e imprimir"><i class="fas fa-print"></i></button>
-                        <a class="btn btn-outline-success my-2 my-sm-0" title="Salir" href="https://servidor.crecimientofetal.cl/login/logout"><i class="fas fa-door-closed"></i></a>
+                        <a class="btn btn-outline-success my-2 my-sm-0" title="Salir" href="https://servidor.crecimientofetal.cl/login/logoutapuntes"><i class="fas fa-door-closed"></i></a>
                     </div>
                     <div class="form-inline d-none" id="div.busqueda">
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">

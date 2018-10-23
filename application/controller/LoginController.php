@@ -84,6 +84,13 @@ class LoginController extends Controller
         exit();
     }
 
+    public function logoutapuntes()
+    {
+        LoginModel::logout();
+        Redirect::to('apuntes');
+        exit();
+    }
+
     /**
      * Login with cookie
      */
