@@ -57,25 +57,25 @@
                                     <input type="hidden" name="user_name" value="<?php echo $this->encodeHTML($this->userIdRandom); ?>" />
                                     <div class="form-group">
                                         <label>Correo</label>
-                                        <input type="text" name="user_email" />
+                                        <input type="text" class="form-control" name="user_email" />
                                     </div>
                                     <div class="form-group">
                                         <label>Repetir correo</label>
-                                        <input type="text" name="user_email_repeat"/>
+                                        <input type="text" class="form-control" name="user_email_repeat"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Contraseña</label>
-                                        <input type="password" name="user_password_new" pattern=".{6,}" />
+                                        <input type="password" class="form-control" name="user_password_new" pattern=".{6,}" />
                                     </div>
                                     <div class="form-group">
                                         <label>Repetir contraseña</label>
-                                        <input type="password" name="user_password_repeat" pattern=".{6,}" />
+                                        <input type="password" class="form-control" name="user_password_repeat" pattern=".{6,}" />
                                     </div>
                                     <div class="form-group">
                                         <label>Escriba los carácteres de la imágen</label>
                                         <a href="#" onclick="document.getElementById('captcha').src = '<?php echo Config::get('URL'); ?>register/showCaptcha?' + Math.random(); return false">Recargar Captcha</a>
                                         <img id="captcha" src="<?php echo Config::get('URL'); ?>register/showCaptcha" />
-                                        <input type="text" name="captcha" />
+                                        <input type="text" class="form-control" name="captcha" />
                                     </div>
                                     <input type="submit" value="Register" />
                                 </form>
