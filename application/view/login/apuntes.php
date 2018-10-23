@@ -59,12 +59,10 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" name="user_name" aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con terceros</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Apellido</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" name="user_name" aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con terceros</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Contraseña</label>
