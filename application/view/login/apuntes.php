@@ -18,10 +18,10 @@
     </nav>
 <div class="container mt-3">
     <div class="row justify-content-center">
-		    <div class="col-12 col-sm-8 col-md-6">
+		    <div class="col-6">
 			      <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Ingresar a Apuntes</h5>
+                    <h5 class="card-title text-center">Ingresar a Apuntes</h5>
                     <?php $this->renderFeedbackMessages(); ?>
                     <form action="<?php echo Config::get('URL'); ?>login/login" method="post">
                         <div class="form-group">
@@ -45,8 +45,16 @@
                     </form>
                 </div>
             </div>
-		    </div>
-	  </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Ingresar a Apuntes</h5>
+                </div>
+            </div>
+            </div>     
+                        </div>
+    </div>
 </div>
 </body>
 </html>
