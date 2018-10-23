@@ -28,12 +28,11 @@ class LoginController extends Controller
             $redirect = Request::get('redirect') ? Request::get('redirect') : NULL;
             $data = array('redirect' => $redirect);
             if ($redirect == '/apuntes'){
-                $this->View->render('login/apuntes', $data);
+                $this->View->renderWithoutHeaderAndFooter('login/apuntes', $data);
             }
             else{
                 $this->View->render('login/index', $data);
-            }
-            
+            }  
         }
     }
 
