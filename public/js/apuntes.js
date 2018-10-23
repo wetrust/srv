@@ -60,7 +60,7 @@ $(document).ready(function(){
                 $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
             }
             else if ($("#formulario\\.actividad").val() == 4){
-                $("#formulario\\.comentarios").val("- FUR :\n- EGE:\n\nDESCRIPCIÓN DE INFORME\n- PLACENTA                   :\n- LIQUIDO AMNIÓTICO :\n- BIOMETRIAS  :\n- SACO               :\n- EMBRIÓN        :\n\nBIOMETRIA FETAL\n-- DBP           :\n-- DOF           :\n-- CC              :\n-- CA              :\n-- LF              :\n-- LH              :\n\nDOPPLER MATERNO / FETAL\n --   UT. DERECHA\n --   UT. IZQUIERDA\n --   PROMEDIO UT.\n --  UMBILICAL\n --  C. MEDIA\n --  CUOCIENTE CP.\n\n- CONCLUSION ECOGRAFICA:");
+                $("#formulario\\.comentarios").val("- FUR :\n- EGE:\n\nDESCRIPCIÓN DE INFORME\n- PLACENTA                   :\n- LIQUIDO AMNIÓTICO :\n- BIOMETRIAS  :\n- SACO               :\n- EMBRIÓN        :\n\nBIOMETRIA FETAL\n-- DBP           :\n-- DOF           :\n-- CC              :\n-- CA              :\n-- LF              :\n-- LH              :\n\nDOPPLER MATERNO / FETAL\n --   UT. DERECHA\n --   UT. IZQUIERDA\n --   PROMEDIO UT.\n --  UMBILICAL\n --  C. MEDIA\n --  CUOCIENTE CP.\n\nCONCLUSIÓN ECOGRAFICA:");
             }
             else{
                 $("#formulario\\.comentarios").val("");
