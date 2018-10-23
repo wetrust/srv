@@ -237,6 +237,7 @@ $(document).ready(function(){
             let comentarios = $("#formulario\\.comentarios").val().replace(/\r\n|\r|\n/g,"<br />");
 
             let escript = 'document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});';
+            informe = informe.replace(":NOMBRE", nombre);
             informe = informe.replace(":PACIENTE", paciente);
             informe = informe.replace(":FECHA", fecha);
             informe = informe.replace(":HORA", hora);
