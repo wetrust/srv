@@ -16,6 +16,10 @@ class LoginController extends Controller
         parent::__construct();
     }
 
+    function generateRandomString($length = 10) {
+        return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+    }
+
     /**
      * Index, default action (shows the login form), when you do login/index
      */
@@ -26,7 +30,7 @@ class LoginController extends Controller
             Redirect::home();
         } else {
             $redirect = Request::get('redirect') ? Request::get('redirect') : NULL;
-            $data = array('redirect' => $redirect);
+            $data = array('redirect' => $redirect, 'userIdRandom' => $this->generateRandomString());
             if ($redirect == '/apuntes'){
                 $this->View->renderWithoutHeaderAndFooter('login/apuntes', $data);
             }
