@@ -59,6 +59,9 @@ $(document).ready(function(){
             else if ($("#formulario\\.actividad").val() == 3){
                 $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
             }
+            else if ($("#formulario\\.actividad").val() == 4){
+                $("#formulario\\.comentarios").val("\n- FUR :\n- EGE:\n- DESCRIPCIÓN DE INFORME :\n\n- PLACENTA                   :\n- LIQUIDO AMNIOTICO :\n- BIOMETRIAS  :\n- SACO               :\n- EMBRIÓN        :\n\n- BIOMETRIA FETAL\n-- DBP           :\n-- DOF           :\n-- CC              :\n-- CA              :\n-- LF              :\n-- LH              :\n\nDOPPLER MATERNO / FETAL\n --   UT. DERECHA\n --   UT. IZQUIERDA\n --   PROMEDIO UT.\n --  UMBILICAL\n --  C. MEDIA\n --  CUOCIENTE CP.\n\n- CONCLUSION ECOGRAFICA:");
+            }
             else{
                 $("#formulario\\.comentarios").val("");
             }
@@ -308,6 +311,11 @@ $(document).ready(function(){
                 return;
             }
             if ($("#actividad\\.text").val() == 'Ayudantía operatoria'){
+                alert("no puede crear una opcion que se llama Ayudantía operatoria, ya existe una con ese nombre");
+                $("#actividad\\.texto").val("");
+                return;
+            }
+            if ($("#actividad\\.text").val() == 'Exm. Ecografico'){
                 alert("no puede crear una opcion que se llama Ayudantía operatoria, ya existe una con ese nombre");
                 $("#actividad\\.texto").val("");
                 return;
@@ -688,7 +696,7 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").empty();
 
         let option = '<option value="99" selected>Todos</option>';
-        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía operatoria</option>';
+        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía operatoria</option><option value="4">Exm. Ecografico</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
         $("#formulario\\.actividad").append(option2);
         $("#calculos\\.formulario\\.actividad").append(option2);
