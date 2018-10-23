@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6" id="registro.apuntes">
+                    <div class="col-6 d-none" id="registro.apuntes">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Registrarse</h5>
