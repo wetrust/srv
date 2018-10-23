@@ -66,7 +66,7 @@ class RegistrationModel
             Session::add('feedback_negative', Text::get('FEEDBACK_UNKNOWN_ERROR'));
             return false;
         }
-
+        return true;
         // send verification email
         if (self::sendVerificationEmail($user_id, $user_email, $user_activation_hash)) {
             Session::add('feedback_positive', Text::get('FEEDBACK_ACCOUNT_SUCCESSFULLY_CREATED'));
@@ -205,8 +205,8 @@ class RegistrationModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         // write new users data into database
-        $sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_creation_timestamp, user_activation_hash, user_provider_type)
-                    VALUES (:user_name, :user_password_hash, :user_email, :user_creation_timestamp, :user_activation_hash, :user_provider_type)";
+        $sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_creation_timestamp, user_activation_hash, user_provider_type,user_active)
+                    VALUES (:user_name, :user_password_hash, :user_email, :user_creation_timestamp, :user_activation_hash, :user_provider_type,1)";
         $query = $database->prepare($sql);
         $query->execute(array(':user_name' => $user_name,
                               ':user_password_hash' => $user_password_hash,
