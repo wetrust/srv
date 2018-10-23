@@ -53,7 +53,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Registrarse</h5>
-                                <form method="post" action="<?php echo Config::get('URL'); ?>registerController/register_apuntes">
+                                <form method="post" action="<?php echo Config::get('URL'); ?>register/register_apuntes">
                                     <input type="hidden" name="user_name" value="<?php echo $this->encodeHTML($this->userIdRandom); ?>" />
                                     <div class="form-group">
                                         <label>Correo</label>
