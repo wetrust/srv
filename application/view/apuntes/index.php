@@ -72,10 +72,17 @@
                                 </div>
                             </div>
                             <div class="col-8">
-                                <div class="form-group">
-                                    <label for="formulario.paciente"><strong>Nombre</strong></label>
-                                    <input class="form-control" id="formulario.nombre" type="text" disabled>
-                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="formulario.paciente"><strong>Nombre</strong></label>
+                                            <input class="form-control" id="formulario.nombre" type="text" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="formulario.paciente"><strong>Usuario</strong></label>
+                                        <input class="form-control" type="text" value="<?php echo Session::get('user_name'); ?>" disabled>
+                                    </div>
                                 <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios relativos al evento; operación, reunión, etc.</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.calculos" title="calculos"><i class="fas fa-calculator"></i></button>
                             </div>
