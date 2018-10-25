@@ -65,8 +65,6 @@ $(document).ready(function(){
             else{
                 $("#formulario\\.comentarios").val("");
             }
-            var texto = $("#formulario\\.actividad option:selected").text()
-            $("#formulario\\.paciente").val(texto);
         }
     });
 
@@ -82,7 +80,6 @@ $(document).ready(function(){
         $('#formulario\\.nombre').val("");
         $("#formulario\\.hora").val("");
         $("#formulario\\.participante").val("");
-        $("#formulario\\.paciente").val("");
         $("#formulario\\.actividad").val("");
         $("#formulario\\.lugar").val("");
         $("#formulario\\.cancelacion").val("");
@@ -119,7 +116,7 @@ $(document).ready(function(){
                     });
                 }).on("click",function(){
         
-                    if ($("#formulario\\.paciente").is(':disabled') == false){
+                    if ($("#formulario\\.actividad").is(':disabled') == false){
                         $("#dialog\\.delete").remove();
                         $("#dialog\\.title").html('Guardar cambios')
                         $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?')
@@ -133,7 +130,6 @@ $(document).ready(function(){
                             $("#formulario\\.fecha").attr("disabled", true);
                             $("#formulario\\.hora").attr("disabled", true);
                             $("#formulario\\.participante").attr("disabled", true);
-                            $("#formulario\\.paciente").attr("disabled", true);
                             $("#formulario\\.actividad").attr("disabled", true);
                             $("#formulario\\.lugar").attr("disabled", true);
                             $("#formulario\\.cancelacion").attr("disabled", true);
@@ -159,7 +155,6 @@ $(document).ready(function(){
                             $('#formulario\\.nombre').val(data.apunte_nombre);
                             $("#formulario\\.hora").val(data.apunte_hour);
                             $("#formulario\\.participante").val(data.apunte_participante);
-                            $("#formulario\\.paciente").val(data.apunte_person);
                             $("#formulario\\.actividad").val(data.apunte_activity);
                             $("#formulario\\.lugar").val(data.apunte_location);
                             $("#formulario\\.cancelacion").val(data.apunte_cancellation);
@@ -201,7 +196,6 @@ $(document).ready(function(){
                             $("#formulario\\.hora").val("").attr("disabled", true);
                             $('#formulario\\.nombre').val("").attr("disabled", true);
                             $("#formulario\\.participante").val("").attr("disabled", true);
-                            $("#formulario\\.paciente").val("").attr("disabled", true);
                             $("#formulario\\.actividad").val("").attr("disabled", true);
                             $("#formulario\\.lugar").val("").attr("disabled", true);
                             $("#formulario\\.cancelacion").val("").attr("disabled", true);
@@ -225,10 +219,10 @@ $(document).ready(function(){
 
         if (texto.length > 0){
 
-            let informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Nombre del evento</strong> :PACIENTE</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
+            let informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Tipo del evento</strong> :TIPOEV</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
 
+            let tipoev = $("#formulario\\.actividad option:selected").text()
             let nombre = $("#formulario\\.nombre").val();
-            let paciente = $("#formulario\\.paciente").val();
             let fecha  = $("#formulario\\.fecha").val();
             let hora  = $("#formulario\\.hora").val();
             let participante = $("#formulario\\.participante").val();
@@ -240,8 +234,8 @@ $(document).ready(function(){
             let comentarios = $("#formulario\\.comentarios").val().replace(/\r\n|\r|\n/g,"<br />");
 
             let escript = 'document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});';
+            informe = informe.replace(":TIPOEV", tipoev);
             informe = informe.replace(":NOMBRE", nombre);
-            informe = informe.replace(":PACIENTE", paciente);
             informe = informe.replace(":FECHA", fecha);
             informe = informe.replace(":HORA", hora);
             informe = informe.replace(":PARTICIPANTE", participante);
@@ -408,7 +402,6 @@ $(document).ready(function(){
             $("#formulario\\.hora").val("").attr("disabled", false);
             $('#formulario\\.nombre').val("").attr("disabled", false);
             $("#formulario\\.participante").val("").attr("disabled", false);
-            $("#formulario\\.paciente").val(data.apunte_person).attr("disabled", false);
             $("#formulario\\.actividad").val(0).attr("disabled", false);
             $("#formulario\\.lugar").val("").attr("disabled", false);
             $("#formulario\\.cancelacion").val("").attr("disabled", false);
@@ -434,7 +427,6 @@ $(document).ready(function(){
         $("#formulario\\.hora").attr("disabled", false);
         $('#formulario\\.nombre').attr("disabled", false);
         $("#formulario\\.participante").attr("disabled", false);
-        $("#formulario\\.paciente").attr("disabled", false);
         $("#formulario\\.actividad").attr("disabled", false);
         $("#formulario\\.lugar").attr("disabled", false);
         $("#formulario\\.cancelacion").attr("disabled", false);
@@ -460,7 +452,6 @@ $(document).ready(function(){
         $("#formulario\\.hora").attr("disabled", true);
         $('#formulario\\.nombre').attr("disabled", true);
         $("#formulario\\.participante").attr("disabled", true);
-        $("#formulario\\.paciente").attr("disabled", true);
         $("#formulario\\.actividad").attr("disabled", true);
         $("#formulario\\.lugar").attr("disabled", true);
         $("#formulario\\.cancelacion").attr("disabled", true);
@@ -493,7 +484,6 @@ $(document).ready(function(){
         $("#formulario\\.hora").val("").attr("disabled", true);
         $("#formulario\\.participante").val("").attr("disabled", true);
         $("#formulario\\.nombre").val("").attr("disabled", true);
-        $("#formulario\\.paciente").val("").attr("disabled", true);
         $("#formulario\\.actividad").val("").attr("disabled", true);
         $("#formulario\\.lugar").val("").attr("disabled", true);
         $("#formulario\\.cancelacion").val("").attr("disabled", true);
@@ -532,7 +522,6 @@ function guardarAutomatico(){
         hora: $("#formulario\\.hora").val(),
         nombre: $('#formulario\\.nombre').val(),
         participante: $("#formulario\\.participante").val(),
-        paciente: $("#formulario\\.paciente").val(),
         actividad: $("#formulario\\.actividad").val(),
         lugar: $("#formulario\\.lugar").val(),
         location_name: $("#formulario\\.lugar option:selected").text(),
@@ -550,7 +539,6 @@ function guardarAutomatico(){
         $("#formulario\\.hora").val(data.apunte_hour);
         $('#formulario\\.nombre').val(data.apunte_nombre);
         $("#formulario\\.participante").val(data.apunte_participante);
-        $("#formulario\\.paciente").val(data.apunte_person);
         $("#formulario\\.actividad").val(data.apunte_activity);
         $("#formulario\\.lugar").val(data.apunte_location);
         $("#formulario\\.cancelacion").val(data.apunte_cancellation);
@@ -586,7 +574,7 @@ function cargarTabla(){
             });
         }).on("click",function(){
 
-            if ($("#formulario\\.paciente").is(':disabled') == false){
+            if ($("#formulario\\.actividad").is(':disabled') == false){
                 $("#dialog\\.delete").remove();
                 $("#dialog\\.title").html('Guardar cambios')
                 $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?')
@@ -600,7 +588,6 @@ function cargarTabla(){
                     $("#formulario\\.hora").attr("disabled", true);
                     $("#formulario\\.participante").attr("disabled", true);
                     $('#formulario\\.nombre').attr("disabled", true);
-                    $("#formulario\\.paciente").attr("disabled", true);
                     $("#formulario\\.actividad").attr("disabled", true);
                     $("#formulario\\.lugar").attr("disabled", true);
                     $("#formulario\\.cancelacion").attr("disabled", true);
@@ -626,7 +613,6 @@ function cargarTabla(){
                     $("#formulario\\.hora").val(data.apunte_hour);
                     $('#formulario\\.nombre').val(data.apunte_nombre);
                     $("#formulario\\.participante").val(data.apunte_participante);
-                    $("#formulario\\.paciente").val(data.apunte_person);
                     $("#formulario\\.actividad").val(data.apunte_activity);
                     $("#formulario\\.lugar").val(data.apunte_location);
                     $("#formulario\\.cancelacion").val(data.apunte_cancellation);
@@ -668,7 +654,6 @@ function cargarTabla(){
                     $("#formulario\\.hora").val("").attr("disabled", true);
                     $('#formulario\\.nombre').val("").attr("disabled", true);
                     $("#formulario\\.participante").val("").attr("disabled", true);
-                    $("#formulario\\.paciente").val("").attr("disabled", true);
                     $("#formulario\\.actividad").val("").attr("disabled", true);
                     $("#formulario\\.lugar").val("").attr("disabled", true);
                     $("#formulario\\.cancelacion").val("").attr("disabled", true);
