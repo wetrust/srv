@@ -890,20 +890,23 @@ function updateCalculos(){
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
         if (Object.keys(data).length > 0) {
 
-            var tpoEvento = $("#formulario\\.actividad");
-            var primPartic = $("#formulario\\.participante");
-
             $.each(data, function(i, item) {
+                let lugar = ""
+                let participante = ""
+                $("#formulario\\.lugar > option").each(function() {
+                    if (this.value == item["apunte_location"]){
+                        lugar = this.text;
+                    }
+                });
 
-                let location_name = item["apunte_location_name"];
-                if (typeof location_name === "undefined"){ 
-                    location_name = "";
-                }
+                $("#formulario\\.participante > option").each(function() {
+                    if (this.value == item["apunte_participante"]){
+                        participante = this.text;
+                    }
+                });
 
-
-
-
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_location"] + '</td><td>' + item["apunte_date"] + '</td><td>' + item["apunte_participante"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + lugar + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                
                 $("#tabla\\.calculos").append(fila);
             });
 
