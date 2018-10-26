@@ -60,7 +60,6 @@
                                 <div class="row">
                                     <div class="form-group col-6">
                                         <label for="formulario.hora"><strong>Hora</strong></label>
-                                        <input class="form-control" id="formulario.hora" type="text" disabled>
                                         <select class="form-control" id="formulario.hora" disabled=""></select>
                                     </div>
                                     <div class="form-group col-6">
