@@ -2,6 +2,7 @@ $(document).ready(function(){
     cargarTabla();
     cargarActividad();
     cargarLugar();
+    cargarTiempo();
  
     $('#formulario\\.fecha').datepicker().on('changeDate', function(ev) {
         $(this).datepicker('hide');
@@ -834,4 +835,16 @@ function updateCalculos(){
             });
         }
     });
+}
+
+function cargarTiempo(){
+    for (var i = 0; i < 23; i++) {
+        let option = '<option value="' + i +'" >'+ i + '</option>';
+        $("#formulario\\.hora").append(option);
+    }
+
+    for (var i = 0; i < 59; i++) {
+        let option = '<option value="' + i +'" >'+ i + '</option>';
+        $("#formulario\\.minutos").append(option);
+    }
 }
