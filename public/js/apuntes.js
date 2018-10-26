@@ -371,6 +371,38 @@ $(document).ready(function(){
             $("#boton\\.lugar\\.cancelar").addClass("d-none");
             $("#lugar\\.texto").val("");
         });
+
+        $("#boton\\.participante\\.nuevo").on("click", function(){
+            $("#div\\.participante").removeClass("d-none");
+            $("#boton\\.participante\\.nuevo").addClass("d-none");
+            $("#boton\\.participante\\.guardar").removeClass("d-none");
+            $("#boton\\.participante\\.cancelar").removeClass("d-none");
+        });
+        
+        $("#boton\\.participante\\.guardar").on("click", function(){
+            $("#div\\.participante").addClass("d-none");
+            $("#boton\\.participante\\.nuevo").removeClass("d-none");
+            $("#boton\\.participante\\.guardar").addClass("d-none");
+            $("#boton\\.participante\\.cancelar").addClass("d-none");
+
+            var formulario = {
+                accion: "nuevoParticipante",
+                participante_text: $("#participante\\.texto").val(),
+            };
+
+            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                cargarParticipante();
+                $("#participante\\.texto").val("");
+            });
+        });
+
+        $("#boton\\.participante\\.cancelar").on("click", function(){
+            $("#div\\.participante").addClass("d-none");
+            $("#boton\\.participante\\.nuevo").removeClass("d-none");
+            $("#boton\\.participante\\.guardar").addClass("d-none");
+            $("#boton\\.participante\\.cancelar").addClass("d-none");
+            $("#participante\\.texto").val("");
+        });
     });
 
     $("#opcion\\.financiera").on("click", function(){
@@ -787,6 +819,54 @@ function cargarLugar(){
                     cargarLugar();
                     $("#boton\\.configuracion").trigger("click");
                     $('#myTab a[href="#profile"]').tab('show')
+                });
+            });
+
+            $("#dialog\\.view").modal("show");
+        });
+    });
+}
+
+function cargarParticipante(){
+    var solicitud = {
+        accion: "participante"
+    };
+
+    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+        $("#formulario\\.participante").empty();
+        $("#tabla\\.participante").empty();
+
+        $.each(data, function(i, item) {
+            let fila = '<tr><th scope="row">' + item["participante_id"] + '</th><td class="columna-participante">' + item["participante_text"] + '<button type="button" data-id="' + item["participante_id"] + '" class="btn btn-outline-warning px-3 eliminar-participante float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+            let option = '<option value="'+ item["participante_id"]+'">' +item["participante_text"]+'</option>';
+            $("#tabla\\.participante").append(fila);
+            $("#formulario\\.participante").append(option);
+        });
+
+        $(".columna-participante").on("mouseenter",function(){
+            $(this).children("button").removeClass("d-none");
+        }).on("mouseleave", function(){
+            $(this).children("button").addClass("d-none");
+        });
+
+        $(".eliminar-participante").on("click", function(){
+            let lugar_id = $(this).data("id");
+            $("#dialog\\.delete").remove();
+            $("#dialog\\.title").html('Eliminar Participante')
+            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el participante seleccionado?')
+            $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + participante_id + '">Eliminar</button>');
+
+            $("#dialog\\.delete").on("click", function(){
+                let participante_id = $(this).data("id");
+                var solicitud = {
+                    accion: "eliminarParticipante",
+                    id: participante_id
+                };
+
+                $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                    cargarParticipante();
+                    $("#boton\\.configuracion").trigger("click");
+                    $('#myTab a[href="#participante"]').tab('show')
                 });
             });
 
