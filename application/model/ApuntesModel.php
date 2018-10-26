@@ -10,9 +10,9 @@ class ApuntesModel
     public static function findText($searchText){
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id AND apunte_text = :apunte_text OR apunte_participante = :apunte_participante OR apunte_keywords = :apunte_keywords OR apunte_nombre LIKE ':apunte_nombre%' ORDER BY apunte_nombre";
+        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id AND apunte_text = :apunte_text OR apunte_participante = :apunte_participante OR apunte_keywords = :apunte_keywords OR apunte_nombre LIKE ':apunte_nombre' ORDER BY apunte_nombre";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_text' => $searchText,':apunte_participante' => $searchText,':apunte_keywords' => $searchText, ':apunte_nombre' => $searchText));
+        $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_text' => $searchText,':apunte_participante' => $searchText,':apunte_keywords' => $searchText, ':apunte_nombre' => $searchText. '%'));
 
         // fetchAll() is the PDO method that gets all result rows
         return $query->fetchAll();
