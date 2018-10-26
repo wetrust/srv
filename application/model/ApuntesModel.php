@@ -26,7 +26,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id ORDER BY apunte_nombre LIMIT 10";
+        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id ORDER BY apunte_nombre";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id')));
 
