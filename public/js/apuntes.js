@@ -850,7 +850,7 @@ function cargarParticipante(){
         });
 
         $(".eliminar-participante").on("click", function(){
-            let lugar_id = $(this).data("id");
+            let participante_id = $(this).data("id");
             $("#dialog\\.delete").remove();
             $("#dialog\\.title").html('Eliminar Participante')
             $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el participante seleccionado?')
