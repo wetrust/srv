@@ -10,7 +10,7 @@ class ApuntesModel
     public static function findText($searchText){
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id AND apunte_text = :apunte_text OR apunte_participante = :apunte_participante OR apunte_keywords = :apunte_keywords";
+        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id AND apunte_text = :apunte_text OR apunte_participante = :apunte_participante OR apunte_keywords = :apunte_keywords ORDER BY apunte_nombre";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id'), ':apunte_text' => $searchText,':apunte_participante' => $searchText,':apunte_keywords' => $searchText));
 
@@ -26,7 +26,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id LIMIT 10";
+        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id ORDER BY apunte_nombre LIMIT 10";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id')));
 
@@ -677,6 +677,70 @@ class ApuntesModel
         $sql = "DELETE FROM cancelaciones WHERE cancelacion_id = :cancelacion_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':cancelacion_id' => $cancelacion_id, ':user_id' => Session::get('user_id')));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
+        return false;
+    }
+
+    /**
+     * Get all Cancelaciones (Cancelaciones are just example data that the user has created)
+     * @return array an array with several objects (the results)
+     */
+    public static function getAllParticipante()
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT participante_id, participante_text FROM participantes WHERE user_id = :user_id";
+        $query = $database->prepare($sql);
+        $query->execute(array(':user_id' => Session::get('user_id')));
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
+    }
+
+    public static function createParticipante($participante_text)
+    {
+        if (!$participante_text || strlen($participante_text) == 0) {
+            Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "INSERT INTO participantes (participante_text, user_id) VALUES (:participante_text, :user_id)";
+        $query = $database->prepare($sql);
+        $query->execute(array(':participante_text' => $participante_text, ':user_id' => Session::get('user_id')));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+        return false;
+    }
+
+    /**
+     * Delete a specific cancelacion
+     * @param int $cancelacion_id id of the cancelacion
+     * @return bool feedback (was the cancelacion deleted properly ?)
+     */
+    public static function deleteParticipante($participante_id)
+    {
+        if (!$participante_id) {
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "DELETE FROM participantes WHERE participante_id = :participante_id AND user_id = :user_id LIMIT 1";
+        $query = $database->prepare($sql);
+        $query->execute(array(':participante_id' => $participante_id, ':user_id' => Session::get('user_id')));
 
         if ($query->rowCount() == 1) {
             return true;

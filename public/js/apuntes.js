@@ -838,12 +838,12 @@ function updateCalculos(){
 }
 
 function cargarTiempo(){
-    for (var i = 0; i < 23; i++) {
+    for (var i = 0; i < 24; i++) {
         let option = '<option value="' + i +'" >'+ i + '</option>';
         $("#formulario\\.hora").append(option);
     }
 
-    for (var i = 0; i < 59; i++) {
+    for (var i = 0; i < 60; i++) {
         let option = '<option value="' + i +'" >'+ i + '</option>';
         $("#formulario\\.minutos").append(option);
     }

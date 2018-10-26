@@ -84,6 +84,15 @@ class ApuntesController extends Controller
             case "eliminarCancelacion":
                 $resultado = ApuntesModel::deleteCancelacion(Request::post('id'));
                 break;
+            case "participante":
+                $resultado = ApuntesModel::getAllParticipante();
+                break;
+            case "nuevoParticipante":
+                $resultado = ApuntesModel::createParticipante(Request::post('participante_text'));
+                break;
+            case "eliminarParticipante":
+                $resultado = ApuntesModel::deleteParticipante(Request::post('id'));
+                break;
             case "calculos":
                 $resultado = ApuntesModel::getFilterApunte(Request::post('uno'),Request::post('dos'),Request::post('lugar'),Request::post('actividad'),Request::post('cancelacion'));
                 break;
