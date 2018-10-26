@@ -3,6 +3,7 @@ $(document).ready(function(){
     cargarActividad();
     cargarLugar();
     cargarTiempo();
+    cargarParticipante();
  
     $('#formulario\\.fecha').datepicker().on('changeDate', function(ev) {
         $(this).datepicker('hide');
