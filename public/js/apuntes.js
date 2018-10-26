@@ -79,6 +79,7 @@ $(document).ready(function(){
         $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
         $('#formulario\\.nombre').val("");
         $("#formulario\\.hora").val("");
+        $("#formulario\\.minutos").val("");
         $("#formulario\\.participante").val("");
         $("#formulario\\.actividad").val("");
         $("#formulario\\.lugar").val("");
@@ -129,6 +130,7 @@ $(document).ready(function(){
                             $('#formulario\\.nombre').attr("disabled", true);
                             $("#formulario\\.fecha").attr("disabled", true);
                             $("#formulario\\.hora").attr("disabled", true);
+                            $("#formulario\\.minutos").attr("disabled", true);
                             $("#formulario\\.participante").attr("disabled", true);
                             $("#formulario\\.actividad").attr("disabled", true);
                             $("#formulario\\.lugar").attr("disabled", true);
@@ -154,6 +156,7 @@ $(document).ready(function(){
                             $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
                             $('#formulario\\.nombre').val(data.apunte_nombre);
                             $("#formulario\\.hora").val(data.apunte_hour);
+                            $("#formulario\\.minutos").val(data.apunte_minute);
                             $("#formulario\\.participante").val(data.apunte_participante);
                             $("#formulario\\.actividad").val(data.apunte_activity);
                             $("#formulario\\.lugar").val(data.apunte_location);
@@ -194,6 +197,7 @@ $(document).ready(function(){
                             $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
                             $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
                             $("#formulario\\.hora").val("").attr("disabled", true);
+                            $("#formulario\\.minutos").val("").attr("disabled", true);
                             $('#formulario\\.nombre').val("").attr("disabled", true);
                             $("#formulario\\.participante").val("").attr("disabled", true);
                             $("#formulario\\.actividad").val("").attr("disabled", true);
@@ -219,12 +223,13 @@ $(document).ready(function(){
 
         if (texto.length > 0){
 
-            let informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Tipo del evento</strong> :TIPOEV</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
+            let informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Tipo del evento</strong> :TIPOEV</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA, <strong>Minutos</strong> :MINUTOS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
 
             let tipoev = $("#formulario\\.actividad option:selected").text()
             let nombre = $("#formulario\\.nombre").val();
             let fecha  = $("#formulario\\.fecha").val();
             let hora  = $("#formulario\\.hora").val();
+            let minutos = $("#formulario\\.minutos").val("");
             let participante = $("#formulario\\.participante").val();
             let palabras  = $("#formulario\\.palabras").val();
             let lugar  = $("#formulario\\.lugar option:selected").text()
@@ -238,6 +243,7 @@ $(document).ready(function(){
             informe = informe.replace(":NOMBRE", nombre);
             informe = informe.replace(":FECHA", fecha);
             informe = informe.replace(":HORA", hora);
+            informe = informe.replace(":MINUTOS", minutos);
             informe = informe.replace(":PARTICIPANTE", participante);
             informe = informe.replace(":PALABRAS", palabras);
             informe = informe.replace(":LUGAR", lugar);
@@ -400,6 +406,7 @@ $(document).ready(function(){
             $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
             $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
             $("#formulario\\.hora").val("").attr("disabled", false);
+            $("#formulario\\.minutos").val("").attr("disabled", false);
             $('#formulario\\.nombre').val("").attr("disabled", false);
             $("#formulario\\.participante").val("").attr("disabled", false);
             $("#formulario\\.actividad").val(0).attr("disabled", false);
@@ -425,6 +432,7 @@ $(document).ready(function(){
 
         $("#formulario\\.fecha").attr("disabled", false);
         $("#formulario\\.hora").attr("disabled", false);
+        $("#formulario\\.minutos").attr("disabled", false);
         $('#formulario\\.nombre').attr("disabled", false);
         $("#formulario\\.participante").attr("disabled", false);
         $("#formulario\\.actividad").attr("disabled", false);
@@ -450,6 +458,7 @@ $(document).ready(function(){
         cargarTabla();
         $("#formulario\\.fecha").attr("disabled", true);
         $("#formulario\\.hora").attr("disabled", true);
+        $("#formulario\\.minutos").attr("disabled", true);
         $('#formulario\\.nombre').attr("disabled", true);
         $("#formulario\\.participante").attr("disabled", true);
         $("#formulario\\.actividad").attr("disabled", true);
@@ -482,6 +491,7 @@ $(document).ready(function(){
 
         $("#formulario\\.fecha").attr("disabled", true);
         $("#formulario\\.hora").val("").attr("disabled", true);
+        $("#formulario\\.minutos").val("").attr("disabled", true);
         $("#formulario\\.participante").val("").attr("disabled", true);
         $("#formulario\\.nombre").val("").attr("disabled", true);
         $("#formulario\\.actividad").val("").attr("disabled", true);
@@ -520,6 +530,7 @@ function guardarAutomatico(){
         id: $("#formulario\\.id").val(),
         fecha: $("#formulario\\.fecha").val(),
         hora: $("#formulario\\.hora").val(),
+        minutos: $("#formulario\\.minutos").val(),
         nombre: $('#formulario\\.nombre').val(),
         participante: $("#formulario\\.participante").val(),
         actividad: $("#formulario\\.actividad").val(),
@@ -537,6 +548,7 @@ function guardarAutomatico(){
         $("#formulario\\.fecha").val(data.apunte_date);
         $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
         $("#formulario\\.hora").val(data.apunte_hour);
+        $("#formulario\\.minutos").val(data.apunte_minute);
         $('#formulario\\.nombre').val(data.apunte_nombre);
         $("#formulario\\.participante").val(data.apunte_participante);
         $("#formulario\\.actividad").val(data.apunte_activity);
@@ -586,6 +598,7 @@ function cargarTabla(){
                     $("#dialog\\.view").modal("hide");
                     $("#formulario\\.fecha").attr("disabled", true);
                     $("#formulario\\.hora").attr("disabled", true);
+                    $("#formulario\\.minutos").attr("disabled", true);
                     $("#formulario\\.participante").attr("disabled", true);
                     $('#formulario\\.nombre').attr("disabled", true);
                     $("#formulario\\.actividad").attr("disabled", true);
@@ -611,6 +624,7 @@ function cargarTabla(){
                     $("#formulario\\.fecha").val(data.apunte_date);
                     $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
                     $("#formulario\\.hora").val(data.apunte_hour);
+                    $("#formulario\\.minutos").val(data.apunte_minute);
                     $('#formulario\\.nombre').val(data.apunte_nombre);
                     $("#formulario\\.participante").val(data.apunte_participante);
                     $("#formulario\\.actividad").val(data.apunte_activity);
@@ -652,6 +666,7 @@ function cargarTabla(){
                     $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
                     $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
                     $("#formulario\\.hora").val("").attr("disabled", true);
+                    $("#formulario\\.minutos").val("").attr("disabled", true);
                     $('#formulario\\.nombre').val("").attr("disabled", true);
                     $("#formulario\\.participante").val("").attr("disabled", true);
                     $("#formulario\\.actividad").val("").attr("disabled", true);
