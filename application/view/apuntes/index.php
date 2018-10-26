@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="col-6">
                                         <label for="formulario.paciente"><strong>Usuario</strong></label>
-                                        <input class="form-control" type="text" value="<?php echo Session::get('user_name'); ?>" disabled>
+                                        <input class="form-control" type="text" value="<?php echo Session::get('user_email'); ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios relativos al evento; operación, reunión, etc.</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
