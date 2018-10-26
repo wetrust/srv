@@ -26,7 +26,7 @@
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
                 </nav>
-                <h5 class="text-success text-center my-2">Listado de eventos</h5>
+                <h5 class="text-success text-center my-2">Listado de nombre</h5>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" id="contenedor.tarjetas">
                 </div>
             </div>
@@ -61,10 +61,11 @@
                                     <div class="form-group col-6">
                                         <label for="formulario.hora"><strong>Hora</strong></label>
                                         <input class="form-control" id="formulario.hora" type="text" disabled>
+                                        <select class="form-control" id="formulario.hora" disabled=""></select>
                                     </div>
                                     <div class="form-group col-6">
                                         <label for="formulario.hora"><strong>Minutos</strong></label>
-                                        <input class="form-control" id="formulario.minutos" type="text" disabled>
+                                        <select class="form-control" id="formulario.minutos" disabled=""></select>
                                     </div>
                                 </div>
                                 <div class="form-group"><label for="formulario.palabras"><strong>Primer participante</strong></label><input class="form-control" id="formulario.participante" type="text" disabled></div>
