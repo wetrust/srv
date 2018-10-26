@@ -279,6 +279,7 @@ $(document).ready(function(){
     $("#boton\\.configuracion").on("click", function(){
         cargarActividad();
         cargarLugar();
+        cargarParticipante();
         $("#dialog\\.title").html("Configuración");
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
