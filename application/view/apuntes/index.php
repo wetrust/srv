@@ -27,7 +27,7 @@
                     </div>
                 </nav>
                 <h5 class="text-success text-center my-2">Listado de nombre</h5>
-                <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" id="contenedor.tarjetas">
+                <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas">
                 </div>
             </div>
             <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
