@@ -27,10 +27,10 @@
                     </div>
                 </nav>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-7">
                         <h5 class="text-success text-center my-2">Nombre</h5>
                     </div>
-                    <div class="col-4">
+                    <div class="col-5">
                         <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i></button>
                         <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="fas fa-calendar-alt"></i></button>
                     </div>
