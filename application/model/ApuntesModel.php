@@ -34,6 +34,18 @@ class ApuntesModel
         return $query->fetchAll();
     }
 
+    public static function getAllApuntesDate()
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT  apunte_id, apunte_date, apunte_hour, apunte_minute, apunte_participante, apunte_activity, apunte_location, apunte_cancellation, apunte_fcancellation, apunte_cost, apunte_text, apunte_keywords, apunte_nombre FROM apuntes WHERE user_id = :user_id ORDER BY apunte_date";
+        $query = $database->prepare($sql);
+        $query->execute(array(':user_id' => Session::get('user_id')));
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
+    }
+
     /**
      * Get a single apunte
      * @param int $apunte_id id of the specific apunte

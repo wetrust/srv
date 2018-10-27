@@ -26,7 +26,17 @@
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
                 </nav>
-                <h5 class="text-success text-center my-2">Listado de nombre</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="text-success text-center my-2">Nombre</h5>
+                    </div>
+                    <div class="col-3">
+                    <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i></button>
+                    </div>
+                    <div class="col-3">
+                    <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="far fa-calendar-alt"></i></button>
+                    </div>
+                </div>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas">
                 </div>
             </div>
@@ -46,7 +56,7 @@
                                         <label for="formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label>
                                     </div>
                                     <div class="col-4">
-                                        <button type="button" class="btn btn-outline-primary" id="boton.aplicar"><i class="fas fa-check"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" id="boton.aplicar" title="Activar evento"><i class="fas fa-check"></i></button>
                                     </div>
                                     <div class="col-12">
                                         <select class="form-control" id="formulario.actividad" disabled="">
@@ -68,7 +78,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="formulario.palabras"><strong>Primer participante</strong></label>
+                                    <label for="formulario.palabras"><strong>Primer participante</strong>(<i class="fas fa-cog text-success"></i>)</label>
                                     <select class="form-control" id="formulario.participante" disabled=""></select>
                                 </div>
                                 <div class="form-group"><label for="formulario.palabras"><strong>Otros participantes</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>

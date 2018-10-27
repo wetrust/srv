@@ -45,6 +45,9 @@ class ApuntesController extends Controller
             case "tabla":
                 $resultado = ApuntesModel::getAllApuntes();
                 break;
+            case "tablad":
+                $resultado = ApuntesModel::getAllApuntesDate();
+                break;
             case "apunte":
                 $resultado = ApuntesModel::getApunte(Request::post('id'));
                 break;
