@@ -102,7 +102,7 @@ class ApuntesController extends Controller
             case "busqueda":
                 $resultado = ApuntesModel::findText(Request::post('texto'));
                 break;
-            case "usuarios"
+            case "usuarios":
                 $resultado = UserModel::getPublicProfilesOfAllUsers();
                 break;
         }
