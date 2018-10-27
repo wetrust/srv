@@ -948,7 +948,7 @@ function updateCalculos(){
                     }
                 });
 
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_participante"] + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 
                 $("#tabla\\.calculos").append(fila);
             });
