@@ -30,7 +30,7 @@
                     <div class="col-8">
                         <h5 class="text-success text-center my-2">Nombre</h5>
                     </div>
-                    <div class="col-3">
+                    <div class="col-4">
                         <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i></button>
                         <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="fas fa-calendar-alt"></i></button>
                     </div>
