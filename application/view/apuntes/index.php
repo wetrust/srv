@@ -26,7 +26,7 @@
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
                 </nav>
-                <div class="row">
+                <div class="row pt-2">
                     <div class="col-7">
                         <h5 class="text-success text-center my-2">Nombre</h5>
                     </div>
