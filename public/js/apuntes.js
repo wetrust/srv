@@ -940,13 +940,7 @@ function updateCalculos(){
         if (Object.keys(data).length > 0) {
 
             $.each(data, function(i, item) {
-                let lugar = ""
                 let participante = ""
-                $("#formulario\\.lugar > option").each(function() {
-                    if (this.value == item["apunte_location"]){
-                        lugar = this.text;
-                    }
-                });
 
                 $("#formulario\\.participante > option").each(function() {
                     if (this.value == item["apunte_participante"]){
@@ -954,7 +948,7 @@ function updateCalculos(){
                     }
                 });
 
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + lugar + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 
                 $("#tabla\\.calculos").append(fila);
             });
