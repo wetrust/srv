@@ -10,6 +10,19 @@ $(document).ready(function(){
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
         $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th> <th scope="col">Correo</th></tr></thead> <tbody id="tabla.usuarios"></tbody> </table> </div></div></div>');
+    
+        var data = {
+            accion: "usuarios"
+        }
+
+        $.post("https://servidor.crecimientofetal.cl/apuntes/api", data).done(function(response){
+            if (Object.keys(data).length > 0) {
+                $.each(response, function(i, item) {
+                    //let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                    //$("#tabla\\.usuarios").append(fila);
+                });
+            }
+        });
     });
 
     $('#formulario\\.fecha').datepicker().on('changeDate', function(ev) {
