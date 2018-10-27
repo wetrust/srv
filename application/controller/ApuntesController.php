@@ -105,8 +105,8 @@ class ApuntesController extends Controller
             case "usuarios":
                 $resultado = UserModel::getPublicProfilesOfAllUsers();
                 break;
-            case "usuarios":
-                $resultado = UserModel::getPublicProfilesOfAllUsers();
+            case "eliminarUsuario":
+                $resultado = UserModel::deleteUser(Request::post('id'));
                 break;
         }
 

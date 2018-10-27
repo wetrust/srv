@@ -43,9 +43,8 @@ $(document).ready(function(){
                         };
         
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                            cargarActividad();
-                            $("#boton\\.configuracion").trigger("click");
-                            $('#myTab a[href="#home"]').tab('show')
+                            $("#dialog\\.body").empty();
+                            $("#boton\\.usuarios").trigger("click");
                         });
                     });
         

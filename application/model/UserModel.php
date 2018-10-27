@@ -416,4 +416,25 @@ class UserModel
             return $query->fetch();
         }
     }
+
+    /**
+     * Writes new email address to database
+     *
+     * @param $user_id int user id
+     * @param $new_user_email string new email address
+     *
+     * @return bool
+     */
+    public static function deleteUser($user_id)
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $query = $database->prepare("DELETE FROM users WHERE user_id = :user_id LIMIT 1");
+        $query->execute(array(':user_id' => $user_id));
+        $count = $query->rowCount();
+        if ($count == 1) {
+            return true;
+        }
+        return false;
+    }
 }
