@@ -362,7 +362,7 @@ $(document).ready(function(){
                 $("#actividad\\.texto").val("");
                 return;
             }
-            if ($("#actividad\\.text").val() == 'Ayudantía operatoria'){
+            if ($("#actividad\\.text").val() == 'Ayudantía op.'){
                 alert("no puede crear una opcion que se llama Ayudantía operatoria, ya existe una con ese nombre");
                 $("#actividad\\.texto").val("");
                 return;
@@ -761,7 +761,7 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").empty();
 
         let option = '<option value="99" selected>Todos</option>';
-        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía operatoria</option><option value="4">Exm. Ecografico</option>';
+        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía op.</option><option value="4">Exm. Ecografico</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
         $("#formulario\\.actividad").append(option2);
         $("#calculos\\.formulario\\.actividad").append(option2);
