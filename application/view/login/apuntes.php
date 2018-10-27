@@ -54,7 +54,10 @@
                             <div class="card-body">
                                 <h5 class="card-title text-center">Registrarse</h5>
                                 <form method="post" action="<?php echo Config::get('URL'); ?>register/register_apuntes">
-                                    <input type="hidden" name="user_name" value="<?php echo $this->encodeHTML($this->userIdRandom); ?>" />
+                                    <div class="form-group">
+                                        <label>Nombre de usuario <small>(todo junto)</small></label>
+                                        <input type="text" class="form-control" name="user_name" />
+                                    </div>
                                     <div class="form-group">
                                         <label>Correo</label>
                                         <input type="text" class="form-control" name="user_email" />
