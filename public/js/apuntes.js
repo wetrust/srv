@@ -103,22 +103,22 @@ $(document).ready(function(){
     $("#boton\\.aplicar").on("click", function(){
         if ($("#boton\\.guardar").hasClass("d-none") == false){
             if ($("#formulario\\.actividad").val() == 0){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :\n\n- Ayudante     :\n\n- Arsenalera   :"); 
+                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :\n\n- Ayudante     :\n\n- Arsenalera   :"); 
             }
             else if ($("#formulario\\.actividad").val() == 1){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :");
+                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Obstetra       :\n\n- Matrona       :\n\n- Pediatra       :\n\n- Anestesista :");
             }
             else if ($("#formulario\\.actividad").val() == 2){
-                $("#formulario\\.comentarios").val("\n- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
+                $("#formulario\\.comentarios").val("- DIAGNOSTICO :\n\n- OPERACIÓN     :\n\n- PREVISIÓN       :\n\nEQUIPO QUIRÚRGICO.\n\n- Cirujano            :\n\n- Ayudante           :\n\n- Anestesista       :\n\n- Arsenalera          :");
             }
             else if ($("#formulario\\.actividad").val() == 3){
-                $("#formulario\\.comentarios").val("\n- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
+                $("#formulario\\.comentarios").val("- CIRUJANO DR      :\n\n- DIAGNOSTICO     :\n\n- OPERACIÓN         :\n\n- PREVISIÓN           :");
             }
             else if ($("#formulario\\.actividad").val() == 4){
-                $("#formulario\\.comentarios").val("\n-- FUR :\n-- EGE:\n\nECOGRAFIA 1° TRIMESTRE\n-- SACO :\n-- EMBRIÓN :\n-- ANEXOS :\n-- DOUGLAS :\n\nECOGRAFIA 2° - 3° TRIMESTRE\n-- DESCRIPCIÓN GENERAL:\n-- PLACENTA :\n-- LIQUIDO AMNIÓTICO :\n-- ASPECTO MORFOLÓGICO:\n\nBIOMETRIA FETAL\n-- DBP :\n-- DOF :\n-- CC :\n-- CA :\n-- LF :\n-- LH :\n\nDOPPLER MATERNO / FETAL\n-- UT. DERECHA\n-- UT. IZQUIERDA\n-- PROMEDIO UT.\n-- UMBILICAL\n-- C. MEDIA\n-- CUOCIENTE CP\n\nCONCLUSIÓN ECOGRAFICA:");
+                $("#formulario\\.comentarios").val("-- FUR :\n-- EGE:\n\nECOGRAFIA 1° TRIMESTRE\n-- SACO :\n-- EMBRIÓN :\n-- ANEXOS :\n-- DOUGLAS :\n\nECOGRAFIA 2° - 3° TRIMESTRE\n-- DESCRIPCIÓN GENERAL:\n-- PLACENTA :\n-- LIQUIDO AMNIÓTICO :\n-- ASPECTO MORFOLÓGICO:\n\nBIOMETRIA FETAL\n-- DBP :\n-- DOF :\n-- CC :\n-- CA :\n-- LF :\n-- LH :\n\nDOPPLER MATERNO / FETAL\n-- UT. DERECHA\n-- UT. IZQUIERDA\n-- PROMEDIO UT.\n-- UMBILICAL\n-- C. MEDIA\n-- CUOCIENTE CP\n\nCONCLUSIÓN ECOGRAFICA:");
             }
             else if ($("#formulario\\.actividad").val() == 5){
-                $("#formulario\\.comentarios").val("\n--TEMARIO\n\n--PARTICIPANTES\n\n--CONCLUSIONES");
+                $("#formulario\\.comentarios").val("--TEMARIO\n\n--PARTICIPANTES\n\n--CONCLUSIONES");
             }
             else{
                 $("#formulario\\.comentarios").val("");
