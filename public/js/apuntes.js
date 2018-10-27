@@ -9,7 +9,7 @@ $(document).ready(function(){
         $("#dialog\\.title").html("Listado de usuarios");
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
-        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th> <th scope="col">Correo</th></tr></thead> <tbody id="tabla.usuarios"></tbody> </table> </div></div></div>');
+        $("#dialog\\.body").html('<div class="row"><div class="col"><div class="table-responsive"><table class="table table-striped"><thead class="thead-dark"><tr><th scope="col">#</th><th scope="col">Nombre</th><th scope="col">Correo</th></tr></thead><tbody id="tabla.usuarios"></tbody></table></div></div></div>');
     
         var data = {
             accion: "usuarios"
@@ -32,7 +32,7 @@ $(document).ready(function(){
                     let usuario_id = $(this).data("id");
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Eliminar Usuario')
-                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el usuario?')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el usuario?</p>')
                     $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + usuario_id + '">Eliminar</button>');
         
                     $("#dialog\\.delete").on("click", function(){
@@ -41,13 +41,11 @@ $(document).ready(function(){
                             accion: "eliminarUsuario",
                             id: usuario_id
                         };
-        
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                             $("#dialog\\.body").empty();
                             $("#boton\\.usuarios").trigger("click");
                         });
                     });
-        
                     $("#dialog\\.view").modal("show");
                 });
             }
@@ -77,7 +75,7 @@ $(document).ready(function(){
         $("#dialog\\.title").html("Tabla resumen según fechas y/o eventos");
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
-        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha inicial</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd/mm/yyyy"></div></div><div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha final</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd/mm/yyyy"></div></div></div><div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th> <th scope="col">Fecha</th> <th scope="col">Primer participante</th> <th scope="col">Valor cancelado</th> </tr></thead> <tbody id="tabla.calculos"></tbody> </table> </div></div></div><div class="row"><div class="col-4"> <div class="form-group"><label for="calculos.formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div> <div class="col-4"> <div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div><div class="col-4"> <div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"><option value="99">Todos</option><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div></div></div>');
+        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha inicial</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd/mm/yyyy"></div></div><div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha final</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd/mm/yyyy"></div></div></div><div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th> <th scope="col">Fecha</th> <th scope="col">Primer participante</th><th scope="col">Tipo de evento</th><th scope="col">Valor cancelado</th> </tr></thead> <tbody id="tabla.calculos"></tbody> </table> </div></div></div><div class="row"><div class="col-4"> <div class="form-group"><label for="calculos.formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div> <div class="col-4"> <div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div><div class="col-4"> <div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"><option value="99">Todos</option><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div></div></div>');
 
         cargarActividad();
         cargarLugar();
@@ -99,7 +97,6 @@ $(document).ready(function(){
         $("#calculos\\.formulario\\.lugar").on("change", function(){updateCalculos();});
         $("#calculos\\.formulario\\.actividad").on("change", function(){updateCalculos();});
         $("#calculos\\.formulario\\.cancelacion").on("change", function(){updateCalculos();});
-
         updateCalculos();
     });
 
@@ -178,7 +175,7 @@ $(document).ready(function(){
                     if ($("#formulario\\.actividad").is(':disabled') == false){
                         $("#dialog\\.delete").remove();
                         $("#dialog\\.title").html('Guardar cambios')
-                        $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?')
+                        $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?</p>')
                         $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" >Guardar</button>');
                         $("#dialog\\.view").modal("show");
         
@@ -232,7 +229,7 @@ $(document).ready(function(){
                     let apunte_id = $(this).data("id");
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Eliminar Evento')
-                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el evento seleccionado?')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el evento seleccionado?</p>')
                     $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + apunte_id + '">Eliminar</button>');
         
                     $("#dialog\\.delete").on("click", function(){
@@ -268,7 +265,6 @@ $(document).ready(function(){
                             $("#formulario\\.palabras").val("").attr("disabled", true);
                         });
                     });
-        
                     $("#dialog\\.view").modal("show");
                 });
             });
@@ -282,7 +278,6 @@ $(document).ready(function(){
         if (texto.length > 0){
 
             let informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Tipo del evento</strong> :TIPOEV</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA, <strong>Minutos</strong> :MINUTOS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
-
             let tipoev = $("#formulario\\.actividad option:selected").text()
             let nombre = $("#formulario\\.nombre").val();
             let fecha  = $("#formulario\\.fecha").val();
@@ -295,7 +290,6 @@ $(document).ready(function(){
             let fcancelacion  = $("#formulario\\.fcancelacion").val();
             let valor = $("#formulario\\.valor").val();
             let comentarios = $("#formulario\\.comentarios").val().replace(/\r\n|\r|\n/g,"<br />");
-
             let escript = 'document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});';
             informe = informe.replace(":TIPOEV", tipoev);
             informe = informe.replace(":NOMBRE", nombre);
@@ -566,18 +560,7 @@ $(document).ready(function(){
         var day = ("0" + dateTime.getDate()).slice(-2);
         var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
 
-        //let apunte_id = $("#formulario\\.id").val();
-        //var solicitud = {
-        //    accion: "eliminar",
-        //    id: apunte_id
-        //};
-
-        //$.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
         cargarTabla();
-        //    $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear());
-        //    $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
-        //    $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear());
-        //    $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
 
         $("#formulario\\.fecha").attr("disabled", true);
         $("#formulario\\.hora").val("").attr("disabled", true);
@@ -595,23 +578,7 @@ $(document).ready(function(){
         $("#boton\\.guardar").addClass("d-none");
         $("#boton\\.cancelar").addClass("d-none");
         $("#boton\\.home").trigger("click");
-        //});
     });
-
-    //$("#formulario\\.comentarios").on("click", function(){
-    //    if ($("#formulario\\.comentarios").is("disabled")){
-    //        $("#dialog\\.title").html("Editar texto");
-    //        $("#dialog\\.delete").remove();
-    //        $("#dialog\\.view").modal("show");
-    //        $("#dialog\\.body").html('<p class="text-center">¿Desea editar el texto?</p>');
-    //        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete">SI</button>');
-    //        $("#dialog\\.delete").on("click", function(){
-    //            $("#formulario\\.comentarios").attr("disabled", false);
-    //        });
-    //    }
-    //});
-
-    
 });
 
 function guardarAutomatico(){
@@ -688,7 +655,7 @@ function cargarTabla(order = 0){
             if ($("#formulario\\.actividad").is(':disabled') == false){
                 $("#dialog\\.delete").remove();
                 $("#dialog\\.title").html('Guardar cambios')
-                $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?')
+                $("#dialog\\.body").html('<p class="text-center">¿Quiere guardar los cambios efectuados antes de salir?</p>')
                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" >Guardar</button>');
                 $("#dialog\\.view").modal("show");
 
@@ -742,7 +709,7 @@ function cargarTabla(order = 0){
             let apunte_id = $(this).data("id");
             $("#dialog\\.delete").remove();
             $("#dialog\\.title").html('Eliminar Evento')
-            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el evento seleccionado?')
+            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el evento seleccionado?</p>')
             $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + apunte_id + '">Eliminar</button>');
 
             $("#dialog\\.delete").on("click", function(){
@@ -778,7 +745,6 @@ function cargarTabla(order = 0){
                     $("#formulario\\.palabras").val("").attr("disabled", true);
                 });
             });
-
             $("#dialog\\.view").modal("show");
         });
     });
@@ -818,7 +784,7 @@ function cargarActividad(){
             let actividad_id = $(this).data("id");
             $("#dialog\\.delete").remove();
             $("#dialog\\.title").html('Eliminar tipo de evento')
-            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el tipo de evento seleccionada?')
+            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el tipo de evento seleccionada?</p>')
             $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + actividad_id + '">Eliminar</button>');
 
             $("#dialog\\.delete").on("click", function(){
@@ -834,7 +800,6 @@ function cargarActividad(){
                     $('#myTab a[href="#home"]').tab('show')
                 });
             });
-
             $("#dialog\\.view").modal("show");
         });
     });
@@ -871,7 +836,7 @@ function cargarLugar(){
             let lugar_id = $(this).data("id");
             $("#dialog\\.delete").remove();
             $("#dialog\\.title").html('Eliminar Lugar')
-            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el lugar seleccionado?')
+            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el lugar seleccionado?</p>')
             $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + lugar_id + '">Eliminar</button>');
 
             $("#dialog\\.delete").on("click", function(){
@@ -887,7 +852,6 @@ function cargarLugar(){
                     $('#myTab a[href="#profile"]').tab('show')
                 });
             });
-
             $("#dialog\\.view").modal("show");
         });
     });
@@ -919,7 +883,7 @@ function cargarParticipante(){
             let participante_id = $(this).data("id");
             $("#dialog\\.delete").remove();
             $("#dialog\\.title").html('Eliminar Participante')
-            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el participante seleccionado?')
+            $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el participante seleccionado?</p>')
             $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + participante_id + '">Eliminar</button>');
 
             $("#dialog\\.delete").on("click", function(){
@@ -932,10 +896,9 @@ function cargarParticipante(){
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                     cargarParticipante();
                     $("#boton\\.configuracion").trigger("click");
-                    $('#myTab a[href="#participante"]').tab('show')
+                    $('#myTab a[href="#participante"]').tab('show');
                 });
             });
-
             $("#dialog\\.view").modal("show");
         });
     });
@@ -964,8 +927,7 @@ function updateCalculos(){
                     }
                 });
 
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
-                
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</th><td>' + item["apunte_activity"] + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 $("#tabla\\.calculos").append(fila);
             });
 
