@@ -5,6 +5,13 @@ $(document).ready(function(){
     cargarTiempo();
     cargarParticipante();
  
+    $("#boton\\.usuarios").on("click", function(){
+        $("#dialog\\.title").html("Listado de usuarios");
+        $("#dialog\\.delete").remove();
+        $("#dialog\\.view").modal("show");
+        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th> <th scope="col">Correo</th></tr></thead> <tbody id="tabla.usuarios"></tbody> </table> </div></div></div>');
+    });
+
     $('#formulario\\.fecha').datepicker().on('changeDate', function(ev) {
         $(this).datepicker('hide');
     });
