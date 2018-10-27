@@ -56,15 +56,15 @@
                                 <form method="post" action="<?php echo Config::get('URL'); ?>register/register_apuntes">
                                     <div class="form-group">
                                         <label>Nombre de usuario <small>(todo junto)</small></label>
-                                        <input type="text" class="form-control" name="user_name" />
+                                        <input type="text" class="form-control" name="user_name" pattern="[a-zA-Z0-9]{2,64}"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Correo</label>
-                                        <input type="text" class="form-control" name="user_email" />
+                                        <input type="email" class="form-control" name="user_email" />
                                     </div>
                                     <div class="form-group">
                                         <label>Repetir correo</label>
-                                        <input type="text" class="form-control" name="user_email_repeat"/>
+                                        <input type="email" class="form-control" name="user_email_repeat"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Contraseña</label>
