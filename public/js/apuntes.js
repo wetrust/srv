@@ -282,7 +282,7 @@ $(document).ready(function(){
             let nombre = $("#formulario\\.nombre").val();
             let fecha  = $("#formulario\\.fecha").val();
             let hora  = $("#formulario\\.hora").val();
-            let minutos = $("#formulario\\.minutos").val("");
+            let minutos = $("#formulario\\.minutos").val();
             let participante = $("#formulario\\.participante").val();
             let palabras  = $("#formulario\\.palabras").val();
             let lugar  = $("#formulario\\.lugar option:selected").text()
