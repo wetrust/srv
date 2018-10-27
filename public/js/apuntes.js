@@ -293,7 +293,7 @@ $(document).ready(function(){
             let fecha  = $("#formulario\\.fecha").val();
             let hora  = $("#formulario\\.hora").val();
             let minutos = $("#formulario\\.minutos").val();
-            let participante = $("#formulario\\.participante").val();
+            let participante = $("#formulario\\.participante option:selected").text()
             let palabras  = $("#formulario\\.palabras").val();
             let lugar  = $("#formulario\\.lugar option:selected").text()
             let cancelacion  = $("#formulario\\.cancelacion option:selected").text()
