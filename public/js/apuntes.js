@@ -18,8 +18,38 @@ $(document).ready(function(){
         $.post("https://servidor.crecimientofetal.cl/apuntes/api", data).done(function(response){
             if (Object.keys(data).length > 0) {
                 $.each(response, function(i, item) {
-                    //let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td class="columna-actividad">' + item["actividad_text"] + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
-                    //$("#tabla\\.usuarios").append(fila);
+                    let fila = '<tr><th scope="row">' + item["user_id"] + '</th><td>' + item["user_name"] + '<td class="columna-user">' + item["user_email"] + '<button type="button" data-id="' + item["user_id"] + '" class="btn btn-outline-warning px-3 eliminar-user float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                    $("#tabla\\.usuarios").append(fila);
+                });
+
+                $(".columna-user").on("mouseenter",function(){
+                    $(this).children("button").removeClass("d-none");
+                }).on("mouseleave", function(){
+                    $(this).children("button").addClass("d-none");
+                });
+        
+                $(".eliminar-user").on("click", function(){
+                    let usuario_id = $(this).data("id");
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Eliminar Usuario')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el usuario?')
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + usuario_id + '">Eliminar</button>');
+        
+                    $("#dialog\\.delete").on("click", function(){
+                        let usuario_id = $(this).data("id");
+                        var solicitud = {
+                            accion: "eliminarUsuario",
+                            id: usuario_id
+                        };
+        
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                            cargarActividad();
+                            $("#boton\\.configuracion").trigger("click");
+                            $('#myTab a[href="#home"]').tab('show')
+                        });
+                    });
+        
+                    $("#dialog\\.view").modal("show");
                 });
             }
         });

@@ -105,6 +105,9 @@ class ApuntesController extends Controller
             case "usuarios":
                 $resultado = UserModel::getPublicProfilesOfAllUsers();
                 break;
+            case "usuarios":
+                $resultado = UserModel::getPublicProfilesOfAllUsers();
+                break;
         }
 
         return $this->View->renderJSON($resultado);
