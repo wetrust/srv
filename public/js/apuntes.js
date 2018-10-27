@@ -54,6 +54,13 @@ $(document).ready(function(){
         });
     });
 
+    $("#boton\\.lista").on("click", function(){
+        cargarTabla();
+    });
+    $("#boton\\.listd").on("click", function(){
+        cargarTabla(1);
+    });
+
     $('#formulario\\.fecha').datepicker().on('changeDate', function(ev) {
         $(this).datepicker('hide');
     });
@@ -646,10 +653,19 @@ function guardarAutomatico(){
     });
 }
 
-function cargarTabla(){
-    var solicitud = {
-        accion: "tabla"
-    };
+function cargarTabla(order = 0){
+    var solicitud = {};
+    if (order == 0){
+        solicitud = {
+            accion: "tabla"
+        };
+    }
+    else{
+        solicitud = {
+            accion: "tablad"
+        };
+    }
+    
 
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
         $("#contenedor\\.tarjetas").empty();
