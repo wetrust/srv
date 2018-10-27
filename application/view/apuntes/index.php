@@ -27,7 +27,7 @@
                     </div>
                 </nav>
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-8">
                         <h5 class="text-success text-center my-2">Nombre</h5>
                     </div>
                     <div class="col-3">
