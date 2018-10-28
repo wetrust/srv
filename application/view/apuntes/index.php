@@ -106,7 +106,9 @@
                                 </div>
                                 <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios relativos al evento; operación, reunión, etc.</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.calculos" title="calculos"><i class="fas fa-calculator"></i></button>
-                                <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 float-right" id="boton.usuarios" title="Usuarios"><i class="fas fa-users"></i></button>
+                                <?php if (Session::get("user_account_type") == 7) : ?>
+                                    <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 float-right" id="boton.usuarios" title="Usuarios"><i class="fas fa-users"></i></button>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
