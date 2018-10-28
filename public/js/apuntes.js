@@ -520,7 +520,7 @@ $(document).ready(function(){
         $("#boton\\.salir").attr("disabled", true);
         $("#boton\\.lista").attr("disabled", true);
         $("#boton\\.listd").attr("disabled", true);
-        $("#contenedor\\.tarjetas").attr("disabled", true);
+        $("#contenedor\\.tarjetas").empty();
     });
 
     $("#boton\\.editar").on("click", function(){
@@ -549,7 +549,7 @@ $(document).ready(function(){
         $("#boton\\.salir").attr("disabled", true);
         $("#boton\\.lista").attr("disabled", true);
         $("#boton\\.listd").attr("disabled", true);
-        $("#contenedor\\.tarjetas").attr("disabled", true);
+        $("#contenedor\\.tarjetas").empty();
     });
 
     $("#boton\\.guardar").on("click", function(){
@@ -584,7 +584,6 @@ $(document).ready(function(){
         $("#boton\\.salir").attr("disabled", false);
         $("#boton\\.lista").attr("disabled", false);
         $("#boton\\.listd").attr("disabled", false);
-        $("#contenedor\\.tarjetas").attr("disabled", false);
     });
 
     $("#boton\\.cancelar").on("click", function(){
@@ -614,7 +613,6 @@ $(document).ready(function(){
         $("#boton\\.salir").attr("disabled", false);
         $("#boton\\.lista").attr("disabled", false);
         $("#boton\\.listd").attr("disabled", false);
-        $("#contenedor\\.tarjetas").attr("disabled", false);
     });
 
     $("#boton\\.salir").on("click", function(){
