@@ -512,11 +512,12 @@ $(document).ready(function(){
         $("#boton\\.nuevo").addClass("d-none");
         $("#boton\\.guardar").removeClass("d-none");
         $("#boton\\.cancelar").removeClass("d-none");
-        
+
         $("#boton\\.home").attr("disabled", true);
         $("#boton\\.configuracion").attr("disabled", true);
         $("#boton\\.buscar").attr("disabled", true);
         $("#boton\\.imprimir").attr("disabled", true);
+        $("#boton\\.salir").attr("disabled", true);
     });
 
     $("#boton\\.editar").on("click", function(){
@@ -537,6 +538,12 @@ $(document).ready(function(){
         $("#formulario\\.valor").attr("disabled", false);
         $("#formulario\\.comentarios").attr("disabled", false);
         $("#formulario\\.palabras").attr("disabled", false);
+
+        $("#boton\\.home").attr("disabled", true);
+        $("#boton\\.configuracion").attr("disabled", true);
+        $("#boton\\.buscar").attr("disabled", true);
+        $("#boton\\.imprimir").attr("disabled", true);
+        $("#boton\\.salir").attr("disabled", true);
     });
 
     $("#boton\\.guardar").on("click", function(){
@@ -563,12 +570,17 @@ $(document).ready(function(){
         $("#formulario\\.valor").attr("disabled", true);
         $("#formulario\\.comentarios").attr("disabled", true);
         $("#formulario\\.palabras").attr("disabled", true);
+
+        $("#boton\\.home").attr("disabled", false);
+        $("#boton\\.configuracion").attr("disabled", false);
+        $("#boton\\.buscar").attr("disabled", false);
+        $("#boton\\.imprimir").attr("disabled", false);
+        $("#boton\\.salir").attr("disabled", false);
     });
 
     $("#boton\\.cancelar").on("click", function(){
 
         cargarTabla();
-
         $("#formulario\\.fecha").attr("disabled", true);
         $("#formulario\\.hora").val("").attr("disabled", true);
         $("#formulario\\.minutos").val("").attr("disabled", true);
@@ -585,6 +597,16 @@ $(document).ready(function(){
         $("#boton\\.guardar").addClass("d-none");
         $("#boton\\.cancelar").addClass("d-none");
         $("#boton\\.home").trigger("click");
+
+        $("#boton\\.home").attr("disabled", false);
+        $("#boton\\.configuracion").attr("disabled", false);
+        $("#boton\\.buscar").attr("disabled", false);
+        $("#boton\\.imprimir").attr("disabled", false);
+        $("#boton\\.salir").attr("disabled", false);
+    });
+
+    $("#boton\\.salir").on("click", function(){
+        window.location.href = "https://servidor.crecimientofetal.cl/login/logoutapuntes";
     });
 });
 
