@@ -494,41 +494,25 @@ $(document).ready(function(){
         var day = ("0" + dateTime.getDate()).slice(-2);
         var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
 
-        var formulario = {
-            accion: "nuevo",
-            fecha: day + "/" + month + "/" + dateTime.getFullYear(),
-            hora: "",
-            participante: "",
-            paciente: "Nuevo evento",
-            actividad: "",
-            lugar: "",
-            cancelacion: "",
-            fcancelacion: day + "/" + month + "/" + dateTime.getFullYear(),
-            valor: "0",
-            comentarios: "",
-            palabras: ""
-        };
-        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-            $("#formulario\\.id").val(data.apunte_id).attr("disabled", false);
-            $("#formulario\\.fecha").val(data.apunte_date).attr("disabled", false);
-            $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
-            $("#formulario\\.hora").val("").attr("disabled", false);
-            $("#formulario\\.minutos").val("").attr("disabled", false);
-            $('#formulario\\.nombre').val("").attr("disabled", false);
-            $("#formulario\\.participante").val("").attr("disabled", false);
-            $("#formulario\\.actividad").val(0).attr("disabled", false);
-            $("#formulario\\.lugar").val("").attr("disabled", false);
-            $("#formulario\\.cancelacion").val("").attr("disabled", false);
-            $("#formulario\\.fcancelacion").val(data.apunte_fcancellation).attr("disabled", false);
-            $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
-            $("#formulario\\.valor").val("0").attr("disabled", false);
-            $("#formulario\\.comentarios").val("").attr("disabled", false);
-            $("#formulario\\.palabras").val("").attr("disabled", false);
-            cargarTabla();
-            $("#boton\\.nuevo").addClass("d-none");
-            $("#boton\\.guardar").removeClass("d-none");
-            $("#boton\\.cancelar").removeClass("d-none");
-        });
+        $("#formulario\\.id").val("9999").attr("disabled", false);
+        $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", false);
+        $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $("#formulario\\.hora").val("").attr("disabled", false);
+        $("#formulario\\.minutos").val("").attr("disabled", false);
+        $('#formulario\\.nombre').val("").attr("disabled", false);
+        $("#formulario\\.participante").val("").attr("disabled", false);
+        $("#formulario\\.actividad").val(0).attr("disabled", false);
+        $("#formulario\\.lugar").val("").attr("disabled", false);
+        $("#formulario\\.cancelacion").val("").attr("disabled", false);
+        $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", false);
+        $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $("#formulario\\.valor").val("0").attr("disabled", false);
+        $("#formulario\\.comentarios").val("").attr("disabled", false);
+        $("#formulario\\.palabras").val("").attr("disabled", false);
+        $("#boton\\.nuevo").addClass("d-none");
+        $("#boton\\.guardar").removeClass("d-none");
+        $("#boton\\.cancelar").removeClass("d-none");
+
     });
 
     $("#boton\\.editar").on("click", function(){
@@ -579,10 +563,6 @@ $(document).ready(function(){
 
     $("#boton\\.cancelar").on("click", function(){
 
-        var dateTime = new Date();
-        var day = ("0" + dateTime.getDate()).slice(-2);
-        var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
-
         cargarTabla();
 
         $("#formulario\\.fecha").attr("disabled", true);
@@ -605,23 +585,47 @@ $(document).ready(function(){
 });
 
 function guardarAutomatico(){
-    var formulario = {
-        accion: "guardar",
-        id: $("#formulario\\.id").val(),
-        fecha: $("#formulario\\.fecha").val(),
-        hora: $("#formulario\\.hora").val(),
-        minutos: $("#formulario\\.minutos").val(),
-        nombre: $('#formulario\\.nombre').val(),
-        participante: $("#formulario\\.participante").val(),
-        actividad: $("#formulario\\.actividad").val(),
-        lugar: $("#formulario\\.lugar").val(),
-        location_name: $("#formulario\\.lugar option:selected").text(),
-        cancelacion: $("#formulario\\.cancelacion").val(),
-        fcancelacion: $("#formulario\\.fcancelacion").val(),
-        valor: $("#formulario\\.valor").val(),
-        comentarios: $("#formulario\\.comentarios").val(),
-        palabras: $("#formulario\\.palabras").val()
-    };
+    id = $("#formulario\\.id").val();
+    var formulario = "";
+
+    if (id == 9999){
+
+        formulario = {
+            accion: "nuevo",
+            fecha: $("#formulario\\.fecha").val(),
+            hora: $("#formulario\\.hora").val(),
+            minutos: $("#formulario\\.minutos").val(),
+            nombre: $('#formulario\\.nombre').val(),
+            participante: $("#formulario\\.participante").val(),
+            actividad: $("#formulario\\.actividad").val(),
+            lugar: $("#formulario\\.lugar").val(),
+            location_name: $("#formulario\\.lugar option:selected").text(),
+            cancelacion: $("#formulario\\.cancelacion").val(),
+            fcancelacion: $("#formulario\\.fcancelacion").val(),
+            valor: $("#formulario\\.valor").val(),
+            comentarios: $("#formulario\\.comentarios").val(),
+            palabras: $("#formulario\\.palabras").val()
+        };
+    }
+    else{
+        formulario = {
+            accion: "guardar",
+            id: $("#formulario\\.id").val(),
+            fecha: $("#formulario\\.fecha").val(),
+            hora: $("#formulario\\.hora").val(),
+            minutos: $("#formulario\\.minutos").val(),
+            nombre: $('#formulario\\.nombre').val(),
+            participante: $("#formulario\\.participante").val(),
+            actividad: $("#formulario\\.actividad").val(),
+            lugar: $("#formulario\\.lugar").val(),
+            location_name: $("#formulario\\.lugar option:selected").text(),
+            cancelacion: $("#formulario\\.cancelacion").val(),
+            fcancelacion: $("#formulario\\.fcancelacion").val(),
+            valor: $("#formulario\\.valor").val(),
+            comentarios: $("#formulario\\.comentarios").val(),
+            palabras: $("#formulario\\.palabras").val()
+        };
+    }
 
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
         $("#formulario\\.id").val(data.apunte_id);
