@@ -512,7 +512,11 @@ $(document).ready(function(){
         $("#boton\\.nuevo").addClass("d-none");
         $("#boton\\.guardar").removeClass("d-none");
         $("#boton\\.cancelar").removeClass("d-none");
-
+        
+        $("#boton\\.home").attr("disabled", true);
+        $("#boton\\.configuracion").attr("disabled", true);
+        $("#boton\\.buscar").attr("disabled", true);
+        $("#boton\\.imprimir").attr("disabled", true);
     });
 
     $("#boton\\.editar").on("click", function(){
