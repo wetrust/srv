@@ -518,6 +518,9 @@ $(document).ready(function(){
         $("#boton\\.buscar").attr("disabled", true);
         $("#boton\\.imprimir").attr("disabled", true);
         $("#boton\\.salir").attr("disabled", true);
+        $("#boton\\.lista").attr("disabled", true);
+        $("#boton\\.listd").attr("disabled", true);
+        $("#contenedor\\.tarjetas").attr("disabled", true);
     });
 
     $("#boton\\.editar").on("click", function(){
@@ -544,6 +547,9 @@ $(document).ready(function(){
         $("#boton\\.buscar").attr("disabled", true);
         $("#boton\\.imprimir").attr("disabled", true);
         $("#boton\\.salir").attr("disabled", true);
+        $("#boton\\.lista").attr("disabled", true);
+        $("#boton\\.listd").attr("disabled", true);
+        $("#contenedor\\.tarjetas").attr("disabled", true);
     });
 
     $("#boton\\.guardar").on("click", function(){
@@ -576,6 +582,9 @@ $(document).ready(function(){
         $("#boton\\.buscar").attr("disabled", false);
         $("#boton\\.imprimir").attr("disabled", false);
         $("#boton\\.salir").attr("disabled", false);
+        $("#boton\\.lista").attr("disabled", false);
+        $("#boton\\.listd").attr("disabled", false);
+        $("#contenedor\\.tarjetas").attr("disabled", false);
     });
 
     $("#boton\\.cancelar").on("click", function(){
@@ -603,6 +612,9 @@ $(document).ready(function(){
         $("#boton\\.buscar").attr("disabled", false);
         $("#boton\\.imprimir").attr("disabled", false);
         $("#boton\\.salir").attr("disabled", false);
+        $("#boton\\.lista").attr("disabled", false);
+        $("#boton\\.listd").attr("disabled", false);
+        $("#contenedor\\.tarjetas").attr("disabled", false);
     });
 
     $("#boton\\.salir").on("click", function(){
@@ -634,6 +646,7 @@ function guardarAutomatico(){
         };
     }
     else{
+
         formulario = {
             accion: "guardar",
             id: $("#formulario\\.id").val(),
