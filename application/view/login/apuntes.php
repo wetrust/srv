@@ -59,7 +59,7 @@
                                         <input type="text" class="form-control" name="user_name" pattern="[a-zA-Z0-9]{2,64}"/>
                                     </div>
                                     <div class="form-group">
-                                        <label>Correo</label>
+                                        <label>Correo electrónico</label>
                                         <input type="email" class="form-control" name="user_email" />
                                     </div>
                                     <div class="form-group">
