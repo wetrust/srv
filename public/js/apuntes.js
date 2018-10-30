@@ -501,7 +501,7 @@ $(document).ready(function(){
         $("#formulario\\.minutos").val("").attr("disabled", false);
         $('#formulario\\.nombre').val("").attr("disabled", false);
         $("#formulario\\.participante").val("").attr("disabled", false);
-        $("#formulario\\.actividad").val(0).attr("disabled", false);
+        $("#formulario\\.actividad").val(5).attr("disabled", false);
         $("#formulario\\.lugar").val("").attr("disabled", false);
         $("#formulario\\.cancelacion").val("").attr("disabled", false);
         $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", false);
