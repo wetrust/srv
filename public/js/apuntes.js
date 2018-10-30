@@ -833,7 +833,7 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").empty();
 
         let option = '<option value="99" selected>Todos</option>';
-        let option2 = '<option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía op.</option><option value="4">Exm. Ecografico</option><option value="5">Reuniones</option>';
+        let option2 = '<option value="5">Reuniones</option><option value="4">Exm. Ecografico</option><option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía op.</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
         $("#formulario\\.actividad").append(option2);
         $("#calculos\\.formulario\\.actividad").append(option2);
