@@ -679,7 +679,7 @@ function guardarAutomatico(){
     }
 
     if (formulario.nombre == ""){
-        formulario.nombre == "NN";
+        formulario.nombre = "NN";
     }
 
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
