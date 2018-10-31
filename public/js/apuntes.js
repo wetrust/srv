@@ -678,6 +678,10 @@ function guardarAutomatico(){
         };
     }
 
+    if (formulario.nombre == ""){
+        formulario.nombre == "NN";
+    }
+
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
         $("#formulario\\.id").val(data.apunte_id);
         $("#formulario\\.fecha").val(data.apunte_date);
