@@ -13,7 +13,7 @@
         <body>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container">
-                    <a class="navbar-brand" href="<?php echo Config::get('URL'); ?>apuntes">Apuntes</a>
+                    <a class="navbar-brand" href="<?php echo Config::get('URL'); ?>apuntes">Apuntes de notas (Reuniones, eventos clínicos, etc.)</a>
                 </div>
             </nav>
             <div class="container mt-3">
