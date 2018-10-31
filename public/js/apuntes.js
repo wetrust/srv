@@ -52,6 +52,12 @@ $(document).ready(function(){
         });
     });
 
+    $("#formulario\\.actividad").on("change", function(){
+        if ($("#boton\\.guardar").hasClass("d-none") == false){
+            $("#formulario\\.nombre").focus();
+        }
+    });
+    
     $("#boton\\.lista").on("click", function(){
         cargarTabla();
     });
