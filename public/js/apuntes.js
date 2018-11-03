@@ -283,17 +283,17 @@ $(document).ready(function(){
 
     $("#boton\\.imprimir").on("click", function(){
         let texto = $("#formulario\\.comentarios").val();
-        let tipo = $("#formulario\\.actividad").val();
+        //let tipo = $("#formulario\\.actividad").val();
 
         if (texto.length > 0){
             let informe = "";
 
-            if (tipo == 5){
-                informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Tipo del evento</strong> :TIPOEV</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA, <strong>Minutos</strong> :MINUTOS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
-            }
-            else{
+            //if (tipo == 5){
+            //    informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Tipo del evento</strong> :TIPOEV</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA, <strong>Minutos</strong> :MINUTOS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
+            //}
+            //else{
                 informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Informe de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"> <div class="row"> <div class="col"> <h4><strong>Tipo del evento</strong> :TIPOEV</h4></div><div class="col"> <h4><strong>Nombre</strong> :NOMBRE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha</strong> :FECHA</h4></div><div class="col"> <h4><strong>Hora</strong> :HORA, <strong>Minutos</strong> :MINUTOS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Primer participantes</strong> :PARTICIPANTE</h4></div></div><div class="row"> <div class="col"> <h4><strong>Otros participantes</strong> :PALABRAS</h4></div></div><div class="row"> <div class="col"> <h4><strong>Lugar del evento</strong> :LUGAR</h4></div></div><div class="row"> <div class="col"> <h4><strong>Cierre del evento</strong> :CANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Fecha de cancelación</strong> :FCANCELACION</h4></div></div><div class="row"> <div class="col"> <h4><strong>Valor cancelado</strong> :VALOR</h4></div></div><hr style="border-width:4px;"><div class="row"> <div class="col"> <h3><strong>Comentarios generales relativos al evento selecionado</strong></h3><hr style="border-width:4px;"><h5>:COMENTARIOS</h5></div></div><script>:SCRIPT</script></body></html>';
-            }
+            //}
             let tipoev = $("#formulario\\.actividad option:selected").text()
             let nombre = $("#formulario\\.nombre").val();
             let fecha  = $("#formulario\\.fecha").val();
@@ -306,10 +306,10 @@ $(document).ready(function(){
             let fcancelacion = "";
             let valor = "";
             
-            if (tipo !== 5){
+            //if (tipo !== 5){
                 fcancelacion  = $("#formulario\\.fcancelacion").val();
                 valor = $("#formulario\\.valor").val();
-            }
+            //}
 
             let comentarios = $("#formulario\\.comentarios").val().replace(/\r\n|\r|\n/g,"<br />");
             let escript = 'document.addEventListener("DOMContentLoaded",function(event){var ventimp=window;ventimp.print();ventimp.close();});';
@@ -322,10 +322,10 @@ $(document).ready(function(){
             informe = informe.replace(":PALABRAS", palabras);
             informe = informe.replace(":LUGAR", lugar);
             informe = informe.replace(":CANCELACION", cancelacion);
-            if (tipo !== 5){
+            //if (tipo !== 5){
                 informe = informe.replace(":FCANCELACION", fcancelacion);
                 informe = informe.replace(":VALOR", valor);
-            }
+            //}
             informe = informe.replace(":COMENTARIOS", comentarios);
             informe = informe.replace(":SCRIPT", escript);
 
@@ -380,8 +380,74 @@ $(document).ready(function(){
                     
                     $("#dialog\\.footer").children("button").addClass("d-none");
                     $("#dialog\\.delete").on("click", function(){
+                        let que = $(this).data("id");
+                        var formulario = {};
 
-                        var formulario = {
+                        if (que == 1){
+
+                            formulario = {
+                                accion: "nuevoActividad",
+                                actividad_text: "Reuniones",
+                                actividad_preset: 1,
+                                actividad_apuntes: "--TEMARIO<br /><br />--PARTICIPANTES<br /><br />--CONCLUSIONES"
+                            }
+                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                
+                                formulario = {
+                                    accion: "nuevoActividad",
+                                    actividad_text: "Exm. Ecografico",
+                                    actividad_preset: 1,
+                                    actividad_apuntes: "-- FUR :<br />-- EGE:<br /><br />ECOGRAFIA 1° TRIMESTRE<br />-- SACO :<br />-- EMBRIÓN :<br />-- ANEXOS :<br />-- DOUGLAS :<br /><br />ECOGRAFIA 2° - 3° TRIMESTRE<br />-- DESCRIPCIÓN GENERAL:<br />-- PLACENTA :<br />-- LIQUIDO AMNIÓTICO :<br />-- ASPECTO MORFOLÓGICO:<br /><br />BIOMETRIA FETAL<br />-- DBP :<br />-- DOF :<br />-- CC :<br />-- CA :<br />-- LF :<br />-- LH :<br /><br />DOPPLER MATERNO / FETAL<br />-- UT. DERECHA<br />-- UT. IZQUIERDA<br />-- PROMEDIO UT.<br />-- UMBILICAL<br />-- C. MEDIA<br />-- CUOCIENTE CP<br /><br />CONCLUSIÓN ECOGRAFICA:"
+                                }
+                            
+                                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                    
+                                    formulario = {
+                                        accion: "nuevoActividad",
+                                        actividad_text: "Parto cesárea",
+                                        actividad_preset: 1,
+                                        actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Obstetra       :<br /><br />- Matrona       :<br /><br />- Pediatra       :<br /><br />- Anestesista :<br /><br />- Ayudante     :<br /><br />- Arsenalera   :"
+                                    }
+
+                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                        
+                                        formulario = {
+                                            accion: "nuevoActividad",
+                                            actividad_text: "Parto vaginal",
+                                            actividad_preset: 1,
+                                            actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Obstetra       :<br /><br />- Matrona       :<br /><br />- Pediatra       :<br /><br />- Anestesista :"
+                                        }
+                                    
+                                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                            
+                                            formulario = {
+                                                accion: "nuevoActividad",
+                                                actividad_text: "Otra operación",
+                                                actividad_preset: 1,
+                                                actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Cirujano            :<br /><br />- Ayudante           :<br /><br />- Anestesista       :<br /><br />- Arsenalera          :"
+                                            }
+                                        
+                                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                                
+                                                formulario = {
+                                                    accion: "nuevoActividad",
+                                                    actividad_text: "Ayudantía op.",
+                                                    actividad_preset: 1,
+                                                    actividad_apuntes: "- CIRUJANO DR      :<br /><br />- DIAGNOSTICO     :<br /><br />- OPERACIÓN         :<br /><br />- PREVISIÓN           :"
+                                                }
+                                            
+                                                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                                    $("#boton\\.configuracion").trigger("click");
+                                                    $("#dialog\\.footer").children("button").removeClass("d-none");
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        }
+
+                        formulario = {
                             accion: "predeterminadosChange"
                         };
                 
@@ -390,8 +456,6 @@ $(document).ready(function(){
                                 if (data.resultado == false){
                                     alert("Hubo un error al procesar");
                                 }
-                                $("#boton\\.configuracion").trigger("click");
-                                $("#dialog\\.footer").children("button").removeClass("d-none");
                             }
                         });
                     });
@@ -427,36 +491,6 @@ $(document).ready(function(){
             $("#boton\\.actividad\\.guardar").addClass("d-none");
             $("#boton\\.actividad\\.cancelar").addClass("d-none");
 
-            if ($("#actividad\\.texto").val() == 'Parto cesárea'){
-                alert("no puede crear una opcion que se llama operacion cesárea, ya existe una con ese nombre");
-                $("#actividad\\.texto").val("");
-                return;
-            }
-            if ($("#actividad\\.texto").val() == 'Parto vaginal'){
-                alert("no puede crear una opcion que se llama Parto vaginal, ya existe una con ese nombre");
-                $("#actividad\\.texto").val("");
-                return;
-            }
-            if ($("#actividad\\.texto").val() == 'Otra operación'){
-                alert("no puede crear una opcion que se llama Otra operación, ya existe una con ese nombre");
-                $("#actividad\\.texto").val("");
-                return;
-            }
-            if ($("#actividad\\.text").val() == 'Ayudantía op.'){
-                alert("no puede crear una opcion que se llama Ayudantía operatoria, ya existe una con ese nombre");
-                $("#actividad\\.texto").val("");
-                return;
-            }
-            if ($("#actividad\\.text").val() == 'Exm. Ecografico'){
-                alert("no puede crear una opcion que se llama Ayudantía operatoria, ya existe una con ese nombre");
-                $("#actividad\\.texto").val("");
-                return;
-            }
-            if ($("#actividad\\.text").val() == 'Reuniones'){
-                alert("no puede crear una opcion que se llama Reuniones, ya existe uno con ese nombre");
-                $("#actividad\\.texto").val("");
-                return;
-            }
             let predefinido = $("#actividad\\.predefinido").is(":checked") == true ? 1 : 0;
             var formulario = {
                 accion: "nuevoActividad",
@@ -905,10 +939,7 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").empty();
 
         let option = '<option value="99" selected>Todos</option>';
-        let option2 = '<option value="5">Reuniones</option><option value="4">Exm. Ecografico</option><option value="0">Parto cesárea</option><option value="1">Parto vaginal</option><option value="2">Otra operación</option><option value="3">Ayudantía op.</option>';
         $("#calculos\\.formulario\\.actividad").append(option);
-        $("#formulario\\.actividad").append(option2);
-        $("#calculos\\.formulario\\.actividad").append(option2);
 
         $.each(data, function(i, item) {
             let alternativa = parseInt(item["actividad_preset"]) == 0 ? "No" : "Si";
