@@ -286,7 +286,7 @@ class ApuntesModel
      * @param string $actividad_text actividad text that will be created
      * @return bool feedback (was the actividad created properly ?)
      */
-    public static function createActividad($actividad_text)
+    public static function createActividad($actividad_text, $actividad_preset, $actividad_apuntes)
     {
         if (!$actividad_text || strlen($actividad_text) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
@@ -295,9 +295,9 @@ class ApuntesModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO actividades (actividad_text, user_id) VALUES (:actividad_text, :user_id)";
+        $sql = "INSERT INTO actividades (actividad_text, actividad_preset, actividad_apuntes, user_id) VALUES (:actividad_text, :actividad_preset, :actividad_apuntes,:user_id)";
         $query = $database->prepare($sql);
-        $query->execute(array(':actividad_text' => $actividad_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':actividad_text' => $actividad_text, ':actividad_preset' => $actividad_preset,':actividad_apuntes' => $actividad_apuntes,':user_id' => Session::get('user_id')));
 
         if ($query->rowCount() == 1) {
             return true;
