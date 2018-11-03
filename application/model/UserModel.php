@@ -100,7 +100,7 @@ class UserModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         $query = $database->prepare("SELECT user_actividad FROM users WHERE user_id = :user_id LIMIT 1");
-        $query->execute(array(':user_id' => $user_id));
+        $query->execute(array(':user_id' => Session::get('user_id')));
 
         return $query->fetch();
     }
