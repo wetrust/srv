@@ -273,7 +273,7 @@ class ApuntesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT actividad_id, actividad_text, actividad_preset FROM actividades WHERE user_id = :user_id AND actividad_id = :actividad_id LIMIT 1";
+        $sql = "SELECT actividad_id, actividad_text, actividad_preset, actividad_apuntes FROM actividades WHERE user_id = :user_id AND actividad_id = :actividad_id LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':user_id' => Session::get('user_id'), ':actividad_id' => $actividad_id));
 

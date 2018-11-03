@@ -63,6 +63,9 @@ class ApuntesController extends Controller
             case "actividad":
                 $resultado = ApuntesModel::getAllActividades();
                 break;
+            case "actividadUna":
+                $resultado = ApuntesModel::getActividad(Request::post('id'));
+                break;
             case "nuevoActividad":
                 $resultado = ApuntesModel::createActividad(Request::post('actividad_text'),Request::post('actividad_preset'),Request::post('actividad_apuntes'));
                 break;
