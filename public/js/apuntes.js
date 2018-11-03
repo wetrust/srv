@@ -366,7 +366,7 @@ $(document).ready(function(){
 
         $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
             if (Object.keys(data).length > 0) {
-                $(this).prop("checked", parseBool(parseInt(data.user_actividad)));
+                $(this).prop("checked", parseInt(data.user_actividad) === 1 ? true : false);
                 $('#actividad\\.preset').on("click", function(){
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Configuración predeterminada para Tipo de evento');
