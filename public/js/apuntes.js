@@ -461,7 +461,7 @@ $(document).ready(function(){
                 accion: "nuevoActividad",
                 actividad_text: $("#actividad\\.texto").val(),
                 actividad_preset: $("#actividad\\.predefinido").is("checked") == true ? 1 : 0,
-                actividad_apuntes: $("#actividad\\.text\\.default").val()
+                actividad_apuntes: $("#actividad\\.text\\.default").val().replace(/\r\n|\r|\n/g,"<br />")
             };
 
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
