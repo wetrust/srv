@@ -367,6 +367,28 @@ $(document).ready(function(){
         $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
             if (Object.keys(data).length > 0) {
                 $('#actividad\\.preset').val(parseInt(data.user_actividad));
+                $('#actividad\\.preset').on("click", function(){
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Configuración predeterminada para Tipo de evento');
+                    if ($(this).val() == 0){
+                        $("#dialog\\.body").html('<p class="text-center">¿Desea añadir la configuración predeterminada para tipo de evento?</p>');
+                    }
+                    else{
+                        $("#dialog\\.body").html('<p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p>');
+                    }
+                    
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() +'">SI</button>');
+                    var valor =  $(this).val() == 0 ? 1 : 0; 
+                    $(this).val(valor);
+                    $("#dialog\\.delete").on("click", function(){
+                        if ($(this).data(id) == 0){
+                            alert("añadido");
+                        }else{
+                            $alert("eliminado");
+                        }
+                    });
+                    $("#dialog\\.view").modal("show");
+                });
             }
         });
 
