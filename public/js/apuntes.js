@@ -459,6 +459,11 @@ $(document).ready(function(){
                             });
                         }
                         else{
+
+                            $("#formulario\\.actividad").each(function(i,data){
+                                alert(i);
+                                alert(data);
+                            });
                             formulario = {
                                 accion: "predeterminadosChange"
                             };
