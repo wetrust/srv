@@ -111,6 +111,9 @@ class ApuntesController extends Controller
             case "eliminarUsuario":
                 $resultado = UserModel::deleteUser(Request::post('id'));
                 break;
+            case "predeterminados":
+                $resultado = UserModel::actividadPreset();
+                break;
         }
 
         return $this->View->renderJSON($resultado);

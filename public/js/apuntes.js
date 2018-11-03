@@ -358,6 +358,18 @@ $(document).ready(function(){
         cargarActividad();
         cargarLugar();
         cargarParticipante();
+
+        //verificar si cargo preset
+        var formulario = {
+            accion: "predeterminados"
+        };
+
+        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+            if (Object.keys(data).length > 0) {
+                $('#actividad\\.preset').val(data.user_actividad);
+            }
+        });
+
         $("#boton\\.actividad\\.nuevo").on("click", function(){
             $("#div\\.actividad").removeClass("d-none");
             $("#boton\\.actividad\\.nuevo").addClass("d-none");
