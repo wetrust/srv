@@ -437,8 +437,20 @@ $(document).ready(function(){
                                                 }
                                             
                                                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                                    $("#boton\\.configuracion").trigger("click");
-                                                    $("#dialog\\.footer").children("button").removeClass("d-none");
+                                                    
+                                                    formulario = {
+                                                        accion: "predeterminadosChange"
+                                                    };
+                                            
+                                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                                        if (Object.keys(data).length > 0) {
+                                                            if (data.resultado == false){
+                                                                alert("Hubo un error al procesar");
+                                                            }
+                                                            $("#boton\\.configuracion").trigger("click");
+                                                            $("#dialog\\.footer").children("button").removeClass("d-none");
+                                                        }
+                                                    });
                                                 });
                                             });
                                         });
@@ -446,18 +458,21 @@ $(document).ready(function(){
                                 });
                             });
                         }
-
-                        formulario = {
-                            accion: "predeterminadosChange"
-                        };
-                
-                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                            if (Object.keys(data).length > 0) {
-                                if (data.resultado == false){
-                                    alert("Hubo un error al procesar");
+                        else{
+                            formulario = {
+                                accion: "predeterminadosChange"
+                            };
+                    
+                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                                if (Object.keys(data).length > 0) {
+                                    if (data.resultado == false){
+                                        alert("Hubo un error al procesar");
+                                    }
+                                    $("#boton\\.configuracion").trigger("click");
+                                    $("#dialog\\.footer").children("button").removeClass("d-none");
                                 }
-                            }
-                        });
+                            });
+                        }
                     });
                     $("#dialog\\.cancel").on("click", function(){
                         $("#boton\\.configuracion").trigger("click");
