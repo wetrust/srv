@@ -457,7 +457,7 @@ $(document).ready(function(){
                 $("#actividad\\.texto").val("");
                 return;
             }
-            let predefinido = $("#actividad\\.predefinido").is("checked") == true ? 1 : 0;
+            let predefinido = $("#actividad\\.predefinido").is(":checked") == true ? 1 : 0;
             var formulario = {
                 accion: "nuevoActividad",
                 actividad_text: $("#actividad\\.texto").val(),
