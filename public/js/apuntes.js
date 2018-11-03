@@ -371,10 +371,10 @@ $(document).ready(function(){
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Configuración predeterminada para Tipo de evento');
                     if ($(this).val() == 0){
-                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Desea añadir realmente la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() + '">SI</button> </div></div>');
+                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() + '">SI</button> </div></div>');
                     }
                     else{
-                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() + '">SI</button> </div></div>');
+                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Desea añadir realmente la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() + '">SI</button> </div></div>');
                     }
                     
                     $("#dialog\\.footer").children("button").addClass("d-none");
