@@ -381,7 +381,7 @@ $(document).ready(function(){
                     var valor =  $(this).val() == 0 ? 1 : 0; 
                     $(this).val(valor);
                     $("#dialog\\.delete").on("click", function(){
-                        if ($(this).data(id) == 0){
+                        if ($(this).data('id') == 0){
                             alert("añadido");
                         }else{
                             $alert("eliminado");
