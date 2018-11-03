@@ -122,9 +122,9 @@ class UserModel
             $resultado->result = true;
             return $resultado;
         }
-        
+
         $resultado->result = false;
-        return $resultado
+        return $resultado;
     }
 
     /**
