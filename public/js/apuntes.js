@@ -908,7 +908,8 @@ function cargarActividad(){
         $("#calculos\\.formulario\\.actividad").append(option2);
 
         $.each(data, function(i, item) {
-            let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td>' + item["actividad_text"] + '</td><td class="columna-actividad">'+ item["actividad_preset"] == 0 ? "No" : "Si" + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+            let alternativa = item["actividad_preset"] == 0 ? "No" : "Si";
+            let fila = '<tr><th scope="row">' + item["actividad_id"] + '</th><td>' + item["actividad_text"] + '</td><td class="columna-actividad">' + alternativa + '<button type="button" data-id="' + item["actividad_id"] + '" class="btn btn-outline-warning px-3 eliminar-actividad float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
             let option = '<option value="'+ item["actividad_id"]+'">' +item["actividad_text"]+'</option>';
             $("#tabla\\.actividad").append(fila);
             $("#formulario\\.actividad").append(option);
