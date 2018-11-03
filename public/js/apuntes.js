@@ -371,15 +371,13 @@ $(document).ready(function(){
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Configuración predeterminada para Tipo de evento');
                     if ($(this).val() == 0){
-                        $("#dialog\\.body").html('<p class="text-center">¿Desea añadir la configuración predeterminada para tipo de evento?</p>');
+                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Desea añadir la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel" data-id="0">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="0">SI</button> </div></div>');
                     }
                     else{
-                        $("#dialog\\.body").html('<p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p>');
+                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel" data-id="0">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="0">SI</button> </div></div>');
                     }
                     
                     $("#dialog\\.footer").children("button").addClass("d-none");
-                    $("#dialog\\.body").append('<button type="button" class="btn btn-primary" id="dialog.cancel" data-id="' + $(this).val() +'">NO</button>');
-                    $("#dialog\\.body").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() +'">SI</button>');
                     var valor =  $(this).val() == 0 ? 1 : 0; 
                     $(this).val(valor);
                     $("#dialog\\.delete").on("click", function(){
