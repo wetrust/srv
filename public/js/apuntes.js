@@ -366,7 +366,7 @@ $(document).ready(function(){
 
         $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
             if (Object.keys(data).length > 0) {
-                $('#actividad\\.preset').val(data.user_actividad);
+                $('#actividad\\.preset').val(parseInt(data.user_actividad));
             }
         });
 
