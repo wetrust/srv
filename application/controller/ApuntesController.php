@@ -114,6 +114,9 @@ class ApuntesController extends Controller
             case "predeterminados":
                 $resultado = UserModel::actividadPreset();
                 break;
+            case "predeterminadosChange":
+                $resultado = UserModel::actividadPresetChange();
+                break;
         }
 
         return $this->View->renderJSON($resultado);

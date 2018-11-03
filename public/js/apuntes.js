@@ -371,7 +371,7 @@ $(document).ready(function(){
                     $("#dialog\\.delete").remove();
                     $("#dialog\\.title").html('Configuración predeterminada para Tipo de evento');
                     if ($(this).val() == 0){
-                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Desea añadir la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() + '">SI</button> </div></div>');
+                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Desea añadir realmente la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() + '">SI</button> </div></div>');
                     }
                     else{
                         $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() + '">SI</button> </div></div>');
@@ -379,13 +379,20 @@ $(document).ready(function(){
                     
                     $("#dialog\\.footer").children("button").addClass("d-none");
                     $("#dialog\\.delete").on("click", function(){
-                        if ($(this).data('id') == 0){
-                            alert("añadido");
-                        }else{
-                            $alert("eliminado");
-                        }
-                        $("#boton\\.configuracion").trigger("click");
-                        $("#dialog\\.footer").children("button").removeClass("d-none");
+
+                        var formulario = {
+                            accion: "predeterminadosChange"
+                        };
+                
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+                            if (Object.keys(data).length > 0) {
+                                if (data.resultado == false){
+                                    alert("Hubo un error al procesar");
+                                }
+                                $("#boton\\.configuracion").trigger("click");
+                                $("#dialog\\.footer").children("button").removeClass("d-none");
+                            }
+                        });
                     });
                     $("#dialog\\.cancel").on("click", function(){
                         $("#boton\\.configuracion").trigger("click");
