@@ -412,7 +412,7 @@ $(document).ready(function(){
         });
 
         $("#actividad\\.predefinido").on("click", function(){
-            if(this.checked == false) {
+            if(this.checked) {
                 $(this).parent().children("label").text("Si");
                 $("#div\\.actividad\\.text").removeClass("d-none");
             }else{
