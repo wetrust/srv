@@ -377,6 +377,8 @@ $(document).ready(function(){
                         $("#dialog\\.body").html('<p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p>');
                     }
                     
+                    $("#dialog\\.footer").children("button").addClass("d-none");
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-primary" id="dialog.cancel" data-id="' + $(this).val() +'">NO</button>');
                     $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + $(this).val() +'">SI</button>');
                     var valor =  $(this).val() == 0 ? 1 : 0; 
                     $(this).val(valor);
@@ -386,6 +388,16 @@ $(document).ready(function(){
                         }else{
                             $alert("eliminado");
                         }
+                        $("#boton\\.configuracion").trigger("click");
+                        $("#dialog\\.delete").remove();
+                        $("#dialog\\.cancel").remove();
+                        $("#dialog\\.footer").children("button").removeClass("d-none");
+                    });
+                    $("#dialog\\.cancel").on("click", function(){
+                        $("#boton\\.configuracion").trigger("click");
+                        $("#dialog\\.delete").remove();
+                        $("#dialog\\.cancel").remove();
+                        $("#dialog\\.footer").children("button").removeClass("d-none");
                     });
                     $("#dialog\\.view").modal("show");
                 });
