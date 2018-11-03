@@ -119,7 +119,7 @@ $(document).ready(function(){
                 if (Object.keys(data).length > 0) {
                     let alternativa = parseInt(data.actividad_preset) == 0 ? false : true;
                     if (alternativa){
-                        $("#formulario\\.comentarios").val(data.actividad_apuntes.replace("<br />","\n"));
+                        $("#formulario\\.comentarios").val(data.actividad_apuntes.replace(/<br \/>/g,"\n"));
                     }
                 }
             });
