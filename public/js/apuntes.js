@@ -460,10 +460,18 @@ $(document).ready(function(){
                         }
                         else{
 
-                            $("#formulario\\.actividad").each(function(i,data){
-                                alert(i);
-                                alert(data);
+                            $("#formulario\\.actividad option").each(function(i){
+                                if ($(this).text() == "Reuniones" || $(this).text() == "Exm. Ecografico" || $(this).text() == "Parto cesárea" || $(this).text() == "Parto vaginal" || $(this).text() == "Otra operación" || $(this).text() == "Ayudantía op."){
+                                    var solicitud = {
+                                        accion: "eliminarActividad",
+                                        id: $(this).val()
+                                    };
+                    
+                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                                    });
+                                }
                             });
+
                             formulario = {
                                 accion: "predeterminadosChange"
                             };
