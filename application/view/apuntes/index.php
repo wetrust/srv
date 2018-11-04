@@ -95,12 +95,12 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="formulario.paciente"><strong>Nombre</strong></label>
+                                            <label for="formulario.paciente"><strong>Nombre</strong> <small>(identificación de registro)</small></label>
                                             <input class="form-control" id="formulario.nombre" type="text" disabled>
                                         </div>
                                     </div>
                                     <div class="col-6">
-                                        <label for="formulario.paciente"><strong>Usuario</strong></label>
+                                        <label for="formulario.paciente"><strong>Correo</strong> <small>(identificación de usuario)</small></label>
                                         <input class="form-control" type="text" value="<?php echo Session::get('user_email'); ?>" disabled>
                                     </div>
                                 </div>
