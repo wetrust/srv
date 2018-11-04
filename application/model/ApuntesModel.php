@@ -34,6 +34,37 @@ class ApuntesModel
         return $query->fetchAll();
     }
 
+
+    public static function convertAllApuntes()
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT  apunte_id, apunte_date, apunte_fcancellation FROM apuntes";
+        $query = $database->prepare($sql);
+        $query->execute();
+
+        $Apuntes = $query->fetchAll();
+
+        foreach ($Apuntes as &$valor) {
+            $valor->apunte_date = explode("-", $valor->apunte_date);
+            $valor->apunte_date =  $valor->apunte_date[2] . "-". $valor->apunte_date[1] . "-" . $valor->apunte_date[0];
+            $valor->apunte_fcancellation = explode("-", $valor->apunte_fcancellation);
+            $valor->apunte_date =  $valor->apunte_fcancellation[2] . "-". $valor->apunte_fcancellation[1] . "-" . $valor->apunte_fcancellation[0];
+        
+            self::updateAApunte($valor->apunte_id, $valor->apunte_date, $valor->apunte_fcancellation);
+        }
+    }
+
+    public static function updateAApunte($apunte_id, $apunte_date,$apunte_fcancellation)
+    {
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_fcancellation = :apunte_fcancellation WHERE apunte_id = :apunte_id"; 
+        $query = $database->prepare($sql);
+        $query->execute(array(':apunte_date' => $apunte_date, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_id' => $apunte_id);
+    }
+
     public static function getAllApuntesDate()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
