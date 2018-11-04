@@ -81,14 +81,14 @@ $(document).ready(function(){
         $("#dialog\\.title").html("Tabla resumen según fechas y/o eventos");
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
-        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha inicial</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd/mm/yyyy"></div></div><div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha final</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd/mm/yyyy"></div></div></div><div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th><th scope="col">Tipo de evento</th> <th scope="col">Fecha</th> <th scope="col">Primer participante</th><th scope="col">Valor cancelado</th> </tr></thead> <tbody id="tabla.calculos"></tbody> </table> </div></div></div><div class="row"><div class="col-4"> <div class="form-group"><label for="calculos.formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div> <div class="col-4"> <div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div><div class="col-4"> <div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"><option value="99">Todos</option><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div></div></div>');
+        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha inicial</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd-mm-yyyy"></div></div><div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha final</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd-mm-yyyy"></div></div></div><div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th><th scope="col">Tipo de evento</th> <th scope="col">Fecha</th> <th scope="col">Primer participante</th><th scope="col">Valor cancelado</th> </tr></thead> <tbody id="tabla.calculos"></tbody> </table> </div></div></div><div class="row"><div class="col-4"> <div class="form-group"><label for="calculos.formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div> <div class="col-4"> <div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div><div class="col-4"> <div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"><option value="99">Todos</option><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div></div></div>');
 
         cargarActividad();
         cargarLugar();
-        $("#calculos\\.fecha\\.uno").val(day + "/" + month + "/" + dateTime.getFullYear());
-        $("#calculos\\.fecha\\.uno").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
-        $("#calculos\\.fecha\\.dos").val(day + "/" + month + "/" + dateTime.getFullYear());
-        $("#calculos\\.fecha\\.dos").datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $("#calculos\\.fecha\\.uno").val(day + "-" + month + "-" + dateTime.getFullYear());
+        $("#calculos\\.fecha\\.uno").datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
+        $("#calculos\\.fecha\\.dos").val(day + "-" + month + "-" + dateTime.getFullYear());
+        $("#calculos\\.fecha\\.dos").datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
 
         $('#calculos\\.fecha\\.uno').datepicker().on('changeDate', function(ev) {
             $(this).trigger("change");$(this).datepicker('hide');
@@ -133,8 +133,8 @@ $(document).ready(function(){
         var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
 
         $("#formulario\\.id").val("");
-        $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear());
-        $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $("#formulario\\.fecha").val(day + "-" + month + "-" + dateTime.getFullYear());
+        $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
         $('#formulario\\.nombre').val("");
         $("#formulario\\.hora").val("");
         $("#formulario\\.minutos").val("");
@@ -142,8 +142,8 @@ $(document).ready(function(){
         $("#formulario\\.actividad").val("");
         $("#formulario\\.lugar").val("");
         $("#formulario\\.cancelacion").val("");
-        $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear());
-        $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $("#formulario\\.fcancelacion").val(day + "-" + month + "-" + dateTime.getFullYear());
+        $('#formulario\\.fcancelacion').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
         $("#formulario\\.valor").val("0");
         $("#formulario\\.comentarios").val("");
         $("#formulario\\.palabras").val("");
@@ -252,8 +252,8 @@ $(document).ready(function(){
                             var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
         
                             $("#formulario\\.id").val("").attr("disabled", true);
-                            $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
-                            $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                            $("#formulario\\.fecha").val(day + "-" + month + "-" + dateTime.getFullYear()).attr("disabled", true);
+                            $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
                             $("#formulario\\.hora").val("").attr("disabled", true);
                             $("#formulario\\.minutos").val("").attr("disabled", true);
                             $('#formulario\\.nombre').val("").attr("disabled", true);
@@ -261,8 +261,8 @@ $(document).ready(function(){
                             $("#formulario\\.actividad").val("").attr("disabled", true);
                             $("#formulario\\.lugar").val("").attr("disabled", true);
                             $("#formulario\\.cancelacion").val("").attr("disabled", true);
-                            $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
-                            $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                            $("#formulario\\.fcancelacion").val(day + "-" + month + "-" + dateTime.getFullYear()).attr("disabled", true);
+                            $('#formulario\\.fcancelacion').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
                             $("#formulario\\.valor").val("0").attr("disabled", true);
                             $("#formulario\\.comentarios").val("").attr("disabled", true);
                             $("#formulario\\.palabras").val("").attr("disabled", true);
@@ -619,8 +619,8 @@ $(document).ready(function(){
         var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
 
         $("#formulario\\.id").val("9999").attr("disabled", false);
-        $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", false);
-        $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $("#formulario\\.fecha").val(day + "-" + month + "-" + dateTime.getFullYear()).attr("disabled", false);
+        $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
         $("#formulario\\.hora").val("").attr("disabled", false);
         $("#formulario\\.minutos").val("").attr("disabled", false);
         $('#formulario\\.nombre').val("").attr("disabled", false);
@@ -628,8 +628,8 @@ $(document).ready(function(){
         $("#formulario\\.actividad").val(5).attr("disabled", false);
         $("#formulario\\.lugar").val("").attr("disabled", false);
         $("#formulario\\.cancelacion").val("").attr("disabled", false);
-        $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", false);
-        $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+        $("#formulario\\.fcancelacion").val(day + "-" + month + "-" + dateTime.getFullYear()).attr("disabled", false);
+        $('#formulario\\.fcancelacion').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
         $("#formulario\\.valor").val("0").attr("disabled", false);
         $("#formulario\\.comentarios").val("").attr("disabled", false);
         $("#formulario\\.palabras").val("").attr("disabled", false);
@@ -929,8 +929,8 @@ function cargarTabla(order = 0){
                     var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
 
                     $("#formulario\\.id").val("").attr("disabled", true);
-                    $("#formulario\\.fecha").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
-                    $('#formulario\\.fecha').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                    $("#formulario\\.fecha").val(day + "-" + month + "-" + dateTime.getFullYear()).attr("disabled", true);
+                    $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
                     $("#formulario\\.hora").val("").attr("disabled", true);
                     $("#formulario\\.minutos").val("").attr("disabled", true);
                     $('#formulario\\.nombre').val("").attr("disabled", true);
@@ -938,8 +938,8 @@ function cargarTabla(order = 0){
                     $("#formulario\\.actividad").val("").attr("disabled", true);
                     $("#formulario\\.lugar").val("").attr("disabled", true);
                     $("#formulario\\.cancelacion").val("").attr("disabled", true);
-                    $("#formulario\\.fcancelacion").val(day + "/" + month + "/" + dateTime.getFullYear()).attr("disabled", true);
-                    $('#formulario\\.fcancelacion').datepicker('setValue', day + "/" + month + "/" + dateTime.getFullYear());
+                    $("#formulario\\.fcancelacion").val(day + "-" + month + "-" + dateTime.getFullYear()).attr("disabled", true);
+                    $('#formulario\\.fcancelacion').datepicker('setValue', day + "-" + month + "-" + dateTime.getFullYear());
                     $("#formulario\\.valor").val("0").attr("disabled", true);
                     $("#formulario\\.comentarios").val("").attr("disabled", true);
                     $("#formulario\\.palabras").val("").attr("disabled", true);
