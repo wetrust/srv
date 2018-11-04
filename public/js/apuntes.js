@@ -348,147 +348,147 @@ $(document).ready(function(){
         $("#dialog\\.title").html("Configuración");
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
-        $("#dialog\\.body").html('<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item"> <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Tipo de evento</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugar de evento</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#participante" role="tab" aria-controls="participante" aria-selected="false">Primer participante</a> </li></ul><div class="tab-content" id="myTabContent"> <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.lugar.nuevo" title="Nueva lugar"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.cancelar" title="Nueva lugar"><i class="fas fa-ban"></i></button> </div><div class="row d-none" id="div.lugar"> <div class="form-group col"> <label for="lugar.texto">Nombre del Lugar</label> <input type="text" class="form-control" id="lugar.texto"> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del Lugar</th> </tr></thead> <tbody id="tabla.lugar"> </tbody> </table> </div><div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="row"> <div class="col-4"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button> </div></div><div class="col-8 pt-2"> <div class="form-row align-items-center"> <div class="col-auto"> <label>¿Activar configuración predeterminados?</label> </div><div class="col-auto"> <div class="form-check"> <input class="form-check-input" type="checkbox" id="actividad.preset"> <label class="form-check-label" for="actividad.preset">No</label> </div></div></div></div></div><div id="div.actividad" class="row border border-primary my-3 mx-0 d-none"> <div class="form-group col"> <label for="actividad.texto">1.- Nombre del tipo de evento</label> <input type="text" class="form-control" id="actividad.texto"> </div><div class="form-group col"> <label for="actividad.predefinido">2.- ¿Incluye texto predefinido?</label><div class="form-check"> <input class="form-check-input" type="checkbox" id="actividad.predefinido"><label for="actividad.predefinido">No</label></div></div><div class="form-group col-12 d-none" id="div.actividad.text"> <label for="actividad.text.default">3.- Comentarios relativos al evento; operación, reunión, etc. Predeterminado</label><textarea id="actividad.text.default" class="form-control border" rows="10"></textarea> </div></div><table class="table table-hover"> <thead class="table-success"> <tr><th scope="col">Nombre del tipo de evento</th> <th scope="col">Texto Predefinido</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade" id="participante" role="tabpanel" aria-labelledby="participante-tab"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.participante.nuevo" title="Nuevo participante"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.participante.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.participante.cancelar" title="Nueva lugar"><i class="fas fa-ban"></i></button> </div><div class="row d-none" id="div.participante"> <div class="form-group col"> <label for="participante.texto">Nombre del participante</label> <input type="text" class="form-control" id="participante.texto"> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del participante</th> </tr></thead> <tbody id="tabla.participante"> </tbody> </table> </div></div>');
+        $("#dialog\\.body").html('<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item"> <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Tipo de evento</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lugar de evento</a> </li><li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#participante" role="tab" aria-controls="participante" aria-selected="false">Primer participante</a> </li></ul><div class="tab-content" id="myTabContent"> <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.lugar.nuevo" title="Nueva lugar"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.lugar.cancelar" title="Nueva lugar"><i class="fas fa-ban"></i></button> </div><div class="row d-none" id="div.lugar"> <div class="form-group col"> <label for="lugar.texto">Nombre del Lugar</label> <input type="text" class="form-control" id="lugar.texto"> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del Lugar</th> </tr></thead> <tbody id="tabla.lugar"> </tbody> </table> </div><div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="row"> <div class="col-4"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.actividad.nuevo" title="Nueva actividad"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.guardar" title="Nueva actividad"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.actividad.cancelar" title="Nueva actividad"><i class="fas fa-ban"></i></button> </div></div><div class="col-8 pt-2"> <div class="form-row align-items-center"></div></div></div><div id="div.actividad" class="row border border-primary my-3 mx-0 d-none"> <div class="form-group col"> <label for="actividad.texto">1.- Nombre del tipo de evento</label> <input type="text" class="form-control" id="actividad.texto"> </div><div class="form-group col"> <label for="actividad.predefinido">2.- ¿Incluye texto predefinido?</label><div class="form-check"> <input class="form-check-input" type="checkbox" id="actividad.predefinido"><label for="actividad.predefinido">No</label></div></div><div class="form-group col-12 d-none" id="div.actividad.text"> <label for="actividad.text.default">3.- Comentarios relativos al evento; operación, reunión, etc. Predeterminado</label><textarea id="actividad.text.default" class="form-control border" rows="10"></textarea> </div></div><table class="table table-hover"> <thead class="table-success"> <tr><th scope="col">Nombre del tipo de evento</th> <th scope="col">Texto Predefinido</th> </tr></thead> <tbody id="tabla.actividad"> </tbody> </table> </div><div class="tab-pane fade" id="participante" role="tabpanel" aria-labelledby="participante-tab"> <div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.participante.nuevo" title="Nuevo participante"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.participante.guardar" title="Nueva lugar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.participante.cancelar" title="Nueva lugar"><i class="fas fa-ban"></i></button> </div><div class="row d-none" id="div.participante"> <div class="form-group col"> <label for="participante.texto">Nombre del participante</label> <input type="text" class="form-control" id="participante.texto"> </div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">#</th> <th scope="col">Nombre del participante</th> </tr></thead> <tbody id="tabla.participante"> </tbody> </table> </div></div>');
         cargarActividad();
         cargarLugar();
         cargarParticipante();
 
         //verificar si cargo preset
-        var formulario = {
-            accion: "predeterminados"
-        };
+        //var formulario = {
+        //    accion: "predeterminados"
+        //};
 
-        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-            if (Object.keys(data).length > 0) {
-                $('#actividad\\.preset').prop("checked", parseInt(data.user_actividad) === 1 ? true : false);
-                $('#actividad\\.preset').parent().children("label").text(parseInt(data.user_actividad) === 1 ? "Si" : "No");
-                $('#actividad\\.preset').on("click", function(){
-                    $("#dialog\\.delete").remove();
-                    $("#dialog\\.title").html('Configuración predeterminada para Tipo de evento');
-                    if(this.checked == false) {
-                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="0">SI</button> </div></div>');
-                    }
-                    else{
-                        $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Desea añadir configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="1">SI</button> </div></div>');
-                    }
-                    
-                    $("#dialog\\.footer").children("button").addClass("d-none");
-                    $("#dialog\\.delete").on("click", function(){
-                        let que = $(this).data("id");
-                        var formulario = {};
+        //$.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //    if (Object.keys(data).length > 0) {
+        //        $('#actividad\\.preset').prop("checked", parseInt(data.user_actividad) === 1 ? true : false);
+        //        $('#actividad\\.preset').parent().children("label").text(parseInt(data.user_actividad) === 1 ? "Si" : "No");
+        //        $('#actividad\\.preset').on("click", function(){
+        //            $("#dialog\\.delete").remove();
+        //            $("#dialog\\.title").html('Configuración predeterminada para Tipo de evento');
+        //            if(this.checked == false) {
+        //                $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Está seguro de eliminar la configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="0">SI</button> </div></div>');
+        //            }
+        //            else{
+        //                $("#dialog\\.body").html('<div class="row"> <div class="col-8"> <p class="text-center">¿Desea añadir configuración predeterminada para tipo de evento?</p></div><div class="col-4"><button type="button" class="btn btn-primary" id="dialog.cancel">NO</button><button type="button" class="btn btn-danger" id="dialog.delete" data-id="1">SI</button> </div></div>');
+        //            }
+        //            
+        //            $("#dialog\\.footer").children("button").addClass("d-none");
+        //            $("#dialog\\.delete").on("click", function(){
+        //                let que = $(this).data("id");
+        //                var formulario = {};
 
-                        if (que == 1){
+        //                if (que == 1){
 
-                            formulario = {
-                                accion: "nuevoActividad",
-                                actividad_text: "Reuniones",
-                                actividad_preset: 1,
-                                actividad_apuntes: "--TEMARIO<br /><br />--PARTICIPANTES<br /><br />--CONCLUSIONES"
-                            }
-                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                    formulario = {
+        //                        accion: "nuevoActividad",
+        //                        actividad_text: "Reuniones",
+        //                        actividad_preset: 1,
+        //                        actividad_apuntes: "--TEMARIO<br /><br />--PARTICIPANTES<br /><br />--CONCLUSIONES"
+        //                    }
+        //                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                                 
-                                formulario = {
-                                    accion: "nuevoActividad",
-                                    actividad_text: "Exm. Ecografico",
-                                    actividad_preset: 1,
-                                    actividad_apuntes: "-- FUR :<br />-- EGE:<br /><br />ECOGRAFIA 1° TRIMESTRE<br />-- SACO :<br />-- EMBRIÓN :<br />-- ANEXOS :<br />-- DOUGLAS :<br /><br />ECOGRAFIA 2° - 3° TRIMESTRE<br />-- DESCRIPCIÓN GENERAL:<br />-- PLACENTA :<br />-- LIQUIDO AMNIÓTICO :<br />-- ASPECTO MORFOLÓGICO:<br /><br />BIOMETRIA FETAL<br />-- DBP :<br />-- DOF :<br />-- CC :<br />-- CA :<br />-- LF :<br />-- LH :<br /><br />DOPPLER MATERNO / FETAL<br />-- UT. DERECHA<br />-- UT. IZQUIERDA<br />-- PROMEDIO UT.<br />-- UMBILICAL<br />-- C. MEDIA<br />-- CUOCIENTE CP<br /><br />CONCLUSIÓN ECOGRAFICA:"
-                                }
+        //                        formulario = {
+        //                            accion: "nuevoActividad",
+        //                            actividad_text: "Exm. Ecografico",
+        //                            actividad_preset: 1,
+        //                            actividad_apuntes: "-- FUR :<br />-- EGE:<br /><br />ECOGRAFIA 1° TRIMESTRE<br />-- SACO :<br />-- EMBRIÓN :<br />-- ANEXOS :<br />-- DOUGLAS :<br /><br />ECOGRAFIA 2° - 3° TRIMESTRE<br />-- DESCRIPCIÓN GENERAL:<br />-- PLACENTA :<br />-- LIQUIDO AMNIÓTICO :<br />-- ASPECTO MORFOLÓGICO:<br /><br />BIOMETRIA FETAL<br />-- DBP :<br />-- DOF :<br />-- CC :<br />-- CA :<br />-- LF :<br />-- LH :<br /><br />DOPPLER MATERNO / FETAL<br />-- UT. DERECHA<br />-- UT. IZQUIERDA<br />-- PROMEDIO UT.<br />-- UMBILICAL<br />-- C. MEDIA<br />-- CUOCIENTE CP<br /><br />CONCLUSIÓN ECOGRAFICA:"
+        //                        }
                             
-                                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                                     
-                                    formulario = {
-                                        accion: "nuevoActividad",
-                                        actividad_text: "Parto cesárea",
-                                        actividad_preset: 1,
-                                        actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Obstetra       :<br /><br />- Matrona       :<br /><br />- Pediatra       :<br /><br />- Anestesista :<br /><br />- Ayudante     :<br /><br />- Arsenalera   :"
-                                    }
+        //                            formulario = {
+        //                                accion: "nuevoActividad",
+        //                                actividad_text: "Parto cesárea",
+        //                                actividad_preset: 1,
+        //                                actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Obstetra       :<br /><br />- Matrona       :<br /><br />- Pediatra       :<br /><br />- Anestesista :<br /><br />- Ayudante     :<br /><br />- Arsenalera   :"
+        //                            }
 
-                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                                         
-                                        formulario = {
-                                            accion: "nuevoActividad",
-                                            actividad_text: "Parto vaginal",
-                                            actividad_preset: 1,
-                                            actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Obstetra       :<br /><br />- Matrona       :<br /><br />- Pediatra       :<br /><br />- Anestesista :"
-                                        }
+        //                                formulario = {
+        //                                    accion: "nuevoActividad",
+        //                                    actividad_text: "Parto vaginal",
+        //                                    actividad_preset: 1,
+        //                                    actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Obstetra       :<br /><br />- Matrona       :<br /><br />- Pediatra       :<br /><br />- Anestesista :"
+        //                                }
                                     
-                                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                                             
-                                            formulario = {
-                                                accion: "nuevoActividad",
-                                                actividad_text: "Otra operación",
-                                                actividad_preset: 1,
-                                                actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Cirujano            :<br /><br />- Ayudante           :<br /><br />- Anestesista       :<br /><br />- Arsenalera          :"
-                                            }
+        //                                    formulario = {
+        //                                        accion: "nuevoActividad",
+        //                                        actividad_text: "Otra operación",
+        //                                        actividad_preset: 1,
+        //                                        actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Cirujano            :<br /><br />- Ayudante           :<br /><br />- Anestesista       :<br /><br />- Arsenalera          :"
+        //                                    }
                                         
-                                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                                                 
-                                                formulario = {
-                                                    accion: "nuevoActividad",
-                                                    actividad_text: "Ayudantía op.",
-                                                    actividad_preset: 1,
-                                                    actividad_apuntes: "- CIRUJANO DR      :<br /><br />- DIAGNOSTICO     :<br /><br />- OPERACIÓN         :<br /><br />- PREVISIÓN           :"
-                                                }
+        //                                        formulario = {
+        //                                            accion: "nuevoActividad",
+        //                                            actividad_text: "Ayudantía op.",
+        //                                            actividad_preset: 1,
+        //                                            actividad_apuntes: "- CIRUJANO DR      :<br /><br />- DIAGNOSTICO     :<br /><br />- OPERACIÓN         :<br /><br />- PREVISIÓN           :"
+        //                                        }
                                             
-                                                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                                                     
-                                                    formulario = {
-                                                        accion: "predeterminadosChange"
-                                                    };
+        //                                            formulario = {
+        //                                                accion: "predeterminadosChange"
+        //                                            };
                                             
-                                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                                        if (Object.keys(data).length > 0) {
-                                                            if (data.resultado == false){
-                                                                alert("Hubo un error al procesar");
-                                                            }
-                                                            $("#boton\\.configuracion").trigger("click");
-                                                            $("#dialog\\.footer").children("button").removeClass("d-none");
-                                                        }
-                                                    });
-                                                });
-                                            });
-                                        });
-                                    });
-                                });
-                            });
-                        }
-                        else{
+        //                                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                                                if (Object.keys(data).length > 0) {
+        //                                                    if (data.resultado == false){
+        //                                                        alert("Hubo un error al procesar");
+        //                                                    }
+        //                                                    $("#boton\\.configuracion").trigger("click");
+        //                                                    $("#dialog\\.footer").children("button").removeClass("d-none");
+        //                                                }
+        //                                            });
+        //                                        });
+        //                                    });
+        //                                });
+        //                            });
+        //                        });
+        //                    });
+        //                }
+        //                else{
 
-                            $("#formulario\\.actividad option").each(function(i){
-                                if ($(this).text() == "Reuniones" || $(this).text() == "Exm. Ecografico" || $(this).text() == "Parto cesárea" || $(this).text() == "Parto vaginal" || $(this).text() == "Otra operación" || $(this).text() == "Ayudantía op."){
-                                    var solicitud = {
-                                        accion: "eliminarActividad",
-                                        id: $(this).val()
-                                    };
+        //                    $("#formulario\\.actividad option").each(function(i){
+        //                        if ($(this).text() == "Reuniones" || $(this).text() == "Exm. Ecografico" || $(this).text() == "Parto cesárea" || $(this).text() == "Parto vaginal" || $(this).text() == "Otra operación" || $(this).text() == "Ayudantía op."){
+        //                            var solicitud = {
+        //                                accion: "eliminarActividad",
+        //                                id: $(this).val()
+        //                            };
                     
-                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                                    });
-                                }
-                            });
+        //                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+        //                            });
+        //                        }
+        //                    });
 
-                            formulario = {
-                                accion: "predeterminadosChange"
-                            };
+        //                    formulario = {
+        //                        accion: "predeterminadosChange"
+        //                    };
                     
-                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                if (Object.keys(data).length > 0) {
-                                    if (data.resultado == false){
-                                        alert("Hubo un error al procesar");
-                                    }
-                                    $("#boton\\.configuracion").trigger("click");
-                                    $("#dialog\\.footer").children("button").removeClass("d-none");
-                                }
-                            });
-                        }
-                    });
-                    $("#dialog\\.cancel").on("click", function(){
-                        $("#boton\\.configuracion").trigger("click");
-                        $("#dialog\\.footer").children("button").removeClass("d-none");
-                    });
-                    $("#dialog\\.view").modal("show");
-                });
-            }
-        });
+        //                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
+        //                        if (Object.keys(data).length > 0) {
+        //                            if (data.resultado == false){
+        //                                alert("Hubo un error al procesar");
+        //                            }
+        //                            $("#boton\\.configuracion").trigger("click");
+        //                            $("#dialog\\.footer").children("button").removeClass("d-none");
+        //                        }
+        //                    });
+        //                }
+        //            });
+        //            $("#dialog\\.cancel").on("click", function(){
+        //                $("#boton\\.configuracion").trigger("click");
+        //                $("#dialog\\.footer").children("button").removeClass("d-none");
+        //            });
+        //            $("#dialog\\.view").modal("show");
+        //        });
+        //    }
+        //});
 
         $("#boton\\.actividad\\.nuevo").on("click", function(){
             $("#div\\.actividad").removeClass("d-none");
