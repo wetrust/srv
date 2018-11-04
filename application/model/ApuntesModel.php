@@ -62,7 +62,7 @@ class ApuntesModel
 
         $sql = "UPDATE apuntes SET apunte_date = :apunte_date, apunte_fcancellation = :apunte_fcancellation WHERE apunte_id = :apunte_id"; 
         $query = $database->prepare($sql);
-        $query->execute(array(':apunte_date' => $apunte_date, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_id' => $apunte_id);
+        $query->execute(array(':apunte_date' => $apunte_date, ':apunte_fcancellation' => $apunte_fcancellation, ':apunte_id' => $apunte_id));
     }
 
     public static function getAllApuntesDate()
