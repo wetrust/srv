@@ -67,7 +67,7 @@
                                         <input type="email" class="form-control" name="user_email_repeat"/>
                                     </div>
                                     <div class="form-group">
-                                        <label>Contraseña</label>
+                                        <label>Contraseña (Mayor o igual a 6 carácteres)</label>
                                         <input type="password" class="form-control" name="user_password_new" pattern=".{6,}" />
                                     </div>
                                     <div class="form-group">
