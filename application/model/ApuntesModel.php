@@ -47,9 +47,9 @@ class ApuntesModel
 
         foreach ($Apuntes as &$valor) {
             $valor->apunte_date = explode("-", $valor->apunte_date);
-            $valor->apunte_date =  $valor->apunte_date[2] . "-". $valor->apunte_date[1] . "-" . $valor->apunte_date[0];
+            $valor->apunte_date =   strval($valor->apunte_date[2] . "-". $valor->apunte_date[1] . "-" . $valor->apunte_date[0]);
             $valor->apunte_fcancellation = explode("-", $valor->apunte_fcancellation);
-            $valor->apunte_date =  $valor->apunte_fcancellation[2] . "-". $valor->apunte_fcancellation[1] . "-" . $valor->apunte_fcancellation[0];
+            $valor->apunte_date =   strval($valor->apunte_fcancellation[2] . "-". $valor->apunte_fcancellation[1] . "-" . $valor->apunte_fcancellation[0]);
         
             self::updateAApunte($valor->apunte_id, $valor->apunte_date, $valor->apunte_fcancellation);
         }
