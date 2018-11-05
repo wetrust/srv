@@ -117,7 +117,17 @@
       </style>
       <script>
         $(document).ready(function() {
-            let data = {
+            $("#fecha\\.mes").on("change", function(){
+                makeCalendario();
+            });
+
+            $("#fecha\\.ano").on("change", function(){
+                makeCalendario();
+            });
+        });
+
+      function makeCalendario(){
+        let data = {
                 accion : "calendario",
                 mes: $("#fecha\\.mes").val(),
                 ano: $("#fecha\\.ano").val()
@@ -193,7 +203,7 @@
 
                 }
             });
-      });
+      }
       </script>
    </body>
 </html>
