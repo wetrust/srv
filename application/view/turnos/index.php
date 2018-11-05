@@ -94,40 +94,40 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    <th class="text-center">1</th>
+                                    <td class="text-center">Mark</td>
+                                    <td class="text-center">Otto</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
                                 </tr>
                                 <tr>
-                                    <th>2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    <th class="text-center">2</th>
+                                    <td class="text-center">Jacob</td>
+                                    <td class="text-center">Thornton</td>
+                                    <td class="text-center">@fat</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
                                 </tr>
                                 <tr>
-                                    <th>3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    <th class="text-center">3</th>
+                                    <td class="text-center">Larry</td>
+                                    <td class="text-center">the Bird</td>
+                                    <td class="text-center">@twitter</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
                                 </tr>
                                 <tr>
-                                    <th>3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    <th class="text-center">3</th>
+                                    <td class="text-center">Larry</td>
+                                    <td class="text-center">the Bird</td>
+                                    <td class="text-center">@twitter</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
                                 </tr>
                             </tbody>
                         </table>
