@@ -210,7 +210,7 @@ $(document).ready(function(){
         
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                             $("#formulario\\.id").val(data.apunte_id);
-                            var d = new Date(data.apunte_date);
+                            var d = new Date(data.apunte_date.replace(/-/g, '\/'));
                             var day = ("0" + d.getDate()).slice(-2);
                             var month = ("0" + (d.getMonth() + 1)).slice(-2);
                             $("#formulario\\.fecha").val(day + "-" + month + "-" + d.getFullYear());
@@ -392,16 +392,16 @@ $(document).ready(function(){
         //                        actividad_apuntes: "--TEMARIO<br /><br />--PARTICIPANTES<br /><br />--CONCLUSIONES"
         //                    }
         //                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                
+
         //                        formulario = {
         //                            accion: "nuevoActividad",
         //                            actividad_text: "Exm. Ecografico",
         //                            actividad_preset: 1,
         //                            actividad_apuntes: "-- FUR :<br />-- EGE:<br /><br />ECOGRAFIA 1° TRIMESTRE<br />-- SACO :<br />-- EMBRIÓN :<br />-- ANEXOS :<br />-- DOUGLAS :<br /><br />ECOGRAFIA 2° - 3° TRIMESTRE<br />-- DESCRIPCIÓN GENERAL:<br />-- PLACENTA :<br />-- LIQUIDO AMNIÓTICO :<br />-- ASPECTO MORFOLÓGICO:<br /><br />BIOMETRIA FETAL<br />-- DBP :<br />-- DOF :<br />-- CC :<br />-- CA :<br />-- LF :<br />-- LH :<br /><br />DOPPLER MATERNO / FETAL<br />-- UT. DERECHA<br />-- UT. IZQUIERDA<br />-- PROMEDIO UT.<br />-- UMBILICAL<br />-- C. MEDIA<br />-- CUOCIENTE CP<br /><br />CONCLUSIÓN ECOGRAFICA:"
         //                        }
-                            
+
         //                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                    
+
         //                            formulario = {
         //                                accion: "nuevoActividad",
         //                                actividad_text: "Parto cesárea",
@@ -410,14 +410,14 @@ $(document).ready(function(){
         //                            }
 
         //                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                        
+
         //                                formulario = {
         //                                    accion: "nuevoActividad",
         //                                    actividad_text: "Parto vaginal",
         //                                    actividad_preset: 1,
         //                                    actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Obstetra       :<br /><br />- Matrona       :<br /><br />- Pediatra       :<br /><br />- Anestesista :"
         //                                }
-                                    
+
         //                                $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
                                             
         //                                    formulario = {
@@ -426,22 +426,22 @@ $(document).ready(function(){
         //                                        actividad_preset: 1,
         //                                        actividad_apuntes: "- DIAGNOSTICO :<br /><br />- OPERACIÓN     :<br /><br />- PREVISIÓN       :<br /><br />EQUIPO QUIRÚRGICO.<br /><br />- Cirujano            :<br /><br />- Ayudante           :<br /><br />- Anestesista       :<br /><br />- Arsenalera          :"
         //                                    }
-                                        
+
         //                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                                
+
         //                                        formulario = {
         //                                            accion: "nuevoActividad",
         //                                            actividad_text: "Ayudantía op.",
         //                                            actividad_preset: 1,
         //                                            actividad_apuntes: "- CIRUJANO DR      :<br /><br />- DIAGNOSTICO     :<br /><br />- OPERACIÓN         :<br /><br />- PREVISIÓN           :"
         //                                        }
-                                            
+
         //                                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
-                                                    
+
         //                                            formulario = {
         //                                                accion: "predeterminadosChange"
         //                                            };
-                                            
+
         //                                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
         //                                                if (Object.keys(data).length > 0) {
         //                                                    if (data.resultado == false){
@@ -466,7 +466,7 @@ $(document).ready(function(){
         //                                accion: "eliminarActividad",
         //                                id: $(this).val()
         //                            };
-                    
+
         //                            $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
         //                            });
         //                        }
@@ -475,7 +475,7 @@ $(document).ready(function(){
         //                    formulario = {
         //                        accion: "predeterminadosChange"
         //                    };
-                    
+
         //                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
         //                        if (Object.keys(data).length > 0) {
         //                            if (data.resultado == false){
@@ -818,7 +818,7 @@ function guardarAutomatico(){
 
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
         $("#formulario\\.id").val(data.apunte_id);
-        var d = new Date(data.apunte_date);
+        var d = new Date(data.apunte_date.replace(/-/g, '\/'));
         var day = ("0" + d.getDate()).slice(-2);
         var month = ("0" + (d.getMonth() + 1)).slice(-2);
         $("#formulario\\.fecha").val(day + "-" + month + "-" + d.getFullYear());
@@ -909,9 +909,10 @@ function cargarTabla(order = 0){
 
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                     $("#formulario\\.id").val(data.apunte_id);
-                    var d = new Date(data.apunte_date);
+                    var d = new Date(data.apunte_date.replace(/-/g, '\/'));
                     var day = ("0" + d.getDate()).slice(-2);
                     var month = ("0" + (d.getMonth() + 1)).slice(-2);
+
                     $("#formulario\\.fecha").val(day + "-" + month + "-" + d.getFullYear());
                     $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + d.getFullYear());
                     $('#formulario\\.nombre').val(data.apunte_nombre);
@@ -1179,11 +1180,12 @@ function updateCalculos(){
                     }
                 });
 
-                var d = new Date(item["apunte_date"]);
+                var d = new Date(item["apunte_date"].replace(/-/g, '\/'));
                 var day = ("0" + d.getDate()).slice(-2);
-                var month = ("0" + (d.getMonth() + 1)).slice(-2);
+                var month = ("0" + (d.getMonth() + 1)).slice(-2); 
+                var dateComplete = day + "-" + month + "-" + d.getFullYear();
                 
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + day + "-" + month + "-" + d.getFullYear() + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + dateComplete + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 $("#tabla\\.calculos").append(fila);
             });
 
