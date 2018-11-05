@@ -798,7 +798,7 @@ function guardarAutomatico(){
         formulario = {
             accion: "guardar",
             id: $("#formulario\\.id").val(),
-            fecha: day + "-" + month + "-" + d.getFullYear(),
+            fecha: d.getFullYear() + "-" +  month + "-" + day,
             hora: $("#formulario\\.hora").val(),
             minutos: $("#formulario\\.minutos").val(),
             nombre: $('#formulario\\.nombre').val(),
