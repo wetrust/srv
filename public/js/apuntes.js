@@ -952,7 +952,12 @@ function cargarTabla(order = 0){
 
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                     $("#formulario\\.id").val(data.apunte_id);
-                    var d = new Date(data.apunte_date.replace(/-/g, '\/'));
+                    if (!data.apunte_date){
+                        var d = new Date();
+                    }
+                    else{
+                        var d = new Date(data.apunte_date.replace(/-/g, '\/'));
+                    }
                     var day = ("0" + d.getDate()).slice(-2);
                     var month = ("0" + (d.getMonth() + 1)).slice(-2);
 
