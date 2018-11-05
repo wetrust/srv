@@ -208,7 +208,7 @@
                     h = 1;
 
                     for (h; h < 8; h++) {
-                        if (k == j ){
+                        if (k >= j ){
                             h = 7;
                         }
                         fila += '<td class="text-center">' + k + '</td>';
