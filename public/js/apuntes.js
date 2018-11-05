@@ -764,13 +764,17 @@ function guardarAutomatico(){
 
     var parts = $("#formulario\\.fecha").val();
     parts = parts.split('-');
-    var d = new Date(parts[2] + "-" + parts[1] + "-" +parts[0]);
+    parts = parts[2] + "/" + parts[1] + "/" +parts[0];
+
+    var d = new Date(parts);
     var day = ("0" + d.getDate()).slice(-2);
     var month = ("0" + (d.getMonth() + 1)).slice(-2);
 
     parts = $("#formulario\\.fcancelacion").val();
     parts = parts.split('-');
-    var H = new Date(parts[2] + "-" + parts[1] + "-" +parts[0]);
+    parts = parts[2] + "/" + parts[1] + "/" +parts[0];
+    
+    var H = new Date(parts);
     var dayH = ("0" + H.getDate()).slice(-2);
     var monthH = ("0" + (H.getMonth() + 1)).slice(-2);
 
@@ -1142,13 +1146,16 @@ function updateCalculos(){
 
     var parts = $("#calculos\\.fecha\\.uno").val();
     parts = parts.split('-');
-    var d = new Date(parts[2] + "-" + parts[1] + "-" +parts[0]);
+    parts = parts[2] + "/" + parts[1] + "/" +parts[0];
+
+    var d = new Date(parts);
     var day = ("0" + d.getDate()).slice(-2);
     var month = ("0" + (d.getMonth() + 1)).slice(-2);
 
     parts = $("#calculos\\.fecha\\.dos").val();
     parts = parts.split('-');
-    var H = new Date(parts[2] + "-" + parts[1] + "-" +parts[0]);
+    parts = parts[2] + "/" + parts[1] + "/" +parts[0];
+    var H = new Date(parts);
     var dayH = ("0" + H.getDate()).slice(-2);
     var monthH = ("0" + (H.getMonth() + 1)).slice(-2);
 
