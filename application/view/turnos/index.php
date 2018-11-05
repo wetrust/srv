@@ -45,7 +45,37 @@
             <div class="col-8">
                 <div class="card m-3">
                     <div class="card-body">
-                        bla
+                        <div class="form-row">
+                            <div class="col">
+                                <p>Mes</p>
+                            </div>
+                            <div class="col">
+                                <select id="inputState" class="form-control">
+                                    <option selected>Enero</option>
+                                    <option>Febrero</option>
+                                    <option>Marzo</option>
+                                    <option>Abril</option>
+                                    <option>Mayo</option>
+                                    <option>Junio</option>
+                                    <option>Julio</option>
+                                    <option>Agosto</option>
+                                    <option>Septiembre</option>
+                                    <option>Octubre</option>
+                                    <option>Noviembre</option>
+                                    <option>Diciembre</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <p>Año</p>
+                            </div>
+                            <div class="col">
+                                <select id="inputState" class="form-control">
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card ml-3">
