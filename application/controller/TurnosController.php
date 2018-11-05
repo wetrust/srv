@@ -26,7 +26,7 @@ class TurnosController extends Controller
 
     public function calendario()
     {
-        $this->View->renderJSON(TurnosModel::calendar("2018", "06"));
+        $this->View->renderJSON(TurnosModel::calendar("06","2018"));
     }
 
     /**
