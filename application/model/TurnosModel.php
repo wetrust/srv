@@ -11,11 +11,13 @@ class TurnosModel
         
         try {
             $fecha = new DateTime($ano . '-' . $mes .'-01');
-            $date = $fecha->format('N'); 
+            $diaDeLaSemana = $fecha->format('N'); 
+            $diasEnElMes = $fecha->format('t');
 
             $return = new stdClass();
             $return->fecha = $fecha;
-            $return->date = $date;
+            $return->diaDeLaSemana = $diaDeLaSemana;
+            $return->diasEnElMes = $diasEnElMes;
 
             return $return;
 
