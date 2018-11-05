@@ -4,6 +4,7 @@ $(document).ready(function(){
     cargarLugar();
     cargarTiempo();
     cargarParticipante();
+    cargarOtros();
  
     $("#boton\\.usuarios").on("click", function(){
         $("#dialog\\.title").html("Listado de usuarios");
