@@ -204,20 +204,21 @@
                     $("#table\\.calendario").append(fila);
 
                     //para meses con 31 dias
-                    fila = '<tr>';
-                    h = 1;
+                    if (k < j ){
+                        fila = '<tr>';
+                        h = 1;
 
-                    for (h; h < 8; h++) {
-                        if (k >= j ){
-                            h = 7;
+                        for (h; h < 8; h++) {
+                            if (k >= j ){
+                                h = 7;
+                            }
+                            fila += '<td class="text-center">' + k + '</td>';
+                            k++;
                         }
-                        fila += '<td class="text-center">' + k + '</td>';
-                        k++;
+
+                        fila += '</tr>';
+                        $("#table\\.calendario").append(fila);
                     }
-
-                    fila += '</tr>';
-                    $("#table\\.calendario").append(fila);
-
                 }
             });
       }
