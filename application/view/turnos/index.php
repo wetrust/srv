@@ -124,6 +124,8 @@
             $("#fecha\\.ano").on("change", function(){
                 makeCalendario();
             });
+
+            makeCalendario()
         });
 
       function makeCalendario(){
@@ -187,7 +189,22 @@
                     fila += '</tr>';
                     $("#table\\.calendario").append(fila);
 
-                                        fila = '<tr>';
+                    fila = '<tr>';
+                    h = 1;
+
+                    for (h; h < 8; h++) {
+                        if (k == j ){
+                            h = 7;
+                        }
+                        fila += '<td class="text-center">' + k + '</td>';
+                        k++;
+                    }
+
+                    fila += '</tr>';
+                    $("#table\\.calendario").append(fila);
+
+                    //para meses con 31 dias
+                    fila = '<tr>';
                     h = 1;
 
                     for (h; h < 8; h++) {
