@@ -43,7 +43,7 @@
         </nav>
         <div class="row">
             <div class="col-8">
-                <div class="card">
+                <div class="card m-3">
                     <div class="card-body">
                         <table class="table">
                             <thead>
