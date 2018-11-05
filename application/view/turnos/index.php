@@ -167,8 +167,8 @@
                 $("#table\\.calendario").empty();
                 if (Object.keys(data).length > 0) {
                     let fila = '<tr>';
-                    let i = data.diaDeLaSemana;
-                    let j = data.diasEnElMes;
+                    let i = response.diaDeLaSemana;
+                    let j = response.diasEnElMes;
                     let k = 1;
                     let h = 1;
 
