@@ -82,14 +82,14 @@
                     <div class="card-body">
                         <table class="table">
                             <thead>
-                                <tr class="bg-secondary">
+                                <tr>
                                     <th scope="col">Lunes</th>
                                     <th scope="col">Martes</th>
                                     <th scope="col">Miércoles</th>
                                     <th scope="col">Jueves</th>
                                     <th scope="col">Viernes</th>
-                                    <th scope="col" class="bg-light">Sábado</th>
-                                    <th scope="col" class="bg-light">Domingo</th>
+                                    <th scope="col" class="text-danger">Sábado</th>
+                                    <th scope="col" class="text-danger">Domingo</th>
                                 </tr>
                             </thead>
                             <tbody id="table.calendario">
