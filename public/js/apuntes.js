@@ -359,6 +359,7 @@ $(document).ready(function(){
         cargarActividad();
         cargarLugar();
         cargarParticipante();
+        cargarOtros();
 
         //verificar si cargo preset
         //var formulario = {
