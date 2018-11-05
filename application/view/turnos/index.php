@@ -137,6 +137,7 @@
             <div class="col-4">
                 <div class="card my-3">
                     <div class="card-body">
+                        <h5 class="card-title">Profesionales</h5>
                     </div>
                 </div>
             </div>
