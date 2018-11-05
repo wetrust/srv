@@ -172,11 +172,11 @@
                     let k = 1;
                     let h = 1;
 
-                    for (h = 0; h < i; h++) {
+                    for (h; h < i; h++) {
                         fila += '<td class="text-center"></td>';
                     }
 
-                    for (h; h < 7; h++) {
+                    for (h; h < 8; h++) {
                         fila += '<td class="text-center">' + k + '</td>';
                         k++;
                     }
