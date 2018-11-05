@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="card">
+                <div class="card my-2">
                     <div class="card-body">
                     </div>
                 </div>
