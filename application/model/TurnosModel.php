@@ -11,14 +11,14 @@ class TurnosModel
         
         try {
             $fecha = new DateTime($ano . '-' . $mes .'-01');
-            $date = date ('N', $fecha)
+            $date = date ('N', $fecha);
 
             $return = new stdClass();
             $return->fecha = $fecha;
             $return->date = $date;
 
             return $return;
-            
+
         } catch (Exception $e) {
             echo $e->getMessage();
             exit(1);
