@@ -217,6 +217,20 @@
                     fila += '</tr>';
                     $("#table\\.calendario").append(fila);
 
+                                        fila = '<tr>';
+                    h = 1;
+
+                    for (h; h < 8; h++) {
+                        if (k == j ){
+                            h = 7;
+                        }
+                        fila += '<td class="text-center">' + k + '</td>';
+                        k++;
+                    }
+
+                    fila += '</tr>';
+                    $("#table\\.calendario").append(fila);
+
                 }
             });
       });
