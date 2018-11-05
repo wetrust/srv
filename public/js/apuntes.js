@@ -778,7 +778,7 @@ function guardarAutomatico(){
 
         formulario = {
             accion: "nuevo",
-            fecha: day + "-" + month + "-" + d.getFullYear(),
+            fecha: d.getFullYear() + "-" +  month + "-" + day,
             hora: $("#formulario\\.hora").val(),
             minutos: $("#formulario\\.minutos").val(),
             nombre: $('#formulario\\.nombre').val(),
@@ -787,7 +787,7 @@ function guardarAutomatico(){
             lugar: $("#formulario\\.lugar").val(),
             location_name: $("#formulario\\.lugar option:selected").text(),
             cancelacion: $("#formulario\\.cancelacion").val(),
-            fcancelacion: dayH + "-" + monthH + "-" + H.getFullYear(),
+            fcancelacion: H.getFullYear()  + "-" + monthH + "-" +  dayH,
             valor: $("#formulario\\.valor").val(),
             comentarios: $("#formulario\\.comentarios").val(),
             palabras: $("#formulario\\.palabras").val()
