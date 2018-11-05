@@ -27,7 +27,7 @@ $(document).ready(function(){
                 }).on("mouseleave", function(){
                     $(this).children("button").addClass("d-none");
                 });
-        
+
                 $(".eliminar-user").on("click", function(){
                     let usuario_id = $(this).data("id");
                     $("#dialog\\.delete").remove();
