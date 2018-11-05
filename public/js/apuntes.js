@@ -211,7 +211,7 @@ $(document).ready(function(){
         
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                             $("#formulario\\.id").val(data.apunte_id);
-                            if (data.apunte_date == ""){
+                            if (!data.apunte_date){
                                 var d = new Date();
                             }
                             else{
