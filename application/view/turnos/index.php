@@ -41,7 +41,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="row">
+        <div class="row m-0">
             <div class="col-8">
                 <div class="card ml-3 my-3">
                     <div class="card-body">
