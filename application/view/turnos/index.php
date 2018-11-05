@@ -136,7 +136,7 @@
                                     <td class="text-center">@twitter</td>
                                     <td class="text-center">@mdo</td>
                                     <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center bg-secondary">@mdo</td>
                                 </tr>
                             </tbody>
                         </table>
