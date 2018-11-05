@@ -120,6 +120,15 @@ class ApuntesController extends Controller
             case "predeterminadosChange":
                 $resultado = UserModel::actividadPresetChange();
                 break;
+            case "otros":
+                $resultado = ApuntesModel::getAllOtros();
+                break;
+            case "nuevoOtros":
+                $resultado = ApuntesModel::createOtros(Request::post('otros_text'));
+                break;
+            case "eliminarOtros":
+                $resultado = ApuntesModel::deleteOtros(Request::post('id'));
+                break;
         }
 
         return $this->View->renderJSON($resultado);

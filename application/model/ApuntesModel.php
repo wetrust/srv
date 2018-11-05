@@ -756,4 +756,65 @@ class ApuntesModel
         Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
         return false;
     }
+
+
+    public static function getAllOtros()
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT otros_id, otros_text FROM otros WHERE user_id = :user_id";
+        $query = $database->prepare($sql);
+        $query->execute(array(':user_id' => Session::get('user_id')));
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
+    }
+
+    public static function createOtros($otros_text)
+    {
+        if (!$otros_text || strlen($otros_text) == 0) {
+            Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "INSERT INTO otros (otros_text, user_id) VALUES (:otros_text, :user_id)";
+        $query = $database->prepare($sql);
+        $query->execute(array(':otros_text' => $otros_text, ':user_id' => Session::get('user_id')));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+        return false;
+    }
+
+    /**
+     * Delete a specific cancelacion
+     * @param int $cancelacion_id id of the cancelacion
+     * @return bool feedback (was the cancelacion deleted properly ?)
+     */
+    public static function deleteOtros($otros_id)
+    {
+        if (!$otros_id) {
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "DELETE FROM otros WHERE otros_id = :otros_id AND user_id = :user_id LIMIT 1";
+        $query = $database->prepare($sql);
+        $query->execute(array(':otros_id' => $otros_id, ':user_id' => Session::get('user_id')));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
+        return false;
+    }
 }
