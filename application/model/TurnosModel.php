@@ -11,7 +11,7 @@ class TurnosModel
         
         try {
             $fecha = new DateTime($ano . '-' . $mes .'-01');
-            $date = date ('N', $fecha);
+            $date = $fecha->format('N'); 
 
             $return = new stdClass();
             $return->fecha = $fecha;
