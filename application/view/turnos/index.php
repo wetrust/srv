@@ -95,7 +95,7 @@
                             <tbody>
                                 <tr>
                                     <th class="text-center">1</th>
-                                    <td class="text-center">Mark</td>
+                                    <td class="text-center">2</td>
                                     <td class="text-center">Otto</td>
                                     <td class="text-center">@mdo</td>
                                     <td class="text-center">@mdo</td>
@@ -107,6 +107,15 @@
                                     <td class="text-center">Jacob</td>
                                     <td class="text-center">Thornton</td>
                                     <td class="text-center">@fat</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center">@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">3</th>
+                                    <td class="text-center">Larry</td>
+                                    <td class="text-center">the Bird</td>
+                                    <td class="text-center">@twitter</td>
                                     <td class="text-center">@mdo</td>
                                     <td class="text-center">@mdo</td>
                                     <td class="text-center">@mdo</td>
