@@ -97,11 +97,22 @@
                         </table>
                     </div>
                 </div>
+                <div class="card ml-3">
+                    <div class="card-body">
+                        <p>Turnos para el día elegido</p>
+                    </div>
+                </div>
             </div>
             <div class="col-4">
                 <div class="card my-3">
                     <div class="card-body">
                         <h6 class="card-title">Profesionales</h6>
+                        <div class="btn-group" role="group" aria-label="Menú">
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo" title="Nuevo apunte"><i class="fas fa-plus"></i></button>
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.editar" title="Modificar apunte"><i class="fas fa-pen"></i></button>
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.guardar" title="Guardar apunte"><i class="fas fa-save"></i></button>
+                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelar" title="Cancelar apunte"><i class="fas fa-ban"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
