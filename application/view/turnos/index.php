@@ -82,7 +82,7 @@
                     <div class="card-body">
                         <table class="table">
                             <thead>
-                                <tr>
+                                <tr class="bg-secondary">
                                     <th scope="col">Lunes</th>
                                     <th scope="col">Martes</th>
                                     <th scope="col">Miércoles</th>
@@ -93,51 +93,6 @@
                                 </tr>
                             </thead>
                             <tbody id="table.calendario">
-                                <tr>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">Otto</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">Jacob</td>
-                                    <td class="text-center">Thornton</td>
-                                    <td class="text-center">@fat</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">Larry</td>
-                                    <td class="text-center">the Bird</td>
-                                    <td class="text-center">@twitter</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">Larry</td>
-                                    <td class="text-center">the Bird</td>
-                                    <td class="text-center">@twitter</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">Larry</td>
-                                    <td class="text-center">the Bird</td>
-                                    <td class="text-center">@twitter</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                    <td class="text-center bg-light">@mdo</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
