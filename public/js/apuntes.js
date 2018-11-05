@@ -210,8 +210,11 @@ $(document).ready(function(){
         
                         $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                             $("#formulario\\.id").val(data.apunte_id);
-                            $("#formulario\\.fecha").val(data.apunte_date);
-                            $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                            var d = new Date(data.apunte_date);
+                            var day = ("0" + d.getDate()).slice(-2);
+                            var month = ("0" + (d.getMonth() + 1)).slice(-2);
+                            $("#formulario\\.fecha").val(day + "-" + month + "-" + d.getFullYear());
+                            $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + d.getFullYear());
                             $('#formulario\\.nombre').val(data.apunte_nombre);
                             $("#formulario\\.hora").val(data.apunte_hour);
                             $("#formulario\\.minutos").val(data.apunte_minute);
@@ -219,8 +222,11 @@ $(document).ready(function(){
                             $("#formulario\\.actividad").val(data.apunte_activity);
                             $("#formulario\\.lugar").val(data.apunte_location);
                             $("#formulario\\.cancelacion").val(data.apunte_cancellation);
-                            $("#formulario\\.fcancelacion").val(data.apunte_fcancellation);
-                            $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+                            d = new Date(data.apunte_fcancellation);
+                            day = ("0" + d.getDate()).slice(-2);
+                            month = ("0" + (d.getMonth() + 1)).slice(-2);
+                            $("#formulario\\.fcancelacion").val(day + "-" + month + "-" + d.getFullYear());
+                            $('#formulario\\.fcancelacion').datepicker('setValue', day + "-" + month + "-" + d.getFullYear());
                             $("#formulario\\.valor").val(data.apunte_cost);
                             $("#formulario\\.comentarios").val(data.apunte_text);
                             $("#formulario\\.palabras").val(data.apunte_keywords);
@@ -756,11 +762,19 @@ function guardarAutomatico(){
     id = $("#formulario\\.id").val();
     var formulario = "";
 
+    var d = new Date($("#formulario\\.fecha").val());
+    var day = ("0" + d.getDate()).slice(-2);
+    var month = ("0" + (d.getMonth() + 1)).slice(-2);
+
+    var H = new Date($("#formulario\\.fcancelacion").val());
+    var dayH = ("0" + H.getDate()).slice(-2);
+    var monthH = ("0" + (H.getMonth() + 1)).slice(-2);
+
     if (id == 9999){
 
         formulario = {
             accion: "nuevo",
-            fecha: $("#formulario\\.fecha").val(),
+            fecha: day + "-" + month + "-" + d.getFullYear(),
             hora: $("#formulario\\.hora").val(),
             minutos: $("#formulario\\.minutos").val(),
             nombre: $('#formulario\\.nombre').val(),
@@ -769,7 +783,7 @@ function guardarAutomatico(){
             lugar: $("#formulario\\.lugar").val(),
             location_name: $("#formulario\\.lugar option:selected").text(),
             cancelacion: $("#formulario\\.cancelacion").val(),
-            fcancelacion: $("#formulario\\.fcancelacion").val(),
+            fcancelacion: dayH + "-" + monthH + "-" + H.getFullYear(),
             valor: $("#formulario\\.valor").val(),
             comentarios: $("#formulario\\.comentarios").val(),
             palabras: $("#formulario\\.palabras").val()
@@ -780,7 +794,7 @@ function guardarAutomatico(){
         formulario = {
             accion: "guardar",
             id: $("#formulario\\.id").val(),
-            fecha: $("#formulario\\.fecha").val(),
+            fecha: day + "-" + month + "-" + d.getFullYear(),
             hora: $("#formulario\\.hora").val(),
             minutos: $("#formulario\\.minutos").val(),
             nombre: $('#formulario\\.nombre').val(),
@@ -789,7 +803,7 @@ function guardarAutomatico(){
             lugar: $("#formulario\\.lugar").val(),
             location_name: $("#formulario\\.lugar option:selected").text(),
             cancelacion: $("#formulario\\.cancelacion").val(),
-            fcancelacion: $("#formulario\\.fcancelacion").val(),
+            fcancelacion: dayH + "-" + monthH + "-" + H.getFullYear(),
             valor: $("#formulario\\.valor").val(),
             comentarios: $("#formulario\\.comentarios").val(),
             palabras: $("#formulario\\.palabras").val()
@@ -802,17 +816,23 @@ function guardarAutomatico(){
 
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", formulario).done(function(data){
         $("#formulario\\.id").val(data.apunte_id);
-        $("#formulario\\.fecha").val(data.apunte_date);
-        $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+        var d = new Date(data.apunte_date);
+        var day = ("0" + d.getDate()).slice(-2);
+        var month = ("0" + (d.getMonth() + 1)).slice(-2);
+        $("#formulario\\.fecha").val(day + "-" + month + "-" + d.getFullYear());
+        $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + d.getFullYear());
+        $('#formulario\\.nombre').val(data.apunte_nombre);
         $("#formulario\\.hora").val(data.apunte_hour);
         $("#formulario\\.minutos").val(data.apunte_minute);
-        $('#formulario\\.nombre').val(data.apunte_nombre);
         $("#formulario\\.participante").val(data.apunte_participante);
         $("#formulario\\.actividad").val(data.apunte_activity);
         $("#formulario\\.lugar").val(data.apunte_location);
         $("#formulario\\.cancelacion").val(data.apunte_cancellation);
-        $("#formulario\\.fcancelacion").val(data.apunte_fcancellation),
-        $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+        d = new Date(data.apunte_fcancellation);
+        day = ("0" + d.getDate()).slice(-2);
+        month = ("0" + (d.getMonth() + 1)).slice(-2);
+        $("#formulario\\.fcancelacion").val(day + "-" + month + "-" + d.getFullYear());
+        $('#formulario\\.fcancelacion').datepicker('setValue', day + "-" + month + "-" + d.getFullYear());
         $("#formulario\\.valor").val(data.apunte_cost);
         $("#formulario\\.comentarios").val(data.apunte_text);
         $("#formulario\\.palabras").val(data.apunte_keywords);
@@ -887,17 +907,23 @@ function cargarTabla(order = 0){
 
                 $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                     $("#formulario\\.id").val(data.apunte_id);
-                    $("#formulario\\.fecha").val(data.apunte_date);
-                    $('#formulario\\.fecha').datepicker('setValue', data.apunte_date);
+                    var d = new Date(data.apunte_date);
+                    var day = ("0" + d.getDate()).slice(-2);
+                    var month = ("0" + (d.getMonth() + 1)).slice(-2);
+                    $("#formulario\\.fecha").val(day + "-" + month + "-" + d.getFullYear());
+                    $('#formulario\\.fecha').datepicker('setValue', day + "-" + month + "-" + d.getFullYear());
+                    $('#formulario\\.nombre').val(data.apunte_nombre);
                     $("#formulario\\.hora").val(data.apunte_hour);
                     $("#formulario\\.minutos").val(data.apunte_minute);
-                    $('#formulario\\.nombre').val(data.apunte_nombre);
                     $("#formulario\\.participante").val(data.apunte_participante);
                     $("#formulario\\.actividad").val(data.apunte_activity);
                     $("#formulario\\.lugar").val(data.apunte_location);
                     $("#formulario\\.cancelacion").val(data.apunte_cancellation);
-                    $("#formulario\\.fcancelacion").val(data.apunte_fcancellation);
-                    $('#formulario\\.fcancelacion').datepicker('setValue', data.apunte_fcancellation);
+                    d = new Date(data.apunte_fcancellation);
+                    day = ("0" + d.getDate()).slice(-2);
+                    month = ("0" + (d.getMonth() + 1)).slice(-2);
+                    $("#formulario\\.fcancelacion").val(day + "-" + month + "-" + d.getFullYear());
+                    $('#formulario\\.fcancelacion').datepicker('setValue', day + "-" + month + "-" + d.getFullYear());
                     $("#formulario\\.valor").val(data.apunte_cost);
                     $("#formulario\\.comentarios").val(data.apunte_text);
                     $("#formulario\\.palabras").val(data.apunte_keywords);
