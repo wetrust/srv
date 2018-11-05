@@ -32,11 +32,6 @@ class ApuntesController extends Controller
         $this->View->renderWithoutHeaderAndFooter('apuntes/mobile');
     }
 
-    public function updateDates()
-    {
-        ApuntesModel::convertAllApuntes();
-    }
-
     /**
      * This method controls what happens when you move to /dashboard/create in your app.
      * Creates a new note. This is usually the target of form submit actions.

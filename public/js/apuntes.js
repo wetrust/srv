@@ -1027,6 +1027,7 @@ function cargarActividad(){
                     $('#myTab a[href="#home"]').tab('show')
                 });
             });
+
             $("#dialog\\.view").modal("show");
         });
     });
@@ -1127,6 +1128,7 @@ function cargarParticipante(){
                     $("#boton\\.configuracion").trigger("click");
                     $('#myTab a[href="#participante"]').tab('show');
                 });
+
             });
             $("#dialog\\.view").modal("show");
         });
@@ -1148,7 +1150,6 @@ function updateCalculos(){
     var H = new Date(parts[2] + "-" + parts[1] + "-" +parts[0]);
     var dayH = ("0" + H.getDate()).slice(-2);
     var monthH = ("0" + (H.getMonth() + 1)).slice(-2);
-
 
     var solicitud = {
         accion: "calculos",
@@ -1178,7 +1179,11 @@ function updateCalculos(){
                     }
                 });
 
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + item["apunte_date"] + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                var d = new Date(item["apunte_date"]);
+                var day = ("0" + d.getDate()).slice(-2);
+                var month = ("0" + (d.getMonth() + 1)).slice(-2);
+                
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + day + "-" + month + "-" + d.getFullYear() + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 $("#tabla\\.calculos").append(fila);
             });
 
@@ -1190,12 +1195,14 @@ function updateCalculos(){
                 actividad: $("#calculos\\.formulario\\.actividad").val(),
                 cancelacion: $("#calculos\\.formulario\\.cancelacion").val()
             }
+
             $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
                 if (Object.keys(data).length > 0) {
                     let fila = '<tr><th scope="row"></th><td></td><td></td><td></td><td class="text-right"><strong>Total:</strong></td><td><strong>' + data.apunte_costo + '</strong></td></tr>';
                     $("#tabla\\.calculos").append(fila);
                 }
             });
+
         }
     });
 }
