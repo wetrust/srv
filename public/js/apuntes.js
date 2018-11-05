@@ -1089,8 +1089,8 @@ function cargarOtros(){
     };
 
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-        $("#formulario\\.otros").empty();
-        $("#tabla\\.palabras").empty();
+        $("#formulario\\.palabras").empty();
+        $("#tabla\\.otros").empty();
 
         $.each(data, function(i, item) { 
             let fila = '<tr><td class="columna-otros">' + item["otros_text"] + '<button type="button" data-id="' + item["otros_id"] + '" class="btn btn-outline-warning px-3 eliminar-otros float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
