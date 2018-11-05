@@ -26,7 +26,7 @@ class TurnosController extends Controller
 
     public function calendario()
     {
-        $this->View->renderJSON(TurnosModel::calendar("06","2018"));
+        $this->View->renderJSON();
     }
 
     /**
@@ -39,8 +39,8 @@ class TurnosController extends Controller
         $accion = Request::post('accion');
         $resultado = "";
         switch ($accion) {
-            case "tabla":
-                $resultado = ApuntesModel::getAllApuntes();
+            case "calendario":
+                $resultado = TurnosModel::calendar(Request::post('mes'),Request::post('ano'));
                 break;
             case "tablad":
                 $resultado = ApuntesModel::getAllApuntesDate();

@@ -50,29 +50,29 @@
                                 <p>Mes</p>
                             </div>
                             <div class="col">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Enero</option>
-                                    <option>Febrero</option>
-                                    <option>Marzo</option>
-                                    <option>Abril</option>
-                                    <option>Mayo</option>
-                                    <option>Junio</option>
-                                    <option>Julio</option>
-                                    <option>Agosto</option>
-                                    <option>Septiembre</option>
-                                    <option>Octubre</option>
-                                    <option>Noviembre</option>
-                                    <option>Diciembre</option>
+                                <select id="fecha.mes" class="form-control">
+                                    <option value="01">Enero</option>
+                                    <option value="02">Febrero</option>
+                                    <option value="03">Marzo</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Mayo</option>
+                                    <option value="06">Junio</option>
+                                    <option value="07">Julio</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11" selected>Noviembre</option>
+                                    <option value="12">Diciembre</option>
                                 </select>
                             </div>
                             <div class="col">
                                 <p>Año</p>
                             </div>
                             <div class="col">
-                                <select id="inputState" class="form-control">
-                                    <option>2017</option>
-                                    <option selected>2018</option>
-                                    <option>2019</option>
+                                <select id="fecha.ano" class="form-control">
+                                    <option value="2017">2017</option>
+                                    <option value="2018" selected>2018</option>
+                                    <option value="2019">2019</option>
                                 </select>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                     <th scope="col" class="bg-light">Domingo</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="table.calendario">
                                 <tr>
                                     <td class="text-center">1</td>
                                     <td class="text-center">2</td>
@@ -155,7 +155,35 @@
       <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
       <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
       <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
-      <script src="<?php echo Config::get('URL'); ?>js/apuntes.js"></script>
-      <script>$(document).ready(function() { });</script>
+      <script>
+        $(document).ready(function() {
+            let data = {
+                accion : "calendario"
+                mes: $("#fecha\\.mes").val(),
+                ano: $("#fecha\\.ano").val()
+            }
+
+            $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+                $("#table\\.calendario").empty();
+                if (Object.keys(data).length > 0) {
+                    let fila = '<tr>';
+                    let i = data.diaDeLaSemana;
+                    let j = data.diasEnElMes;
+                    let k = 1;
+                    let h = 1;
+
+                    for (h = 0; h < i; h++) {
+                        fila += '<td class="text-center"></td>';
+                    }
+
+                    for (h; h < 8; h++) {
+                        fila += '<td class="text-center">' + k + '</td>';
+                    }
+
+                    fila += '</tr>';
+                }
+            });
+      });
+      </script>
    </body>
 </html>
