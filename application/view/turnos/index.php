@@ -88,8 +88,8 @@
                                     <th scope="col">Miércoles</th>
                                     <th scope="col">Jueves</th>
                                     <th scope="col">Viernes</th>
-                                    <th scope="col">Sábado</th>
-                                    <th scope="col">Domingo</th>
+                                    <th scope="col" class="bg-light">Sábado</th>
+                                    <th scope="col" class="bg-light">Domingo</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -99,8 +99,8 @@
                                     <td class="text-center">Otto</td>
                                     <td class="text-center">@mdo</td>
                                     <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">2</td>
@@ -108,8 +108,8 @@
                                     <td class="text-center">Thornton</td>
                                     <td class="text-center">@fat</td>
                                     <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">3</td>
@@ -117,8 +117,8 @@
                                     <td class="text-center">the Bird</td>
                                     <td class="text-center">@twitter</td>
                                     <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">3</td>
@@ -126,8 +126,8 @@
                                     <td class="text-center">the Bird</td>
                                     <td class="text-center">@twitter</td>
                                     <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
                                 </tr>
                                 <tr>
                                     <td class="text-center">3</td>
@@ -135,7 +135,7 @@
                                     <td class="text-center">the Bird</td>
                                     <td class="text-center">@twitter</td>
                                     <td class="text-center">@mdo</td>
-                                    <td class="text-center">@mdo</td>
+                                    <td class="text-center bg-light">@mdo</td>
                                     <td class="text-center bg-light">@mdo</td>
                                 </tr>
                             </tbody>
