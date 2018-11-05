@@ -45,6 +45,11 @@
             <div class="col-8">
                 <div class="card m-3">
                     <div class="card-body">
+                        bla
+                    </div>
+                </div>
+                <div class="card ml-3">
+                    <div class="card-body">
                         <table class="table">
                             <thead>
                                 <tr>
