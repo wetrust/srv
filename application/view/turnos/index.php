@@ -181,6 +181,7 @@
                     }
 
                     fila += '</tr>';
+                    $("#table\\.calendario").append(fila);
                 }
             });
       });
