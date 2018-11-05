@@ -42,7 +42,7 @@
             </div>
         </nav>
         <div class="row m-0">
-            <div class="col-8">
+            <div class="col-7">
                 <div class="card ml-3 my-3">
                     <div class="card-body">
                         <div class="form-row">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-5">
                 <div class="card my-3">
                     <div class="card-body">
                         <h6 class="card-title">Profesionales</h6>
