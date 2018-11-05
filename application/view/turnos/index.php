@@ -204,7 +204,7 @@
                     $("#table\\.calendario").append(fila);
 
                     //para meses con 31 dias
-                    if (k < j ){
+                    if (k <= j ){
                         fila = '<tr>';
                         h = 1;
 
