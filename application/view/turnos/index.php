@@ -97,7 +97,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="card ml-3">
+                <div class="card ml-3 mt-2">
                     <div class="card-body">
                         <p>Turnos para el día elegido</p>
                     </div>
