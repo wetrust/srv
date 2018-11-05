@@ -79,7 +79,10 @@
                                     <label for="formulario.palabras"><strong>Primer participante</strong>(<i class="fas fa-cog text-success"></i>)</label>
                                     <select class="form-control" id="formulario.participante" disabled=""></select>
                                 </div>
-                                <div class="form-group"><label for="formulario.palabras"><strong>Otros participantes</strong></label><input class="form-control" id="formulario.palabras" type="text" disabled></div>
+                                <div class="form-group">
+                                    <label for="formulario.palabras"><strong>Otros participantes</strong></label>
+                                    <select class="form-control" id="formulario.palabras" disabled=""></select>
+                                </div>
                                 <input id="formulario.id" type="hidden" value="" />
                                 <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cierre del evento</strong></label><select class="form-control" id="formulario.cancelacion" disabled><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div>
                                 <div class="form-check">
