@@ -43,7 +43,7 @@
         </nav>
         <div class="row">
             <div class="col-8">
-                <div class="card m-3">
+                <div class="card ml-3 my-3">
                     <div class="card-body">
                         <div class="form-row">
                             <div class="col">
