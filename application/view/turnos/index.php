@@ -43,57 +43,61 @@
         </nav>
         <div class="row">
             <div class="col-8">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Lunes</th>
-                            <th scope="col">Martes</th>
-                            <th scope="col">Miércoles</th>
-                            <th scope="col">Jueves</th>
-                            <th scope="col">Viernes</th>
-                            <th scope="col">Sábado</th>
-                            <th scope="col">Domingo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Lunes</th>
+                                    <th scope="col">Martes</th>
+                                    <th scope="col">Miércoles</th>
+                                    <th scope="col">Jueves</th>
+                                    <th scope="col">Viernes</th>
+                                    <th scope="col">Sábado</th>
+                                    <th scope="col">Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
             <div class="col-4">
             </div>
