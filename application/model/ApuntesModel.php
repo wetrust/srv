@@ -578,9 +578,6 @@ class ApuntesModel
         return false;
     }
 
-
-
-
     /**
      * Get all Cancelaciones (Cancelaciones are just example data that the user has created)
      * @return array an array with several objects (the results)

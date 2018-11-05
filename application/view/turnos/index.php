@@ -71,7 +71,7 @@
                             <div class="col">
                                 <select id="inputState" class="form-control">
                                     <option>2017</option>
-                                    <option>2018</option>
+                                    <option selected>2018</option>
                                     <option>2019</option>
                                 </select>
                             </div>

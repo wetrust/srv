@@ -24,6 +24,11 @@ class TurnosController extends Controller
         $this->View->renderWithoutHeaderAndFooter('turnos/index');
     }
 
+    public function calendario()
+    {
+        $this->View->renderJSON(TurnosModel::calendario("2018", "06"));
+    }
+
     /**
      * This method controls what happens when you move to /dashboard/create in your app.
      * Creates a new note. This is usually the target of form submit actions.
