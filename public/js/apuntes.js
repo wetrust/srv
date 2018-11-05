@@ -775,7 +775,6 @@ function guardarAutomatico(){
     var monthH = ("0" + (H.getMonth() + 1)).slice(-2);
 
     if (id == 9999){
-
         formulario = {
             accion: "nuevo",
             fecha: d.getFullYear() + "-" +  month + "-" + day,
@@ -794,7 +793,6 @@ function guardarAutomatico(){
         };
     }
     else{
-
         formulario = {
             accion: "guardar",
             id: $("#formulario\\.id").val(),
@@ -845,6 +843,7 @@ function guardarAutomatico(){
 }
 
 function cargarTabla(order = 0){
+
     var solicitud = {};
     if (order == 0){
         solicitud = {
@@ -856,7 +855,6 @@ function cargarTabla(order = 0){
             accion: "tablad"
         };
     }
-    
 
     $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
         $("#contenedor\\.tarjetas").empty();
@@ -981,6 +979,7 @@ function cargarTabla(order = 0){
 }
 
 function cargarActividad(){
+
     var solicitud = {
         accion: "actividad"
     };
@@ -1034,6 +1033,7 @@ function cargarActividad(){
 }
 
 function cargarLugar(){
+
     var solicitud = {
         accion: "lugar"
     };
@@ -1086,6 +1086,7 @@ function cargarLugar(){
 }
 
 function cargarParticipante(){
+
     var solicitud = {
         accion: "participante"
     };
@@ -1133,11 +1134,26 @@ function cargarParticipante(){
 }
 
 function updateCalculos(){
+
     $("#tabla\\.calculos").empty();
+
+    var parts = $("#calculos\\.fecha\\.uno").val();
+    parts = parts.split('-');
+    var d = new Date(parts[2] + "-" + parts[1] + "-" +parts[0]);
+    var day = ("0" + d.getDate()).slice(-2);
+    var month = ("0" + (d.getMonth() + 1)).slice(-2);
+
+    parts = $("#calculos\\.fecha\\.dos").val();
+    parts = parts.split('-');
+    var H = new Date(parts[2] + "-" + parts[1] + "-" +parts[0]);
+    var dayH = ("0" + H.getDate()).slice(-2);
+    var monthH = ("0" + (H.getMonth() + 1)).slice(-2);
+
+
     var solicitud = {
         accion: "calculos",
-        uno: $("#calculos\\.fecha\\.uno").val(),
-        dos: $("#calculos\\.fecha\\.dos").val(),
+        uno: d.getFullYear() + "-" +  month + "-" + day,
+        dos: H.getFullYear() + "-" + monthH + "-" +  dayH,
         lugar: $("#calculos\\.formulario\\.lugar").val(),
         actividad: $("#calculos\\.formulario\\.actividad").val(),
         cancelacion: $("#calculos\\.formulario\\.cancelacion").val()
@@ -1168,8 +1184,8 @@ function updateCalculos(){
 
             var solicitud = {
                 accion: "calculosSum",
-                uno: $("#calculos\\.fecha\\.uno").val(),
-                dos: $("#calculos\\.fecha\\.dos").val(),
+                uno: d.getFullYear() + "-" +  month + "-" + day,
+                dos: H.getFullYear() + "-" + monthH + "-" +  dayH,
                 lugar: $("#calculos\\.formulario\\.lugar").val(),
                 actividad: $("#calculos\\.formulario\\.actividad").val(),
                 cancelacion: $("#calculos\\.formulario\\.cancelacion").val()
