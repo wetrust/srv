@@ -178,6 +178,7 @@
 
                     for (h; h < 8; h++) {
                         fila += '<td class="text-center">' + k + '</td>';
+                        k++;
                     }
 
                     fila += '</tr>';
