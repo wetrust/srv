@@ -158,7 +158,7 @@
       <script>
         $(document).ready(function() {
             let data = {
-                accion : "calendario"
+                accion : "calendario",
                 mes: $("#fecha\\.mes").val(),
                 ano: $("#fecha\\.ano").val()
             }
