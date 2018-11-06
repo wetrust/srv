@@ -311,7 +311,7 @@
                                 var fIn = new Date(item["turno_fechain"].replace(/-/g, '\/'));
                                 var fOut = new Date(item["turno_fechaout"].replace(/-/g, '\/'));
                                 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
-                                let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' hr. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' hr. </td><td>' +item["turno_profesional_nombre"] +'</td><td class="columna-cambiar p-0"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning cambiar-turno d-none"><i class="fas fa-external-link-alt"></i></button></td></tr>';
+                                let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' hr. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' hr. </td><td>' +item["turno_profesional_nombre"] +'</td><td class="p-0"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning cambiar-turno"><i class="fas fa-external-link-alt"></i></button></td></tr>';
                                 $("#table\\.turnos").append(fila);
                             });
 
@@ -321,7 +321,7 @@
                                 $(this).children("button").addClass("d-none");
                             });
 
-                            $(".eliminar-actividad").on("click", function(){
+                            $(".cambiar-turno").on("click", function(){
                                 let actividad_id = $(this).data("id");
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.title").html('Eliminar tipo de evento')
@@ -372,26 +372,26 @@
                         $(this).children("button").addClass("d-none");
                     });
 
-                $(".eliminar-profesional").on("click", function(){
-                    let profesional_id = $(this).data("id");
-                    $("#dialog\\.delete").remove();
-                    $("#dialog\\.title").html('Eliminar Profesional')
-                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el profesional seleccionado?</p>')
-                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + profesional_id + '">Eliminar</button>');
-        
-                    $("#dialog\\.delete").on("click", function(){
+                    $(".eliminar-profesional").on("click", function(){
                         let profesional_id = $(this).data("id");
-                        var solicitud = {
-                            accion: "profesionalesEliminar",
-                            id: parseInt(profesional_id)
-                        };
-                        $.post("https://servidor.crecimientofetal.cl/turnos/api", solicitud).done(function(data){
-                            $("#dialog\\.body").empty();
-                            $("#boton\\.profesionales").trigger("click");
+                        $("#dialog\\.delete").remove();
+                        $("#dialog\\.title").html('Eliminar Profesional')
+                        $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el profesional seleccionado?</p>')
+                        $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + profesional_id + '">Eliminar</button>');
+            
+                        $("#dialog\\.delete").on("click", function(){
+                            let profesional_id = $(this).data("id");
+                            var solicitud = {
+                                accion: "profesionalesEliminar",
+                                id: parseInt(profesional_id)
+                            };
+                            $.post("https://servidor.crecimientofetal.cl/turnos/api", solicitud).done(function(data){
+                                $("#dialog\\.body").empty();
+                                $("#boton\\.profesionales").trigger("click");
+                            });
                         });
+                        $("#dialog\\.view").modal("show");
                     });
-                    $("#dialog\\.view").modal("show");
-                });
                 }
             });
       }
