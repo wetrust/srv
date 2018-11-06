@@ -308,8 +308,8 @@
                         $("#table\\.turnos").empty();
                         if (Object.keys(response).length > 0) {
                             $.each(response, function(i, item) {
-                                var fIn = new Date(item["turno_fechain"]);
-                                var fOut = new Date(item["turno_fechaout"]);
+                                var fIn = new Date(item["turno_fechain"].replace(/-/g, '\/'));
+                                var fOut = new Date(item["turno_fechaout"].replace(/-/g, '\/'));
                                 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
                                 let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' hr. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' hr. </td><td>' +item["turno_profesional_nombre"] +'</td><td class="columna-cambiar p-0"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning cambiar-turno d-none"><i class="fas fa-external-link-alt"></i></button></td></tr>';
                                 $("#table\\.turnos").append(fila);
