@@ -281,7 +281,7 @@
                     }
                 }
 
-                $("#table\\.calendario > td").on(click, function(){
+                $("#table\\.calendario tr td").on("click", function(){
                     alert("hola");
                 })
             });
