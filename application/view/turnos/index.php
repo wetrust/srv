@@ -245,7 +245,7 @@
                     fila += '</tr>';
                     $("#table\\.calendario").append(fila);
 
-                    for (x = 0; x < 3){
+                    for (x = 0; x < 3; x++){
                         h = 1;
                         fila = '<tr>';
 
