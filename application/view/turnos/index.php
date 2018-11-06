@@ -78,7 +78,7 @@
                 </div>
                 <div class="card ml-3">
                     <div class="card-body">
-                        <table class="table">
+                        <table class="table table-td">
                             <thead>
                                 <tr>
                                     <th scope="col">Lunes</th>
@@ -101,12 +101,12 @@
                     <div class="card-body">
                         <h6 class="card-title">Turnos para el día</h6>
                         <p>Seleccione un día para ver el turno correspondiente<p/>
-                        <table class="table">
+                        <table class="table table-hover">
                             <thead>
                                 <tr>
                                     <th scope="col">Día</th>
-                                    <th scope="col">Hora Entrada</th>
-                                    <th scope="col">Hora Salida</th>
+                                    <th scope="col">Entrada</th>
+                                    <th scope="col">Salida</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col"><i class="fas fa-history"></i></th>
                                 </tr>
@@ -140,7 +140,7 @@
       <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
       <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
       <style>
-          .table tbody td:hover{
+          .table-td tbody td:hover{
               background-color:rgba(0,0,0,.075);
           }
       </style>
@@ -157,7 +157,7 @@
             makeCalendario();
 
             $("#boton\\.turno").on("click", function(){
-                $("#dialog\\.title").html("Añadir datos de entrada y salida del turno (Fecha y hora)");
+                $("#dialog\\.title").html("Añadir datos entrada y salida del turno (Fecha y hora)");
                 $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional</label><select class="form-control" id="turnos.profesionales"></select></div></div><div class="row"><p class="col-12"><strong>Entrada</strong></p><div class="form-group col"><label for="turnos.fecha.in">Fecha</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Hora</label><select class="form-control" id="turnos.hora.in"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option></select></div></div><div class="row"><p class="col-12"><strong>Salida</strong></p><div class="form-group col"><label for="turnos.fecha.out">Fecha del turno salida</label><input class="form-control" type="date" id="turnos.fecha.out"></div><div class="form-group col"><label for="turnos.hora.out">Hora Salida</label><select class="form-control" id="turnos.hora.out"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option></select></div></div>');
                 $("#dialog\\.view").modal("show");
                 cargarProfesionales();
