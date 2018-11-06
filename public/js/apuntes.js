@@ -306,7 +306,7 @@ $(document).ready(function(){
             let hora  = $("#formulario\\.hora").val();
             let minutos = $("#formulario\\.minutos").val();
             let participante = $("#formulario\\.participante option:selected").text()
-            let palabras  = $("#formulario\\.palabras option:selected").val();
+            let palabras  = $("#formulario\\.palabras option:selected").text();
             let lugar  = $("#formulario\\.lugar option:selected").text()
             let cancelacion  = $("#formulario\\.cancelacion option:selected").text()
             let fcancelacion = "";
@@ -832,7 +832,7 @@ function guardarAutomatico(){
             fcancelacion: H.getFullYear() + "-" + monthH + "-" +  dayH,
             valor: $("#formulario\\.valor").val(),
             comentarios: $("#formulario\\.comentarios").val(),
-            palabras: $("#formulario\\.palabras option:selected").val()
+            palabras: $("#formulario\\.palabras option:selected").text()
         };
     }
     else{
