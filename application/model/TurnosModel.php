@@ -44,7 +44,7 @@ class TurnosModel
      * @param int $keyword_id id of the specific keyword
      * @return object a single object (the result)
      */
-    public static function getKeyword($keyword_id)
+    public static function getProfesional($keyword_id)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
@@ -134,4 +134,113 @@ class TurnosModel
         Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
         return false;
     }
+
+    public static function getAllTurnos()
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout FROM turnos";
+        $query = $database->prepare($sql);
+        $query->execute();
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
+    }
+
+    /**
+     * Get a single keyword
+     * @param int $keyword_id id of the specific keyword
+     * @return object a single object (the result)
+     */
+    public static function getTurnos($fechainic)
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout FROM turnos WHERE turno_fechain = :turno_fechain LIMIT 1";
+        $query = $database->prepare($sql);
+        $query->execute(array(':turno_fechain' => $fechainic));
+
+        // fetch() is the PDO method that gets a single result
+        return $query->fetch();
+    }
+
+    /**
+     * Set a keyword (create a new one)
+     * @param string $keyword_text keyword text that will be created
+     * @return bool feedback (was the keyword created properly ?)
+     */
+    public static function createTurnos($profesional,$fechainic,$horainic,$fechafin,$horafin)
+    {
+        if (!$profesional) {
+            Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "INSERT INTO turnos (turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout) VALUES (:turno_profesional, :turno_fechain, :turno_horain, :turno_fechaout, :turno_horaout)";
+        $query = $database->prepare($sql);
+        $query->execute(array(':turno_profesional' => $profesional, ':turno_fechain' => $fechainic, ':turno_horain' => $horainic, ':turno_fechaout' => $fechafin, ':turno_horaout' => $horafin));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+        return false;
+    }
+
+    /**
+     * Update an existing keyword
+     * @param int $keyword_id id of the specific keyword
+     * @param string $keyword_text new text of the specific keyword
+     * @return bool feedback (was the update successful ?)
+     */
+    public static function updateTurnos($keyword_id, $keyword_text)
+    {
+        if (!$keyword_id || !$keyword_text) {
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "UPDATE turnos SET keyword_text = :keyword_text WHERE keyword_id = :keyword_id AND user_id = :user_id LIMIT 1";
+        $query = $database->prepare($sql);
+        $query->execute(array(':keyword_id' => $keyword_id, ':keyword_text' => $keyword_text, ':user_id' => Session::get('user_id')));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_EDITING_FAILED'));
+        return false;
+    }
+
+    /**
+     * Delete a specific keyword
+     * @param int $keyword_id id of the keyword
+     * @return bool feedback (was the keyword deleted properly ?)
+     */
+    public static function deleteTurnos($turno_id)
+    {
+        if (!$turno_id) {
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "DELETE FROM turnos WHERE turno_id = :turno_id LIMIT 1";
+        $query = $database->prepare($sql);
+        $query->execute(array(':turno_id' => $turno_id));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
+        return false;
+    }
+
 }

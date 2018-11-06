@@ -153,7 +153,7 @@
 
                 $("#dialog\\.footer").on("click", function(){
                     let datos = {
-                        accion: "profesionalesNuevo",
+                        accion: "turnosNuevo",
                         profesional: $("#turnos.profesionales").val(),
                         fechainic: $("#turnos\\.fecha\\.in").val(),
                         horainic: $("#turnos\\.hora\\.in").val(),

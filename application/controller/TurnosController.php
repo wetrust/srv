@@ -51,14 +51,14 @@ class TurnosController extends Controller
             case "profesionalesEliminar":
                 $resultado = TurnosModel::deleteProfesional(Request::post('id'));
                 break;
-            case "guardar":
-                $resultado = ApuntesModel::updateApunte(Request::post('id'),Request::post('fecha'),Request::post('hora'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'), Request::post('participante'), Request::post('nombre'),Request::post('minutos'));
+            case "turnos":
+                $resultado = TurnosModel::getAllTurnos();
                 break;
-            case "eliminar":
-                $resultado = ApuntesModel::deleteApunte(Request::post('id'));
+            case "turnosNuevo":
+                $resultado = TurnosModel::createTurnos(Request::post('profesional'),Request::post('fechainic'),Request::post('horainic'),Request::post('fechafin'),Request::post('horafin'));
                 break;
-            case "actividad":
-                $resultado = ApuntesModel::getAllActividades();
+            case "turnosEliminar":
+                $resultado = TurnosModel::deteleTurnos(Request::post('id'));
                 break;
             case "actividadUna":
                 $resultado = ApuntesModel::getActividad(Request::post('id'));
