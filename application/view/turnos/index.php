@@ -106,8 +106,9 @@
                                 <tr>
                                     <th scope="col">Día</th>
                                     <th scope="col">Entrada</th>
+                                    <th scope="col"></th>
                                     <th scope="col">Salida</th>
-                                    <th scope="col">Nombre</th>
+                                    <th scope="col"></th>
                                     <th scope="col"><i class="fas fa-history"></i></th>
                                 </tr>
                             </thead>
@@ -306,8 +307,38 @@
                         $("#table\\.turnos").empty();
                         if (Object.keys(response).length > 0) {
                             $.each(response, function(i, item) {
-                                let fila = '<tr><td>' + item["turno_fechain"] + '</td><td>' + item["turno_horain"] + '</td><td>' + item["turno_horaout"] + '</td><td>' +item["turno_profesional"] +'</td><td class="columna-k"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                                let fila = '<tr><td>' + item["turno_fechain"] + '</td><td>' + item["turno_horain"] + '</td><td>' + item["turno_fechaout"] + '</td><td>' + item["turno_horaout"] + '</td><td>' +item["turno_profesional"] +'</td><td class="columna-cambiar"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning px-3 cambiar-turno float-right d-none"><i class="fas fa-external-link-alt"></i></button></td></tr>';
                                 $("#table\\.turnos").append(fila);
+                            });
+
+                            $(".columna-cambiar").on("mouseenter",function(){
+                                $(this).children("button").removeClass("d-none");
+                            }).on("mouseleave", function(){
+                                $(this).children("button").addClass("d-none");
+                            });
+
+                            $(".eliminar-actividad").on("click", function(){
+                                let actividad_id = $(this).data("id");
+                                $("#dialog\\.delete").remove();
+                                $("#dialog\\.title").html('Eliminar tipo de evento')
+                                $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el tipo de evento seleccionada?</p>')
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + actividad_id + '">Eliminar</button>');
+
+                                $("#dialog\\.delete").on("click", function(){
+                                    let actividad_id = $(this).data("id");
+                                    var solicitud = {
+                                        accion: "eliminarActividad",
+                                        id: actividad_id
+                                    };
+
+                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                                        cargarActividad();
+                                        $("#boton\\.configuracion").trigger("click");
+                                        $('#myTab a[href="#home"]').tab('show')
+                                    });
+                                });
+
+                                $("#dialog\\.view").modal("show");
                             });
                         }
                     })
