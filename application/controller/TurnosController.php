@@ -42,14 +42,14 @@ class TurnosController extends Controller
             case "calendario":
                 $resultado = TurnosModel::calendar(Request::post('mes'),Request::post('ano'));
                 break;
-            case "tablad":
-                $resultado = ApuntesModel::getAllApuntesDate();
+            case "profesionales":
+                $resultado = ApuntesModel::getAllProfesionales();
                 break;
-            case "apunte":
-                $resultado = ApuntesModel::getApunte(Request::post('id'));
+            case "profesionalesNuevo":
+                $resultado = ApuntesModel::createProfesional(Request::post('name'),Request::post('rut'), Request::post('correo'),Request::post('telefono'));
                 break;
-            case "nuevo":
-                $resultado = ApuntesModel::createApunte(Request::post('fecha'),Request::post('hora'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'), Request::post('participante'), Request::post('nombre'),Request::post('minutos'));
+            case "profesionalesEliminar":
+                $resultado = ApuntesModel::deleteProfesional(Request::post('id'));
                 break;
             case "guardar":
                 $resultado = ApuntesModel::updateApunte(Request::post('id'),Request::post('fecha'),Request::post('hora'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'), Request::post('participante'), Request::post('nombre'),Request::post('minutos'));
