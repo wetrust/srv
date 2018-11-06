@@ -140,7 +140,7 @@ class TurnosModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         $fecha = $ano . "-" . $mes . "-" . $dia;
-        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout FROM turnos WHERE turno_fechain = :turno_fechain";
+        $sql = "SELECT turno_id, turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout FROM turnos WHERE turno_fechain = :turno_fechain";
         $query = $database->prepare($sql);
         $query->execute(array(':turno_fechain' => $fecha));
 

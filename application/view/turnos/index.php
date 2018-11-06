@@ -101,6 +101,18 @@
                     <div class="card-body">
                         <h6 class="card-title">Turnos para el día</h6>
                         <p>Seleccione un día para ver el turno correspondiente<p/>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Día</th>
+                                    <th scope="col">Hora</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="table.turnos">
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -290,7 +302,13 @@
                         ano: $("#fecha\\.ano").val()
                     }
                     $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
-
+                        $("#table\\.turnos").empty();
+                        if (Object.keys(response).length > 0) {
+                            $.each(response, function(i, item) {
+                                let fila = '<tr><td>' + item["turno_fechain"] + '</td><td>' + item["turno_horain"] + '</td><td>' + item["turno_profesional"] +'</td><td class="columna-k"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                                $("#tabla\\.turnos").append(fila);
+                            }
+                        }
                     })
                 })
             });
