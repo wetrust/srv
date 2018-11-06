@@ -23,7 +23,7 @@
                         Turnos
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Nuevo Turno</a>
+                        <a class="dropdown-item" href="#" id="boton.turno">Nuevo Turno</a>
                         <a class="dropdown-item" href="#">Cambiar turno</a>
                         <div class="dropdown-divider"></div>
                         </div>
@@ -100,16 +100,28 @@
                 <div class="card my-3">
                     <div class="card-body">
                         <h6 class="card-title">Turnos para el día</h6>
-                        <div class="btn-group" role="group" aria-label="Menú">
-                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.nuevo" title="Nuevo apunte"><i class="fas fa-plus"></i></button>
-                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.editar" title="Modificar apunte"><i class="fas fa-pen"></i></button>
-                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.guardar" title="Guardar apunte"><i class="fas fa-save"></i></button>
-                            <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" id="boton.cancelar" title="Cancelar apunte"><i class="fas fa-ban"></i></button>
-                        </div>
+                        <p>Seleccione un día para ver el turno correspondiente<p/>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="modal" tabindex="-1" role="dialog" id="dialog.view">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title" id="dialog.title"></h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body" id="dialog.body">
+               </div>
+               <div class="modal-footer" id="dialog.footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+               </div>
+            </div>
+         </div>
+      </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
       <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
@@ -129,7 +141,13 @@
                 makeCalendario();
             });
 
-            makeCalendario()
+            makeCalendario();
+
+            $("#boton\\.turno").on("click", function(){
+                $("#dialog\\.title").html("Añadir un nuevo turno a un día");
+                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="exampleFormControlInput1">Fecha del turno</label><input class="form-control" id="exampleFormControlInput1" type="date"></div><div class="form-group col"><label for="exampleFormControlTextarea1">Profesional</label><select class="form-control" id="exampleFormControlSelect1"><option>nombre 1</option><option>nombre 2</option><option>nombre 3</option><option>nombre 4</option><option>nombre 5</option></select></div></div><div class="row"><div class="form-group col"><label for="exampleFormControlSelect1">Hora Entrada</label><select class="form-control" id="exampleFormControlSelect1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div><div class="form-group col"><label for="exampleFormControlSelect2">Hora Salida</label><select class="form-control" id="exampleFormControlSelect2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div></div>');
+                $("#dialog\\.view").modal("show");
+            })
         });
 
       function makeCalendario(){
