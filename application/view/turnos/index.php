@@ -154,7 +154,7 @@
                 $("#dialog\\.footer").on("click", function(){
                     let datos = {
                         accion: "turnosNuevo",
-                        profesional: $("#turnos.profesionales").val(),
+                        profesional: $("#turnos.profesionales option:selected").val(),
                         fechainic: $("#turnos\\.fecha\\.in").val(),
                         horainic: $("#turnos\\.hora\\.in").val(),
                         fechafin: $("#turnos\\.fecha\\.out").val(),
@@ -327,6 +327,7 @@
 
             $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
                 $("#tabla\\.profesional").empty();
+                $("#turnos\\.profesionales").empty();
                 if (Object.keys(data).length > 0) {
                     $.each(response, function(i, item) {
                         let fila = '<tr><td>' + item["profesional_name"] + '</td><td>' + item["profesional_telefono"] + '<td class="columna-profesional">' + item["profesional_correo"] + '<button type="button" data-id="' + item["profesional_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
