@@ -311,7 +311,7 @@
                                 var fIn = new Date(item["turno_fechain"].replace(/-/g, '\/'));
                                 var fOut = new Date(item["turno_fechaout"].replace(/-/g, '\/'));
                                 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
-                                let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' hr. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' hr. </td><td>' +item["turno_profesional_nombre"] +'</td><td class="p-0"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning cambiar-turno"><i class="fas fa-external-link-alt"></i></button></td></tr>';
+                                let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' hr. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' hr. </td><td>' + item["turno_profesional_nombre"] +'</td><td class="p-0"><button type="button" data-id="' + item["turno_id"] + '" data-name="' + item["turno_profesional"] +'" data-names="' + item["turno_profesional_nombre"] +'" class="btn btn-outline-warning cambiar-turno"><i class="fas fa-external-link-alt"></i></button></td></tr>';
                                 $("#table\\.turnos").append(fila);
                             });
 
@@ -322,11 +322,31 @@
                             });
 
                             $(".cambiar-turno").on("click", function(){
-                                let actividad_id = $(this).data("id");
+                                let turno_id = $(this).data("id");
+                                let profesional_id = $(this).data("name");
+                                let profesional_nombre = $(this).data("names");
                                 $("#dialog\\.delete").remove();
-                                $("#dialog\\.title").html('Eliminar tipo de evento')
-                                $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el tipo de evento seleccionada?</p>')
-                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + actividad_id + '">Eliminar</button>');
+                                $("#dialog\\.title").html('Cambiar o eliminar turno')
+                                $("#dialog\\.body").html('<p class="col-12"><strong>Cambiar turno</strong></p><div class="form-group col"><label for="turno.profesional.out">Profesional de turno</label><input id="turno.profesional.out" class="form-control" type="text" disabled="" value="' + profesional_nombre +'"></div><div class="form-group col"><label for="turno.profesional.in">Profesional que remplaza</label><select class="form-control" id="turno.profesional.in"><option value="3">Dr. prueba</option><option value="4">De Turno</option><option value="5">De Reemplazo</option><option value="6">Relevo</option></select></div>')
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-primary" id="dialog.change" data-id="' + actividad_id + '">Guardar cambio</button>');
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + actividad_id + '">Eliminar turno</button>');
+
+                                $("#dialog\\.change").on("click", function(){
+                                    let actividad_id = $(this).data("id");
+                                    var solicitud = {
+                                        accion: "turnosCambiar",
+                                        id: turno_id,
+                                        profesional_out: profesional_id,
+                                        profesional_in: $("#turno\\.profesional\\.in").val(),
+                                        profesional_nombre: $("#turno\\.profesional\\.in option:selected").text()
+                                    };
+
+                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                                        cargarActividad();
+                                        $("#boton\\.configuracion").trigger("click");
+                                        $('#myTab a[href="#home"]').tab('show')
+                                    });
+                                });
 
                                 $("#dialog\\.delete").on("click", function(){
                                     let actividad_id = $(this).data("id");
