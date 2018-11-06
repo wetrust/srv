@@ -104,8 +104,8 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th scope="col">Día</th>
                                     <th scope="col">Entrada</th>
+                                    <th scope="col"></th>
                                     <th scope="col"></th>
                                     <th scope="col">Salida</th>
                                     <th scope="col"></th>
