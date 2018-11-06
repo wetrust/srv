@@ -169,7 +169,7 @@
                     let datos = {
                         accion: "turnosNuevo",
                         profesional: $("#turnos\\.profesionales").val(),
-                        profesional_nombre: $("#turnos\\.profesionales option:selected").text(); 
+                        profesional_nombre: $("#turnos\\.profesionales option:selected").text(), 
                         fechainic: $("#turnos\\.fecha\\.in").val(),
                         horainic: $("#turnos\\.hora\\.in").val(),
                         fechafin: $("#turnos\\.fecha\\.out").val(),
