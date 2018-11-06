@@ -282,7 +282,16 @@
                 }
 
                 $("#table\\.calendario tr td").on("click", function(){
-                    alert("hola");
+
+                    let data = {
+                        accion : "turnos",
+                        dia: ("0" + $(this).text()).slice(-2),
+                        mes: $("#fecha\\.mes").val(),
+                        ano: $("#fecha\\.ano").val()
+                    }
+                    $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+
+                    })
                 })
             });
       }
