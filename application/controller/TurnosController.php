@@ -52,7 +52,7 @@ class TurnosController extends Controller
                 $resultado = TurnosModel::deleteProfesional(Request::post('id'));
                 break;
             case "turnos":
-                $resultado = TurnosModel::getAllTurnos();
+                $resultado = TurnosModel::getAllTurnos(Request::post('dia'),Request::post('mes'), Request::post('ano'));
                 break;
             case "turnosNuevo":
                 $resultado = TurnosModel::createTurnos(Request::post('profesional'),Request::post('fechainic'),Request::post('horainic'),Request::post('fechafin'),Request::post('horafin'));

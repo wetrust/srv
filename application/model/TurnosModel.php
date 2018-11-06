@@ -135,13 +135,14 @@ class TurnosModel
         return false;
     }
 
-    public static function getAllTurnos()
+    public static function getAllTurnos($dia, $mes, $ano)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout FROM turnos";
+        $fecha = $ano . "-" . $mes . "-" . $dia;
+        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout FROM turnos WHERE turno_fechain = :turno_fechain";
         $query = $database->prepare($sql);
-        $query->execute();
+        $query->execute(array(':turno_fechain' => $fecha));
 
         // fetchAll() is the PDO method that gets all result rows
         return $query->fetchAll();
