@@ -173,7 +173,7 @@ class TurnosModel
     {
         if (!$profesional) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
-            return false;
+            return 'fuck';
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
