@@ -162,14 +162,7 @@
                     }
 
                     $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
-                        $("#profesional\\.nombre").val("");
-                        $("#profesional\\.rut").val("");
-                        $("#profesional\\.telefono").val("");
-                        $("#profesional\\.correo").val("");
-                        $("#boton\\.profesional\\.nuevo").removeClass("d-none");
-                        $("#boton\\.profesional\\.guardar").addClass("d-none");
-                        $("#boton\\.profesional\\.cancelar").addClass("d-none");
-                        cargarProfesionales();
+                        $("#dialog\\.view").modal("hide");
                     });
                 });
             });
@@ -251,53 +244,22 @@
 
                     fila += '</tr>';
                     $("#table\\.calendario").append(fila);
-                    
-                    fila = '<tr>';
-                    h = 1;
 
-                    for (h; h < 8; h++) {
-                        fila += '<td class="text-center">' + k + '</td>';
-                        k++;
-                    }
+                    for (x = 0; x < 3){
+                        h = 1;
+                        fila = '<tr>';
 
-                    fila += '</tr>';
-                    $("#table\\.calendario").append(fila);
-
-                    fila = '<tr>';
-                    h = 1;
-
-                    for (h; h < 8; h++) {
-                        fila += '<td class="text-center">' + k + '</td>';
-                        k++;
-                    }
-
-                    fila += '</tr>';
-                    $("#table\\.calendario").append(fila);
-
-                    fila = '<tr>';
-                    h = 1;
-
-                    for (h; h < 8; h++) {
-                        fila += '<td class="text-center">' + k + '</td>';
-                        k++;
-                    }
-
-                    fila += '</tr>';
-                    $("#table\\.calendario").append(fila);
-
-                    fila = '<tr>';
-                    h = 1;
-
-                    for (h; h < 8; h++) {
-                        if (k == j ){
-                            h = 7;
+                        for (h; h < 8; h++) {
+                            if (k == j ){
+                                h = 7;
+                            }
+                            fila += '<td class="text-center">' + k + '</td>';
+                            k++;
                         }
-                        fila += '<td class="text-center">' + k + '</td>';
-                        k++;
-                    }
 
-                    fila += '</tr>';
-                    $("#table\\.calendario").append(fila);
+                        fila += '</tr>';
+                        $("#table\\.calendario").append(fila);
+                    }
 
                     //
                     //para meses con 31 dias
