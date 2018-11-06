@@ -108,7 +108,7 @@
                                     <th scope="col">Hora Entrada</th>
                                     <th scope="col">Hora Salida</th>
                                     <th scope="col">Nombre</th>
-                                    <th scope="col"></th>
+                                    <th scope="col"><i class="fas fa-history"></i></th>
                                 </tr>
                             </thead>
                             <tbody id="table.turnos">
