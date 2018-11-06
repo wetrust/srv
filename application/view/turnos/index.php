@@ -226,6 +226,7 @@
 
             $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
                 $("#table\\.calendario").empty();
+
                 if (Object.keys(data).length > 0) {
                     let fila = '<tr>';
                     let i = response.diaDeLaSemana;
@@ -279,6 +280,10 @@
                         $("#table\\.calendario").append(fila);
                     }
                 }
+
+                $("#table\\.calendario tr td").on(click, function(){
+                    alert("hola");
+                })
             });
       }
 
