@@ -43,13 +43,13 @@ class TurnosController extends Controller
                 $resultado = TurnosModel::calendar(Request::post('mes'),Request::post('ano'));
                 break;
             case "profesionales":
-                $resultado = ApuntesModel::getAllProfesionales();
+                $resultado = TurnosModel::getAllProfesionales();
                 break;
             case "profesionalesNuevo":
-                $resultado = ApuntesModel::createProfesional(Request::post('name'),Request::post('rut'), Request::post('correo'),Request::post('telefono'));
+                $resultado = TurnosModel::createProfesional(Request::post('name'),Request::post('rut'), Request::post('correo'),Request::post('telefono'));
                 break;
             case "profesionalesEliminar":
-                $resultado = ApuntesModel::deleteProfesional(Request::post('id'));
+                $resultado = TurnosModel::deleteProfesional(Request::post('id'));
                 break;
             case "guardar":
                 $resultado = ApuntesModel::updateApunte(Request::post('id'),Request::post('fecha'),Request::post('hora'),Request::post('actividad'),Request::post('lugar'),Request::post('cancelacion'),Request::post('fcancelacion'),Request::post('valor'),Request::post('comentarios'),Request::post('palabras'),Request::post('location_name'), Request::post('participante'), Request::post('nombre'),Request::post('minutos'));
