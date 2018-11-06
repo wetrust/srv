@@ -832,7 +832,7 @@ function guardarAutomatico(){
             fcancelacion: H.getFullYear() + "-" + monthH + "-" +  dayH,
             valor: $("#formulario\\.valor").val(),
             comentarios: $("#formulario\\.comentarios").val(),
-            palabras: $("#formulario\\.palabras option:selected").text()
+            palabras: $("#formulario\\.palabras option:selected").val()
         };
     }
     else{
