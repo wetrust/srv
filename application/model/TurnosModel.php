@@ -180,7 +180,7 @@ class TurnosModel
 
         $sql = "INSERT INTO turnos (turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout) VALUES (:turno_profesional, :turno_fechain, :turno_horain, :turno_fechaout, :turno_horaout)";
         $query = $database->prepare($sql);
-        $query->execute(array(':turno_profesional' => $profesional, ':turno_fechain' => $fechainic, ':turno_horain' => $horainic, ':turno_fechaout' => $fechafin, ':turno_horaout' => $horafin));
+        $query->execute(array(':turno_profesional' => $profesional, ':turno_fechain' => $fechainic, ':turno_horain' => intval($horainic), ':turno_fechaout' => $fechafin, ':turno_horaout' => intval($horafin)));
 
         if ($query->rowCount() == 1) {
             return true;
