@@ -72,7 +72,7 @@ class TurnosModel
 
         $sql = "INSERT INTO profesionales (profesional_name, profesional_rut, profesional_telefono, profesional_correo) VALUES (:profesional_name, :profesional_rut, :profesional_telefono, :profesional_correo)";
         $query = $database->prepare($sql);
-        $query->execute(array(':profesional_name' => $name, ':profesional_rut' => $rut, ':profesional_telefono' => $correo, ':profesional_correo' => $telefono));
+        $query->execute(array(':profesional_name' => $name, ':profesional_rut' => $rut, ':profesional_telefono' => $telefono, ':profesional_correo' => $correo));
 
         if ($query->rowCount() == 1) {
             return true;
