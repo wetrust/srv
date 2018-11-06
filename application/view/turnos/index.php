@@ -326,6 +326,7 @@
                                 let profesional_id = $(this).data("name");
                                 let profesional_nombre = $(this).data("names");
                                 $("#dialog\\.delete").remove();
+                                $("#dialog\\.change").remove();
                                 $("#dialog\\.title").html('Cambiar o eliminar turno')
                                 $("#dialog\\.body").html('<div class="row"><p class="col-12"><strong>Cambiar turno</strong></p><div class="form-group col"><label for="turno.profesional.out">Profesional de turno</label><input id="turno.profesional.out" class="form-control" type="text" disabled="" value="' + profesional_nombre +'"></div><div class="form-group col"><label for="turno.profesional.in">Profesional que remplaza</label><select class="form-control" id="turno.profesional.in"></select></div></div>')
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-primary" id="dialog.change" data-id="' + turno_id + '">Guardar cambio</button>');
