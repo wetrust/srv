@@ -145,9 +145,33 @@
 
             $("#boton\\.turno").on("click", function(){
                 $("#dialog\\.title").html("Añadir un nuevo turno a un día");
-                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional</label><select class="form-control" id="turnos.profesionales"></select></div></div><div class="row"><div class="form-group col"><label for="turnos.fecha.in">Fecha del turno entrada</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.fecha.out">Hora Entrada</label><select class="form-control" id="turnos.fecha.out"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div></div><div class="row"><div class="form-group col"><label for="exampleFormControlInput1">Fecha del turno salida</label><input class="form-control" id="exampleFormControlInput1" type="date"></div><div class="form-group col"><label for="exampleFormControlSelect2">Hora Salida</label><select class="form-control" id="exampleFormControlSelect2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div></div>');
+                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional</label><select class="form-control" id="turnos.profesionales"></select></div></div><div class="row"><p class="col-12"><strong>Entrada</strong></p><div class="form-group col"><label for="turnos.fecha.in">Fecha</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Hora</label><select class="form-control" id="turnos.hora.in"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div></div><div class="row"><p class="col-12"><strong>Salida</strong></p><div class="form-group col"><label for="turnos.fecha.out">Fecha del turno salida</label><input class="form-control" type="date" id="turnos.fecha.out"></div><div class="form-group col"><label for="turnos.hora.out">Hora Salida</label><select class="form-control" id="turnos.hora.out"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div></div>');
                 $("#dialog\\.view").modal("show");
                 cargarProfesionales();
+
+                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete">Guardar</button>');
+
+                $("#dialog\\.footer").on("click", function(){
+                    let datos = {
+                        accion: "profesionalesNuevo",
+                        profesional: $("#turnos.profesionales").val(),
+                        fechainic: $("#turnos\\.fecha\\.in").val(),
+                        horainic: $("#turnos\\.fecha\\.in").val(),
+                        fechafin: $("#turnos\\.fecha\\.out").val(),
+                        horafin: $("#turnos\\.hora\\.out").val() 
+                    }
+
+                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                        $("#profesional\\.nombre").val("");
+                        $("#profesional\\.rut").val("");
+                        $("#profesional\\.telefono").val("");
+                        $("#profesional\\.correo").val("");
+                        $("#boton\\.profesional\\.nuevo").removeClass("d-none");
+                        $("#boton\\.profesional\\.guardar").addClass("d-none");
+                        $("#boton\\.profesional\\.cancelar").addClass("d-none");
+                        cargarProfesionales();
+                    });
+                });
             });
 
             $("#boton\\.profesionales").on("click", function(){
