@@ -328,11 +328,11 @@
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.title").html('Cambiar o eliminar turno')
                                 $("#dialog\\.body").html('<p class="col-12"><strong>Cambiar turno</strong></p><div class="form-group col"><label for="turno.profesional.out">Profesional de turno</label><input id="turno.profesional.out" class="form-control" type="text" disabled="" value="' + profesional_nombre +'"></div><div class="form-group col"><label for="turno.profesional.in">Profesional que remplaza</label><select class="form-control" id="turno.profesional.in"><option value="3">Dr. prueba</option><option value="4">De Turno</option><option value="5">De Reemplazo</option><option value="6">Relevo</option></select></div>')
-                                $("#dialog\\.footer").append('<button type="button" class="btn btn-primary" id="dialog.change" data-id="' + actividad_id + '">Guardar cambio</button>');
-                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + actividad_id + '">Eliminar turno</button>');
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-primary" id="dialog.change" data-id="' + turno_id + '">Guardar cambio</button>');
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + turno_id + '">Eliminar turno</button>');
 
                                 $("#dialog\\.change").on("click", function(){
-                                    let actividad_id = $(this).data("id");
+                                    let turno_id = $(this).data("id");
                                     var solicitud = {
                                         accion: "turnosCambiar",
                                         id: turno_id,
