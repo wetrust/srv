@@ -156,7 +156,7 @@
                         accion: "profesionalesNuevo",
                         profesional: $("#turnos.profesionales").val(),
                         fechainic: $("#turnos\\.fecha\\.in").val(),
-                        horainic: $("#turnos\\.fecha\\.in").val(),
+                        horainic: $("#turnos\\.hora\\.in").val(),
                         fechafin: $("#turnos\\.fecha\\.out").val(),
                         horafin: $("#turnos\\.hora\\.out").val() 
                     }
