@@ -108,7 +108,7 @@
                                     <th scope="col"></th>
                                     <th scope="col">Salida</th>
                                     <th scope="col"></th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Nombre</th>
                                     <th scope="col"><i class="fas fa-history"></i></th>
                                 </tr>
                             </thead>
