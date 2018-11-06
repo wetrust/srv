@@ -326,9 +326,9 @@
                         let profesional_id = $(this).data("id");
                         var solicitud = {
                             accion: "profesionalesEliminar",
-                            id: profesional_id
+                            id: parseInt(profesional_id)
                         };
-                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                        $.post("https://servidor.crecimientofetal.cl/turnos/api", solicitud).done(function(data){
                             $("#dialog\\.body").empty();
                             $("#boton\\.profesionales").trigger("click");
                         });
