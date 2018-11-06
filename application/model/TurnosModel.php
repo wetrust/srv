@@ -157,7 +157,7 @@ class TurnosModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout FROM turnos WHERE turno_fechain = :turno_fechain LIMIT 1";
+        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout, turno_profesional_nombre FROM turnos WHERE turno_fechain = :turno_fechain LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':turno_fechain' => $fechainic));
 
