@@ -306,7 +306,7 @@
                         if (Object.keys(response).length > 0) {
                             $.each(response, function(i, item) {
                                 let fila = '<tr><td>' + item["turno_fechain"] + '</td><td>' + item["turno_horain"] + '</td><td>' + item["turno_profesional"] +'</td><td class="columna-k"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
-                                $("#tabla\\.turnos").append(fila);
+                                $("#table\\.turnos").append(fila);
                             });
                         }
                     })
