@@ -147,12 +147,55 @@
                 $("#dialog\\.title").html("Añadir un nuevo turno a un día");
                 $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="exampleFormControlInput1">Fecha del turno</label><input class="form-control" id="exampleFormControlInput1" type="date"></div><div class="form-group col"><label for="exampleFormControlTextarea1">Profesional</label><select class="form-control" id="exampleFormControlSelect1"><option>nombre 1</option><option>nombre 2</option><option>nombre 3</option><option>nombre 4</option><option>nombre 5</option></select></div></div><div class="row"><div class="form-group col"><label for="exampleFormControlSelect1">Hora Entrada</label><select class="form-control" id="exampleFormControlSelect1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div><div class="form-group col"><label for="exampleFormControlSelect2">Hora Salida</label><select class="form-control" id="exampleFormControlSelect2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select></div></div>');
                 $("#dialog\\.view").modal("show");
+                cargarProfesionales();
             });
 
             $("#boton\\.profesionales").on("click", function(){
                 $("#dialog\\.title").html("Profesionales disponibles para turno");
-                $("#dialog\\.body").html('<div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" title="Nueva actividad" id="boton.profesional.nuevo"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.guardar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.cancelar"><i class="fas fa-ban"></i></button> </div><div id="div.profesional" class="my-3 mx-0"> <div class="row"><div class="form-group col"> <label for="profesional.nombre">1.- Nombre del profesional</label> <input type="text" class="form-control" id="profesional.nombre"> </div><div class="form-group col"> <label class="mr-3" for="profesional.rut">2.- R.U.T.</label> <input type="text" class="form-control" id="profesional.rut"></div></div><div class="row"><div class="form-group col"> <label for="profesional.telefono">3.- Teléfono</label> <input type="text" class="form-control" id="profesional.telefono"> </div><div class="form-group col"> <label class="mr-3" for="profesional.correo">4.- Correo Electrónico</label> <input type="text" class="form-control" id="profesional.correo"></div></div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">Nombre profesional</th> <th scope="col">Teléfono</th> <th scope="col">Correo Electrónico</th></tr></thead> <tbody id="tabla.profesional"></tbody> </table>');
+                $("#dialog\\.body").html('<div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" title="Nueva actividad" id="boton.profesional.nuevo"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.guardar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.cancelar"><i class="fas fa-ban"></i></button> </div><div id="div.profesional" class="my-3 mx-0 d-none"> <div class="row"><div class="form-group col"> <label for="profesional.nombre">1.- Nombre del profesional</label> <input type="text" class="form-control" id="profesional.nombre"> </div><div class="form-group col"> <label class="mr-3" for="profesional.rut">2.- R.U.T.</label> <input type="text" class="form-control" id="profesional.rut"></div></div><div class="row"><div class="form-group col"> <label for="profesional.telefono">3.- Teléfono</label> <input type="text" class="form-control" id="profesional.telefono"> </div><div class="form-group col"> <label class="mr-3" for="profesional.correo">4.- Correo Electrónico</label> <input type="text" class="form-control" id="profesional.correo"></div></div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">Nombre profesional</th> <th scope="col">Teléfono</th> <th scope="col">Correo Electrónico</th></tr></thead> <tbody id="tabla.profesional"></tbody> </table>');
                 $("#dialog\\.view").modal("show");
+
+                $("#boton\\.profesional\\.nuevo").on("click", function(){
+                    $("#div\\.profesional").removeClass("d-none");
+                    $("#boton\\.profesional\\.nuevo").addClass("d-none");
+                    $("#boton\\.profesional\\.guardar").removeClass("d-none")
+                    $("#boton\\.profesional\\.cancelar").removeClass("d-none")
+                });
+
+                $("#boton\\.profesional\\.guardar").on("click", function(){
+                    $("#div\\.profesional").addClass("d-none");
+                    let datos = {
+                        accion: "profesionalesNuevo",
+                        nombre: $("#profesional\\.nombre").val(""),
+                        rut: $("#profesional\\.rut").val(""),
+                        telefono: $("#profesional\\.telefono").val(""),
+                        correo: $("#profesional\\.correo").val("") 
+                    }
+
+                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                        $("#profesional\\.nombre").val("");
+                        $("#profesional\\.rut").val("");
+                        $("#profesional\\.telefono").val("");
+                        $("#profesional\\.correo").val("");
+                        $("#boton\\.profesional\\.nuevo").removeClass("d-none");
+                        $("#boton\\.profesional\\.guardar").addClass("d-none");
+                        $("#boton\\.profesional\\.cancelar").addClass("d-none");
+                        cargarProfesionales();
+                    });
+                });
+
+                $("#boton\\.profesional\\.cancelar").on("click", function(){
+                    $("#div\\.profesional").addClass("d-none");
+                    $("#profesional\\.nombre").val("");
+                    $("#profesional\\.rut").val("");
+                    $("#profesional\\.telefono").val("");
+                    $("#profesional\\.correo").val("");
+                    $("#boton\\.profesional\\.nuevo").removeClass("d-none");
+                    $("#boton\\.profesional\\.guardar").addClass("d-none")
+                    $("#boton\\.profesional\\.cancelar").addClass("d-none")
+                });
+
+                cargarProfesionales();
             });
         });
 
@@ -247,6 +290,49 @@
                         fila += '</tr>';
                         $("#table\\.calendario").append(fila);
                     }
+                }
+            });
+      }
+
+      function cargarProfesionales(){
+        let data = {
+                accion : "profesionales"
+            }
+
+            $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+                $("#tabla\\.profesional").empty();
+                if (Object.keys(data).length > 0) {
+                    $.each(response, function(i, item) {
+                        let fila = '<tr><td>' + item["profesional_name"] + '</td><td>' + item["profesional_telefono"] + '<td class="columna-profesional">' + item["profesional_correo"] + '<button type="button" data-id="' + item["profesional_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                        $("#tabla\\.profesional").append(fila);
+                    });
+
+                    $(".columna-profesional").on("mouseenter",function(){
+                        $(this).children("button").removeClass("d-none");
+                    }).on("mouseleave", function(){
+                        $(this).children("button").addClass("d-none");
+                    });
+
+                $(".eliminar-profesional").on("click", function(){
+                    let profesional_id = $(this).data("id");
+                    $("#dialog\\.delete").remove();
+                    $("#dialog\\.title").html('Eliminar Profesional')
+                    $("#dialog\\.body").html('<p class="text-center">¿Está seguro que desea eliminar el profesional seleccionado?</p>')
+                    $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + profesional_id + '">Eliminar</button>');
+        
+                    $("#dialog\\.delete").on("click", function(){
+                        let profesional_id = $(this).data("id");
+                        var solicitud = {
+                            accion: "profesionalesEliminar",
+                            id: profesional_id
+                        };
+                        $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
+                            $("#dialog\\.body").empty();
+                            $("#boton\\.profesionales").trigger("click");
+                        });
+                    });
+                    $("#dialog\\.view").modal("show");
+                });
                 }
             });
       }

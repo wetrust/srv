@@ -26,56 +26,53 @@ class TurnosModel
             exit(1);
         }
     }
-    /**
-     * Get all notes (notes are just example data that the user has created)
-     * @return array an array with several objects (the results)
-     */
-    public static function getAllNotes()
+    
+    public static function getAllProfesionales()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, note_id, note_text FROM notes WHERE user_id = :user_id";
+        $sql = "SELECT profesional_id, profesional_name, profesional_rut, profesional_telefono, profesional_correo FROM profesionales";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id')));
+        $query->execute();
 
         // fetchAll() is the PDO method that gets all result rows
         return $query->fetchAll();
     }
 
     /**
-     * Get a single note
-     * @param int $note_id id of the specific note
+     * Get a single keyword
+     * @param int $keyword_id id of the specific keyword
      * @return object a single object (the result)
      */
-    public static function getNote($note_id)
+    public static function getKeyword($keyword_id)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, note_id, note_text FROM notes WHERE user_id = :user_id AND note_id = :note_id LIMIT 1";
+        $sql = "SELECT user_id, keyword_id, keyword_text FROM keywords WHERE user_id = :user_id AND keyword_id = :keyword_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id'), ':note_id' => $note_id));
+        $query->execute(array(':user_id' => Session::get('user_id'), ':keyword_id' => $keyword_id));
 
         // fetch() is the PDO method that gets a single result
         return $query->fetch();
     }
 
     /**
-     * Set a note (create a new one)
-     * @param string $note_text note text that will be created
-     * @return bool feedback (was the note created properly ?)
+     * Set a keyword (create a new one)
+     * @param string $keyword_text keyword text that will be created
+     * @return bool feedback (was the keyword created properly ?)
      */
-    public static function createNote($note_text)
+    public static function createProfesional($name,$rut, $correo,$telefono)
     {
-        if (!$note_text || strlen($note_text) == 0) {
+        if (!$name || strlen($name) == 0) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO notes (note_text, user_id) VALUES (:note_text, :user_id)";
+        $sql = "INSERT INTO profesionales (profesional_name, profesional_rut, profesional_telefono, profesional_correo) VALUES (:profesional_name, :profesional_rut, :profesional_telefono, :profesional_correo)";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':profesional_name' => $name, ':profesional_rut' => $rut, ':profesional_telefono' => $correo, ':profesional_correo' => $telefono));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -87,22 +84,22 @@ class TurnosModel
     }
 
     /**
-     * Update an existing note
-     * @param int $note_id id of the specific note
-     * @param string $note_text new text of the specific note
+     * Update an existing keyword
+     * @param int $keyword_id id of the specific keyword
+     * @param string $keyword_text new text of the specific keyword
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateNote($note_id, $note_text)
+    public static function updateKeyword($keyword_id, $keyword_text)
     {
-        if (!$note_id || !$note_text) {
+        if (!$keyword_id || !$keyword_text) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE notes SET note_text = :note_text WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE keywords SET keyword_text = :keyword_text WHERE keyword_id = :keyword_id AND user_id = :user_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_id' => $note_id, ':note_text' => $note_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':keyword_id' => $keyword_id, ':keyword_text' => $keyword_text, ':user_id' => Session::get('user_id')));
 
         if ($query->rowCount() == 1) {
             return true;
@@ -113,21 +110,21 @@ class TurnosModel
     }
 
     /**
-     * Delete a specific note
-     * @param int $note_id id of the note
-     * @return bool feedback (was the note deleted properly ?)
+     * Delete a specific keyword
+     * @param int $keyword_id id of the keyword
+     * @return bool feedback (was the keyword deleted properly ?)
      */
-    public static function deleteNote($note_id)
+    public static function deleteProfesional($profesional_id)
     {
-        if (!$note_id) {
+        if (!$profesional_id) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "DELETE FROM notes WHERE note_id = :note_id AND user_id = :user_id LIMIT 1";
+        $sql = "DELETE FROM profesionales WHERE profesional_id = :profesional_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':note_id' => $note_id, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':profesional_id' => $profesional_id));
 
         if ($query->rowCount() == 1) {
             return true;
