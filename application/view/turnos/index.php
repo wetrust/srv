@@ -311,7 +311,7 @@
                                 var fIn = new Date(item["turno_fechain"]);
                                 var fOut = new Date(item["turno_fechaout"]);
                                 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
-                                let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' horas. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' horas. </td><td>' +item["turno_profesional_nombre"] +'</td><td class="columna-cambiar p-0"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning cambiar-turno d-none"><i class="fas fa-external-link-alt"></i></button></td></tr>';
+                                let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' hr. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' hr. </td><td>' +item["turno_profesional_nombre"] +'</td><td class="columna-cambiar p-0"><button type="button" data-id="' + item["turno_id"] + '" class="btn btn-outline-warning cambiar-turno d-none"><i class="fas fa-external-link-alt"></i></button></td></tr>';
                                 $("#table\\.turnos").append(fila);
                             });
 
