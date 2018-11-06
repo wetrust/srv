@@ -166,17 +166,17 @@
                     $("#div\\.profesional").addClass("d-none");
                     let datos = {
                         accion: "profesionalesNuevo",
-                        nombre: $("#profesional\\.nombre").val(""),
-                        rut: $("#profesional\\.rut").val(""),
-                        telefono: $("#profesional\\.telefono").val(""),
-                        correo: $("#profesional\\.correo").val("") 
+                        nombre: $("#profesional\\.nombre").val(),
+                        rut: $("#profesional\\.rut").val(),
+                        telefono: $("#profesional\\.telefono").val(),
+                        correo: $("#profesional\\.correo").val() 
                     }
 
                     $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
-                        $("#profesional\\.nombre").val();
-                        $("#profesional\\.rut").val();
-                        $("#profesional\\.telefono").val();
-                        $("#profesional\\.correo").val();
+                        $("#profesional\\.nombre").val("");
+                        $("#profesional\\.rut").val("");
+                        $("#profesional\\.telefono").val("");
+                        $("#profesional\\.correo").val("");
                         $("#boton\\.profesional\\.nuevo").removeClass("d-none");
                         $("#boton\\.profesional\\.guardar").addClass("d-none");
                         $("#boton\\.profesional\\.cancelar").addClass("d-none");
