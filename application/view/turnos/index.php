@@ -220,6 +220,7 @@
                     let i = response.diaDeLaSemana;
                     let j = response.diasEnElMes;
                     let h = 1;
+                    let turnos = response.turnos;
 
                     for (h; h <= j; h++){
                         let rojo = "";
@@ -227,6 +228,12 @@
                         if (elDia == 5 || elDia == 6){
                             rojo = "text-danger";
                         }
+
+                        const turnosDia = turnos.filter(turno => {
+                            let dia = data.ano + '-' + data.mes + '-' + h;
+                            return turno.turno_fechain === dia;
+                        });
+
                         fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td></tr>';
                         if (i == 7){ 
                             i = 1;
