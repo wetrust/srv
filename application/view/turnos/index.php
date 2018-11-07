@@ -141,7 +141,7 @@
                 $("#dialog\\.delete").remove();
                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete">Guardar</button>');
 
-                $("#dialog\\.footer").on("click", function(){
+                $("#dialog\\.delete").on("click", function(){
                     let datos = {
                         accion: "turnosNuevo",
                         profesional: $("#turnos\\.profesionales").val(),
