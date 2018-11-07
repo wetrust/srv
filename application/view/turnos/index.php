@@ -247,7 +247,7 @@
                     let j = response.diasEnElMes;
                     let h = 1;
 
-                    for (h; h =< j; h++){
+                    for (h; h <= j; h++){
                         fila = '<tr><td class="text-center">' + dias[i] + h + '</td></tr>';
                         if (i == 7){ i == 1; }
                         $("#table\\.calendario").append(fila);
