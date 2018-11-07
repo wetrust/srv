@@ -250,6 +250,7 @@
                     for (h; h <= j; h++){
                         fila = '<tr><td class="text-center">' + dias[i] + h + '</td></tr>';
                         if (i == 7){ i == 1; }
+                        i++;
                         $("#table\\.calendario").append(fila);
                     }
                 }
