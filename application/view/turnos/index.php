@@ -81,13 +81,11 @@
                         <table class="table table-td">
                             <thead>
                                 <tr>
-                                    <th scope="col">Lunes</th>
-                                    <th scope="col">Martes</th>
-                                    <th scope="col">Miércoles</th>
-                                    <th scope="col">Jueves</th>
-                                    <th scope="col">Viernes</th>
-                                    <th scope="col" class="text-danger">Sábado</th>
-                                    <th scope="col" class="text-danger">Domingo</th>
+                                    <th scope="col">Número</th>
+                                    <th scope="col">Día</th>
+                                    <th scope="col">Noche</th>
+                                    <th scope="col">Día</th>
+                                    <th scope="col">Noche</th>
                                 </tr>
                             </thead>
                             <tbody id="table.calendario">
@@ -243,55 +241,15 @@
                 $("#table\\.calendario").empty();
 
                 if (Object.keys(data).length > 0) {
-                    let fila = '<tr>';
+                    let fila = "";
+                    let dias = {"Lunes ", "Martes ", "Miércoles ", "Jueves ", "Viernes ", "Sábado ", "Domingo "};
                     let i = response.diaDeLaSemana;
                     let j = response.diasEnElMes;
-                    let k = 1;
                     let h = 1;
 
-                    for (h; h < i; h++) {
-                        fila += '<td class="text-center"></td>';
-                    }
-
-                    for (h; h < 8; h++) {
-                        fila += '<td class="text-center">' + k + '</td>';
-                        k++;
-                    }
-
-                    fila += '</tr>';
-                    $("#table\\.calendario").append(fila);
-
-                    for (x = 0; x < 4; x++){
-                        h = 1;
-                        fila = '<tr>';
-
-                        for (h; h < 8; h++) {
-                            if (k == j ){
-                                h = 7;
-                            }
-                            fila += '<td class="text-center">' + k + '</td>';
-                            k++;
-                        }
-
-                        fila += '</tr>';
-                        $("#table\\.calendario").append(fila);
-                    }
-
-                    //
-                    //para meses con 31 dias
-                    if (k <= j ){
-                        fila = '<tr>';
-                        h = 1;
-
-                        for (h; h < 8; h++) {
-                            if (k >= j ){
-                                h = 7;
-                            }
-                            fila += '<td class="text-center">' + k + '</td>';
-                            k++;
-                        }
-
-                        fila += '</tr>';
+                    for (h; h =< j; h++){
+                        fila += '<tr><td class="text-center">' + dias[i] + h + '</td></tr>';
+                        if (i == 7){ i == 1; }
                         $("#table\\.calendario").append(fila);
                     }
                 }
@@ -327,6 +285,7 @@
                                 let profesional_nombre = $(this).data("names");
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.change").remove();
+                                cargarProfesionales();
                                 $("#dialog\\.title").html('Cambiar o eliminar turno')
                                 $("#dialog\\.body").html('<div class="row"><p class="col-12"><strong>Cambiar turno</strong></p><div class="form-group col"><label for="turno.profesional.out">Profesional de turno</label><input id="turno.profesional.out" class="form-control" type="text" disabled="" value="' + profesional_nombre +'"></div><div class="form-group col"><label for="turno.profesional.in">Profesional que remplaza</label><select class="form-control" id="turno.profesional.in"></select></div></div>')
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-primary" id="dialog.change" data-id="' + turno_id + '">Guardar cambio</button>');
@@ -379,12 +338,14 @@
             $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
                 $("#tabla\\.profesional").empty();
                 $("#turnos\\.profesionales").empty();
+                $("#turno\\.profesional\\.in").empty();
                 if (Object.keys(data).length > 0) {
                     $.each(response, function(i, item) {
                         let fila = '<tr><td>' + item["profesional_name"] + '</td><td>' + item["profesional_telefono"] + '<td class="columna-profesional">' + item["profesional_correo"] + '<button type="button" data-id="' + item["profesional_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                         let option = '<option value="' + item["profesional_id"] + '">' + item["profesional_name"] + '</option>';
                         $("#turnos\\.profesionales").append(option);
                         $("#tabla\\.profesional").append(fila);
+                        $("#turno\\.profesional\\.in").append(fila);
                     });
 
                     $(".columna-profesional").on("mouseenter",function(){
