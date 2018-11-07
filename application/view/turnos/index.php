@@ -78,8 +78,8 @@
                 </div>
                 <div class="card ml-3">
                     <div class="card-body">
-                        <table class="table table-td">
-                            <thead>
+                        <table class="table table-td table-hover table-borderless">
+                            <thead class="bg-info">
                                 <tr>
                                     <th scope="col">Número</th>
                                     <th scope="col">Día</th>
