@@ -248,7 +248,12 @@
                     let h = 1;
 
                     for (h; h <= j; h++){
-                        fila = '<tr><td>' + dias[i -1] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';
+                        let rojo = "";
+                        let elDia = i - 1;
+                        if (elDia == 5 || elDia == 6){
+                            rojo = "text-danger";
+                        }
+                        fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';
                         if (i == 7){ 
                             i = 1;
                         }
