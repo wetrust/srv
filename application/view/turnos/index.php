@@ -242,13 +242,13 @@
 
                 if (Object.keys(data).length > 0) {
                     let fila = "";
-                    let dias = {"Lunes ", "Martes ", "Miércoles ", "Jueves ", "Viernes ", "Sábado ", "Domingo "};
+                    let dias = ["Lunes ", "Martes ", "Miércoles ", "Jueves ", "Viernes ", "Sábado ", "Domingo "];
                     let i = response.diaDeLaSemana;
                     let j = response.diasEnElMes;
                     let h = 1;
 
                     for (h; h =< j; h++){
-                        fila += '<tr><td class="text-center">' + dias[i] + h + '</td></tr>';
+                        fila = '<tr><td class="text-center">' + dias[i] + h + '</td></tr>';
                         if (i == 7){ i == 1; }
                         $("#table\\.calendario").append(fila);
                     }
