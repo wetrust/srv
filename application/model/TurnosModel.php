@@ -140,7 +140,7 @@ class TurnosModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $fecha1 = $ano . "-" . $mes . "-" . $dia;
+        $fecha1 = $ano . "-" . $mes . "-" .'-01';
         $fecha = new DateTime($ano . '-' . $mes .'-01');
         $fecha2 = $ano . "-" . $mes . "-" . $fecha->format('t');
 
