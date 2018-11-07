@@ -84,8 +84,6 @@
                                     <th scope="col">Número</th>
                                     <th scope="col">Día</th>
                                     <th scope="col">Noche</th>
-                                    <th scope="col">Día</th>
-                                    <th scope="col">Noche</th>
                                 </tr>
                             </thead>
                             <tbody id="table.calendario">
@@ -229,7 +227,7 @@
                         if (elDia == 5 || elDia == 6){
                             rojo = "text-danger";
                         }
-                        fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';
+                        fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td></tr>';
                         if (i == 7){ 
                             i = 1;
                         }
