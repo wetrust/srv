@@ -18,7 +18,7 @@ class TurnosModel
             $return->fecha = $fecha;
             $return->diaDeLaSemana = $diaDeLaSemana;
             $return->diasEnElMes = $diasEnElMes;
-            $return->turnos = self:getMonthTurnos($mes, $ano);
+            $return->turnos = self::getMonthTurnos($mes, $ano);
 
             return $return;
 
