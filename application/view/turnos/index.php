@@ -248,9 +248,14 @@
                     let h = 1;
 
                     for (h; h <= j; h++){
-                        fila = '<tr><td class="text-center">' + dias[i] + h + '</td></tr>';
-                        if (i == 7){ i == 1; }
-                        i++;
+                        fila = '<tr><td>' + dias[i] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';
+                        if (i == 7){ 
+                            i = 1;
+                        }
+                        else{
+                            i++;
+                        }
+
                         $("#table\\.calendario").append(fila);
                     }
                 }
