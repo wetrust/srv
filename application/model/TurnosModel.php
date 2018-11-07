@@ -140,7 +140,7 @@ class TurnosModel
         $database = DatabaseFactory::getFactory()->getConnection();
 
         $fecha = $ano . "-" . $mes . "-" . $dia;
-        $sql = "SELECT turno_id, turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout, turno_profesional_nombre FROM turnos WHERE turno_fechain = :turno_fechain";
+        $sql = "SELECT turno_id, turno_profesional, turno_fechain, turno_turno, turno_profesional_nombre FROM turnos WHERE turno_fechain = :turno_fechain";
         $query = $database->prepare($sql);
         $query->execute(array(':turno_fechain' => $fecha));
 
@@ -157,7 +157,7 @@ class TurnosModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT turno_profesional, turno_fechain, turno_horain, turno_fechaout, turno_horaout, turno_profesional_nombre FROM turnos WHERE turno_fechain = :turno_fechain LIMIT 1";
+        $sql = "SELECT turno_profesional, turno_fechain, turno_turno, turno_profesional_nombre FROM turnos WHERE turno_fechain = :turno_fechain LIMIT 1";
         $query = $database->prepare($sql);
         $query->execute(array(':turno_fechain' => $fechainic));
 
@@ -170,7 +170,7 @@ class TurnosModel
      * @param string $keyword_text keyword text that will be created
      * @return bool feedback (was the keyword created properly ?)
      */
-    public static function createTurnos($profesional,$profesional_nombre, $fechainic,$horainic,$fechafin,$horafin)
+    public static function createTurnos($profesional,$profesional_nombre, $fechainic,$turno)
     {
         if (!$profesional) {
             Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
@@ -179,9 +179,9 @@ class TurnosModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT INTO turnos (turno_profesional, turno_profesional_nombre, turno_fechain, turno_horain, turno_fechaout, turno_horaout) VALUES (:turno_profesional, :turno_profesional_nombre, :turno_fechain, :turno_horain, :turno_fechaout, :turno_horaout)";
+        $sql = "INSERT INTO turnos (turno_profesional, turno_profesional_nombre, turno_fechain, turno_turno) VALUES (:turno_profesional, :turno_profesional_nombre, :turno_fechain, :turno_turno)";
         $query = $database->prepare($sql);
-        $query->execute(array(':turno_profesional' => $profesional, ':turno_profesional_nombre' => $profesional_nombre, ':turno_fechain' => $fechainic, ':turno_horain' => intval($horainic), ':turno_fechaout' => $fechafin, ':turno_horaout' => intval($horafin)));
+        $query->execute(array(':turno_profesional' => $profesional, ':turno_profesional_nombre' => $profesional_nombre, ':turno_fechain' => $fechainic, ':turno_turno' => intval($turno)));
 
         if ($query->rowCount() == 1) {
             return true;
