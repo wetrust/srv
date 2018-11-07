@@ -40,7 +40,7 @@
             </div>
         </nav>
         <div class="row m-0">
-            <div class="col-7">
+            <div class="col">
                 <div class="card ml-3 my-3">
                     <div class="card-body">
                         <div class="form-row">
@@ -89,28 +89,6 @@
                                 </tr>
                             </thead>
                             <tbody id="table.calendario">
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-5">
-                <div class="card my-3">
-                    <div class="card-body">
-                        <h6 class="card-title">Turnos para el día</h6>
-                        <p>Seleccione un día para ver el turno correspondiente<p/>
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Entrada</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Salida</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col"><i class="fas fa-history"></i></th>
-                                </tr>
-                            </thead>
-                            <tbody id="table.turnos">
                             </tbody>
                         </table>
                     </div>
@@ -273,71 +251,7 @@
                         mes: $("#fecha\\.mes").val(),
                         ano: $("#fecha\\.ano").val()
                     }
-                    $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
-                        $("#table\\.turnos").empty();
-                        if (Object.keys(response).length > 0) {
-                            $.each(response, function(i, item) {
-                                var fIn = new Date(item["turno_fechain"].replace(/-/g, '\/'));
-                                var fOut = new Date(item["turno_fechaout"].replace(/-/g, '\/'));
-                                var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
-                                let fila = '<tr><td>' + fIn.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horain"] + ' hr. </td><td>' + fOut.toLocaleDateString('es-CL', options) + '</td><td>' + item["turno_horaout"] + ' hr. </td><td>' + item["turno_profesional_nombre"] +'</td><td class="p-0"><button type="button" data-id="' + item["turno_id"] + '" data-name="' + item["turno_profesional"] +'" data-names="' + item["turno_profesional_nombre"] +'" class="btn btn-outline-warning cambiar-turno"><i class="fas fa-external-link-alt"></i></button></td></tr>';
-                                $("#table\\.turnos").append(fila);
-                            });
-
-                            $(".columna-cambiar").on("mouseenter",function(){
-                                $(this).children("button").removeClass("d-none");
-                            }).on("mouseleave", function(){
-                                $(this).children("button").addClass("d-none");
-                            });
-
-                            $(".cambiar-turno").on("click", function(){
-                                let turno_id = $(this).data("id");
-                                let profesional_id = $(this).data("name");
-                                let profesional_nombre = $(this).data("names");
-                                $("#dialog\\.delete").remove();
-                                $("#dialog\\.change").remove();
-                                cargarProfesionales();
-                                $("#dialog\\.title").html('Cambiar o eliminar turno')
-                                $("#dialog\\.body").html('<div class="row"><p class="col-12"><strong>Cambiar turno</strong></p><div class="form-group col"><label for="turno.profesional.out">Profesional de turno</label><input id="turno.profesional.out" class="form-control" type="text" disabled="" value="' + profesional_nombre +'"></div><div class="form-group col"><label for="turno.profesional.in">Profesional que remplaza</label><select class="form-control" id="turno.profesional.in"></select></div></div>')
-                                $("#dialog\\.footer").append('<button type="button" class="btn btn-primary" id="dialog.change" data-id="' + turno_id + '">Guardar cambio</button>');
-                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + turno_id + '">Eliminar turno</button>');
-
-                                $("#dialog\\.change").on("click", function(){
-                                    let turno_id = $(this).data("id");
-                                    var solicitud = {
-                                        accion: "turnosCambiar",
-                                        id: turno_id,
-                                        profesional_out: profesional_id,
-                                        profesional_in: $("#turno\\.profesional\\.in").val(),
-                                        profesional_nombre: $("#turno\\.profesional\\.in option:selected").text()
-                                    };
-
-                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                                        cargarActividad();
-                                        $("#boton\\.configuracion").trigger("click");
-                                        $('#myTab a[href="#home"]').tab('show')
-                                    });
-                                });
-
-                                $("#dialog\\.delete").on("click", function(){
-                                    let actividad_id = $(this).data("id");
-                                    var solicitud = {
-                                        accion: "eliminarActividad",
-                                        id: actividad_id
-                                    };
-
-                                    $.post("https://servidor.crecimientofetal.cl/apuntes/api", solicitud).done(function(data){
-                                        cargarActividad();
-                                        $("#boton\\.configuracion").trigger("click");
-                                        $('#myTab a[href="#home"]').tab('show')
-                                    });
-                                });
-
-                                $("#dialog\\.view").modal("show");
-                            });
-                        }
-                    })
-                })
+                });
             });
       }
 
