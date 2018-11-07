@@ -18,6 +18,7 @@ class TurnosModel
             $return->fecha = $fecha;
             $return->diaDeLaSemana = $diaDeLaSemana;
             $return->diasEnElMes = $diasEnElMes;
+            $return->turnos = self:getMonthTurnos($mes, $ano);
 
             return $return;
 
@@ -133,6 +134,22 @@ class TurnosModel
         // default return
         Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
         return false;
+    }
+
+    public static function getMonthTurnos($mes, $ano)
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $fecha1 = $ano . "-" . $mes . "-" . $dia;
+        $fecha = new DateTime($ano . '-' . $mes .'-01');
+        $fecha2 = $ano . "-" . $mes . "-" . $fecha->format('t');
+
+        $sql = "SELECT turno_id, turno_profesional, turno_fechain, turno_turno, turno_profesional_nombre FROM turnos WHERE turno_fechain BETWEEN :turno_fechain AND :turno_fechaout";
+        $query = $database->prepare($sql);
+        $query->execute(array(':turno_fechain' => $fecha1, ':turno_fechain' => $fecha2));
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
     }
 
     public static function getAllTurnos($dia, $mes, $ano)
