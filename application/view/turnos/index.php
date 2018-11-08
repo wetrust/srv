@@ -74,7 +74,7 @@
                         <table class="table table-td table-hover table-bordered">
                             <thead class="bg-light">
                                 <tr>
-                                    <th scope="col">Número</th>
+                                    <th scope="col">Días / Fecha</th>
                                     <th scope="col">Turno Diurno</th>
                                     <th scope="col">Turno Nocturno</th>
                                     <th scope="col">Comentarios</th>
