@@ -195,19 +195,25 @@ class TurnosModel
             return 'fuck';
         }
 
-        $database = DatabaseFactory::getFactory()->getConnection();
-
-        $sql = "INSERT INTO turnos (turno_profesional, turno_profesional_nombre, turno_fechain, turno_turno) VALUES (:turno_profesional, :turno_profesional_nombre, :turno_fechain, :turno_turno)";
-        $query = $database->prepare($sql);
-        $query->execute(array(':turno_profesional' => $profesional, ':turno_profesional_nombre' => $profesional_nombre, ':turno_fechain' => $fechainic, ':turno_turno' => intval($turno)));
-
-        if ($query->rowCount() == 1) {
-            return true;
+        if ($turno == 2){
+            self::createTurnos($profesional,$profesional_nombre, $fechainic,0);
+            self::createTurnos($profesional,$profesional_nombre, $fechainic,1);
         }
+        else {
+            $database = DatabaseFactory::getFactory()->getConnection();
 
-        // default return
-        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
-        return false;
+            $sql = "INSERT INTO turnos (turno_profesional, turno_profesional_nombre, turno_fechain, turno_turno) VALUES (:turno_profesional, :turno_profesional_nombre, :turno_fechain, :turno_turno)";
+            $query = $database->prepare($sql);
+            $query->execute(array(':turno_profesional' => $profesional, ':turno_profesional_nombre' => $profesional_nombre, ':turno_fechain' => $fechainic, ':turno_turno' => intval($turno)));
+
+            if ($query->rowCount() == 1) {
+                return true;
+            }
+
+            // default return
+            Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+            return false;
+        }
     }
 
     /**
