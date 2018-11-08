@@ -365,7 +365,23 @@
                             }
                             else{
                                 $("#dialog\\.title").html("Crear comentario para el día " + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="15"></textarea></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><textarea class="form-control border" id="comentarios.text" rows="15"></textarea></div></div>');
+                                $("#dialog\\.delete").remove();
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + data.id + '">Guardar</button>');
+                                
+                                $("#dialog\\.delete").on("click", function(){
+                                    let id = $(this).data("id");
+                                    let datos = {
+                                        accion: "comentarioGuardar",
+                                        fecha: id,
+                                        text: $("#comentarios\\.text").val(), 
+                                    }
+
+                                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                                        $("#dialog\\.view").modal("hide");
+                                        makeCalendario();
+                                    });
+                                });
                             }
                         });
                     }

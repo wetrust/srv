@@ -290,4 +290,26 @@ class TurnosModel
         return $query->fetch();
     }
 
+    public static function createComentario($fecha,$text)
+    {
+        if (!$fecha) {
+            Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+            return 'fuck';
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "INSERT INTO comentarios (comentario_fecha, comentario_text) VALUES (:comentario_fecha, :comentario_text)";
+        $query = $database->prepare($sql);
+        $query->execute(array(':comentario_fecha' => $fecha, ':comentario_text' => $text));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        // default return
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_CREATION_FAILED'));
+        return false;
+    }
+
 }
