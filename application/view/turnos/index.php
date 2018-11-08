@@ -352,7 +352,7 @@
                             id: dia
                         }
 
-                        let d = new Date(response.turno_fechain.replace(/-/g, '\/'));
+                        let d = new Date(dia.replace(/-/g, '\/'));
                         let day = ("0" + d.getDate()).slice(-2);
                         let month = ("0" + (d.getMonth() + 1)).slice(-2); 
                         let dateComplete = day + "-" + month + "-" + d.getFullYear();
