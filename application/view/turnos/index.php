@@ -19,14 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Turnos
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#" id="boton.turno">Nuevo Turno</a>
-                        <a class="dropdown-item" href="#">Cambiar turno</a>
-                        <div class="dropdown-divider"></div>
-                        </div>
+                        <a class="nav-link" href="#" id="boton.turno">Nuevo Turno</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -318,7 +311,7 @@
                                 let dateComplete = day + "-" + month + "-" + d.getFullYear();
 
                                 $("#dialog\\.title").html('Turno ' + dateComplete + ' Profesional: ' + response.turno_profesional_nombre);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales">Reemplazar por Profesional</label><select class="form-control" id="turnos.profesionales"></select></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales" class="text-danger text-center mt-3"><strong>Reemplazar por Profesional</strong></label><select class="form-control" id="turnos.profesionales"></select></div></div>');
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.turno_id + '">Guardar</button>');
                                 cargarProfesionales();
 
@@ -362,7 +355,7 @@
                         $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
                             if (Object.keys(response).length > 0) {
                                 $("#dialog\\.title").html('Comentario para el día ' + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="15">' + response.comentario_text.replace(/<br \/>/g,"\n") +'</textarea></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="10">' + response.comentario_text.replace(/<br \/>/g,"\n") +'</textarea></div></div>');
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.comentario_id + '">Guardar</button>');
                                 $("#dialog\\.delete").on("click", function(){
@@ -381,7 +374,7 @@
                             }
                             else{
                                 $("#dialog\\.title").html("Crear comentario para el día " + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><textarea class="form-control border" id="comentarios.text" rows="15"></textarea></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><textarea class="form-control border" id="comentarios.text" rows="10"></textarea></div></div>');
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + data.id + '">Guardar</button>');
                                 
