@@ -230,11 +230,37 @@
                         }
 
                         const turnosDia = turnos.filter(turno => {
-                            let dia = data.ano + '-' + data.mes + '-' + h;
+                            let dia = data.ano + '-' + data.mes + '-' + ("0" + h).slice(-2);
                             return turno.turno_fechain === dia;
                         });
+
                         console.log(turnosDia);
-                        fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td></tr>';
+                        if (Object.keys(turnosDia).length > 0) {
+                            let diaT = "";
+                            let nocheT = "";
+
+                            const diaF = turnosDia.filter(elDia => {
+                                return elDia.turno_turno === 0;
+                            });
+
+                            const nocheF = turnosDia.filter(laNoche => {
+                                return laNoche.turno_turno === 1;
+                            });
+
+                            if (!diaF){
+                                diaT = diaF.turno_profesional_nombre;
+                            }
+
+                            if (!nocheF){
+                                nocheT = nocheF.turno_profesional_nombre;
+                            }
+                            
+                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td></tr>';
+                        }
+                        else{
+                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td></tr>';    
+                        }
+                        
                         if (i == 7){ 
                             i = 1;
                         }
