@@ -29,11 +29,7 @@ class TurnosController extends Controller
         $this->View->renderJSON();
     }
 
-    /**
-     * This method controls what happens when you move to /dashboard/create in your app.
-     * Creates a new note. This is usually the target of form submit actions.
-     * POST request.
-     */
+
     public function api()
     {
         $accion = Request::post('accion');

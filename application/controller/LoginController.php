@@ -34,6 +34,9 @@ class LoginController extends Controller
             if ($redirect == '/apuntes'){
                 $this->View->renderWithoutHeaderAndFooter('login/apuntes', $data);
             }
+            else if ($redirect == '/turnos'){
+                $this->View->renderWithoutHeaderAndFooter('login/turnos', $data);
+            }
             else{
                 $this->View->render('login/index', $data);
             }  
