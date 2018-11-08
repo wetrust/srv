@@ -314,7 +314,7 @@ class TurnosModel
 
     public static function updateComentario($comentario_id, $text)
     {
-        if (!$comentario_id || !$text) {
+        if (!$comentario_id) {
             return false;
         }
 
