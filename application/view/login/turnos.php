@@ -13,7 +13,7 @@
         <body>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                    <a class="navbar-brand" href="<?php echo Config::get('URL'); ?>apuntes">Apuntes de Notas (reuniones, eventos clínicos, etc.)</a>
+                    <a class="navbar-brand" href="<?php echo Config::get('URL'); ?>apuntes">Turno CAT</a>
                 </div>
             </nav>
             <div class="container mt-3">
@@ -21,7 +21,7 @@
 		            <div class="col-6">
 			            <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title text-center">Ingresar a Apuntes</h5>
+                                <h5 class="card-title text-center">Ingresar</h5>
                                 <?php $this->renderFeedbackMessages(); ?>
                                 <form action="<?php echo Config::get('URL'); ?>login/login" method="post">
                                     <div class="form-group">
