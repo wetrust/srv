@@ -45,8 +45,14 @@ class TurnosController extends Controller
             case "profesionales":
                 $resultado = TurnosModel::getAllProfesionales();
                 break;
+            case "profesional":
+                $resultado = TurnosModel::getProfesionales(Request::post('id'));
+                break;
             case "profesionalesNuevo":
                 $resultado = TurnosModel::createProfesional(Request::post('nombre'),Request::post('rut'), Request::post('correo'),Request::post('telefono'));
+                break;
+            case "profesionalesUpdate":
+                $resultado = TurnosModel::updateProfesional(Request::post('id'), Request::post('nombre'),Request::post('rut'), Request::post('correo'),Request::post('telefono'));
                 break;
             case "profesionalesEliminar":
                 $resultado = TurnosModel::deleteProfesional(Request::post('id'));

@@ -46,13 +46,13 @@ class TurnosModel
      * @param int $keyword_id id of the specific keyword
      * @return object a single object (the result)
      */
-    public static function getProfesional($keyword_id)
+    public static function getProfesional($profesional_id)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT user_id, keyword_id, keyword_text FROM keywords WHERE user_id = :user_id AND keyword_id = :keyword_id LIMIT 1";
+        $sql = "SELECT profesiona_id, profesional_name, profesional_rut, profesional_telefono, profesional_correo FROM profesionales WHERE profesiona_id = :profesiona_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id'), ':keyword_id' => $keyword_id));
+        $query->execute(array(':profesiona_id' => $profesional_id));
 
         // fetch() is the PDO method that gets a single result
         return $query->fetch();

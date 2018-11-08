@@ -156,15 +156,42 @@
 
             $("#boton\\.profesionales").on("click", function(){
                 $("#dialog\\.title").html("Profesionales disponibles para turno");
-                $("#dialog\\.body").html('<div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" title="Nueva actividad" id="boton.profesional.nuevo"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.guardar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.cancelar"><i class="fas fa-ban"></i></button> </div><div id="div.profesional" class="my-3 mx-0 d-none"> <div class="row"><div class="form-group col"> <label for="profesional.nombre">1.- Nombre del profesional</label> <input type="text" class="form-control" id="profesional.nombre"> </div><div class="form-group col"> <label class="mr-3" for="profesional.rut">2.- R.U.T.</label> <input type="text" class="form-control" id="profesional.rut"></div></div><div class="row"><div class="form-group col"> <label for="profesional.telefono">3.- Teléfono</label> <input type="text" class="form-control" id="profesional.telefono"> </div><div class="form-group col"> <label class="mr-3" for="profesional.correo">4.- Correo Electrónico</label> <input type="text" class="form-control" id="profesional.correo"></div></div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">Nombre profesional</th> <th scope="col">Teléfono</th> <th scope="col">Correo Electrónico</th></tr></thead> <tbody id="tabla.profesional"></tbody> </table>');
+                $("#dialog\\.body").html('<div class="btn-group" role="group" aria-label="Menú"> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" title="Nueva actividad" id="boton.profesional.nuevo"><i class="fas fa-pen"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.guardar"><i class="fas fa-save"></i></button> <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 d-none" title="Nueva actividad" id="boton.profesional.cancelar"><i class="fas fa-ban"></i></button> </div><div id="div.profesional" class="my-3 mx-0 d-none"> <div class="row"><div class="form-group col"> <label for="profesional.nombre">1.- Nombre del profesional</label> <input type="text" class="form-control" id="profesional.nombre"> <input type="hidden" class="form-control" id="profesional.id"></div><div class="form-group col"> <label class="mr-3" for="profesional.rut">2.- R.U.T.</label> <input type="text" class="form-control" id="profesional.rut"></div></div><div class="row"><div class="form-group col"> <label for="profesional.telefono">3.- Teléfono</label> <input type="text" class="form-control" id="profesional.telefono"> </div><div class="form-group col"> <label class="mr-3" for="profesional.correo">4.- Correo Electrónico</label> <input type="text" class="form-control" id="profesional.correo"></div></div></div><table class="table table-hover"> <thead class="table-success"> <tr> <th scope="col">Nombre profesional</th> <th scope="col">Teléfono</th> <th scope="col">Correo Electrónico</th></tr></thead> <tbody id="tabla.profesional"></tbody> </table>');
                 $("#dialog\\.view").modal("show");
 
                 $("#dialog\\.delete").remove();
+
+                $("#tabla\\.profesional tr").on("click", function(){
+                    let profesional_id = $(this).data("id");
+
+                    let datos = {
+                        accion: "profesional",
+                        id: profesional_id
+                    }
+
+                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                        if (Object.keys(response).length > 0) {
+                            $("#profesional\\.id").val(response.profesional_id);
+                            $("#profesional\\.nombre").val(response.profesional_name);
+                            $("#profesional\\.rut").val(response.profesional_rut);
+                            $("#profesional\\.telefono").val(response.profesional_telefono);
+                            $("#profesional\\.correo").val(response.profesional_correo);
+                            $("#div\\.profesional").removeClass("d-none");
+                            $("#boton\\.profesional\\.nuevo").addClass("d-none");
+                            $("#boton\\.profesional\\.guardar").removeClass("d-none")
+                            $("#boton\\.profesional\\.cancelar").removeClass("d-none");
+                            $("#tabla\\.profesional").addClass("d-none");
+                        }
+                    });
+                });
+
                 $("#boton\\.profesional\\.nuevo").on("click", function(){
                     $("#div\\.profesional").removeClass("d-none");
                     $("#boton\\.profesional\\.nuevo").addClass("d-none");
                     $("#boton\\.profesional\\.guardar").removeClass("d-none")
-                    $("#boton\\.profesional\\.cancelar").removeClass("d-none")
+                    $("#boton\\.profesional\\.cancelar").removeClass("d-none");
+                    $("#tabla\\.profesional").addClass("d-none");
+                    $("#profesional\\.id").val("");
                 });
 
                 $("#boton\\.profesional\\.guardar").on("click", function(){
@@ -174,7 +201,12 @@
                         nombre: $("#profesional\\.nombre").val(),
                         rut: $("#profesional\\.rut").val(),
                         telefono: $("#profesional\\.telefono").val(),
-                        correo: $("#profesional\\.correo").val() 
+                        correo: $("#profesional\\.correo").val().
+                        id: $("#profesional\\.id").val();
+                    }
+
+                    if ($("#profesional\\.id").val() !== ""){
+                        datos.accion = "profesionalesUpdate";
                     }
 
                     $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
@@ -182,9 +214,11 @@
                         $("#profesional\\.rut").val("");
                         $("#profesional\\.telefono").val("");
                         $("#profesional\\.correo").val("");
+                        $("#profesional\\.id").val("");
                         $("#boton\\.profesional\\.nuevo").removeClass("d-none");
                         $("#boton\\.profesional\\.guardar").addClass("d-none");
                         $("#boton\\.profesional\\.cancelar").addClass("d-none");
+                        $("#tabla\\.profesional").removeClass("d-none");
                         cargarProfesionales();
                     });
                 });
@@ -196,8 +230,9 @@
                     $("#profesional\\.telefono").val("");
                     $("#profesional\\.correo").val("");
                     $("#boton\\.profesional\\.nuevo").removeClass("d-none");
-                    $("#boton\\.profesional\\.guardar").addClass("d-none")
-                    $("#boton\\.profesional\\.cancelar").addClass("d-none")
+                    $("#boton\\.profesional\\.guardar").addClass("d-none");
+                    $("#boton\\.profesional\\.cancelar").addClass("d-none");
+                    $("#tabla\\.profesional").removeClass("d-none");
                 });
 
                 cargarProfesionales();
@@ -411,7 +446,7 @@
                 $("#turno\\.profesional\\.in").empty();
                 if (Object.keys(data).length > 0) {
                     $.each(response, function(i, item) {
-                        let fila = '<tr><td>' + item["profesional_name"] + '</td><td>' + item["profesional_telefono"] + '<td class="columna-profesional">' + item["profesional_correo"] + '<button type="button" data-id="' + item["profesional_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                        let fila = '<tr data-id="'+item["profesional_id"]+'"><td>' + item["profesional_name"] + '</td><td>' + item["profesional_telefono"] + '<td class="columna-profesional">' + item["profesional_correo"] + '<button type="button" data-id="' + item["profesional_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                         let option = '<option value="' + item["profesional_id"] + '">' + item["profesional_name"] + '</option>';
                         $("#turnos\\.profesionales").append(option);
                         $("#tabla\\.profesional").append(fila);
