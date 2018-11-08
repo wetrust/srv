@@ -50,9 +50,9 @@ class TurnosModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT profesiona_id, profesional_name, profesional_rut, profesional_telefono, profesional_correo FROM profesionales WHERE profesiona_id = :profesiona_id LIMIT 1";
+        $sql = "SELECT profesional_id, profesional_name, profesional_rut, profesional_telefono, profesional_correo FROM profesionales WHERE profesional_id = :profesional_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':profesiona_id' => $profesional_id));
+        $query->execute(array(':profesional_id' => $profesional_id));
 
         // fetch() is the PDO method that gets a single result
         return $query->fetch();
