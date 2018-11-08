@@ -311,7 +311,7 @@
                                 let dateComplete = day + "-" + month + "-" + d.getFullYear();
 
                                 $("#dialog\\.title").html('Turno ' + dateComplete + ' Profesional: ' + response.turno_profesional_nombre);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales" class="text-danger text-center mt-3"><strong>Reemplazar por Profesional</strong></label><select class="form-control" id="turnos.profesionales"></select></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales" class="text-danger text-center mt-3"><strong>Reemplazar por Profesional:</strong></label><select class="form-control" id="turnos.profesionales"></select></div></div>');
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.turno_id + '">Guardar</button>');
                                 cargarProfesionales();
 
