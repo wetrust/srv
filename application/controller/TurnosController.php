@@ -21,6 +21,13 @@ class TurnosController extends Controller
      */
     public function index()
     {
+
+        if (!Session::userIsLoggedIn() || Session::get("user_account_type") != 6) {
+            Session::destroy();
+            Session::add('feedback_negative', "No autorizado");
+            header('location: ' . Config::get('URL') . 'turnos');
+            exit();
+        }
         $this->View->renderWithoutHeaderAndFooter('turnos/index');
     }
 
