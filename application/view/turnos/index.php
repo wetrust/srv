@@ -247,12 +247,12 @@
                                 return parseInt(laNoche.turno_turno) === 1;
                             });
 
-                            if (diaF){
-                                diaT = diaF.turno_profesional_nombre;
+                            if (diaF.lenght > 0){
+                                diaT = diaF[0].turno_profesional_nombre;
                             }
 
-                            if (nocheF){
-                                nocheT = nocheF.turno_profesional_nombre;
+                            if (nocheF.lenght > 0){
+                                nocheT = nocheF[0].turno_profesional_nombre;
                             }
 
                             fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td></tr>';
