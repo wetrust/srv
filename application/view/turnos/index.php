@@ -116,6 +116,11 @@
       <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
       <script src="<?php echo Config::get('URL'); ?>js/static/bootstrap-datepicker.js"></script>
       <style>
+            body{
+                -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+                -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+                -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+            }
           .table-td tbody td:hover{
               background-color:rgba(0,0,0,.075);
           }
@@ -239,6 +244,8 @@
                         if (Object.keys(turnosDia).length > 0) {
                             let diaT = "";
                             let nocheT = "";
+                            let diaI = "";
+                            let nocheI = "";
 
                             const diaF = turnosDia.filter(elDia => {
                                 return parseInt(elDia.turno_turno) === 0;
@@ -250,13 +257,15 @@
 
                             if (diaF.length > 0){
                                 diaT = diaF[0].turno_profesional_nombre;
+                                diaI = diaF[0].turno_id;
                             }
 
                             if (nocheF.length > 0){
                                 nocheT = nocheF[0].turno_profesional_nombre;
+                                nocheI = nocheF[0].turno_id;
                             }
 
-                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td><td class="text-center"></td></tr>';
+                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center" data-id="' + diaI +'">' + diaT +'</td><td class="text-center" data-id="' + nocheI +'">' + nocheT +'</td><td class="text-center"></td></tr>';
                         }
                         else{
                             fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';    
@@ -274,6 +283,11 @@
                 }
 
                 $("#table\\.calendario tr td").on("click", function(){
+                    let turno_id = $(this).data("id");
+
+                    if (typeof turno_id === 'number'){
+                        alert("hay turno y tiene id");
+                    }
 
                     let data = {
                         accion : "turnos",
