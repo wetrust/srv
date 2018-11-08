@@ -94,6 +94,13 @@ class LoginController extends Controller
         exit();
     }
 
+    public function logoutturnos()
+    {
+        LoginModel::logout();
+        Redirect::to('turnos');
+        exit();
+    }
+
     /**
      * Login with cookie
      */
