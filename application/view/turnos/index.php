@@ -138,7 +138,7 @@
             makeCalendario();
 
             $("#boton\\.turno").on("click", function(){
-                $("#dialog\\.title").html("Añadir datos entrada y salida del turno (Fecha y hora)");
+                $("#dialog\\.title").html("Añadir datos (Profesional, fecha y horario de jornada)");
                 $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional</label><select class="form-control" id="turnos.profesionales"></select></div></div><div class="row"><div class="form-group col"><label for="turnos.fecha.in">Fecha</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Jornada</label><select class="form-control" id="turnos.turno"><option value="0">Día</option><option value="1">Noche</option></select></div></div>');
                 $("#dialog\\.view").modal("show");
                 cargarProfesionales();
@@ -212,7 +212,7 @@
         });
 
       function makeCalendario(){
-        let data = {
+            let data = {
                 accion : "calendario",
                 mes: $("#fecha\\.mes").val(),
                 ano: $("#fecha\\.ano").val()
@@ -228,6 +228,7 @@
                     let j = response.diasEnElMes;
                     let h = 1;
                     let turnos = response.turnos;
+                    let comentarios = response.comentarios;
 
                     for (h; h <= j; h++){
                         let rojo = "";
@@ -241,7 +242,17 @@
                             return turno.turno_fechain === dia;
                         });
 
-                        console.log(turnosDia);
+                        const comentariosDia = comentarios.filter(comentario =>{
+                            let dia = data.ano + '-' + data.mes + '-' + ("0" + h).slice(-2);
+                            return comentario.comentario_fecha === dia;
+                        });
+
+                        let comentario = "";
+
+                        if (comentariosDia.length > 0){
+                            comentario = comentariosDia[0].comentario_text;
+                        }
+
                         if (Object.keys(turnosDia).length > 0) {
                             let diaT = "";
                             let nocheT = "";
@@ -266,12 +277,12 @@
                                 nocheI = nocheF[0].turno_id;
                             }
 
-                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center" data-id="' + diaI +'">' + diaT +'</td><td class="text-center" data-id="' + nocheI +'">' + nocheT +'</td><td class="text-center"></td></tr>';
+                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center" data-id="' + diaI +'">' + diaT +'</td><td class="text-center" data-id="' + nocheI +'">' + nocheT +'</td><td class="text-center" data-calendario="' + h + '">'+comentario+'</td></tr>';
                         }
                         else{
-                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';    
+                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center" data-calendario="' + h + '">'+comentario+'</td></tr>';    
                         }
-                        
+
                         if (i == 7){ 
                             i = 1;
                         }
@@ -285,6 +296,7 @@
 
                 $("#table\\.calendario tr td").on("click", function(){
                     let turno_id = $(this).data("id");
+                    let calendario_id = $(this).data("calendario");
 
                     if (typeof turno_id === 'number'){
                         $("#dialog\\.title").html("Obteniendo datos ...");
@@ -322,6 +334,38 @@
                                         makeCalendario();
                                     });
                                 });
+                            }
+                        });
+                    }
+                    else if (typeof calendario_id === 'number'){
+
+                        $("#dialog\\.title").html("Obteniendo datos ...");
+                        $("#dialog\\.body").html('<p class="text-center">cargando</p>');
+                        $("#dialog\\.view").modal("show");
+                        $("#dialog\\.delete").remove();
+
+                        let mes: $("#fecha\\.mes").val();
+                        let ano: $("#fecha\\.ano").val();
+                        let dia = ano + '-' + mes + '-' + ("0" + calendario_id).slice(-2);
+                        let data = {
+                            accion : "comentarioUno",
+                            id: dia
+                        }
+
+                        let d = new Date(response.turno_fechain.replace(/-/g, '\/'));
+                        let day = ("0" + d.getDate()).slice(-2);
+                        let month = ("0" + (d.getMonth() + 1)).slice(-2); 
+                        let dateComplete = day + "-" + month + "-" + d.getFullYear();
+
+                        $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+                            if (Object.keys(response).length > 0) {
+                                $("#dialog\\.title").html('Comentario para el día ' + dateComplete);
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="15"></textarea></div></div>');
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.turno_id + '">Guardar</button>');
+                            }
+                            else{
+                                $("#dialog\\.title").html("Crear comentario para el día " + dateComplete);
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="15"></textarea></div></div>');
                             }
                         });
                     }

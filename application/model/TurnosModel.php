@@ -19,6 +19,7 @@ class TurnosModel
             $return->diaDeLaSemana = $diaDeLaSemana;
             $return->diasEnElMes = $diasEnElMes;
             $return->turnos = self::getMonthTurnos($mes, $ano);
+            $return->comentarios = self::getAllComentarios($mes, $ano);
 
             return $return;
 
@@ -259,6 +260,34 @@ class TurnosModel
         // default return
         Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_DELETION_FAILED'));
         return false;
+    }
+
+    public static function getAllComentarios($mes, $ano)
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $fecha1 = $ano . "-" . $mes . "-" .'-01';
+        $fecha = new DateTime($ano . '-' . $mes .'-01');
+        $fecha2 = $ano . "-" . $mes . "-" . $fecha->format('t');
+
+        $sql = "SELECT comentario_id, comentario_fecha, comentario_text FROM comentarios WHERE comentario_fecha BETWEEN :comentario_fechain AND :comentario_fechaout";
+        $query = $database->prepare($sql);
+        $query->execute(array(':comentario_fechain' => $fecha1, ':comentario_fechaout' => $fecha2));
+
+        // fetchAll() is the PDO method that gets all result rows
+        return $query->fetchAll();
+    }
+
+    public static function getComentario($comentario_fecha)
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "SELECT comentario_id, comentario_fecha, comentario_text FROM comentarios WHERE comentario_fecha = :comentario_fecha LIMIT 1";
+        $query = $database->prepare($sql);
+        $query->execute(array(':comentario_fecha' => $comentario_fecha));
+
+        // fetch() is the PDO method that gets a single result
+        return $query->fetch();
     }
 
 }
