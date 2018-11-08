@@ -42,8 +42,8 @@
                                     <?php } ?>
                                     <input type="hidden" name="csrf_token" value="<?= Csrf::makeToken(); ?>" />
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="submit" type="button" class="btn btn-outline-primary"><i class="fas fa-user-check"></i> Turno</button>
-                                        <button type="submit" type="button" class="btn btn-outline-primary"><i class="fas fa-user-check"></i> Administrar</button>
+                                        <button type="button" class="btn btn-outline-primary" id="boton.profesional"><i class="fas fa-user-check"></i> Turno</button>
+                                        <button type="submit" class="btn btn-outline-primary"><i class="fas fa-user-check"></i> Administrar</button>
                                     </div>
                                 </form>
                             </div>
@@ -53,4 +53,15 @@
             </div>
         </div>
     </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#boton\\.profesional").on("click", function(e){
+                e.preventDefault();
+                $.get("https://servidor.crecimientofetal.cl/public/index", function(response){
+                    $("html").html(response);
+                });
+            });
+        });
+    </script>
 </html>
