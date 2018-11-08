@@ -233,7 +233,7 @@
                             let dia = data.ano + '-' + data.mes + '-' + h;
                             return turno.turno_fechain === dia;
                         });
-
+                        console.log(turnosDia);
                         fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td></tr>';
                         if (i == 7){ 
                             i = 1;
