@@ -287,7 +287,6 @@
                     let turno_id = $(this).data("id");
 
                     if (typeof turno_id === 'number'){
-                        alert("hay turno y tiene id");
                         $("#dialog\\.title").html("Obteniendo datos ...");
                         $("#dialog\\.body").html('<p class="text-center">cargando</p>');
                         $("#dialog\\.view").modal("show");
