@@ -46,7 +46,7 @@ class TurnosController extends Controller
                 $resultado = TurnosModel::getAllProfesionales();
                 break;
             case "profesional":
-                $resultado = TurnosModel::getProfesionales(Request::post('id'));
+                $resultado = TurnosModel::getProfesional(Request::post('id'));
                 break;
             case "profesionalesNuevo":
                 $resultado = TurnosModel::createProfesional(Request::post('nombre'),Request::post('rut'), Request::post('correo'),Request::post('telefono'));
