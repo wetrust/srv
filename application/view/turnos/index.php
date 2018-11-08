@@ -84,6 +84,7 @@
                                     <th scope="col">Número</th>
                                     <th scope="col">Día</th>
                                     <th scope="col">Noche</th>
+                                    <th scope="col">Comentarios</th>
                                 </tr>
                             </thead>
                             <tbody id="table.calendario">
@@ -255,10 +256,10 @@
                                 nocheT = nocheF[0].turno_profesional_nombre;
                             }
 
-                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td></tr>';
+                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td><td class="text-center"></td></tr>';
                         }
                         else{
-                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td></tr>';    
+                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';    
                         }
                         
                         if (i == 7){ 
