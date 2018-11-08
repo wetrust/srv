@@ -78,8 +78,8 @@
                 </div>
                 <div class="card ml-3">
                     <div class="card-body">
-                        <table class="table table-td table-hover table-borderless">
-                            <thead class="bg-info">
+                        <table class="table table-td table-hover table-bordered">
+                            <thead class="bg-light">
                                 <tr>
                                     <th scope="col">Número</th>
                                     <th scope="col">Día</th>
@@ -256,10 +256,10 @@
                                 nocheT = nocheF[0].turno_profesional_nombre;
                             }
 
-                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td><td class="text-center"></td></tr>';
+                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td><td class="text-center"></td></tr>';
                         }
                         else{
-                            fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';    
+                            fila = '<tr><td class="bg-light ' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td></tr>';    
                         }
                         
                         if (i == 7){ 
