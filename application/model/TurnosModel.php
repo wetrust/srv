@@ -322,7 +322,7 @@ class TurnosModel
 
         $sql = "UPDATE comentarios SET comentario_text = :comentario_text WHERE comentario_id = :comentario_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':comentario_text' => $text, ':turno_id' => $comentario_id));
+        $query->execute(array(':comentario_text' => $text, ':comentario_id' => $comentario_id));
 
         if ($query->rowCount() == 1) {
             return true;
