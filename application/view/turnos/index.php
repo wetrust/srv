@@ -161,7 +161,7 @@
 
                 $("#dialog\\.delete").remove();
 
-                $("#tabla\\.profesional tr").on("click", function(){
+                $("#tabla\\.profesional tr td").on("click", function(){
                     let profesional_id = $(this).data("id");
 
                     let datos = {
@@ -446,7 +446,7 @@
                 $("#turno\\.profesional\\.in").empty();
                 if (Object.keys(data).length > 0) {
                     $.each(response, function(i, item) {
-                        let fila = '<tr data-id="'+item["profesional_id"]+'"><td>' + item["profesional_name"] + '</td><td>' + item["profesional_telefono"] + '<td class="columna-profesional">' + item["profesional_correo"] + '<button type="button" data-id="' + item["profesional_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
+                        let fila = '<tr><td data-id="'+item["profesional_id"]+'"> <i class="fas fa-pen"></i> ' + item["profesional_name"] + '</td><td>' + item["profesional_telefono"] + '<td class="columna-profesional">' + item["profesional_correo"] + '<button type="button" data-id="' + item["profesional_id"] + '" class="btn btn-outline-warning px-3 eliminar-profesional float-right d-none"><i class="fas fa-trash"></i></button></td></tr>';
                         let option = '<option value="' + item["profesional_id"] + '">' + item["profesional_name"] + '</option>';
                         $("#turnos\\.profesionales").append(option);
                         $("#tabla\\.profesional").append(fila);
