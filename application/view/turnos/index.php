@@ -131,7 +131,7 @@
             makeCalendario();
 
             $("#boton\\.turno").on("click", function(){
-                $("#dialog\\.title").html("Añadir datos (Profesional, fecha y horario de jornada)");
+                $("#dialog\\.title").html("Añadir datos (Profesional, fecha y horario de turno)");
                 $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional</label><select class="form-control" id="turnos.profesionales"></select></div></div><div class="row"><div class="form-group col"><label for="turnos.fecha.in">Fecha</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Turno</label><select class="form-control" id="turnos.turno"><option value="0">Diurno</option><option value="1">Nocturno</option></select></div></div>');
                 $("#dialog\\.view").modal("show");
                 cargarProfesionales();
@@ -355,7 +355,7 @@
                         $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
                             if (Object.keys(response).length > 0) {
                                 $("#dialog\\.title").html('Comentario para el día ' + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control border-primary" id="comentarios.text" rows="10">' + response.comentario_text.replace(/<br \/>/g,"\n") +'</textarea></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><input class="form-control border-primary" id="comentarios.text" type="text" value="' + response.comentario_text.replace(/<br \/>/g,"\n") +'"></div></div>');
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.comentario_id + '">Guardar</button>');
                                 $("#dialog\\.delete").on("click", function(){
@@ -374,7 +374,7 @@
                             }
                             else{
                                 $("#dialog\\.title").html("Crear comentario para el día " + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><textarea class="form-control border border-primary" id="comentarios.text" rows="10"></textarea></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><input class="form-control border border-primary" id="comentarios.text" type="text" value=""></div></div>');
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + data.id + '">Guardar</button>');
                                 
