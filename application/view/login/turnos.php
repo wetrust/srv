@@ -42,7 +42,8 @@
                                     <?php } ?>
                                     <input type="hidden" name="csrf_token" value="<?= Csrf::makeToken(); ?>" />
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="submit" type="button" class="btn btn-outline-primary"><i class="fas fa-user-check"></i> Ingresar</button>
+                                        <button type="submit" type="button" class="btn btn-outline-primary"><i class="fas fa-user-check"></i> Turno</button>
+                                        <button type="submit" type="button" class="btn btn-outline-primary"><i class="fas fa-user-check"></i> Administrar</button>
                                     </div>
                                 </form>
                             </div>
