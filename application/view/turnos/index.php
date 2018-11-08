@@ -240,11 +240,11 @@
                             let nocheT = "";
 
                             const diaF = turnosDia.filter(elDia => {
-                                return elDia.turno_turno === 0;
+                                return parseInt(elDia.turno_turno) === 0;
                             });
 
                             const nocheF = turnosDia.filter(laNoche => {
-                                return laNoche.turno_turno === 1;
+                                return parseInt(laNoche.turno_turno) === 1;
                             });
 
                             if (!diaF){
@@ -254,7 +254,7 @@
                             if (!nocheF){
                                 nocheT = nocheF.turno_profesional_nombre;
                             }
-                            
+
                             fila = '<tr><td class="' + rojo +'">' + dias[elDia] + h + '</td><td class="text-center">' + diaT +'</td><td class="text-center">' + nocheT +'</td></tr>';
                         }
                         else{
