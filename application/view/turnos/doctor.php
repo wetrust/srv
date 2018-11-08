@@ -142,7 +142,7 @@
                         turno: $("#turnos\\.turno").val(),
                     }
 
-                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                    $.post("https://servidor.crecimientofetal.cl/public/api", datos).done(function(response){
                         $("#dialog\\.view").modal("hide");
                         makeCalendario();
                     });
@@ -181,7 +181,7 @@
                         datos.accion = "profesionalesUpdate";
                     }
 
-                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                    $.post("https://servidor.crecimientofetal.cl/public/api", datos).done(function(response){
                         $("#profesional\\.nombre").val("");
                         $("#profesional\\.rut").val("");
                         $("#profesional\\.telefono").val("");
@@ -216,7 +216,7 @@
                 ano: $("#fecha\\.ano").val()
             }
 
-            $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+            $.post("https://servidor.crecimientofetal.cl/public/api", data).done(function(response){
                 $("#table\\.calendario").empty();
 
                 if (Object.keys(data).length > 0) {
@@ -308,7 +308,7 @@
                             accion : "turnosUno",
                             id: turno_id
                         }
-                        $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+                        $.post("https://servidor.crecimientofetal.cl/public/api", data).done(function(response){
                             if (Object.keys(response).length > 0) {
                                 let d = new Date(response.turno_fechain.replace(/-/g, '\/'));
                                 let day = ("0" + d.getDate()).slice(-2);
@@ -329,7 +329,7 @@
                                         profesional_nombre: $("#turnos\\.profesionales option:selected").text()
                                     }
 
-                                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                                    $.post("https://servidor.crecimientofetal.cl/public/api", datos).done(function(response){
                                         $("#dialog\\.view").modal("hide");
                                         makeCalendario();
                                     });
@@ -357,7 +357,7 @@
                         let month = ("0" + (d.getMonth() + 1)).slice(-2); 
                         let dateComplete = day + "-" + month + "-" + d.getFullYear();
 
-                        $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+                        $.post("https://servidor.crecimientofetal.cl/public/api", data).done(function(response){
                             if (Object.keys(response).length > 0) {
                                 $("#dialog\\.title").html('Comentario para el día ' + dateComplete);
                                 $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><input class="form-control" id="comentarios.text" type="text" value="' + response.comentario_text.replace(/<br \/>/g,"\n") +'"></div></div>');
@@ -371,7 +371,7 @@
                                         text: $("#comentarios\\.text").val().replace(/\r\n|\r|\n/g,"<br />"), 
                                     }
 
-                                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                                    $.post("https://servidor.crecimientofetal.cl/public/api", datos).done(function(response){
                                         $("#dialog\\.view").modal("hide");
                                         makeCalendario();
                                     });
@@ -391,7 +391,7 @@
                                         text: $("#comentarios\\.text").val().replace(/\r\n|\r|\n/g,"<br />"), 
                                     }
 
-                                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                                    $.post("https://servidor.crecimientofetal.cl/public/api", datos).done(function(response){
                                         $("#dialog\\.view").modal("hide");
                                         makeCalendario();
                                     });
@@ -410,7 +410,7 @@
                 accion : "profesionales",
             }
 
-            $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+            $.post("https://servidor.crecimientofetal.cl/public/api", data).done(function(response){
                 $("#tabla\\.profesional").empty();
                 $("#turnos\\.profesionales").empty();
                 $("#turno\\.profesional\\.in").empty();
@@ -442,7 +442,7 @@
                                 accion: "profesionalesEliminar",
                                 id: parseInt(profesional_id)
                             };
-                            $.post("https://servidor.crecimientofetal.cl/turnos/api", solicitud).done(function(data){
+                            $.post("https://servidor.crecimientofetal.cl/public/api", solicitud).done(function(data){
                                 $("#dialog\\.body").empty();
                                 $("#boton\\.profesionales").trigger("click");
                             });
@@ -458,7 +458,7 @@
                             id: profesional_id
                         }
 
-                        $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                        $.post("https://servidor.crecimientofetal.cl/public/api", datos).done(function(response){
                             if (Object.keys(response).length > 0) {
                                 $("#profesional\\.id").val(response.profesional_id);
                                 $("#profesional\\.nombre").val(response.profesional_name);
