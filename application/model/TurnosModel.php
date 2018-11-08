@@ -99,9 +99,9 @@ class TurnosModel
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE profesionales SET profesional_nombre = :profesional_nombre, profesional_rut = :profesional_rut, profesional_correo = :profesional_correo, profesional_telefono = :profesional_telefono WHERE profesional_id = :profesional_id LIMIT 1";
+        $sql = "UPDATE profesionales SET profesional_name = :profesional_name, profesional_rut = :profesional_rut, profesional_correo = :profesional_correo, profesional_telefono = :profesional_telefono WHERE profesional_id = :profesional_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':profesional_nombre' => $profesional_nombre, ':profesional_rut' => $profesional_rut, ':profesional_correo' => $profesional_correo, ':profesional_telefono' => $profesional_telefono, ':profesional_id' => $profesional_id));
+        $query->execute(array(':profesional_name' => $profesional_nombre, ':profesional_rut' => $profesional_rut, ':profesional_correo' => $profesional_correo, ':profesional_telefono' => $profesional_telefono, ':profesional_id' => $profesional_id));
 
         if ($query->rowCount() == 1) {
             return true;
