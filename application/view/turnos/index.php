@@ -247,11 +247,11 @@
                                 return parseInt(laNoche.turno_turno) === 1;
                             });
 
-                            if (diaF.lenght > 0){
+                            if (diaF.length > 0){
                                 diaT = diaF[0].turno_profesional_nombre;
                             }
 
-                            if (nocheF.lenght > 0){
+                            if (nocheF.length > 0){
                                 nocheT = nocheF[0].turno_profesional_nombre;
                             }
 
