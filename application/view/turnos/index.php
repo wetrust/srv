@@ -211,30 +211,6 @@
                     $("#boton\\.profesional\\.cancelar").addClass("d-none");
                     $("#tabla\\.profesional").removeClass("d-none");
                 });
-
-                $("#tabla\\.profesional tr td").on("click", function(){
-                    let profesional_id = $(this).data("id");
-
-                    let datos = {
-                        accion: "profesional",
-                        id: profesional_id
-                    }
-
-                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
-                        if (Object.keys(response).length > 0) {
-                            $("#profesional\\.id").val(response.profesional_id);
-                            $("#profesional\\.nombre").val(response.profesional_name);
-                            $("#profesional\\.rut").val(response.profesional_rut);
-                            $("#profesional\\.telefono").val(response.profesional_telefono);
-                            $("#profesional\\.correo").val(response.profesional_correo);
-                            $("#div\\.profesional").removeClass("d-none");
-                            $("#boton\\.profesional\\.nuevo").addClass("d-none");
-                            $("#boton\\.profesional\\.guardar").removeClass("d-none")
-                            $("#boton\\.profesional\\.cancelar").removeClass("d-none");
-                            $("#tabla\\.profesional").addClass("d-none");
-                        }
-                    });
-                });
             });
         });
 
@@ -477,6 +453,30 @@
                             });
                         });
                         $("#dialog\\.view").modal("show");
+                    });
+
+                    $("#tabla\\.profesional tr td").on("click", function(){
+                        let profesional_id = $(this).data("id");
+
+                        let datos = {
+                            accion: "profesional",
+                            id: profesional_id
+                        }
+
+                        $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                            if (Object.keys(response).length > 0) {
+                                $("#profesional\\.id").val(response.profesional_id);
+                                $("#profesional\\.nombre").val(response.profesional_name);
+                                $("#profesional\\.rut").val(response.profesional_rut);
+                                $("#profesional\\.telefono").val(response.profesional_telefono);
+                                $("#profesional\\.correo").val(response.profesional_correo);
+                                $("#div\\.profesional").removeClass("d-none");
+                                $("#boton\\.profesional\\.nuevo").addClass("d-none");
+                                $("#boton\\.profesional\\.guardar").removeClass("d-none")
+                                $("#boton\\.profesional\\.cancelar").removeClass("d-none");
+                                $("#tabla\\.profesional").addClass("d-none");
+                            }
+                        });
                     });
                 }
             });
