@@ -201,8 +201,8 @@
                         nombre: $("#profesional\\.nombre").val(),
                         rut: $("#profesional\\.rut").val(),
                         telefono: $("#profesional\\.telefono").val(),
-                        correo: $("#profesional\\.correo").val().
-                        id: $("#profesional\\.id").val();
+                        correo: $("#profesional\\.correo").val(),
+                        id: $("#profesional\\.id").val()
                     }
 
                     if ($("#profesional\\.id").val() !== ""){
