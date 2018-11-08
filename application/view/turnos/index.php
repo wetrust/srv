@@ -344,8 +344,8 @@
                         $("#dialog\\.view").modal("show");
                         $("#dialog\\.delete").remove();
 
-                        let mes: $("#fecha\\.mes").val();
-                        let ano: $("#fecha\\.ano").val();
+                        let mes = $("#fecha\\.mes").val();
+                        let ano = $("#fecha\\.ano").val();
                         let dia = ano + '-' + mes + '-' + ("0" + calendario_id).slice(-2);
                         let data = {
                             accion : "comentarioUno",
