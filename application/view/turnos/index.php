@@ -75,8 +75,8 @@
                             <thead class="bg-light">
                                 <tr>
                                     <th scope="col">Número</th>
-                                    <th scope="col">Día</th>
-                                    <th scope="col">Noche</th>
+                                    <th scope="col">Turno Diurno</th>
+                                    <th scope="col">Turno Nocturno</th>
                                     <th scope="col">Comentarios</th>
                                 </tr>
                             </thead>
@@ -355,7 +355,7 @@
                         $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
                             if (Object.keys(response).length > 0) {
                                 $("#dialog\\.title").html('Comentario para el día ' + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="10">' + response.comentario_text.replace(/<br \/>/g,"\n") +'</textarea></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control border-primary" id="comentarios.text" rows="10">' + response.comentario_text.replace(/<br \/>/g,"\n") +'</textarea></div></div>');
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.comentario_id + '">Guardar</button>');
                                 $("#dialog\\.delete").on("click", function(){
@@ -374,7 +374,7 @@
                             }
                             else{
                                 $("#dialog\\.title").html("Crear comentario para el día " + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><textarea class="form-control border" id="comentarios.text" rows="10"></textarea></div></div>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Comentario:</label><textarea class="form-control border border-primary" id="comentarios.text" rows="10"></textarea></div></div>');
                                 $("#dialog\\.delete").remove();
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + data.id + '">Guardar</button>');
                                 
