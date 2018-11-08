@@ -170,13 +170,13 @@ class TurnosModel
      * @param int $keyword_id id of the specific keyword
      * @return object a single object (the result)
      */
-    public static function getTurnos($fechainic)
+    public static function getTurno($id_turno)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT turno_profesional, turno_fechain, turno_turno, turno_profesional_nombre FROM turnos WHERE turno_fechain = :turno_fechain LIMIT 1";
+        $sql = "SELECT turno_id, turno_profesional, turno_fechain, turno_turno, turno_profesional_nombre FROM turnos WHERE turno_id = :turno_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':turno_fechain' => $fechainic));
+        $query->execute(array(':turno_id' => $id_turno));
 
         // fetch() is the PDO method that gets a single result
         return $query->fetch();
@@ -215,17 +215,17 @@ class TurnosModel
      * @param string $keyword_text new text of the specific keyword
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateTurnos($keyword_id, $keyword_text)
+    public static function changeTurnos($turno_id, $turno_profesional, $turno_profesional_nombre)
     {
-        if (!$keyword_id || !$keyword_text) {
+        if (!$turno_id || !$turno_profesional) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE turnos SET keyword_text = :keyword_text WHERE keyword_id = :keyword_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE turnos SET turno_profesional = :turno_profesional, turno_profesional_nombre = :turno_profesional_nombre WHERE turno_id = :turno_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':keyword_id' => $keyword_id, ':keyword_text' => $keyword_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':turno_profesional' => $turno_profesional, ':turno_profesional_nombre' => $turno_profesional_nombre, ':turno_id' => $turno_id));
 
         if ($query->rowCount() == 1) {
             return true;

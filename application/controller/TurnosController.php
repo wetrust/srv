@@ -54,6 +54,9 @@ class TurnosController extends Controller
             case "turnos":
                 $resultado = TurnosModel::getAllTurnos(Request::post('dia'),Request::post('mes'), Request::post('ano'));
                 break;
+            case "turnosUno":
+                $resultado = TurnosModel::getTurno(Request::post('id'));
+                break;
             case "turnosNuevo":
                 $resultado = TurnosModel::createTurnos(Request::post('profesional'),Request::post("profesional_nombre"), Request::post('fechainic'),Request::post('turno'));
                 break;

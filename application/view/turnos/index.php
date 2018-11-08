@@ -156,6 +156,7 @@
 
                     $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
                         $("#dialog\\.view").modal("hide");
+                        makeCalendario();
                     });
                 });
             });
@@ -287,14 +288,46 @@
 
                     if (typeof turno_id === 'number'){
                         alert("hay turno y tiene id");
+                        $("#dialog\\.title").html("Obteniendo datos ...");
+                        $("#dialog\\.body").html('<p class="text-center">cargando</p>');
+                        $("#dialog\\.view").modal("show");
+                        $("#dialog\\.delete").remove();
+
+                        let data = {
+                            accion : "turnosUno",
+                            id: turno_id
+                        }
+                        $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
+                            if (Object.keys(response).length > 0) {
+                                let d = new Date(response.turno_fechain.replace(/-/g, '\/'));
+                                let day = ("0" + d.getDate()).slice(-2);
+                                let month = ("0" + (d.getMonth() + 1)).slice(-2); 
+                                let dateComplete = day + "-" + month + "-" + d.getFullYear();
+
+                                $("#dialog\\.title").html('Turno ' + dateComplete + ' Profesional: ' + response.turno_profesional_nombre);
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales">Reemplazar por Profesional</label><select class="form-control" id="turnos.profesionales"></select></div></div>');
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.turno_id + '">Guardar</button>');
+                                cargarProfesionales();
+
+                                $("#dialog\\.delete").on("click", function(){
+                                    let id = $(this).data("id");
+                                    let datos = {
+                                        accion: "turnosCambiar",
+                                        id: id,
+                                        profesional: $("#turnos\\.profesionales").val(),
+                                        profesional_nombre: $("#turnos\\.profesionales option:selected").text()
+                                    }
+
+                                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                                        $("#dialog\\.view").modal("hide");
+                                        makeCalendario();
+                                    });
+                                });
+                            }
+                        });
                     }
 
-                    let data = {
-                        accion : "turnos",
-                        dia: ("0" + $(this).text()).slice(-2),
-                        mes: $("#fecha\\.mes").val(),
-                        ano: $("#fecha\\.ano").val()
-                    }
+
                 });
             });
       }
