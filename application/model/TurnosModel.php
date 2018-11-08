@@ -91,17 +91,17 @@ class TurnosModel
      * @param string $keyword_text new text of the specific keyword
      * @return bool feedback (was the update successful ?)
      */
-    public static function updateKeyword($keyword_id, $keyword_text)
+    public static function updateProfesional($profesional_id, $profesional_nombre, $profesional_rut, $profesional_correo, $profesional_telefono)
     {
-        if (!$keyword_id || !$keyword_text) {
+        if (!$profesional_id || !$profesional_nombre) {
             return false;
         }
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE keywords SET keyword_text = :keyword_text WHERE keyword_id = :keyword_id AND user_id = :user_id LIMIT 1";
+        $sql = "UPDATE profesionales SET profesional_nombre = :profesional_nombre, profesional_rut = :profesional_rut, profesional_correo = :profesional_correo, profesional_telefono = :profesional_telefono WHERE profesional_id = :profesional_id LIMIT 1";
         $query = $database->prepare($sql);
-        $query->execute(array(':keyword_id' => $keyword_id, ':keyword_text' => $keyword_text, ':user_id' => Session::get('user_id')));
+        $query->execute(array(':profesional_nombre' => $profesional_nombre, ':profesional_rut' => $profesional_rut, ':profesional_correo' => $profesional_correo, ':profesional_telefono' => $profesional_telefono, ':profesional_id' => $profesional_id));
 
         if ($query->rowCount() == 1) {
             return true;
