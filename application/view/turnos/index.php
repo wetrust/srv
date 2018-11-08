@@ -251,6 +251,8 @@
 
                         if (comentariosDia.length > 0){
                             comentario = comentariosDia[0].comentario_text;
+                            comentario = comentario.substring(0,25);
+                            comentario += "...";
                         }
 
                         if (Object.keys(turnosDia).length > 0) {
@@ -360,9 +362,22 @@
                         $.post("https://servidor.crecimientofetal.cl/turnos/api", data).done(function(response){
                             if (Object.keys(response).length > 0) {
                                 $("#dialog\\.title").html('Comentario para el día ' + dateComplete);
-                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="15">' + response.comentario_text +'</textarea></div></div>');
-                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.comentario_id + '">Guardar</button>');
+                                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="comentarios.text">Profesional</label><textarea class="form-control" id="comentarios.text" rows="15">' + response.comentario_text.replace(/<br \/>/g,"\n") +'</textarea></div></div>');
                                 $("#dialog\\.delete").remove();
+                                $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.comentario_id + '">Guardar</button>');
+                                $("#dialog\\.delete").on("click", function(){
+                                    let id = $(this).data("id");
+                                    let datos = {
+                                        accion: "comentarioUpdate",
+                                        id: id,
+                                        text: $("#comentarios\\.text").val().replace(/\r\n|\r|\n/g,"<br />"), 
+                                    }
+
+                                    $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){
+                                        $("#dialog\\.view").modal("hide");
+                                        makeCalendario();
+                                    });
+                                });
                             }
                             else{
                                 $("#dialog\\.title").html("Crear comentario para el día " + dateComplete);
@@ -375,7 +390,7 @@
                                     let datos = {
                                         accion: "comentarioGuardar",
                                         fecha: id,
-                                        text: $("#comentarios\\.text").val(), 
+                                        text: $("#comentarios\\.text").val().replace(/\r\n|\r|\n/g,"<br />"), 
                                     }
 
                                     $.post("https://servidor.crecimientofetal.cl/turnos/api", datos).done(function(response){

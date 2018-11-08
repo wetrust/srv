@@ -312,4 +312,24 @@ class TurnosModel
         return false;
     }
 
+    public static function updateComentario($comentario_id, $text)
+    {
+        if (!$comentario_id || !$text) {
+            return false;
+        }
+
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $sql = "UPDATE comentarios SET comentario_text = :comentario_text WHERE comentario_id = :comentario_id LIMIT 1";
+        $query = $database->prepare($sql);
+        $query->execute(array(':comentario_text' => $text, ':turno_id' => $comentario_id));
+
+        if ($query->rowCount() == 1) {
+            return true;
+        }
+
+        Session::add('feedback_negative', Text::get('FEEDBACK_NOTE_EDITING_FAILED'));
+        return false;
+    }
+
 }

@@ -72,6 +72,9 @@ class TurnosController extends Controller
             case "comentarioGuardar":
                 $resultado = TurnosModel::createComentario(Request::post('fecha'), Request::post('text'));
                 break;
+            case "comentarioUpdate":
+                $resultado = TurnosModel::updateComentario(Request::post('id'), Request::post('text'));
+                break;
         }
 
         return $this->View->renderJSON($resultado);
