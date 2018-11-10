@@ -246,7 +246,7 @@
 
                         if (comentariosDia.length > 0){
                             comentario = comentariosDia[0].comentario_text.replace(/<br \/>/g,"\n");
-                            comentario = comentario.substring(0,25);
+                            comentario = comentario.substring(0,60);
                             comentario += "...";
                         }
 
