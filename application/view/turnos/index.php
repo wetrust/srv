@@ -127,7 +127,7 @@
 
             $("#boton\\.turno").on("click", function(){
                 $("#dialog\\.title").html("INGRESAR DATOS (fecha, horario y profesional de turno)");
-                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.fecha.in">Fecha de turno</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Tipo de turno</label><select class="form-control" id="turnos.turno"><option value="0">Diurno</option><option value="1">Nocturno</option><option value="2">Completo</option></select></div></div><div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional asignado</label><select class="form-control" id="turnos.profesionales"></select></div></div>');
+                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.fecha.in">Fecha de turno</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Tipo de turno (12 o 24 hrs)</label><select class="form-control" id="turnos.turno"><option value="0">Diurno</option><option value="1">Nocturno</option><option value="2">Completo</option></select></div></div><div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional asignado</label><select class="form-control" id="turnos.profesionales"></select></div></div>');
                 $("#dialog\\.view").modal("show");
                 cargarProfesionales();
                 $("#dialog\\.delete").remove();
