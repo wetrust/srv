@@ -30,7 +30,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="card ml-3 my-3">
+            <div class="card">
                     <div class="card-body">
                         <div class="form-row">
                             <div class="col"><p>Mes</p></div>
