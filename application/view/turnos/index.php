@@ -63,6 +63,7 @@
                         </div>
                     </div>
                 </div>
+        </div>
         <div class="row m-0">
             <div class="col">
                 <div class="card ml-3">
