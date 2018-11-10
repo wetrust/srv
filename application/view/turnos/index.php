@@ -127,7 +127,7 @@
 
             $("#boton\\.turno").on("click", function(){
                 $("#dialog\\.title").html("INGRESAR DATOS (fecha, horario y profesional de turno)");
-                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.fecha.in">Fecha de turno</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Tipo de turno (12 o 24 hrs)</label><select class="form-control" id="turnos.turno"><option value="0">Diurno</option><option value="1">Nocturno</option><option value="2">Completo</option></select></div></div><div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional asignado</label><select class="form-control" id="turnos.profesionales"></select></div></div>');
+                $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.fecha.in">Fecha de turno</label><input class="form-control" type="date" id="turnos.fecha.in"></div><div class="form-group col"><label for="turnos.hora.in">Horario de turno (12 o 24 hrs)</label><select class="form-control" id="turnos.turno"><option value="0">Diurno</option><option value="1">Nocturno</option><option value="2">Completo</option></select></div></div><div class="row"><div class="form-group col"><label for="turnos.profesionales">Profesional asignado</label><select class="form-control" id="turnos.profesionales"></select></div></div>');
                 $("#dialog\\.view").modal("show");
                 cargarProfesionales();
                 $("#dialog\\.delete").remove();
@@ -315,7 +315,7 @@
                                 let month = ("0" + (d.getMonth() + 1)).slice(-2); 
                                 let dateComplete = day + "-" + month + "-" + d.getFullYear();
 
-                                $("#dialog\\.title").html('Turno ' + dateComplete + ' Profesional: ' + response.turno_profesional_nombre);
+                                $("#dialog\\.title").html('CAMBIO PROFESIONAL DE TURNO: <small>' + response.turno_profesional_nombre + '</small>');
                                 $("#dialog\\.body").html('<div class="row"><div class="form-group col"><label for="turnos.profesionales" class="text-danger text-center mt-3"><strong>Reemplazar por Profesional:</strong></label><select class="form-control" id="turnos.profesionales"></select></div></div>');
                                 $("#dialog\\.footer").append('<button type="button" class="btn btn-danger" id="dialog.delete" data-id="' + response.turno_id + '">Guardar</button>');
                                 cargarProfesionales();
