@@ -107,7 +107,7 @@ $(document).ready(function(){
         updateCalculos();
 
         $("#boton\\.imprimir\\.resumen").on("click", function(){
-            let table = $("#tabla\\.calculos").val();
+            let table = $("#tabla\\.calculos").html();
     
             let informe = "";
             informe = '<html lang="es"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> <title>Notas de apuntes</title></head><body> <h1 class="text-center mt-5 mb-4 pt-5">Resumen de apuntes, eventos, reuniones</h1> <hr style="border-width:4px;"><div class="row"><div class="col"><div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th><th scope="col">Tipo de evento</th> <th scope="col">Fecha</th> <th scope="col">Primer participante</th><th scope="col">Cierre del evento</th><th scope="col">Valor cancelado</th> </tr></thead> <tbody id="tabla.calculos">:TABLA</tbody> </table> </div></div></div><script>:SCRIPT</script></body></html>';
