@@ -84,7 +84,7 @@
                                     <select class="form-control" id="formulario.palabras" disabled=""></select>
                                 </div>
                                 <input id="formulario.id" type="hidden" value="" />
-                                <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cierre del evento</strong></label><select class="form-control" id="formulario.cancelacion" disabled><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div>
+                                <div class="form-group mt-4"><label for="formulario.cancelacion"><strong>Cierre del evento</strong></label><select class="form-control" id="formulario.cancelacion" disabled><option value="0">Pendiente</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="opcion.financiera">
                                     <label class="form-check-label" for="opcion.financiera"><strong>Registro financiero</strong></label>
