@@ -1267,6 +1267,7 @@ function updateCalculos(){
             $.each(data, function(i, item) {
                 let participante = "";
                 let lugar = "";
+                let cancelacion = "";
 
                 $("#formulario\\.participante > option").each(function() {
                     if (this.value == item["apunte_participante"]){
@@ -1280,12 +1281,18 @@ function updateCalculos(){
                     }
                 });
 
+                $("#formulario\\.cancelacion > option").each(function() {
+                    if (this.value == item["apunte_cancellation"]){
+                        cancelacion = this.text;
+                    }
+                });
+
                 var d = new Date(item["apunte_date"].replace(/-/g, '\/'));
                 var day = ("0" + d.getDate()).slice(-2);
                 var month = ("0" + (d.getMonth() + 1)).slice(-2); 
                 var dateComplete = day + "-" + month + "-" + d.getFullYear();
                 
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + dateComplete + '</td><td>' + participante + '</td><td>' + item["apunte_cancellation"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + dateComplete + '</td><td>' + participante + '</td><td>' + cancelacion + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 $("#tabla\\.calculos").append(fila);
             });
 
