@@ -5,7 +5,7 @@ $(document).ready(function(){
     cargarTiempo();
     cargarParticipante();
     cargarOtros();
- 
+
     $("#boton\\.usuarios").on("click", function(){
         $("#dialog\\.title").html("Listado de usuarios");
         $("#dialog\\.delete").remove();
@@ -58,7 +58,7 @@ $(document).ready(function(){
             $("#formulario\\.nombre").focus();
         }
     });
-    
+
     $("#boton\\.lista").on("click", function(){
         cargarTabla();
     });
@@ -82,7 +82,7 @@ $(document).ready(function(){
         $("#dialog\\.title").html("Tabla resumen según fechas y/o eventos");
         $("#dialog\\.delete").remove();
         $("#dialog\\.view").modal("show");
-        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha inicial</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd-mm-yyyy"></div></div><div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha final</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd-mm-yyyy"></div></div></div><div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th><th scope="col">Tipo de evento</th> <th scope="col">Fecha</th> <th scope="col">Primer participante</th><th scope="col">Valor cancelado</th> </tr></thead> <tbody id="tabla.calculos"></tbody> </table> </div></div></div><div class="row"><div class="col-4"> <div class="form-group"><label for="calculos.formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div> <div class="col-4"> <div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div><div class="col-4"> <div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"><option value="99">Todos</option><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div></div></div>');
+        $("#dialog\\.body").html('<div class="row"> <div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha inicial</label><input type="text" class="form-control" id="calculos.fecha.uno" data-date-format="dd-mm-yyyy"></div></div><div class="col"> <div class="form-group"><label for="calculos.fecha.uno">Fecha final</label><input type="text" class="form-control" id="calculos.fecha.dos" data-date-format="dd-mm-yyyy"></div></div></div><div class="row"> <div class="col"> <div class="table-responsive"> <table class="table table-striped"> <thead class="thead-dark"> <tr> <th scope="col">#</th> <th scope="col">Nombre</th><th scope="col">Tipo de evento</th> <th scope="col">Fecha</th> <th scope="col">Primer participante</th><th scope="col">Cierre del evento</th><th scope="col">Valor cancelado</th> </tr></thead> <tbody id="tabla.calculos"></tbody> </table> </div></div></div><div class="row"><div class="col-4"> <div class="form-group"><label for="calculos.formulario.actividad"><strong>Tipo de evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.actividad"></select></div></div> <div class="col-4"> <div class="form-group"><label for="calculos.formulario.lugar"><strong>Lugar del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.lugar"></select></div></div><div class="col-4"> <div class="form-group"><label for="calculos.formulario.cancelacion"><strong>Cierre del evento</strong>(<i class="fas fa-cog text-success"></i>)</label><select class="form-control" id="calculos.formulario.cancelacion"><option value="99">Todos</option><option value="0">Pendiente</option><option value="1">Realizado</option><option value="2">Cancelado</option><option value="3">Suspendido</option></select></div></div></div>');
 
         cargarActividad();
         cargarLugar();
@@ -1285,7 +1285,7 @@ function updateCalculos(){
                 var month = ("0" + (d.getMonth() + 1)).slice(-2); 
                 var dateComplete = day + "-" + month + "-" + d.getFullYear();
                 
-                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + dateComplete + '</td><td>' + participante + '</td><td>' + item["apunte_cost"] + '</td></tr>';
+                let fila = '<tr><th scope="row">' + item["apunte_id"] + '</th><td>' + item["apunte_nombre"] + '</td><td>' + lugar + '</td><td>' + dateComplete + '</td><td>' + participante + '</td><td>' + item["apunte_cancellation"] + '</td><td>' + item["apunte_cost"] + '</td></tr>';
                 $("#tabla\\.calculos").append(fila);
             });
 
