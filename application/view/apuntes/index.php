@@ -17,7 +17,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarHome">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i></a>
                     </li>
@@ -25,21 +25,19 @@
                         <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i></a>
                     </liv>
                 </ul>
-                <?php if (Session::userIsLoggedIn()) { ?>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Session::get('user_name'); ?> </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarUser">
-                                <a class="dropdown-item" id="boton.configuracion"><i class="fas fa-cog"></i> Configuración</a>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>login/logout"><i class="fas fa-door-closed"></i> Salir</a>
-                            </div>
-                        </li>
-                    </ul>
-                <?php } ?>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Session::get('user_name'); ?> </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarUser">
+                            <a class="dropdown-item" id="boton.configuracion"><i class="fas fa-cog"></i> Configuración</a>
+                            <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>login/logout"><i class="fas fa-door-closed"></i> Salir</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </nav>
         <div class="row flex-xl-nowrap m-0">
-            <div class="col-12 col-md-3 col-xl-3">
+            <div class="col-12 col-md-3 col-xl-3 p-md-0">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <div class="col-7">
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
@@ -52,7 +50,7 @@
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas">
                 </div>
             </div>
-            <div class="col-12 col-md-9 col-xl-9 py-md-3 pl-md-5">
+            <div class="col-12 col-md-9 col-xl-9 pl-md-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="btn-group" role="group" aria-label="Menú">
