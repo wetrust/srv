@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarHome">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i></a>
+                        <a class="nav-link" href="#" id="boton.home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i></a>
+                        <a class="nav-link" href="#" id="boton.imprimir">Imprimir</a>
                     </liv>
                 </ul>
                 <ul class="navbar-nav">
@@ -43,6 +43,9 @@
                         <input id="caja.busqueda" type="search" placeholder="Buscar.." aria-label="Search" class="form-control">
                         <button type="button" id="boton.lista" title="Ordenar por alfabeto" class="btn btn-outline-primary"><i class="fas fa-font"></i></button>
                         <button type="button" id="boton.listd" title="Ordenar por fecha" class="btn btn-outline-primary"><i class="fas fa-calendar-alt"></i></button>
+                    <?php if (Session::get("user_account_type") == 7) : ?>
+                        <button type="button" id="boton.usuarios" title="Usuarios" class="btn btn-outline-success my-2 my-sm-0 mr-1 float-right"><i class="fas fa-users"></i></button>
+                    <?php endif; ?>
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas"></div>
@@ -118,9 +121,6 @@
                                 </div>
                                 <div class="form-group"><label for="formulario.comentarios"><strong>Comentarios relativos al tipo de evento seleccionado.</strong></label><textarea class="form-control border h6" id="formulario.comentarios" rows="25" disabled></textarea></div>
                                 <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.calculos" title="calculos"><i class="fas fa-calculator"></i></button>
-                                <?php if (Session::get("user_account_type") == 7) : ?>
-                                    <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1 float-right" id="boton.usuarios" title="Usuarios"><i class="fas fa-users"></i></button>
-                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
