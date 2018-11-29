@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarHome">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x"></i></a>
+                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x"></i></a>
+                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i></a>
                     </liv>
                 </ul>
                 <?php if (Session::userIsLoggedIn()) { ?>
