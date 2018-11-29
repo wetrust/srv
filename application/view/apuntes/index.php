@@ -45,8 +45,7 @@
                         <button type="button" id="boton.listd" title="Ordenar por fecha" class="btn btn-outline-primary"><i class="fas fa-calendar-alt"></i></button>
                     </div>
                 </nav>
-                <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas">
-                </div>
+                <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas"></div>
             </div>
             <div class="col-12 col-md-9 col-xl-9 pl-md-5">
                 <div class="card">
