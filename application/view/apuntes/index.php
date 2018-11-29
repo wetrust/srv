@@ -19,7 +19,8 @@
             <div class="collapse navbar-collapse" id="navbarHome">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home"></i></a>
+                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x"></i></a>
+                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x"></i></a>
                     </li>
                 </ul>
                 <?php if (Session::userIsLoggedIn()) { ?>
@@ -28,13 +29,6 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Session::get('user_name'); ?> </a>
                             <div class="dropdown-menu" aria-labelledby="navbarUser">
                                 <a class="dropdown-item" id="boton.configuracion"><i class="fas fa-cog"></i></a>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/index">Mi cuenta</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/editAvatar">Cambiar mi foto</a>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/editusername">Cambiar mi nombre de usuario</a>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/edituseremail">Cambiar mi email</a>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>user/changePassword">Cambiar mi contraseña</a>
                                 <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>login/logout"><i class="fas fa-door-closed"></i></a>
                             </div>
                         </li>
@@ -48,8 +42,6 @@
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.imprimir" title="Ver resumen e imprimir"><i class="fas fa-print"></i></button>
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.salir" title="Salir"><i class="fas fa-door-closed"></i></button>
                     </div>
                     <div class="form-inline d-none" id="div.busqueda">
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
