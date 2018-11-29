@@ -19,15 +19,14 @@
             <div class="collapse navbar-collapse" id="navbarHome">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i></a>
+                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i> Configuración</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i></a>
+                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i> Salir</a>
                     </liv>
                 </ul>
                 <div class="form-inline my-2 my-lg-0 mr-auto">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-search"></i></button>
+                    <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                 </div>
                 <?php if (Session::userIsLoggedIn()) { ?>
                     <ul class="navbar-nav">
@@ -48,9 +47,6 @@
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
                         <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"></button>
-                    </div>
-                    <div class="form-inline d-none" id="div.busqueda">
-                        <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
                 </nav>
                 <div class="row pt-2">
