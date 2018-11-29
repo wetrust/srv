@@ -19,15 +19,12 @@
             <div class="collapse navbar-collapse" id="navbarHome">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i> Configuración</a>
+                        <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i> Salir</a>
+                        <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i></a>
                     </liv>
                 </ul>
-                <div class="form-inline my-2 my-lg-0 mr-auto">
-                    <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
-                </div>
                 <?php if (Session::userIsLoggedIn()) { ?>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
@@ -41,27 +38,21 @@
                 <?php } ?>
             </div>
         </nav>
-        <div class="row h-100 w-100" style="overflow:hide">
-            <div class="col-3 border-right pr-0 h-100">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-3">
                 <nav class="navbar navbar-light bg-light justify-content-between">
-                    <a class="navbar-brand">Notas de apuntes</a>
-                    <div class="btn-group" role="group" aria-label="Menú">
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"></button>
-                    </div>
-                </nav>
-                <div class="row pt-2">
                     <div class="col-7">
-                        <h5 class="text-success text-center my-2">Nombre</h5>
+                        <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
                     <div class="col-5">
-                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i></button>
-                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="fas fa-calendar-alt"></i></button>
+                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i> Configuración</button>
+                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="fas fa-calendar-alt"></i> Salir</button>
                     </div>
-                </div>
+                </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas">
                 </div>
             </div>
-            <div class="col-9 h-100" style="overflow-y:scroll;height:calc(100% - 7.1rem);">
+            <div class="col-12 col-md-9 col-xl-9 py-md-3 pl-md-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="btn-group" role="group" aria-label="Menú">
