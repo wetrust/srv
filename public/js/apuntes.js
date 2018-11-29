@@ -62,6 +62,7 @@ $(document).ready(function(){
     $("#boton\\.lista").on("click", function(){
         cargarTabla();
     });
+
     $("#boton\\.listd").on("click", function(){
         cargarTabla(1);
     });
@@ -143,7 +144,6 @@ $(document).ready(function(){
     });
 
     $("#boton\\.home").on("click", function(){
-
         var dateTime = new Date();
         var day = ("0" + dateTime.getDate()).slice(-2);
         var month = ("0" + (dateTime.getMonth() + 1)).slice(-2);
@@ -300,7 +300,6 @@ $(document).ready(function(){
             });
         }
     });
-       
 
     $("#boton\\.imprimir").on("click", function(){
         let texto = $("#formulario\\.comentarios").val();
@@ -535,6 +534,7 @@ $(document).ready(function(){
                 $("#actividad\\.text\\.default").val("");
             }
         });
+
         $("#boton\\.actividad\\.guardar").on("click", function(){
             $("#div\\.actividad").addClass("d-none");
             $("#boton\\.actividad\\.nuevo").removeClass("d-none");
