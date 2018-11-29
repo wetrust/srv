@@ -17,7 +17,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarHome">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="boton.home"><i class="fas fa-home fa-2x text-white"></i></a>
                     </li>
@@ -25,11 +25,15 @@
                         <a class="nav-link" href="#" id="boton.imprimir"><i class="fas fa-print fa-2x text-white"></i></a>
                     </liv>
                 </ul>
+                <div class="form-inline my-2 my-lg-0 mr-auto">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-search"></i></button>
+                </div>
                 <?php if (Session::userIsLoggedIn()) { ?>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Session::get('user_name'); ?> </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarUser">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarUser">
                                 <a class="dropdown-item" id="boton.configuracion"><i class="fas fa-cog"></i></a>
                                 <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>login/logout"><i class="fas fa-door-closed"></i></a>
                             </div>
@@ -43,7 +47,7 @@
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <a class="navbar-brand">Notas de apuntes</a>
                     <div class="btn-group" role="group" aria-label="Menú">
-                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"><i class="fas fa-search"></i></button>
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0 mr-1" id="boton.buscar" title="Buscar apunte"></button>
                     </div>
                     <div class="form-inline d-none" id="div.busqueda">
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
