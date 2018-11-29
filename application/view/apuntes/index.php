@@ -40,9 +40,9 @@
             <div class="col-12 col-md-3 col-xl-3 p-md-0">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <div class="form-inline my-2 my-lg-0">
-                        <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
-                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i></button>
-                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="fas fa-calendar-alt"></i></button>
+                        <input id="caja.busqueda" type="search" placeholder="Buscar.." aria-label="Search" class="form-control">
+                        <button type="button" id="boton.lista" title="Ordenar por alfabeto" class="btn btn-outline-primary"><i class="fas fa-font"></i></button>
+                        <button type="button" id="boton.listd" title="Ordenar por fecha" class="btn btn-outline-primary"><i class="fas fa-calendar-alt"></i></button>
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas">
