@@ -24,6 +24,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="boton.imprimir">Imprimir</a>
                     </liv>
+                <?php if (Session::get("user_account_type") == 7) : ?>
+                    <li class="nav-item">
+                        <a id="boton.usuarios" href="#" class="nav-link">Lista de usuarios</a>
+                    </liv>
+                <?php endif; ?>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
@@ -43,9 +48,6 @@
                         <input id="caja.busqueda" type="search" placeholder="Buscar.." aria-label="Search" class="form-control">
                         <button type="button" id="boton.lista" title="Ordenar por alfabeto" class="btn btn-outline-primary"><i class="fas fa-font"></i></button>
                         <button type="button" id="boton.listd" title="Ordenar por fecha" class="btn btn-outline-primary"><i class="fas fa-calendar-alt"></i></button>
-                    <?php if (Session::get("user_account_type") == 7) : ?>
-                        <button type="button" id="boton.usuarios" title="Usuarios" class="btn btn-outline-success my-2 my-sm-0 mr-1 float-right"><i class="fas fa-users"></i></button>
-                    <?php endif; ?>
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas"></div>
