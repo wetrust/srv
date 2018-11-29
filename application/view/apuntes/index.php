@@ -30,23 +30,23 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Session::get('user_name'); ?> </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarUser">
-                                <a class="dropdown-item" id="boton.configuracion"><i class="fas fa-cog"></i></a>
-                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>login/logout"><i class="fas fa-door-closed"></i></a>
+                                <a class="dropdown-item" id="boton.configuracion"><i class="fas fa-cog"></i> Configuración</a>
+                                <a class="dropdown-item" href="<?php echo Config::get('URL'); ?>login/logout"><i class="fas fa-door-closed"></i> Salir</a>
                             </div>
                         </li>
                     </ul>
                 <?php } ?>
             </div>
         </nav>
-        <div class="row flex-xl-nowrap">
+        <div class="row flex-xl-nowrap m-0">
             <div class="col-12 col-md-3 col-xl-3">
                 <nav class="navbar navbar-light bg-light justify-content-between">
                     <div class="col-7">
                         <input id="caja.busqueda" class="form-control mr-sm-2" type="search" placeholder="Escribir" aria-label="Search">
                     </div>
                     <div class="col-5">
-                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i> Configuración</button>
-                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="fas fa-calendar-alt"></i> Salir</button>
+                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.lista" title="Ordenar por alfabeto"><i class="fas fa-font"></i></button>
+                        <button type="button" class="btn btn-outline-primary my-2 my-sm-0 mr-1" id="boton.listd" title="Ordenar por fecha"><i class="fas fa-calendar-alt"></i></button>
                     </div>
                 </nav>
                 <div style="overflow-y:scroll;height:calc(100% - 7.1rem);" class="pb-5" id="contenedor.tarjetas">
