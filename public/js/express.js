@@ -399,7 +399,7 @@ $(document).ready(function() {
     });
 
     $('#graficoLcn').on('click', function() {
-        $('#graficosTitle').html("Gráfico LCN");
+        $('#graficosTitle').html("Gráfico de Longitud Cefalo - Nalgas (LCN)");
         $('#graficosBody').html("<div class='row'><div class='col'><div id='graficoLcnBaseView'></div></div></div>");
         var egLcn = parseFloat(localStorage.eg);
         $('#impEcoObsSegTrim1').remove();
