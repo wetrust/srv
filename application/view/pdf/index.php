@@ -95,7 +95,7 @@ $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[3][1], '110', ''
 else if (count($this->user_images) == 6){
     $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[0][1], '', '', 88, 63, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
     $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[1][1], '110', '', 88, 63, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
-    $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[2][1], PDF_MARGIN_LEFT, '131', 88, 63, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
+    $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[2][1], PDF_MARGIN_LEFT, '101', 88, 63, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
     $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[3][1], '110', '', 88, 63, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
     $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[4][1], PDF_MARGIN_LEFT, '196', 88, 63, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
     $pdf->Image(Config::get('DICOM_DIRECTORY') . $this->user_images[5][1], '110', '', 88, 63, 'JPG', '', 'T', true, 150, '', false, false, 1, false, false, false);
