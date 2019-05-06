@@ -74,7 +74,7 @@ $html = '<h3 style="border-bottom:4px double #000;text-align: center;"><strong>I
 $pdf->writeHTMLCell('', '', '10', '', $html, 0, 1, 0, true, 'C', true);
 $pdf->Ln(2);
 
-$html = '<table><tbody><tr><td>Nombre del paciente: '.htmlentities($this->user_name).'</td><td>RUT (DNI): '.htmlentities($this->user_id).'</td><td>Fehc ade exámen: '.$this->StudyDate.'</td></tr></tbody></table>';
+$html = '<table><tbody><tr><td>Nombre: '.htmlentities($this->user_name).'</td><td>RUT (DNI): '.htmlentities($this->user_id).'</td><td>Fecha de exámen: '.$this->StudyDate.'</td></tr></tbody></table>';
 $pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, 'J', true);
 $pdf->Ln(1);
 
