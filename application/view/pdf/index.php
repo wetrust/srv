@@ -76,7 +76,7 @@ $pdf->Ln(2);
 
 $html = '<table><tbody><tr><td>Nombre: '.htmlentities($this->user_name).'</td><td>RUT (DNI): '.htmlentities($this->user_id).'</td><td>Fecha de exámen: '.$this->StudyDate.'</td></tr></tbody></table>';
 $pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, 'J', true);
-$pdf->Ln(1);
+$pdf->Ln(4);
 
 // Image example with resizing
 if (count($this->user_images) == 1){
