@@ -70,6 +70,7 @@ $pdf->setJPEGQuality(90);
 
 $pdf->SetFont('dejavusans', '', 8);
 
+$pdf->Ln(2);
 $html = '<h3 style="border-bottom:4px double #000;text-align: center;"><strong>Impresión de Imágenes Gineco-Obstétrica</strong></h3>';
 $pdf->writeHTMLCell('', '', '10', '', $html, 0, 1, 0, true, 'C', true);
 $pdf->Ln(2);
