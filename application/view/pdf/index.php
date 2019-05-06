@@ -71,12 +71,12 @@ $pdf->setJPEGQuality(90);
 $pdf->SetFont('dejavusans', '', 8);
 
 $html = '<h3 style="border-bottom:4px double #000;text-align: center;"><strong>Impresión de Imágenes Gineco-Obstétrica</strong></h3>';
-$this->pdf->writeHTMLCell('', '', '10', '', $html, 0, 1, 0, true, 'C', true);
-$this->pdf->Ln(2);
+$pdf->writeHTMLCell('', '', '10', '', $html, 0, 1, 0, true, 'C', true);
+$pdf->Ln(2);
 
 $html = '<table><tbody><tr><td>Nombre del paciente: '.htmlentities($this->user_name).'</td><td>RUT (DNI): '.htmlentities($this->user_id).'</td><td>Fehc ade exámen: '.$this->StudyDate.'</td></tr></tbody></table>';
-$this->pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, 'J', true);
-$this->pdf->Ln(1);
+$pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, 'J', true);
+$pdf->Ln(1);
 
 // Image example with resizing
 if (count($this->user_images) == 1){
