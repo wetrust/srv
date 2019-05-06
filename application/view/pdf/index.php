@@ -70,12 +70,13 @@ $pdf->setJPEGQuality(90);
 
 $pdf->SetFont('dejavusans', '', 8);
 
-// Set some content to print
-$html = '<h1 style="text-align:center">Impresión de Imágenes Gineco-Obstétrica</h1>
-<div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Paciente Sra. (Srta.):</strong>' . $this->user_name .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>RUT:</strong> ' . $this->user_id .'</div><div style="display: inline-block;width:33%;height:200px;float:left;"><strong>Fecha de Exámen:</strong> ' . $this->StudyDate .'</div></div>';
+$html = '<h3 style="border-bottom:4px double #000;text-align: center;"><strong>Impresión de Imágenes Gineco-Obstétrica</strong></h3>';
+$this->pdf->writeHTMLCell('', '', '10', '', $html, 0, 1, 0, true, 'C', true);
+$this->pdf->Ln(2);
 
-// Print text using writeHTMLCell()
-$pdf->writeHTMLCell('', 10, '', 35, $html, 0, 1, 0, true, '', true);
+$html = '<table><tbody><tr><td>Nombre del paciente: '.htmlentities($this->user_name).'</td><td>RUT (DNI): '.htmlentities($this->user_id).'</td><td>Fehc ade exámen: '.$this->StudyDate.'</td></tr></tbody></table>';
+$this->pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, 'J', true);
+$this->pdf->Ln(1);
 
 // Image example with resizing
 if (count($this->user_images) == 1){
