@@ -19,8 +19,8 @@ class DicomController extends Controller
         $this->View->render('dicom/index');
     }
 
-    public function getimages($rut, $StudyDate){
-        $this->View->renderJSON(DicomModel::getAllImages($rut,$StudyDate));
+    public function getimages($rut, $StudyDate, $StudyInsta){
+        $this->View->renderJSON(DicomModel::getAllImages($rut,$StudyDate,$StudyInsta));
     }
 
     public function del(){

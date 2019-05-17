@@ -211,7 +211,7 @@ class DicomModel
         return true;
     }
 
-    public static function getAllImages($rut, $StudyDate)
+    public static function getAllImages($rut, $StudyDate, $StudyInsta)
     {
             $database = "";
             $result = new stdClass();
@@ -233,9 +233,9 @@ class DicomModel
                 // No connection, reached limit connections etc. so no point to keep it running
                 exit;
             }
-            $sql = "SELECT ObjectFile, NumberOfFr FROM DICOMImages where ImageDate = :ImageDate and ImagePat = :ImagePat";
+            $sql = "SELECT ObjectFile, NumberOfFr FROM DICOMImages where ImagePat = :ImagePat AND SeriesInst like :SeriesInst ";
             $query = $database->prepare($sql);
-            $query->execute(array(':ImagePat' => $rut, ':ImageDate' => $StudyDate));
+            $query->execute(array(':ImagePat' => $rut, ':SeriesInst' => $StudyInsta . '%'));
 
             if ($query->rowCount() > 0) {
                 $imagenes = $query->fetchAll();
