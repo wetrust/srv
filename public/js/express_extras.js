@@ -1194,7 +1194,14 @@ function getDCM(RUTPACIENTE, FechaExm) {
     $.get(serverURL + "configuracion/obtenerexamenes/" + RUTPACIENTE + "/" + FechaExm.getFullYear() + mes + dia).done(function(data) {
         if (data.exist == true) {
             StudyDate = data.StudyDate;
-            StudyInsta = data.StudyInsta;
+            StudyInsta = data.StudyInsta.split(".");
+
+            for(var i = 0; i < (StudyInsta.length -1); i++){
+
+                StudyInsta = StudyInsta + "." +StudyInsta[i];
+    
+            }
+
             $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate + "/" + StudyInsta).done(function(data) {
                 $("#fotosDicom").html(" ");
                 if (data.DCM = true) {
