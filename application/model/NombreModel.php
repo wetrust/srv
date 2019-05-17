@@ -75,8 +75,10 @@ class NombreModel
         $result->exist = false;
         // fetchAll() is the PDO method that gets all result rows
         if ($query->rowCount() == 1) {
+            $tmp = $query->fetch()
             $result->exist = true;
             $result->StudyDate = $studydate;
+            $result->StudyInsta = $tmp->StudyInsta;
         }
 
         return $result;
