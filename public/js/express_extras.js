@@ -1195,13 +1195,16 @@ function getDCM(RUTPACIENTE, FechaExm) {
         if (data.exist == true) {
             StudyDate = data.StudyDate;
             StudyInsta = data.StudyInsta.split(".");
-
+            StudyInstaTmp = "";
             for(var i = 0; i < (StudyInsta.length -1); i++){
-
-                StudyInsta = StudyInsta + "." +StudyInsta[i];
-    
+                if (i == 0){
+                    StudyInstaTmp = StudyInsta[i];
+                }
+                else{
+                    StudyInstaTmp = StudyInstaTmp + "." +StudyInsta[i];
+                }
             }
-
+            StudyInsta = StudyInstaTmp;
             $.get(serverURL + "dicom/getimages/" + RUTPACIENTE + "/" + StudyDate + "/" + StudyInsta).done(function(data) {
                 $("#fotosDicom").html(" ");
                 if (data.DCM = true) {
