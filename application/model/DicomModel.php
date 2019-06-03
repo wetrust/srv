@@ -233,7 +233,7 @@ class DicomModel
                 // No connection, reached limit connections etc. so no point to keep it running
                 exit;
             }
-            $sql = "SELECT ObjectFile, NumberOfFr FROM DICOMImages where ImagePat = :ImagePat AND SeriesInst like :SeriesInst ";
+            $sql = "SELECT ObjectFile, NumberOfFr FROM DICOMImages where ImagePat = :ImagePat AND ImageDate like :SeriesInst ";
             $query = $database->prepare($sql);
             $query->execute(array(':ImagePat' => $rut, ':SeriesInst' => $StudyInsta . '%'));
 
