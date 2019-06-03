@@ -211,11 +211,11 @@ class DicomModel
         return true;
     }
 
-    public static function getAllImages($rut, $StudyDate, $StudyInsta)
+    public static function getAllImages($rut, $StudyInsta)
     {
             $database = "";
             $result = new stdClass();
-            $StudyDate = intval($StudyDate);
+            $StudyDate = intval($StudyInsta);
             try {
                 $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
                 $database = new PDO(
