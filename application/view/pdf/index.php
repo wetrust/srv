@@ -58,7 +58,12 @@ $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 // -------------------------------------------------------------------
 
 // add a page
-$pdf->AddPage('P', 'LETTER');
+// en caso de ser 4 fotos, girar la hoja
+if (count($this->user_images) == 4){
+    $pdf->AddPage('L', 'LETTER');
+}else{
+    $pdf->AddPage('P', 'LETTER');
+}
 
 // set JPEG quality
 $pdf->setJPEGQuality(90);
