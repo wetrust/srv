@@ -10,7 +10,7 @@ class CrecimientoController extends Controller
 
     public function informe()
     {
-        header("Access-Control-Allow-Origin: crecimientofetal.cl");
+        header("Access-Control-Allow-Origin: https://crecimientofetal.cl");
         $data = new stdClass();
         $response = new stdClass();
         $response->return =false;
