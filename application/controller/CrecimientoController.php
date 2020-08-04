@@ -16,7 +16,7 @@ class CrecimientoController extends Controller
 
         $data->informe = (int)Request::post("informe");
         $data->licencia = (string)Request::post("licencia");
-        $data->data = (object)Request::post("data");
+        $data->data = (string)Request::post("data");
 
         if ($data->licencia == ""){
             if ($data->informe == 2){
