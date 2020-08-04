@@ -1,5 +1,5 @@
 <?php
-class ApuntesModel
+class CrecimientoModel
 {
     public static function ProcessCrecimientoFetal($data){
 

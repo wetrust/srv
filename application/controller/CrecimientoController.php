@@ -1,6 +1,6 @@
 <?php
 
-class AcercaController extends Controller
+class CrecimientoController extends Controller
 {
 
     public function __construct()
