@@ -35,4 +35,4 @@
     $html = $this->data;
     $this->pdf->WriteHTML('', '', '10', '', $html, 0, 1, 0, true, 'L', true);
     
-    $this->pdf->Output('Informe.pdf', 'I');
+    $this->pdf->Output('Informe.pdf', 'D');
