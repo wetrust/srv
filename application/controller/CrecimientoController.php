@@ -21,7 +21,11 @@ class CrecimientoController extends Controller
 
         if ($data->licencia == ""){
             if ($data->informe == 2){
-                CrecimientoModel::ProcessCrecimientoFetal($data->data);
+                $this->View->renderWithoutHeaderAndFooter('pdf/crecimientofetal', 
+                array(
+                    'pdf' => new PdfModel(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false),
+                    'data' => $data->data
+                ));
             }
         }
         $this->View->renderJSON($response);
