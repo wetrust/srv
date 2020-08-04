@@ -10,6 +10,7 @@ class CrecimientoController extends Controller
 
     public function informe()
     {
+        header("Access-Control-Allow-Origin: crecimientofetal.cl");
         $data = new stdClass();
         $response = new stdClass();
         $response->return =false;
@@ -23,8 +24,6 @@ class CrecimientoController extends Controller
                 CrecimientoModel::ProcessCrecimientoFetal($data->data);
             }
         }
-
-        header("Access-Control-Allow-Origin: crecimientofetal.cl");
         $this->View->renderJSON($response);
     }
 }
