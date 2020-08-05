@@ -32,6 +32,9 @@
 
     $this->pdf->SetFont('Helvetica', '', 9);
     
+    $html = '<h3>Evaluación ecográfica del crecimiento fetal</h3>';
+    $this->pdf->writeHTMLCell('', '', '', '', $html, 0, 1, 0, true, '', true);
+
     $html = $this->data;
     $this->pdf->writeHTML($html, true, false, true, false, '');
     
