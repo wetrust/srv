@@ -33,6 +33,6 @@
     $this->pdf->SetFont('Helvetica', '', 9);
     
     $html = $this->data;
-    $this->pdf->WriteHTML('', '', '10', '', $html, 0, 1, 0, true, 'L', true);
+    $this->pdf->writeHTML($html, true, false, true, false, '');
     
     $this->pdf->Output('Informe.pdf', 'D');
