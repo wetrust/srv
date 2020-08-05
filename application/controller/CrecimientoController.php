@@ -24,7 +24,7 @@ class CrecimientoController extends Controller
                 $this->View->renderWithoutHeaderAndFooter('pdf/crecimientofetal', 
                 array(
                     'pdf' => new PdfModel(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false),
-                    'data' => $data->data
+                    'data' => htmlentities($data->data, ENT_QUOTES, 'UTF-8')
                 ));
             }
         }
