@@ -101,7 +101,8 @@ class DicomModel
     {
         $videoFile = substr($file, 0, strlen($file) -3) . "mp4";
         $folder = Config::get('DICOM_DIRECTORY') . $rut . "/";
-        //comprobar si existe el vide
+
+       //comprobar si existe el vide
         if(file_exists($videoFile)){
             return true;
         }
@@ -113,30 +114,29 @@ class DicomModel
 
         //cambiar al directorio temporal
         $out = chdir ($folder . "tmp");
+
         //extraer todos los frames del archivo 
-        $strCommand =  "/usr/bin/dcml2pnm +Fa +obr". $folder . $file . " \ frame ";
-        $out = exec($strCommand);
-    
-   //     $archivos = scandir($folder . "/tmp");
+        $strCommand =  "/usr/bin/dcml2pnm +Fa +obr ". $folder . $file . " \ frame ";   
+	system($strCommand, $retval);
+        $archivos = scandir($folder . "/tmp");
      //   echo "escaneo de carpeta \n";
        // print_r($archivos);
 
         //obtener metadata del video
 
-  //      if ($archivos == false){
-    //        return false;
-      //  }
-        //else{
-          //  $largo = 7;
+        if ($archivos == false){
+            return false;
+        }
+        else{
+            $largo = 7;
 
-            //foreach($archivos as $archivo){
-              //  if (strlen($archivo) > 3){
-                //    $new_name = str_replace('frame.', '', $archivo);
-
-                //}
-                //$tmpString = substr($archivo 0, strlen($archivo) -3);
-           // }
-      //  }
+            foreach($archivos as $archivo){
+                if (strlen($archivo) > 3){
+                    $new_name = str_replace('frame.', '', $archivo);
+                }
+                $tmpString = substr($archivo, 0, strlen($archivo) -3);
+           }
+        }
         $x = 0;
     
         if ($handle = opendir($folder . "/tmp")) {
@@ -145,13 +145,21 @@ class DicomModel
                     continue;
                 }
                 if (!strstr($file, '.jpg')) {
-                    continue;
+                    if (strstr($file, '.bmp')){
+                        $im = imagecreatefrombmp($file);
+           
+$_file = explode(".", $file);
+$_file[count($_file) -1] = "jpg";
+$file = join(".", $_file);
+}else{
+                       continue;
+                    }
+                }else{
+                    $im = @imagecreatefromjpeg($file);
                 }
 
                 //cortar imagen
-                $im = @imagecreatefromjpeg($file);
-                $im = @imagecrop($im, array( 'x' => 0, 'y' => 12, 'width' => 960, 'height' => 720 ) );
-
+$im = @imagecrop($im, array( 'x' => 0, 'y' => 12, 'width' => 960, 'height' => 720 ) );
                 imagejpeg($im,$file,100);
 
                 // Liberar memoria
@@ -176,24 +184,22 @@ class DicomModel
             closedir($handle);
           }
 
-          //$framerate = 24;
-          //if ($x < 10) {
-          //  $framerate = 10;
-          //}
-        //$vid_cmd = "ffmpeg -r 10  -i img%03d.jpg -profile:v high444 -vcodec libx264 \"$videoFile\"";
-        //$out = exec($vid_cmd);
+          $framerate = 10;
+
+        $vid_cmd = "ffmpeg -r 10 -i img%03d.jpg -pix_fmt yuv420p -r 24 \"$videoFile\"";
+        $out = exec($vid_cmd);
         
         //mover a la carpeta anterior
-        //$vid_cmd = "mv \"$videoFile\" \"$folder\"";
-        //$out = exec($vid_cmd);
+        $vid_cmd = "mv \"$videoFile\" \"$folder\"";
+        $out = exec($vid_cmd);
         //cambiar al directorio anterior
-        //$out = chdir ($folder);
+        $out = chdir ($folder);
         //eliminar los archivos temporales
-        //$vid_cmd = "rm -R tmp";
+        $vid_cmd = "rm -R tmp";
         //$out = exec($vid_cmd);
 
-        //$stream = new StreamModel($folder.$videoFile);
-        //$stream->start();
+        $stream = new StreamModel($folder.$videoFile);
+        $stream->start();
         return true;
         //"https://servidor.crecimientofetal.cl/dicom/multiframe/19070494-7/1.2.276.0.26.1.1.1.2.2018.258.36118.6516656_0001_000003_1533917314028b.dcm"
         //"https://servidor.crecimientofetal.cl/data/19070494-7/tmp/output.mp4"
